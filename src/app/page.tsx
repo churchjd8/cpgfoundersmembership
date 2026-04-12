@@ -111,7 +111,7 @@ export default function HomePage() {
                 </a>
               </div>
             </div>
-            <div className="hidden lg:block relative">
+            <div className="relative">
               <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
                 <Image
                   src="/images/jeff-hero.webp"
