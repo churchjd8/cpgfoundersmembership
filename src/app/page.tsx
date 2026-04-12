@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const credibility = [
@@ -84,36 +85,43 @@ export default function HomePage() {
       {/* ========== 1. HERO ========== */}
       <section className="relative bg-foreground text-white overflow-hidden">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-28 lg:py-32">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
-              Whatever&rsquo;s between you and your next stage, we&rsquo;ll help you break through.
-            </h1>
-            <p className="mt-6 text-lg sm:text-xl text-white/70 max-w-2xl leading-relaxed">
-              Tools, training, and direct access to Jeff Church - 8x CPG founder, co-founder of Suja
-              Juice - for founders going from idea to exit.
-            </p>
-            <div className="mt-8 flex flex-col sm:flex-row gap-4">
-              <Link
-                href="/90-day-breakthrough"
-                className="inline-flex items-center justify-center px-6 py-3 bg-accent hover:bg-accent-dark text-white font-semibold rounded-lg transition-colors text-base"
-              >
-                Explore the 90-Day Breakthrough
-              </Link>
-              <a
-                href="https://www.askbabu.ai"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-6 py-3 border border-white/30 hover:border-white/60 text-white font-semibold rounded-lg transition-colors text-base"
-              >
-                Try Babu
-              </a>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
+                Whatever&rsquo;s between you and your next stage, we&rsquo;ll help you break through.
+              </h1>
+              <p className="mt-6 text-lg sm:text-xl text-white/70 max-w-2xl leading-relaxed">
+                Tools, training, and direct access to Jeff Church - 8x CPG founder, co-founder of Suja
+                Juice - for founders going from idea to exit.
+              </p>
+              <div className="mt-8 flex flex-col sm:flex-row gap-4">
+                <Link
+                  href="/90-day-breakthrough"
+                  className="inline-flex items-center justify-center px-6 py-3 bg-accent hover:bg-accent-dark text-white font-semibold rounded-lg transition-colors text-base"
+                >
+                  Explore the 90-Day Breakthrough
+                </Link>
+                <a
+                  href="https://www.askbabu.ai"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-3 border border-white/30 hover:border-white/60 text-white font-semibold rounded-lg transition-colors text-base"
+                >
+                  Try Babu
+                </a>
+              </div>
             </div>
-          </div>
-        </div>
-        {/* Photo placeholder */}
-        <div className="hidden lg:block absolute right-0 top-0 bottom-0 w-1/3 bg-white/5">
-          <div className="flex items-center justify-center h-full text-white/20 text-sm">
-            [Jeff&rsquo;s photo]
+            <div className="hidden lg:block relative">
+              <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
+                <Image
+                  src="/images/jeff-hero.webp"
+                  alt="Jeff Church with CPG founders"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
