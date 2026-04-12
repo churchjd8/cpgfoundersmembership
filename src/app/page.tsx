@@ -135,7 +135,7 @@ export default function HomePage() {
       </section>
 
       {/* ========== 3. WHAT WE OFFER ========== */}
-      <section className="py-16 md:py-24 bg-background">
+      <section id="programs" className="py-16 md:py-24 bg-background scroll-mt-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">

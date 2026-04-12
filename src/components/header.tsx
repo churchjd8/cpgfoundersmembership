@@ -4,10 +4,8 @@ import Link from "next/link";
 import { useState } from "react";
 
 const navLinks = [
-  { label: "Home", href: "/" },
-  { label: "90-Day Breakthrough", href: "/90-day-breakthrough" },
-  { label: "VIP Day", href: "/vip-day-apply" },
-  { label: "MBA for CPG", href: "/mba-for-cpg" },
+  { label: "Programs", href: "/#programs" },
+  { label: "About Jeff", href: "/about-jeff" },
   { label: "Babu", href: "https://www.askbabu.ai", external: true },
   { label: "Contact", href: "/contact" },
 ];
@@ -35,6 +33,12 @@ export function Header() {
                 {link.label}
               </Link>
             ))}
+            <Link
+              href="/90-day-breakthrough"
+              className="px-4 py-2 text-sm font-semibold bg-accent hover:bg-accent-dark text-white rounded-lg transition-colors"
+            >
+              90-Day Breakthrough
+            </Link>
           </nav>
 
           {/* Mobile menu button */}
@@ -70,6 +74,13 @@ export function Header() {
                   {link.label}
                 </Link>
               ))}
+              <Link
+                href="/90-day-breakthrough"
+                className="text-sm font-semibold text-accent hover:text-accent-dark transition-colors"
+                onClick={() => setMobileOpen(false)}
+              >
+                90-Day Breakthrough
+              </Link>
             </div>
           </nav>
         )}
