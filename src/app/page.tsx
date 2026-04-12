@@ -155,24 +155,47 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-2">
-            {offers.map((offer) => (
-              <div
-                key={offer.title}
-                className={`rounded-xl border p-6 sm:p-8 flex flex-col ${
-                  offer.flagship
-                    ? "bg-card-flagship border-accent/30 ring-2 ring-accent/20 md:col-span-2"
-                    : "bg-card border-border"
-                }`}
-              >
-                {offer.tag && (
-                  <span className="inline-block self-start px-3 py-1 text-xs font-bold uppercase tracking-wider bg-accent text-white rounded-full mb-4">
+          {/* Flagship card - full width */}
+          {offers.filter((o) => o.flagship).map((offer) => (
+            <div
+              key={offer.title}
+              className="rounded-xl border bg-card-flagship border-accent/30 ring-2 ring-accent/20 p-6 sm:p-8 md:p-10 mb-6"
+            >
+              <div className="md:flex md:items-start md:justify-between md:gap-8">
+                <div className="flex-1">
+                  <span className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider bg-accent text-white rounded-full mb-4">
                     {offer.tag}
                   </span>
-                )}
-                <h3 className="text-xl sm:text-2xl font-bold">{offer.title}</h3>
+                  <h3 className="text-2xl sm:text-3xl font-bold">{offer.title}</h3>
+                  <p className="mt-2 text-sm font-semibold text-accent">{offer.price}</p>
+                  <p className="mt-4 text-muted leading-relaxed">{offer.pitch}</p>
+                  <p className="mt-3 text-sm text-muted">
+                    <span className="font-semibold text-foreground">Who it&rsquo;s for:</span>{" "}
+                    {offer.who}
+                  </p>
+                </div>
+                <div className="mt-6 md:mt-0 md:flex-shrink-0 md:self-center">
+                  <Link
+                    href={offer.href}
+                    className="inline-flex items-center justify-center px-6 py-3 bg-accent hover:bg-accent-dark text-white font-semibold rounded-lg transition-colors text-base"
+                  >
+                    {offer.cta} &rarr;
+                  </Link>
+                </div>
+              </div>
+            </div>
+          ))}
+
+          {/* Secondary offers - three columns */}
+          <div className="grid gap-6 md:grid-cols-3">
+            {offers.filter((o) => !o.flagship).map((offer) => (
+              <div
+                key={offer.title}
+                className="rounded-xl border bg-card border-border p-6 sm:p-8 flex flex-col"
+              >
+                <h3 className="text-xl font-bold">{offer.title}</h3>
                 <p className="mt-2 text-sm font-semibold text-accent">{offer.price}</p>
-                <p className="mt-4 text-muted leading-relaxed">{offer.pitch}</p>
+                <p className="mt-4 text-muted leading-relaxed text-sm flex-1">{offer.pitch}</p>
                 <p className="mt-3 text-sm text-muted">
                   <span className="font-semibold text-foreground">Who it&rsquo;s for:</span>{" "}
                   {offer.who}
@@ -183,11 +206,7 @@ export default function HomePage() {
                     {...(offer.external
                       ? ({ target: "_blank", rel: "noopener noreferrer" } as React.AnchorHTMLAttributes<HTMLAnchorElement>)
                       : {})}
-                    className={`inline-flex items-center font-semibold transition-colors ${
-                      offer.flagship
-                        ? "text-accent hover:text-accent-dark text-base"
-                        : "text-accent hover:text-accent-dark text-sm"
-                    }`}
+                    className="inline-flex items-center text-sm font-semibold text-accent hover:text-accent-dark transition-colors"
                   >
                     {offer.cta} &rarr;
                   </Link>
