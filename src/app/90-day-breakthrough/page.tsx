@@ -597,7 +597,7 @@ export default function NinetyDayBreakthroughPage() {
 
       {/* ========== 9. PRICING ========== */}
       <section id="pricing" className="py-16 md:py-24 bg-background scroll-mt-20">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <span className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider text-accent mb-4">
               Pricing
@@ -607,89 +607,65 @@ export default function NinetyDayBreakthroughPage() {
             </h2>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-2">
-            {/* Card 1: 90-Day Breakthrough */}
-            <div className="bg-card-flagship rounded-xl border border-accent/30 ring-2 ring-accent/20 p-6 sm:p-8">
-              <span className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider bg-accent text-white rounded-full mb-4">
-                The 90-Day Breakthrough
-              </span>
-              <div className="space-y-4 mb-6">
-                <div>
-                  <p className="text-sm font-semibold text-muted uppercase tracking-wide">
-                    Option A - Pay monthly
-                  </p>
-                  <p className="text-2xl font-bold">
-                    $2,000<span className="text-base font-normal text-muted">/mo for 3 months</span>
-                  </p>
-                  <p className="text-sm text-muted">$6,000 total</p>
-                </div>
-                <div className="border-t border-border pt-4">
-                  <p className="text-sm font-semibold text-muted uppercase tracking-wide">
-                    Option B - Pay in full
-                  </p>
-                  <p className="text-2xl font-bold">
-                    $5,000{" "}
-                    <span className="text-sm font-semibold text-green-600">save $1,000</span>
-                  </p>
-                </div>
+          {/* Single pricing card */}
+          <div className="bg-card-flagship rounded-xl border border-accent/30 ring-2 ring-accent/20 p-6 sm:p-8 md:p-10">
+            <span className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider bg-accent text-white rounded-full mb-6">
+              The 90-Day Breakthrough
+            </span>
+
+            <div className="grid sm:grid-cols-2 gap-6 mb-8">
+              <div className="bg-white rounded-lg border border-border p-5">
+                <p className="text-sm font-semibold text-muted uppercase tracking-wide mb-2">
+                  Pay monthly
+                </p>
+                <p className="text-3xl font-bold">
+                  $2,000<span className="text-base font-normal text-muted">/mo</span>
+                </p>
+                <p className="text-sm text-muted mt-1">for 3 months ($6,000 total)</p>
               </div>
-
-              <ul className="space-y-2 mb-6">
-                {pricingIncludes.map((item) => (
-                  <li key={item} className="flex gap-2 text-sm text-muted">
-                    <span className="text-accent font-bold">&#10003;</span>
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <Link
-                href={applyHref}
-                className="block w-full text-center px-6 py-3 bg-accent hover:bg-accent-dark text-white font-semibold rounded-lg transition-colors"
-              >
-                Apply to join &rarr;
-              </Link>
+              <div className="bg-white rounded-lg border border-accent/30 p-5 relative">
+                <span className="absolute -top-2.5 right-4 px-2 py-0.5 text-xs font-bold bg-green-600 text-white rounded-full">
+                  Save $1,000
+                </span>
+                <p className="text-sm font-semibold text-muted uppercase tracking-wide mb-2">
+                  Pay in full
+                </p>
+                <p className="text-3xl font-bold">$5,000</p>
+                <p className="text-sm text-muted mt-1">one-time payment</p>
+              </div>
             </div>
 
-            {/* Card 2: Membership */}
-            <div className="bg-card rounded-xl border border-border p-6 sm:p-8">
-              <span className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider bg-foreground text-white rounded-full mb-4">
-                The Membership
-              </span>
-              <p className="text-3xl font-bold">
-                $1,500<span className="text-base font-normal text-muted">/mo</span>
-              </p>
-              <p className="text-sm text-muted mb-6">month-to-month, cancel anytime</p>
+            <ul className="space-y-2 mb-8">
+              {pricingIncludes.map((item) => (
+                <li key={item} className="flex gap-2 text-sm text-muted">
+                  <span className="text-accent font-bold">&#10003;</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
 
-              <ul className="space-y-2 mb-6">
-                {membershipIncludes.map((item) => (
-                  <li key={item} className="flex gap-2 text-sm text-muted">
-                    <span className="text-accent font-bold">&#10003;</span>
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <p className="text-xs text-muted italic">
-                Month-to-month. Cancel anytime with 30 days notice.
-              </p>
-            </div>
+            <Link
+              href={applyHref}
+              className="block w-full text-center px-6 py-3 bg-accent hover:bg-accent-dark text-white font-semibold rounded-lg transition-colors text-lg"
+            >
+              Apply to join &rarr;
+            </Link>
           </div>
 
-          <div className="mt-8 max-w-3xl mx-auto">
-            <h3 className="text-lg font-bold mb-2">Why this structure?</h3>
+          {/* After 90 days */}
+          <div className="mt-8 bg-card rounded-xl border border-border p-6 sm:p-8">
+            <h3 className="text-lg font-bold mb-2">After your 90 days</h3>
             <p className="text-muted leading-relaxed">
-              The first 90 days are intensive. Jeff is directly diagnosing the bottleneck, mapping
-              the plan, and working with you hands-on to break through. That&rsquo;s why the
-              investment is higher upfront. Pay monthly, or save $1,000 by paying in full. After 90
-              days, you&rsquo;ve built the foundation, and the ongoing membership keeps you
-              supported, accountable, and connected at $1,500/mo.
-            </p>
-            <p className="mt-4 font-semibold text-foreground">
-              No annual contracts. No waiting for the next cohort. Cancel the ongoing membership
-              anytime with 30 days notice.
+              Continue with group support, email access to Jeff, and all the resources for{" "}
+              <span className="font-semibold text-foreground">$1,500/mo</span> - month-to-month,
+              cancel anytime with 30 days notice. No annual contracts. Stay as long as it&rsquo;s
+              valuable.
             </p>
           </div>
+
+          <p className="mt-6 text-center text-sm text-muted">
+            No waiting for the next cohort. Start when you&rsquo;re ready.
+          </p>
         </div>
       </section>
 
