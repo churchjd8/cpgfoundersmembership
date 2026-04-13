@@ -347,14 +347,24 @@ export default function AboutJeffPage() {
           </div>
 
           {/* Social Impact */}
-          <div className="bg-background rounded-2xl border border-border p-8 md:p-12">
-            <div className="max-w-3xl mx-auto text-center">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="relative aspect-[2/1] rounded-2xl overflow-hidden">
+              <Image
+                src="/images/nika-water.png"
+                alt="Nika Water - A Thirst for Change by Linda and Jeff Church"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div>
               <p className="text-3xl mb-3">🌍</p>
               <h3 className="text-2xl font-bold mb-3">Social Impact</h3>
               <p className="text-lg text-muted leading-relaxed">
-                Through Nika Water, Jeff helped bring clean water, education, and microfinance to
-                32,000+ people across Nicaragua, Kenya, Ethiopia, and Mexico. Making an impact
-                beyond business has always been core to who he is.
+                Through Nika Water, Jeff and Linda helped bring clean water, education, and
+                microfinance to 32,000+ people across Nicaragua, Kenya, Ethiopia, and Mexico.
+                They co-authored <span className="italic">A Thirst for Change</span> on how social
+                entrepreneurship can make the world a better place. Making an impact beyond business
+                has always been core to who Jeff is.
               </p>
             </div>
           </div>
