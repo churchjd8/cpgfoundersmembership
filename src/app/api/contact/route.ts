@@ -37,37 +37,27 @@ export async function POST(request: Request) {
       "Content-Type": "application/vnd.api+json",
     };
 
-    // Create the contact in Kajabi
-    const contactRes = await fetch("https://api.kajabi.com/v1/contacts", {
-      method: "POST",
-      headers,
-      body: JSON.stringify({
-        data: {
-          type: "contacts",
-          attributes: {
-            name,
-            email,
-            subscribed: true,
+    // Submit through the Kajabi form - this triggers automations, tags, and notifications
+    const formId = process.env.KAJABI_CONTACT_FORM_ID || process.env.KAJABI_DEFAULT_FORM_ID!;
+    const formRes = await fetch(
+      `https://api.kajabi.com/v1/forms/${formId}/submit`,
+      {
+        method: "POST",
+        headers,
+        body: JSON.stringify({
+          data: {
+            type: "form_submissions",
+            attributes: { name, email },
           },
-          relationships: {
-            site: {
-              data: {
-                type: "sites",
-                id: process.env.KAJABI_SITE_ID!,
-              },
-            },
-          },
-        },
-      }),
-    });
+        }),
+      }
+    );
 
-    let contactId: string;
+    // Get the contact ID - either from form submission or by searching
+    let contactId: string | null = null;
 
-    if (contactRes.ok) {
-      const contactData = await contactRes.json();
-      contactId = contactData.data.id;
-    } else if (contactRes.status === 422) {
-      // Contact may already exist - search for them
+    if (formRes.ok) {
+      // Form submission succeeded - find the contact by email
       const searchRes = await fetch(
         `https://api.kajabi.com/v1/contacts?filter[email]=${encodeURIComponent(email)}`,
         { headers }
@@ -76,59 +66,76 @@ export async function POST(request: Request) {
         const searchData = await searchRes.json();
         if (searchData.data && searchData.data.length > 0) {
           contactId = searchData.data[0].id;
-        } else {
-          console.error("Contact exists but could not be found");
-          return NextResponse.json(
-            { error: "Failed to process contact" },
-            { status: 500 }
-          );
         }
-      } else {
-        console.error("Failed to search for existing contact");
-        return NextResponse.json(
-          { error: "Failed to process contact" },
-          { status: 500 }
-        );
       }
     } else {
-      const error = await contactRes.json();
-      console.error("Kajabi contact error:", error);
-      return NextResponse.json(
-        { error: "Failed to create contact" },
-        { status: 500 }
-      );
+      // Form submit failed (maybe contact exists) - try creating directly
+      const contactRes = await fetch("https://api.kajabi.com/v1/contacts", {
+        method: "POST",
+        headers,
+        body: JSON.stringify({
+          data: {
+            type: "contacts",
+            attributes: { name, email, subscribed: true },
+            relationships: {
+              site: {
+                data: { type: "sites", id: process.env.KAJABI_SITE_ID! },
+              },
+            },
+          },
+        }),
+      });
+
+      if (contactRes.ok) {
+        const contactData = await contactRes.json();
+        contactId = contactData.data.id;
+      } else {
+        // Contact already exists - search for them
+        const searchRes = await fetch(
+          `https://api.kajabi.com/v1/contacts?filter[email]=${encodeURIComponent(email)}`,
+          { headers }
+        );
+        if (searchRes.ok) {
+          const searchData = await searchRes.json();
+          if (searchData.data && searchData.data.length > 0) {
+            contactId = searchData.data[0].id;
+          }
+        }
+      }
     }
 
     // Add a note with the full form details
-    const noteBody = [
-      `Contact form submission from cpgfoundersgroup.com`,
-      ``,
-      `Business: ${business}`,
-      website ? `Website: ${website}` : null,
-      `Stage: ${stage}`,
-      `Interest: ${interest}`,
-      ``,
-      `Message:`,
-      message,
-    ]
-      .filter(Boolean)
-      .join("\n");
+    if (contactId) {
+      const noteBody = [
+        `Contact form submission from cpgfoundersgroup.com`,
+        ``,
+        `Business: ${business}`,
+        website ? `Website: ${website}` : null,
+        `Stage: ${stage}`,
+        `Interest: ${interest}`,
+        ``,
+        `Message:`,
+        message,
+      ]
+        .filter(Boolean)
+        .join("\n");
 
-    await fetch("https://api.kajabi.com/v1/contact_notes", {
-      method: "POST",
-      headers,
-      body: JSON.stringify({
-        data: {
-          type: "contact_notes",
-          attributes: { body: noteBody },
-          relationships: {
-            contact: {
-              data: { type: "contacts", id: contactId },
+      await fetch("https://api.kajabi.com/v1/contact_notes", {
+        method: "POST",
+        headers,
+        body: JSON.stringify({
+          data: {
+            type: "contact_notes",
+            attributes: { body: noteBody },
+            relationships: {
+              contact: {
+                data: { type: "contacts", id: contactId },
+              },
             },
           },
-        },
-      }),
-    });
+        }),
+      });
+    }
 
     return NextResponse.json({ success: true });
   } catch (err) {
