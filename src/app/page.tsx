@@ -12,28 +12,28 @@ const credibility = [
 
 const testimonials = [
   {
-    headline: "Raised $1.2M in 90 days after 18 months of trying",
+    headline: "Led us through a successful $1.5M Angel fundraising",
     quote:
-      "Jeff helped me see exactly what investors were looking for and completely restructured my pitch. Within three months we closed our round and started scaling.",
-    name: "Sarah M.",
-    title: "Founder & CEO",
-    brand: "Placeholder Brand Co.",
-  },
-  {
-    headline: "Landed national retail in under 6 months",
-    quote:
-      "I had been trying to break into retail for over a year. Jeff mapped out the exact approach, made key introductions, and we were on shelves within six months.",
-    name: "Marcus T.",
-    title: "Co-Founder",
-    brand: "Placeholder Foods Inc.",
-  },
-  {
-    headline: "Doubled margins before our Series A",
-    quote:
-      "Our unit economics were killing us. Jeff dug into our supply chain, renegotiated key contracts, and we went into our raise with a completely different story.",
-    name: "Priya K.",
+      "Jeff has amazing CPG knowledge, business experience and life lessons. 5-star review from us. Jeff led us all the way through a successful $1.5M Angel fundraising.",
+    name: "Tiffany Tatom",
     title: "CEO",
-    brand: "Placeholder Beverage Co.",
+    brand: "Live Pure",
+  },
+  {
+    headline: "A game-changing crash course for my business",
+    quote:
+      "Working with Jeff has been a game-changing crash course for my business. It really is an MBA in CPG. Jeff and his team are a wealth of knowledge when it comes to finance, fundraising, brand strategy, and more.",
+    name: "Simon Solis-Cohen",
+    title: "Founder",
+    brand: "Huxley",
+  },
+  {
+    headline: "Got JUNI into retail and secured our Natural Foods broker",
+    quote:
+      "Jeff is a rare individual in that he has deep knowledge of all departments and functional areas. Jeff was the primary reason that we got JUNI into Moscoe and helped us secure Presence Marketing as our Natural Foods broker.",
+    name: "Kim Perell",
+    title: "Co-Founder & CEO",
+    brand: "JUNI",
   },
 ];
 
