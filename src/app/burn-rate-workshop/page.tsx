@@ -92,55 +92,52 @@ export default function BurnRateWorkshopPage() {
       {/* ========== HERO ========== */}
       <section className="relative bg-foreground text-white overflow-hidden">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-          <div className="max-w-3xl mx-auto text-center">
-            <span className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider bg-accent text-white rounded-full mb-6">
-              Free Live Workshop with Jeff Church
-            </span>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight tracking-tight">
-              The CPG Profitability Workshop: Reduce Your Burn and Get to Profitability Faster
-            </h1>
-            <p className="mt-6 text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
-              Learn the exact frameworks, cost benchmarks, and trade strategies CPG founders use to
-              extend their runway and build a healthier business.
-            </p>
-            <p className="mt-4 text-base text-white/50">
-              April 23rd - 90 Minutes - Live on Zoom - Free
-            </p>
-            <div className="mt-8">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center">
+              <span className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider bg-accent text-white rounded-full mb-6">
+                Free Live Workshop with Jeff Church
+              </span>
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight tracking-tight">
+                The CPG Profitability Workshop: Reduce Your Burn and Get to Profitability Faster
+              </h1>
+              <p className="mt-6 text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
+                Learn the exact frameworks, cost benchmarks, and trade strategies CPG founders use to
+                extend their runway and build a healthier business.
+              </p>
+            </div>
+
+            {/* Video in hero */}
+            <div className="mt-10 relative aspect-video rounded-xl overflow-hidden">
+              <iframe
+                src="https://www.youtube.com/embed/oJO_KDLk6VY"
+                title="CPG Profitability Workshop with Jeff Church"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="absolute inset-0 w-full h-full"
+              />
+            </div>
+
+            <div className="mt-6 text-center">
+              <p className="text-base text-white/50 mb-4">
+                April 23rd - 90 Minutes - Live on Zoom - Free
+              </p>
               <WorkshopModal buttonStyle="hero" />
             </div>
           </div>
         </div>
       </section>
 
-      {/* ========== VIDEO SECTION ========== */}
-      <section className="py-16 md:py-24 bg-white">
+      {/* ========== AS SEEN IN ========== */}
+      <section className="py-8 bg-white border-b border-border">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
-            <p className="text-lg text-muted">
-              Most CPG businesses run out of cash within their first 18 months - not because the
-              product isn&rsquo;t working, but because the financials aren&rsquo;t.
-            </p>
-          </div>
-
-          {/* Video embed placeholder - replace VIDEO_ID with actual YouTube ID */}
-          <div className="relative aspect-video rounded-xl overflow-hidden bg-foreground/5 border border-border">
-            <div className="flex items-center justify-center h-full text-muted text-sm">
-              [YouTube video - send me the link and I&rsquo;ll embed it]
-            </div>
-          </div>
-
-          <div className="mt-8 grid sm:grid-cols-2 gap-4 text-center">
-            <div className="bg-background rounded-lg p-4 border border-border">
-              <p className="font-semibold">Jeff Church</p>
-              <p className="text-sm text-muted">
-                Built Suja Juice from zero to $100M before selling to Coca-Cola
-              </p>
-            </div>
-            <div className="bg-background rounded-lg p-4 border border-border">
-              <p className="font-semibold">April 23rd</p>
-              <p className="text-sm text-muted">90 Minutes - Live on Zoom - Free</p>
-            </div>
+          <div className="relative w-full">
+            <Image
+              src="/images/as-seen-in-banner.png"
+              alt="As seen in: Whole Foods Supplier of the Year, Forbes, The New York Times, Inc. 500, EY Entrepreneur of the Year, BevNet"
+              width={900}
+              height={100}
+              className="w-full h-auto"
+            />
           </div>
         </div>
       </section>
