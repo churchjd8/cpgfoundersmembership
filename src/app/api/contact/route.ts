@@ -102,13 +102,17 @@ export async function POST(request: Request) {
     } else {
       // Contact may already exist - search for them
       const searchRes = await fetch(
-        `https://api.kajabi.com/v1/contacts?filter[email]=${encodeURIComponent(email)}`,
+        `https://api.kajabi.com/v1/contacts?filter[email_contains]=${encodeURIComponent(email)}`,
         { headers }
       );
       if (searchRes.ok) {
         const searchData = await searchRes.json();
-        if (searchData.data && searchData.data.length > 0) {
-          contactId = searchData.data[0].id;
+        const match = searchData.data?.find(
+          (c: { attributes: { email: string } }) =>
+            c.attributes.email.toLowerCase() === email.toLowerCase()
+        );
+        if (match) {
+          contactId = match.id;
         }
       }
     }
