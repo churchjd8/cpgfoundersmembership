@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { NewsletterForm } from "@/components/newsletter-form";
+import { BreakthroughLogo, BabuLogo, MbaLogo, VipDayLogo } from "@/components/offer-logos";
 
 const credibility = [
   { stat: "8x", label: "CPG Founder" },
@@ -175,6 +176,7 @@ export default function HomePage() {
             >
               <div className="md:flex md:items-start md:justify-between md:gap-8">
                 <div className="flex-1">
+                  <BreakthroughLogo className="h-12 w-auto mb-4" />
                   <span className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider bg-accent text-white rounded-full mb-4">
                     {offer.tag}
                   </span>
@@ -200,11 +202,17 @@ export default function HomePage() {
 
           {/* Secondary offers - three columns */}
           <div className="grid gap-6 md:grid-cols-3">
-            {offers.filter((o) => !o.flagship).map((offer) => (
+            {offers.filter((o) => !o.flagship).map((offer) => {
+              const LogoComponent =
+                offer.title.includes("Babu") ? BabuLogo :
+                offer.title.includes("MBA") ? MbaLogo :
+                VipDayLogo;
+              return (
               <div
                 key={offer.title}
                 className="rounded-xl border bg-card border-border p-6 sm:p-8 flex flex-col"
               >
+                <LogoComponent className="h-10 w-auto mb-4" />
                 <h3 className="text-xl font-bold">{offer.title}</h3>
                 <p className="mt-2 text-sm font-semibold text-accent">{offer.price}</p>
                 <p className="mt-4 text-muted leading-relaxed text-sm flex-1">{offer.pitch}</p>
@@ -224,7 +232,8 @@ export default function HomePage() {
                   </Link>
                 </div>
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
