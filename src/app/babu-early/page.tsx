@@ -68,8 +68,97 @@ export default function BabuEarlyAccessPage() {
         </div>
       </section>
 
-      {/* ========== WHAT BABU DOES ========== */}
+      {/* ========== SIGNUP FORM ========== */}
       <section className="py-16 md:py-24 bg-white">
+        <div className="mx-auto max-w-xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <span className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider bg-accent text-white rounded-full mb-4">
+              Limited Beta
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
+              Get Free Early Access
+            </h2>
+            <p className="mt-4 text-muted">
+              Join a small group of founders testing Babu before launch. You&rsquo;ll get free beta
+              access and help shape the product with your feedback.
+            </p>
+          </div>
+
+          <div className="bg-card rounded-xl border border-border p-6 sm:p-8">
+            <form onSubmit={handleSubmit} className="space-y-5">
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <label htmlFor="babu-first" className="block text-sm font-medium mb-1">
+                    First Name <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="babu-first"
+                    name="firstName"
+                    required
+                    className="w-full px-4 py-3 rounded-lg border border-border bg-white focus:outline-none focus:ring-2 focus:ring-accent"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="babu-last" className="block text-sm font-medium mb-1">
+                    Last Name <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="babu-last"
+                    name="lastName"
+                    required
+                    className="w-full px-4 py-3 rounded-lg border border-border bg-white focus:outline-none focus:ring-2 focus:ring-accent"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label htmlFor="babu-email" className="block text-sm font-medium mb-1">
+                  Email <span className="text-red-500">*</span>
+                </label>
+                <input
+                  type="email"
+                  id="babu-email"
+                  name="email"
+                  required
+                  className="w-full px-4 py-3 rounded-lg border border-border bg-white focus:outline-none focus:ring-2 focus:ring-accent"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="babu-business" className="block text-sm font-medium mb-1">
+                  Business Name <span className="text-red-500">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="babu-business"
+                  name="business"
+                  required
+                  className="w-full px-4 py-3 rounded-lg border border-border bg-white focus:outline-none focus:ring-2 focus:ring-accent"
+                />
+              </div>
+
+              <button
+                type="submit"
+                disabled={status === "loading"}
+                className="w-full px-6 py-3 bg-accent hover:bg-accent-dark text-white font-semibold rounded-lg transition-colors disabled:opacity-50"
+              >
+                {status === "loading" ? "Submitting..." : "Get Access"}
+              </button>
+
+              {status === "error" && (
+                <p className="text-sm text-red-500 text-center">
+                  Something went wrong. Please try again.
+                </p>
+              )}
+            </form>
+          </div>
+        </div>
+      </section>
+
+      {/* ========== WHAT BABU DOES ========== */}
+      <section className="py-16 md:py-24 bg-background">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
@@ -130,81 +219,6 @@ export default function BabuEarlyAccessPage() {
                 operations, and more.
               </p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ========== FORM ========== */}
-      <section className="py-16 md:py-24 bg-background">
-        <div className="mx-auto max-w-xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <span className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider bg-accent text-white rounded-full mb-4">
-              Limited Beta
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
-              Get Free Early Access
-            </h2>
-            <p className="mt-4 text-muted">
-              Join a small group of founders testing Babu before launch. You&rsquo;ll get free beta
-              access and help shape the product with your feedback.
-            </p>
-          </div>
-
-          <div className="bg-card rounded-xl border border-border p-6 sm:p-8">
-            <form onSubmit={handleSubmit} className="space-y-5">
-              <div>
-                <label htmlFor="babu-name" className="block text-sm font-medium mb-1">
-                  Name <span className="text-red-500">*</span>
-                </label>
-                <input
-                  type="text"
-                  id="babu-name"
-                  name="name"
-                  required
-                  className="w-full px-4 py-3 rounded-lg border border-border bg-white focus:outline-none focus:ring-2 focus:ring-accent"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="babu-email" className="block text-sm font-medium mb-1">
-                  Email <span className="text-red-500">*</span>
-                </label>
-                <input
-                  type="email"
-                  id="babu-email"
-                  name="email"
-                  required
-                  className="w-full px-4 py-3 rounded-lg border border-border bg-white focus:outline-none focus:ring-2 focus:ring-accent"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="babu-business" className="block text-sm font-medium mb-1">
-                  Business Name <span className="text-red-500">*</span>
-                </label>
-                <input
-                  type="text"
-                  id="babu-business"
-                  name="business"
-                  required
-                  className="w-full px-4 py-3 rounded-lg border border-border bg-white focus:outline-none focus:ring-2 focus:ring-accent"
-                />
-              </div>
-
-              <button
-                type="submit"
-                disabled={status === "loading"}
-                className="w-full px-6 py-3 bg-accent hover:bg-accent-dark text-white font-semibold rounded-lg transition-colors disabled:opacity-50"
-              >
-                {status === "loading" ? "Submitting..." : "Get Access"}
-              </button>
-
-              {status === "error" && (
-                <p className="text-sm text-red-500 text-center">
-                  Something went wrong. Please try again.
-                </p>
-              )}
-            </form>
           </div>
         </div>
       </section>

@@ -20,9 +20,9 @@ async function getKajabiToken() {
 
 export async function POST(request: Request) {
   try {
-    const { name, email, business } = await request.json();
+    const { firstName, lastName, email, business } = await request.json();
 
-    if (!name || !email || !business) {
+    if (!firstName || !lastName || !email || !business) {
       return NextResponse.json(
         { error: "All fields are required" },
         { status: 400 }
@@ -36,6 +36,7 @@ export async function POST(request: Request) {
     };
 
     // Submit through the Kajabi Babu AI Beta Access form
+    // name = first name, custom_1 = last name, custom_2 = business name
     const formRes = await fetch(
       `https://api.kajabi.com/v1/forms/${BABU_FORM_ID}/submit`,
       {
@@ -45,8 +46,9 @@ export async function POST(request: Request) {
           data: {
             type: "form_submissions",
             attributes: {
-              name,
+              name: firstName,
               email,
+              custom_1: lastName,
               custom_2: business,
             },
           },
@@ -64,7 +66,7 @@ export async function POST(request: Request) {
         body: JSON.stringify({
           data: {
             type: "contacts",
-            attributes: { name, email, subscribed: true },
+            attributes: { name: `${firstName} ${lastName}`, email, subscribed: true },
             relationships: {
               site: {
                 data: { type: "sites", id: process.env.KAJABI_SITE_ID! },
