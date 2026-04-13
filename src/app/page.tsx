@@ -321,9 +321,7 @@ export default function HomePage() {
               </ul>
               <div className="mt-8">
                 <a
-                  href="https://learn.dreammakershq.com/founders-only"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="/founders-only"
                   className="inline-flex items-center justify-center px-6 py-3 bg-accent hover:bg-accent-dark text-white font-semibold rounded-lg transition-colors text-base"
                 >
                   Request to join &rarr;
