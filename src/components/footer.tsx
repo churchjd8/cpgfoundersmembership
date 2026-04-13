@@ -17,7 +17,7 @@ export function Footer() {
         <div className="grid gap-8 md:grid-cols-3">
           {/* Brand */}
           <div>
-            <p className="text-lg font-bold text-white">Dream Makers HQ</p>
+            <p className="text-lg font-bold text-white">CPG Founders Group</p>
             <p className="mt-2 text-sm text-white/60">
               Tools, training, and direct access to Jeff Church for CPG founders going from idea to exit.
             </p>
@@ -66,7 +66,7 @@ export function Footer() {
         </div>
 
         <div className="mt-10 pt-6 border-t border-white/10 text-center">
-          <p className="text-sm text-white/40">&copy; 2026 Dream Makers HQ. All rights reserved.</p>
+          <p className="text-sm text-white/40">&copy; 2026 CPG Founders Group. All rights reserved.</p>
         </div>
       </div>
     </footer>
