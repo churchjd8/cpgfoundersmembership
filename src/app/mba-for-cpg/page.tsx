@@ -148,7 +148,7 @@ const includes = [
 ];
 
 // TODO: Replace with actual Kajabi checkout link
-const buyHref = "/contact";
+const buyHref = "https://learn.dreammakershq.com/offers/MGU8pLuV";
 
 export default function MbaForCpgPage() {
   return (

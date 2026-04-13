@@ -69,6 +69,7 @@ const offers = [
     who: "Founders who want the systems and education and will implement themselves.",
     cta: "Get lifetime access",
     href: "/mba-for-cpg",
+
   },
   {
     title: "VIP Day with Jeff",
