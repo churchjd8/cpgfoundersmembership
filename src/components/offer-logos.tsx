@@ -26,24 +26,25 @@ export function BreakthroughLogo({ className = "h-10 w-auto" }: { className?: st
 export function BabuLogo({ className = "h-10 w-auto" }: { className?: string }) {
   return (
     <svg viewBox="0 0 140 48" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
-      {/* Brain/AI chat icon */}
+      {/* AI brain/circuit icon */}
       <rect x="0" y="0" width="48" height="48" rx="10" fill="#1c1917" />
-      <circle cx="24" cy="20" r="9" stroke="white" strokeWidth="2.5" />
+      {/* Brain outline */}
       <path
-        d="M19 20C19 20 21 23 24 23C27 23 29 20 29 20"
+        d="M24 12C19 12 15 16 15 21C15 24 16.5 26.5 19 28V34H29V28C31.5 26.5 33 24 33 21C33 16 29 12 24 12Z"
         stroke="white"
         strokeWidth="2"
-        strokeLinecap="round"
-      />
-      <circle cx="21" cy="17" r="1.5" fill="white" />
-      <circle cx="27" cy="17" r="1.5" fill="white" />
-      <path
-        d="M20 32L16 38H32L28 32"
-        stroke="white"
-        strokeWidth="2"
-        strokeLinecap="round"
         strokeLinejoin="round"
       />
+      {/* Circuit nodes */}
+      <circle cx="20" cy="20" r="1.5" fill="white" />
+      <circle cx="28" cy="20" r="1.5" fill="white" />
+      <circle cx="24" cy="25" r="1.5" fill="white" />
+      {/* Circuit lines */}
+      <line x1="20" y1="20" x2="24" y2="25" stroke="white" strokeWidth="1" opacity="0.6" />
+      <line x1="28" y1="20" x2="24" y2="25" stroke="white" strokeWidth="1" opacity="0.6" />
+      <line x1="20" y1="20" x2="28" y2="20" stroke="white" strokeWidth="1" opacity="0.6" />
+      {/* Pulse lines */}
+      <path d="M19 34H22L23 32L25 36L26 34H29" stroke="white" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
       {/* Text */}
       <text x="56" y="22" fontFamily="system-ui, sans-serif" fontWeight="800" fontSize="18" fill="currentColor">
         BABU
