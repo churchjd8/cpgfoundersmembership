@@ -100,36 +100,49 @@ export default function NinetyDayBreakthroughPage() {
       {/* ========== 1. HERO ========== */}
       <section className="relative bg-foreground text-white overflow-hidden">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-28 lg:py-32">
-          <div className="max-w-3xl">
-            <span className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider bg-accent text-white rounded-full mb-6">
-              The 90-Day Breakthrough with Jeff Church
-            </span>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
-              Whatever&rsquo;s between you and your next stage, we&rsquo;ll help you break
-              through.
-            </h1>
-            <p className="mt-6 text-lg sm:text-xl text-white/70 max-w-2xl leading-relaxed">
-              90 days of direct work with Jeff Church - 8x CPG founder, co-founder of Suja Juice -
-              to diagnose the bottleneck that&rsquo;s actually blocking your next stage and break
-              through it.
-            </p>
-            <p className="mt-4 text-base text-white/50">
-              $2,000/mo for 3 months or $5,000 paid in full (save $1,000). Then $1,500/mo,
-              month-to-month.
-            </p>
-            <div className="mt-8 flex flex-col sm:flex-row gap-4">
-              <Link
-                href={applyHref}
-                className="inline-flex items-center justify-center px-6 py-3 bg-accent hover:bg-accent-dark text-white font-semibold rounded-lg transition-colors text-base"
-              >
-                Apply to join &rarr;
-              </Link>
-              <a
-                href={emailHref}
-                className="inline-flex items-center justify-center px-6 py-3 border border-white/30 hover:border-white/60 text-white font-semibold rounded-lg transition-colors text-base"
-              >
-                Email us with questions
-              </a>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <span className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider bg-accent text-white rounded-full mb-6">
+                The 90-Day Breakthrough with Jeff Church
+              </span>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
+                Whatever&rsquo;s between you and your next stage, we&rsquo;ll help you break
+                through.
+              </h1>
+              <p className="mt-6 text-lg sm:text-xl text-white/70 max-w-2xl leading-relaxed">
+                90 days of direct work with Jeff Church - 8x CPG founder, co-founder of Suja Juice -
+                to diagnose the bottleneck that&rsquo;s actually blocking your next stage and break
+                through it.
+              </p>
+              <p className="mt-4 text-base text-white/50">
+                $2,000/mo for 3 months or $5,000 paid in full (save $1,000). Then $1,500/mo,
+                month-to-month.
+              </p>
+              <div className="mt-8 flex flex-col sm:flex-row gap-4">
+                <Link
+                  href={applyHref}
+                  className="inline-flex items-center justify-center px-6 py-3 bg-accent hover:bg-accent-dark text-white font-semibold rounded-lg transition-colors text-base"
+                >
+                  Apply to join &rarr;
+                </Link>
+                <a
+                  href={emailHref}
+                  className="inline-flex items-center justify-center px-6 py-3 border border-white/30 hover:border-white/60 text-white font-semibold rounded-lg transition-colors text-base"
+                >
+                  Email us with questions
+                </a>
+              </div>
+            </div>
+            <div className="relative">
+              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
+                <Image
+                  src="/images/jeff-teaching.webp"
+                  alt="Jeff Church strategizing at the whiteboard"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
             </div>
           </div>
         </div>
