@@ -276,6 +276,55 @@ export default function ResourcesPage() {
         </div>
       </section>
 
+      {/* ========== COMMUNITY & BABU ========== */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
+              Connect and build with other founders
+            </h2>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2">
+            {/* WhatsApp */}
+            <div className="bg-card rounded-xl border border-border p-6 sm:p-8 flex flex-col">
+              <p className="text-3xl mb-3">💬</p>
+              <h3 className="text-xl font-bold mb-2">CPG Founders WhatsApp Group</h3>
+              <p className="text-muted leading-relaxed flex-1">
+                Join 150+ CPG founders for peer-to-peer support, quick answers, vetted partner
+                introductions, and curated resources. Free, forever.
+              </p>
+              <div className="mt-6 pt-4 border-t border-border">
+                <Link
+                  href="/founders-only"
+                  className="inline-flex items-center px-5 py-2.5 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-colors text-sm"
+                >
+                  Request to join &rarr;
+                </Link>
+              </div>
+            </div>
+
+            {/* Babu */}
+            <div className="bg-card rounded-xl border border-border p-6 sm:p-8 flex flex-col">
+              <p className="text-3xl mb-3">🤖</p>
+              <h3 className="text-xl font-bold mb-2">Babu AI - Free Trial</h3>
+              <p className="text-muted leading-relaxed flex-1">
+                Your on-demand CPG advisor. Deep Research, Launch Checklists, financial review,
+                pricing analysis, and more. Trained on Jeff&rsquo;s 35+ years of CPG experience.
+              </p>
+              <div className="mt-6 pt-4 border-t border-border">
+                <Link
+                  href="/babu-early"
+                  className="inline-flex items-center px-5 py-2.5 bg-accent hover:bg-accent-dark text-white font-semibold rounded-lg transition-colors text-sm"
+                >
+                  Get free beta access &rarr;
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ========== FROM THE BLOG ========== */}
       <section className="py-16 md:py-24 bg-background">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -335,55 +384,6 @@ export default function ResourcesPage() {
             >
               See all posts &rarr;
             </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* ========== COMMUNITY & BABU ========== */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
-              Connect and build with other founders
-            </h2>
-          </div>
-
-          <div className="grid gap-6 md:grid-cols-2">
-            {/* WhatsApp */}
-            <div className="bg-card rounded-xl border border-border p-6 sm:p-8 flex flex-col">
-              <p className="text-3xl mb-3">💬</p>
-              <h3 className="text-xl font-bold mb-2">CPG Founders WhatsApp Group</h3>
-              <p className="text-muted leading-relaxed flex-1">
-                Join 150+ CPG founders for peer-to-peer support, quick answers, vetted partner
-                introductions, and curated resources. Free, forever.
-              </p>
-              <div className="mt-6 pt-4 border-t border-border">
-                <Link
-                  href="/founders-only"
-                  className="inline-flex items-center px-5 py-2.5 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-colors text-sm"
-                >
-                  Request to join &rarr;
-                </Link>
-              </div>
-            </div>
-
-            {/* Babu */}
-            <div className="bg-card rounded-xl border border-border p-6 sm:p-8 flex flex-col">
-              <p className="text-3xl mb-3">🤖</p>
-              <h3 className="text-xl font-bold mb-2">Babu AI - Free Trial</h3>
-              <p className="text-muted leading-relaxed flex-1">
-                Your on-demand CPG advisor. Deep Research, Launch Checklists, financial review,
-                pricing analysis, and more. Trained on Jeff&rsquo;s 35+ years of CPG experience.
-              </p>
-              <div className="mt-6 pt-4 border-t border-border">
-                <Link
-                  href="/babu-early"
-                  className="inline-flex items-center px-5 py-2.5 bg-accent hover:bg-accent-dark text-white font-semibold rounded-lg transition-colors text-sm"
-                >
-                  Get free beta access &rarr;
-                </Link>
-              </div>
-            </div>
           </div>
         </div>
       </section>
