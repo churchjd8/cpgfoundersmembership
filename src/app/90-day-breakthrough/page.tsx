@@ -67,10 +67,10 @@ const highlights = [
 
 const pricingIncludes = [
   "Onboarding diagnostic with Jeff",
+  "1:1 support phone calls with Jeff (as needed)",
   "3x/mo group sessions with Jeff",
   "Weekly accountability calls (optional)",
   "Email access to Jeff",
-  "1:1 support as needed",
   "MBA for CPG (lifetime access)",
   "Babu Pro (included)",
   "Full template library",
