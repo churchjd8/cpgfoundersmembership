@@ -4,7 +4,6 @@ import Link from "next/link";
 import { useState } from "react";
 
 const navLinks = [
-  { label: "Work with Jeff", href: "/#programs" },
   { label: "About", href: "/about-jeff" },
   { label: "BabuAI", href: "https://www.askbabu.ai", external: true },
   { label: "Contact", href: "/contact" },
@@ -34,10 +33,10 @@ export function Header() {
               </Link>
             ))}
             <Link
-              href="/90-day-breakthrough"
+              href="/#programs"
               className="px-4 py-2 text-sm font-semibold bg-accent hover:bg-accent-dark text-white rounded-lg transition-colors"
             >
-              90-Day Breakthrough
+              Work with Jeff
             </Link>
           </nav>
 
@@ -75,11 +74,11 @@ export function Header() {
                 </Link>
               ))}
               <Link
-                href="/90-day-breakthrough"
+                href="/#programs"
                 className="text-sm font-semibold text-accent hover:text-accent-dark transition-colors"
                 onClick={() => setMobileOpen(false)}
               >
-                90-Day Breakthrough
+                Work with Jeff
               </Link>
             </div>
           </nav>
