@@ -22,7 +22,7 @@ export function StickyCTA({ href }: { href: string }) {
         href={href}
         className="inline-flex items-center justify-center px-5 py-3 bg-accent hover:bg-accent-dark text-white font-semibold rounded-full shadow-lg transition-colors text-sm"
       >
-        Apply to join &rarr;
+        Apply now &rarr;
       </Link>
     </div>
   );

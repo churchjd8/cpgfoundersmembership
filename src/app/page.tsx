@@ -44,11 +44,11 @@ const offers = [
     flagship: true,
     tag: "FLAGSHIP",
     title: "The 90-Day Breakthrough with Jeff Church",
-    price: "$2,000/mo for 3 months, then $1,500/mo month-to-month",
+    price: "Application-based — limited seats",
     pitch:
-      "90 days to break through whatever's between you and your next stage. An onboarding diagnostic with Jeff to identify your bottleneck and map the 90 days, then 3 months of direct work together: 1:1 support, group sessions, weekly accountability, AI powered tools, and everything you need to move.",
+      "90 days to break through whatever's between you and your next stage. It starts with a 1:1 diagnostic where Jeff digs into your business, then 3 months of direct work together: group sessions, weekly accountability, AI powered tools, and everything you need to move.",
     who: "Founders serious about leveling up who want Jeff's strategic support in their business.",
-    cta: "See the full program",
+    cta: "Learn more & apply",
     href: "/90-day-breakthrough",
   },
   {

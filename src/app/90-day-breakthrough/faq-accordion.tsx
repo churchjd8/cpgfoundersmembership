@@ -4,28 +4,32 @@ import { useState } from "react";
 
 const faqs = [
   {
-    q: "I'm pre-revenue. Is this for me?",
-    a: "It can be, if you're serious and bring the right foundation. We've worked with pre-revenue founders who have prior operating experience, strong networks, or deep category knowledge. If you've got real skin in the game and you're committed to bringing your product to market, there's a ton here for you. If you're still kicking the tires or just exploring the idea of starting a CPG business, this probably isn't the right fit yet. Not sure? Reach out and we'll tell you straight.",
+    q: "How does the application process work?",
+    a: "You fill out a short application telling us about your business and what you're working through. We review it and get back to you within 2 business days. If it's a fit, we'll send you full program details and you can schedule your 1:1 diagnostic with Jeff to kick things off.",
   },
   {
-    q: "What happens after the first 90 days?",
-    a: "You continue month-to-month at $1,500/mo. Same access to Jeff, the group sessions, the community, and all the tools. Cancel anytime with 30 days notice. No annual contracts, no lock-in. Stay as long as it's valuable.",
+    q: "What's the diagnostic?",
+    a: "It's a 1:1 session where Jeff digs into your business, asks the right questions, and identifies the real bottleneck blocking your next stage. You walk out with a clear picture of what needs to happen and how the 90 days will attack it. If you go through the diagnostic and don't feel like this is the right fit, you get a full refund. No questions asked.",
+  },
+  {
+    q: "I'm pre-revenue. Is this for me?",
+    a: "It can be, if you're serious and bring the right foundation. We've worked with pre-revenue founders who have prior operating experience, strong networks, or deep category knowledge. If you've got real skin in the game and you're committed to bringing your product to market, there's a ton here for you. If you're still kicking the tires or just exploring the idea, this probably isn't the right fit yet. Not sure? Apply and we'll tell you straight.",
   },
   {
     q: "How much time do I need to commit?",
     a: "That's up to you. The group sessions with Jeff are 90 minutes, 3x/mo. The Monday accountability calls are 30 minutes (optional). Beyond that, you engage as much or as little as you need. Some founders go deep into the templates and MBA for CPG course right away. Others lean on Babu and email access. This is built to flex around your schedule.",
   },
   {
-    q: "What if I've already done the CPG Accelerator or another program?",
-    a: "Great, you'll get even more out of this. Many members come in with prior program experience and want ongoing direct access to Jeff and the community. The 90-Day Breakthrough picks up where other programs leave off and keeps you plugged in as you grow. Reach out for alumni pricing if applicable.",
+    q: "What happens after the first 90 days?",
+    a: "You can continue month-to-month with the same access to Jeff, group sessions, community, and all the tools. No annual contracts, no lock-in. Stay as long as it's valuable. Full details are shared after your application is reviewed.",
   },
   {
-    q: "Can I cancel anytime?",
-    a: "After the initial 90 days, yes. Just give 30 days written notice. We want you here because it's valuable, not because you're locked in.",
+    q: "What if I've already done the CPG Accelerator or another program?",
+    a: "Great, you'll get even more out of this. Many members come in with prior program experience and want ongoing direct access to Jeff and the community. The 90-Day Breakthrough picks up where other programs leave off and keeps you plugged in as you grow.",
   },
   {
     q: "What's Babu?",
-    a: "Babu is a custom AI advisor trained on Jeff's 35+ years of CPG experience and loaded with 4,000+ expert resources. Use it for market research, financial review, pricing strategy, competitor tracking, or to pressure-test your investor and retail decks. Think of it as a CPG co-founder in your pocket, available 24/7. Included in the 90-Day Breakthrough and the ongoing Membership.",
+    a: "Babu is a custom AI advisor trained on Jeff's 35+ years of CPG experience and loaded with 4,000+ expert resources. Use it for market research, financial review, pricing strategy, competitor tracking, or to pressure-test your investor and retail decks. Think of it as a CPG co-founder in your pocket, available 24/7. Included in the 90-Day Breakthrough.",
   },
   {
     q: "Who are the guest speakers?",
@@ -33,7 +37,7 @@ const faqs = [
   },
   {
     q: "How do I know if I'm a good fit?",
-    a: "Fill out the application. We'll review and get back to you within a few business days. If it's a fit, we'll set up a kickoff call. If it's not, we'll tell you straight and point you toward the right next step (MBA for CPG, Babu, or a VIP Day, depending on what you need).",
+    a: "Apply. We'll review your application and be straight with you. If it's a fit, we'll walk you through how it works and get you started. If it's not, we'll point you toward the right next step — whether that's the MBA for CPG, Babu, or something else entirely.",
   },
 ];
 

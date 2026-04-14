@@ -65,30 +65,7 @@ const highlights = [
   "Advised founders at Health-Ade, Once Upon a Farm, Juni, Live Pure, Cheeky Cocktails, and dozens more",
 ];
 
-const pricingIncludes = [
-  "Onboarding diagnostic with Jeff",
-  "1:1 support phone calls with Jeff (as needed)",
-  "3x/mo group sessions with Jeff",
-  "Weekly accountability calls (optional)",
-  "Email access to Jeff",
-  "MBA for CPG (lifetime access)",
-  "Babu Pro (included)",
-  "Full template library",
-  "Private community",
-  "Pitch Slams (priority registration)",
-];
-
-const membershipIncludes = [
-  "Continued access to everything above",
-  "3x/mo group sessions",
-  "Weekly accountability calls",
-  "Email access to Jeff",
-  "MBA for CPG, Babu, templates",
-  "Community and events",
-  "Stay plugged in as long as it's valuable",
-];
-
-const applyHref = "/contact";
+const applyHref = "/90-day-breakthrough-apply";
 const emailHref =
   "mailto:info@teamchurch.co?subject=Questions about the 90-Day Breakthrough";
 
@@ -114,16 +91,15 @@ export default function NinetyDayBreakthroughPage() {
                 to diagnose the bottleneck that&rsquo;s actually blocking your next stage and break
                 through it.
               </p>
-              <p className="mt-4 text-base text-white/50">
-                $2,000/mo for 3 months or $5,000 paid in full (save $1,000). Then $1,500/mo,
-                month-to-month.
+              <p className="mt-4 text-sm font-semibold text-accent uppercase tracking-wider">
+                Currently accepting applications &mdash; limited seats available
               </p>
               <div className="mt-8 flex flex-col sm:flex-row gap-4">
                 <Link
                   href={applyHref}
                   className="inline-flex items-center justify-center px-6 py-3 bg-accent hover:bg-accent-dark text-white font-semibold rounded-lg transition-colors text-base"
                 >
-                  Apply to join &rarr;
+                  Apply now &rarr;
                 </Link>
                 <a
                   href={emailHref}
@@ -286,8 +262,8 @@ export default function NinetyDayBreakthroughPage() {
               </span>
               <h3 className="text-xl font-bold">Membership Continues</h3>
               <p className="mt-4 text-muted leading-relaxed">
-                Continue month-to-month at $1,500/mo for ongoing support, group sessions, email
-                access, and everything above. No pressure to stay, no pressure to leave.
+                Continue month-to-month for ongoing support, group sessions, email access to Jeff,
+                and everything above. No pressure to stay, no pressure to leave. Cancel anytime.
               </p>
             </div>
           </div>
@@ -595,72 +571,75 @@ export default function NinetyDayBreakthroughPage() {
         </div>
       </section>
 
-      {/* ========== 9. PRICING ========== */}
-      <section id="pricing" className="py-16 md:py-24 bg-background scroll-mt-20">
+      {/* ========== 9. APPLY ========== */}
+      <section id="apply" className="py-16 md:py-24 bg-background scroll-mt-20">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <span className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider text-accent mb-4">
-              Pricing
+              Next Steps
             </span>
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
-              Simple, transparent pricing.
+              It starts with an application.
             </h2>
+            <p className="mt-4 text-lg text-muted max-w-2xl mx-auto">
+              Jeff works hands-on with every founder he brings on, so he caps how many people he
+              takes on at any given time. Apply and we&rsquo;ll review your business to see if
+              it&rsquo;s a fit.
+            </p>
           </div>
 
-          {/* Single pricing card */}
           <div className="bg-card-flagship rounded-xl border border-accent/30 ring-2 ring-accent/20 p-6 sm:p-8 md:p-10">
-            <span className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider bg-accent text-white rounded-full mb-6">
-              The 90-Day Breakthrough
-            </span>
-
-            <div className="grid sm:grid-cols-2 gap-6 mb-8">
-              <div className="bg-white rounded-lg border border-border p-5">
-                <p className="text-sm font-semibold text-muted uppercase tracking-wide mb-2">
-                  Pay monthly
-                </p>
-                <p className="text-3xl font-bold">
-                  $2,000<span className="text-base font-normal text-muted">/mo</span>
-                </p>
-                <p className="text-sm text-muted mt-1">for 3 months ($6,000 total)</p>
+            <div className="space-y-6">
+              <div className="flex gap-4">
+                <div className="flex-shrink-0 h-8 w-8 rounded-full bg-accent text-white flex items-center justify-center text-sm font-bold">
+                  1
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold">Apply</h3>
+                  <p className="mt-1 text-muted">
+                    Tell us about your business, where you are, and what&rsquo;s blocking your next
+                    stage. Takes about 2 minutes.
+                  </p>
+                </div>
               </div>
-              <div className="bg-white rounded-lg border border-accent/30 p-5 relative">
-                <span className="absolute -top-2.5 right-4 px-2 py-0.5 text-xs font-bold bg-green-600 text-white rounded-full">
-                  Save $1,000
-                </span>
-                <p className="text-sm font-semibold text-muted uppercase tracking-wide mb-2">
-                  Pay in full
-                </p>
-                <p className="text-3xl font-bold">$5,000</p>
-                <p className="text-sm text-muted mt-1">one-time payment</p>
+              <div className="flex gap-4">
+                <div className="flex-shrink-0 h-8 w-8 rounded-full bg-accent text-white flex items-center justify-center text-sm font-bold">
+                  2
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold">We review</h3>
+                  <p className="mt-1 text-muted">
+                    We&rsquo;ll look at your application and get back to you within 2 business days
+                    with next steps and full program details.
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <div className="flex-shrink-0 h-8 w-8 rounded-full bg-accent text-white flex items-center justify-center text-sm font-bold">
+                  3
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold">Schedule your diagnostic with Jeff</h3>
+                  <p className="mt-1 text-muted">
+                    If it&rsquo;s a fit, you&rsquo;ll book your 1:1 diagnostic where Jeff digs into
+                    your business and maps out your breakthrough. If you don&rsquo;t feel the value
+                    after that first session, you get a full refund. No questions asked.
+                  </p>
+                </div>
               </div>
             </div>
 
-            <ul className="space-y-2 mb-8">
-              {pricingIncludes.map((item) => (
-                <li key={item} className="flex gap-2 text-sm text-muted">
-                  <span className="text-accent font-bold">&#10003;</span>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-
-            <Link
-              href={applyHref}
-              className="block w-full text-center px-6 py-3 bg-accent hover:bg-accent-dark text-white font-semibold rounded-lg transition-colors text-lg"
-            >
-              Apply to join &rarr;
-            </Link>
-          </div>
-
-          {/* After 90 days */}
-          <div className="mt-8 bg-card rounded-xl border border-border p-6 sm:p-8">
-            <h3 className="text-lg font-bold mb-2">After your 90 days</h3>
-            <p className="text-muted leading-relaxed">
-              Continue with group support, email access to Jeff, and all the resources for{" "}
-              <span className="font-semibold text-foreground">$1,500/mo</span> - month-to-month,
-              cancel anytime with 30 days notice. No annual contracts. Stay as long as it&rsquo;s
-              valuable.
-            </p>
+            <div className="mt-8 pt-6 border-t border-accent/20">
+              <p className="text-sm text-muted text-center mb-4">
+                Limited seats &mdash; Jeff personally works with every founder he accepts.
+              </p>
+              <Link
+                href={applyHref}
+                className="block w-full text-center px-6 py-3 bg-accent hover:bg-accent-dark text-white font-semibold rounded-lg transition-colors text-lg"
+              >
+                Apply now &rarr;
+              </Link>
+            </div>
           </div>
 
           <p className="mt-6 text-center text-sm text-muted">
@@ -689,16 +668,18 @@ export default function NinetyDayBreakthroughPage() {
             Ready to stop going it alone?
           </h2>
           <p className="mt-6 text-lg text-white/70 leading-relaxed">
-            You&rsquo;ve built something worth fighting for. Let&rsquo;s make sure it wins. The
-            90-Day Breakthrough gives you direct access to Jeff, the playbook, the community, and
-            the support to break through to your next stage.
+            You&rsquo;ve built something worth fighting for. Let&rsquo;s make sure it wins. Apply
+            and we&rsquo;ll be in touch within 2 business days with next steps.
+          </p>
+          <p className="mt-2 text-sm text-white/40">
+            Limited seats available &mdash; Jeff works hands-on with every founder he accepts.
           </p>
           <div className="mt-8">
             <Link
               href={applyHref}
               className="inline-flex items-center justify-center px-8 py-4 bg-accent hover:bg-accent-dark text-white font-semibold rounded-lg transition-colors text-lg"
             >
-              Apply to join &rarr;
+              Apply now &rarr;
             </Link>
           </div>
           <p className="mt-4 text-sm text-white/50">
