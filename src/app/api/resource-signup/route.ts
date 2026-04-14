@@ -73,8 +73,35 @@ export async function POST(request: Request) {
       }
     }
 
-    // Add a note tagging which resource they requested
     if (contactId) {
+      // Look up the Kajabi tag by resource name and apply it
+      const tagSearchRes = await fetch(
+        `https://api.kajabi.com/v1/contact_tags?filter[site_id]=${process.env.KAJABI_SITE_ID!}&filter[name_cont]=${encodeURIComponent(resource)}`,
+        { headers }
+      );
+
+      if (tagSearchRes.ok) {
+        const tagData = await tagSearchRes.json();
+        const matchingTag = tagData.data?.find(
+          (t: { attributes: { name: string } }) =>
+            t.attributes.name === resource
+        );
+
+        if (matchingTag) {
+          await fetch(
+            `https://api.kajabi.com/v1/contacts/${contactId}/relationships/tags`,
+            {
+              method: "POST",
+              headers,
+              body: JSON.stringify({
+                data: [{ type: "contact_tags", id: matchingTag.id }],
+              }),
+            }
+          );
+        }
+      }
+
+      // Add a note with resource request details
       await fetch("https://api.kajabi.com/v1/contact_notes", {
         method: "POST",
         headers,
