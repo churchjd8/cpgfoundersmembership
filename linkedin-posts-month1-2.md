@@ -209,7 +209,7 @@ Meanwhile, I was working 80-hour weeks. Sleeping 4 hours a night. Missing dinner
 
 And I was drinking. Way too much.
 
-It's easy to miss when it's happening to you. You tell yourself it's just how you decompress. Just how you deal with the pressure of payroll and board meetings and 3:00 AM panic attacks about whether the company will survive another quarter.
+My mother died in her early 60s from alcoholism. I knew the genes were there. I'd watched it happen to someone I loved deeply. And still... I told myself I was different. That I had it under control. That it was just how I decompressed after the pressure of payroll and board meetings and 3:00 AM panic attacks about whether the company would survive another quarter.
 
 After I left Suja, I spent a month in rehab. My wife Linda and my family told me they believed that if I hadn't stepped away when I did, I might not still be here today.
 
