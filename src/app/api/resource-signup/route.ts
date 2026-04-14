@@ -18,7 +18,7 @@ async function getKajabiToken() {
 
 export async function POST(request: Request) {
   try {
-    const { name, email, resource } = await request.json();
+    const { name, email, resource, stage, challenge } = await request.json();
 
     if (!name || !email || !resource) {
       return NextResponse.json(
@@ -82,7 +82,7 @@ export async function POST(request: Request) {
           data: {
             type: "contact_notes",
             attributes: {
-              body: `Free resource request from cpgfoundersgroup.com/resources\n\nResource: ${resource}`,
+              body: `Free resource request from cpgfoundersgroup.com/resources\n\nResource: ${resource}\nBusiness Stage: ${stage || "Not provided"}\nBiggest Challenge: ${challenge || "Not provided"}`,
             },
             relationships: {
               contact: {

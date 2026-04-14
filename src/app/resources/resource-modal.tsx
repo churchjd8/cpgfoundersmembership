@@ -125,6 +125,48 @@ export function ResourceModal({
                     />
                   </div>
 
+                  <div>
+                    <label htmlFor={`res-stage-${resourceName}`} className="block text-sm font-medium mb-1">
+                      What stage is your business in? <span className="text-red-500">*</span>
+                    </label>
+                    <select
+                      id={`res-stage-${resourceName}`}
+                      name="stage"
+                      required
+                      defaultValue=""
+                      className="w-full px-4 py-3 rounded-lg border border-border bg-white focus:outline-none focus:ring-2 focus:ring-accent"
+                    >
+                      <option value="" disabled>Select one...</option>
+                      <option value="Idea / Pre-launch">Idea / Pre-launch</option>
+                      <option value="Just launched (under $500K)">Just launched (under $500K)</option>
+                      <option value="Growing ($500K - $2M)">Growing ($500K - $2M)</option>
+                      <option value="Scaling ($2M - $10M)">Scaling ($2M - $10M)</option>
+                      <option value="Established ($10M+)">Established ($10M+)</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label htmlFor={`res-challenge-${resourceName}`} className="block text-sm font-medium mb-1">
+                      Biggest challenge right now? <span className="text-red-500">*</span>
+                    </label>
+                    <select
+                      id={`res-challenge-${resourceName}`}
+                      name="challenge"
+                      required
+                      defaultValue=""
+                      className="w-full px-4 py-3 rounded-lg border border-border bg-white focus:outline-none focus:ring-2 focus:ring-accent"
+                    >
+                      <option value="" disabled>Select one...</option>
+                      <option value="Fundraising">Fundraising</option>
+                      <option value="Launching my product">Launching my product</option>
+                      <option value="Profitability">Profitability</option>
+                      <option value="Getting retail distribution">Getting retail distribution</option>
+                      <option value="Cash management / runway">Cash management / runway</option>
+                      <option value="Scaling operations">Scaling operations</option>
+                      <option value="Building my team">Building my team</option>
+                    </select>
+                  </div>
+
                   <button
                     type="submit"
                     disabled={status === "loading"}
