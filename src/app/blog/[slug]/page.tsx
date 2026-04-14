@@ -77,7 +77,7 @@ export default async function BlogPostPage({
               src={post.image}
               alt={post.title}
               fill
-              className="object-cover"
+              className="object-cover object-top"
               priority
             />
           </div>
