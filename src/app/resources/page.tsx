@@ -62,23 +62,36 @@ export default function ResourcesPage() {
       {/* ========== HERO ========== */}
       <section className="relative bg-foreground text-white overflow-hidden">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-          <div className="max-w-3xl">
-            <span className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider bg-accent text-white rounded-full mb-6">
-              All Free
-            </span>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight tracking-tight">
-              Free Resources for CPG Founders
-            </h1>
-            <p className="mt-6 text-lg text-white/70 max-w-2xl leading-relaxed">
-              Free tools, templates, and training from Jeff Church to help you with everything
-              from fundraising and cash management to retail strategy and scaling operations.
-            </p>
-            <div className="mt-8">
-              <ResourceModal
-                resourceName="All Free Resources Bundle"
-                buttonLabel="Download all resources &rarr;"
-                buttonClass="inline-flex items-center justify-center px-8 py-4 bg-accent hover:bg-accent-dark text-white font-semibold rounded-lg transition-colors text-lg"
-              />
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <span className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider bg-accent text-white rounded-full mb-6">
+                All Free
+              </span>
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight tracking-tight">
+                Free Resources for CPG Founders
+              </h1>
+              <p className="mt-6 text-lg text-white/70 max-w-2xl leading-relaxed">
+                Free tools, templates, and training from Jeff Church to help you with everything
+                from fundraising and cash management to retail strategy and scaling operations.
+              </p>
+              <div className="mt-8">
+                <ResourceModal
+                  resourceName="All Free Resources Bundle"
+                  buttonLabel="Download all resources &rarr;"
+                  buttonClass="inline-flex items-center justify-center px-8 py-4 bg-accent hover:bg-accent-dark text-white font-semibold rounded-lg transition-colors text-lg"
+                />
+              </div>
+            </div>
+            <div className="relative">
+              <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
+                <Image
+                  src="/images/jeff-teaching.webp"
+                  alt="Jeff Church teaching at whiteboard"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
             </div>
           </div>
         </div>
