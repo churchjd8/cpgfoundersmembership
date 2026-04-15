@@ -238,11 +238,11 @@ export default function NinetyDayBreakthroughPage() {
                 </li>
                 <li className="flex gap-2">
                   <span className="text-accent font-bold">&#10003;</span>
-                  The MBA for CPG (lifetime access)
+                  The MBA for CPG bootcamp — 15+ hours, 450+ slides, lifetime access ($997 value, included)
                 </li>
                 <li className="flex gap-2">
                   <span className="text-accent font-bold">&#10003;</span>
-                  Babu (included)
+                  Babu AI Pro — our highest-tier CPG AI advisor ($499/mo value, included)
                 </li>
                 <li className="flex gap-2">
                   <span className="text-accent font-bold">&#10003;</span>
@@ -370,13 +370,13 @@ export default function NinetyDayBreakthroughPage() {
               <ul className="space-y-3 text-sm text-muted">
                 <li>
                   🎓{" "}
-                  <span className="font-semibold text-foreground">The MBA for CPG.</span> 15+ hours
-                  of content, 450+ narrated slides, and dozens of downloadable financial models,
+                  <span className="font-semibold text-foreground">The MBA for CPG bootcamp ($997 value, included).</span>{" "}
+                  15+ hours of content, 450+ narrated slides, and dozens of downloadable financial models,
                   templates, and tools. Lifetime access.
                 </li>
                 <li>
                   🤖{" "}
-                  <span className="font-semibold text-foreground">Babu Pro subscription.</span>{" "}
+                  <span className="font-semibold text-foreground">Babu AI Pro — highest tier ($499/mo value, included).</span>{" "}
                   Purpose-built AI advisor trained on 20+ years of CPG knowledge and 4,000+ expert
                   resources.
                 </li>
