@@ -25,9 +25,11 @@ Co-Founder of Proda | Former Co-Founder of Suja Juice | Founder of CPG Founders 
 
 **New:**
 
-I'm a startup junkie. Over 35 years, eight companies, and more sleepless nights than I can count — I've been building, scaling, and selling consumer brands that disrupt categories and make a positive impact in the world. Five home runs. Three blazing strikeouts. I own both equally, and I think about all of them.
+I've spent 35+ years building, scaling, and selling consumer brands that disrupt categories and make a positive impact in the world. Eight companies. Five home runs. Three blazing strikeouts. I own both equally, and I think about all of them.
 
-One of my proudest achievements was co-founding Suja Juice — the leading cold-pressed juice brand in the US — and growing it to over $100M in revenue in just five years. I was honored to receive the Ernst & Young Entrepreneur of the Year award and BevNet Person of the Year award for my role in Suja's success. But I also learned what it costs you personally to build something at that pace. That experience changed everything about how I approach business and life today.
+One of my proudest business achievements was co-founding Suja Juice — the leading cold-pressed juice brand in the US — and growing it to over $100M in revenue in just five years. I was honored to receive the Ernst & Young Entrepreneur of the Year award and BevNet Person of the Year award for my role in Suja's success. But I also learned what it costs you personally to build something at that pace. That experience changed everything about how I approach business and life today.
+
+But of all the things I've built, what I'm proudest of is my marriage of 35 years to Linda and our four amazing kids. That's the real scoreboard.
 
 Woven through it all is a deep desire to share with aspiring entrepreneurs both the wins and the losses — with the hope that my experiences can be others' shortcuts.
 
