@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
 
+const CONTACT_FORM_ID = "2149550483";
+
 async function getKajabiToken() {
   const res = await fetch("https://api.kajabi.com/v1/oauth/token", {
     method: "POST",
@@ -17,12 +19,10 @@ async function getKajabiToken() {
 }
 
 async function sendNotificationEmail(fields: {
-  name: string;
+  firstName: string;
+  lastName: string;
   email: string;
   business: string;
-  website?: string;
-  stage: string;
-  interest: string;
   message: string;
 }) {
   const res = await fetch("https://api.resend.com/emails", {
@@ -35,20 +35,17 @@ async function sendNotificationEmail(fields: {
       from: "CPG Founders Group <onboarding@resend.dev>",
       to: process.env.CONTACT_FORM_NOTIFY_EMAIL!,
       reply_to: fields.email,
-      subject: `New contact form: ${fields.name} - ${fields.interest}`,
+      subject: `New contact form: ${fields.firstName} ${fields.lastName} (${fields.business})`,
       html: `
         <h2>New Contact Form Submission</h2>
-        <p><strong>Name:</strong> ${fields.name}</p>
+        <p><strong>Name:</strong> ${fields.firstName} ${fields.lastName}</p>
         <p><strong>Email:</strong> ${fields.email}</p>
         <p><strong>Business:</strong> ${fields.business}</p>
-        ${fields.website ? `<p><strong>Website:</strong> ${fields.website}</p>` : ""}
-        <p><strong>Stage:</strong> ${fields.stage}</p>
-        <p><strong>Interest:</strong> ${fields.interest}</p>
         <hr>
         <p><strong>Message:</strong></p>
         <p>${fields.message.replace(/\n/g, "<br>")}</p>
         <hr>
-        <p style="color:#999;font-size:12px;">Submitted from cpgfoundersgroup.com</p>
+        <p style="color:#999;font-size:12px;">Submitted from cpgfoundersgroup.com/contact</p>
       `,
     }),
   });
@@ -61,13 +58,12 @@ async function sendNotificationEmail(fields: {
 
 export async function POST(request: Request) {
   try {
-    const { name, email, business, website, stage, interest, message } =
-      await request.json();
+    const { firstName, lastName, email, business, message } = await request.json();
 
-    if (!name || !email || !business || !stage || !interest || !message) {
+    if (!firstName || !lastName || !email || !business || !message) {
       return NextResponse.json(
         { error: "All required fields must be filled out" },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -77,97 +73,49 @@ export async function POST(request: Request) {
       "Content-Type": "application/vnd.api+json",
     };
 
-    // 1. Create contact in Kajabi
-    const contactRes = await fetch("https://api.kajabi.com/v1/contacts", {
-      method: "POST",
-      headers,
-      body: JSON.stringify({
-        data: {
-          type: "contacts",
-          attributes: { name, email, subscribed: true },
-          relationships: {
-            site: {
-              data: { type: "sites", id: process.env.KAJABI_SITE_ID! },
-            },
-          },
-        },
-      }),
-    });
-
-    let contactId: string | null = null;
-
-    if (contactRes.ok) {
-      const contactData = await contactRes.json();
-      contactId = contactData.data.id;
-    } else {
-      // Contact may already exist - search for them
-      const searchRes = await fetch(
-        `https://api.kajabi.com/v1/contacts?filter[email_contains]=${encodeURIComponent(email)}`,
-        { headers }
-      );
-      if (searchRes.ok) {
-        const searchData = await searchRes.json();
-        const match = searchData.data?.find(
-          (c: { attributes: { email: string } }) =>
-            c.attributes.email.toLowerCase() === email.toLowerCase()
-        );
-        if (match) {
-          contactId = match.id;
-        }
-      }
-    }
-
-    // 2. Add contact note with full form details
-    if (contactId) {
-      const noteBody = [
-        `Contact form submission from cpgfoundersgroup.com`,
-        ``,
-        `Business: ${business}`,
-        website ? `Website: ${website}` : null,
-        `Stage: ${stage}`,
-        `Interest: ${interest}`,
-        ``,
-        `Message:`,
-        message,
-      ]
-        .filter(Boolean)
-        .join("\n");
-
-      await fetch("https://api.kajabi.com/v1/contact_notes", {
+    // Submit through the Kajabi "Website Contact Form".
+    // Kajabi handles contact creation, tagging, and automations.
+    // Field mapping (matches form field order in Kajabi):
+    //   name      → First Name
+    //   email     → Email
+    //   custom_1  → Last Name
+    //   custom_2  → Business Name
+    //   custom_3  → Message
+    const formRes = await fetch(
+      `https://api.kajabi.com/v1/forms/${CONTACT_FORM_ID}/submit`,
+      {
         method: "POST",
         headers,
         body: JSON.stringify({
           data: {
-            type: "contact_notes",
-            attributes: { body: noteBody },
-            relationships: {
-              contact: {
-                data: { type: "contacts", id: contactId },
-              },
+            type: "form_submissions",
+            attributes: {
+              name: firstName,
+              email,
+              custom_1: lastName,
+              custom_2: business,
+              custom_3: message,
             },
           },
         }),
-      });
+      },
+    );
+
+    if (!formRes.ok) {
+      const errText = await formRes.text();
+      console.error(`Kajabi form submit failed (${formRes.status}): ${errText.slice(0, 300)}`);
     }
 
-    // 3. Send email notification
-    await sendNotificationEmail({
-      name,
-      email,
-      business,
-      website,
-      stage,
-      interest,
-      message,
-    });
+    // Also send notification email to team
+    await sendNotificationEmail({ firstName, lastName, email, business, message });
 
     return NextResponse.json({ success: true });
   } catch (err) {
     console.error("Contact form error:", err);
-    const message = err instanceof Error ? err.message : "Something went wrong";
+    const msg = err instanceof Error ? err.message : "Something went wrong";
     return NextResponse.json(
-      { error: "Something went wrong", detail: message },
-      { status: 500 }
+      { error: "Something went wrong", detail: msg },
+      { status: 500 },
     );
   }
 }

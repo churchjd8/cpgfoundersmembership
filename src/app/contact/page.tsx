@@ -2,24 +2,6 @@
 
 import { useState, type FormEvent } from "react";
 
-const stages = [
-  "Idea / Pre-launch",
-  "Launched, under $100K",
-  "$100K to $500K",
-  "$500K to $1M",
-  "$1M to $5M",
-  "$5M to $10M",
-  "$10M+",
-];
-
-const interests = [
-  "90-Day Breakthrough",
-  "VIP Day",
-  "MBA for CPG",
-  "Babu",
-  "General question",
-];
-
 export default function ContactPage() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
@@ -73,17 +55,32 @@ export default function ContactPage() {
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-5">
-          <div>
-            <label htmlFor="name" className="block text-sm font-medium mb-1">
-              Name <span className="text-red-500">*</span>
-            </label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              required
-              className="w-full px-4 py-3 rounded-lg border border-border bg-white focus:outline-none focus:ring-2 focus:ring-accent"
-            />
+          <div className="grid sm:grid-cols-2 gap-5">
+            <div>
+              <label htmlFor="firstName" className="block text-sm font-medium mb-1">
+                First name <span className="text-red-500">*</span>
+              </label>
+              <input
+                type="text"
+                id="firstName"
+                name="firstName"
+                required
+                className="w-full px-4 py-3 rounded-lg border border-border bg-white focus:outline-none focus:ring-2 focus:ring-accent"
+              />
+            </div>
+
+            <div>
+              <label htmlFor="lastName" className="block text-sm font-medium mb-1">
+                Last name <span className="text-red-500">*</span>
+              </label>
+              <input
+                type="text"
+                id="lastName"
+                name="lastName"
+                required
+                className="w-full px-4 py-3 rounded-lg border border-border bg-white focus:outline-none focus:ring-2 focus:ring-accent"
+              />
+            </div>
           </div>
 
           <div>
@@ -110,63 +107,6 @@ export default function ContactPage() {
               required
               className="w-full px-4 py-3 rounded-lg border border-border bg-white focus:outline-none focus:ring-2 focus:ring-accent"
             />
-          </div>
-
-          <div>
-            <label htmlFor="website" className="block text-sm font-medium mb-1">
-              Website
-            </label>
-            <input
-              type="url"
-              id="website"
-              name="website"
-              placeholder="https://"
-              className="w-full px-4 py-3 rounded-lg border border-border bg-white focus:outline-none focus:ring-2 focus:ring-accent"
-            />
-          </div>
-
-          <div>
-            <label htmlFor="stage" className="block text-sm font-medium mb-1">
-              Current stage <span className="text-red-500">*</span>
-            </label>
-            <select
-              id="stage"
-              name="stage"
-              required
-              defaultValue=""
-              className="w-full px-4 py-3 rounded-lg border border-border bg-white focus:outline-none focus:ring-2 focus:ring-accent"
-            >
-              <option value="" disabled>
-                Select your stage
-              </option>
-              {stages.map((s) => (
-                <option key={s} value={s}>
-                  {s}
-                </option>
-              ))}
-            </select>
-          </div>
-
-          <div>
-            <label htmlFor="interest" className="block text-sm font-medium mb-1">
-              What are you interested in? <span className="text-red-500">*</span>
-            </label>
-            <select
-              id="interest"
-              name="interest"
-              required
-              defaultValue=""
-              className="w-full px-4 py-3 rounded-lg border border-border bg-white focus:outline-none focus:ring-2 focus:ring-accent"
-            >
-              <option value="" disabled>
-                Select an option
-              </option>
-              {interests.map((i) => (
-                <option key={i} value={i}>
-                  {i}
-                </option>
-              ))}
-            </select>
           </div>
 
           <div>
