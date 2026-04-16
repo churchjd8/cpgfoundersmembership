@@ -35,8 +35,31 @@ export async function POST(request: Request) {
       "Content-Type": "application/vnd.api+json",
     };
 
-    // Submit through the Kajabi workshop form (custom_2 = Business Name)
-    const formRes = await fetch(
+    // Create the contact first so we have their ID for the note
+    const contactRes = await fetch("https://api.kajabi.com/v1/contacts", {
+      method: "POST",
+      headers,
+      body: JSON.stringify({
+        data: {
+          type: "contacts",
+          attributes: { name, email, custom_2: business, subscribed: true },
+          relationships: {
+            site: {
+              data: { type: "sites", id: process.env.KAJABI_SITE_ID! },
+            },
+          },
+        },
+      }),
+    });
+
+    let contactId: string | null = null;
+    if (contactRes.ok) {
+      const contactData = await contactRes.json();
+      contactId = contactData.data?.id ?? null;
+    }
+
+    // Submit through the Kajabi workshop form to trigger automations/tags
+    await fetch(
       `https://api.kajabi.com/v1/forms/${WORKSHOP_FORM_ID}/submit`,
       {
         method: "POST",
@@ -50,58 +73,25 @@ export async function POST(request: Request) {
       }
     );
 
-    if (!formRes.ok) {
-      // If form submit fails, try creating contact directly
-      await fetch("https://api.kajabi.com/v1/contacts", {
+    // Add a note with the stage info using the contact ID we already have
+    if (stage && contactId) {
+      await fetch("https://api.kajabi.com/v1/contact_notes", {
         method: "POST",
         headers,
         body: JSON.stringify({
           data: {
-            type: "contacts",
-            attributes: { name, email, subscribed: true },
+            type: "contact_notes",
+            attributes: {
+              body: `Burn Rate Workshop signup from cpgfoundersgroup.com\nBrand Stage: ${stage}`,
+            },
             relationships: {
-              site: {
-                data: { type: "sites", id: process.env.KAJABI_SITE_ID! },
+              contact: {
+                data: { type: "contacts", id: contactId },
               },
             },
           },
         }),
       });
-    }
-
-    // Add a note with the stage info — wait briefly for Kajabi to index the contact
-    if (stage) {
-      await new Promise((r) => setTimeout(r, 5000));
-      const searchRes = await fetch(
-        `https://api.kajabi.com/v1/contacts?filter[email_contains]=${encodeURIComponent(email)}`,
-        { headers }
-      );
-      if (searchRes.ok) {
-        const searchData = await searchRes.json();
-        const match = searchData.data?.find(
-          (c: { attributes: { email: string } }) =>
-            c.attributes.email.toLowerCase() === email.toLowerCase()
-        );
-        if (match) {
-          await fetch("https://api.kajabi.com/v1/contact_notes", {
-            method: "POST",
-            headers,
-            body: JSON.stringify({
-              data: {
-                type: "contact_notes",
-                attributes: {
-                  body: `Burn Rate Workshop signup from cpgfoundersgroup.com\nBrand Stage: ${stage}`,
-                },
-                relationships: {
-                  contact: {
-                    data: { type: "contacts", id: match.id },
-                  },
-                },
-              },
-            }),
-          });
-        }
-      }
     }
 
     return NextResponse.json({ success: true });
