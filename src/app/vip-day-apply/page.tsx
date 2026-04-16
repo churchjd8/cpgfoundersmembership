@@ -72,30 +72,43 @@ export default function VipDayApplyPage() {
           <form onSubmit={handleSubmit} className="space-y-5">
             <div className="grid sm:grid-cols-2 gap-5">
               <div>
-                <label htmlFor="vip-name" className="block text-sm font-medium mb-1">
-                  Name <span className="text-red-500">*</span>
+                <label htmlFor="vip-firstName" className="block text-sm font-medium mb-1">
+                  First name <span className="text-red-500">*</span>
                 </label>
                 <input
                   type="text"
-                  id="vip-name"
-                  name="name"
+                  id="vip-firstName"
+                  name="firstName"
                   required
                   className="w-full px-4 py-3 rounded-lg border border-border bg-white focus:outline-none focus:ring-2 focus:ring-accent"
                 />
               </div>
 
               <div>
-                <label htmlFor="vip-email" className="block text-sm font-medium mb-1">
-                  Email <span className="text-red-500">*</span>
+                <label htmlFor="vip-lastName" className="block text-sm font-medium mb-1">
+                  Last name <span className="text-red-500">*</span>
                 </label>
                 <input
-                  type="email"
-                  id="vip-email"
-                  name="email"
+                  type="text"
+                  id="vip-lastName"
+                  name="lastName"
                   required
                   className="w-full px-4 py-3 rounded-lg border border-border bg-white focus:outline-none focus:ring-2 focus:ring-accent"
                 />
               </div>
+            </div>
+
+            <div>
+              <label htmlFor="vip-email" className="block text-sm font-medium mb-1">
+                Email <span className="text-red-500">*</span>
+              </label>
+              <input
+                type="email"
+                id="vip-email"
+                name="email"
+                required
+                className="w-full px-4 py-3 rounded-lg border border-border bg-white focus:outline-none focus:ring-2 focus:ring-accent"
+              />
             </div>
 
             <div className="grid sm:grid-cols-2 gap-5">
@@ -114,7 +127,7 @@ export default function VipDayApplyPage() {
 
               <div>
                 <label htmlFor="vip-website" className="block text-sm font-medium mb-1">
-                  Website
+                  Business website (if applicable)
                 </label>
                 <input
                   type="url"
@@ -127,53 +140,54 @@ export default function VipDayApplyPage() {
             </div>
 
             <div>
-              <label htmlFor="vip-revenue" className="block text-sm font-medium mb-1">
-                Current revenue <span className="text-red-500">*</span>
-              </label>
-              <select
-                id="vip-revenue"
-                name="revenue"
-                required
-                defaultValue=""
-                className="w-full px-4 py-3 rounded-lg border border-border bg-white focus:outline-none focus:ring-2 focus:ring-accent"
-              >
-                <option value="" disabled>
-                  Select your revenue stage
-                </option>
-                {revenueStages.map((s) => (
-                  <option key={s} value={s}>
-                    {s}
-                  </option>
-                ))}
-              </select>
+              <fieldset>
+                <legend className="block text-sm font-medium mb-2">
+                  What is your revenue (Trailing Twelve Months or expected this year)?{" "}
+                  <span className="text-red-500">*</span>
+                </legend>
+                <div className="space-y-2">
+                  {revenueStages.map((s) => (
+                    <label key={s} className="flex items-center gap-3 cursor-pointer">
+                      <input
+                        type="radio"
+                        name="revenue"
+                        value={s}
+                        required
+                        className="h-4 w-4 text-accent border-border focus:ring-accent"
+                      />
+                      <span className="text-sm">{s}</span>
+                    </label>
+                  ))}
+                </div>
+              </fieldset>
             </div>
 
             <div>
-              <label htmlFor="vip-focus" className="block text-sm font-medium mb-1">
-                What&rsquo;s the high-leverage moment you&rsquo;re facing?{" "}
+              <label htmlFor="vip-challenge" className="block text-sm font-medium mb-1">
+                What&rsquo;s the biggest challenge in your business right now?{" "}
                 <span className="text-red-500">*</span>
               </label>
               <textarea
-                id="vip-focus"
-                name="focus"
+                id="vip-challenge"
+                name="challenge"
                 required
                 rows={3}
-                placeholder="Next raise, retail expansion, exit prep, category expansion, team build — what's the decision in front of you?"
+                placeholder="Fundraising, retail expansion, margins, operations, team — what's keeping you up at night?"
                 className="w-full px-4 py-3 rounded-lg border border-border bg-white focus:outline-none focus:ring-2 focus:ring-accent resize-y"
               />
             </div>
 
             <div>
-              <label htmlFor="vip-outcome" className="block text-sm font-medium mb-1">
-                What outcome would make this VIP Day a win?{" "}
+              <label htmlFor="vip-breakthrough" className="block text-sm font-medium mb-1">
+                What would a breakthrough look like for you in the next 90 days?{" "}
                 <span className="text-red-500">*</span>
               </label>
               <textarea
-                id="vip-outcome"
-                name="outcome"
+                id="vip-breakthrough"
+                name="breakthrough"
                 required
                 rows={3}
-                placeholder="What do you want to walk away with? A strategic plan, clarity on a decision, a roadmap for the next 6 months?"
+                placeholder="What specific outcome would change the trajectory of your business?"
                 className="w-full px-4 py-3 rounded-lg border border-border bg-white focus:outline-none focus:ring-2 focus:ring-accent resize-y"
               />
             </div>
