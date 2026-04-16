@@ -29,53 +29,6 @@ async function getKajabiToken() {
   return data.access_token as string;
 }
 
-async function findContactByEmail(
-  email: string,
-  headers: Record<string, string>
-): Promise<string | null> {
-  // Try search filter first
-  const searchRes = await fetch(
-    `https://api.kajabi.com/v1/contacts?filter[email_contains]=${encodeURIComponent(email)}`,
-    { headers }
-  );
-  if (searchRes.ok) {
-    const searchData = await searchRes.json();
-    const match = searchData.data?.find(
-      (c: { attributes: { email: string } }) =>
-        c.attributes.email.toLowerCase() === email.toLowerCase()
-    );
-    if (match) return match.id;
-  }
-
-  // Kajabi search index is unreliable — paginate through all contacts as fallback
-  console.log(`Resource signup: email search failed for ${email}, paginating...`);
-  let page = 1;
-  while (page <= 20) {
-    const pageRes = await fetch(
-      `https://api.kajabi.com/v1/contacts?page[number]=${page}&page[size]=100&sort=-created_at`,
-      { headers }
-    );
-    if (!pageRes.ok) break;
-    const pageData = await pageRes.json();
-    const contacts = pageData.data || [];
-    if (contacts.length === 0) break;
-
-    const found = contacts.find(
-      (c: { attributes: { email: string } }) =>
-        c.attributes.email.toLowerCase() === email.toLowerCase()
-    );
-    if (found) {
-      console.log(`Resource signup: found ${email} on page ${page}`);
-      return found.id;
-    }
-
-    if (!pageData.links?.next) break;
-    page++;
-  }
-
-  return null;
-}
-
 export async function POST(request: Request) {
   try {
     const body = await request.json();
@@ -100,9 +53,37 @@ export async function POST(request: Request) {
       "Content-Type": "application/vnd.api+json",
     };
 
+    // Step 1: Always submit through the default form — this works for new,
+    // existing, and even ghost/deleted contacts in Kajabi
+    const formRes = await fetch(
+      `https://api.kajabi.com/v1/forms/${DEFAULT_FORM_ID}/submit`,
+      {
+        method: "POST",
+        headers,
+        body: JSON.stringify({
+          data: {
+            type: "form_submissions",
+            attributes: { name: first, email, custom_1: last },
+          },
+        }),
+      }
+    );
+
+    if (!formRes.ok) {
+      const errText = await formRes.text();
+      console.error(`Resource signup: form submit failed (${formRes.status}): ${errText.slice(0, 200)}`);
+      return NextResponse.json(
+        { error: "Could not register contact" },
+        { status: 500 }
+      );
+    }
+
+    console.log(`Resource signup: form submitted for ${email}`);
+
+    // Step 2: Try to get the contact ID for tagging and notes (best-effort)
     let contactId: string | null = null;
 
-    // Step 1: Try to create contact directly
+    // Try creating directly — works for new contacts and gives us the ID
     const contactRes = await fetch("https://api.kajabi.com/v1/contacts", {
       method: "POST",
       headers,
@@ -124,70 +105,63 @@ export async function POST(request: Request) {
       contactId = contactData.data.id;
       console.log(`Resource signup: created contact ${contactId}`);
     } else {
-      // Contact exists — submit through default form to ensure they're updated,
-      // then find them by email (with paginated fallback)
-      console.log(`Resource signup: contact exists, submitting via form`);
-      await fetch(`https://api.kajabi.com/v1/forms/${DEFAULT_FORM_ID}/submit`, {
+      // Contact exists — try to find by email search
+      const searchRes = await fetch(
+        `https://api.kajabi.com/v1/contacts?filter[email_contains]=${encodeURIComponent(email)}`,
+        { headers }
+      );
+      if (searchRes.ok) {
+        const searchData = await searchRes.json();
+        const match = searchData.data?.find(
+          (c: { attributes: { email: string } }) =>
+            c.attributes.email.toLowerCase() === email.toLowerCase()
+        );
+        if (match) {
+          contactId = match.id;
+          console.log(`Resource signup: found existing contact ${contactId}`);
+        }
+      }
+    }
+
+    // Step 3: Apply tag and note if we found the contact
+    if (contactId) {
+      const tagId = TAG_IDS[resource];
+      if (tagId) {
+        await fetch(
+          `https://api.kajabi.com/v1/contacts/${contactId}/relationships/tags`,
+          {
+            method: "POST",
+            headers,
+            body: JSON.stringify({
+              data: [{ type: "contact_tags", id: tagId }],
+            }),
+          }
+        );
+      }
+
+      await fetch("https://api.kajabi.com/v1/contact_notes", {
         method: "POST",
         headers,
         body: JSON.stringify({
           data: {
-            type: "form_submissions",
-            attributes: { name: first, email },
+            type: "contact_notes",
+            attributes: {
+              body: `Free resource request from cpgfoundersgroup.com/resources\n\nName: ${fullName}\nResource: ${resource}\nBusiness Stage: ${stage || "Not provided"}\nBiggest Challenge: ${challenge || "Not provided"}`,
+            },
+            relationships: {
+              contact: {
+                data: { type: "contacts", id: contactId },
+              },
+            },
           },
         }),
       });
-
-      contactId = await findContactByEmail(email, headers);
+    } else {
+      console.log(`Resource signup: could not find contact ID for ${email} — form was submitted but tag/note skipped`);
     }
 
-    if (!contactId) {
-      console.error(`Resource signup: FAILED — could not find contact for ${email}`);
-      return NextResponse.json(
-        { error: "Could not create contact" },
-        { status: 500 }
-      );
-    }
-
-    // Step 2: Apply tag
-    const tagId = TAG_IDS[resource];
-    if (tagId) {
-      const tagRes = await fetch(
-        `https://api.kajabi.com/v1/contacts/${contactId}/relationships/tags`,
-        {
-          method: "POST",
-          headers,
-          body: JSON.stringify({
-            data: [{ type: "contact_tags", id: tagId }],
-          }),
-        }
-      );
-      if (!tagRes.ok) {
-        console.error(`Resource signup: tag failed (${tagRes.status})`);
-      } else {
-        console.log(`Resource signup: tagged ${contactId} with ${resource}`);
-      }
-    }
-
-    // Step 3: Add note
-    await fetch("https://api.kajabi.com/v1/contact_notes", {
-      method: "POST",
-      headers,
-      body: JSON.stringify({
-        data: {
-          type: "contact_notes",
-          attributes: {
-            body: `Free resource request from cpgfoundersgroup.com/resources\n\nName: ${fullName}\nResource: ${resource}\nBusiness Stage: ${stage || "Not provided"}\nBiggest Challenge: ${challenge || "Not provided"}`,
-          },
-          relationships: {
-            contact: {
-              data: { type: "contacts", id: contactId },
-            },
-          },
-        },
-      }),
-    });
-
+    // Always return success — the form submission went through even if we
+    // couldn't find the contact ID for tagging
     return NextResponse.json({ success: true });
   } catch (err) {
     console.error("Resource signup error:", err);
