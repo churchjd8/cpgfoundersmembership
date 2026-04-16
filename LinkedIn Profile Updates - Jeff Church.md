@@ -45,9 +45,11 @@ cpgfoundersgroup.com
 
 **New:**
 
-I help CPG founders build, scale, and exit through CPG Founders Group (cpgfoundersgroup.com) — the operator's playbook for the next generation of CPG founders. Strategic direction, operating infrastructure, and AI-powered tools built on 35 years and eight companies.
+I help CPG founders build, scale, and exit through CPG Founders Group — the operator's playbook for the next generation of CPG founders. Strategic direction, operating infrastructure, and AI-powered tools built on 35 years and eight companies.
 
-Programs include: 1) The 90-Day Breakthrough — direct advisory for founders ready to break through their biggest bottleneck; 2) MBA for CPG — 15+ hours of training and the full template library from eight companies; 3) Babu AI (askbabu.ai) — a CPG-specific AI advisor with 40+ specialized tools; 4) VIP Days — half-day intensives for high-leverage moments like fundraising, retail expansion, or exit prep.
+Programs: The 90-Day Breakthrough (direct advisory), MBA for CPG (15+ hours of training and templates), Babu AI at askbabu.ai (40+ CPG-specific tools), and VIP Days (half-day intensives for fundraising, retail, or exit prep).
+
+cpgfoundersgroup.com
 
 **Skills tags:** Keep the existing ones — they're still relevant.
 
