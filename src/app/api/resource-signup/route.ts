@@ -113,36 +113,43 @@ export async function POST(request: Request) {
         );
       }
 
-      // Try to find the existing contact by email search
-      const searchRes = await fetch(
-        `https://api.kajabi.com/v1/contacts?filter[email_contains]=${encodeURIComponent(email)}`,
-        { headers }
-      );
-      if (searchRes.ok) {
-        const searchData = await searchRes.json();
-        const match = searchData.data?.find(
-          (c: { attributes: { email: string } }) =>
-            c.attributes.email.toLowerCase() === email.toLowerCase()
+      // Try to find the existing contact by email search (with retry for indexing delay)
+      for (let attempt = 0; attempt < 3; attempt++) {
+        if (attempt > 0) {
+          await new Promise((r) => setTimeout(r, 3000));
+          console.log(`Resource signup: retry ${attempt} searching for ${email}`);
+        }
+        const searchRes = await fetch(
+          `https://api.kajabi.com/v1/contacts?filter[email_contains]=${encodeURIComponent(email)}`,
+          { headers }
         );
-        if (match) {
-          contactId = match.id;
-          console.log(`Resource signup: found existing contact ${contactId}`);
+        if (searchRes.ok) {
+          const searchData = await searchRes.json();
+          const match = searchData.data?.find(
+            (c: { attributes: { email: string } }) =>
+              c.attributes.email.toLowerCase() === email.toLowerCase()
+          );
+          if (match) {
+            contactId = match.id;
+            console.log(`Resource signup: found existing contact ${contactId}`);
 
-          // Update the existing contact's custom fields
-          await fetch(`https://api.kajabi.com/v1/contacts/${contactId}`, {
-            method: "PATCH",
-            headers,
-            body: JSON.stringify({
-              data: {
-                type: "contacts",
-                id: contactId,
-                attributes: {
-                  custom_3: stage || "",
-                  custom_4: challenge || "",
+            // Update the existing contact's custom fields
+            await fetch(`https://api.kajabi.com/v1/contacts/${contactId}`, {
+              method: "PATCH",
+              headers,
+              body: JSON.stringify({
+                data: {
+                  type: "contacts",
+                  id: contactId,
+                  attributes: {
+                    custom_3: stage || "",
+                    custom_4: challenge || "",
+                  },
                 },
-              },
-            }),
-          });
+              }),
+            });
+            break;
+          }
         }
       }
     }
