@@ -71,7 +71,7 @@ export async function POST(request: Request) {
 
     // Add a note with the stage info — wait briefly for Kajabi to index the contact
     if (stage) {
-      await new Promise((r) => setTimeout(r, 2000));
+      await new Promise((r) => setTimeout(r, 5000));
       const searchRes = await fetch(
         `https://api.kajabi.com/v1/contacts?filter[email_contains]=${encodeURIComponent(email)}`,
         { headers }
