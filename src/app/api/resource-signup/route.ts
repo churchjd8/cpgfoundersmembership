@@ -53,42 +53,9 @@ export async function POST(request: Request) {
       "Content-Type": "application/vnd.api+json",
     };
 
-    // Step 1: Submit through the Free Resources Form — handles new, existing,
-    // and ghost/deleted contacts. Passes stage via custom_3.
-    const formRes = await fetch(
-      `https://api.kajabi.com/v1/forms/${RESOURCES_FORM_ID}/submit`,
-      {
-        method: "POST",
-        headers,
-        body: JSON.stringify({
-          data: {
-            type: "form_submissions",
-            attributes: {
-              name: first,
-              email,
-              custom_1: last,
-              custom_3: stage || "",
-            },
-          },
-        }),
-      }
-    );
-
-    if (!formRes.ok) {
-      const errText = await formRes.text();
-      console.error(`Resource signup: form submit failed (${formRes.status}): ${errText.slice(0, 200)}`);
-      return NextResponse.json(
-        { error: "Could not register contact" },
-        { status: 500 }
-      );
-    }
-
-    console.log(`Resource signup: form submitted for ${email}`);
-
-    // Step 2: Try to get the contact ID for tagging and notes (best-effort)
     let contactId: string | null = null;
 
-    // Try creating directly — works for new contacts and gives us the ID
+    // Step 1: Try creating contact directly — gives us the ID for tagging
     const contactRes = await fetch("https://api.kajabi.com/v1/contacts", {
       method: "POST",
       headers,
@@ -117,7 +84,36 @@ export async function POST(request: Request) {
       contactId = contactData.data.id;
       console.log(`Resource signup: created contact ${contactId}`);
     } else {
-      // Contact exists — try to find by email search
+      // Contact exists (or ghost) — submit through form as fallback
+      console.log(`Resource signup: contact create failed, using form submit`);
+      const formRes = await fetch(
+        `https://api.kajabi.com/v1/forms/${RESOURCES_FORM_ID}/submit`,
+        {
+          method: "POST",
+          headers,
+          body: JSON.stringify({
+            data: {
+              type: "form_submissions",
+              attributes: {
+                name: first,
+                email,
+                custom_1: last,
+                custom_3: stage || "",
+              },
+            },
+          }),
+        }
+      );
+
+      if (!formRes.ok) {
+        console.error(`Resource signup: form submit also failed (${formRes.status})`);
+        return NextResponse.json(
+          { error: "Could not register contact" },
+          { status: 500 }
+        );
+      }
+
+      // Try to find the existing contact by email search
       const searchRes = await fetch(
         `https://api.kajabi.com/v1/contacts?filter[email_contains]=${encodeURIComponent(email)}`,
         { headers }
@@ -148,6 +144,32 @@ export async function POST(request: Request) {
             }),
           });
         }
+      }
+    }
+
+    // Step 2: Submit through form for all contacts (triggers Kajabi automations)
+    if (contactId) {
+      // Only submit form if we created the contact (didn't already submit above)
+      const alreadySubmittedForm = !contactRes.ok;
+      if (!alreadySubmittedForm) {
+        await fetch(
+          `https://api.kajabi.com/v1/forms/${RESOURCES_FORM_ID}/submit`,
+          {
+            method: "POST",
+            headers,
+            body: JSON.stringify({
+              data: {
+                type: "form_submissions",
+                attributes: {
+                  name: first,
+                  email,
+                  custom_1: last,
+                  custom_3: stage || "",
+                },
+              },
+            }),
+          }
+        );
       }
     }
 
