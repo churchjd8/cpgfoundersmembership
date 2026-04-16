@@ -99,17 +99,31 @@ export function ResourceModal({
                 </p>
 
                 <form onSubmit={handleSubmit} className="space-y-4">
-                  <div>
-                    <label htmlFor={`res-name-${resourceName}`} className="block text-sm font-medium mb-1">
-                      Name <span className="text-red-500">*</span>
-                    </label>
-                    <input
-                      type="text"
-                      id={`res-name-${resourceName}`}
-                      name="name"
-                      required
-                      className="w-full px-4 py-3 rounded-lg border border-border bg-white focus:outline-none focus:ring-2 focus:ring-accent"
-                    />
+                  <div className="grid grid-cols-2 gap-3">
+                    <div>
+                      <label htmlFor={`res-fname-${resourceName}`} className="block text-sm font-medium mb-1">
+                        First Name <span className="text-red-500">*</span>
+                      </label>
+                      <input
+                        type="text"
+                        id={`res-fname-${resourceName}`}
+                        name="firstName"
+                        required
+                        className="w-full px-4 py-3 rounded-lg border border-border bg-white focus:outline-none focus:ring-2 focus:ring-accent"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor={`res-lname-${resourceName}`} className="block text-sm font-medium mb-1">
+                        Last Name <span className="text-red-500">*</span>
+                      </label>
+                      <input
+                        type="text"
+                        id={`res-lname-${resourceName}`}
+                        name="lastName"
+                        required
+                        className="w-full px-4 py-3 rounded-lg border border-border bg-white focus:outline-none focus:ring-2 focus:ring-accent"
+                      />
+                    </div>
                   </div>
 
                   <div>

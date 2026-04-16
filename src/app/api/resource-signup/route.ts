@@ -29,9 +29,14 @@ async function getKajabiToken() {
 
 export async function POST(request: Request) {
   try {
-    const { name, email, resource, stage, challenge } = await request.json();
+    const { firstName, lastName, name, email, resource, stage, challenge } = await request.json();
 
-    if (!name || !email || !resource) {
+    // Support both new (firstName/lastName) and legacy (name) formats
+    const first = firstName || name || "";
+    const last = lastName || "";
+    const fullName = last ? `${first} ${last}` : first;
+
+    if (!first || !email || !resource) {
       return NextResponse.json(
         { error: "All fields are required" },
         { status: 400 }
@@ -44,14 +49,14 @@ export async function POST(request: Request) {
       "Content-Type": "application/vnd.api+json",
     };
 
-    // Create contact in Kajabi
+    // Create contact in Kajabi — name field = first name, custom_1 = last name
     const contactRes = await fetch("https://api.kajabi.com/v1/contacts", {
       method: "POST",
       headers,
       body: JSON.stringify({
         data: {
           type: "contacts",
-          attributes: { name, email, subscribed: true },
+          attributes: { name: first, custom_1: last, email, subscribed: true },
           relationships: {
             site: {
               data: { type: "sites", id: process.env.KAJABI_SITE_ID! },
@@ -108,7 +113,7 @@ export async function POST(request: Request) {
           data: {
             type: "contact_notes",
             attributes: {
-              body: `Free resource request from cpgfoundersgroup.com/resources\n\nResource: ${resource}\nBusiness Stage: ${stage || "Not provided"}\nBiggest Challenge: ${challenge || "Not provided"}`,
+              body: `Free resource request from cpgfoundersgroup.com/resources\n\nName: ${fullName}\nResource: ${resource}\nBusiness Stage: ${stage || "Not provided"}\nBiggest Challenge: ${challenge || "Not provided"}`,
             },
             relationships: {
               contact: {
