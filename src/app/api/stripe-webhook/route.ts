@@ -51,7 +51,7 @@ export async function POST(request: Request) {
 
     try {
       await resend.emails.send({
-        from: "CPG Founders Group <info@teamchurch.co>",
+        from: "CPG Founders Group <onboarding@resend.dev>",
         to: "info@teamchurch.co",
         subject: `Failed Payment - ${customerName} (${amount})`,
         html: `
