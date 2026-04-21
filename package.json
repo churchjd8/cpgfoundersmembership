@@ -20,7 +20,8 @@
     "reading-time": "^1.5.0",
     "remark": "^15.0.1",
     "remark-html": "^16.0.1",
-    "resend": "^6.10.0"
+    "resend": "^6.10.0",
+    "stripe": "^22.0.2"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
