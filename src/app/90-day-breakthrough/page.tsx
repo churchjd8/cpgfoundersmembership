@@ -317,8 +317,18 @@ export default function NinetyDayBreakthroughPage() {
                 <li>
                   🎤{" "}
                   <span className="font-semibold text-foreground">Monthly guest speakers.</span>{" "}
-                  Past and upcoming guests include founders from Poppi, Honest Tea, ZICO, Once Upon a
-                  Farm, and more.
+                  Past and upcoming guests include founders and operators from Poppi, Honest, ZICO, Once Upon a
+                  Farm, Juni, and more.
+                  <ul className="mt-3 space-y-1.5 text-xs text-muted ml-2">
+                    <li>Apr 16 — <span className="text-foreground">Justin Prochnow</span>, FDA Attorney</li>
+                    <li>May 21 — <span className="text-foreground">Mike Burgmaier</span>, CPG Investment Banker</li>
+                    <li>Jun 18 — <span className="text-foreground">Wayne Wu</span>, VMG Private Equity</li>
+                    <li>Jul 23 — <span className="text-foreground">Mark Rampolla</span>, ZICO Rising</li>
+                    <li>Aug 20 — <span className="text-foreground">John Foraker</span>, Annie&rsquo;s &amp; Once Upon a Farm</li>
+                    <li>Sep 17 — <span className="text-foreground">Seth Goldman</span>, Honest</li>
+                    <li>Oct 15 — <span className="text-foreground">Stephen &amp; Allison Ellsworth</span>, Poppi</li>
+                    <li>Nov 19 — <span className="text-foreground">Kim Perell</span>, Juni</li>
+                  </ul>
                 </li>
               </ul>
             </div>

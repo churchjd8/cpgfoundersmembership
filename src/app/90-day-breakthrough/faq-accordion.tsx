@@ -33,7 +33,7 @@ const faqs = [
   },
   {
     q: "Who are the guest speakers?",
-    a: "Founders and operators from some of the most successful CPG brands in the industry. Past and upcoming speakers include Allison & Stephen Ellsworth (Poppi), Seth Goldman (Honest Tea), Mark Rampolla (ZICO), John Foraker (Once Upon a Farm), and more. These aren't theoretical talks. They're real stories from people who've built what you're building.",
+    a: "Founders and operators from some of the most successful CPG brands in the industry. Past and upcoming speakers include Justin Prochnow (FDA Attorney), Mike Burgmaier (CPG Investment Banker), Wayne Wu (VMG Private Equity), Mark Rampolla (ZICO Rising), John Foraker (Annie's & Once Upon a Farm), Seth Goldman (Honest), Stephen & Allison Ellsworth (Poppi), and Kim Perell (Juni). These aren't theoretical talks. They're real stories from people who've built what you're building.",
   },
   {
     q: "How do I know if I'm a good fit?",
