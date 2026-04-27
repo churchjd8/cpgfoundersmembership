@@ -49,9 +49,9 @@ const cards = [
     title: "Call Replays",
     description:
       "Watch recordings of previous sessions, workshops, and masterclasses with Jeff.",
-    href: "/resources",
+    href: "https://www.dropbox.com/scl/fi/rhld0wnh9ovkedwkwtusa/Office-Hours-and-Speakers.docx?rlkey=ijb38ugkggg4shqy6cshp89na&dl=0",
     linkLabel: "Watch replays",
-    external: false,
+    external: true,
   },
   {
     emoji: "📚",
