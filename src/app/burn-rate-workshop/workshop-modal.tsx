@@ -37,6 +37,15 @@ export function WorkshopModal({
       });
 
       if (res.ok) {
+        const fbq = (window as unknown as { fbq?: (...args: unknown[]) => void }).fbq;
+        if (typeof fbq === "function") {
+          fbq("track", "Lead", {
+            content_name: "Burn Rate Workshop",
+            content_category: "workshop",
+            currency: "USD",
+            value: 0,
+          });
+        }
         router.push("/burn-rate-workshop/confirmation");
         return;
       } else {
