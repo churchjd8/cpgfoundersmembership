@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Application Received - VIP Day with Jeff",
+  title: "Application Received - Work with Jeff",
   description:
-    "We've received your VIP Day application. We'll review and get back to you within 2 business days.",
+    "We've received your application. We'll review and get back to you within 2 business days.",
 };
 
 export default function VipDayApplyThankYouPage() {
@@ -25,8 +25,9 @@ export default function VipDayApplyThankYouPage() {
           Application received.
         </h1>
         <p className="mt-4 text-lg text-muted">
-          We&rsquo;ll review your VIP Day application and get back to you within 2 business
-          days with next steps and scheduling details.
+          We&rsquo;ll review your application and get back to you within 2 business days with
+          next steps. Jeff is currently at capacity and being selective, so we&rsquo;ll be in
+          touch if it&rsquo;s the right fit.
         </p>
         <p className="mt-2 text-muted">
           In the meantime, feel free to explore.

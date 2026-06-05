@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { NewsletterForm } from "@/components/newsletter-form";
-import { BreakthroughLogo, BabuLogo, MbaLogo, VipDayLogo } from "@/components/offer-logos";
+import { BabuLogo, MbaLogo, VipDayLogo } from "@/components/offer-logos";
 
 const credibility = [
   { stat: "8x", label: "CPG Founder" },
@@ -41,19 +41,7 @@ const testimonials = [
 
 const offers = [
   {
-    flagship: true,
-    tag: "FLAGSHIP",
-    title: "The 90-Day Breakthrough with Jeff Church",
-    price: "Application-based — limited seats",
-    pitch:
-      "90 days to break through whatever's between you and your next stage. It starts with a 1:1 diagnostic where Jeff digs into your business, then 3 months of direct work together: group sessions, weekly accountability, AI powered tools, and everything you need to move.",
-    who: "Founders serious about leveling up who want Jeff's strategic support in their business.",
-    cta: "Learn more & apply",
-    href: "/90-day-breakthrough",
-  },
-  {
     title: "Babu - Your CPG AI Advisor",
-    price: "Starting at $39/mo",
     pitch:
       "Your on-demand CPG advisor. Trained on what actually works. Ask anything, anytime - from fundraising strategy to retail negotiation to formulation questions.",
     who: "Anyone with a CPG brand, from idea to scale.",
@@ -63,20 +51,17 @@ const offers = [
   },
   {
     title: "MBA for CPG",
-    price: "$997, lifetime access",
     pitch:
       "Everything you'd learn in a $50K business school, built specifically for CPG founders. 15+ hours of training, 450+ slides, and the full template library Jeff used to build and sell multi-category brands. Self-paced, yours forever.",
     who: "Founders who want the systems and education and will implement themselves.",
-    cta: "Get lifetime access",
+    cta: "Learn more",
     href: "/mba-for-cpg",
-
   },
   {
-    title: "VIP Day with Jeff",
-    price: "Starting at $15,000 (intensive + 3 months support)",
+    title: "Apply to Work with Jeff",
     pitch:
-      "A half-day intensive with Jeff at your business's highest-leverage moment. Walk out with a written strategic plan on your biggest decision - next raise, retail expansion, exit prep, category expansion, or team build - plus 3 months of direct support to execute.",
-    who: "Founders facing a high-leverage moment who want to bring Jeff in directly.",
+      "Bring Jeff Church's experience and strategy into your business in a 1:1 way. A custom engagement built around your business and the decisions in front of you - strategy, fundraising, retail, margins, team, or category.",
+    who: "Founders ready for direct, hands-on work with Jeff. Due to capacity, he isn't able to accept everyone - submit a form if you're interested.",
     cta: "Apply now",
     href: "/vip-day-apply",
   },
@@ -160,50 +145,18 @@ export default function HomePage() {
             </div>
             <div>
               <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
-                Four ways to work with Jeff.
+                Three ways to work with Jeff.
               </h2>
               <p className="mt-4 text-lg text-muted">
-                From self-paced learning to direct strategic work - whatever stage you&rsquo;re at,
-                there&rsquo;s a door in.
+                From self-paced learning to direct 1:1 strategic work - whatever stage you&rsquo;re
+                at, there&rsquo;s a door in.
               </p>
             </div>
           </div>
 
-          {/* Flagship card - full width */}
-          {offers.filter((o) => o.flagship).map((offer) => (
-            <div
-              key={offer.title}
-              className="rounded-xl border bg-card-flagship border-accent/30 ring-2 ring-accent/20 p-6 sm:p-8 md:p-10 mb-6"
-            >
-              <div className="md:flex md:items-start md:justify-between md:gap-8">
-                <div className="flex-1">
-                  <BreakthroughLogo className="h-12 w-auto mb-4" />
-                  <span className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider bg-accent text-white rounded-full mb-4">
-                    {offer.tag}
-                  </span>
-                  <h3 className="text-2xl sm:text-3xl font-bold">{offer.title}</h3>
-                  <p className="mt-2 text-sm font-semibold text-accent">{offer.price}</p>
-                  <p className="mt-4 text-muted leading-relaxed">{offer.pitch}</p>
-                  <p className="mt-3 text-sm text-muted">
-                    <span className="font-semibold text-foreground">Who it&rsquo;s for:</span>{" "}
-                    {offer.who}
-                  </p>
-                </div>
-                <div className="mt-6 md:mt-0 md:flex-shrink-0 md:self-center">
-                  <Link
-                    href={offer.href}
-                    className="inline-flex items-center justify-center px-6 py-3 bg-accent hover:bg-accent-dark text-white font-semibold rounded-lg transition-colors text-base"
-                  >
-                    {offer.cta} &rarr;
-                  </Link>
-                </div>
-              </div>
-            </div>
-          ))}
-
-          {/* Secondary offers - three columns */}
+          {/* Offers - three columns */}
           <div className="grid gap-6 md:grid-cols-3">
-            {offers.filter((o) => !o.flagship).map((offer) => {
+            {offers.map((offer) => {
               const LogoComponent =
                 offer.title.includes("Babu") ? BabuLogo :
                 offer.title.includes("MBA") ? MbaLogo :
@@ -215,7 +168,6 @@ export default function HomePage() {
               >
                 <LogoComponent className="h-10 w-auto mb-4" />
                 <h3 className="text-xl font-bold">{offer.title}</h3>
-                <p className="mt-2 text-sm font-semibold text-accent">{offer.price}</p>
                 <p className="mt-4 text-muted leading-relaxed text-sm flex-1">{offer.pitch}</p>
                 <p className="mt-3 text-sm text-muted">
                   <span className="font-semibold text-foreground">Who it&rsquo;s for:</span>{" "}

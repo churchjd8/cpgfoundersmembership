@@ -39,9 +39,9 @@ async function sendNotificationEmail(fields: {
       from: "CPG Founders Group <onboarding@resend.dev>",
       to: process.env.CONTACT_FORM_NOTIFY_EMAIL!,
       reply_to: fields.email,
-      subject: `🔥 VIP Day Application: ${fields.firstName} ${fields.lastName} (${fields.business})`,
+      subject: `🔥 Work with Jeff Application: ${fields.firstName} ${fields.lastName} (${fields.business})`,
       html: `
-        <h2>New VIP Day Application</h2>
+        <h2>New Work with Jeff Application</h2>
         <p><strong>Name:</strong> ${fields.firstName} ${fields.lastName}</p>
         <p><strong>Email:</strong> ${fields.email}</p>
         <p><strong>Business:</strong> ${fields.business}</p>

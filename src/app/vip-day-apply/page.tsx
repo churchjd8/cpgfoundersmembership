@@ -52,15 +52,17 @@ export default function VipDayApplyPage() {
               Application
             </span>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight tracking-tight">
-              Apply for a VIP Day with Jeff
+              Apply to Work with Jeff
             </h1>
             <p className="mt-6 text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
-              A half-day intensive at your business&rsquo;s highest-leverage moment. Tell us
-              where you are and what you&rsquo;re facing &mdash; we&rsquo;ll get back to you
+              Bring Jeff Church&rsquo;s experience and strategy into your business in a 1:1 way.
+              Tell us where you are and what you&rsquo;re facing, and we&rsquo;ll get back to you
               within 2 business days with next steps.
             </p>
             <p className="mt-3 text-sm text-white/40">
-              Every VIP Day is custom-built around your business. Spots are limited.
+              Jeff is at capacity and unable to accept everyone. Each engagement is custom-built
+              around your business and what will move the needle most. If it&rsquo;s the right fit,
+              we&rsquo;ll be in touch.
             </p>
           </div>
         </div>
