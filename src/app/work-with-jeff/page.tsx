@@ -14,7 +14,7 @@ const revenueStages = [
   "$10M+",
 ];
 
-export default function VipDayApplyPage() {
+export default function WorkWithJeffApplyPage() {
   const router = useRouter();
   const [status, setStatus] = useState<"idle" | "loading" | "error">("idle");
 
@@ -26,14 +26,14 @@ export default function VipDayApplyPage() {
     const data = Object.fromEntries(new FormData(form));
 
     try {
-      const res = await fetch("/api/vip-day-apply", {
+      const res = await fetch("/api/work-with-jeff", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
       });
 
       if (res.ok) {
-        router.push("/vip-day-apply/thank-you");
+        router.push("/work-with-jeff/thank-you");
       } else {
         setStatus("error");
       }

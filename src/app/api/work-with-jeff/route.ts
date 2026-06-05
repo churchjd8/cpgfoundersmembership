@@ -55,7 +55,7 @@ async function sendNotificationEmail(fields: {
         <p>${fields.breakthrough.replace(/\n/g, "<br>")}</p>
         ${fields.referral ? `<hr><p><strong>How they heard about Jeff:</strong> ${fields.referral}</p>` : ""}
         <hr>
-        <p style="color:#999;font-size:12px;">Submitted from cpgfoundersgroup.com/vip-day-apply</p>
+        <p style="color:#999;font-size:12px;">Submitted from cpgfoundersgroup.com/work-with-jeff</p>
       `,
     }),
   });

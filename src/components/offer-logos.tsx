@@ -85,10 +85,10 @@ export function MbaLogo({ className = "h-10 w-auto" }: { className?: string }) {
   );
 }
 
-export function VipDayLogo({ className = "h-10 w-auto" }: { className?: string }) {
+export function WorkWithJeffLogo({ className = "h-10 w-auto" }: { className?: string }) {
   return (
-    <svg viewBox="0 0 160 48" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
-      {/* Diamond/star premium icon */}
+    <svg viewBox="0 0 220 48" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
+      {/* Diamond premium icon */}
       <rect x="0" y="0" width="48" height="48" rx="10" fill="#1c1917" />
       <path
         d="M16 20H32L36 26L24 38L12 26Z"
@@ -110,7 +110,7 @@ export function VipDayLogo({ className = "h-10 w-auto" }: { className?: string }
       />
       {/* Text */}
       <text x="56" y="22" fontFamily="system-ui, sans-serif" fontWeight="800" fontSize="16" fill="currentColor">
-        VIP DAY
+        1:1 ADVISORY
       </text>
       <text x="56" y="40" fontFamily="system-ui, sans-serif" fontWeight="600" fontSize="14" fill="currentColor" opacity="0.7">
         WITH JEFF

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { NewsletterForm } from "@/components/newsletter-form";
-import { BabuLogo, MbaLogo, VipDayLogo } from "@/components/offer-logos";
+import { BabuLogo, MbaLogo, WorkWithJeffLogo } from "@/components/offer-logos";
 
 const credibility = [
   { stat: "8x", label: "CPG Founder" },
@@ -63,7 +63,7 @@ const offers = [
       "Bring Jeff Church's experience and strategy into your business in a 1:1 way. A custom engagement built around your business and the decisions in front of you - strategy, fundraising, retail, margins, team, or category.",
     who: "Founders ready for direct, hands-on work with Jeff. Due to capacity, he isn't able to accept everyone - submit a form if you're interested.",
     cta: "Apply now",
-    href: "/vip-day-apply",
+    href: "/work-with-jeff",
   },
 ];
 
@@ -160,7 +160,7 @@ export default function HomePage() {
               const LogoComponent =
                 offer.title.includes("Babu") ? BabuLogo :
                 offer.title.includes("MBA") ? MbaLogo :
-                VipDayLogo;
+                WorkWithJeffLogo;
               return (
               <div
                 key={offer.title}
