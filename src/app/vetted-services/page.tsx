@@ -5,16 +5,14 @@ import Link from "next/link";
 
 type Status = "idle" | "loading" | "success" | "error";
 
-const buildingNow = [
+const categories = [
   "Brokers",
   "Co-Manufacturers",
   "Fractional CFO / Finance",
   "Branding & Design",
   "Legal (CPG-specific)",
-];
-
-const comingSoon = [
   "PR & Marketing Agencies",
+  "AI Agency",
   "Trade Promo Management",
   "Cold Storage & Logistics",
   "E-commerce / Amazon",
@@ -46,51 +44,28 @@ export default function VettedServicesPage() {
 
       {/* ========== CATEGORIES ========== */}
       <section className="py-16 md:py-24 bg-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-8 lg:grid-cols-2">
-            {/* Building now */}
-            <div className="bg-card-flagship rounded-xl border border-accent/30 ring-2 ring-accent/20 p-6 sm:p-8">
-              <span className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider bg-accent text-white rounded-full mb-4">
-                Building Now
-              </span>
-              <h2 className="text-2xl font-bold tracking-tight">
-                Lists being finalized
-              </h2>
-              <p className="mt-3 text-muted">
-                Jeff is actively curating providers in these categories right now. Get on the
-                waitlist below and we&rsquo;ll send them as each list is finalized.
-              </p>
-              <ul className="mt-6 space-y-2">
-                {buildingNow.map((cat) => (
-                  <li key={cat} className="flex items-start gap-2 text-foreground">
-                    <span className="text-accent mt-0.5">&#10003;</span>
-                    {cat}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Coming soon */}
-            <div className="bg-card rounded-xl border border-border p-6 sm:p-8">
-              <span className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider text-muted bg-background rounded-full mb-4">
-                Coming Soon
-              </span>
-              <h2 className="text-2xl font-bold tracking-tight">
-                On the roadmap
-              </h2>
-              <p className="mt-3 text-muted">
-                Lists in development. If your provider category isn&rsquo;t here yet, get on the
-                waitlist and we&rsquo;ll let you know when each one ships.
-              </p>
-              <ul className="mt-6 space-y-2">
-                {comingSoon.map((cat) => (
-                  <li key={cat} className="flex items-start gap-2 text-muted">
-                    <span className="text-muted mt-0.5">&middot;</span>
-                    {cat}
-                  </li>
-                ))}
-              </ul>
-            </div>
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <span className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider text-accent mb-4">
+              Categories
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
+              Lists being finalized
+            </h2>
+            <p className="mt-4 text-lg text-muted">
+              Jeff is actively curating providers across these categories. Get on the waitlist
+              below and we&rsquo;ll send each list as it&rsquo;s finalized.
+            </p>
+          </div>
+          <div className="bg-card-flagship rounded-xl border border-accent/30 ring-2 ring-accent/20 p-6 sm:p-8 md:p-10">
+            <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              {categories.map((cat) => (
+                <li key={cat} className="flex items-start gap-2 text-foreground">
+                  <span className="text-accent mt-0.5">&#10003;</span>
+                  {cat}
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
