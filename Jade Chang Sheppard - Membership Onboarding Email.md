@@ -30,3 +30,5 @@ I'll send over the DocuSign unless you have any questions for us first. And plea
 858 472 8008
 
 Joshua
+
+PS. If you ever find you want more of Jeff's time in the business, there's also a higher-touch option: two 60-minute 1:1's a month at $3,500/mo. No need to decide anything now, I just wanted you to know it's there.
