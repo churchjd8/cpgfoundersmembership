@@ -1,8 +1,8 @@
 # Advisory Services Agreement
 
-This Advisory Services Agreement (the "Agreement") is entered into as of **[Effective Date]** (the "Effective Date") by and between:
+This Advisory Services Agreement (the "Agreement") is entered into as of **June 15, 2026** (the "Effective Date") by and between:
 
-**Provider:** [CPG Founders Group LLC / Jeff Church legal entity], located at [Provider Address] ("Provider," "we," or "us"); and
+**Provider:** Jeffrey Church, located at PO Box 2036, Rancho Santa Fe, CA 92067 ("Provider," "we," or "us"); and
 
 **Client:** Jade Chang Sheppard, on behalf of Fermenteria [/ legal entity name], located at [Client Address] ("Client," "you").
 
@@ -33,7 +33,7 @@ After the Initial Term, this Agreement automatically continues on a month-to-mon
 - **Initial Term Fee.** $2,000 per month for each of the three (3) months of the Initial Term.
 - **Month-to-Month Fee.** $1,500 per month for each Renewal Month after the Initial Term.
 
-Fees are billed monthly in advance and are due on the Effective Date and on the same day of each month thereafter (the "Billing Date"). Client authorizes Provider to charge the payment method on file [credit card / ACH] automatically on each Billing Date. Fees are non-refundable, including for partial months. Past-due amounts may result in suspension of Services until paid.
+Fees are billed monthly in advance and are due on the Effective Date and on the same day of each month thereafter (the "Billing Date"). Billing is handled as a recurring subscription auto-draft through Stripe. Client authorizes Provider to automatically charge the card or ACH payment method on file via Stripe on each Billing Date. Fees are non-refundable, including for partial months. Past-due amounts may result in suspension of Services until paid.
 
 ## 4. Cancellation
 
@@ -81,9 +81,7 @@ By signing below, the Parties agree to the terms of this Agreement.
 
 Signature: ______________________________
 
-Name: [Authorized Signer Name]
-
-Title: [Title]
+Name: Jeffrey Church
 
 Date: ______________________________
 
