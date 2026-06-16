@@ -94,7 +94,7 @@ function OverviewStep({ onNext }: { onNext: () => void }) {
         Welcome, Zeyad
       </p>
       <h1 className="mt-2 font-serif text-3xl font-bold tracking-tight sm:text-4xl">
-        Let&apos;s get you locked and loaded.
+        Let&apos;s get you onboarded.
       </h1>
       <p className="mt-4 text-muted leading-relaxed">
         Here&apos;s everything we talked through, in one place, before we make it

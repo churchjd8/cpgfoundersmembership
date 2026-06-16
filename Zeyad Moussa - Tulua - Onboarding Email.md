@@ -3,7 +3,7 @@
 **From:** Joshua
 **To:** Zeyad Moussa
 **CC:** Jeff Church
-**Subject:** Tulua x Jeff, let's get you locked and loaded
+**Subject:** Tulua x Jeff, let's get you onboarded
 
 ---
 
