@@ -24,7 +24,7 @@ export const ENGAGEMENT = {
 } as const;
 
 export const WHATS_INCLUDED: string[] = [
-  "A half-day, in-person VIP strategy deep dive to kick things off, where Jeff goes deep on your business under NDA and helps you build a 3, 6, and 12-month roadmap.",
+  "A half-day, in-person VIP strategy deep dive to kick things off, where Jeff goes deep on your business under NDA and helps you build a strategic roadmap across every function of your business.",
   "Bi-weekly 60-minute 1:1 sessions with Jeff every other week across the full 3-month intensive, to work the roadmap and support you in real time as you execute.",
   "Email and async support between calls, like a quick gut-check on a supplier contract, feedback on your deck or model, and anything else you want eyes on.",
   `Access to Babu Pro ($${ENGAGEMENT.babuProValueUsd}/mo), the MBA for CPG modules, and all of Jeff's templates and tools.`,

@@ -15,7 +15,7 @@ So, Zeyad, meet Jeff Church (CC'd). Jeff, meet Zeyad, founder of Tulua. He built
 
 Here is a quick recap of what working with Jeff looks like, so it is all in one place:
 
-- A half-day in-person VIP strategy deep dive to kick things off, where Jeff goes deep on the business under NDA and helps you build a 3, 6, and 12-month roadmap.
+- A half-day in-person VIP strategy deep dive to kick things off, where Jeff goes deep on the business under NDA and helps you build a strategic roadmap across every function of your business.
 - Bi-weekly 60-minute 1:1s with Jeff every other week across the full 3 months, to work the roadmap and support you in real time as you execute.
 - Email and async support in between, like a quick gut-check on a supplier contract or feedback on your deck and model.
 - Access to Babu Pro ($200/mo), the MBA for CPG modules, and all of Jeff's templates and tools.

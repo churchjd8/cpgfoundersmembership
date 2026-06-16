@@ -14,7 +14,7 @@ Provider and Client are each a "Party" and together the "Parties."
 
 During the Term, Provider will deliver the following advisory services (the "Services"):
 
-- **Strategy Deep Dive.** A one-time, half-day in-person 1:1 VIP strategy session at the start of the engagement, in which Jeff Church works through Client's business under NDA and helps build a 3, 6, and 12-month strategic roadmap.
+- **Strategy Deep Dive.** A one-time, half-day in-person 1:1 VIP strategy session at the start of the engagement, in which Jeff Church works through Client's business under NDA and helps build a strategic roadmap across every function of the business.
 - **Bi-Weekly 1:1 Sessions.** One (1) sixty (60) minute 1:1 session with Jeff Church every other week across the three-month Initial Term, scheduled in advance, to work the roadmap and support Client in real time during execution.
 - **Email & Async Support.** Reasonable email support between sessions, including async feedback on materials such as supplier contracts, decks, and financial models.
 - **Tools & Content Access.** Access to Babu Pro (a $200/month value), the MBA for CPG modules, and Provider's templates and tools, for the duration of the Term.
