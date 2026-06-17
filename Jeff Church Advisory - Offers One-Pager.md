@@ -9,8 +9,7 @@ A focused 3-month intensive where Jeff gets deep in your business, builds the st
 
 | | **Intensive** | **VIP Intensive** |
 |---|---|---|
-| **Price** | $2,000/mo ($6,000 total) | $5,000/mo ($15,000 total) |
-| **Pay in full** | $5,000 up front (save $1,000) | — |
+| **Price** | $2,500/mo ($7,500 total) | $5,000/mo ($15,000 total) |
 | **Strategy deep dive** | 2-hour 1:1 deep dive | Half-day in-person VIP deep dive |
 | **1:1s with Jeff** | Monthly 60-min 1:1 | Bi-weekly 60-min 1:1s (every other week) |
 | **Email & async support** | ✓ | ✓ |
@@ -21,11 +20,13 @@ A focused 3-month intensive where Jeff gets deep in your business, builds the st
 | **Monthly speaker series** | ✓ | ✓ |
 | **Retailer + investor pitch slams** | ✓ | ✓ |
 | **Founder community** | ✓ | ✓ |
-| **After 3 months** | $1,500/mo, month-to-month | Month-to-month, rate set together |
+| **After 3 months** | Month-to-month, $1,500–$4,000/mo* | Month-to-month, $1,500–$4,000/mo* |
+
+\*Reduced rate and cadence, determined during your 3 months based on Jeff's time and involvement.
 
 ---
 
-## Intensive — $2,000/mo (or $5,000 paid in full)
+## Intensive — $2,500/mo
 
 For founders who want senior strategic guidance and a clear plan without needing Jeff in the weeds every week.
 
@@ -38,8 +39,8 @@ For founders who want senior strategic guidance and a clear plan without needing
 - **Monthly speaker series** with industry legends (founders of Poppi, Zico, and more) — fireside chats and Q&A.
 - **Retailer and investor pitch slams** — pitch in front of retailers and angel investors, get feedback, and compete for a cash prize.
 - **Founder community** of other operators going through it alongside you.
-- **Investment:** $6,000 total, billed at $2,000/month. Pay in full for $5,000 and save $1,000.
-- **After the 3 months:** continue month-to-month at $1,500/mo. Cancel anytime.
+- **Investment:** $7,500 total, billed at $2,500/month.
+- **After the 3 months:** continue with month-to-month support at a reduced rate and cadence, determined during your 3 months based on Jeff's time and involvement (roughly $1,500–$4,000/mo). Cancel anytime.
 
 ---
 
@@ -57,7 +58,7 @@ For founders who want Jeff close, with more face time and a deeper, hands-on kic
 - **Retailer and investor pitch slams** — pitch, get feedback, compete for a cash prize.
 - **Founder community** of other operators going through it alongside you.
 - **Investment:** $15,000 total, billed at $5,000/month.
-- **After the 3 months:** continue month-to-month at a rate set together before the term ends, based on the level of support that makes sense.
+- **After the 3 months:** continue with month-to-month support at a reduced rate and cadence, determined during your 3 months based on Jeff's time and involvement (roughly $1,500–$4,000/mo). Cancel anytime.
 
 ---
 
@@ -65,7 +66,6 @@ For founders who want Jeff close, with more face time and a deeper, hands-on kic
 
 - Jeff's brain in your business. He scaled Suja into one of the fastest-growing CPG brands in the country and is back in it now with Proda, so the advice is current, not 20 years stale.
 - A real partner in your corner, not just a plan. Someone to catch the things you don't know you don't know before they cost you.
-- Everything under NDA, every time.
 
 ---
 
