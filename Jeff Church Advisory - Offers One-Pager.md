@@ -1,0 +1,76 @@
+# Work With Jeff Church
+## The 3-Month Advisory Intensive — Two Ways to Work Together
+
+A focused 3-month intensive where Jeff gets deep in your business, builds the strategy and roadmap with you, and stays in your corner as you execute. Two levels, depending on how much direct time with Jeff you want.
+
+---
+
+## Side by side
+
+| | **Intensive** | **VIP Intensive** |
+|---|---|---|
+| **Price** | $2,000/mo ($6,000 total) | $5,000/mo ($15,000 total) |
+| **Pay in full** | $5,000 up front (save $1,000) | — |
+| **Strategy deep dive** | 2-hour 1:1 deep dive | Half-day in-person VIP deep dive |
+| **1:1s with Jeff** | Monthly 60-min 1:1 | Bi-weekly 60-min 1:1s (every other week) |
+| **Email & async support** | ✓ | ✓ |
+| **Babu Pro ($200/mo)** | ✓ | ✓ |
+| **MBA for CPG modules** | ✓ | ✓ |
+| **Templates, tools & white papers** | ✓ | ✓ |
+| **Warm industry intros** | ✓ | ✓ |
+| **Monthly speaker series** | ✓ | ✓ |
+| **Retailer + investor pitch slams** | ✓ | ✓ |
+| **Founder community** | ✓ | ✓ |
+| **After 3 months** | $1,500/mo, month-to-month | Month-to-month, rate set together |
+
+---
+
+## Intensive — $2,000/mo (or $5,000 paid in full)
+
+For founders who want senior strategic guidance and a clear plan without needing Jeff in the weeds every week.
+
+- **2-hour 1:1 strategy deep dive to start.** Jeff goes deep on your business under NDA. You walk out with a clear growth strategy and 6-month action plan, built together. He sends pre-work and does his own research first, so you're not starting from zero.
+- **Monthly 60-minute 1:1 with Jeff** across all 3 months, to work the plan and make the calls in real time.
+- **Email and async support in between.** Gut-checks on a retailer ask, eyes on your model or deck, whatever you want a second opinion on.
+- **Babu Pro included ($200/mo value)** — unlimited use of Jeff's AI tool.
+- **MBA for CPG modules** — video trainings on marketing, sales, manufacturing, team, and more, plus the tools, templates, and white papers for each.
+- **Warm introductions** to the right industry contacts, suppliers, co-mans, and buyers. Jeff is one degree from everyone in the space.
+- **Monthly speaker series** with industry legends (founders of Poppi, Zico, and more) — fireside chats and Q&A.
+- **Retailer and investor pitch slams** — pitch in front of retailers and angel investors, get feedback, and compete for a cash prize.
+- **Founder community** of other operators going through it alongside you.
+- **Investment:** $6,000 total, billed at $2,000/month. Pay in full for $5,000 and save $1,000.
+- **After the 3 months:** continue month-to-month at $1,500/mo. Cancel anytime.
+
+---
+
+## VIP Intensive — $5,000/mo
+
+For founders who want Jeff close, with more face time and a deeper, hands-on kickoff.
+
+- **Half-day in-person VIP strategy deep dive to start.** Jeff goes deep on your business under NDA and helps you build a strategic roadmap across every function of the business. Pre-work and his own research done in advance.
+- **Bi-weekly 60-minute 1:1s with Jeff** (every other week) across all 3 months — double the direct time to work the roadmap and support you as you execute.
+- **Email and async support in between** — same direct line, gut-checks and feedback whenever you need them.
+- **Babu Pro included ($200/mo value)** — unlimited use of Jeff's AI tool.
+- **MBA for CPG modules** — the full library of video trainings, tools, templates, and white papers.
+- **Warm introductions** to the right industry contacts, suppliers, co-mans, and buyers.
+- **Monthly speaker series** with industry legends — fireside chats and Q&A.
+- **Retailer and investor pitch slams** — pitch, get feedback, compete for a cash prize.
+- **Founder community** of other operators going through it alongside you.
+- **Investment:** $15,000 total, billed at $5,000/month.
+- **After the 3 months:** continue month-to-month at a rate set together before the term ends, based on the level of support that makes sense.
+
+---
+
+## In both, you're getting
+
+- Jeff's brain in your business. He scaled Suja into one of the fastest-growing CPG brands in the country and is back in it now with Proda, so the advice is current, not 20 years stale.
+- A real partner in your corner, not just a plan. Someone to catch the things you don't know you don't know before they cost you.
+- Everything under NDA, every time.
+
+---
+
+*Notes for design / Joshua to confirm:*
+- *Tier names ("Intensive" / "VIP Intensive") are placeholders. Swap in whatever you actually call them.*
+- *I built the $2K tier from Erin's terms and the $5K tier from Zeyad's. The two differentiators are the deep dive (2-hr remote vs half-day in-person) and the 1:1 cadence (monthly vs bi-weekly). Confirm that's the real line between the tiers.*
+- *The half-day deep dive being in-person may depend on geography (Zeyad and Jeff are neighbors). If the VIP deep dive is in-person regardless, leave it; if not, reword to "extended/half-day deep dive."*
+- *Speaker series, pitch slams, and community are listed in both — confirm both tiers actually get all three (pulled from the Erin call where you described the full ecosystem).*
