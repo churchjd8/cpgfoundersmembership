@@ -7,7 +7,7 @@ A focused 3-month intensive where Jeff gets deep in your business, builds the st
 
 ## Side by side
 
-| | **Intensive** | **VIP Intensive** |
+| | **3-Month Intensive** | **3-Month VIP Intensive** |
 |---|---|---|
 | **Price** | $2,500/mo ($7,500 total) | $5,000/mo ($15,000 total) |
 | **Strategy deep dive** | 2-hour 1:1 deep dive | Half-day in-person VIP deep dive |
@@ -26,7 +26,7 @@ A focused 3-month intensive where Jeff gets deep in your business, builds the st
 
 ---
 
-## Intensive — $2,500/mo
+## 3-Month Intensive — $2,500/mo
 
 For founders who want senior strategic guidance and a clear plan without needing Jeff in the weeds every week.
 
@@ -44,7 +44,7 @@ For founders who want senior strategic guidance and a clear plan without needing
 
 ---
 
-## VIP Intensive — $5,000/mo
+## 3-Month VIP Intensive — $5,000/mo
 
 For founders who want Jeff close, with more face time and a deeper, hands-on kickoff.
 
@@ -70,7 +70,6 @@ For founders who want Jeff close, with more face time and a deeper, hands-on kic
 ---
 
 *Notes for design / Joshua to confirm:*
-- *Tier names ("Intensive" / "VIP Intensive") are placeholders. Swap in whatever you actually call them.*
-- *I built the $2K tier from Erin's terms and the $5K tier from Zeyad's. The two differentiators are the deep dive (2-hr remote vs half-day in-person) and the 1:1 cadence (monthly vs bi-weekly). Confirm that's the real line between the tiers.*
+- *The two differentiators are the deep dive (2-hr remote vs half-day in-person) and the 1:1 cadence (monthly vs bi-weekly). Everything else is shared. Confirm that's the real line between the tiers.*
 - *The half-day deep dive being in-person may depend on geography (Zeyad and Jeff are neighbors). If the VIP deep dive is in-person regardless, leave it; if not, reword to "extended/half-day deep dive."*
 - *Speaker series, pitch slams, and community are listed in both — confirm both tiers actually get all three (pulled from the Erin call where you described the full ecosystem).*
