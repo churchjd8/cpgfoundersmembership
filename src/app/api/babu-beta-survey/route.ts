@@ -67,7 +67,7 @@ export async function POST(request: Request) {
   try {
     const data = (await request.json()) as Payload;
 
-    if (!data.email || !data.role || !data.cpgCategory || !data.businessStage) {
+    if (!data.role || !data.cpgCategory || !data.businessStage) {
       return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
     }
     if (!data.usageFrequency || !data.biggestValue) {
@@ -141,7 +141,7 @@ export async function POST(request: Request) {
       <div style="font-family:system-ui,sans-serif;max-width:680px;margin:0 auto;color:#1c1917;">
         <h2 style="margin:0 0 4px;">New Babu Beta Survey response</h2>
         <p style="margin:0;color:#666;font-size:13px;">
-          From ${data.name || "(anonymous)"} — ${data.email}
+          From ${data.name || "(anonymous)"}${data.email ? ` — ${data.email}` : ""}
         </p>
         ${section("Identity", identityHtml)}
         ${section("Usage & value", usageHtml)}
@@ -159,7 +159,7 @@ export async function POST(request: Request) {
     `;
 
     const npsTag = npsBucket ? ` ${npsBucket}` : "";
-    const subject = `📋 Babu Survey: ${data.name || data.email}${npsTag}`;
+    const subject = `📋 Babu Survey: ${data.name || data.email || "anonymous"}${npsTag}`;
 
     const supabase = getSupabaseAdmin();
     const supabasePromise = supabase
@@ -167,7 +167,7 @@ export async function POST(request: Request) {
           .from("babu_survey_responses")
           .insert({
             name: data.name || null,
-            email: data.email,
+            email: data.email || null,
             role: data.role,
             cpg_category: category,
             business_stage: stage,
@@ -203,7 +203,7 @@ export async function POST(request: Request) {
       body: JSON.stringify({
         from: "CPG Founders Group <onboarding@resend.dev>",
         to: process.env.CONTACT_FORM_NOTIFY_EMAIL!,
-        reply_to: data.email,
+        ...(data.email ? { reply_to: data.email } : {}),
         subject,
         html,
       }),

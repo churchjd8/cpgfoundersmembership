@@ -169,7 +169,6 @@ export default function BabuBetaSurveyPage() {
         id: "identity",
         title: "About you",
         valid: () =>
-          form.email.trim().length > 0 &&
           form.role.trim().length > 0 &&
           form.cpgCategory.length > 0 &&
           (form.cpgCategory !== "Other" || form.cpgCategoryOther.trim().length > 0) &&
@@ -314,7 +313,7 @@ export default function BabuBetaSurveyPage() {
             Help shape the future of Babu
           </h1>
           <p className="mt-2 text-sm text-muted">
-            About 7 minutes. Your feedback goes straight to Jeff and the product team.
+            Less than 5 minutes to complete. Your feedback goes straight to Jeff and the product team.
           </p>
         </div>
 
@@ -427,14 +426,11 @@ function IntroStep() {
       <h2 className="text-2xl sm:text-3xl font-bold tracking-tight mb-3">
         Thanks for being part of the Babu Beta
       </h2>
-      <p className="text-muted leading-relaxed mb-6 max-w-md mx-auto">
-        We&rsquo;re collecting feedback to shape what Babu becomes next. This takes about{" "}
-        <strong>7 minutes</strong>, and every answer goes directly to Jeff and the product team.
+      <p className="text-muted leading-relaxed max-w-md mx-auto">
+        We&rsquo;re collecting feedback to shape what Babu becomes next. It takes{" "}
+        <strong>less than 5 minutes</strong>, and every answer goes directly to Jeff and the
+        product team.
       </p>
-      <div className="bg-accent-light text-accent-dark rounded-lg p-4 text-sm max-w-md mx-auto">
-        <strong>Incentive:</strong> share your name and email at the end to receive a token credit
-        as a thank-you.
-      </div>
     </div>
   );
 }
@@ -451,7 +447,7 @@ function IdentityStep({
       <StepHeader
         eyebrow="About you"
         title="Tell us a little about your business"
-        sub="Helps us segment feedback. Name is optional; email is needed if you want to receive the token credit."
+        sub="Helps us segment feedback. Name and email are optional but help us follow up if needed."
       />
 
       <div className="space-y-5">
@@ -467,13 +463,10 @@ function IdentityStep({
             />
           </div>
           <div>
-            <FieldLabel htmlFor="bs-email" required>
-              Email
-            </FieldLabel>
+            <FieldLabel htmlFor="bs-email">Email (optional)</FieldLabel>
             <input
               id="bs-email"
               type="email"
-              required
               className={inputClass}
               value={form.email}
               onChange={(e) => update("email", e.target.value)}

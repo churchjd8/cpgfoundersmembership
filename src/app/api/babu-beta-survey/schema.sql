@@ -7,7 +7,7 @@ create table if not exists public.babu_survey_responses (
 
   -- identity
   name text,
-  email text not null,
+  email text,
   role text,
   cpg_category text,
   business_stage text,

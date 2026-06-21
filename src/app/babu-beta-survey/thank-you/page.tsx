@@ -25,8 +25,7 @@ export default function BabuSurveyThankYouPage() {
           Thank you for your feedback
         </h1>
         <p className="mt-4 text-lg text-muted">
-          Your responses have been sent to Jeff and the Babu team. If you shared your email,
-          we&rsquo;ll be in touch shortly about your token credit.
+          Your responses have been sent to Jeff and the Babu team.
         </p>
         <p className="mt-2 text-muted">
           Every answer helps us shape what Babu becomes next.
