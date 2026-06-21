@@ -2,8 +2,50 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useMemo } from "react";
+import { useState } from "react";
 import type { BlogPost } from "@/lib/blog";
+
+const CATEGORIES: { label: string; keywords: string[] }[] = [
+  {
+    label: "Fundraising",
+    keywords: ["fundraising", "investor", "cap table", "pitch", "raise", "equity", "dilution", "valuation"],
+  },
+  {
+    label: "Retail & Distribution",
+    keywords: ["retail", "distribution", "whole foods", "walmart", "costco", "kroger", "target", "channel", "drug", "broker", "shelf", "slotting"],
+  },
+  {
+    label: "Operations",
+    keywords: ["operations", "supply chain", "co-manufacturing", "co-man", "manufacturing", "3pl", "logistics", "production", "vertical integration"],
+  },
+  {
+    label: "Margin & Cash",
+    keywords: ["gross margin", "margin", "pricing", "trade spend", "working capital", "cash flow", "p&l", "deduction", "chargeback", "penny profit"],
+  },
+  {
+    label: "Brand & Marketing",
+    keywords: ["brand", "marketing", "dtc", "amazon", "packaging", "velocity", "positioning", "consumer", "loyalty", "repeat purchase", "media"],
+  },
+  {
+    label: "Growth & Strategy",
+    keywords: ["growth", "strategy", "scaling", "exit", "m&a", "leadership", "board", "founder", "turnaround", "pivot", "sku rationalization"],
+  },
+];
+
+function matchesCategory(post: BlogPost, category: typeof CATEGORIES[number]) {
+  const haystack = [post.title, post.description, ...post.tags].join(" ").toLowerCase();
+  return category.keywords.some((kw) => haystack.includes(kw));
+}
+
+function matchesQuery(post: BlogPost, query: string) {
+  if (!query.trim()) return true;
+  const q = query.trim().toLowerCase();
+  return (
+    post.title.toLowerCase().includes(q) ||
+    post.description.toLowerCase().includes(q) ||
+    post.tags.some((t) => t.toLowerCase().includes(q))
+  );
+}
 
 export function BlogList({
   posts,
@@ -13,78 +55,115 @@ export function BlogList({
   postsPerPage: number;
 }) {
   const [page, setPage] = useState(1);
-  const [activeTag, setActiveTag] = useState<string | null>(null);
-
-  // Collect all unique tags sorted alphabetically
-  const allTags = useMemo(() => {
-    const tagSet = new Set<string>();
-    posts.forEach((p) => p.tags.forEach((t) => tagSet.add(t)));
-    return Array.from(tagSet).sort((a, b) => a.localeCompare(b));
-  }, [posts]);
+  const [activeCategory, setActiveCategory] = useState<string | null>(null);
+  const [query, setQuery] = useState("");
 
   const featuredPost = posts.find((p) => p.featured);
   const regularPosts = posts.filter((p) => !p.featured);
 
-  // Filter by active tag
-  const filteredPosts = activeTag
-    ? regularPosts.filter((p) => p.tags.includes(activeTag))
-    : regularPosts;
+  const activeCategoryDef = CATEGORIES.find((c) => c.label === activeCategory);
 
-  const totalPages = Math.ceil(filteredPosts.length / postsPerPage);
+  const filteredPosts = regularPosts.filter((p) => {
+    if (activeCategoryDef && !matchesCategory(p, activeCategoryDef)) return false;
+    if (!matchesQuery(p, query)) return false;
+    return true;
+  });
+
+  const isFiltering = !!activeCategory || !!query.trim();
+  const totalPages = Math.max(1, Math.ceil(filteredPosts.length / postsPerPage));
   const paginatedPosts = filteredPosts.slice(
     (page - 1) * postsPerPage,
     page * postsPerPage
   );
 
-  // Show featured post only on page 1 when no tag filter is active
-  const showFeatured = featuredPost && page === 1 && !activeTag;
+  const showFeatured = featuredPost && page === 1 && !isFiltering;
 
-  // Also check if featured post matches active tag filter
-  const showFilteredFeatured =
-    featuredPost &&
-    activeTag &&
-    page === 1 &&
-    featuredPost.tags.includes(activeTag);
+  function resetFilters() {
+    setActiveCategory(null);
+    setQuery("");
+    setPage(1);
+  }
 
   return (
     <>
-      {/* Tag filters */}
-      {allTags.length > 0 && (
-        <div className="mb-8 flex flex-wrap gap-2">
+      {/* Filter bar: search + category chips */}
+      <div className="mb-8 space-y-4">
+        <div className="relative">
+          <svg
+            className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z"
+            />
+          </svg>
+          <input
+            type="search"
+            value={query}
+            onChange={(e) => {
+              setQuery(e.target.value);
+              setPage(1);
+            }}
+            placeholder="Search posts by title, topic, or keyword..."
+            aria-label="Search blog posts"
+            className="w-full pl-10 pr-4 py-2.5 text-sm border border-border rounded-lg bg-card placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-accent/40 focus:border-accent"
+          />
+        </div>
+        <div className="flex flex-wrap gap-2">
           <button
             onClick={() => {
-              setActiveTag(null);
+              setActiveCategory(null);
               setPage(1);
             }}
             className={`px-3 py-1.5 text-sm font-medium rounded-full transition-colors ${
-              activeTag === null
+              activeCategory === null
                 ? "bg-accent text-white"
                 : "border border-border text-muted hover:bg-card hover:text-foreground"
             }`}
           >
             All
           </button>
-          {allTags.map((tag) => (
+          {CATEGORIES.map((cat) => (
             <button
-              key={tag}
+              key={cat.label}
               onClick={() => {
-                setActiveTag(tag === activeTag ? null : tag);
+                setActiveCategory(cat.label === activeCategory ? null : cat.label);
                 setPage(1);
               }}
-              className={`px-3 py-1.5 text-sm font-medium rounded-full transition-colors capitalize ${
-                tag === activeTag
+              className={`px-3 py-1.5 text-sm font-medium rounded-full transition-colors ${
+                cat.label === activeCategory
                   ? "bg-accent text-white"
                   : "border border-border text-muted hover:bg-card hover:text-foreground"
               }`}
             >
-              {tag}
+              {cat.label}
             </button>
           ))}
         </div>
-      )}
+        {isFiltering && (
+          <p className="text-xs text-muted">
+            {filteredPosts.length} {filteredPosts.length === 1 ? "post" : "posts"}
+            {activeCategory ? ` in ${activeCategory}` : ""}
+            {query.trim() ? ` matching "${query.trim()}"` : ""}
+            {" · "}
+            <button
+              onClick={resetFilters}
+              className="text-accent hover:underline"
+            >
+              clear filters
+            </button>
+          </p>
+        )}
+      </div>
 
       {/* Featured post */}
-      {(showFeatured || showFilteredFeatured) && featuredPost && (
+      {showFeatured && featuredPost && (
         <Link
           href={`/blog/${featuredPost.slug}`}
           className="group block rounded-xl border border-accent/30 ring-2 ring-accent/20 bg-card overflow-hidden hover:shadow-lg transition-shadow mb-10"
@@ -192,14 +271,11 @@ export function BlogList({
           ))}
         </div>
       ) : (
-        activeTag && (
+        isFiltering && (
           <p className="text-muted text-center py-12">
-            No posts found for &ldquo;{activeTag}&rdquo;.{" "}
+            No posts match your filters.{" "}
             <button
-              onClick={() => {
-                setActiveTag(null);
-                setPage(1);
-              }}
+              onClick={resetFilters}
               className="text-accent hover:underline"
             >
               View all posts
