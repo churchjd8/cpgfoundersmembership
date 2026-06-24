@@ -103,6 +103,14 @@ export function ScheduleWizard() {
 
   return (
     <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+      <div className="mb-10 text-center">
+        <p className="text-sm font-semibold uppercase tracking-wide text-accent">
+          CPG Founders Group
+        </p>
+        <h1 className="mt-2 font-serif text-3xl font-bold tracking-tight sm:text-4xl">
+          Book your monthly 1:1 session with Jeff
+        </h1>
+      </div>
       <Stepper current={step} />
       <div className="mt-10">
         {step === 1 && (
@@ -197,19 +205,11 @@ function TimezoneStep({
   const zoneInList = COMMON_ZONES.some((z) => z.tz === zone);
   return (
     <Card>
-      <p className="text-sm font-semibold uppercase tracking-wide text-accent">
-        Book a call with Jeff
-      </p>
-      <h1 className="mt-2 font-serif text-3xl font-bold tracking-tight sm:text-4xl">
-        First, what timezone are you in?
-      </h1>
-      <p className="mt-4 text-muted leading-relaxed">
-        We&apos;ll show every available session in your local time so there&apos;s no
-        mental math. We took a guess based on your device &mdash; change it below if
-        it&apos;s not right.
-      </p>
+      <h2 className="font-serif text-2xl font-bold tracking-tight sm:text-3xl">
+        What timezone are you in?
+      </h2>
 
-      <label className="mt-8 block">
+      <label className="mt-6 block">
         <span className="text-sm font-medium">Your timezone</span>
         <select
           value={zone}
@@ -271,9 +271,9 @@ function SessionsStep({
 
   return (
     <Card>
-      <h1 className="font-serif text-2xl font-bold tracking-tight sm:text-3xl">
+      <h2 className="font-serif text-2xl font-bold tracking-tight sm:text-3xl">
         Pick a session
-      </h1>
+      </h2>
       <div className="mt-3 flex flex-wrap items-center gap-2 text-sm">
         <span className="inline-flex items-center gap-1.5 rounded-full bg-accent-light/60 px-3 py-1 font-medium text-accent-dark">
           <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -410,9 +410,9 @@ function DetailsStep({
 
   return (
     <Card>
-      <h1 className="font-serif text-2xl font-bold tracking-tight sm:text-3xl">
+      <h2 className="font-serif text-2xl font-bold tracking-tight sm:text-3xl">
         Almost there.
-      </h1>
+      </h2>
 
       <div className="mt-4 rounded-xl bg-accent-light/60 p-5">
         <p className="text-sm font-medium text-accent-dark">Your session</p>
