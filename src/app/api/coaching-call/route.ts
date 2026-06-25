@@ -139,8 +139,11 @@ export async function POST(request: Request) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        from: "CPG Founders Group <onboarding@resend.dev>",
-        to: process.env.CONTACT_FORM_NOTIFY_EMAIL!,
+        // Send from the verified cpgfoundersgroup.com domain for reliable
+        // delivery. Scheduling notifications go to Joshua; override with the
+        // SCHEDULING_NOTIFY_EMAIL env var if it ever needs to change.
+        from: "CPG Founders Group <scheduling@cpgfoundersgroup.com>",
+        to: process.env.SCHEDULING_NOTIFY_EMAIL || "joshua@teamchurch.co",
         reply_to: email,
         subject: `📅 ${month.label} 1:1 request: ${name} — ${pacificTime} PT`,
         html,
