@@ -50,9 +50,7 @@ export const SESSION_MONTHS: SessionMonth[] = [
       { date: "2026-06-30", time: "09:00" }, // Tue 9:00 AM
       { date: "2026-07-02", time: "12:00" }, // Thu 12:00 PM
       { date: "2026-07-02", time: "14:00" }, // Thu 2:00 PM
-      { date: "2026-07-09", time: "09:00" }, // Thu 9:00 AM
-      { date: "2026-07-09", time: "12:00" }, // Thu 12:00 PM
-      { date: "2026-07-09", time: "14:00" }, // Thu 2:00 PM
+      { date: "2026-07-09", time: "09:00" }, // Thu 9:00 AM (only opening left on Jul 9)
       { date: "2026-07-13", time: "09:00" }, // Mon 9:00 AM
       { date: "2026-07-13", time: "15:00" }, // Mon 3:00 PM
       { date: "2026-07-14", time: "08:00" }, // Tue 8:00 AM
@@ -80,31 +78,12 @@ export type Slot = {
   durationMinutes: number;
 };
 
-// Sessions Jeff has ALREADY committed outside the booking form (deep dives,
-// existing 1:1s). Any generated slot matching one of these is filtered out of
-// every month, so a founder can never double-book on top of them, even if a
-// time accidentally gets re-added to a month above.
-// Source: Jeff's Coaching Blocks.xlsx.
-const BLOCKED: SlotInput[] = [
-  { date: "2026-07-01", time: "10:00" }, // Jerome
-  { date: "2026-07-01", time: "11:00" }, // Erin (deep dive)
-  { date: "2026-07-01", time: "12:00" }, // Erin (deep dive)
-  { date: "2026-07-10", time: "13:00" }, // Zeyad (deep dive, 1-4pm)
-  { date: "2026-07-10", time: "14:00" }, // Zeyad (deep dive)
-  { date: "2026-07-10", time: "15:00" }, // Zeyad (deep dive)
-];
-
-const BLOCKED_IDS = new Set(
-  BLOCKED.map((s) => `${s.date}T${s.time}:00${PACIFIC_OFFSET}`),
-);
-
 function toSlots(inputs: SlotInput[]): Slot[] {
   return inputs
     .map((s) => {
       const startIso = `${s.date}T${s.time}:00${PACIFIC_OFFSET}`;
       return { id: startIso, startIso, durationMinutes: CALL_MINUTES };
     })
-    .filter((s) => !BLOCKED_IDS.has(s.id))
     .sort((a, b) => a.startIso.localeCompare(b.startIso));
 }
 
