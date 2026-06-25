@@ -129,19 +129,28 @@ export async function getRoster(): Promise<RosterRow[]> {
   return [...rows.values()].sort((a, b) => rank(a) - rank(b) || b.amount - a.amount);
 }
 
+export type CallNote = {
+  title: string | null;
+  meetingDate: string | null;
+  summary: string | null;
+  attendees: string[];
+  source: string;
+};
+
 export type ClientDetail = {
   email: string;
   meta: AdminClientMeta | null;
   stripe: StripeClientDetail | null;
   upcoming: Booking[];
   past: Booking[];
+  callNotes: CallNote[];
 };
 
 export async function getClientDetail(email: string): Promise<ClientDetail> {
   const key = email.toLowerCase();
   const supabase = getSupabaseAdmin();
 
-  const [stripe, metaRes, bookingsRes] = await Promise.all([
+  const [stripe, metaRes, bookingsRes, notesRes] = await Promise.all([
     getStripeClientByEmail(key).catch((e) => {
       console.error("Stripe detail error:", e.message);
       return null;
@@ -149,6 +158,9 @@ export async function getClientDetail(email: string): Promise<ClientDetail> {
     supabase ? supabase.from("admin_clients").select("*").eq("email", key).maybeSingle() : Promise.resolve({ data: null }),
     supabase
       ? supabase.from("coaching_bookings").select("email,name,phone,slot_start,client_timezone").eq("email", key).order("slot_start", { ascending: true })
+      : Promise.resolve({ data: [] }),
+    supabase
+      ? supabase.from("call_notes").select("title,meeting_date,summary,attendees,source").eq("client_email", key).order("meeting_date", { ascending: false, nullsFirst: false })
       : Promise.resolve({ data: [] }),
   ]);
 
@@ -160,11 +172,20 @@ export async function getClientDetail(email: string): Promise<ClientDetail> {
     timezone: r.client_timezone,
   }));
 
+  const callNotes = ((notesRes as { data: { title: string | null; meeting_date: string | null; summary: string | null; attendees: string[] | null; source: string }[] }).data || []).map((n) => ({
+    title: n.title,
+    meetingDate: n.meeting_date,
+    summary: n.summary,
+    attendees: n.attendees || [],
+    source: n.source,
+  }));
+
   return {
     email: key,
     meta: (metaRes as { data: AdminClientMeta | null }).data ?? null,
     stripe,
     upcoming: bookings.filter((b) => new Date(b.slotStart).getTime() >= now),
     past: bookings.filter((b) => new Date(b.slotStart).getTime() < now).reverse(),
+    callNotes,
   };
 }

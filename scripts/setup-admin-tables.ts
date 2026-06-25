@@ -22,6 +22,22 @@ create table if not exists public.admin_clients (
   created_at timestamptz not null default now(),
   updated_at timestamptz not null default now()
 );
+
+-- Call notes / recaps (e.g. from Granola via Deloris). The panel reads these;
+-- Deloris (or any source) writes one row per meeting, keyed by client email.
+create table if not exists public.call_notes (
+  id uuid primary key default gen_random_uuid(),
+  external_id text unique,            -- source note id, for idempotent upserts
+  client_email text not null,         -- join key to clients/Stripe
+  title text,
+  meeting_date timestamptz,
+  summary text,                       -- Granola's summary (markdown/plain)
+  attendees text[] not null default '{}',
+  source text not null default 'granola',
+  created_at timestamptz not null default now()
+);
+create index if not exists call_notes_email_idx on public.call_notes (lower(client_email));
+create index if not exists call_notes_date_idx on public.call_notes (meeting_date desc);
 `;
 
 async function main() {

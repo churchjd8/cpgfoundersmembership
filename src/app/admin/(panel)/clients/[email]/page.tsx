@@ -130,11 +130,37 @@ export default async function ClientDetailPage({
           )}
         </Section>
 
-        {/* Phase 2/3 placeholders */}
-        <Section title="Call notes & briefing">
+        {/* Call notes (Granola via Deloris) */}
+        <Section title="Call notes">
+          {c.callNotes.length ? (
+            <ul className="space-y-4">
+              {c.callNotes.map((n, i) => (
+                <li key={i} className="border-b border-border pb-4 last:border-0 last:pb-0">
+                  <div className="flex items-baseline justify-between gap-3">
+                    <span className="font-medium text-foreground">{n.title || "Untitled call"}</span>
+                    {n.meetingDate && (
+                      <span className="shrink-0 text-xs text-muted">{fmtDate(n.meetingDate)}</span>
+                    )}
+                  </div>
+                  {n.summary && (
+                    <p className="mt-1.5 whitespace-pre-wrap text-sm leading-relaxed text-muted">
+                      {n.summary.length > 600 ? `${n.summary.slice(0, 600)}…` : n.summary}
+                    </p>
+                  )}
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p className="text-sm text-muted">
+              No call notes yet. Granola recaps appear here once Deloris pushes them in.
+            </p>
+          )}
+        </Section>
+
+        {/* Phase 3 placeholder */}
+        <Section title="Pre-call email brief">
           <p className="text-sm text-muted">
-            Granola call recaps and the pre-call email brief land here next. Wired once Deloris is
-            pointed at the shared store.
+            A summary of recent emails from this client lands here next (Phase 3).
           </p>
         </Section>
       </div>
