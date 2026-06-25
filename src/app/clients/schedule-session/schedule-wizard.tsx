@@ -52,7 +52,13 @@ function timeLabel(iso: string, tz: string): string {
   }).format(new Date(iso));
 }
 
-export function ScheduleWizard() {
+export function ScheduleWizard({
+  monthKey,
+  monthLabel,
+}: {
+  monthKey: string;
+  monthLabel: string;
+}) {
   const [step, setStep] = useState<Step>(1);
   const [zone, setZone] = useState<string>("America/Los_Angeles");
   const [slots, setSlots] = useState<Slot[]>([]);
@@ -60,15 +66,15 @@ export function ScheduleWizard() {
   const [selected, setSelected] = useState<string | null>(null);
   const [done, setDone] = useState(false);
 
-  // Detect timezone + load slots once.
+  // Detect timezone + load this month's slots once.
   useEffect(() => {
     setZone(detectZone());
-    fetch("/api/coaching-call")
+    fetch(`/api/coaching-call?month=${encodeURIComponent(monthKey)}`)
       .then((r) => r.json())
       .then((d) => setSlots(d.slots || []))
       .catch(() => setSlots([]))
       .finally(() => setLoading(false));
-  }, []);
+  }, [monthKey]);
 
   const selectedSlot = slots.find((s) => s.id === selected) || null;
 
@@ -108,7 +114,7 @@ export function ScheduleWizard() {
           CPG Founders Group
         </p>
         <h1 className="mt-2 font-serif text-3xl font-bold tracking-tight sm:text-4xl">
-          Book your monthly 1:1 session with Jeff
+          Book your {monthLabel} 1:1 session with Jeff
         </h1>
       </div>
       <Stepper current={step} />

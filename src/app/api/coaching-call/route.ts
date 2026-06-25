@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { getSupabaseAdmin } from "@/lib/supabase";
-import { upcomingSlots } from "@/lib/coaching-slots";
+import { upcomingSlots, findSlot } from "@/lib/coaching-slots";
 
 const PACIFIC_TZ = "America/Los_Angeles";
 
@@ -17,11 +17,12 @@ async function getTakenSlotIds(): Promise<Set<string>> {
   return new Set((data || []).map((r: { slot_id: string }) => r.slot_id));
 }
 
-/** GET — list upcoming, not-yet-booked slots. */
-export async function GET() {
+/** GET — list a month's upcoming, not-yet-booked slots. ?month=july */
+export async function GET(request: Request) {
   try {
+    const month = new URL(request.url).searchParams.get("month") || "";
     const taken = await getTakenSlotIds();
-    const slots = upcomingSlots().filter((s) => !taken.has(s.id));
+    const slots = upcomingSlots(month).filter((s) => !taken.has(s.id));
     return NextResponse.json({ slots });
   } catch (err) {
     console.error("Coaching slots GET error:", err);
@@ -65,14 +66,15 @@ export async function POST(request: Request) {
       );
     }
 
-    // Slot must be a real, still-upcoming slot.
-    const slot = upcomingSlots().find((s) => s.id === slotId);
-    if (!slot) {
+    // Slot must be a real, still-upcoming slot in some month.
+    const found = findSlot(slotId);
+    if (!found) {
       return NextResponse.json(
         { error: "That time is no longer available. Please pick another." },
         { status: 409 },
       );
     }
+    const { slot, month } = found;
 
     const clientTz = timezone && timezone.trim() ? timezone.trim() : PACIFIC_TZ;
     const supabase = getSupabaseAdmin();
@@ -111,7 +113,7 @@ export async function POST(request: Request) {
 
     const html = `
       <div style="font-family:system-ui,sans-serif;max-width:600px;margin:0 auto;color:#1c1917;">
-        <h2 style="margin:0 0 16px;">📅 New coaching call booking</h2>
+        <h2 style="margin:0 0 16px;">📅 New ${month.label} 1:1 booking</h2>
         <table style="border-collapse:collapse;width:100%;font-size:14px;">
           <tr><td style="padding:6px 12px 6px 0;color:#666;white-space:nowrap;">Name</td><td style="padding:6px 0;"><strong>${name}</strong></td></tr>
           <tr><td style="padding:6px 12px 6px 0;color:#666;white-space:nowrap;">Email</td><td style="padding:6px 0;">${email}</td></tr>
@@ -126,7 +128,7 @@ export async function POST(request: Request) {
           Add this to Jeff's calendar manually, then reply to confirm with ${name.split(" ")[0]}.
         </p>
         <hr style="margin:28px 0 12px;border:none;border-top:1px solid #e7e5e4;">
-        <p style="color:#999;font-size:12px;margin:0;">Booked via cpgfoundersgroup.com/schedule-call</p>
+        <p style="color:#999;font-size:12px;margin:0;">Booked via cpgfoundersgroup.com/clients/schedule-session/${month.key}</p>
       </div>
     `;
 
@@ -140,7 +142,7 @@ export async function POST(request: Request) {
         from: "CPG Founders Group <onboarding@resend.dev>",
         to: process.env.CONTACT_FORM_NOTIFY_EMAIL!,
         reply_to: email,
-        subject: `📅 Coaching call request: ${name} — ${pacificTime} PT`,
+        subject: `📅 ${month.label} 1:1 request: ${name} — ${pacificTime} PT`,
         html,
       }),
     });
