@@ -3,8 +3,8 @@ import Link from "next/link";
 import { openMonths } from "@/lib/coaching-slots";
 
 export const metadata: Metadata = {
-  title: "Book your 1:1 session with Jeff — CPG Founders Group",
-  description: "Pick a month to book your 60-minute 1:1 session with Jeff.",
+  title: "Book your monthly 1:1 session with Jeff — CPG Founders Group",
+  description: "Pick a month to book your 60-minute monthly 1:1 session with Jeff.",
   robots: { index: false, follow: false },
 };
 
@@ -18,7 +18,7 @@ export default function ScheduleChooserPage() {
           CPG Founders Group
         </p>
         <h1 className="mt-2 font-serif text-3xl font-bold tracking-tight sm:text-4xl">
-          Book your 1:1 session with Jeff
+          Book your monthly 1:1 session with Jeff
         </h1>
         <p className="mt-4 text-muted leading-relaxed">
           {months.length > 1
