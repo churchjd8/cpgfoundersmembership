@@ -47,7 +47,7 @@ export const SESSION_MONTHS: SessionMonth[] = [
     slots: [
       { date: "2026-06-29", time: "15:00" }, // Mon 3:00 PM
       { date: "2026-06-30", time: "08:00" }, // Tue 8:00 AM
-      { date: "2026-06-30", time: "09:00" }, // Tue 9:00 AM
+      { date: "2026-06-30", time: "10:00" }, // Tue 10:00 AM
       { date: "2026-07-02", time: "12:00" }, // Thu 12:00 PM
       { date: "2026-07-02", time: "14:00" }, // Thu 2:00 PM
       { date: "2026-07-09", time: "09:00" }, // Thu 9:00 AM (only opening left on Jul 9)
