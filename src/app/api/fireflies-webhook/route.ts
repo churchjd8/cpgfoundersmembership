@@ -4,6 +4,7 @@ import { generateRecap, recapToHtml, type MeetingPayload } from "@/lib/meeting-r
 import { buildRecapDocx, docxFilename } from "@/lib/recap-docx";
 import { uploadDocxToDropbox } from "@/lib/dropbox";
 import { fetchTranscript, flattenTranscript, summaryBlock } from "@/lib/fireflies";
+import { saveRecapAsCallNote } from "@/lib/admin-call-notes";
 
 // Webhook → GraphQL fetch → Claude → docx → Dropbox + email typically runs 8-16s.
 export const maxDuration = 60;
@@ -86,12 +87,12 @@ export async function POST(request: Request) {
 
     const recap = await generateRecap(meeting);
     const docxBuffer = await buildRecapDocx(recap, meeting);
-    const filename = docxFilename(meeting);
+    const filename = docxFilename(recap, meeting);
 
     const dropboxFolder = (process.env.DROPBOX_RECAP_FOLDER ?? "/Call Recaps").replace(/\/+$/, "");
     const destPath = `${dropboxFolder}/${filename}`;
 
-    const [dropboxResult, emailResult] = await Promise.allSettled([
+    const [dropboxResult, emailResult, noteResult] = await Promise.allSettled([
       uploadDocxToDropbox(docxBuffer, destPath),
       sendRecapEmail({
         to: process.env.JEFF_RECAP_RECIPIENT ?? "jeff@cpgfoundersgroup.com",
@@ -101,6 +102,9 @@ export async function POST(request: Request) {
         docx: docxBuffer,
         filename,
       }),
+      // Best-effort: also surface this recap in the admin panel, routed to the
+      // matching client by attendee email. Never blocks Dropbox/email.
+      saveRecapAsCallNote({ meetingId, meeting, recap }),
     ]);
 
     if (dropboxResult.status === "rejected") {
@@ -109,6 +113,11 @@ export async function POST(request: Request) {
     if (emailResult.status === "rejected") {
       console.error("[fireflies-webhook] email send failed:", emailResult.reason);
     }
+    if (noteResult.status === "rejected") {
+      console.error("[fireflies-webhook] call-note save failed:", noteResult.reason);
+    }
+
+    const filedUnder = noteResult.status === "fulfilled" ? noteResult.value : null;
 
     return NextResponse.json({
       ok: true,
@@ -121,6 +130,7 @@ export async function POST(request: Request) {
         emailResult.status === "fulfilled"
           ? { sent: true }
           : { sent: false, error: String(emailResult.reason) },
+      callNote: filedUnder ? { saved: true, clientEmail: filedUnder } : { saved: false },
     });
   } catch (err) {
     console.error("[fireflies-webhook] processing failed:", err);
