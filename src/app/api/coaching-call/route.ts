@@ -50,14 +50,22 @@ type Payload = {
   name?: string;
   email?: string;
   phone?: string;
+  guests?: string[];
   slotId?: string;
   timezone?: string;
 };
 
+const isEmail = (v: string) => /.+@.+\..+/.test(v.trim());
+
 /** POST — book a slot: record it, notify Joshua. */
 export async function POST(request: Request) {
   try {
-    const { name, email, phone, slotId, timezone } = (await request.json()) as Payload;
+    const { name, email, phone, guests, slotId, timezone } = (await request.json()) as Payload;
+
+    // Up to 3 valid guest emails to include on the calendar invite.
+    const guestEmails = Array.isArray(guests)
+      ? guests.map((g) => String(g).trim()).filter(isEmail).slice(0, 3)
+      : [];
 
     if (!name || !email || !phone || !slotId) {
       return NextResponse.json(
@@ -118,6 +126,13 @@ export async function POST(request: Request) {
           <tr><td style="padding:6px 12px 6px 0;color:#666;white-space:nowrap;">Name</td><td style="padding:6px 0;"><strong>${name}</strong></td></tr>
           <tr><td style="padding:6px 12px 6px 0;color:#666;white-space:nowrap;">Email</td><td style="padding:6px 0;">${email}</td></tr>
           <tr><td style="padding:6px 12px 6px 0;color:#666;white-space:nowrap;">Phone</td><td style="padding:6px 0;">${phone}</td></tr>
+          ${
+            guestEmails.length
+              ? `<tr><td style="padding:6px 12px 6px 0;color:#666;white-space:nowrap;vertical-align:top;">Guests</td><td style="padding:6px 0;">${guestEmails
+                  .map((g) => `<div>${g}</div>`)
+                  .join("")}</td></tr>`
+              : ""
+          }
         </table>
         <h3 style="margin:24px 0 8px;font-size:13px;text-transform:uppercase;letter-spacing:0.05em;color:#b45309;">Requested time</h3>
         <table style="border-collapse:collapse;width:100%;font-size:14px;">
@@ -125,7 +140,11 @@ export async function POST(request: Request) {
           <tr><td style="padding:6px 12px 6px 0;color:#666;white-space:nowrap;">Their timezone</td><td style="padding:6px 0;">${theirTime} <span style="color:#999;">(${clientTz})</span></td></tr>
         </table>
         <p style="margin:24px 0 0;padding:12px 16px;background:#fffbeb;border-radius:8px;font-size:13px;color:#92400e;">
-          Add this to Jeff's calendar manually, then reply to confirm with ${name.split(" ")[0]}.
+          Add this to Jeff's calendar manually${
+            guestEmails.length
+              ? `, including the ${guestEmails.length} guest${guestEmails.length > 1 ? "s" : ""} above as invitees`
+              : ""
+          }, then reply to confirm with ${name.split(" ")[0]}.
         </p>
         <hr style="margin:28px 0 12px;border:none;border-top:1px solid #e7e5e4;">
         <p style="color:#999;font-size:12px;margin:0;">Booked via cpgfoundersgroup.com/clients/schedule-session/${month.key}</p>

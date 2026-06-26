@@ -373,12 +373,26 @@ function DetailsStep({
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
+  const [guests, setGuests] = useState<string[]>([]);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const emailOk = /.+@.+\..+/.test(email);
+  const isEmail = (v: string) => /.+@.+\..+/.test(v.trim());
+  const emailOk = isEmail(email);
+  // Filled guest fields must be valid; blank ones are simply ignored.
+  const guestsOk = guests.every((g) => g.trim() === "" || isEmail(g));
   const canSubmit =
-    name.trim().length > 1 && emailOk && phone.trim().length >= 7 && !submitting;
+    name.trim().length > 1 && emailOk && phone.trim().length >= 7 && guestsOk && !submitting;
+
+  function updateGuest(i: number, value: string) {
+    setGuests((prev) => prev.map((g, idx) => (idx === i ? value : g)));
+  }
+  function addGuest() {
+    setGuests((prev) => (prev.length < 3 ? [...prev, ""] : prev));
+  }
+  function removeGuest(i: number) {
+    setGuests((prev) => prev.filter((_, idx) => idx !== i));
+  }
 
   async function handleSubmit() {
     if (!canSubmit) return;
@@ -392,6 +406,7 @@ function DetailsStep({
           name: name.trim(),
           email: email.trim(),
           phone: phone.trim(),
+          guests: guests.map((g) => g.trim()).filter(Boolean),
           slotId: slot.id,
           timezone: zone,
         }),
@@ -457,6 +472,45 @@ function DetailsStep({
               className="mt-1 w-full rounded-lg border border-border bg-white px-3 py-2 text-foreground outline-none focus:border-accent focus:ring-1 focus:ring-accent"
             />
           </label>
+        </div>
+
+        <div>
+          <div className="flex items-baseline justify-between">
+            <span className="text-sm font-medium">Guests (optional)</span>
+            <span className="text-xs text-muted">Add up to 3 to the invite</span>
+          </div>
+          {guests.length > 0 && (
+            <div className="mt-2 space-y-2">
+              {guests.map((g, i) => (
+                <div key={i} className="flex items-center gap-2">
+                  <input
+                    type="email"
+                    value={g}
+                    onChange={(e) => updateGuest(i, e.target.value)}
+                    placeholder="guest@email.com"
+                    className="w-full rounded-lg border border-border bg-white px-3 py-2 text-foreground outline-none focus:border-accent focus:ring-1 focus:ring-accent"
+                  />
+                  <button
+                    type="button"
+                    onClick={() => removeGuest(i)}
+                    aria-label="Remove guest"
+                    className="shrink-0 rounded-lg border border-border px-3 py-2 text-sm text-muted transition-colors hover:border-accent hover:text-foreground"
+                  >
+                    Remove
+                  </button>
+                </div>
+              ))}
+            </div>
+          )}
+          {guests.length < 3 && (
+            <button
+              type="button"
+              onClick={addGuest}
+              className="mt-2 text-sm font-medium text-accent hover:text-accent-dark"
+            >
+              + Add a guest
+            </button>
+          )}
         </div>
       </div>
 
