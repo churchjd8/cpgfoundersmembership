@@ -6,6 +6,7 @@ export type Quote = { speaker: string; quote: string };
 export type DiscussionTopic = { topic: string; points: string[] };
 
 export type Recap = {
+  meeting_title: string;
   subject: string;
   one_liner: string;
   tldr: string[];
@@ -40,8 +41,12 @@ export async function generateRecap(meeting: MeetingPayload): Promise<Recap> {
     .map((a) => `${a.name}${a.email ? ` <${a.email}>` : ""}`)
     .join(", ");
 
+  const d = new Date(meeting.start_time);
+  const dateMdy = `${d.getMonth() + 1}/${d.getDate()}/${String(d.getFullYear()).slice(-2)}`;
+
   const userBlock = [
     `MEETING TITLE: ${meeting.title}`,
+    `DATE_MDY: ${dateMdy}`,
     `DATE: ${meeting.start_time}`,
     `ATTENDEES: ${attendeeList}`,
     `RECORDING URL: ${meeting.url}`,
@@ -81,6 +86,7 @@ function parseRecapJson(raw: string): Recap {
     .trim();
   const parsed = JSON.parse(cleaned);
   return {
+    meeting_title: String(parsed.meeting_title ?? parsed.subject ?? ""),
     subject: String(parsed.subject ?? ""),
     one_liner: String(parsed.one_liner ?? ""),
     tldr: Array.isArray(parsed.tldr) ? parsed.tldr.map(String) : [],
@@ -123,7 +129,7 @@ export function recapToHtml(recap: Recap, meeting: MeetingPayload): string {
   return `
 <div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;max-width:680px;color:#1a1a1a;line-height:1.5">
   <p style="font-size:13px;color:#666;margin-bottom:4px">${safe(date)} PT &nbsp;·&nbsp; ${safe(attendeesLine)}</p>
-  <h2 style="margin-top:0">${safe(meeting.title)}</h2>
+  <h2 style="margin-top:0">${safe(recap.meeting_title)}</h2>
 
   <p style="font-size:17px;font-weight:600;border-left:3px solid #000;padding-left:12px;margin:18px 0">
     ${safe(recap.one_liner)}

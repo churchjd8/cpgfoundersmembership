@@ -30,7 +30,8 @@ Recurring frames Jeff uses (preserve them when they show up in the call):
 Recap format requirements (return ONLY valid JSON, no prose around it):
 
 {
-  "subject": "Recap: <Meeting Title> — <YYYY-MM-DD>",
+  "meeting_title": "Title in the EXACT format: '<DATE_MDY> <Company Name> -- <Founder Name>'. DATE_MDY is provided in the input — copy it verbatim. Company Name = the brand/company the call is about (from transcript). Founder Name = the primary external person Jeff is meeting with (from transcript speakers/attendees). NEVER use the provided MEETING TITLE (it is from Jeff's calendar and often wrong). Examples: '5/8/26 Shire\\'s Organic -- Josh Velasquez', '5/7/26 Blume Honey Water -- Michele Burchfield', '5/8/26 Huxley -- Simon Solis-Cohen'. If the call is internal (no external founder) or covers multiple companies, use a short descriptive label after the date instead, e.g. '5/8/26 Internal Team Sync' or '5/8/26 Multi-Founder Roundtable'.",
+  "subject": "Recap: <meeting_title verbatim, no extra date>",
   "one_liner": "One sentence — the single most important takeaway from this call.",
   "tldr": ["3-5 bullets, each under 20 words, sharpest first."],
   "decisions": ["Decisions made on the call. Empty array if none. Each starts with the decision verb."],

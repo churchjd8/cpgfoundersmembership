@@ -52,7 +52,7 @@ export async function buildRecapDocx(recap: Recap, meeting: MeetingPayload): Pro
     new Paragraph({
       heading: HeadingLevel.TITLE,
       alignment: AlignmentType.LEFT,
-      children: [new TextRun({ text: meeting.title, bold: true, font: FONT, size: 36 })],
+      children: [new TextRun({ text: recap.meeting_title, bold: true, font: FONT, size: 36 })],
     }),
     body(`${date} PT`, { italic: true }),
     body(`Attendees: ${attendees}`, { italic: true }),
@@ -117,7 +117,7 @@ export async function buildRecapDocx(recap: Recap, meeting: MeetingPayload): Pro
 
   const doc = new Document({
     creator: "CPG Founders Group",
-    title: meeting.title,
+    title: recap.meeting_title,
     description: "Call recap generated from Fathom",
     numbering: {
       config: [
@@ -140,15 +140,15 @@ export async function buildRecapDocx(recap: Recap, meeting: MeetingPayload): Pro
   return Packer.toBuffer(doc) as Promise<Buffer>;
 }
 
-export function docxFilename(meeting: MeetingPayload): string {
-  const d = new Date(meeting.start_time);
-  const yyyy = d.getFullYear();
-  const mm = String(d.getMonth() + 1).padStart(2, "0");
-  const dd = String(d.getDate()).padStart(2, "0");
-  const safeTitle = meeting.title
-    .replace(/[\\/:*?"<>|]/g, "")
+export function docxFilename(recap: Recap, meeting: MeetingPayload): string {
+  // meeting_title already starts with M/D/YY per Jeff's preference. Replace
+  // path-unsafe slashes with dashes (5/7/26 → 5-7-26) so it works as a filename.
+  const title = recap.meeting_title || meeting.title || "Untitled";
+  const safeTitle = title
+    .replace(/\//g, "-")
+    .replace(/[\\:*?"<>|]/g, "")
     .replace(/\s+/g, " ")
     .trim()
-    .slice(0, 80);
-  return `${yyyy}-${mm}-${dd} ${safeTitle}.docx`;
+    .slice(0, 120);
+  return `${safeTitle}.docx`;
 }
