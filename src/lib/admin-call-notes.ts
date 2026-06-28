@@ -5,16 +5,17 @@
 // POST /api/admin/call-notes writes (source-agnostic).
 import { getSupabaseAdmin } from "@/lib/supabase";
 import type { Recap, MeetingPayload } from "@/lib/meeting-recap";
+import { isInternalEmail } from "@/lib/client-routing";
+import {
+  noteMeetingDate,
+  noteAttendeeLabels,
+  type GranolaNoteDetail,
+} from "@/lib/granola";
 
-// People on Jeff's side of the table — never the "client" for a note.
-const INTERNAL_DOMAINS = ["cpgfoundersgroup.com"];
-const INTERNAL_EMAILS = ["joshuadeanchurch@gmail.com"];
-
+// "Jeff's side of the table" detection lives in client-routing (and reads
+// JEFF_EMAILS) so the Granola and Fireflies paths agree on who's internal.
 function isInternal(email: string): boolean {
-  const e = email.toLowerCase();
-  if (INTERNAL_EMAILS.includes(e)) return true;
-  const domain = e.split("@")[1] || "";
-  return INTERNAL_DOMAINS.includes(domain);
+  return isInternalEmail(email);
 }
 
 /**
@@ -124,5 +125,44 @@ export async function saveRecapAsCallNote(args: {
   } catch (err) {
     console.error("[admin-call-notes] saveRecapAsCallNote failed:", err);
     return null;
+  }
+}
+
+/**
+ * Upsert a Granola note (already routed to a client) into call_notes. Stores
+ * Granola's own AI summary verbatim — no second LLM pass. Idempotent on the
+ * note id, so re-running the sync refreshes rather than duplicates. Never throws.
+ */
+export async function saveGranolaNoteAsCallNote(args: {
+  detail: GranolaNoteDetail;
+  clientEmail: string;
+}): Promise<boolean> {
+  const { detail, clientEmail } = args;
+  try {
+    const supabase = getSupabaseAdmin();
+    if (!supabase) return false;
+
+    const row = {
+      external_id: `granola:${detail.id}`,
+      client_email: clientEmail.trim().toLowerCase(),
+      title: detail.title || null,
+      meeting_date: noteMeetingDate(detail),
+      summary: detail.summary_text || detail.summary_markdown || null,
+      attendees: noteAttendeeLabels(detail),
+      source: "granola",
+    };
+
+    const { error } = await supabase
+      .from("call_notes")
+      .upsert(row, { onConflict: "external_id" });
+    if (error) {
+      console.error("[admin-call-notes] granola upsert error:", error.message);
+      return false;
+    }
+    console.log(`[admin-call-notes] filed granola "${row.title}" under ${row.client_email}`);
+    return true;
+  } catch (err) {
+    console.error("[admin-call-notes] saveGranolaNoteAsCallNote failed:", err);
+    return false;
   }
 }
