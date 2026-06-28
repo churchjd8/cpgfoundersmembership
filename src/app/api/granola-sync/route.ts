@@ -21,7 +21,10 @@ export const maxDuration = 300;
 export const dynamic = "force-dynamic";
 
 const DEFAULT_LOOKBACK_DAYS = 60;
-const MAX_PER_RUN = 25; // drain a big first-run backlog across several ticks
+// Cap per run guards against timeout on a huge backlog. We process NEWEST first
+// (most recent meetings matter most), so new client notes are never starved by
+// older unstored ones; any leftover backlog is old and can wait for next tick.
+const MAX_PER_RUN = 60;
 
 function authorized(request: Request): boolean {
   const secret = process.env.CRON_SECRET;
@@ -83,8 +86,8 @@ async function runPoll(request: Request) {
 
   const existing = await existingGranolaIds();
   const fresh = summaries.filter((n) => !existing.has(`granola:${n.id}`));
-  // Oldest → newest so a mid-run timeout leaves the most recent for next tick.
-  fresh.sort((a, b) => a.created_at.localeCompare(b.created_at));
+  // Newest → oldest: most recent meetings file first; only old backlog defers.
+  fresh.sort((a, b) => b.created_at.localeCompare(a.created_at));
   const batch = fresh.slice(0, MAX_PER_RUN);
 
   const filed: { id: string; title: string | null; client: string; method: string }[] = [];
