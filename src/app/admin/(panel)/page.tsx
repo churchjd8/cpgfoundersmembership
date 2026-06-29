@@ -57,7 +57,7 @@ export default async function RosterPage() {
         <div>
           <h1 className="font-serif text-2xl font-bold tracking-tight">Clients</h1>
           <p className="mt-1 text-sm text-muted">
-            Live from Stripe and the scheduler. {roster.length} total.
+            High-ticket roster, enriched live from Stripe and the scheduler. {roster.length} total.
           </p>
         </div>
         <div className="flex gap-3">
