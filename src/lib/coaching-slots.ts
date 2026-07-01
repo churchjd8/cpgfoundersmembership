@@ -55,7 +55,6 @@ export const SESSION_MONTHS: SessionMonth[] = [
       { date: "2026-07-13", time: "15:00" }, // Mon 3:00 PM
       { date: "2026-07-14", time: "08:00" }, // Tue 8:00 AM
       { date: "2026-07-14", time: "10:00" }, // Tue 10:00 AM
-      { date: "2026-07-15", time: "08:00" }, // Wed 8:00 AM
       { date: "2026-07-15", time: "10:00" }, // Wed 10:00 AM
       { date: "2026-07-15", time: "12:00" }, // Wed 12:00 PM
     ],
