@@ -1,5 +1,8 @@
 {
   "_comment": "slug -> Pexels search query for the blog hero image. Keep queries concrete and photographable. Avoid abstract business-speak, Pexels returns generic handshake stock for those.",
+  "_pinned": [
+    "cpg-founders-playbook"
+  ],
   "cpg-acquisition-process-ma-guide": "business contract signing meeting table",
   "cpg-cap-table-equity-dilution": "pie chart documents desk calculator",
   "co-manufacturing-101": "food manufacturing production line factory",
@@ -25,7 +28,6 @@
   "cpg-life-stages-brand-framework": "plant growth stages soil pots row",
   "cpg-foodservice-strategy": "commercial kitchen chef restaurant service",
   "cpg-natural-channel-strategy": "natural grocery store produce organic aisle",
-  "cpg-founders-playbook": "notebook pen strategy planning writing desk",
   "cpg-hiring-strategy-build-your-team": "job interview two people office table",
   "cpg-price-increase-strategy": "grocery price tag shelf increase",
   "cpg-infrastructure-gap-fundraising": "construction scaffolding building framework",
@@ -56,5 +58,6 @@
   "how-to-build-100m-cpg-brand": "successful business team celebrating office",
   "cpg-ingredient-cost-management": "food ingredients raw bulk grains",
   "cpg-instacart-online-grocery-strategy": "online grocery delivery smartphone app",
-  "cpg-retail-exclusive-product-strategy": "product display retail store shelf"
+  "cpg-retail-exclusive-product-strategy": "product display retail store shelf",
+  "cpg-founders-playbook": "test"
 }

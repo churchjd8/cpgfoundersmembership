@@ -104,6 +104,18 @@ async function main() {
 
   const usedIds = new Set(Object.values(credits).map((c) => c.photoId))
   const slugs = ONLY ? [ONLY] : Object.keys(queries).filter((k) => !k.startsWith('_'))
+
+  // Hand-picked heroes (e.g. the featured post uses a photo of Jeff). Never
+  // let an automated run replace one.
+  const pinned = new Set(queries._pinned ?? [])
+  for (const slug of slugs) {
+    if (pinned.has(slug)) {
+      throw new Error(
+        `${slug} is pinned in blog-image-queries.json (_pinned) and must keep its hand-picked image. ` +
+          `Remove it from _pinned first if you really want to replace it.`
+      )
+    }
+  }
   const failures = []
   let updated = 0
 

@@ -66,9 +66,13 @@ node scripts/fetch-blog-images.mjs --only <slug> --query "concrete photographabl
 ```
 
 `--all` forces a re-fetch even when the image file already exists. Queries live in
-`scripts/blog-image-queries.json`; photographer credits are recorded in
-`src/content/blog-image-credits.json`. The `PEXELS_API_KEY` is in `.env` locally and
-inlined in the trigger prompt for the remote agent.
+`scripts/blog-image-queries.json`, which also has a `_pinned` array: slugs listed
+there keep a hand-picked image and the script refuses to touch them. The featured
+post (`cpg-founders-playbook`) is pinned to a photo of Jeff on purpose.
+
+Photographer credits are recorded in `src/content/blog-image-credits.json`. The
+`PEXELS_API_KEY` is in `.env` locally and inlined in the trigger prompt for the
+remote agent.
 
 ## The Current Prompt
 

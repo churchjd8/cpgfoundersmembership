@@ -128,6 +128,13 @@ export function BlogList({
             }`}
           >
             All
+            <span
+              className={`ml-1.5 tabular-nums ${
+                activeCategory === null ? "text-white/70" : "text-muted"
+              }`}
+            >
+              {posts.length}
+            </span>
           </button>
           {CATEGORIES.map((cat) => (
             <button
