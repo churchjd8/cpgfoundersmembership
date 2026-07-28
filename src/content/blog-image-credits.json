@@ -376,5 +376,26 @@
     "photographerUrl": "https://www.pexels.com/@yankrukov",
     "pexelsUrl": "https://www.pexels.com/photo/people-celebrating-at-the-office-7793999/",
     "query": "successful business team celebrating office"
+  },
+  "cpg-ingredient-cost-management": {
+    "photoId": 54084,
+    "photographer": "Pixabay",
+    "photographerUrl": "https://www.pexels.com/@pixabay",
+    "pexelsUrl": "https://www.pexels.com/photo/wheat-kernels-54084/",
+    "query": "food ingredients raw bulk grains"
+  },
+  "cpg-instacart-online-grocery-strategy": {
+    "photoId": 8939506,
+    "photographer": "Nataliya Vaitkevich",
+    "photographerUrl": "https://www.pexels.com/@n-voitkevich",
+    "pexelsUrl": "https://www.pexels.com/photo/phone-on-a-counter-8939506/",
+    "query": "online grocery delivery smartphone app"
+  },
+  "cpg-retail-exclusive-product-strategy": {
+    "photoId": 1571585,
+    "photographer": "ClickerHappy",
+    "photographerUrl": "https://www.pexels.com/@clickerhappy",
+    "pexelsUrl": "https://www.pexels.com/photo/matte-lipsticks-1571585/",
+    "query": "product display retail store shelf"
   }
 }
