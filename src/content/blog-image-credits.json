@@ -64,7 +64,7 @@
   },
   "cpg-distribution-sequencing-strategy": {
     "photoId": 12418932,
-    "photographer": "Dextar Studio \u2122",
+    "photographer": "Dextar Studio ™",
     "photographerUrl": "https://www.pexels.com/@dextarstudio",
     "pexelsUrl": "https://www.pexels.com/photo/a-parked-truck-12418932/",
     "query": "delivery trucks distribution logistics"
@@ -78,7 +78,7 @@
   },
   "cpg-earned-media-pr-strategy": {
     "photoId": 33317197,
-    "photographer": "Tahir X\u0259lf\u0259quliyev",
+    "photographer": "Tahir Xəlfəquliyev",
     "photographerUrl": "https://www.pexels.com/@tahir",
     "pexelsUrl": "https://www.pexels.com/photo/female-spokesperson-giving-press-interview-outdoors-33317197/",
     "query": "press interview microphone journalist"
@@ -155,7 +155,7 @@
   },
   "cpg-life-stages-brand-framework": {
     "photoId": 1105017,
-    "photographer": ".  \u2583",
+    "photographer": ".  ▃",
     "photographerUrl": "https://www.pexels.com/@corin",
     "pexelsUrl": "https://www.pexels.com/photo/selective-focus-photography-of-green-leaf-plants-on-brown-pot-1105017/",
     "query": "plant growth stages soil pots row"
@@ -302,7 +302,7 @@
   },
   "cpg-trade-show-expo-west-strategy": {
     "photoId": 35138560,
-    "photographer": "Tahir X\u0259lf\u0259quliyev",
+    "photographer": "Tahir Xəlfəquliyev",
     "photographerUrl": "https://www.pexels.com/@tahir",
     "pexelsUrl": "https://www.pexels.com/photo/modern-trade-show-exhibition-with-busy-attendees-35138560/",
     "query": "trade show expo booth convention crowd"
@@ -390,5 +390,12 @@
     "photographerUrl": "https://www.pexels.com/@clickerhappy",
     "pexelsUrl": "https://www.pexels.com/photo/matte-lipsticks-1571585/",
     "query": "product display retail store shelf"
+  },
+  "cpg-distributor-strategy-unfi-kehe": {
+    "photoId": 4487382,
+    "photographer": "Tiger Lily",
+    "photographerUrl": "https://www.pexels.com/@tiger-lily",
+    "pexelsUrl": "https://www.pexels.com/photo/worker-on-a-construction-4487382/",
+    "query": "distribution warehouse boxes shipping pallets"
   }
 }
