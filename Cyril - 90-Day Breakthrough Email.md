@@ -1,4 +1,4 @@
-# Cyril - 90-Day Breakthrough + Free Resources Email
+# Cyril - Jeff Church Strategy Intensive + Free Resources Email
 
 **Subject:** As promised, Cyril. Jeff, and everything else I mentioned.
 
@@ -6,15 +6,10 @@
 
 Hi Cyril,
 
-Really enjoyed our conversation yesterday. 32 years in kitchens, Michelin at 15, writing the curriculum at ICE, coaching Jeremy on The Bear, and now building the thing you wish you'd had 30 years ago. That's a hell of a story, and more importantly it's a real one. You lived the problem. That's the part most founders can't manufacture.
+Really enjoyed our conversation yesterday. You've got an incredible story, passion, and energy (and sounds like product!).
 
-So let me be straight with you like I said I would be.
 
-**Mark's program isn't the right fit right now.** The Backable CEO Incubator is built for founders who are already at scale, call it $5M+ in revenue, product in market, team hired, and they're trying to become the leader who can take it to the next level. It's $12K for three months and it's aimed at internal operating systems, not go to market. You'd get value from it, but you'd be paying for the wrong chapter of the book. I'd rather point you at the right thing than take your money for the wrong one.
-
-**Here's the right thing.**
-
-His name is Jeff Church. He also happens to be my dad. He co-founded Suja Juice, scaled it to over $100M in five years, and it was acquired by Coca-Cola. Before that he co-founded Nika Water. He's raised $275M+ across 44 rounds and he's had his hands in dozens of food and beverage brands. Suja was at the front of the cold pressed category when nobody knew what cold pressed meant, which is roughly where you're standing with recovery for kitchen professionals.
+As I mentioned, I would recommend you for coaching with Jeff Church (who also happens to be my father!). He co-founded Suja Juice, scaled it to over $100M in five years, and it was acquired by Coca-Cola. He's raised $275M+ across 44 rounds and he's had his hands in dozens of food and beverage brands. Suja was at the front of the cold pressed category when nobody knew what cold pressed meant, which is roughly where you're standing with recovery for kitchen professionals.
 
 He now runs CPG Founders Group, where he works directly with founders on exactly the stuff you told me you needed. Formulation and co-packer intros. Pricing and unit economics. How to get into retail and food service. And how to actually raise the $100K to $120K you're going to need to seed this properly, which by the way, you had the right number on paper before I said it. That's a good sign.
 
@@ -23,36 +18,21 @@ His LinkedIn is worth a follow too, he posts the real version of this stuff, not
 
 ---
 
-## The 90-Day Breakthrough
+## How Jeff works with founders
 
-This is Jeff's main program and it's what I think fits you.
+The first three months are a Strategy Intensive. It's the foundational work that sets everything else up, and it's all 1:1 with Jeff.
 
-**What you get:**
+- **A 2 hour strategy deep dive up front.** Jeff goes deep on your business and helps you build out your roadmap. For you I'd guess that's formulation, cost structure, and a fundraise plan.
+- **Three monthly 60 minute 1:1 sessions with Jeff** to work through what's in front of you and keep the roadmap moving.
+- **Email support in between calls,** plus async work like feedback on your deck, your model, and anything else you want eyes on.
+- **Access to Babu Pro** ($200/mo), the MBA for CPG modules, and all of Jeff's templates and tools.
+- **Warm introductions** to relevant industry contacts, suppliers, and service providers.
 
-- **1:1 onboarding diagnostic with Jeff.** He maps your specific situation, finds the actual bottleneck, and you build the 90-day plan together. For you I'd guess this is formulation, cost structure, and a fundraise strategy.
-- **Direct access to Jeff.** Phone and email, 1:1 as needed. This is the main event. Not a course, not a portal. A guy who has done it looking at your business and telling you what to focus on and what to skip.
-- **Group sessions 3x per month,** 90 minutes each. Teaching, live Q&A, and guest founders from Poppi, Honest, ZICO, and Once Upon a Farm.
-- **Weekly accountability calls** to keep execution moving.
-- **Private founders community.**
-- **Retailer Pitch Slams** twice a year, direct exposure to retail buyers.
-- **Investor Pitch Slams** twice a year, with a $10K prize. Relevant to you.
+The Intensive is **$6,000 total, billed at $2,000/month over the three months.** If you'd rather pay in full up front it's $5,000 and you save a thousand.
 
-**Included at no extra cost:**
+After the three months you can roll into ongoing membership at $1,500/month, month to month. Your monthly 1:1 with Jeff, email support, and continued access to all the tools and modules. Cancel anytime, no strings.
 
-- **MBA for CPG Bootcamp.** 8 modules, 450+ slides, financial models and templates. Essentially everything you need to know to launch a consumer food or beverage brand. $997 standalone.
-- **Babu AI Pro.** An AI advisor trained on Jeff's 35+ years, for on demand strategy, fundraising questions and financial review. $499/mo standalone.
-
-Over $6,000 in tools included with the membership.
-
-**Pricing:** $2,000/mo for three months, or $5,000 paid in full and you save a thousand. After the 90 days you can stay month to month at $1,500 and pause, cancel or rejoin whenever.
-
-**No risk guarantee:** if after your first deep dive call with Jeff you decide it isn't right, you get refunded in full, no questions.
-
-Jeff targets a minimum 5 to 10x return, and he sees it most often in fundraising strategy and cost reduction.
-
-It's application based because he keeps the group small. Apply here: https://cpgfoundersgroup.com/90-day-breakthrough
-
-I'm also going to get you on his calendar in the next week or two so you two can talk directly before you decide anything. You'll get value out of that call whether you join or not.
+Worth saying plainly: the value here isn't the tools or the modules. It's having someone who has actually built and sold a beverage brand looking at your specific business and telling you what to focus on and what to skip. Jeff aims for a minimum 5 to 10x return, and he sees it most often in fundraising strategy and cost reduction.
 
 ---
 
@@ -100,15 +80,9 @@ You don't have to wait for any of this. Dig in now.
 
 ---
 
-## Three things to chew on before your call with Jeff
+Take a look at all of it. If the coaching with Jeff is something you'd like to consider and it makes sense for where you're at, just say the word and I'll make the intro. And if not, and you want to run with the free resources for now, go for it. There's a lot in there and it's yours either way.
 
-1. **Decide how you want to fund this.** Self fund, friends and family, angels, or a crowdfunding route. You said $120K and you're right. Come to the call with a point of view on where it comes from, even a rough one. Jeff will pressure test it.
-
-2. **Your distribution channel is the whole thesis.** Most beverage founders are begging for shelf space. You have 190,000 people in the industry who already listen to you, plus every chef and every kitchen in America. Ten percent of US restaurants is a real company. Be ready to talk about how you'd get the first hundred kitchens, not the first ten thousand.
-
-3. **Hidden Brigade might be the brand, not just the content.** You built an audience in 38 days by telling the truth about an industry that lies to itself. That's not a marketing channel you bolted on. That's the founding story. Worth thinking about how tightly the product and that voice should be tied together.
-
-Send me a few samples when you can. I'm back in LA on August 16th and I'd genuinely like to try it, and I'd like Jeff to try it too. Taste is everything in this category. You know that better than I do.
+Send me a few samples when you can. I'm back in LA on August 16th and I'd genuinely like to try it. Taste is everything in this category. You know that better than I do.
 
 Talk soon,
 
