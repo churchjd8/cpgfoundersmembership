@@ -8,17 +8,28 @@ Jeff Church's world currently reads as four unrelated things. This brief defines
 
 ---
 
-## The idea: a summit ridgeline and a growth curve are the same shape
+## What's fixed, and what's yours
 
-A single rising line with peaks and drawdowns is a mountain range to a climber and a revenue chart to a founder. Climb, peak, the drop, the recovery, a higher summit.
+We've tried to be clear about the difference, because the visual answer is your job and we don't want to hand you a solution dressed up as a brief.
 
-It is also literally Jeff's story: zero to $100M in six years, the July 3rd call when Coca-Cola walked away, the turnaround, and Suja ringing the Nasdaq bell at north of $700M without him in the room.
+**Fixed — this is the strategy, and only we can give it to you:**
 
-That double reading is the asset. It's specific to this man, it can't be borrowed by a competitor, and it flexes — every brand in the system takes a different segment of the same line.
+- The architecture: which brands exist, how they nest, and what sits under what
+- Who each brand serves, and the job each one does
+- The tone. Especially the things to avoid — those come from the book and they're not negotiable
+- The deliverables and the naming
 
-**Please treat this as a starting provocation, not a finished mark.** We want your interpretation of it, and we want to see what else you find. If you land on something stronger that abandons the idea entirely, show us that.
+**Open — this is craft, and it's yours:**
 
-> **What we're replacing.** The current CPG Founders Group mark is a three-peak mountain with a summit flag that reads as stock clipart. The metaphor is right and worth keeping — Jeff has climbed six of the Seven Summits, "Babu" was earned on Kilimanjaro, and the book's final chapter is entirely about the climb. The execution needs to be rebuilt from scratch.
+- The mark, and whether there even is a shared symbol
+- The palette. Everything below is a suggestion of *directions*, not a spec
+- Typography
+- How the four brands signal that they're related
+- Whether our organizing principles survive contact with your exploration
+
+If something in the "open" half is working against something in the "fixed" half, tell us. We'd rather rethink the strategy than get a compromised design.
+
+**One client preference to know going in:** Jeff likes the mountain motif and would like to keep it, and he'd like to carry the blue from Babu across the ecosystem. Both are preferences, not instructions — if you find something better, make the case.
 
 ---
 
@@ -56,35 +67,32 @@ An AI chat platform and knowledge base built specifically for CPG founders. Alwa
 
 ---
 
-## The organizing principle: warm where it's human, cool where it's a machine
+## The hardest problem in the system
 
-The hardest job in this system is making CPG Founders Group and Babu obviously related but obviously different — a founder landing on both should immediately understand which one they need.
+CPG Founders Group and Babu serve the same person and have to feel obviously related — but a founder landing on both should immediately understand which one they need.
 
-The cleanest line is **people versus software**. One is Jeff, a cohort, a room, capital. The other is always-on, self-serve, 3 a.m.
+The distinction underneath them is **people versus software**. One is Jeff, a cohort, a room, capital. The other is always-on, self-serve, 3 a.m. Whether that difference is best carried by temperature, or weight, or density, or something we haven't thought of, is exactly the kind of thing we're hiring you to work out.
 
-Let temperature carry that difference. Same palette, same mark system, same type — but the human side runs warm and the software side runs cool. That gives you real differentiation without four unrelated identities.
+Here's what each one actually is:
 
-| Brand | Temperature | What it is | Serves | Voice |
-|---|---|---|---|---|
-| **Dreammakers** | Warm · quiet | The parent. Restrained, confident, almost corporate. Should feel like the entity that *owns* things, not the entity that *sells* things. | Jeff, partners, LPs, internal | Dream boldly. Plan soberly. |
-| **CPG Founders Group** | Warm | The coaching and capital arm. Human, earned, in-the-trenches. The handshake and the room full of founders. | CPG founders, pre-launch to exit | The operator who's done it eight times |
-| **Babu** | Cool | The software. Precise, fast, instrument-like. Should feel like a tool a serious operator keeps open in a tab, not a chatbot. | Same founders, self-serve, 24/7 | Answers, not encouragement |
-| **The Cold-Pressed Truth** | Warm · editorial | The book. The most editorial artifact in the system and the one that sets the tone for everything else. | Founders, press, speaking bookers | Anti-hype. Admits what it cost. |
+| Brand | What it is | Serves | Voice |
+|---|---|---|---|
+| **Dreammakers** | The parent. Restrained, confident, almost corporate. Should feel like the entity that *owns* things, not the entity that *sells* things. | Jeff, partners, LPs, internal | Dream boldly. Plan soberly. |
+| **CPG Founders Group** | The coaching and capital arm. Human, earned, in-the-trenches. The handshake and the room full of founders. | CPG founders, pre-launch to exit | The operator who's done it eight times |
+| **Babu** | The software. Precise, fast, instrument-like. Should feel like a tool a serious operator keeps open in a tab, not a chatbot. | Same founders, self-serve, 24/7 | Answers, not encouragement |
+| **The Cold-Pressed Truth** | The book. The most editorial artifact in the system and the one that sets the tone for everything else. | Founders, press, speaking bookers | Anti-hype. Admits what it cost. |
 
 ---
 
-## The mark: one system, four readings
+## The mark
 
-Rough provocations only — these explain the thinking, they are not to be executed.
+**What we're replacing.** The current CPG Founders Group mark is a three-peak mountain with a summit flag that reads as stock clipart. Jeff would like to keep the mountain — and it's earned, not decorative: he's climbed six of the Seven Summits, "Babu" was given to him on Kilimanjaro, and the book's final chapter is entirely about the climb. But the execution needs to be rebuilt from nothing.
 
-| Brand | Reading |
-|---|---|
-| **Dreammakers** | The full range. The whole arc, no single peak emphasised. |
-| **CPG Founders Group** | One peak, one flag. The summit being climbed right now. |
-| **Babu** | The same ridge, resolved into data. Mountain becomes chart. |
-| **The book** | The honest curve, drawdown marked. The chart nobody shows you. |
+**One thought, offered and then dropped.** A summit ridgeline and a growth curve are the same shape — a rising line with peaks and drawdowns reads as a mountain range to a climber and as a revenue chart to a founder. It happens to be Jeff's literal story: zero to $100M in six years, the July 3rd call when Coca-Cola walked away, the turnaround, and Suja ringing the Nasdaq bell at north of $700M without him in the room.
 
-### Requirements for the final mark
+We mention it because it's the kind of double meaning we respond to, not because we want it executed. **We have deliberately not worked out how a shared symbol would flex across the four brands** — that's the interesting problem and it's yours. You may conclude they shouldn't share a symbol at all.
+
+### Requirements, whatever the direction
 
 - Works at 16px as a favicon **and** at 40 feet on a conference backdrop
 - Survives one colour, reversed, and embossed
@@ -93,39 +101,29 @@ Rough provocations only — these explain the thinking, they are not to be execu
 
 ---
 
-## Colour: mountain at dawn
+## Colour
 
-Jeff wants to carry the blue from Babu across the ecosystem, and we agree — with one adjustment. The current Babu blue is an electric blue with a violet gradient, which is the house style of nearly every AI product shipped in the last two years. It will date quickly and it's the least distinctive thing on the page.
+**Everything here is a suggestion of direction. None of it is a spec.** Bring us palettes we haven't thought of.
 
-**Deepen the blue, keep the gold.** Navy as the ground, one bright blue held back for signal and interface, gold as the warm accent.
+What we can tell you is what we're reacting to. Jeff would like to carry the blue from Babu across the ecosystem. Our only hesitation is that the *current* Babu blue is an electric blue with a violet gradient — the house style of nearly every AI product shipped in the last two years. It will date, and it's the least distinctive thing on the page. So: blue yes, that particular blue probably not.
 
-Blue and gold is cold rock and warm summit light — it ties the palette to the mountain to the story. The gold also carries real meaning: it's the colour of the two-ounce turmeric shot that ran roughly 60% gross margin against 12% on the kombucha it replaced, and quietly saved Suja.
+One direction we're drawn to, as an example of the kind of thinking rather than a prescription:
 
-| Token | Hex | Use |
-|---|---|---|
-| **Summit Navy** | `#0B1A2E` | Primary ground |
-| **Ridge Blue** | `#1B3A5F` | Secondary surfaces |
-| **Signal Blue** | `#2B4CF0` | From Babu. Interface only. |
-| **Summit Gold** | `#DFA13C` | The warm accent |
-| **Deep Amber** | `#A56A16` | Warm side, print |
-| **Paper** | `#F7F5F1` | Warm off-white |
-| **Stone** | `#75828F` | Muted text |
+> **Mountain at dawn.** A deep navy ground with a warm gold accent — cold rock and warm summit light. It ties the palette to the motif and to the story, and gold carries real meaning here: it's the colour of the two-ounce turmeric shot that ran roughly 60% gross margin against 12% on the kombucha it replaced, and quietly saved Suja. A single bright blue could be held back for interface and signal.
+>
+> Rough starting values if useful: navy `#0B1A2E`, ridge blue `#1B3A5F`, signal blue `#2B4CF0`, gold `#DFA13C`, deep amber `#A56A16`, warm paper `#F7F5F1`, stone `#75828F`.
 
-These are a proposed starting point, not a locked palette — push them. The one firm constraint is the relationship: **cool ground, warm accent, no third hue.** And no violet gradients.
+Other directions are genuinely welcome — a warmer system, a near-monochrome one, something that abandons blue entirely if you can argue for it.
+
+**The two things we'd ask you to hold:** enough contrast between the warm human side and the cool software side that the two arms don't blur into each other, and no violet-to-blue AI gradients.
 
 ---
 
-## Typography: one pairing, split by temperature
+## Typography
 
-A single type system across all four brands, with the ratio shifting by context. The human and editorial side leans on the serif; the software side leans on the grotesque. Same fonts, different emphasis — that's what makes them feel related without feeling identical.
+Also open. The one thing worth saying is that the system has to stretch a long way — from a printed book cover to a software interface to an investor deck — and we'd rather that stretch came from **one type system used differently** than from separate fonts per brand. How you achieve that is up to you.
 
-| Role | Direction | Where it leads |
-|---|---|---|
-| **Display** | A high-contrast serif with some edge. Canela, Tiempos Headline, GT Sectra, or Playfair if budget is a factor. | Book · Dreammakers · CPGFG |
-| **Text & UI** | A neutral grotesque with a real range of weights. Söhne, Founders Grotesk, National 2, or Inter. | Babu · all body copy |
-| **Data & labels** | A mono for metrics, eyebrows, and anything instrument-like. | Dashboards · field-guide products |
-
-Note that Babu currently runs Inter throughout. If we license a grotesque, it needs a webfont licence and a variable-weight file.
+Practical constraints: anything we license needs a webfont licence and a decent weight range, and Babu currently runs Inter throughout, so there's a switching cost worth weighing.
 
 ---
 
