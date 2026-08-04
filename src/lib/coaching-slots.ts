@@ -63,8 +63,38 @@ export const SESSION_MONTHS: SessionMonth[] = [
     key: "august",
     label: "August",
     // Jeff is back from East Coast travel mid-August, so August calls land
-    // later in the month. PASTE AUGUST DATES HERE when Jeff sends them.
-    slots: [],
+    // later in the month. Source: Jeff's "Josh available times" drop (Aug 2026).
+    slots: [
+      { date: "2026-08-14", time: "08:00" }, // Fri 8:00 AM
+      { date: "2026-08-14", time: "09:30" }, // Fri 9:30 AM
+      { date: "2026-08-14", time: "11:00" }, // Fri 11:00 AM
+      { date: "2026-08-17", time: "07:00" }, // Mon 7:00 AM
+      { date: "2026-08-18", time: "07:00" }, // Tue 7:00 AM
+      { date: "2026-08-18", time: "08:30" }, // Tue 8:30 AM
+      { date: "2026-08-18", time: "10:00" }, // Tue 10:00 AM
+      { date: "2026-08-25", time: "07:00" }, // Tue 7:00 AM
+      { date: "2026-08-25", time: "08:30" }, // Tue 8:30 AM
+      { date: "2026-08-25", time: "10:00" }, // Tue 10:00 AM
+      { date: "2026-08-26", time: "07:00" }, // Wed 7:00 AM
+      { date: "2026-08-26", time: "08:30" }, // Wed 8:30 AM
+      { date: "2026-08-26", time: "10:00" }, // Wed 10:00 AM
+      { date: "2026-08-27", time: "07:00" }, // Thu 7:00 AM
+      { date: "2026-08-27", time: "08:30" }, // Thu 8:30 AM
+      { date: "2026-08-27", time: "10:00" }, // Thu 10:00 AM
+    ],
+  },
+  {
+    key: "september",
+    label: "September",
+    // Jeff included these two early-September days in the August drop.
+    slots: [
+      { date: "2026-09-01", time: "07:00" }, // Tue 7:00 AM
+      { date: "2026-09-01", time: "08:30" }, // Tue 8:30 AM
+      { date: "2026-09-01", time: "10:00" }, // Tue 10:00 AM
+      { date: "2026-09-03", time: "07:00" }, // Thu 7:00 AM
+      { date: "2026-09-03", time: "08:30" }, // Thu 8:30 AM
+      { date: "2026-09-03", time: "10:00" }, // Thu 10:00 AM
+    ],
   },
 ];
 
