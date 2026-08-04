@@ -81,13 +81,8 @@ export const SESSION_MONTHS: SessionMonth[] = [
       { date: "2026-08-27", time: "07:00" }, // Thu 7:00 AM
       { date: "2026-08-27", time: "08:30" }, // Thu 8:30 AM
       { date: "2026-08-27", time: "10:00" }, // Thu 10:00 AM
-    ],
-  },
-  {
-    key: "september",
-    label: "September",
-    // Jeff included these two early-September days in the August drop.
-    slots: [
+      // Jeff included these two early-September days in the August drop. They
+      // live under the August link on purpose so there's one link to send.
       { date: "2026-09-01", time: "07:00" }, // Tue 7:00 AM
       { date: "2026-09-01", time: "08:30" }, // Tue 8:30 AM
       { date: "2026-09-01", time: "10:00" }, // Tue 10:00 AM
