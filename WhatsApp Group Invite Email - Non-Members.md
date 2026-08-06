@@ -1,3 +1,4 @@
+
 # WhatsApp Group Invite Email
 
 **Audience:** Everyone on Jeff's list who is NOT yet in the CPG Founders WhatsApp group
@@ -8,9 +9,9 @@
 
 ## Subject line options
 
-1. what happened in the founders group this week
-2. 200+ founders, one group chat
-3. an open invite to the founders group
+1. they needed a military broker. they had one by lunch
+2. what happened in the founders group this week
+3. 200+ founders, one group chat
 
 ---
 
@@ -18,21 +19,23 @@
 
 Hi {{first_name}},
 
-Quick one. We have a WhatsApp group with over 200 CPG founders in it, and if you are not in there yet, I want you in.
+A founder in our WhatsApp group needed a military broker last week. They posted the question in the morning and had a warm referral by lunch.
 
-Here is what came through in just the last week:
+That is the whole point of the group.
 
-One founder walked the group through an AI inventory management system they built themselves, screen recording and all.
+There are over 200 CPG founders in there now, every stage and every category, and if you are not one of them yet I want you in.
 
-Another needed a military broker and had a warm referral within a few hours.
+Here is what else came through that same week.
+
+One founder walked everybody through an AI inventory management system they built themselves, screen recording and all.
 
 Someone shared the merchandising app they actually use day to day, the one that works, not the one with the best sales deck.
 
-And a founder got connected to a pre-seed angel group.
+And another founder got connected to a pre-seed angel group.
 
-That is one week. This is not a newsletter or a webinar. It is founders answering each other's questions in real time, usually the same day.
+That is one week. Nobody got paid for any of it and nobody was selling anything. Just founders answering each other's questions, usually the same day.
 
-Nobody is selling anything in there. It is free, and it stays free.
+It is free, and it stays free.
 
 [Join the CPG Founders Group](https://cpgfoundersgroup.com/founders-only)
 
