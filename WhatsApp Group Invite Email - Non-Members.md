@@ -9,9 +9,9 @@
 
 ## Subject line options
 
-1. come join the founders group
-2. 200+ CPG founders, one group chat
-3. what happened in the founders group last week
+1. in case you missed it, we have a WhatsApp group
+2. come join the founders group
+3. 200+ CPG founders, one group chat
 
 ---
 
@@ -19,7 +19,7 @@
 
 Hi {{first_name}},
 
-We have a WhatsApp group with over 200 CPG founders in it. It's free, and I'd like you in there.
+In case you missed it, we have a WhatsApp group with over 200 CPG founders in it. Totally free.
 
 Here's what happened in it last week:
 
@@ -35,7 +35,7 @@ That's one week. Founders asking real questions and getting real answers, usuall
 
 [Join the CPG Founders Group](https://cpgfoundersgroup.com/founders-only)
 
-Say hi when you get in and tell us what you're building. If you're already in the group, ignore this one.
+Come say hi when you get in and tell us what you're building.
 
 Jeff
 
