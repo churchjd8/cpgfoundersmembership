@@ -324,6 +324,38 @@ table.pl tr:hover td:first-child { background: var(--surface-2); }
 .pos { color: var(--pos); }
 .neg { color: var(--neg); }
 
+/* ---------- funnel economics ---------- */
+.fn { display: grid; grid-template-columns: repeat(auto-fit, minmax(258px, 1fr)); gap: 26px; padding: 16px 20px 22px; }
+.fn-col { display: flex; flex-direction: column; }
+.fn-h { font-family: var(--mono); font-size: 10.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-muted); margin-bottom: 11px; }
+.wf-row { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 5px 0; border-bottom: 1px solid var(--rule); font-size: 12.5px; }
+.wf-l { color: var(--ink-2); }
+.wf-v { font-family: var(--mono); font-variant-numeric: tabular-nums; font-weight: 600; white-space: nowrap; }
+.wf-tot { border-bottom: 0; border-top: 2px solid var(--rule-strong); margin-top: 4px; padding-top: 8px; font-weight: 660; }
+.wf-tot .wf-l { color: var(--ink); font-weight: 660; }
+.fn-p { font-size: 12.5px; color: var(--ink-2); line-height: 1.55; margin: 0 0 12px; }
+.fn-p b { color: var(--ink); font-family: var(--mono); font-weight: 700; }
+.fn-big { font-family: var(--mono); font-variant-numeric: tabular-nums; font-size: 27px; font-weight: 620; letter-spacing: -.03em; line-height: 1; margin-bottom: 8px; }
+table.mini { border-collapse: collapse; width: 100%; font-size: 12.5px; }
+table.mini th { font-family: var(--mono); font-size: 10px; letter-spacing: .07em; text-transform: uppercase; color: var(--ink-muted); text-align: right; padding: 0 0 6px; border-bottom: 1px solid var(--rule-strong); font-weight: 600; }
+table.mini th:first-child, table.mini td:first-child { text-align: left; }
+table.mini td { padding: 4px 0; text-align: right; font-family: var(--mono); font-variant-numeric: tabular-nums; border-bottom: 1px solid var(--rule); }
+
+/* ---------- scoreboard ---------- */
+.board { background: var(--surface); border: 1px solid var(--rule); border-radius: 12px; box-shadow: var(--shadow); margin-bottom: 24px; overflow: hidden; }
+.board-head { display: flex; justify-content: space-between; align-items: baseline; gap: 14px; flex-wrap: wrap; padding: 15px 20px 13px; border-bottom: 1px solid var(--rule); }
+.board-head h2 { font-size: 15px; font-weight: 660; margin: 0; letter-spacing: -.012em; }
+.board-head .asof { font-family: var(--mono); font-size: 11px; color: var(--ink-muted); letter-spacing: .04em; }
+.board-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(186px, 1fr)); gap: 1px; background: var(--rule); }
+.bx { background: var(--surface); padding: 15px 18px 16px; display: flex; flex-direction: column; gap: 7px; }
+.bx .b-lbl { font-family: var(--mono); font-size: 10.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-muted); }
+.bx .b-val { font-family: var(--mono); font-variant-numeric: tabular-nums; font-size: 26px; font-weight: 620; letter-spacing: -.03em; line-height: 1; }
+.bx .b-sub { font-size: 11.5px; color: var(--ink-2); line-height: 1.4; }
+.track { height: 5px; border-radius: 3px; background: var(--rule); overflow: hidden; }
+.track span { display: block; height: 100%; border-radius: 3px; background: var(--accent); }
+.track span.low { background: var(--cost); }
+.track span.mid { background: var(--s4); }
+
 /* ---------- babu panel ---------- */
 .babu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 20px; padding: 16px 20px 20px; }
 .gate {
@@ -367,6 +399,14 @@ footer.foot { margin-top: 34px; padding-top: 18px; border-top: 1px solid var(--r
   </aside>
 
   <main>
+    <section class="board">
+      <div class="board-head">
+        <h2>Where we stand today</h2>
+        <span class="asof">Live from Stripe &middot; 6 Aug 2026</span>
+      </div>
+      <div class="board-grid" id="board"></div>
+    </section>
+
     <h2 style="font-size:13px;font-weight:660;margin:0 0 4px;letter-spacing:-.005em">The three goals everything else serves</h2>
     <p style="margin:0 0 14px;font-size:13px;color:var(--ink-muted);max-width:70ch">Ranked. The flywheel below is built to move these and nothing else &mdash; each card reads live off the assumptions you set.</p>
     <div class="goals" id="goals"></div>
@@ -396,6 +436,14 @@ footer.foot { margin-top: 34px; padding-top: 18px; border-top: 1px solid var(--r
         <p>Running profit or loss across the ten-month window.</p>
       </div>
       <div class="chart-wrap"><svg class="chart" id="chart-b" viewBox="0 0 920 220" role="img" aria-label="Cumulative net profit over ten months"></svg><div class="tip" id="tip-b"></div></div>
+    </section>
+
+    <section class="card">
+      <div class="card-head">
+        <h2>Free + shipping funnel economics</h2>
+        <p>What one book order is worth, what it takes to break even, and the most you can afford to pay for a buyer.</p>
+      </div>
+      <div class="fn" id="funnel"></div>
     </section>
 
     <section class="card">
@@ -464,6 +512,7 @@ footer.foot { margin-top: 34px; padding-top: 18px; border-top: 1px solid var(--r
 
 const MONTHS = ["Sep 26","Oct 26","Nov 26","Dec 26","Jan 27","Feb 27","Mar 27","Apr 27","May 27","Jun 27"];
 const N = MONTHS.length;
+const PRO_PRICE = 99;   // Babu Pro monthly rate, what bundle buyers roll onto
 const QUARTERS = [
   { label: "Sep–Dec 26", from: 0, to: 3 },
   { label: "Jan–Mar 27", from: 4, to: 6 },
@@ -514,11 +563,14 @@ const SPEC = [
     { k: "funnelStart", label: "Funnel starts in month",           min: 0, max: 9, step: 1, u: "M" },
     { k: "orders",      label: "Book orders / mo at launch",        min: 0, max: 2000, step: 25, u: "" },
     { k: "orderGrowth", label: "Order growth per month",            min: 0, max: 40, step: 1, u: "%" },
-    { k: "shipRev",     label: "Shipping charged per book",         min: 0, max: 25, step: 0.95, u: "$" },
+    { k: "shipRev",     label: "Shipping charged per book",         min: 0, max: 25, step: 0.5, u: "$" },
     { k: "bookCogs",    label: "Book cost + fulfillment",           min: 0, max: 25, step: 0.5, u: "$" },
-    { k: "cac",         label: "Ad cost per book order",            min: 0, max: 60, step: 1, u: "$" },
-    { k: "mbaRate",     label: "Buyers taking the $997 MBA",        min: 0, max: 25, step: 0.5, u: "%" },
-    { k: "bundleRate",  label: "Buyers taking a Babu plan",         min: 0, max: 30, step: 0.5, u: "%" },
+    { k: "cac",         label: "Ad cost per book order",            min: 0, max: 80, step: 1, u: "$" },
+    { k: "mbaPrice",    label: "MBA price inside the funnel",       min: 199, max: 1497, step: 50, u: "$" },
+    { k: "mbaRate",     label: "Buyers taking the MBA",             min: 0, max: 25, step: 0.5, u: "%" },
+    { k: "bundlePrice", label: "Babu bundle price (3 mo of Pro)",   min: 49, max: 499, step: 10, u: "$" },
+    { k: "bundleRate",  label: "Buyers taking the Babu bundle",     min: 0, max: 40, step: 0.5, u: "%" },
+    { k: "bundleContinue", label: "Bundle buyers staying past mo 3", min: 0, max: 90, step: 5, u: "%" },
     { k: "mbaDirect",   label: "MBA sales / mo outside the funnel", min: 0, max: 30, step: 1, u: "" }
   ]},
   { group: "Costs", open: true, items: [
@@ -545,7 +597,8 @@ const SEED = {
   offPlatform: 5000, seedBabu: 11,
   containerMo: 3, contPrice: 1500,
   goalContainers: 24, goalContinuation: 70, goalBabuUsers: 65, goalBabuBy: 4,
-  babuArpu: 55, funnelStart: 4, shipRev: 9.95, bookCogs: 8,
+  babuArpu: 55, funnelStart: 4, shipRev: 8, bookCogs: 8,
+  mbaPrice: 499, bundlePrice: 99,
   babuInfra: 1500, babuTech: 1500, babuTechThru: 10,
   jake: 4250, jakeMonths: 6,
   jcComp: 10000, bookPromo: 500, software: 500, party: 3000,
@@ -558,7 +611,8 @@ const SCENARIOS = {
     rampMonths: 5, capacity: 3, maxLoad: 26,
     pct5k: 20, convRate: 50, contChurn: 7,
     babuNew: 4, babuGrowth: 3, babuChurn: 10, babuArpu: 50,
-    orders: 100, orderGrowth: 3, cac: 18, mbaRate: 1.5, bundleRate: 3, mbaDirect: 0,
+    orders: 100, orderGrowth: 3, cac: 25, mbaRate: 1.5, bundleRate: 5,
+    bundleContinue: 30, mbaDirect: 0,
     adsQ4: 2000, adsQ1: 2500, adsQ2: 2500
   }),
   base: Object.assign({}, SEED, {
@@ -566,7 +620,8 @@ const SCENARIOS = {
     rampMonths: 4, capacity: 3, maxLoad: 34,
     pct5k: 30, convRate: 60, contChurn: 5,
     babuNew: 5, babuGrowth: 7, babuChurn: 8, babuArpu: 55,
-    orders: 200, orderGrowth: 6, cac: 14, mbaRate: 2.5, bundleRate: 6, mbaDirect: 0,
+    orders: 200, orderGrowth: 6, cac: 25, mbaRate: 2.5, bundleRate: 10,
+    bundleContinue: 40, mbaDirect: 0,
     adsQ4: 2500, adsQ1: 3000, adsQ2: 3000
   }),
   aggr: Object.assign({}, SEED, {
@@ -574,7 +629,8 @@ const SCENARIOS = {
     rampMonths: 3, capacity: 4, maxLoad: 45,
     pct5k: 40, convRate: 70, contChurn: 3,
     babuNew: 8, babuGrowth: 12, babuChurn: 6, babuArpu: 60,
-    orders: 400, orderGrowth: 10, cac: 11, mbaRate: 4, bundleRate: 10, mbaDirect: 2,
+    orders: 400, orderGrowth: 10, cac: 22, mbaRate: 4, bundleRate: 15,
+    bundleContinue: 50, mbaDirect: 2,
     adsQ4: 3500, adsQ1: 5000, adsQ2: 6000
   })
 };
@@ -598,6 +654,8 @@ function run(a) {
   let contPool = a.seedCont;
   let alumniPool = a.seedAlumni;
   let babuPool = a.seedBabu;
+  let bundleQueue = [];   // bundle cohorts inside their three prepaid months
+  let bundleCont = 0;     // bundle buyers who stayed on at the full Pro rate
   let cum = 0;
 
   for (let m = 0; m < N; m++) {
@@ -631,19 +689,35 @@ function run(a) {
     const contRev = contPool * a.contPrice + alumniPool * 1000 + a.seedSupport * 500;
 
     // --- book funnel ---
-    let orders = 0, funnelRev = 0, funnelCost = 0, bundleAdds = 0;
+    // $8 shipping covers the book and fulfilment, so every order starts life
+    // down by the CAC. The upsells have to carry it from there.
+    let orders = 0, funnelRev = 0, funnelCost = 0, bundleBuyers = 0;
     if (m >= a.funnelStart) {
       orders = a.orders * Math.pow(1 + pct(a.orderGrowth), m - a.funnelStart);
-      funnelRev = orders * a.shipRev + orders * pct(a.mbaRate) * 997;
+      funnelRev = orders * a.shipRev + orders * pct(a.mbaRate) * a.mbaPrice;
       funnelCost = orders * (a.bookCogs + a.cac);
-      bundleAdds = orders * pct(a.bundleRate);
+      bundleBuyers = orders * pct(a.bundleRate);
     }
-    const digitalRev = funnelRev + a.mbaDirect * 997;
+    const digitalRev = funnelRev + a.mbaDirect * a.mbaPrice;
 
     // --- Babu ---
-    const babuAdds = a.babuNew * Math.pow(1 + pct(a.babuGrowth), m) + bundleAdds;
-    babuPool = babuPool * (1 - pct(a.babuChurn)) + babuAdds;
-    const babuRev = babuPool * a.babuArpu;
+    // Three populations. Organic signups pay blended ARPU. Bundle buyers pay
+    // $99 once for three months of Pro, recognised evenly across those months.
+    // Whoever stays past month three converts to the full Pro rate.
+    bundleQueue.push({ left: 3, n: bundleBuyers });
+    let bundleActive = 0;
+    bundleQueue.forEach(q => { bundleActive += q.n; });
+    let bundleGrads = 0;
+    bundleQueue.forEach(q => { q.left -= 1; if (q.left <= 0) bundleGrads += q.n; });
+    bundleQueue = bundleQueue.filter(q => q.left > 0);
+    bundleCont = bundleCont * (1 - pct(a.babuChurn)) + bundleGrads * pct(a.bundleContinue);
+
+    babuPool = babuPool * (1 - pct(a.babuChurn)) + a.babuNew * Math.pow(1 + pct(a.babuGrowth), m);
+
+    const babuRev = babuPool * a.babuArpu
+      + bundleActive * (a.bundlePrice / 3)
+      + bundleCont * PRO_PRICE;
+    const founders = babuPool + bundleActive + bundleCont;
 
     const revStreams = [contRev, containerRev + a.offPlatform, babuRev, digitalRev];
     const revenue = revStreams.reduce((s, v) => s + v, 0);
@@ -666,6 +740,7 @@ function run(a) {
     rows.push({
       m, month: MONTHS[m], revStreams, revenue, costs, net, cum,
       newClients, turnedAway, demand, inContainer, contPool, alumniPool, babuPool, orders,
+      founders, bundleActive, bundleCont, bundleBuyers,
       load: inContainer + contPool + alumniPool,
       mrr: contRev + containerRev + a.offPlatform + babuRev,
       c: { babuInfra: cBabuInfra, babuTech: cBabuTech, jake: cJake, ads: cAds,
@@ -780,7 +855,9 @@ const cv = v => getComputedStyle(document.documentElement).getPropertyValue(v).t
 
 function render() {
   const R = run(A);
+  renderBoard(R);
   renderGoals(R);
+  renderFunnel(R);
   renderRecon(R);
   renderKpis(R);
   renderLegend();
@@ -821,25 +898,25 @@ function renderGoals(R) {
         A.convRate + "% to " + A.goalContinuation + "%") + ". Retention is the cheaper half of that."));
 
   /* ---- 02 · the book funnel pays for itself ---- */
-  const revPerOrder = A.shipRev + pct2(A.mbaRate) * 997;
-  const costPerOrder = A.bookCogs + A.cac;
-  const contrib = revPerOrder - costPerOrder;
-  const funnelMonths = R.filter(r => r.orders > 0);
-  const funnelTotal = funnelMonths.reduce((s, r) => s + (r.revStreams[3] - r.c.funnel), 0);
-  const g2 = contrib > 3 ? "good" : contrib > 0 ? "warn" : "crit";
+  const F = funnelEconomics(A);
+  const g2 = F.day1 >= 0 ? "good" : F.full12 > 0 ? "warn" : "crit";
   out.push(goalCard("Priority 02", "Make the book funnel pay for itself",
-    (contrib >= 0 ? "+" : "−") + "$" + Math.abs(contrib).toFixed(2) + " <small>per order</small>",
-    g2, contrib > 3 ? "Profitable" : contrib > 0 ? "Thin" : "Loses money",
-    "$" + revPerOrder.toFixed(2) + " in (shipping plus a " + A.mbaRate +
-    "% take on the $997 MBA) against $" + costPerOrder.toFixed(2) +
-    " out (book, fulfilment, ads). Contributes <b>" + fmtK(funnelTotal) + "</b> across " +
-    funnelMonths.length + " months.",
-    "Every dollar here rests on the MBA existing. <b>It is not a product in Stripe yet</b> &mdash; build it before January or this row is zero."));
+    (F.day1 >= 0 ? "+" : "−") + "$" + Math.abs(F.day1).toFixed(2) + " <small>per order, day one</small>",
+    g2,
+    F.day1 >= 0 ? "Self-funding" : F.full12 > 0 ? "Pays back later" : "Loses money",
+    "Day one it is " + (F.day1 >= 0 ? "up" : "down") + " <b>$" + Math.abs(F.day1).toFixed(2) +
+    "</b> an order. Counting the Babu subscribers it creates, the same order is worth <b>+$" +
+    F.full12.toFixed(2) + "</b> over twelve months.",
+    F.day1 >= 0
+      ? "Self-funding at these rates. Scale ad spend until CAC passes <b>$" + F.maxCac.toFixed(0) + "</b>."
+      : "To break even on day-one cash you need the MBA at <b>" + F.beMba.toFixed(1) +
+        "%</b> (holding the bundle at " + A.bundleRate + "%), or hold CAC under <b>$" +
+        F.maxCac.toFixed(0) + "</b>. Below that it is a Babu acquisition cost, not a loss."));
 
   /* ---- 03 · Babu clears its own cost ---- */
   const babuCost = A.babuInfra + A.babuTech;
   const beUsers = babuCost / Math.max(1, A.babuArpu);
-  const hitIdx = R.findIndex(r => r.babuPool >= A.goalBabuUsers);
+  const hitIdx = R.findIndex(r => r.founders >= A.goalBabuUsers);
   const c = pct2(A.babuChurn), k = A.goalBabuBy + 1;
   const decay = Math.pow(1 - c, k);
   const need = c > 0
@@ -852,16 +929,88 @@ function renderGoals(R) {
     A.goalBabuUsers + " <small>founders by " + MONTHS[A.goalBabuBy] + "</small>",
     g3, onTime ? "On track" : hitIdx >= 0 ? "Late — " + MONTHS[hitIdx] : "Not in window",
     "Break-even is <b>" + Math.ceil(beUsers) + "</b> users against " + fmt0(babuCost) +
-    "/mo of infra and engineering. The model reaches <b>" + Math.round(R[N - 1].babuPool) +
-    "</b> by June" + (hitIdx >= 0 ? " and crosses " + A.goalBabuUsers + " in " + MONTHS[hitIdx] : "") + ".",
-    "Hitting " + A.goalBabuUsers + " by " + MONTHS[A.goalBabuBy] + " needs <b>" + Math.ceil(need) +
-    " signups/mo</b> from September &mdash; <b>" + mult.toFixed(1) +
-    "&times;</b> the 4.3/mo you get organically today. That gap is the webinar walkthrough and paid Babu creative, and nothing else."));
+    "/mo of infra and engineering. The model reaches <b>" + Math.round(R[N - 1].founders) +
+    "</b> founders by June" + (hitIdx >= 0 ? " and crosses " + A.goalBabuUsers + " in " + MONTHS[hitIdx] : "") + ".",
+    "Hitting " + A.goalBabuUsers + " by " + MONTHS[A.goalBabuBy] + " on signups alone needs <b>" +
+    Math.ceil(need) + "/mo</b> from September &mdash; <b>" + mult.toFixed(1) +
+    "&times;</b> today's 4.3/mo. The book funnel throws off <b>" +
+    Math.round(R[N - 1].bundleBuyers) + " bundle buyers/mo</b> once it runs, but it starts in " +
+    MONTHS[A.funnelStart] + ". Either pull the funnel forward or move this date."));
 
   document.getElementById("goals").innerHTML = out.join("");
 }
 
 function pct2(v) { return v / 100; }
+
+/* Unit economics of one book order, day one and across twelve months. */
+function funnelEconomics(a) {
+  const ship = a.shipRev;
+  const cogs = a.bookCogs;
+  const cac = a.cac;
+  const mba = pct2(a.mbaRate) * a.mbaPrice;
+  const bundle = pct2(a.bundleRate) * a.bundlePrice;
+  const day1 = ship - cogs - cac + mba + bundle;
+
+  // A bundle buyer who stays becomes a Pro subscriber. Expected life at the
+  // current churn, capped at nine months so the payback claim stays defensible.
+  const life = a.babuChurn > 0 ? Math.min(9, 1 / pct2(a.babuChurn)) : 9;
+  const downstream = pct2(a.bundleRate) * pct2(a.bundleContinue) * PRO_PRICE * life;
+  const full12 = day1 + downstream;
+
+  // What it takes to get day-one cash to zero.
+  const gap = cogs + cac - ship - bundle;
+  const beMba = a.mbaPrice > 0 ? Math.max(0, gap / a.mbaPrice * 100) : 0;
+  const gapB = cogs + cac - ship - mba;
+  const beBundle = a.bundlePrice > 0 ? Math.max(0, gapB / a.bundlePrice * 100) : 0;
+  const maxCac = ship - cogs + mba + bundle;
+  const maxCac12 = maxCac + downstream;
+
+  return { ship, cogs, cac, mba, bundle, day1, downstream, full12,
+           beMba, beBundle, maxCac, maxCac12, life };
+}
+
+function renderFunnel(R) {
+  const F = funnelEconomics(A);
+  const bar = (label, v, sign) =>
+    '<div class="wf-row"><span class="wf-l">' + label + '</span>' +
+    '<span class="wf-v ' + (sign > 0 ? "pos" : sign < 0 ? "neg" : "") + '">' +
+    (sign > 0 ? "+" : sign < 0 ? "−" : "") + "$" + Math.abs(v).toFixed(2) + '</span></div>';
+
+  const combos = [1, 2, 3, 4, 5].map(t1 => {
+    const needB = Math.max(0, (F.cogs + F.cac - F.ship - t1 / 100 * A.mbaPrice) / A.bundlePrice * 100);
+    return '<tr><td class="n">' + t1.toFixed(1) + '%</td><td class="n">' +
+      (needB > 40 ? "&mdash;" : needB.toFixed(1) + "%") + '</td></tr>';
+  }).join("");
+
+  document.getElementById("funnel").innerHTML =
+    '<div class="fn-col"><div class="fn-h">One order, day one</div>' +
+    bar("Shipping charged", F.ship, 1) +
+    bar("Book + fulfilment", F.cogs, -1) +
+    bar("Ad cost to acquire", F.cac, -1) +
+    bar("MBA at " + A.mbaRate + "% &times; $" + A.mbaPrice, F.mba, 1) +
+    bar("Bundle at " + A.bundleRate + "% &times; $" + A.bundlePrice, F.bundle, 1) +
+    '<div class="wf-row wf-tot"><span class="wf-l">Day-one cash</span><span class="wf-v ' +
+    (F.day1 >= 0 ? "pos" : "neg") + '">' + (F.day1 >= 0 ? "+" : "−") + "$" +
+    Math.abs(F.day1).toFixed(2) + '</span></div>' +
+    bar("Babu continuation (" + A.bundleContinue + "% for ~" + F.life.toFixed(0) + " mo)", F.downstream, 1) +
+    '<div class="wf-row wf-tot"><span class="wf-l">Worth over 12 months</span><span class="wf-v ' +
+    (F.full12 >= 0 ? "pos" : "neg") + '">' + (F.full12 >= 0 ? "+" : "−") + "$" +
+    Math.abs(F.full12).toFixed(2) + '</span></div></div>' +
+
+    '<div class="fn-col"><div class="fn-h">What breaks it even</div>' +
+    '<p class="fn-p">Holding the bundle at ' + A.bundleRate + '%, the MBA has to convert at <b>' +
+    F.beMba.toFixed(1) + '%</b>. Holding the MBA at ' + A.mbaRate + '%, the bundle has to hit <b>' +
+    F.beBundle.toFixed(1) + '%</b>.</p>' +
+    '<table class="mini"><thead><tr><th>MBA take</th><th>Bundle needed</th></tr></thead><tbody>' +
+    combos + '</tbody></table></div>' +
+
+    '<div class="fn-col"><div class="fn-h">How much you can pay for a buyer</div>' +
+    '<div class="fn-big ' + (F.maxCac >= A.cac ? "pos" : "neg") + '">$' + F.maxCac.toFixed(2) + '</div>' +
+    '<p class="fn-p">Maximum CAC that still breaks even on <b>day-one cash</b>, at the current take rates. You are paying <b>$' +
+    A.cac.toFixed(0) + '</b>.</p>' +
+    '<div class="fn-big pos" style="margin-top:14px">$' + F.maxCac12.toFixed(2) + '</div>' +
+    '<p class="fn-p">Maximum CAC if you are willing to <b>wait twelve months</b> and count the Babu subscribers the funnel creates. That is the number to actually bid to &mdash; provided you can fund the gap.</p></div>';
+}
 
 function goalCard(rank, title, target, state, stateLabel, reading, lever) {
   return '<div class="goal"><div class="rank">' + rank + '</div>' +
@@ -882,6 +1031,40 @@ const ACTUAL = {
   ],
   total: 34109
 };
+
+function renderBoard(R) {
+  const babuCost = A.babuInfra + A.babuTech;
+  const beUsers = Math.ceil(babuCost / Math.max(1, A.babuArpu));
+  const june = R[N - 1];
+
+  const box = (lbl, val, sub, frac) => {
+    let t = "";
+    if (frac !== undefined) {
+      const p = Math.max(0, Math.min(1, frac)) * 100;
+      const cls = p < 34 ? "low" : p < 67 ? "mid" : "";
+      t = '<div class="track"><span class="' + cls + '" style="width:' + p.toFixed(1) + '%"></span></div>';
+    }
+    return '<div class="bx"><div class="b-lbl">' + lbl + '</div><div class="b-val">' + val +
+      '</div>' + t + '<div class="b-sub">' + sub + '</div></div>';
+  };
+
+  document.getElementById("board").innerHTML =
+    box("Monthly recurring", "$34,109",
+      "Flat for four months. Model targets <b>" + fmtK(june.mrr) + "</b> by Jun 27.",
+      34109 / Math.max(1, june.mrr)) +
+    box("Advisory clients", "19",
+      "10 continuity, 4 alumni, 3 in container, 1 support, 1 off-platform.") +
+    box("Babu founders", "11",
+      "Goal is " + A.goalBabuUsers + " by " + MONTHS[A.goalBabuBy] + ". Break-even is " + beUsers + ".",
+      11 / Math.max(1, A.goalBabuUsers)) +
+    box("Babu revenue", "$609",
+      "Against " + fmt0(babuCost) + "/mo of cost. Short by <b>" + fmt0(babuCost - 609) + "</b>.",
+      609 / Math.max(1, babuCost)) +
+    box("The book", "Mid-Oct",
+      "Launch on track. The free-plus-shipping funnel opens in " + MONTHS[A.funnelStart] + ".") +
+    box("MBA product", "Not built",
+      "No $" + A.mbaPrice + " product exists in Stripe. Priority 02 is zero until it does.", 0);
+}
 
 function renderRecon(R) {
   const sep = R[0];
@@ -924,7 +1107,7 @@ function renderDerived(R) {
   if (b) {
     const be = (A.babuInfra + (A.babuTechThru > 0 ? A.babuTech : 0)) / Math.max(1, A.babuArpu);
     b.textContent = "→ break-even at " + Math.ceil(be) + " paying users · ending pool " +
-      Math.round(R[N - 1].babuPool);
+      Math.round(R[N - 1].founders);
   }
 }
 
@@ -1141,7 +1324,7 @@ function niceCeil(v) {
 /* -------- Babu panel -------- */
 function renderBabu(R) {
   const be = (A.babuInfra + A.babuTech) / Math.max(1, A.babuArpu);
-  const crossIdx = R.findIndex(r => r.babuPool >= be && r.m < A.babuTechThru);
+  const crossIdx = R.findIndex(r => r.revStreams[2] >= (A.babuInfra + r.c.babuTech) && r.m < A.babuTechThru);
   const end = R[N - 1];
   const totBabuRev = R.reduce((s, r) => s + r.revStreams[2], 0);
   const totBabuCost = R.reduce((s, r) => s + r.c.babuInfra + r.c.babuTech, 0);
@@ -1151,7 +1334,7 @@ function renderBabu(R) {
     ? '<div class="gate ok"><strong>Break-even in ' + R[crossIdx].month + '.</strong> The pool crosses ' +
       Math.ceil(be) + ' paying users while the tech team is still funded. Everything past that point is margin.</div>'
     : '<div class="gate"><strong>Never breaks even in this window.</strong> Babu needs ' + Math.ceil(be) +
-      ' paying users to cover its own cost and tops out at ' + Math.round(end.babuPool) +
+      ' paying users to cover its own cost and tops out at ' + Math.round(end.founders) +
       '. That is ' + fmtK(Math.abs(babuNet)) + ' of subsidy over ten months. Either the signup rate has to move or the tech spend has to.</div>';
 
   document.getElementById("babu").innerHTML =
@@ -1160,7 +1343,7 @@ function renderBabu(R) {
     '<div class="k-note" style="font-size:11.5px;color:var(--ink-2);margin-top:7px">at ' + fmt0(A.babuArpu) + '/user against ' + fmt0(A.babuInfra + A.babuTech) + '/mo</div></div>' +
 
     '<div><div class="k-lbl" style="font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:7px">Users by Jun 27</div>' +
-    '<div class="k-val num" style="font-size:27px;font-weight:620;letter-spacing:-.03em">' + Math.round(end.babuPool) + '</div>' +
+    '<div class="k-val num" style="font-size:27px;font-weight:620;letter-spacing:-.03em">' + Math.round(end.founders) + '</div>' +
     '<div class="k-note" style="font-size:11.5px;color:var(--ink-2);margin-top:7px">from ' + A.seedBabu + ' today · ' + fmtK(end.revStreams[2]) + ' MRR</div></div>' +
 
     '<div><div class="k-lbl" style="font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:7px">10-month Babu P&amp;L</div>' +
@@ -1242,7 +1425,8 @@ function renderTable(R) {
   b += memoRow("Continuity clients", R, cols, r => r.contPool + r.alumniPool, fmt1);
   b += memoRow("Total client load", R, cols, r => r.load, fmt1);
   b += memoRow("Demand turned away", R, cols, r => r.turnedAway, fmt1, true);
-  b += memoRow("Babu paying users", R, cols, r => r.babuPool, v => Math.round(v).toLocaleString());
+  b += memoRow("Babu founders (all tiers)", R, cols, r => r.founders, v => Math.round(v).toLocaleString());
+  b += memoRow("&nbsp;&nbsp;of which from book bundle", R, cols, r => r.bundleActive + r.bundleCont, v => Math.round(v).toLocaleString());
   b += memoRow("Book orders", R, cols, r => r.orders, v => Math.round(v).toLocaleString(), true);
   b += "</tbody>";
 
