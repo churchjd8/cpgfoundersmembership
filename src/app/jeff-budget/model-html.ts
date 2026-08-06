@@ -469,7 +469,9 @@ footer.foot { margin-top: 34px; padding-top: 18px; border-top: 1px solid var(--r
           <h3>The one that still matters</h3>
           <ul>
             <li><strong>Jeff&rsquo;s own draw is not in this P&amp;L.</strong> JC comp is Joshua&rsquo;s $10K fee. Every net number on this page is what the business throws off <em>before</em> Jeff pays himself a dollar. Decide what he takes and the real margin drops by that much.</li>
-            <li><strong>There is no $997 MBA product in Stripe.</strong> Not a pricing question &mdash; the thing does not exist as a sellable object. Every dollar in &ldquo;book funnel &amp; digital&rdquo; depends on building it before January. Until then that row is a plan, not revenue.</li>
+            <li><strong>$2,736/mo is contracted but not collecting.</strong> Four months of paid invoices average $25,373 against $28,109 of Stripe subscriptions. The difference sits in draft, open and failed invoices. That is the cheapest revenue in this entire plan and it needs no marketing at all.</li>
+            <li><strong>Two continuity clients carry $500/mo coupons.</strong> Cristina Kown and chrisj@jrxbiotech bill at $1,000, not $1,500. Continuity is $18,500, not the $19,500 the subscription list implies.</li>
+            <li><strong>The MBA has never been sold once.</strong> It exists in Kajabi, so it is buildable revenue rather than vapour &mdash; but every take rate in Priority 02 is an assumption with zero history behind it.</li>
             <li><strong>Babu has never been sold, only signed up for.</strong> 4, 5, and 4 signups in June, July, August &mdash; all organic, no acquisition spend behind them. The model grows from that rate, not from a target.</li>
             <li><strong>Jake&rsquo;s first month is outside this window.</strong> He starts in August and runs seven months, so six land in Sep&ndash;Feb and $4,250 sits in August where this model cannot see it.</li>
           </ul>
@@ -534,7 +536,9 @@ const SPEC = [
     { k: "seedC2k",     label: "In-container now @ $2,000",        min: 0, max: 10, step: 1, u: "" },
     { k: "seedC5k",     label: "In-container now @ $5,000",        min: 0, max: 10, step: 1, u: "" },
     { k: "offPlatform", label: "Off-platform retainer (Supermush)", min: 0, max: 15000, step: 500, u: "$" },
-    { k: "seedBabu",    label: "Babu paying users",                min: 0, max: 200, step: 1, u: "" }
+    { k: "seedBabu",    label: "Babu paying users",                min: 0, max: 200, step: 1, u: "" },
+    { k: "discounts",   label: "Coupons in force on continuity",   min: 0, max: 5000, step: 100, u: "$" },
+    { k: "collectionRate", label: "Of contracted, actually collected", min: 70, max: 100, step: 1, u: "%" }
   ]},
   { group: "Webinar funnel", open: true, items: [
     { k: "regs",      label: "Registrants per webinar (month 1)", min: 100, max: 1500, step: 25, u: "" },
@@ -594,7 +598,7 @@ const SPEC = [
 /* ---------------- scenarios ---------------- */
 const SEED = {
   seedCont: 10, seedAlumni: 4, seedSupport: 1, seedC2k: 2, seedC5k: 1,
-  offPlatform: 5000, seedBabu: 11,
+  offPlatform: 5000, seedBabu: 11, discounts: 1000, collectionRate: 92,
   containerMo: 3, contPrice: 1500,
   goalContainers: 24, goalContinuation: 70, goalBabuUsers: 65, goalBabuBy: 4,
   babuArpu: 55, funnelStart: 4, shipRev: 8, bookCogs: 8,
@@ -686,7 +690,10 @@ function run(a) {
     // --- continuity pool ---
     contPool = contPool * (1 - pct(a.contChurn)) + grads * pct(a.convRate);
     alumniPool = alumniPool * (1 - pct(a.contChurn));
-    const contRev = contPool * a.contPrice + alumniPool * 1000 + a.seedSupport * 500;
+    // Two continuity clients carry $500/mo coupons. The discount fades as that
+    // cohort churns rather than persisting against a pool they've left.
+    const discAmt = a.discounts * Math.min(1, contPool / Math.max(1, a.seedCont));
+    const contRev = contPool * a.contPrice + alumniPool * 1000 + a.seedSupport * 500 - discAmt;
 
     // --- book funnel ---
     // $8 shipping covers the book and fulfilment, so every order starts life
@@ -719,7 +726,14 @@ function run(a) {
       + bundleCont * PRO_PRICE;
     const founders = babuPool + bundleActive + bundleCont;
 
-    const revStreams = [contRev, containerRev + a.offPlatform, babuRev, digitalRev];
+    // Contracted is what the subscriptions say. Collected is what lands — the
+    // rest sits in draft, open, or failed invoices. Card-on-file funnel sales
+    // are not subject to that haircut.
+    const coll = pct(a.collectionRate);
+    const contracted = contRev + containerRev + a.offPlatform + babuRev;
+    const streamsContracted = [contRev, containerRev + a.offPlatform, babuRev, digitalRev];
+    const revStreams = [contRev * coll, (containerRev + a.offPlatform) * coll,
+                        babuRev * coll, digitalRev];
     const revenue = revStreams.reduce((s, v) => s + v, 0);
 
     // --- costs ---
@@ -738,11 +752,11 @@ function run(a) {
     cum += net;
 
     rows.push({
-      m, month: MONTHS[m], revStreams, revenue, costs, net, cum,
+      m, month: MONTHS[m], revStreams, streamsContracted, revenue, costs, net, cum,
       newClients, turnedAway, demand, inContainer, contPool, alumniPool, babuPool, orders,
       founders, bundleActive, bundleCont, bundleBuyers,
       load: inContainer + contPool + alumniPool,
-      mrr: contRev + containerRev + a.offPlatform + babuRev,
+      mrr: contracted, collected: contracted * coll, discAmt,
       c: { babuInfra: cBabuInfra, babuTech: cBabuTech, jake: cJake, ads: cAds,
            funnel: funnelCost, jc: a.jcComp, promo: a.bookPromo, sw: a.software,
            party: cParty, fees: cFees, cont: cCont }
@@ -911,7 +925,7 @@ function renderGoals(R) {
       ? "Self-funding at these rates. Scale ad spend until CAC passes <b>$" + F.maxCac.toFixed(0) + "</b>."
       : "To break even on day-one cash you need the MBA at <b>" + F.beMba.toFixed(1) +
         "%</b> (holding the bundle at " + A.bundleRate + "%), or hold CAC under <b>$" +
-        F.maxCac.toFixed(0) + "</b>. Below that it is a Babu acquisition cost, not a loss."));
+        F.maxCac.toFixed(0) + "</b>. The MBA is already built in Kajabi &mdash; it has simply never been sold, so there is no take-rate history to lean on."));
 
   /* ---- 03 · Babu clears its own cost ---- */
   const babuCost = A.babuInfra + A.babuTech;
@@ -1024,12 +1038,13 @@ function goalCard(rank, title, target, state, stateLabel, reading, lever) {
 /* Live Stripe snapshot, 6 Aug 2026 — the model's month 1 should land near this. */
 const ACTUAL = {
   rows: [
-    ["Continuity &amp; alumni", 19500, "10 &times; $1,500 + 4 &times; $1,000 + 1 &times; $500", "--s1"],
-    ["Active containers &amp; retainers", 14000, "2 &times; $2,000 + 1 &times; $5,000 + Supermush $5,000", "--s2"],
-    ["Babu subscriptions", 609, "11 paying users &mdash; 8 Base, 3 Pro", "--s3"],
-    ["Book funnel &amp; digital", 0, "no $997 MBA product exists in Stripe yet", "--s4"]
+    ["Continuity &amp; alumni", 18500, "10 &times; $1,500 <em>less $1,000 of coupons</em>, 4 &times; $1,000, 1 &times; $500", "--s1"],
+    ["Active containers &amp; retainers", 14000, "Erin $2,000, Jade $2,000, Zeyad $5,000, Supermush $5,000 off-platform", "--s2"],
+    ["Babu subscriptions", 609, "11 subscriptions across 10 people &mdash; one holds both Base and Pro", "--s3"],
+    ["Book funnel &amp; digital", 0, "MBA is built in Kajabi but has never been sold", "--s4"]
   ],
-  total: 34109
+  contracted: 33109,
+  collected: 30373
 };
 
 function renderBoard(R) {
@@ -1049,9 +1064,12 @@ function renderBoard(R) {
   };
 
   document.getElementById("board").innerHTML =
-    box("Monthly recurring", "$34,109",
-      "Flat for four months. Model targets <b>" + fmtK(june.mrr) + "</b> by Jun 27.",
-      34109 / Math.max(1, june.mrr)) +
+    box("Contracted MRR", "$33,109",
+      "What the subscriptions say. Model targets <b>" + fmtK(june.mrr) + "</b> by Jun 27.",
+      33109 / Math.max(1, june.mrr)) +
+    box("Actually collected", "$30,373",
+      "Four-month average. <b>" + fmt0(33109 - 30373) + "/mo</b> sits in draft, open or failed invoices.",
+      30373 / 33109) +
     box("Advisory clients", "19",
       "10 continuity, 4 alumni, 3 in container, 1 support, 1 off-platform.") +
     box("Babu founders", "11",
@@ -1061,16 +1079,14 @@ function renderBoard(R) {
       "Against " + fmt0(babuCost) + "/mo of cost. Short by <b>" + fmt0(babuCost - 609) + "</b>.",
       609 / Math.max(1, babuCost)) +
     box("The book", "Mid-Oct",
-      "Launch on track. The free-plus-shipping funnel opens in " + MONTHS[A.funnelStart] + ".") +
-    box("MBA product", "Not built",
-      "No $" + A.mbaPrice + " product exists in Stripe. Priority 02 is zero until it does.", 0);
+      "Launch on track. The free-plus-shipping funnel opens in " + MONTHS[A.funnelStart] + ".");
 }
 
 function renderRecon(R) {
   const sep = R[0];
   let h = '<thead><tr><th>Revenue stream</th><th>Stripe today</th><th>Model, Sep 26</th><th class="q">Difference</th><th style="text-align:left">Basis</th></tr></thead><tbody>';
   ACTUAL.rows.forEach((row, i) => {
-    const model = sep.revStreams[i];
+    const model = sep.streamsContracted[i];   // contracted basis, matching the Stripe column
     const diff = model - row[1];
     const off = Math.abs(diff) > Math.max(1500, row[1] * 0.25);
     h += '<tr><td><span class="swatch-dot" style="background:var(' + row[3] + ')"></span>' + row[0] + '</td>' +
@@ -1080,10 +1096,16 @@ function renderRecon(R) {
       (diff >= 0 ? "+" : "−") + fmt0(Math.abs(diff)).replace("$", "$") + '</td>' +
       '<td style="text-align:left;color:var(--ink-muted);font-size:11.5px">' + row[2] + '</td></tr>';
   });
-  const md = sep.revenue - ACTUAL.total;
-  h += '<tr class="tot"><td>Total monthly revenue</td><td class="n">' + fmt0(ACTUAL.total) +
+  const mc = sep.mrr - ACTUAL.contracted;
+  h += '<tr class="tot"><td>Contracted</td><td class="n">' + fmt0(ACTUAL.contracted) +
+    '</td><td class="n">' + fmt0(sep.mrr) + '</td><td class="n q ' + (mc >= 0 ? "" : "neg") + '">' +
+    (mc >= 0 ? "+" : "−") + fmt0(Math.abs(mc)) +
+    '</td><td style="text-align:left;color:var(--ink-muted);font-size:11.5px">what the subscriptions say</td></tr>';
+  const md = sep.revenue - ACTUAL.collected;
+  h += '<tr class="net"><td>Actually collected</td><td class="n">' + fmt0(ACTUAL.collected) +
     '</td><td class="n">' + fmt0(sep.revenue) + '</td><td class="n q ' + (md >= 0 ? "" : "neg") + '">' +
-    (md >= 0 ? "+" : "−") + fmt0(Math.abs(md)) + '</td><td></td></tr></tbody>';
+    (md >= 0 ? "+" : "−") + fmt0(Math.abs(md)) +
+    '</td><td style="text-align:left;color:var(--ink-muted);font-size:11.5px">four-month average of paid invoices, plus Supermush</td></tr></tbody>';
   document.getElementById("recon").innerHTML = h;
 }
 
@@ -1116,7 +1138,7 @@ function renderKpis(R) {
   const cost = R.reduce((s, r) => s + r.costs, 0);
   const net = rev - cost;
   const endMrr = R[N - 1].mrr;
-  const startMrr = 29110 + A.offPlatform;
+  const startMrr = ACTUAL.contracted;
   const delta = (endMrr - startMrr) / startMrr * 100;
   const worst = R.reduce((w, r) => r.net < w.net ? r : w, R[0]);
   const margin = rev > 0 ? net / rev * 100 : 0;
@@ -1419,7 +1441,8 @@ function renderTable(R) {
   }).join("") + "</tr>";
 
   b += sec("Memo");
-  b += memoRow("Ending MRR", R, cols, r => r.mrr, fmtK);
+  b += memoRow("Contracted MRR", R, cols, r => r.mrr, fmtK);
+  b += memoRow("&nbsp;&nbsp;actually collected", R, cols, r => r.collected, fmtK);
   b += memoRow("New clients signed", R, cols, r => r.newClients, fmt1, true);
   b += memoRow("Clients in container", R, cols, r => r.inContainer, fmt1);
   b += memoRow("Continuity clients", R, cols, r => r.contPool + r.alumniPool, fmt1);
