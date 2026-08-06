@@ -31,7 +31,7 @@ Here's what working with him looks like. There are two ways in, both 3-month int
 Both tiers include:
 - **Babu Pro**, $200/mo value. Our AI CPG advisor trained on Jeff's 35+ years in the industry, unlimited use.
 - **MBA for CPG modules.** Video trainings on marketing, sales, manufacturing, team and fundraising, plus the financial models, tools, templates and white papers.
-- **Warm introductions** to investors, suppliers, co-mans, brokers and buyers.
+- **Warm introductions** to investors, suppliers, co-mans, brokers and buyers where appropriate.
 - **Monthly speaker series** with industry legends. Fireside chats and Q&A with founders from brands like Poppi and Zico.
 - **Retailer and investor pitch slams.** Pitch in front of real retailers and angel investors, get feedback, compete for a cash prize.
 - **Founder community** of other operators going through it alongside you.
@@ -40,7 +40,7 @@ After the 3 months you can continue month to month at a reduced rate and cadence
 
 Given where you're at, most founders in your spot start with the $2,500/mo tier and step up if they want more of Jeff's time. Jeff's bar on either is a minimum 5-10x return on what you put in, usually through capital raised or cost taken out.
 
-Let me know which one you want and I'll get you set up. Happy to jump on a quick call with you and Jeff first if that's easier.
+Let me know which direction you may be interested in and we can connect for a call with me and Jeff.
 
 Thanks,
 Joshua
@@ -73,7 +73,7 @@ Here's what working with him looks like. There are two ways in, both 3-month int
 Both tiers include:
 - **Babu Pro**, $200/mo value. Our AI CPG advisor trained on Jeff's 35+ years in the industry, unlimited use.
 - **MBA for CPG modules.** Video trainings on marketing, sales, manufacturing, team and fundraising, plus the financial models, tools, templates and white papers.
-- **Warm introductions** to suppliers, co-mans, brokers, buyers and investors.
+- **Warm introductions** to suppliers, co-mans, brokers, buyers and investors where appropriate.
 - **Monthly speaker series** with industry legends. Fireside chats and Q&A with founders from brands like Poppi and Zico.
 - **Retailer and investor pitch slams.** Pitch in front of real retailers and angel investors, get feedback, compete for a cash prize.
 - **Founder community** of other operators going through it alongside you.
@@ -82,12 +82,12 @@ After the 3 months you can continue month to month at a reduced rate and cadence
 
 Pre-launch, most founders start at the $2,500/mo tier and step up if they want more of Jeff's time. Either way his bar is a minimum 5-10x return on what you put in.
 
-Let me know which one you want and I'll get you set up. Happy to jump on a quick call with you and Jeff first if that's easier.
+Let me know which direction you may be interested in and we can connect for a call with me and Jeff.
 
 Thanks,
 Joshua
 
-P.S. If the $7,500 is more than you want to commit pre-launch, the MBA for CPG bootcamp is $997 one time with lifetime access, and covers a lot of the launch fundamentals. Say the word and I'll send it over.
+P.S. If the $7,500 is more than you want to commit pre-launch, the MBA for CPG bootcamp is $997 one time with lifetime access, and covers a lot of the launch fundamentals.
 
 ---
 
