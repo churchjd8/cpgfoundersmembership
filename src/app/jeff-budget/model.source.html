@@ -1,0 +1,1182 @@
+<title>Dreammakers Model — Sept 26 through Jun 27</title>
+
+<style>
+:root {
+  color-scheme: light;
+  --plane:        #f1f3f6;
+  --surface:      #fcfcfd;
+  --surface-2:    #f7f8fa;
+  --ink:          #0c0e12;
+  --ink-2:        #4d525c;
+  --ink-muted:    #858b97;
+  --rule:         #e2e5ea;
+  --rule-strong:  #ccd1d9;
+  --accent:       #0e6f70;
+  --accent-soft:  #e2f0f0;
+  --s1: #2a78d6;  /* continuity & alumni */
+  --s2: #eb6834;  /* active containers */
+  --s3: #1baf7a;  /* Babu */
+  --s4: #eda100;  /* book & digital */
+  --cost: #e34948;
+  --pos: #0e7a4a;
+  --neg: #c0392f;
+  --shadow: 0 1px 2px rgba(12,14,18,.05), 0 8px 24px -12px rgba(12,14,18,.14);
+  --mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --plane:        #0c0e11;
+    --surface:      #171a1f;
+    --surface-2:    #1e2229;
+    --ink:          #f2f4f7;
+    --ink-2:        #b3bac6;
+    --ink-muted:    #7d848f;
+    --rule:         #282d35;
+    --rule-strong:  #39404a;
+    --accent:       #4bb5b3;
+    --accent-soft:  #16302f;
+    --s1: #3987e5;
+    --s2: #d95926;
+    --s3: #199e70;
+    --s4: #c98500;
+    --cost: #e66767;
+    --pos: #3bb273;
+    --neg: #e06a5e;
+    --shadow: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --plane:        #0c0e11;
+  --surface:      #171a1f;
+  --surface-2:    #1e2229;
+  --ink:          #f2f4f7;
+  --ink-2:        #b3bac6;
+  --ink-muted:    #7d848f;
+  --rule:         #282d35;
+  --rule-strong:  #39404a;
+  --accent:       #4bb5b3;
+  --accent-soft:  #16302f;
+  --s1: #3987e5;
+  --s2: #d95926;
+  --s3: #199e70;
+  --s4: #c98500;
+  --cost: #e66767;
+  --pos: #3bb273;
+  --neg: #e06a5e;
+  --shadow: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--plane);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 15px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+.num { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+
+/* ---------- shell ---------- */
+.wrap { max-width: 1500px; margin: 0 auto; padding: 0 24px 80px; }
+
+header.top {
+  padding: 40px 0 26px;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 26px;
+}
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 10px;
+  font-weight: 600;
+}
+h1 {
+  font-size: clamp(28px, 3.6vw, 42px);
+  line-height: 1.08;
+  letter-spacing: -.028em;
+  font-weight: 680;
+  margin: 0 0 10px;
+  text-wrap: balance;
+}
+.sub { color: var(--ink-2); margin: 0; max-width: 66ch; font-size: 15.5px; }
+
+.scenarios { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 22px; }
+.scenarios .lbl {
+  font-family: var(--mono); font-size: 11px; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--ink-muted); margin-right: 4px;
+}
+button.pill {
+  font-family: var(--mono); font-size: 12px; letter-spacing: .02em;
+  padding: 7px 15px; border-radius: 999px;
+  border: 1px solid var(--rule-strong);
+  background: var(--surface); color: var(--ink-2);
+  cursor: pointer; transition: background .12s, color .12s, border-color .12s;
+}
+button.pill:hover { border-color: var(--accent); color: var(--ink); }
+button.pill[aria-pressed="true"] {
+  background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 600;
+}
+button.ghost {
+  font-family: var(--mono); font-size: 12px;
+  padding: 7px 14px; border-radius: 8px;
+  border: 1px solid var(--rule-strong); background: transparent; color: var(--ink-2);
+  cursor: pointer;
+}
+button.ghost:hover { border-color: var(--accent); color: var(--ink); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+
+.layout { display: grid; grid-template-columns: 336px minmax(0, 1fr); gap: 26px; align-items: start; }
+@media (max-width: 1080px) { .layout { grid-template-columns: 1fr; } }
+
+/* ---------- rail ---------- */
+.rail {
+  position: sticky; top: 16px;
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  max-height: calc(100vh - 32px);
+  overflow-y: auto;
+}
+@media (max-width: 1080px) { .rail { position: static; max-height: none; } }
+.rail-head {
+  padding: 15px 18px; border-bottom: 1px solid var(--rule);
+  font-family: var(--mono); font-size: 11px; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--ink-muted);
+  position: sticky; top: 0; background: var(--surface); z-index: 2;
+}
+details.grp { border-bottom: 1px solid var(--rule); }
+details.grp:last-child { border-bottom: 0; }
+details.grp > summary {
+  padding: 12px 18px; cursor: pointer; list-style: none;
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 13px; font-weight: 600; letter-spacing: -.005em;
+}
+details.grp > summary::-webkit-details-marker { display: none; }
+details.grp > summary::after {
+  content: "+"; font-family: var(--mono); color: var(--ink-muted); font-size: 15px;
+}
+details.grp[open] > summary::after { content: "\2212"; }
+details.grp > summary:hover { background: var(--surface-2); }
+.grp-body { padding: 4px 18px 18px; display: flex; flex-direction: column; gap: 15px; }
+
+.ctrl-top { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+.ctrl-lbl { font-size: 12.5px; color: var(--ink-2); line-height: 1.35; }
+.ctrl-val {
+  font-family: var(--mono); font-variant-numeric: tabular-nums;
+  font-size: 12.5px; font-weight: 600; color: var(--ink);
+  background: var(--surface-2); border: 1px solid var(--rule);
+  border-radius: 5px; padding: 1px 7px; white-space: nowrap;
+}
+input[type="range"] {
+  -webkit-appearance: none; appearance: none;
+  width: 100%; height: 3px; margin: 8px 0 0;
+  background: var(--rule-strong); border-radius: 2px; cursor: pointer;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; width: 15px; height: 15px; border-radius: 50%;
+  background: var(--accent); border: 2px solid var(--surface); cursor: pointer;
+  box-shadow: 0 0 0 1px var(--accent);
+}
+input[type="range"]::-moz-range-thumb {
+  width: 13px; height: 13px; border-radius: 50%; border: 2px solid var(--surface);
+  background: var(--accent); cursor: pointer; box-shadow: 0 0 0 1px var(--accent);
+}
+.hint { font-size: 11.5px; color: var(--ink-muted); margin-top: 5px; line-height: 1.4; }
+.derived {
+  font-family: var(--mono); font-size: 11.5px; color: var(--accent);
+  background: var(--accent-soft); border-radius: 6px; padding: 8px 10px;
+  line-height: 1.5;
+}
+
+/* ---------- cards ---------- */
+.card {
+  background: var(--surface); border: 1px solid var(--rule);
+  border-radius: 12px; box-shadow: var(--shadow); margin-bottom: 22px;
+}
+.card-head { padding: 17px 20px 0; }
+.card-head h2 {
+  font-size: 16px; font-weight: 660; letter-spacing: -.012em; margin: 0 0 3px;
+}
+.card-head p { margin: 0; font-size: 13px; color: var(--ink-muted); }
+
+/* ---------- kpis ---------- */
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(178px, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 12px; overflow: hidden; margin-bottom: 22px; }
+.kpi { background: var(--surface); padding: 16px 18px 17px; }
+.kpi .k-lbl {
+  font-family: var(--mono); font-size: 10.5px; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--ink-muted); margin-bottom: 7px;
+}
+.kpi .k-val {
+  font-family: var(--mono); font-variant-numeric: tabular-nums;
+  font-size: 27px; font-weight: 620; letter-spacing: -.03em; line-height: 1;
+}
+.kpi .k-note { font-size: 11.5px; color: var(--ink-2); margin-top: 7px; line-height: 1.35; }
+.chip {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-family: var(--mono); font-size: 11px; font-weight: 600;
+  padding: 1px 6px; border-radius: 4px;
+}
+.chip.up { color: var(--pos); background: color-mix(in srgb, var(--pos) 12%, transparent); }
+.chip.down { color: var(--neg); background: color-mix(in srgb, var(--neg) 12%, transparent); }
+
+/* ---------- chart ---------- */
+.chart-wrap { position: relative; padding: 8px 12px 14px; }
+svg.chart { display: block; width: 100%; height: auto; overflow: visible; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 18px; padding: 10px 20px 0; }
+.lg { display: inline-flex; align-items: center; gap: 7px; font-size: 12.5px; color: var(--ink-2); }
+.lg .sw { width: 11px; height: 11px; border-radius: 3px; flex: none; }
+.lg .sw.line { height: 3px; border-radius: 2px; width: 14px; }
+.tip {
+  position: absolute; pointer-events: none; opacity: 0;
+  transform: translate(-50%, -100%); transition: opacity .1s;
+  background: var(--surface); border: 1px solid var(--rule-strong);
+  border-radius: 8px; box-shadow: var(--shadow); padding: 9px 11px;
+  font-size: 12px; min-width: 176px; z-index: 20;
+}
+.tip .t-h { font-family: var(--mono); font-size: 11px; letter-spacing: .07em; text-transform: uppercase; color: var(--ink-muted); margin-bottom: 6px; }
+.tip .t-r { display: flex; align-items: center; gap: 7px; justify-content: space-between; margin-top: 3px; }
+.tip .t-r .nm { display: flex; align-items: center; gap: 6px; color: var(--ink-2); }
+.tip .t-r .sw { width: 9px; height: 9px; border-radius: 2px; flex: none; }
+.tip .t-r .vl { font-family: var(--mono); font-variant-numeric: tabular-nums; font-weight: 600; }
+.tip .t-tot { border-top: 1px solid var(--rule); margin-top: 7px; padding-top: 6px; }
+
+/* ---------- table ---------- */
+.tbl-scroll { overflow-x: auto; padding: 14px 0 4px; }
+table.pl { border-collapse: collapse; width: 100%; min-width: 1080px; font-size: 12.5px; }
+table.pl th, table.pl td { padding: 6px 12px; text-align: right; white-space: nowrap; }
+table.pl th:first-child, table.pl td:first-child {
+  text-align: left; position: sticky; left: 0; background: var(--surface);
+  min-width: 232px; z-index: 1;
+}
+table.pl thead th {
+  font-family: var(--mono); font-size: 10.5px; letter-spacing: .07em;
+  text-transform: uppercase; color: var(--ink-muted); font-weight: 600;
+  border-bottom: 1px solid var(--rule-strong); padding-bottom: 9px;
+}
+table.pl td.n { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+table.pl tr.sec td {
+  font-family: var(--mono); font-size: 10.5px; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--ink-muted);
+  padding-top: 15px; padding-bottom: 4px;
+}
+table.pl tr.tot td { font-weight: 660; border-top: 1px solid var(--rule); }
+table.pl tr.net td { font-weight: 700; border-top: 2px solid var(--rule-strong); border-bottom: 1px solid var(--rule); font-size: 13px; }
+table.pl tr.memo td { color: var(--ink-muted); }
+table.pl td.q { background: var(--surface-2); font-weight: 600; }
+table.pl th.q { background: var(--surface-2); color: var(--ink-2); }
+table.pl tr:hover td:not(.q) { background: var(--surface-2); }
+table.pl tr:hover td:first-child { background: var(--surface-2); }
+.swatch-dot { display: inline-block; width: 8px; height: 8px; border-radius: 2px; margin-right: 8px; vertical-align: 1px; }
+.pos { color: var(--pos); }
+.neg { color: var(--neg); }
+
+/* ---------- babu panel ---------- */
+.babu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 20px; padding: 16px 20px 20px; }
+.gate {
+  border-left: 3px solid var(--cost); padding: 10px 0 10px 14px;
+  font-size: 13px; color: var(--ink-2); line-height: 1.5;
+}
+.gate.ok { border-left-color: var(--pos); }
+.gate strong { color: var(--ink); }
+
+/* ---------- notes ---------- */
+.notes { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 24px; padding: 4px 20px 22px; }
+.notes h3 { font-size: 13px; font-weight: 650; margin: 0 0 9px; letter-spacing: -.005em; }
+.notes ul { margin: 0; padding-left: 17px; font-size: 13px; color: var(--ink-2); line-height: 1.6; }
+.notes li { margin-bottom: 7px; }
+.notes li strong { color: var(--ink); font-weight: 620; }
+footer.foot { margin-top: 34px; padding-top: 18px; border-top: 1px solid var(--rule); font-size: 12px; color: var(--ink-muted); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+</style>
+
+<div class="wrap">
+
+<header class="top">
+  <p class="eyebrow">Dreammakers &middot; Jeff Church</p>
+  <h1>Marketing &amp; budget model</h1>
+  <p class="sub">Ten months, September 2026 through June 2027. Seeded with live Stripe actuals as of 6&nbsp;Aug&nbsp;2026 &mdash; $29,110 active MRR across 30 subscriptions, plus $5,000/mo from Supermush billed off-platform. Every assumption on the left is live; the numbers below move with it.</p>
+  <div class="scenarios">
+    <span class="lbl">Scenario</span>
+    <button class="pill" data-scn="cons" aria-pressed="false">Conservative</button>
+    <button class="pill" data-scn="base" aria-pressed="true">Base</button>
+    <button class="pill" data-scn="aggr" aria-pressed="false">Aggressive</button>
+    <button class="ghost" id="copy-btn" style="margin-left:auto">Copy table for Excel</button>
+  </div>
+</header>
+
+<div class="layout">
+
+  <aside class="rail">
+    <div class="rail-head">Assumptions</div>
+    <div id="controls"></div>
+  </aside>
+
+  <main>
+    <div class="kpis" id="kpis"></div>
+
+    <section class="card">
+      <div class="card-head">
+        <h2>Reconciliation against Stripe</h2>
+        <p>What the model says September earns, next to what is actually billing today. If a row drifts, the assumption behind it is wrong &mdash; not the other way round.</p>
+      </div>
+      <div class="tbl-scroll"><table class="pl" id="recon"></table></div>
+    </section>
+
+    <section class="card">
+      <div class="card-head">
+        <h2>Monthly revenue by stream</h2>
+        <p>Stacked bars are revenue. The red line is total cost &mdash; where it sits above the stack, the month loses money.</p>
+      </div>
+      <div class="legend" id="legend-a"></div>
+      <div class="chart-wrap"><svg class="chart" id="chart-a" viewBox="0 0 920 340" role="img" aria-label="Monthly revenue by stream with total cost overlay"></svg><div class="tip" id="tip-a"></div></div>
+    </section>
+
+    <section class="card">
+      <div class="card-head">
+        <h2>Cumulative net</h2>
+        <p>Running profit or loss across the ten-month window.</p>
+      </div>
+      <div class="chart-wrap"><svg class="chart" id="chart-b" viewBox="0 0 920 220" role="img" aria-label="Cumulative net profit over ten months"></svg><div class="tip" id="tip-b"></div></div>
+    </section>
+
+    <section class="card">
+      <div class="card-head">
+        <h2>Babu break-even</h2>
+        <p>Subscription revenue against the fixed infrastructure and engineering cost it carries.</p>
+      </div>
+      <div class="babu-grid" id="babu"></div>
+    </section>
+
+    <section class="card">
+      <div class="card-head">
+        <h2>Month-by-month P&amp;L</h2>
+        <p>Shaded columns are period subtotals. Scrolls sideways.</p>
+      </div>
+      <div class="tbl-scroll"><table class="pl" id="pl"></table></div>
+    </section>
+
+    <section class="card">
+      <div class="card-head"><h2>Read this before you trust the model</h2></div>
+      <div class="notes">
+        <div>
+          <h3>The one that still matters</h3>
+          <ul>
+            <li><strong>Jeff&rsquo;s own draw is not in this P&amp;L.</strong> JC comp is Joshua&rsquo;s $10K fee. Every net number on this page is what the business throws off <em>before</em> Jeff pays himself a dollar. Decide what he takes and the real margin drops by that much.</li>
+            <li><strong>There is no $997 MBA product in Stripe.</strong> Not a pricing question &mdash; the thing does not exist as a sellable object. Every dollar in &ldquo;book funnel &amp; digital&rdquo; depends on building it before January. Until then that row is a plan, not revenue.</li>
+            <li><strong>Babu has never been sold, only signed up for.</strong> 4, 5, and 4 signups in June, July, August &mdash; all organic, no acquisition spend behind them. The model grows from that rate, not from a target.</li>
+            <li><strong>Jake&rsquo;s first month is outside this window.</strong> He starts in August and runs seven months, so six land in Sep&ndash;Feb and $4,250 sits in August where this model cannot see it.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>What the model does not include</h3>
+          <ul>
+            <li>Existing container clients are seeded as billing through September and converting in October. Actual start dates vary by a few weeks.</li>
+            <li>Payment processing is applied to all revenue including the off-platform Supermush retainer, which slightly overstates fees.</li>
+            <li>No taxes, no legal or accounting, no travel, no insurance.</li>
+            <li>Book royalties and retail/wholesale copies are excluded &mdash; only the free-plus-shipping funnel is modeled.</li>
+            <li>Client capacity is capped by the slider, but Jeff&rsquo;s actual delivery ceiling across containers plus continuity plus the monthly group call is the real constraint.</li>
+            <li>Webinar operations carry no cost line because Joshua runs them &mdash; that labor is inside the $10K comp, not on top of it.</li>
+            <li>Acquisition ramps in over the first few months rather than starting at full speed. September closes almost nothing; the machine is still being built.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Where the leverage actually is</h3>
+          <ul>
+            <li><strong>Continuity churn.</strong> Move it from 5% to 3% and the steady-state pool nearly doubles. Nothing else in this model has that slope. Five $1,500 clients cancelled between February and June.</li>
+            <li><strong>Continuity conversion.</strong> Every container graduate who doesn&rsquo;t roll into $1,500/mo is roughly $18,000 of annual revenue walking out.</li>
+            <li><strong>Babu paid users.</strong> Below break-even it is a fixed drag on every other line. Above it, it is the highest-margin thing in the business.</li>
+            <li>Registrant volume matters least of the four. Pull the retention levers first.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer class="foot">
+      <span>Baseline pulled live from Stripe &middot; 6 August 2026</span>
+      <span class="num">10-month window &middot; Sep 2026 &ndash; Jun 2027</span>
+    </footer>
+  </main>
+</div>
+</div>
+
+<script>
+(function () {
+"use strict";
+
+const MONTHS = ["Sep 26","Oct 26","Nov 26","Dec 26","Jan 27","Feb 27","Mar 27","Apr 27","May 27","Jun 27"];
+const N = MONTHS.length;
+const QUARTERS = [
+  { label: "Sep–Dec 26", from: 0, to: 3 },
+  { label: "Jan–Mar 27", from: 4, to: 6 },
+  { label: "Apr–Jun 27", from: 7, to: 9 }
+];
+
+/* ---------------- control spec ---------------- */
+const SPEC = [
+  { group: "Starting point (Stripe actuals)", open: false, items: [
+    { k: "seedCont",    label: "Continuity clients @ $1,500",      min: 0, max: 30, step: 1, u: "" },
+    { k: "seedAlumni",  label: "Alumni clients @ $1,000",          min: 0, max: 20, step: 1, u: "" },
+    { k: "seedSupport", label: "Support tier @ $500",              min: 0, max: 10, step: 1, u: "" },
+    { k: "seedC2k",     label: "In-container now @ $2,000",        min: 0, max: 10, step: 1, u: "" },
+    { k: "seedC5k",     label: "In-container now @ $5,000",        min: 0, max: 10, step: 1, u: "" },
+    { k: "offPlatform", label: "Off-platform retainer (Supermush)", min: 0, max: 15000, step: 500, u: "$" },
+    { k: "seedBabu",    label: "Babu paying users",                min: 0, max: 200, step: 1, u: "" }
+  ]},
+  { group: "Webinar funnel", open: true, items: [
+    { k: "regs",      label: "Registrants per webinar (month 1)", min: 100, max: 1500, step: 25, u: "" },
+    { k: "regGrowth", label: "Registrant growth per month",       min: 0, max: 25, step: 1, u: "%" },
+    { k: "rampMonths",label: "Months to reach full close rate",   min: 1, max: 8, step: 1, u: "mo" },
+    { k: "showRate",  label: "Show rate",                          min: 15, max: 60, step: 1, u: "%" },
+    { k: "applyRate", label: "Attendees who apply",                min: 1, max: 20, step: 0.5, u: "%" },
+    { k: "closeRate", label: "Applications that close",            min: 5, max: 50, step: 1, u: "%" },
+    { k: "capacity",  label: "Max new clients Jeff can take / mo", min: 1, max: 10, step: 0.5, u: "" }
+  ]},
+  { group: "Advisory economics", open: true, items: [
+    { k: "maxLoad",    label: "Max clients Jeff can serve at once", min: 10, max: 90, step: 1, u: "" },
+    { k: "pct5k",      label: "New clients at $5,000 (rest at $2,000)", min: 0, max: 100, step: 5, u: "%" },
+    { k: "containerMo",label: "Container length",                   min: 2, max: 6, step: 1, u: "mo" },
+    { k: "convRate",   label: "Graduates rolling into continuity",  min: 20, max: 95, step: 5, u: "%" },
+    { k: "contPrice",  label: "Continuity price",                   min: 750, max: 3000, step: 50, u: "$" },
+    { k: "contChurn",  label: "Continuity churn per month",         min: 0, max: 15, step: 0.5, u: "%" }
+  ]},
+  { group: "Babu", open: true, items: [
+    { k: "babuNew",    label: "New Babu signups / mo (month 1)",   min: 0, max: 150, step: 1, u: "" },
+    { k: "babuGrowth", label: "Signup growth per month",            min: 0, max: 40, step: 1, u: "%" },
+    { k: "babuChurn",  label: "Babu churn per month",               min: 0, max: 30, step: 0.5, u: "%" },
+    { k: "babuArpu",   label: "Blended revenue per user / mo",      min: 39, max: 199, step: 1, u: "$" }
+  ]},
+  { group: "Book funnel (free + shipping)", open: true, items: [
+    { k: "funnelStart", label: "Funnel starts in month",           min: 0, max: 9, step: 1, u: "M" },
+    { k: "orders",      label: "Book orders / mo at launch",        min: 0, max: 2000, step: 25, u: "" },
+    { k: "orderGrowth", label: "Order growth per month",            min: 0, max: 40, step: 1, u: "%" },
+    { k: "shipRev",     label: "Shipping charged per book",         min: 0, max: 25, step: 0.95, u: "$" },
+    { k: "bookCogs",    label: "Book cost + fulfillment",           min: 0, max: 25, step: 0.5, u: "$" },
+    { k: "cac",         label: "Ad cost per book order",            min: 0, max: 60, step: 1, u: "$" },
+    { k: "mbaRate",     label: "Buyers taking the $997 MBA",        min: 0, max: 25, step: 0.5, u: "%" },
+    { k: "bundleRate",  label: "Buyers taking a Babu plan",         min: 0, max: 30, step: 0.5, u: "%" },
+    { k: "mbaDirect",   label: "MBA sales / mo outside the funnel", min: 0, max: 30, step: 1, u: "" }
+  ]},
+  { group: "Costs", open: true, items: [
+    { k: "babuInfra",  label: "Babu infrastructure / mo",          min: 0, max: 6000, step: 100, u: "$" },
+    { k: "babuTech",   label: "Babu tech team / mo",               min: 0, max: 8000, step: 250, u: "$" },
+    { k: "babuTechThru", label: "Tech team funded through month",  min: 0, max: 10, step: 1, u: "M" },
+    { k: "jake",       label: "Jake — book production / mo",  min: 0, max: 8000, step: 250, u: "$" },
+    { k: "jakeMonths", label: "Jake engaged for",                   min: 0, max: 10, step: 1, u: "mo" },
+    { k: "adsQ4",      label: "Brand + webinar ads, Sep–Dec",  min: 0, max: 15000, step: 250, u: "$" },
+    { k: "adsQ1",      label: "Brand + webinar ads, Jan–Mar",  min: 0, max: 15000, step: 250, u: "$" },
+    { k: "adsQ2",      label: "Brand + webinar ads, Apr–Jun",  min: 0, max: 15000, step: 250, u: "$" },
+    { k: "jcComp",     label: "JC comp / mo",                       min: 0, max: 20000, step: 250, u: "$" },
+    { k: "bookPromo",  label: "Promo copies / mo",                  min: 0, max: 3000, step: 100, u: "$" },
+    { k: "software",   label: "Software / mo",                      min: 0, max: 3000, step: 50, u: "$" },
+    { k: "party",      label: "Launch party (October, one-time)",   min: 0, max: 15000, step: 250, u: "$" },
+    { k: "feePct",     label: "Payment processing",                 min: 0, max: 6, step: 0.1, u: "%" },
+    { k: "contingency",label: "Contingency on total cost",          min: 0, max: 20, step: 1, u: "%" }
+  ]}
+];
+
+/* ---------------- scenarios ---------------- */
+const SEED = {
+  seedCont: 10, seedAlumni: 4, seedSupport: 1, seedC2k: 2, seedC5k: 1,
+  offPlatform: 5000, seedBabu: 11,
+  containerMo: 3, contPrice: 1500,
+  babuArpu: 55, funnelStart: 4, shipRev: 9.95, bookCogs: 8,
+  babuInfra: 1500, babuTech: 1500, babuTechThru: 10,
+  jake: 4250, jakeMonths: 6,
+  jcComp: 10000, bookPromo: 500, software: 500, party: 3000,
+  feePct: 2.9, contingency: 5
+};
+
+const SCENARIOS = {
+  cons: Object.assign({}, SEED, {
+    regs: 240, regGrowth: 2, showRate: 32, applyRate: 6, closeRate: 20,
+    rampMonths: 5, capacity: 3, maxLoad: 26,
+    pct5k: 20, convRate: 50, contChurn: 7,
+    babuNew: 4, babuGrowth: 3, babuChurn: 10, babuArpu: 50,
+    orders: 100, orderGrowth: 3, cac: 18, mbaRate: 1.5, bundleRate: 3, mbaDirect: 0,
+    adsQ4: 2000, adsQ1: 2500, adsQ2: 2500
+  }),
+  base: Object.assign({}, SEED, {
+    regs: 350, regGrowth: 5, showRate: 35, applyRate: 8, closeRate: 22,
+    rampMonths: 4, capacity: 3, maxLoad: 34,
+    pct5k: 30, convRate: 60, contChurn: 5,
+    babuNew: 5, babuGrowth: 7, babuChurn: 8, babuArpu: 55,
+    orders: 200, orderGrowth: 6, cac: 14, mbaRate: 2.5, bundleRate: 6, mbaDirect: 0,
+    adsQ4: 2500, adsQ1: 3000, adsQ2: 3000
+  }),
+  aggr: Object.assign({}, SEED, {
+    regs: 500, regGrowth: 9, showRate: 38, applyRate: 10, closeRate: 26,
+    rampMonths: 3, capacity: 4, maxLoad: 45,
+    pct5k: 40, convRate: 70, contChurn: 3,
+    babuNew: 8, babuGrowth: 12, babuChurn: 6, babuArpu: 60,
+    orders: 400, orderGrowth: 10, cac: 11, mbaRate: 4, bundleRate: 10, mbaDirect: 2,
+    adsQ4: 3500, adsQ1: 5000, adsQ2: 6000
+  })
+};
+
+let A = Object.assign({}, SCENARIOS.base);
+let activeScn = "base";
+
+/* ---------------- model ---------------- */
+function run(a) {
+  const rows = [];
+  const pct = v => v / 100;
+  const price2k = 2000, price5k = 5000;
+  const cMo = Math.max(1, Math.round(a.containerMo));
+
+  // in-flight container cohorts; seed existing ones to bill Sept and graduate in Oct
+  let cohorts = [];
+  // Existing containers bill Sep and Oct, then graduate — matching their real start dates.
+  if (a.seedC2k > 0) cohorts.push({ left: 2, n: a.seedC2k, price: price2k });
+  if (a.seedC5k > 0) cohorts.push({ left: 2, n: a.seedC5k, price: price5k });
+
+  let contPool = a.seedCont;
+  let alumniPool = a.seedAlumni;
+  let babuPool = a.seedBabu;
+  let cum = 0;
+
+  for (let m = 0; m < N; m++) {
+    // --- new advisory clients from the webinar funnel ---
+    // Demand is capped three ways: what the funnel produces, how many Jeff can
+    // onboard in a month, and how much room is left under total delivery load.
+    // The program does not run at full speed in September. Ramp it in.
+    const ramp = Math.min(1, (m + 1) / Math.max(1, a.rampMonths));
+    const regs = a.regs * Math.pow(1 + pct(a.regGrowth), m);
+    const demand = regs * pct(a.showRate) * pct(a.applyRate) * pct(a.closeRate) * ramp;
+    let load = contPool + alumniPool;
+    cohorts.forEach(c => { load += c.n; });
+    const roomLeft = Math.max(0, a.maxLoad - load);
+    const newClients = Math.min(demand, a.capacity, roomLeft);
+    const turnedAway = Math.max(0, demand - newClients);
+    const n5 = newClients * pct(a.pct5k);
+    const n2 = newClients - n5;
+    if (n5 > 0) cohorts.push({ left: cMo, n: n5, price: price5k });
+    if (n2 > 0) cohorts.push({ left: cMo, n: n2, price: price2k });
+
+    // --- container revenue, then age the cohorts ---
+    let containerRev = 0, inContainer = 0;
+    cohorts.forEach(c => { containerRev += c.n * c.price; inContainer += c.n; });
+    let grads = 0;
+    cohorts.forEach(c => { c.left -= 1; if (c.left <= 0) grads += c.n; });
+    cohorts = cohorts.filter(c => c.left > 0);
+
+    // --- continuity pool ---
+    contPool = contPool * (1 - pct(a.contChurn)) + grads * pct(a.convRate);
+    alumniPool = alumniPool * (1 - pct(a.contChurn));
+    const contRev = contPool * a.contPrice + alumniPool * 1000 + a.seedSupport * 500;
+
+    // --- book funnel ---
+    let orders = 0, funnelRev = 0, funnelCost = 0, bundleAdds = 0;
+    if (m >= a.funnelStart) {
+      orders = a.orders * Math.pow(1 + pct(a.orderGrowth), m - a.funnelStart);
+      funnelRev = orders * a.shipRev + orders * pct(a.mbaRate) * 997;
+      funnelCost = orders * (a.bookCogs + a.cac);
+      bundleAdds = orders * pct(a.bundleRate);
+    }
+    const digitalRev = funnelRev + a.mbaDirect * 997;
+
+    // --- Babu ---
+    const babuAdds = a.babuNew * Math.pow(1 + pct(a.babuGrowth), m) + bundleAdds;
+    babuPool = babuPool * (1 - pct(a.babuChurn)) + babuAdds;
+    const babuRev = babuPool * a.babuArpu;
+
+    const revStreams = [contRev, containerRev + a.offPlatform, babuRev, digitalRev];
+    const revenue = revStreams.reduce((s, v) => s + v, 0);
+
+    // --- costs ---
+    const cBabuInfra = a.babuInfra;
+    const cBabuTech = m < a.babuTechThru ? a.babuTech : 0;
+    const cJake = m < a.jakeMonths ? a.jake : 0;
+    const cAds = m <= 3 ? a.adsQ4 : (m <= 6 ? a.adsQ1 : a.adsQ2);
+    const cParty = m === 1 ? a.party : 0;
+    const preFee = cBabuInfra + cBabuTech + cJake + cAds + funnelCost +
+                   a.jcComp + a.bookPromo + a.software + cParty;
+    const cFees = revenue * pct(a.feePct);
+    const cCont = (preFee + cFees) * pct(a.contingency);
+    const costs = preFee + cFees + cCont;
+
+    const net = revenue - costs;
+    cum += net;
+
+    rows.push({
+      m, month: MONTHS[m], revStreams, revenue, costs, net, cum,
+      newClients, turnedAway, demand, inContainer, contPool, alumniPool, babuPool, orders,
+      load: inContainer + contPool + alumniPool,
+      mrr: contRev + containerRev + a.offPlatform + babuRev,
+      c: { babuInfra: cBabuInfra, babuTech: cBabuTech, jake: cJake, ads: cAds,
+           funnel: funnelCost, jc: a.jcComp, promo: a.bookPromo, sw: a.software,
+           party: cParty, fees: cFees, cont: cCont }
+    });
+  }
+  return rows;
+}
+
+/* ---------------- formatting ---------------- */
+const fmt0 = n => (n < 0 ? "−" : "") + "$" + Math.round(Math.abs(n)).toLocaleString("en-US");
+const fmtK = n => {
+  const a = Math.abs(n), s = n < 0 ? "−" : "";
+  if (a >= 1000) return s + "$" + (a / 1000).toFixed(a >= 100000 ? 0 : 1) + "K";
+  return s + "$" + Math.round(a);
+};
+const fmt1 = n => n.toLocaleString("en-US", { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+
+/* ---------------- controls ---------------- */
+function buildControls() {
+  const host = document.getElementById("controls");
+  host.innerHTML = "";
+  SPEC.forEach(g => {
+    const d = document.createElement("details");
+    d.className = "grp";
+    if (g.open) d.open = true;
+    const s = document.createElement("summary");
+    s.textContent = g.group;
+    d.appendChild(s);
+    const body = document.createElement("div");
+    body.className = "grp-body";
+    g.items.forEach(it => body.appendChild(control(it)));
+    if (g.group === "Webinar funnel") {
+      const dv = document.createElement("div");
+      dv.className = "derived"; dv.id = "derived-funnel";
+      body.appendChild(dv);
+    }
+    if (g.group === "Advisory economics") {
+      const dv = document.createElement("div");
+      dv.className = "derived"; dv.id = "derived-adv";
+      body.appendChild(dv);
+    }
+    if (g.group === "Babu") {
+      const dv = document.createElement("div");
+      dv.className = "derived"; dv.id = "derived-babu";
+      body.appendChild(dv);
+    }
+    d.appendChild(body);
+    host.appendChild(d);
+  });
+}
+
+function fmtVal(it, v) {
+  if (it.u === "$") return "$" + v.toLocaleString("en-US");
+  if (it.u === "%") return v + "%";
+  if (it.u === "mo") return v + " mo";
+  if (it.u === "M") return v >= N ? "never" : MONTHS[Math.min(v, N - 1)];
+  return String(v);
+}
+
+function control(it) {
+  const wrap = document.createElement("div");
+  const top = document.createElement("div");
+  top.className = "ctrl-top";
+  const lbl = document.createElement("label");
+  lbl.className = "ctrl-lbl";
+  lbl.textContent = it.label;
+  lbl.setAttribute("for", "in-" + it.k);
+  const val = document.createElement("span");
+  val.className = "ctrl-val";
+  val.id = "val-" + it.k;
+  top.appendChild(lbl); top.appendChild(val);
+  const inp = document.createElement("input");
+  inp.type = "range"; inp.id = "in-" + it.k;
+  inp.min = it.min; inp.max = it.max; inp.step = it.step;
+  inp.value = A[it.k];
+  val.textContent = fmtVal(it, A[it.k]);
+  inp.addEventListener("input", () => {
+    A[it.k] = parseFloat(inp.value);
+    val.textContent = fmtVal(it, A[it.k]);
+    setScenario(null);
+    render();
+  });
+  wrap.appendChild(top); wrap.appendChild(inp);
+  return wrap;
+}
+
+function syncControls() {
+  SPEC.forEach(g => g.items.forEach(it => {
+    const inp = document.getElementById("in-" + it.k);
+    const val = document.getElementById("val-" + it.k);
+    if (inp) { inp.value = A[it.k]; val.textContent = fmtVal(it, A[it.k]); }
+  }));
+}
+
+function setScenario(name) {
+  activeScn = name;
+  document.querySelectorAll("button.pill[data-scn]").forEach(b => {
+    b.setAttribute("aria-pressed", String(b.dataset.scn === name));
+  });
+}
+
+/* ---------------- render ---------------- */
+const SERIES = [
+  { key: 0, name: "Continuity & alumni", cssVar: "--s1" },
+  { key: 1, name: "Active containers & retainers", cssVar: "--s2" },
+  { key: 2, name: "Babu subscriptions", cssVar: "--s3" },
+  { key: 3, name: "Book funnel & digital", cssVar: "--s4" }
+];
+const cv = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+
+function render() {
+  const R = run(A);
+  renderRecon(R);
+  renderKpis(R);
+  renderLegend();
+  renderChartA(R);
+  renderChartB(R);
+  renderBabu(R);
+  renderTable(R);
+  renderDerived(R);
+  window.__rows = R;
+}
+
+/* Live Stripe snapshot, 6 Aug 2026 — the model's month 1 should land near this. */
+const ACTUAL = {
+  rows: [
+    ["Continuity &amp; alumni", 19500, "10 &times; $1,500 + 4 &times; $1,000 + 1 &times; $500", "--s1"],
+    ["Active containers &amp; retainers", 14000, "2 &times; $2,000 + 1 &times; $5,000 + Supermush $5,000", "--s2"],
+    ["Babu subscriptions", 609, "11 paying users &mdash; 8 Base, 3 Pro", "--s3"],
+    ["Book funnel &amp; digital", 0, "no $997 MBA product exists in Stripe yet", "--s4"]
+  ],
+  total: 34109
+};
+
+function renderRecon(R) {
+  const sep = R[0];
+  let h = '<thead><tr><th>Revenue stream</th><th>Stripe today</th><th>Model, Sep 26</th><th class="q">Difference</th><th style="text-align:left">Basis</th></tr></thead><tbody>';
+  ACTUAL.rows.forEach((row, i) => {
+    const model = sep.revStreams[i];
+    const diff = model - row[1];
+    const off = Math.abs(diff) > Math.max(1500, row[1] * 0.25);
+    h += '<tr><td><span class="swatch-dot" style="background:var(' + row[3] + ')"></span>' + row[0] + '</td>' +
+      '<td class="n">' + fmt0(row[1]) + '</td>' +
+      '<td class="n">' + fmt0(model) + '</td>' +
+      '<td class="n q ' + (off ? (diff > 0 ? "neg" : "neg") : "") + '">' +
+      (diff >= 0 ? "+" : "−") + fmt0(Math.abs(diff)).replace("$", "$") + '</td>' +
+      '<td style="text-align:left;color:var(--ink-muted);font-size:11.5px">' + row[2] + '</td></tr>';
+  });
+  const md = sep.revenue - ACTUAL.total;
+  h += '<tr class="tot"><td>Total monthly revenue</td><td class="n">' + fmt0(ACTUAL.total) +
+    '</td><td class="n">' + fmt0(sep.revenue) + '</td><td class="n q ' + (md >= 0 ? "" : "neg") + '">' +
+    (md >= 0 ? "+" : "−") + fmt0(Math.abs(md)) + '</td><td></td></tr></tbody>';
+  document.getElementById("recon").innerHTML = h;
+}
+
+function renderDerived(R) {
+  const f = document.getElementById("derived-funnel");
+  if (f) {
+    const first = R[0].newClients, last = R[N - 1].newClients;
+    const tot = R.reduce((s, r) => s + r.newClients, 0);
+    f.textContent = "→ " + fmt1(first) + " new clients in Sep, " + fmt1(last) +
+      " in Jun · " + fmt1(tot) + " over 10 months";
+  }
+  const adv = document.getElementById("derived-adv");
+  if (adv) {
+    const away = R.reduce((s, r) => s + r.turnedAway, 0);
+    const ss = A.contChurn > 0
+      ? (R[N - 1].newClients * A.convRate / 100) / (A.contChurn / 100) : Infinity;
+    adv.textContent = "→ continuity settles near " + (isFinite(ss) ? Math.round(ss) : "∞") +
+      " clients at this churn · " + fmt1(away) + " qualified prospects turned away over 10 months";
+  }
+  const b = document.getElementById("derived-babu");
+  if (b) {
+    const be = (A.babuInfra + (A.babuTechThru > 0 ? A.babuTech : 0)) / Math.max(1, A.babuArpu);
+    b.textContent = "→ break-even at " + Math.ceil(be) + " paying users · ending pool " +
+      Math.round(R[N - 1].babuPool);
+  }
+}
+
+function renderKpis(R) {
+  const rev = R.reduce((s, r) => s + r.revenue, 0);
+  const cost = R.reduce((s, r) => s + r.costs, 0);
+  const net = rev - cost;
+  const endMrr = R[N - 1].mrr;
+  const startMrr = 29110 + A.offPlatform;
+  const delta = (endMrr - startMrr) / startMrr * 100;
+  const worst = R.reduce((w, r) => r.net < w.net ? r : w, R[0]);
+  const margin = rev > 0 ? net / rev * 100 : 0;
+
+  const chip = delta >= 0
+    ? '<span class="chip up">↑ ' + Math.round(delta) + '%</span>'
+    : '<span class="chip down">↓ ' + Math.round(Math.abs(delta)) + '%</span>';
+
+  document.getElementById("kpis").innerHTML = [
+    kpi("10-month revenue", fmtK(rev), "Advisory, Babu, and digital combined"),
+    kpi("10-month cost", fmtK(cost), "All in, including processing and contingency"),
+    kpi("10-month net", fmtK(net), Math.round(margin) + "% margin", net >= 0 ? "pos" : "neg"),
+    kpi("Ending MRR · Jun 27", fmtK(endMrr), chip + " vs " + fmtK(startMrr) + " today"),
+    kpi("Worst month", fmtK(worst.net), worst.month + (worst.net < 0 ? " runs negative" : " is the floor"), worst.net >= 0 ? "pos" : "neg")
+  ].join("");
+}
+
+function kpi(label, value, note, cls) {
+  return '<div class="kpi"><div class="k-lbl">' + label + '</div>' +
+    '<div class="k-val ' + (cls || "") + '">' + value + '</div>' +
+    '<div class="k-note">' + note + '</div></div>';
+}
+
+function renderLegend() {
+  document.getElementById("legend-a").innerHTML =
+    SERIES.map(s => '<span class="lg"><span class="sw" style="background:var(' + s.cssVar + ')"></span>' + s.name + '</span>').join("") +
+    '<span class="lg"><span class="sw line" style="background:var(--cost)"></span>Total cost</span>';
+}
+
+/* -------- chart A: stacked bars + cost line -------- */
+function renderChartA(R) {
+  const svg = document.getElementById("chart-a");
+  const W = 920, H = 340, ML = 62, MR = 16, MT = 14, MB = 42;
+  const pw = W - ML - MR, ph = H - MT - MB;
+  const maxV = Math.max(
+    ...R.map(r => r.revenue),
+    ...R.map(r => r.costs)
+  );
+  const top = niceCeil(maxV);
+  const y = v => MT + ph - (v / top) * ph;
+  const band = pw / N;
+  const bw = Math.min(46, band * 0.56);
+
+  let g = "";
+  // gridlines
+  const ticks = 4;
+  for (let i = 0; i <= ticks; i++) {
+    const v = top * i / ticks, yy = y(v);
+    g += '<line x1="' + ML + '" x2="' + (W - MR) + '" y1="' + yy + '" y2="' + yy +
+      '" stroke="' + cv("--rule") + '" stroke-width="1" shape-rendering="crispEdges"/>';
+    g += '<text x="' + (ML - 10) + '" y="' + (yy + 4) + '" text-anchor="end" font-size="11" font-family="' +
+      cv("--mono") + '" fill="' + cv("--ink-muted") + '">' + fmtK(v) + '</text>';
+  }
+
+  // stacked bars
+  R.forEach((r, i) => {
+    const cx = ML + band * i + band / 2;
+    let acc = 0;
+    const segs = r.revStreams.map((v, si) => ({ v, si })).filter(s => s.v > 0.5);
+    segs.forEach((s, idx) => {
+      const y0 = y(acc), y1 = y(acc + s.v);
+      let h = y0 - y1;
+      const isTop = idx === segs.length - 1;
+      if (!isTop) h = Math.max(0, h - 2); // 2px surface gap between segments
+      const yTop = y0 - h;
+      const fill = cv(SERIES[s.si].cssVar);
+      g += isTop
+        ? '<path d="' + roundTop(cx - bw / 2, yTop, bw, h, 4) + '" fill="' + fill + '"/>'
+        : '<rect x="' + (cx - bw / 2) + '" y="' + yTop + '" width="' + bw + '" height="' + h + '" fill="' + fill + '"/>';
+      acc += s.v;
+    });
+  });
+
+  // cost line
+  const pts = R.map((r, i) => [ML + band * i + band / 2, y(r.costs)]);
+  g += '<polyline points="' + pts.map(p => p.join(",")).join(" ") + '" fill="none" stroke="' +
+    cv("--cost") + '" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>';
+  pts.forEach((p, i) => {
+    const last = i === pts.length - 1;
+    g += '<circle cx="' + p[0] + '" cy="' + p[1] + '" r="' + (last ? 4.5 : 3) + '" fill="' +
+      cv("--cost") + '" stroke="' + cv("--surface") + '" stroke-width="2"/>';
+  });
+  // direct label on the cost line endpoint
+  g += '<text x="' + (pts[N - 1][0] + 8) + '" y="' + (pts[N - 1][1] - 9) + '" font-size="11" font-weight="600" font-family="' +
+    cv("--mono") + '" fill="' + cv("--cost") + '" text-anchor="end">Cost ' + fmtK(R[N - 1].costs) + '</text>';
+
+  // baseline + x labels
+  g += '<line x1="' + ML + '" x2="' + (W - MR) + '" y1="' + (MT + ph) + '" y2="' + (MT + ph) +
+    '" stroke="' + cv("--rule-strong") + '" stroke-width="1" shape-rendering="crispEdges"/>';
+  R.forEach((r, i) => {
+    const cx = ML + band * i + band / 2;
+    g += '<text x="' + cx + '" y="' + (MT + ph + 19) + '" text-anchor="middle" font-size="11" font-family="' +
+      cv("--mono") + '" fill="' + cv("--ink-muted") + '">' + r.month.split(" ")[0] + '</text>';
+    g += '<text x="' + cx + '" y="' + (MT + ph + 32) + '" text-anchor="middle" font-size="9.5" font-family="' +
+      cv("--mono") + '" fill="' + cv("--ink-muted") + '" opacity=".7">' + r.month.split(" ")[1] + '</text>';
+    // hover target
+    g += '<rect class="hit" data-i="' + i + '" x="' + (ML + band * i) + '" y="' + MT + '" width="' + band +
+      '" height="' + ph + '" fill="transparent"/>';
+  });
+
+  svg.innerHTML = g;
+  attachTip(svg, "tip-a", i => {
+    const r = R[i];
+    let h = '<div class="t-h">' + r.month + '</div>';
+    SERIES.forEach(s => {
+      if (r.revStreams[s.key] < 0.5) return;
+      h += '<div class="t-r"><span class="nm"><span class="sw" style="background:var(' + s.cssVar + ')"></span>' +
+        s.name + '</span><span class="vl">' + fmtK(r.revStreams[s.key]) + '</span></div>';
+    });
+    h += '<div class="t-r t-tot"><span class="nm">Revenue</span><span class="vl">' + fmtK(r.revenue) + '</span></div>';
+    h += '<div class="t-r"><span class="nm"><span class="sw" style="background:var(--cost)"></span>Cost</span><span class="vl">' + fmtK(r.costs) + '</span></div>';
+    h += '<div class="t-r"><span class="nm">Net</span><span class="vl ' + (r.net >= 0 ? "pos" : "neg") + '">' + fmtK(r.net) + '</span></div>';
+    return h;
+  }, i => ML + band * i + band / 2, i => y(R[i].revenue) - 12, W, H);
+}
+
+/* -------- chart B: cumulative net -------- */
+function renderChartB(R) {
+  const svg = document.getElementById("chart-b");
+  const W = 920, H = 220, ML = 62, MR = 16, MT = 16, MB = 34;
+  const pw = W - ML - MR, ph = H - MT - MB;
+  const vals = R.map(r => r.cum);
+  const hi = niceCeil(Math.max(0, ...vals));
+  const lo = Math.min(0, ...vals);
+  const loN = lo < 0 ? -niceCeil(-lo) : 0;
+  const y = v => MT + ph - ((v - loN) / (hi - loN)) * ph;
+  const band = pw / N;
+  const px = i => ML + band * i + band / 2;
+
+  let g = "";
+  for (let i = 0; i <= 4; i++) {
+    const v = loN + (hi - loN) * i / 4, yy = y(v);
+    g += '<line x1="' + ML + '" x2="' + (W - MR) + '" y1="' + yy + '" y2="' + yy + '" stroke="' +
+      cv("--rule") + '" stroke-width="1" shape-rendering="crispEdges"/>';
+    g += '<text x="' + (ML - 10) + '" y="' + (yy + 4) + '" text-anchor="end" font-size="11" font-family="' +
+      cv("--mono") + '" fill="' + cv("--ink-muted") + '">' + fmtK(v) + '</text>';
+  }
+  // zero line
+  if (loN < 0) {
+    g += '<line x1="' + ML + '" x2="' + (W - MR) + '" y1="' + y(0) + '" y2="' + y(0) + '" stroke="' +
+      cv("--rule-strong") + '" stroke-width="1.5" shape-rendering="crispEdges"/>';
+  }
+  const line = R.map((r, i) => [px(i), y(r.cum)]);
+  const area = "M" + px(0) + "," + y(loN) + " " + line.map(p => "L" + p[0] + "," + p[1]).join(" ") +
+    " L" + px(N - 1) + "," + y(loN) + " Z";
+  g += '<path d="' + area + '" fill="' + cv("--s1") + '" opacity="0.13"/>';
+  g += '<polyline points="' + line.map(p => p.join(",")).join(" ") + '" fill="none" stroke="' +
+    cv("--s1") + '" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>';
+  line.forEach((p, i) => {
+    const last = i === line.length - 1;
+    g += '<circle cx="' + p[0] + '" cy="' + p[1] + '" r="' + (last ? 5 : 3) + '" fill="' + cv("--s1") +
+      '" stroke="' + cv("--surface") + '" stroke-width="2"/>';
+  });
+  g += '<text x="' + (px(N - 1) - 4) + '" y="' + (y(R[N - 1].cum) - 13) + '" text-anchor="end" font-size="12" font-weight="700" font-family="' +
+    cv("--mono") + '" fill="' + cv("--s1") + '">' + fmtK(R[N - 1].cum) + '</text>';
+  R.forEach((r, i) => {
+    g += '<text x="' + px(i) + '" y="' + (MT + ph + 20) + '" text-anchor="middle" font-size="11" font-family="' +
+      cv("--mono") + '" fill="' + cv("--ink-muted") + '">' + r.month.split(" ")[0] + '</text>';
+    g += '<rect class="hit" data-i="' + i + '" x="' + (ML + band * i) + '" y="' + MT + '" width="' + band +
+      '" height="' + ph + '" fill="transparent"/>';
+  });
+  svg.innerHTML = g;
+  attachTip(svg, "tip-b", i => {
+    const r = R[i];
+    return '<div class="t-h">' + r.month + '</div>' +
+      '<div class="t-r"><span class="nm">Net this month</span><span class="vl ' + (r.net >= 0 ? "pos" : "neg") + '">' + fmtK(r.net) + '</span></div>' +
+      '<div class="t-r"><span class="nm">Cumulative</span><span class="vl ' + (r.cum >= 0 ? "pos" : "neg") + '">' + fmtK(r.cum) + '</span></div>';
+  }, i => px(i), i => y(R[i].cum) - 12, W, H);
+}
+
+function attachTip(svg, tipId, html, tx, ty, W, H) {
+  const tip = document.getElementById(tipId);
+  const wrap = svg.parentElement;
+  svg.querySelectorAll("rect.hit").forEach(hit => {
+    hit.addEventListener("mouseenter", () => {
+      const i = +hit.dataset.i;
+      tip.innerHTML = html(i);
+      const rect = wrap.getBoundingClientRect();
+      const sx = rect.width / W;
+      tip.style.left = (tx(i) * sx) + "px";
+      tip.style.top = (ty(i) * (rect.height / H)) + "px";
+      tip.style.opacity = "1";
+    });
+    hit.addEventListener("mouseleave", () => { tip.style.opacity = "0"; });
+  });
+}
+
+function roundTop(x, y, w, h, r) {
+  r = Math.min(r, h, w / 2);
+  return "M" + x + "," + (y + h) + " L" + x + "," + (y + r) +
+    " Q" + x + "," + y + " " + (x + r) + "," + y +
+    " L" + (x + w - r) + "," + y +
+    " Q" + (x + w) + "," + y + " " + (x + w) + "," + (y + r) +
+    " L" + (x + w) + "," + (y + h) + " Z";
+}
+
+function niceCeil(v) {
+  if (v <= 0) return 1000;
+  const mag = Math.pow(10, Math.floor(Math.log10(v)));
+  const n = v / mag;
+  const step = n <= 1 ? 1 : n <= 2 ? 2 : n <= 2.5 ? 2.5 : n <= 5 ? 5 : 10;
+  return step * mag;
+}
+
+/* -------- Babu panel -------- */
+function renderBabu(R) {
+  const be = (A.babuInfra + A.babuTech) / Math.max(1, A.babuArpu);
+  const crossIdx = R.findIndex(r => r.babuPool >= be && r.m < A.babuTechThru);
+  const end = R[N - 1];
+  const totBabuRev = R.reduce((s, r) => s + r.revStreams[2], 0);
+  const totBabuCost = R.reduce((s, r) => s + r.c.babuInfra + r.c.babuTech, 0);
+  const babuNet = totBabuRev - totBabuCost;
+
+  const gate = crossIdx >= 0
+    ? '<div class="gate ok"><strong>Break-even in ' + R[crossIdx].month + '.</strong> The pool crosses ' +
+      Math.ceil(be) + ' paying users while the tech team is still funded. Everything past that point is margin.</div>'
+    : '<div class="gate"><strong>Never breaks even in this window.</strong> Babu needs ' + Math.ceil(be) +
+      ' paying users to cover its own cost and tops out at ' + Math.round(end.babuPool) +
+      '. That is ' + fmtK(Math.abs(babuNet)) + ' of subsidy over ten months. Either the signup rate has to move or the tech spend has to.</div>';
+
+  document.getElementById("babu").innerHTML =
+    '<div><div class="k-lbl" style="font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:7px">Break-even users</div>' +
+    '<div class="k-val num" style="font-size:27px;font-weight:620;letter-spacing:-.03em">' + Math.ceil(be) + '</div>' +
+    '<div class="k-note" style="font-size:11.5px;color:var(--ink-2);margin-top:7px">at ' + fmt0(A.babuArpu) + '/user against ' + fmt0(A.babuInfra + A.babuTech) + '/mo</div></div>' +
+
+    '<div><div class="k-lbl" style="font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:7px">Users by Jun 27</div>' +
+    '<div class="k-val num" style="font-size:27px;font-weight:620;letter-spacing:-.03em">' + Math.round(end.babuPool) + '</div>' +
+    '<div class="k-note" style="font-size:11.5px;color:var(--ink-2);margin-top:7px">from ' + A.seedBabu + ' today · ' + fmtK(end.revStreams[2]) + ' MRR</div></div>' +
+
+    '<div><div class="k-lbl" style="font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:7px">10-month Babu P&amp;L</div>' +
+    '<div class="k-val num ' + (babuNet >= 0 ? "pos" : "neg") + '" style="font-size:27px;font-weight:620;letter-spacing:-.03em">' + fmtK(babuNet) + '</div>' +
+    '<div class="k-note" style="font-size:11.5px;color:var(--ink-2);margin-top:7px">' + fmtK(totBabuRev) + ' revenue less ' + fmtK(totBabuCost) + ' of infra and engineering</div></div>' +
+
+    '<div style="grid-column:1/-1">' + gate + '</div>';
+}
+
+/* -------- P&L table -------- */
+function renderTable(R) {
+  const cols = [];
+  R.forEach((r, i) => {
+    cols.push({ type: "m", i });
+    QUARTERS.forEach(q => { if (q.to === i) cols.push({ type: "q", q }); });
+  });
+  cols.push({ type: "t" });
+
+  const sum = (f, from, to) => { let s = 0; for (let i = from; i <= to; i++) s += f(R[i]); return s; };
+  const cell = (f, c) => {
+    if (c.type === "m") return f(R[c.i]);
+    if (c.type === "q") return sum(f, c.q.from, c.q.to);
+    return sum(f, 0, N - 1);
+  };
+
+  let head = '<thead><tr><th>&nbsp;</th>';
+  cols.forEach(c => {
+    if (c.type === "m") head += '<th>' + R[c.i].month + '</th>';
+    else if (c.type === "q") head += '<th class="q">' + c.q.label + '</th>';
+    else head += '<th class="q">10-mo total</th>';
+  });
+  head += '</tr></thead>';
+
+  const line = (label, f, cls, fmtFn, dot) => {
+    let h = '<tr class="' + (cls || "") + '"><td>' +
+      (dot ? '<span class="swatch-dot" style="background:var(' + dot + ')"></span>' : "") + label + '</td>';
+    cols.forEach(c => {
+      const v = cell(f, c);
+      const isQ = c.type !== "m";
+      const col = (cls === "net" || cls === "cum") ? (v >= 0 ? " pos" : " neg") : "";
+      h += '<td class="n' + (isQ ? " q" : "") + col + '">' + (fmtFn || fmtK)(v) + '</td>';
+    });
+    return h + "</tr>";
+  };
+  const sec = t => '<tr class="sec"><td colspan="' + (cols.length + 1) + '">' + t + '</td></tr>';
+
+  let b = "<tbody>";
+  b += sec("Revenue");
+  b += line("Continuity &amp; alumni", r => r.revStreams[0], "", null, "--s1");
+  b += line("Active containers &amp; retainers", r => r.revStreams[1], "", null, "--s2");
+  b += line("Babu subscriptions", r => r.revStreams[2], "", null, "--s3");
+  b += line("Book funnel &amp; digital", r => r.revStreams[3], "", null, "--s4");
+  b += line("Total revenue", r => r.revenue, "tot");
+
+  b += sec("Costs");
+  b += line("Babu infrastructure", r => r.c.babuInfra);
+  b += line("Babu tech team", r => r.c.babuTech);
+  b += line("Book production (Jake)", r => r.c.jake);
+  b += line("Brand + webinar ads", r => r.c.ads);
+  b += line("Book funnel: COGS + acquisition", r => r.c.funnel);
+  b += line("JC comp", r => r.c.jc);
+  b += line("Promo copies", r => r.c.promo);
+  b += line("Software", r => r.c.sw);
+  b += line("Launch party", r => r.c.party);
+  b += line("Payment processing", r => r.c.fees);
+  b += line("Contingency", r => r.c.cont);
+  b += line("Total costs", r => r.costs, "tot");
+
+  b += line("Net", r => r.net, "net");
+  b += '<tr class="net"><td>Cumulative net</td>' + cols.map(c => {
+    const v = c.type === "m" ? R[c.i].cum : (c.type === "q" ? R[c.q.to].cum : R[N - 1].cum);
+    return '<td class="n' + (c.type !== "m" ? " q" : "") + (v >= 0 ? " pos" : " neg") + '">' + fmtK(v) + '</td>';
+  }).join("") + "</tr>";
+
+  b += sec("Memo");
+  b += memoRow("Ending MRR", R, cols, r => r.mrr, fmtK);
+  b += memoRow("New clients signed", R, cols, r => r.newClients, fmt1, true);
+  b += memoRow("Clients in container", R, cols, r => r.inContainer, fmt1);
+  b += memoRow("Continuity clients", R, cols, r => r.contPool + r.alumniPool, fmt1);
+  b += memoRow("Total client load", R, cols, r => r.load, fmt1);
+  b += memoRow("Demand turned away", R, cols, r => r.turnedAway, fmt1, true);
+  b += memoRow("Babu paying users", R, cols, r => r.babuPool, v => Math.round(v).toLocaleString());
+  b += memoRow("Book orders", R, cols, r => r.orders, v => Math.round(v).toLocaleString(), true);
+  b += "</tbody>";
+
+  document.getElementById("pl").innerHTML = head + b;
+}
+
+function memoRow(label, R, cols, f, fmtFn, additive) {
+  let h = '<tr class="memo"><td>' + label + '</td>';
+  cols.forEach(c => {
+    let v;
+    if (c.type === "m") v = f(R[c.i]);
+    else if (c.type === "q") {
+      if (additive) { v = 0; for (let i = c.q.from; i <= c.q.to; i++) v += f(R[i]); }
+      else v = f(R[c.q.to]);
+    } else {
+      if (additive) { v = 0; for (let i = 0; i < N; i++) v += f(R[i]); }
+      else v = f(R[N - 1]);
+    }
+    h += '<td class="n' + (c.type !== "m" ? " q" : "") + '">' + fmtFn(v) + '</td>';
+  });
+  return h + "</tr>";
+}
+
+/* ---------------- wiring ---------------- */
+document.querySelectorAll("button.pill[data-scn]").forEach(b => {
+  b.addEventListener("click", () => {
+    A = Object.assign({}, SCENARIOS[b.dataset.scn]);
+    setScenario(b.dataset.scn);
+    syncControls();
+    render();
+  });
+});
+
+document.getElementById("copy-btn").addEventListener("click", async () => {
+  const tbl = document.getElementById("pl");
+  const rows = [...tbl.querySelectorAll("tr")].map(tr =>
+    [...tr.querySelectorAll("th,td")].map(td => td.textContent.replace(/−/g, "-").trim()).join("\t")
+  ).join("\n");
+  const btn = document.getElementById("copy-btn");
+  try {
+    await navigator.clipboard.writeText(rows);
+    btn.textContent = "Copied";
+  } catch (e) {
+    btn.textContent = "Copy blocked — select the table";
+  }
+  setTimeout(() => { btn.textContent = "Copy table for Excel"; }, 2200);
+});
+
+// Draw first. Theme and resize listeners are conveniences — none of them may be
+// allowed to throw before the page has rendered.
+buildControls();
+setScenario("base");
+render();
+
+try {
+  const mq = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)");
+  if (mq) {
+    if (mq.addEventListener) mq.addEventListener("change", render);
+    else if (mq.addListener) mq.addListener(render);
+  }
+} catch (e) { /* theme is still correct on load; only live switching is lost */ }
+
+try {
+  if (typeof MutationObserver === "function") {
+    new MutationObserver(render).observe(document.documentElement,
+      { attributes: true, attributeFilter: ["data-theme"] });
+  }
+} catch (e) { /* as above */ }
+
+let rt;
+window.addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(render, 120); });
+
+})();
+</script>

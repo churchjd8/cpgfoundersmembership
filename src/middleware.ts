@@ -18,10 +18,18 @@ export async function middleware(req: NextRequest) {
     doRewrite = true;
   }
 
-  // Everything outside the /admin tree passes straight through unchanged.
-  if (!pathname.startsWith("/admin")) return NextResponse.next();
+  // Paths outside /admin that still require a login. /jeff-budget carries the
+  // full P&L — client counts, churn, cost structure, comp — so it is gated even
+  // though it sits at the public root.
+  const GATED_PATHS = ["/jeff-budget"];
+  const isGatedPath = GATED_PATHS.some(
+    (p) => pathname === p || pathname.startsWith(`${p}/`)
+  );
 
-  // Gate the /admin tree (login page excepted).
+  // Everything outside the /admin tree and the gated list passes straight through.
+  if (!pathname.startsWith("/admin") && !isGatedPath) return NextResponse.next();
+
+  // Gate the /admin tree and the listed paths (login page excepted).
   if (pathname !== "/admin/login") {
     const token = req.cookies.get(ADMIN_COOKIE)?.value;
     if (!(await isValidToken(token))) {
