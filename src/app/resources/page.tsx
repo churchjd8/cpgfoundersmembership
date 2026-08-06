@@ -255,7 +255,7 @@ export default function ResourcesPage() {
               <p className="text-3xl mb-3">💬</p>
               <h3 className="text-xl font-bold mb-2">CPG Founders WhatsApp Group</h3>
               <p className="text-muted leading-relaxed flex-1">
-                Join 150+ CPG founders for peer-to-peer support, quick answers, vetted partner
+                Join 200+ CPG founders for peer-to-peer support, quick answers, vetted partner
                 introductions, and curated resources. Free, forever.
               </p>
               <div className="mt-6 pt-4 border-t border-border">

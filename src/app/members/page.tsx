@@ -39,7 +39,7 @@ const cards = [
     emoji: "💬",
     title: "WhatsApp Community",
     description:
-      "Join 150+ CPG founders for peer-to-peer support, quick answers, and vetted partner introductions.",
+      "Join 200+ CPG founders for peer-to-peer support, quick answers, and vetted partner introductions.",
     href: "https://chat.whatsapp.com/EclqcEFTX2yAeBmwsq88tq?mode=gi_t",
     linkLabel: "Join the group",
     external: true,

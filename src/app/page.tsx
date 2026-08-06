@@ -246,7 +246,7 @@ export default function HomePage() {
                 Free Community
               </span>
               <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
-                Join 150+ CPG founders in our free WhatsApp group.
+                Join 200+ CPG founders in our free WhatsApp group.
               </h2>
               <p className="mt-4 text-lg text-white/70 leading-relaxed">
                 Founder-to-founder support, quick answers, and helpful CPG resources - all in one
@@ -283,7 +283,7 @@ export default function HomePage() {
             <div className="text-center">
               <div className="inline-flex flex-col items-center gap-4 bg-white/5 rounded-2xl p-8 sm:p-12">
                 <p className="text-6xl">💬</p>
-                <p className="text-4xl sm:text-5xl font-bold text-accent">150+</p>
+                <p className="text-4xl sm:text-5xl font-bold text-accent">200+</p>
                 <p className="text-lg text-white/70">CPG founders and counting</p>
                 <p className="text-sm text-white/40 max-w-xs">
                   From pre-launch to $10M+. Every stage, every category, one community.

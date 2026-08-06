@@ -1,11 +1,10 @@
 "use client";
 
-import { useState, type FormEvent, Suspense } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useState, type FormEvent } from "react";
+import { useRouter } from "next/navigation";
 
-function AdminLoginForm() {
+export default function AdminLoginPage() {
   const router = useRouter();
-  const params = useSearchParams();
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
@@ -21,8 +20,10 @@ function AdminLoginForm() {
         body: JSON.stringify({ password }),
       });
       if (res.ok) {
-        const next = params.get("next") || "/admin";
-        router.replace(next.startsWith("/admin") ? next : "/admin");
+        // Read ?next client-side so we don't need useSearchParams (which would
+        // force a Suspense boundary and break the production build).
+        const next = new URLSearchParams(window.location.search).get("next");
+        router.replace(next && next.startsWith("/admin") ? next : "/admin");
         router.refresh();
       } else {
         setError("Incorrect password.");
@@ -62,17 +63,9 @@ function AdminLoginForm() {
           disabled={loading || !password}
           className="mt-5 w-full rounded-full bg-accent px-6 py-3 font-semibold text-white transition-colors hover:bg-accent-dark disabled:opacity-40"
         >
-          {loading ? "Checking..." : "Log in"}
+          {loading ? "Checking…" : "Log in"}
         </button>
       </form>
     </div>
-  );
-}
-
-export default function AdminLoginPage() {
-  return (
-    <Suspense>
-      <AdminLoginForm />
-    </Suspense>
   );
 }
