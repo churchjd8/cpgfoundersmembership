@@ -314,6 +314,24 @@ table.pl tr:hover td:first-child { background: var(--surface-2); }
 .pos { color: var(--pos); }
 .neg { color: var(--neg); }
 
+/* ---------- today's P&L ---------- */
+.pnl { padding: 16px 20px 20px; }
+.pnl-units { display: grid; grid-template-columns: repeat(auto-fit, minmax(214px, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 10px; overflow: hidden; margin-bottom: 20px; }
+.unit { background: var(--surface); padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 6px; }
+.unit .u-nm { font-size: 13px; font-weight: 650; letter-spacing: -.008em; }
+.unit .u-val { font-family: var(--mono); font-variant-numeric: tabular-nums; font-size: 24px; font-weight: 620; letter-spacing: -.03em; line-height: 1; }
+.unit .u-det { font-size: 11.5px; color: var(--ink-2); line-height: 1.45; }
+.unit .u-det span { font-family: var(--mono); }
+.pnl-lines { display: grid; grid-template-columns: repeat(auto-fit, minmax(268px, 1fr)); gap: 26px; }
+.pnl-block .fn-h { margin-bottom: 10px; }
+.pl-r { display: flex; justify-content: space-between; gap: 12px; padding: 5px 0; border-bottom: 1px solid var(--rule); font-size: 12.5px; }
+.pl-r .l { color: var(--ink-2); }
+.pl-r .v { font-family: var(--mono); font-variant-numeric: tabular-nums; font-weight: 600; white-space: nowrap; }
+.pl-r.t { border-bottom: 0; border-top: 2px solid var(--rule-strong); margin-top: 4px; padding-top: 8px; }
+.pl-r.t .l { color: var(--ink); font-weight: 660; }
+.pnl-note { margin-top: 18px; font-size: 12.5px; color: var(--ink-2); line-height: 1.55; border-left: 3px solid var(--accent); padding: 8px 0 8px 14px; }
+.pnl-note b { color: var(--ink); }
+
 /* ---------- funnel economics ---------- */
 .fn { display: grid; grid-template-columns: repeat(auto-fit, minmax(258px, 1fr)); gap: 26px; padding: 16px 20px 22px; }
 .fn-col { display: flex; flex-direction: column; }
@@ -395,6 +413,14 @@ footer.foot { margin-top: 34px; padding-top: 18px; border-top: 1px solid var(--r
         <span class="asof">Live from Stripe &middot; 6 Aug 2026</span>
       </div>
       <div class="board-grid" id="board"></div>
+    </section>
+
+    <section class="card">
+      <div class="card-head">
+        <h2>Today&rsquo;s P&amp;L</h2>
+        <p>What the business earns and spends right now, before any of the plan below. Split by unit, because two of the three are losing money on purpose.</p>
+      </div>
+      <div class="pnl" id="today"></div>
     </section>
 
     <h2 style="font-size:13px;font-weight:660;margin:0 0 4px;letter-spacing:-.005em">The three goals everything else serves</h2>
@@ -528,7 +554,8 @@ const SPEC = [
     { k: "offPlatform", label: "Off-platform retainer (Supermush)", min: 0, max: 15000, step: 500, u: "$" },
     { k: "seedBabu",    label: "Babu paying users",                min: 0, max: 200, step: 1, u: "" },
     { k: "discounts",   label: "Coupons in force on continuity",   min: 0, max: 5000, step: 100, u: "$" },
-    { k: "collectionRate", label: "Of contracted, actually collected", min: 70, max: 100, step: 1, u: "%" }
+    { k: "collectionRate", label: "Of contracted, actually collected", min: 70, max: 100, step: 1, u: "%" },
+    { k: "adsToday",    label: "Ad spend running right now",       min: 0, max: 8000, step: 100, u: "$" }
   ]},
   { group: "Webinar funnel", open: true, items: [
     { k: "regs",      label: "Registrants per webinar (month 1)", min: 100, max: 1500, step: 25, u: "" },
@@ -588,7 +615,7 @@ const SPEC = [
 /* ---------------- scenarios ---------------- */
 const SEED = {
   seedCont: 10, seedAlumni: 4, seedSupport: 1, seedC2k: 2, seedC5k: 1,
-  offPlatform: 5000, seedBabu: 11, discounts: 1000, collectionRate: 92,
+  offPlatform: 5000, seedBabu: 11, discounts: 1000, collectionRate: 92, adsToday: 0,
   containerMo: 3, contPrice: 1500,
   goalContainers: 24, goalContinuation: 70, goalBabuUsers: 65, goalBabuBy: 4,
   babuArpu: 55, funnelStart: 4, shipRev: 8, bookCogs: 8,
@@ -860,6 +887,7 @@ const cv = v => getComputedStyle(document.documentElement).getPropertyValue(v).t
 function render() {
   const R = run(A);
   renderBoard(R);
+  renderToday();
   renderGoals(R);
   renderFunnel(R);
   renderRecon(R);
@@ -1036,6 +1064,80 @@ const ACTUAL = {
   contracted: 33109,
   collected: 30373
 };
+
+/* Today's P&L — the business as it stands, before any of the plan. */
+function renderToday() {
+  const coll = pct2(A.collectionRate);
+  const babuRevC = 609;                                  // contracted
+  const babuRev = babuRevC * coll;                       // collected
+  const advRevC = ACTUAL.contracted - babuRevC;
+  const advRev = ACTUAL.collected - babuRev;
+
+  // Processing applies only to what runs through Stripe — the off-platform
+  // retainer does not.
+  const stripeColl = ACTUAL.collected - A.offPlatform;
+  const fees = stripeColl * pct2(A.feePct);
+  const advFees = fees * (advRev - A.offPlatform) / Math.max(1, advRev - A.offPlatform + babuRev);
+  const babuFees = fees - advFees;
+
+  const advCost = A.jcComp + A.software + A.adsToday + advFees;
+  const babuCost = A.babuInfra + A.babuTech + babuFees;
+  const bookCost = A.jake + A.bookPromo;
+
+  const advNet = advRev - advCost;
+  const babuNet = babuRev - babuCost;
+  const bookNet = -bookCost;
+  const net = advNet + babuNet + bookNet;
+  const revenue = ACTUAL.collected;
+  const cost = advCost + babuCost + bookCost;
+
+  const unit = (nm, val, det) =>
+    '<div class="unit"><div class="u-nm">' + nm + '</div><div class="u-val ' +
+    (val >= 0 ? "pos" : "neg") + '">' + fmt0(val) + '</div><div class="u-det">' + det + '</div></div>';
+
+  const row = (l, v, cls) =>
+    '<div class="pl-r ' + (cls || "") + '"><span class="l">' + l + '</span><span class="v ' +
+    (cls === "t" ? (v >= 0 ? "pos" : "neg") : "") + '">' + fmt0(v) + '</span></div>';
+
+  document.getElementById("today").innerHTML =
+    '<div class="pnl-units">' +
+    unit("Advisory", advNet, "Collects <span>" + fmt0(advRev) + "</span> against <span>" +
+      fmt0(advCost) + "</span> of cost. This is the whole business.") +
+    unit("Babu", babuNet, "Collects <span>" + fmt0(babuRev) + "</span> against <span>" +
+      fmt0(babuCost) + "</span>. Needs " + Math.ceil((A.babuInfra + A.babuTech) / Math.max(1, A.babuArpu)) +
+      " founders to stop bleeding.") +
+    unit("The book", bookNet, "No revenue until the funnel opens. <span>" + fmt0(A.jake) +
+      "</span> to Jake plus <span>" + fmt0(A.bookPromo) + "</span> of copies.") +
+    unit("Net, all in", net, "Per month, <b>before Jeff pays himself anything</b>. About <span>" +
+      fmt0(net * 12) + "</span> a year at this run rate.") +
+    '</div>' +
+
+    '<div class="pnl-lines">' +
+    '<div class="pnl-block"><div class="fn-h">Revenue collected, per month</div>' +
+    row("Continuity &amp; alumni", 18500 * coll) +
+    row("Containers &amp; retainers", 14000 * coll) +
+    row("Babu subscriptions", babuRev) +
+    row("Book &amp; digital", 0) +
+    row("Total collected", revenue, "t") + '</div>' +
+
+    '<div class="pnl-block"><div class="fn-h">Cost, per month</div>' +
+    row("Joshua &mdash; comp", A.jcComp) +
+    row("Jake &mdash; book production", A.jake) +
+    row("Babu infrastructure", A.babuInfra) +
+    row("Babu tech team", A.babuTech) +
+    row("Software", A.software) +
+    row("Promo copies", A.bookPromo) +
+    row("Ad spend", A.adsToday) +
+    row("Payment processing", fees) +
+    row("Total cost", cost, "t") + '</div></div>' +
+
+    '<div class="pnl-note">The advisory business throws off <b>' + fmt0(advNet) +
+    '</b> a month. Babu and the book consume <b>' + fmt0(Math.abs(babuNet + bookNet)) +
+    '</b> of that, leaving <b>' + fmt0(net) + '</b> &mdash; and that is before Jeff takes a dollar. ' +
+    'On contracted rather than collected revenue it would be ' +
+    fmt0(net + (ACTUAL.contracted - ACTUAL.collected)) + '; the difference is the ' +
+    fmt0(ACTUAL.contracted - ACTUAL.collected) + '/mo sitting in unpaid invoices.</div>';
+}
 
 function renderBoard(R) {
   const babuCost = A.babuInfra + A.babuTech;
