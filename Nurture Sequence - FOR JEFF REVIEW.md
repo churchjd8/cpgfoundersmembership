@@ -5,7 +5,7 @@ Jeff — this replaces the old nurture sequence entirely. The old one was still 
 
 Everything below is written in your voice and pulled from your own material. Read it top to bottom or just skim the table and jump to the ones you care about.
 
-**Two things I need from you at the end — see the last section.**
+**Approved 2026-08-11.** Nothing outstanding — the notes at the end are just the things worth keeping an eye on once this is live.
 
 ---
 
@@ -121,7 +121,7 @@ So here's the list. **Just hit reply with your top three numbers** and that's it
 16. Understanding your consumer
 17. Finding the innovation white space nobody has filled yet
 18. Building your first sales team without blowing your budget
-19. My 25 most significant CPG plays
+19. My 23 most significant CPG plays
 
 I read every one of these myself, and if you want to throw in a sentence about what's actually got you stuck right now, even better...but three numbers is plenty and I'll take it.
 
@@ -365,17 +365,15 @@ Jeff
 
 ---
 
-## Two things I need from you
+## Settled
 
-**1. The poll list in email 3.** You sent 17 topics but two of them looked like they got merged when they were pasted, so I split them into 19. Confirm these four are right:
+- **The poll list** in email 3 — your 17 topics had two that got merged when they were pasted, so they're split back out into 19. Confirmed.
+- **23 plays**, not 25. Corrected throughout.
+- **The book ships this year**, so email 6's PS and the `/book` page both say so.
+- **The 90-Day Breakthrough and the VIP Day stay quiet.** Both old URLs now redirect to `/apply` rather than 404ing, so any old links floating around still land somewhere sensible.
 
-- 11. Understanding how buyers actually evaluate your brand
-- 12. Velocity before volume
-- 13. What your competitors are really doing on price
-- 14. Scaling without breaking
+## Two things to keep an eye on once this is live
 
-**2. Is it 23 plays or 25?** The last poll topic says "My 25 most significant CPG plays," but the blog, the playbook and the MBA all say 23. Which one is right?
+**1. The capacity claim.** Email 10 says you have room for two or three more founders, and `/apply` now says the same thing with a green "currently accepting applications" light on it. **When those spots fill, somebody needs to turn that off.** It's the one claim in the whole sequence that costs you trust if it's still sitting there six months from now.
 
-## One thing to keep an eye on
-
-Email 10 says you have room for two or three more founders, and the `/apply` page now says the same thing with a green "currently accepting applications" light on it. **When those spots fill, somebody needs to turn that off.** It's the one claim in the whole sequence that costs you trust if it's still sitting there six months from now.
+**2. Emails 3 and 9 ask people to hit reply.** Email 3 asks for three numbers and email 9 invites them to tell you what they're building. Both go to real replies in your inbox, so expect the volume — that's the point of them, and answering a few is worth more than anything else in the sequence.

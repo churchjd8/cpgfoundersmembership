@@ -211,7 +211,7 @@ Jeff
 **Subject:** `can I ask you for fifteen seconds?`
 
 > **Reply-critical email.** Must send from a monitored inbox. Replies here are what protect deliverability for emails 4-10.
-> **Open item:** the 19-item list below was split out from an original 17. Items 11-14 need Jeff's confirmation, and #19 says 25 plays where the rest of the site says 23. Get this confirmed before sending.
+> The 19-item list below was split out from an original 17 and confirmed 2026-08-11. Build it exactly as written.
 
 Hey {{first_name}},
 
@@ -239,7 +239,7 @@ So here's the list. **Just hit reply with your top three numbers** and that's it
 16. Understanding your consumer
 17. Finding the innovation white space nobody has filled yet
 18. Building your first sales team without blowing your budget
-19. My 25 most significant CPG plays
+19. My 23 most significant CPG plays
 
 I read every one of these myself, and if you want to throw in a sentence about what's actually got you stuck right now, even better...but three numbers is plenty and I'll take it.
 

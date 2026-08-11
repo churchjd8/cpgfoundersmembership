@@ -32,7 +32,9 @@ Replaces `Nurture Email Sequence - Part 2.md`. Drafted 2026-08-11. Copy reworked
 
 1. **`Nurture Complete` never fires.** 125 contacts on the old sequence, zero graduates. Fix before launch or this rebuild inherits the same dead end.
 2. **Someone must flip the `/apply` greenlight off when Jeff fills his 2-3 spots.** Email 10 leans on it.
-3. **Poll topics #11/#12** were split into four in email 3 — needs Joshua's confirmation. And the last topic says 25 plays where the rest of the site says 23.
+3. **No tag exists for MBA for CPG purchases**, so email 6's skip rule has nothing to check. One needs creating.
+
+**Resolved 2026-08-11:** copy approved · poll split into 19 confirmed · 23 plays (not 25) · book confirmed shipping this year · 90-Day Breakthrough and VIP Day stay silenced, both redirect to `/apply` · Krystal cleared.
 
 ### Fact guardrails used in this draft
 
@@ -123,7 +125,7 @@ Jeff
 **CTA:** Reply with three numbers
 **P.S.:** Free resources
 
-> **Note:** the original poll had 17 items, but #11 and #12 each looked like two topics that got merged when it was pasted. Split into 19 below. Needs confirming. Also #19 says 25 plays where the blog and the playbook both say 23.
+> **Note:** the original poll had 17 items, but #11 and #12 each looked like two topics that got merged when it was pasted. Split into the 19 below and confirmed 2026-08-11.
 
 **Subject:** `can I ask you for fifteen seconds?`
 
@@ -153,7 +155,7 @@ So here's the list. **Just hit reply with your top three numbers** and that's it
 16. Understanding your consumer
 17. Finding the innovation white space nobody has filled yet
 18. Building your first sales team without blowing your budget
-19. My 25 most significant CPG plays
+19. My 23 most significant CPG plays
 
 I read every one of these myself, and if you want to throw in a sentence about what's actually got you stuck right now, even better...but three numbers is plenty and I'll take it.
 
