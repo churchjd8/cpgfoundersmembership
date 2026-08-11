@@ -73,9 +73,9 @@ export async function POST(request: Request) {
 
       // Submit through the Kajabi WhatsApp Group form
       // custom_2 = Business Name, custom_3 = Brand Stage, custom_4 = Revenue, custom_5 = Team Size
-      // custom_6 = WhatsApp Number. Kajabi silently drops values for fields that
-      // don't exist on the form, so this is a no-op until the field is added in
-      // the Kajabi UI. Supabase is the source of truth either way.
+      // The phone number deliberately stays out of Kajabi — the form has no field
+      // for it, and Kajabi drops values for fields that don't exist. It lives in
+      // the whatsapp_signups table instead.
       const formRes = await fetch(
         `https://api.kajabi.com/v1/forms/${WHATSAPP_FORM_ID}/submit`,
         {
@@ -91,7 +91,6 @@ export async function POST(request: Request) {
                 custom_3: stage,
                 custom_4: revenue,
                 custom_5: team,
-                custom_6: phoneE164,
               },
             },
           }),
