@@ -1,7 +1,7 @@
 # New Contact Nurture Sequence — REBUILD
 ## CPG Founders Group | 10 emails over 31 days
 
-Replaces `Nurture Email Sequence - Part 2.md`. Drafted 2026-08-11.
+Replaces `Nurture Email Sequence - Part 2.md`. Drafted 2026-08-11. Copy reworked into Jeff's LinkedIn register 2026-08-11.
 
 **From:** Jeff Church · **Reply-to:** Jeff's real inbox (email 3 depends on it)
 
@@ -26,19 +26,23 @@ Replaces `Nurture Email Sequence - Part 2.md`. Drafted 2026-08-11.
 | Has `WhatsApp Group` tag | Skip email 5 |
 | Has `CPT Book Waitlist` tag | Skip email 7 |
 
-> One consequence of keeping applicants in: someone who applies on day 12 still gets the day-31 close asking them to apply. Softened by the fact that email 10 opens by acknowledging the month rather than assuming they've done nothing — but if it grates, the cheap fix is a single conditional line at the top of email 10 for anyone carrying an application tag.
+> One consequence of keeping applicants in: someone who applies on day 12 still gets the day-31 close asking them to apply. Email 10 opens with a line acknowledging anyone who already raised their hand, which handles it in copy rather than plumbing.
 
 ### Open dependencies
 
 1. **`Nurture Complete` never fires.** 125 contacts on the old sequence, zero graduates. Fix before launch or this rebuild inherits the same dead end.
-2. **Email 7 needs a `/book` page.** The waitlist form currently only lives on `/welcome`, which is written for people who just joined WhatsApp — wrong context for a nurture recipient who isn't in the group. Needs a standalone book page with the same `BookWaitlistForm`.
-3. **Someone must flip the `/apply` greenlight off when Jeff fills his 2-3 spots.** Email 9 leans on it.
+2. **Someone must flip the `/apply` greenlight off when Jeff fills his 2-3 spots.** Email 10 leans on it.
+3. **Poll topics #11/#12** were split into four in email 3 — needs Joshua's confirmation. And the last topic says 25 plays where the rest of the site says 23.
 
 ### Fact guardrails used in this draft
 
 Verified against `cpt-00-book-facts.md`: eight ventures · **$212M raised** · **~$700M returned** · median 3.3x · five home runs, three strikeouts · Suja zero to **$100M in six years** · Harvard Business School · Kilimanjaro/Babu · rehab after Suja · ninth company Proda · Suja Life IPO'd May 2026 on Nasdaq at **north of $700M** and Jeff was declined a seat at the bell.
 
 **Do not use:** "$300 million brand" or "$275M+ across 40+ rounds" — both appear in the old sequence and both conflict with the manuscript.
+
+### Voice notes for anyone editing these
+
+Calibrated against Jeff's actual LinkedIn batch, not the canonical voice profile. Flowing sentences joined with *and / but / so* rather than fragment chains. Narrative invitation openers ("I want to tell you about...", "I'll never forget...") rather than dramatic datelines. Single exclamation marks, used freely. Ellipses where he'd trail off. Parenthetical asides. Almost no ALL CAPS — one loaded word per email at most. No "here's the lesson" wrap-ups; the story is the lesson.
 
 ### The P.S. convention
 
@@ -51,30 +55,30 @@ Every email carries a P.S. teasing something the body did *not* pitch. Never rep
 **CTA:** `/resources`
 **P.S.:** WhatsApp group
 
-**Subject:** `what to expect from me`
+**Subject:** `what you just signed up for`
 
 Hey {{first_name}},
 
-Quick note so you know what you signed up for.
+Quick note so you know what you've gotten yourself into.
 
-Over the next month I'm going to send you ten emails. Some are stories from thirty years of building consumer brands — including the ones that went badly, which are usually the useful ones. Some are tools. A couple will mention things I sell, and I'll be obvious about it when I do.
+Over the next month I'm going to send you ten emails, and they're mostly stories from thirty years of building consumer brands, including a decent number of the ones that went sideways on me (which are honestly the useful ones). A few of them come with tools attached. A couple will mention things I sell, and I promise I'll be obvious about it when I do rather than pretending otherwise.
 
-If that's not what you want, unsubscribe. There's a link at the bottom and it won't hurt my feelings. I'm sixty-four and building my ninth company. I've made peace with not being for everyone.
+If that's not what you're looking for, unsubscribe. There's a link down at the bottom and it genuinely won't hurt my feelings...I'm sixty-four and building my ninth company, so I've made peace with not being everybody's cup of tea :)
 
-But if you're building something right now, start here:
+But if you're building something right now, I'd start here:
 
 [The free resource library](https://cpgfoundersgroup.com/resources)
 
-Runway calculator. Unit pricing and break-even model. Trade promo break-even. CPG chart of accounts. SKU rationalization tool. The Suja Lessons Learned and Fatal Flaws white papers. The burn rate workshop and the three-hour fundraising masterclass.
+There's a runway calculator in there, along with the unit pricing and break-even model, a trade promo break-even tool, a CPG-specific chart of accounts, SKU rationalization, both white papers (Suja Lessons Learned and Fatal Flaws), plus the burn rate workshop and the three-hour fundraising masterclass replay.
 
-You may have already grabbed one of those. There are nine more sitting next to it.
+You may have already grabbed one of those on your way in. There are nine more sitting right next to it, and none of them are the kind of lead magnet where I pulled out the good part and saved it for the paid version. It's the actual stuff...the models I ran and the mistakes I wrote down so I'd stop repeating them.
 
-None of it is a lead magnet with the good part removed. It's the actual stuff — the models I ran, the mistakes I catalogued. Take what's useful.
+Take whatever's useful and ignore the rest.
 
 Talk soon,
 Jeff
 
-*P.S. There are 275+ CPG founders in our WhatsApp group answering each other's questions in real time. Nobody sells anything in there. If you want in: [cpgfoundersgroup.com/founders-only](https://cpgfoundersgroup.com/founders-only)*
+*PS There are 275+ CPG founders in our WhatsApp group answering each other's questions in real time, and nobody is allowed to sell anything in there. If you're not in it yet: [cpgfoundersgroup.com/founders-only](https://cpgfoundersgroup.com/founders-only)*
 
 ---
 
@@ -83,34 +87,34 @@ Jeff
 **CTA:** Follow on LinkedIn
 **P.S.:** Babu
 
-**Subject:** `three seconds that cost me twenty years`
+**Subject:** `three seconds I replayed for twenty years`
 
 Hey {{first_name}},
 
-Senior year of high school. My team hadn't won a game in two seasons. Seconds left. I'm wide open in the end zone.
+I want to tell you about three seconds of my life that I thought about almost every week for the next twenty years.
 
-And I don't raise my hand.
+Senior year of high school, my team hadn't won a game in two full seasons, and we're down to the last seconds of the game when I get wide open in the end zone. Nobody within ten yards of me.
 
-I was afraid of dropping it. Afraid of being the guy who let everyone down. So I stood there, open, and said nothing. Our quarterback got sacked. We lost.
+And I didn't raise my hand.
 
-I replayed those three seconds for twenty years.
+I was afraid of dropping it, afraid of being the guy who blew it for everybody, so I just stood there wide open and said nothing at all. Our quarterback got sacked and we lost, and I carried that one around for two decades.
 
-Then I'm thirty-eight, third kid just born, flipping channels at two in the morning. I land on a show interviewing retired CEOs. They're asking each one what they'd do differently. Every single one says a version of the same thing: I'd have been bolder. Taken more chances. Chosen fulfillment over safety.
+Then I'm thirty-eight years old with our third kid just born, and I'm up at two in the morning flipping channels the way you do when you can't sleep, and I land on this show interviewing retired CEOs. They're asking every one of them what they'd do differently, and they all say some version of the exact same thing...I'd have been bolder, I'd have taken more chances, I'd have chosen fulfillment over safety.
 
-At thirty-eight years old, I was now far more afraid of mediocrity than of failure.
+I remember sitting there thinking that at thirty-eight I had somehow become far more afraid of mediocrity than I was of failure.
 
 I left the safe track that year.
 
-Here's what I've learned since: courage doesn't eliminate fear. Sometimes it just refuses to let fear make the final decision. I've been scared before every single thing that ever worked. The fear was never the problem. The not raising my hand was the problem.
+Here's something I tell every founder I work with, usually the ones sitting on a decision they already know the answer to. Courage doesn't get rid of the fear! I've been scared before every single thing that ever worked out for me. The fear was never really the problem...the not raising my hand was the problem.
 
-Most of what you read about founders online is the highlight reel. I'm not interested in that. The lessons that actually protect you come from the parts nobody posts about.
+Most of what you read about founders online is the highlight reel, and I'm not particularly interested in adding to it. The lessons that actually protect you tend to come from the parts nobody posts about.
 
-I write more of these on LinkedIn — the real ones, not the polished ones. [Follow me here](http://linkedin.com/in/jeffreydeanchurch) if you want them in your feed.
+I write more of these on LinkedIn, the real ones rather than the polished ones. [Follow me over there](http://linkedin.com/in/jeffreydeanchurch) if you want them showing up in your feed.
 
 Talk soon,
 Jeff
 
-*P.S. I spent fifteen months building an AI advisor trained on everything I know about CPG. It's called Babu and the first ten days are free: [askbabu.ai](https://www.askbabu.ai)*
+*PS I spent fifteen months building an AI advisor trained on everything I know about this industry. It's called Babu and the first ten days are free if you want to poke at it: [askbabu.ai](https://www.askbabu.ai)*
 
 ---
 
@@ -119,17 +123,17 @@ Jeff
 **CTA:** Reply with three numbers
 **P.S.:** Free resources
 
-> **Note:** #11 and #12 below look like two topics each that got merged when the poll was pasted. Split them before sending or the list reads broken.
+> **Note:** the original poll had 17 items, but #11 and #12 each looked like two topics that got merged when it was pasted. Split into 19 below. Needs confirming. Also #19 says 25 plays where the blog and the playbook both say 23.
 
-**Subject:** `one question, three numbers`
+**Subject:** `can I ask you for fifteen seconds?`
 
 Hey {{first_name}},
 
-I need your help with something and it'll take you about fifteen seconds.
+I need your help with something and it should take you about fifteen seconds.
 
-I'm planning what to teach over the next few months — workshops, deep dives, the things I actually sit down and build. I'd rather make what you need than guess.
+I'm mapping out what to teach over the next few months...workshops, deep dives, the things I actually sit down and build out properly...and I'd much rather make the thing you need than sit here guessing at it.
 
-Here's the list. **Hit reply with your top three numbers.** That's it. No form, no survey link, just three numbers.
+So here's the list. **Just hit reply with your top three numbers** and that's it. No form to fill out, no survey link, nothing to click. Three numbers.
 
 1. The fatal flaws that kill early CPG brands
 2. Getting investor-ready — the raise from first meeting to close
@@ -151,50 +155,52 @@ Here's the list. **Hit reply with your top three numbers.** That's it. No form, 
 18. Building your first sales team without blowing your budget
 19. My 25 most significant CPG plays
 
-I read every reply myself. If you want to add a sentence about what you're stuck on, even better — but three numbers is plenty.
+I read every one of these myself, and if you want to throw in a sentence about what's actually got you stuck right now, even better...but three numbers is plenty and I'll take it.
+
+Thank you in advance!
 
 Talk soon,
 Jeff
 
-*P.S. If you haven't been through the free tools yet, the runway calculator and the break-even model are the two people email me about most: [cpgfoundersgroup.com/resources](https://cpgfoundersgroup.com/resources)*
+*PS If you haven't been through the free tools yet, the runway calculator and the break-even model are the two people email me about most: [cpgfoundersgroup.com/resources](https://cpgfoundersgroup.com/resources)*
 
 ---
 
 # EMAIL 4 — Babu (Day 11)
 **Purpose:** First real offer. Lowest friction thing he sells.
 **CTA:** 10-day free trial
-**P.S.:** `/apply`
+**P.S.:** The Kilimanjaro naming story
 
 **Subject:** `this isn't ChatGPT for food companies`
 
 Hey {{first_name}},
 
-I spent fifteen months building something I've never seen anyone else build for CPG.
+Okay, let me tell you about the thing I've spent the last fifteen months building, because it's the first time in this sequence I'm mentioning something I actually sell.
 
-It's called [Babu](https://www.askbabu.ai). It is not a chatbot with an industry skin on it.
+It's called [Babu](https://www.askbabu.ai), and it is not a chatbot with an industry skin painted on it.
 
-Most AI tools are generic. You ask a CPG question, you get a generic answer dressed up in industry buzzwords. I trained Babu on 6,000+ CPG-specific documents — financial models, playbooks, case studies, the MBA for CPG curriculum, everything I've built and collected across thirty-five years and eight companies.
+Most AI tools are generic, so you ask a CPG question and you get back a generic answer dressed up in industry buzzwords, which is worse than useless because it sounds right. I trained Babu on 6,000+ CPG-specific documents instead...financial models, playbooks, case studies, the entire MBA for CPG curriculum, basically everything I've built or collected across thirty-five years and eight companies.
 
-Then I built 40+ specialized tools on top of it. I call them Gurus. Each one does a single job:
+Then I built 40+ specialized tools that sit on top of it. I call them Gurus, and each one does exactly one job:
 
-- **Brand Positioning Guru** — answer 28 questions, get back a 30-40 page positioning report. Competitor matrix, white space analysis, audience segmentation, messaging hierarchy. Agencies charge $10,000 to $50,000 for this.
-- **Investor Pitch Prep Coach** — upload your deck, get ten brutal investor questions back with scoring and coaching. I built it to feel like a buyer who doesn't care about your feelings. You want that before the room, not during it.
-- **Fatal Flaw Assessment** — thirty yes/no questions across legal, financial, operational, strategic. It flags the risks that kill companies before the founder knows they're dying.
-- **Product Line P&L** — your costs, pricing, channel mix in; unit economics at launch and at scale out, broken out by Amazon, DTC, and brick-and-mortar. One founder told me this alone would have saved a deal he lost because an investor asked about unit economics and he couldn't answer.
-- Plus co-man contract review, broker evaluation, multi-channel break-even, quarterly audit tracking, and about thirty more.
+1. **Brand Positioning Guru** — you answer 28 questions and it hands you back a 30 to 40 page positioning report with a competitor matrix, white space analysis, audience segmentation, and messaging hierarchy. Agencies charge somewhere between $10,000 and $50,000 for this exact deliverable.
+2. **Investor Pitch Prep Coach** — upload your deck and it comes back with ten brutal investor questions, scored, with coaching on each one. I built it to feel like a buyer who does not care about your feelings, and you want to meet that person before the room rather than in it.
+3. **Fatal Flaw Assessment** — thirty yes/no questions across legal, financial, operational and strategic, and it flags the risks that kill companies well before the founder knows anything is wrong.
+4. **Product Line P&L** — put in your costs, pricing and channel mix and it models your unit economics at launch and at scale, broken out across Amazon, DTC and brick-and-mortar. One founder told me this one alone would have saved a deal he lost, because an investor asked him about unit economics and he couldn't answer.
+5. Plus co-man contract review, broker evaluation, multi-channel break-even, quarterly audit tracking...and about thirty more.
 
-There's also a Deep Research mode. Most models research for about sixteen minutes. Mine runs twenty-three. The extra seven aren't about finding more — they're about triangulating what it already found, checking sources, cutting hallucinations. I wanted output you could act on, not output you had to fact-check line by line.
+There's also a Deep Research mode, and this is the part I'm probably too proud of. Most models research for about sixteen minutes and Babu runs for twenty-three. Those extra seven minutes aren't about finding more, they're about triangulating what it already found and checking its own sources, which is how you cut down the hallucinations. I wanted output you could act on rather than output you had to fact-check line by line before you dared use it.
 
-Nothing you put in is shared, scraped, or used for training. That was non-negotiable.
+And nothing you put into it gets shared, scraped, or used for training. That one was non-negotiable for me.
 
-I call it a co-founder in your pocket. It never sleeps, never complains, and it's trained on what I actually know instead of what the internet thinks it knows about CPG.
+I call it a co-founder in your pocket...it never sleeps, it never complains, and it's trained on what I actually know instead of what the internet thinks it knows about this industry.
 
-**First ten days are free.** [Take it for a spin](https://www.askbabu.ai).
+**The first ten days are free.** [Take it for a spin](https://www.askbabu.ai) and tell me what you think.
 
 Talk soon,
 Jeff "Babu" Church
 
-*P.S. Babu is named after me, sort of. My kids' guides started calling me Babu — Swahili for grandpa — on day three of Kilimanjaro, partly for my pace and partly because I wouldn't stop giving unsolicited advice on the trail. My grandkids call me that now. Figured if I'm going to be the old guy handing out advice, I may as well name the AI after it.*
+*PS In case you're wondering about the name...I was climbing Kilimanjaro with my kids a few years back, and around day three, with the oxygen getting thin and my legs burning, the guides started calling me Babu. It's Swahili for grandpa. Partly it was my pace, and partly it was because I would not stop offering unsolicited advice on the trail (some things don't change). My grandkids call me that now, so I figured if I'm going to be the old guy handing out advice, I may as well name the AI after it!*
 
 ---
 
@@ -203,32 +209,32 @@ Jeff "Babu" Church
 **CTA:** `/founders-only`
 **P.S.:** MBA for CPG
 
-**Subject:** `nobody tells you how lonely it gets`
+**Subject:** `nobody warns you about this part`
 
 Hey {{first_name}},
 
-Nobody warns you about this part.
+Nobody really warns you about how lonely this gets.
 
-You're making decisions every day that affect people's livelihoods. Your spouse carries the risk with you but sees maybe a third of it. Your friends don't really understand what you do. And most of the advice online comes from people who've never shipped a case of anything.
+You're making decisions every day that affect people's livelihoods and their mortgages, and your spouse carries the risk right alongside you but only ever sees about a third of what's actually happening, and your friends are supportive but don't really understand what you do all day. Meanwhile most of the advice floating around online comes from people who've never shipped a single case of anything.
 
-I remember the confusion. The isolation. The specific dread of not knowing which play to run next and having nobody to ask.
+I remember the confusion and the isolation of it, and the very specific dread of not knowing which play to run next and having nobody to ask.
 
-On July 3rd, 2018, at five in the afternoon, I got the call that Coca-Cola wasn't buying the rest of Suja. My house was full of family prepping for the Fourth. I hung up, walked downstairs, and wept in front of my sons. I wasn't thinking about growth rates or awards. I was thinking: how did I let us get here?
+I'll never forget July 3rd of 2018. Five in the afternoon, my house full of family getting ready for the Fourth, and I take the call telling me that Coca-Cola isn't buying the rest of Suja. I hung up the phone, walked downstairs, and wept in front of my sons. And I wasn't thinking about growth rates or awards or any of it...I was thinking, how on earth did I let us get here?
 
-The next morning there were fireworks and a parade and eighty-two degrees of blue sky and I was sick to my stomach.
+The next morning there were fireworks and a parade and eighty-two degrees of perfect blue San Diego sky, and I was sick to my stomach through all of it.
 
-What I'd have given that week for a room full of people who'd been there.
+What I would have given that week for a room full of people who'd already been through their own version of it.
 
-That's why the group exists. 275+ CPG founders, real brands, real problems, answering each other in real time. Somebody asks about a co-man dispute at 11pm and gets three answers by morning. Nobody sells anything in there — I'd throw them out.
+That's really why the group exists. It's 275+ CPG founders with real brands and real problems answering each other in real time, so somebody posts a co-man dispute at eleven at night and has three useful answers waiting by morning. Nobody sells anything in there and I'd throw them out if they tried!
 
 [Request to join here](https://cpgfoundersgroup.com/founders-only)
 
-It's free and it always will be.
+It's free and it's going to stay that way.
 
 Talk soon,
 Jeff
 
-*P.S. If you'd rather have the whole system in one place instead of asking questions piecemeal, that's what the [MBA for CPG](https://cpgfoundersgroup.com/mba-for-cpg) is — 450+ slides and every model I use, $997 for life.*
+*PS If you'd rather have the whole system in one place instead of asking questions piecemeal, that's what the [MBA for CPG](https://cpgfoundersgroup.com/mba-for-cpg) is...450+ slides and every model I use, $997 and it's yours for life.*
 
 ---
 
@@ -237,40 +243,36 @@ Jeff
 **CTA:** MBA for CPG, $997
 **P.S.:** The book
 
-**Subject:** `gross margin determines destiny`
+**Subject:** `the first number I'd look at`
 
 Hey {{first_name}},
 
-I want to give you the single number I'd look at first if you handed me your business today.
+If you handed me your business today and gave me one number to look at before I said anything, I wouldn't ask about revenue. I'd ask about gross margin.
 
-Not revenue. Gross margin.
+Here's why that is.
 
-Here's why. At Suja we grew from zero to $100 million in six years, faster than KIND, faster than Honest Tea, faster than ZICO. From the outside it looked like a rocket ship. Inside, our gross margins were under 32%, we were burning $10 million a year, and there were weeks we had less than $100,000 in the bank against $40 million of secured debt.
+At Suja we went from zero to $100 million in six years, which was faster than KIND and faster than Honest Tea and faster than ZICO, and from the outside it looked like a rocket ship. On the inside our gross margins were sitting under 32%, we were burning $10 million a year, and there were weeks where we had less than $100,000 in the bank against $40 million of secured debt coming due.
 
-Growth and survival are not the same thing. Revenue without margin is ego.
+Growth and survival are not the same thing, and I learned that one the expensive way.
 
-The rule I run now: **build to 50%.** Not because 50% is magic, but because of what it buys you. Below 45%, every dollar of growth costs you money and you're structurally dependent on the next raise. Above 50%, you can fund trade spend, absorb a co-man mistake, take a slotting hit, and still be standing.
+So the rule I run now is build to 50%. Not because fifty is a magic number but because of what it buys you...below about 45% every dollar of growth actually costs you money and you become structurally dependent on the next raise, whereas above 50% you can fund trade spend, absorb a co-man mistake, eat a slotting hit, and still be standing at the end of it.
 
 Three levers, in the order I'd pull them:
 
-**1. Formulation and pack.** The cheapest margin you will ever find is the margin you design in before you launch. Changing a formula after you've got distribution is brutal. Before, it's a spreadsheet.
+1. **Formulation and pack.** The cheapest margin you will ever find is the margin you design in before you launch, because changing a formula once you've got distribution is genuinely brutal, while changing it beforehand is just a spreadsheet.
+2. **Co-man terms and MOQs.** Most early founders sign the first agreement they're handed because they're so relieved that somebody said yes, and that relief ends up costing them points of margin for years afterward.
+3. **Trade spend discipline.** This is where the margin quietly disappears, in MCBs and slotting and promos that nobody modeled properly, and most founders can't tell me their real net price per unit by channel. If you can't tell me that number, you're not managing margin...you're hoping.
 
-**2. Co-man terms and MOQs.** Most early founders sign the first agreement they're offered because they're grateful someone said yes. That gratitude costs points of margin for years.
-
-**3. Trade spend discipline.** This is where the margin actually disappears — quietly, in MCBs and slotting and promos nobody modeled. Most founders can't tell me what their real net price per unit is by channel. If you can't, you're not managing margin, you're hoping.
-
-Here's the part that matters most. Eighteen months before Coke walked away, we launched two-ounce wellness shots. Roughly 60% gross margin against about 12% on outsourced kombucha. At the time it felt like a side experiment. It turned out to be the thing that saved the company.
+Here's the part I think about most. About eighteen months before Coke walked away, we launched two-ounce wellness shots at roughly 60% gross margin, against something like 12% on the outsourced kombucha we were doing at the time. It felt like a side experiment when we did it. It turned out to be the thing that saved the company.
 
 The decision that saves you is almost never the one you made on the day you needed saving. It's usually one you made eighteen months earlier, on a Tuesday, when nobody was watching.
 
-Margin architecture is a Tuesday decision.
-
-That's one framework. There are dozens more inside the [MBA for CPG](https://cpgfoundersgroup.com/mba-for-cpg) — 450+ slides, fifteen hours, and the full template library I've used across eight companies. $997, lifetime access. It's the operating system I wish someone had handed me at thirty-eight.
+That's one framework and there are dozens more inside the [MBA for CPG](https://cpgfoundersgroup.com/mba-for-cpg)...450+ slides, about fifteen hours, and the full template library I've used across eight companies. $997 and you have it for life. It's more or less the operating system I wish somebody had handed me when I was thirty-eight and about to find all this out the hard way.
 
 Talk soon,
 Jeff
 
-*P.S. The book comes out this year. It's called The Cold-Pressed Truth and it's the whole story, including the parts I'd rather not have written down. [Get on the list](https://cpgfoundersgroup.com/book).*
+*PS The book is coming this year. It's called The Cold-Pressed Truth and it's the whole story, including a few parts I'd rather not have put in writing. [Get on the list here](https://cpgfoundersgroup.com/book).*
 
 ---
 
@@ -278,36 +280,35 @@ Jeff
 **Purpose:** Free ask, keeps momentum, feeds the launch list.
 **CTA:** Book waitlist
 **P.S.:** WhatsApp group
-**⚠️ Needs `/book` page built first.**
 
 **Subject:** `the part I almost didn't write`
 
 Hey {{first_name}},
 
-In May of this year, Suja Life went public on the Nasdaq under the ticker SUJA, at a valuation north of $700 million.
+True story that most people don't know, and at this point in my career I've got nothing to lose by telling it, so here you go.
 
-Ringing that bell had been a dream of mine for as long as I can remember. I asked to attend. The current owners cited policy and declined.
+In May of this year Suja Life went public on the Nasdaq under the ticker SUJA, at a valuation north of $700 million.
 
-So I watched from a screen in San Diego while the team I once led stood in Times Square with their hands raised over their heads.
+Ringing that bell had been a dream of mine for about as long as I can remember having dreams about business. So I asked whether I could attend. The current owners cited policy and said no.
 
-I've thought about that morning a lot. I could write it as a grievance. I've decided to write it as gratitude, because both things are true and only one of them is useful to you.
+I watched it from a screen in San Diego while the team I used to lead stood in Times Square with their hands raised over their heads.
 
-Build the company, but don't be the company. Love the work, but don't be the work. The bell is a moment. The work is the point.
+I've turned that morning over in my head a lot since, and I could absolutely write it up as a grievance...but I've decided to write it as gratitude instead, partly because both versions are true and only one of them is any use to you. Build the company but don't be the company. Love the work but don't be the work. The bell is a moment and the work is the point.
 
-That's roughly where my book ends.
+That's roughly where the book ends.
 
-It's called **The Cold-Pressed Truth**, and it's the honest version — Suja from an ice closet to $100 million in six years, the July 3rd phone call, the month I spent in rehab after I left because eighty-hour weeks for eight years had taken more than I understood at the time. Jay Shetty wrote the foreword. Seth Goldman, Mark Rampolla, Kim Perell, and John Foraker were kind enough to read it early.
+It's called **The Cold-Pressed Truth: A Founder's Field Guide to Building, Scaling, and Selling a Consumer Brand**, and Jay Shetty was generous enough to write the foreword for it. It's the honest version of all of it...Suja from an ice closet to $100 million in six years, the July 3rd phone call, and the month I spent in rehab after I left, because eighty-hour weeks for eight straight years had taken more out of me than I understood at the time. Seth Goldman, Mark Rampolla, Kim Perell and John Foraker all read it early and had kind things to say, which still surprises me a little.
 
-It is part memoir and part operating manual, and it keeps interrupting itself to hand you a tool.
+It's part memoir and part operating manual, and it keeps interrupting the story to hand you a tool.
 
-I'm not selling anything today. It isn't out yet. But if you want to know the day it lands:
+I'm not selling you anything today because it isn't out yet! But if you want to know the day it lands:
 
-[Get on the waitlist](https://cpgfoundersgroup.com/book)
+[Get on the waitlist here](https://cpgfoundersgroup.com/book)
 
 Talk soon,
 Jeff
 
-*P.S. Still not in the founders group? 275+ of them in there, free, no pitching allowed: [cpgfoundersgroup.com/founders-only](https://cpgfoundersgroup.com/founders-only)*
+*PS Still not in the founders group? There are 275+ of them in there, it's free, and pitching is not allowed: [cpgfoundersgroup.com/founders-only](https://cpgfoundersgroup.com/founders-only)*
 
 ---
 
@@ -321,32 +322,30 @@ Jeff
 
 Hey {{first_name}},
 
-I've told you a lot of my own stories this month. Here's someone else's.
+I've told you a lot of my own stories over the last few weeks, so let me tell you somebody else's for a change.
 
-A founder named Krystal came to me with investors sitting on the fence. She'd been grinding the raise for months. The interest was real. The conviction wasn't. Anyone who's run a process knows exactly what that limbo feels like — nobody says no, nobody wires anything.
+A founder named Krystal came to me with investors sitting squarely on the fence. She'd been grinding away at the raise for months and the interest was genuinely there, but the conviction wasn't, and anyone who's ever run a process knows exactly what that limbo feels like...nobody actually says no to you, and nobody wires anything either.
 
-In our first session I suggested a completely different approach to the debt and equity split in her financing.
+In our very first session I suggested a completely different approach to the debt and equity split in her financing.
 
-It wasn't obvious. She wouldn't have landed on it herself, and I don't say that as a knock — I only saw it because I've watched that specific situation play out dozens of times across thirty years and forty-four rounds. That's the whole value of doing something this long. Pattern recognition you can't shortcut.
+It wasn't an obvious move and she wouldn't have landed on it herself, which I don't mean as any kind of knock on her, because the only reason I saw it is that I've watched that specific situation play out dozens of times across thirty years and forty-four rounds. That's really the whole value of having done something this long...it's pattern recognition you cannot shortcut.
 
-From there we retooled the deck and built her full five-year bottom-up model.
+From there we retooled the deck and built out her full five-year bottom-up model, and the investors who had been sitting on that fence came over. She closed **$250,000 in a bridge round in her first month.**
 
-The investors who'd been on the fence came over. She closed **$250,000 in a bridge round in her first month.**
+Her words, not mine: *"I would never have thought to do that without Jeff's push."*
 
-Her words: *"I would never have thought to do that without Jeff's push."*
+Now, I'm not telling you this because every founder I work with gets that result. They don't! And anybody promising you they do is selling you something. Plenty of the work I do is slower and a lot less dramatic than Krystal's...margin architecture that quietly pays off eighteen months later, a co-man agreement renegotiated before it does real damage, a hire talked out of being made.
 
-I'm not telling you this because every founder gets that result. They don't, and anyone promising you they do is selling something. Some of the work I do is slower and less dramatic — margin architecture that pays off eighteen months later, a co-man agreement renegotiated, a hire not made.
+I'm telling you because of what the work actually is. It isn't motivation and it isn't cheerleading. It's somebody who has already made your mistake looking at your specific situation and saying don't do that, do this instead.
 
-I'm telling you because of what the work actually is. It isn't motivation. It's someone who's already made your mistake looking at your specific situation and saying *"don't do that, do this instead."*
-
-That's the whole offer. If you want that on your business:
+That's the whole offer, honestly. If you want that pointed at your business:
 
 **[Apply here](https://cpgfoundersgroup.com/apply)**
 
 Talk soon,
 Jeff
 
-*P.S. If 1:1 isn't where you are right now, [Babu](https://www.askbabu.ai) is the cheap version of the same idea — the pattern recognition without me in the room. Ten days free.*
+*PS If 1:1 isn't where you're at right now, [Babu](https://www.askbabu.ai) is the cheap version of the same idea...the pattern recognition without me in the room. Ten days free.*
 
 ---
 
@@ -359,31 +358,29 @@ Jeff
 
 Hey {{first_name}},
 
-Somewhere on day three of Kilimanjaro, oxygen thin and legs burning, the guides started calling me Babu.
+Somewhere around day three on Kilimanjaro, with the oxygen thin and my legs burning, the guides started calling me Babu.
 
-Swahili for grandpa. Partly my pace. Mostly because I wouldn't stop pointing things out on the trail.
+Swahili for grandpa. Partly it was my pace, but mostly it was because I would not stop pointing things out on the trail. Old habits die hard.
 
-Old habits.
+The name stuck, and my grandkids call me Babu now. Somewhere between that mountain and a boardroom I realized it's basically the role I've always played anyway...the guy walking a little bit ahead of you, pointing out the cliffs and the switchbacks and the handful of places where the view turns out to be worth the climb.
 
-The name stuck. My grandkids call me Babu now. Somewhere between that mountain and a boardroom I realized it's the role I've always played — the guy walking a little ahead, pointing out the cliffs and the switchbacks and the places where the view is worth the climb.
+So here's the honest ledger, all of it. Eight ventures, $212 million raised, nearly $700 million returned to investors at a median of 3.3x, five home runs and three strikeouts. Fifty-five marathons and ultramarathons. Six of the Seven Summits attempted and five of them summited.
 
-Here's the ledger, honestly. Eight ventures. $212 million raised. Nearly $700 million returned to investors, median 3.3x. Five home runs and three strikeouts. Fifty-five marathons and ultras. Six of the Seven Summits attempted, five summited.
+And also this. I ran a better-for-you beverage company while completely neglecting my own health, worked eighty-hour weeks for the better part of eight years, drank far too much, and checked into rehab for a month after I left Suja. My family has told me since that they believe if I hadn't stepped away when I did, I might not still be here at all.
 
-And: I ran a better-for-you beverage company while neglecting my own health, worked eighty-hour weeks for almost eight years, drank far too much, and checked into rehab for a month after I left Suja. My family has told me they believe that if I hadn't stepped away when I did, I might not still be here.
+Had I managed the balance better I might still be the CEO of that company, and I'd have been the one preparing to take it public. That one still sits somewhere in the back of my mind and probably always will.
 
-Had I managed the balance better, I might still be the CEO, and I'd be the one preparing to take that company public. That one still sits in the back of my mind.
+I'm sixty-four now and I'm building my ninth company, a protein soda called Proda, and I'm still out here looking for the once-in-a-lifetime thing to build...something my grandchildren might one day say their grandfather made a real difference with.
 
-I'm sixty-four. I'm building my ninth company, a protein soda called Proda. And I'm still looking for the once-in-a-lifetime thing to build — something my grandchildren might one day say their grandfather made a difference with.
+But in the meantime, the part that genuinely fires me up is helping founders like you skip the landmines I stepped on. That's why the group exists and why I wrote the book and why Babu exists and why I write these emails to you.
 
-But between here and there, the part that actually fires me up is helping founders like you skip the landmines I stepped on. That's why the group exists, why I wrote the book, why Babu exists, why I write these emails.
-
-If I can shorten your learning curve, stop one catastrophic mistake, or help you keep going through a week that feels like July 3rd felt to me — this has been worth it.
+If I can shorten your learning curve, or stop one catastrophic mistake, or help you keep going through a week that feels the way July 3rd felt to me, then this has all been worth doing.
 
 I'm in your corner.
 
 Jeff
 
-*P.S. No link in this one. If something in these emails landed, just hit reply and tell me what you're building. I read them all.*
+*PS No link in this one. If something in these emails has landed with you, just hit reply and tell me what you're building. I read every one.*
 
 ---
 
@@ -396,29 +393,29 @@ Jeff
 
 Hey {{first_name}},
 
-Over the last month I've sent you the end zone, the July 3rd phone call, the margin math, the bell I didn't get to ring, and Krystal's raise. I hope some of it was useful.
+Over the last month I've sent you the end zone, the July 3rd phone call, the margin math, the bell I didn't get to ring, and Krystal's raise, and I hope a decent amount of it was useful to you.
 
-If you've already applied — thank you, I've got it, and you can ignore the rest of this one.
+(And if you've already applied...thank you, I've got it, and you can happily ignore the rest of this one.)
 
-Here's the one direct ask of the whole sequence.
+Here's the one direct ask in the whole sequence.
 
-I take on a small number of founders privately. Not a course, not a group program — me, in your business, on the things that actually decide whether you make it. Growth strategy, fundraising, margin architecture, retail, exit planning. Whatever the real bottleneck is.
+I take on a small number of founders privately. It isn't a course and it isn't a group program, it's me in your business on the handful of things that actually decide whether you make it or not...growth strategy, fundraising, margin architecture, retail, exit planning, whatever the real bottleneck turns out to be once we look at it properly.
 
 **Right now I have room for two or three more.**
 
-I keep it small because each engagement gets built around the specific business, and I can't do that well at volume. When those spots fill, applications close until one opens back up. That's not a marketing tactic, it's just arithmetic.
+I keep it small because every engagement gets built around the specific business in front of me and I can't do that well at volume, so when those spots fill up applications close until one opens back up. That's not a marketing tactic, it's just arithmetic!
 
 If you want my eyes on your business:
 
 **[Apply here](https://cpgfoundersgroup.com/apply)**
 
-It takes about five minutes. Tell me where you are, what's in the way, and what a breakthrough would look like in ninety days. I read every application. If it's not a fit I'll tell you, and usually I'll point you somewhere better.
+It takes about five minutes and you just tell me where you are, what's in the way, and what a breakthrough would actually look like for you in ninety days. I read every application that comes in, and if it isn't a fit I'll tell you so directly, and usually I'll point you toward something that suits you better.
 
-And if now isn't the time, genuinely, no problem. Stay on the list. The resources aren't going anywhere and neither am I.
+And if now genuinely isn't the time, that's completely fine. Stay on the list, the resources aren't going anywhere and neither am I.
 
-But if you've been sitting on something — raise your hand. I lost twenty years to three seconds of not doing that.
+But if you've been sitting on something...raise your hand. I lost twenty years to three seconds of not doing that.
 
 Talk soon,
 Jeff
 
-*P.S. Not ready for that? The three things I'd do in your position, all cheaper: start the [Babu trial](https://www.askbabu.ai) free for ten days, get the [MBA for CPG](https://cpgfoundersgroup.com/mba-for-cpg) for $997, or just come sit in the [founders group](https://cpgfoundersgroup.com/founders-only) and ask your question there. All three beat doing it alone.*
+*PS Not ready for that? The three things I'd do in your shoes, all of them cheaper. Start the [Babu trial](https://www.askbabu.ai) free for ten days, pick up the [MBA for CPG](https://cpgfoundersgroup.com/mba-for-cpg) for $997, or just come sit in the [founders group](https://cpgfoundersgroup.com/founders-only) and ask your question in there. All three of those beat trying to figure it out alone.*
