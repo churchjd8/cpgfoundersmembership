@@ -28,7 +28,7 @@ export default function FoundersOnlyWelcomePage() {
           Check your email for the WhatsApp group invite link. We&rsquo;ll get you added shortly.
         </p>
         <p className="mt-2 text-muted">
-          Welcome to 200+ CPG founders who are building, sharing, and supporting each other every
+          Welcome to 275+ CPG founders who are building, sharing, and supporting each other every
           day.
         </p>
         <div className="mt-8">

@@ -10,19 +10,10 @@ export const metadata: Metadata = {
 
 const freeStuff = [
   {
-    emoji: "🤖",
-    title: "Babu AI - 10 days free",
-    description:
-      "An AI advisor trained on 35+ years of CPG operating experience. Pricing, promo math, retailer strategy, fundraising prep. Ask it the question you'd normally sit on for a week.",
-    href: "https://www.askbabu.ai",
-    linkLabel: "Start the free trial",
-    external: true,
-  },
-  {
     emoji: "🧰",
     title: "The free resource library",
     description:
-      "Runway calculator, unit pricing and break-even model, trade promo break-even, chart of accounts, SKU rationalization tool, plus the Suja Lessons Learned and Fatal Flaws white papers.",
+      "Runway calculator, unit pricing and break-even model, trade promo break-even, chart of accounts, SKU rationalization tool, the Suja Lessons Learned and Fatal Flaws white papers, plus the workshop replays - Reducing Your Burn Rate and the 3-hour Fundraising Masterclass.",
     href: "/resources",
     linkLabel: "Grab the bundle",
   },
@@ -33,14 +24,6 @@ const freeStuff = [
       "Co-manufacturing, broker strategy, angel rounds, board management, exit prep. Written for founders who need the answer today, not the theory.",
     href: "/blog",
     linkLabel: "Read the blog",
-  },
-  {
-    emoji: "🎥",
-    title: "Workshop replays",
-    description:
-      "The Reducing Your Burn Rate workshop and the 3-hour Fundraising Masterclass replay. Free, no catch.",
-    href: "/burn-rate-workshop-replay",
-    linkLabel: "Watch the replays",
   },
 ];
 
@@ -78,7 +61,7 @@ export default function WelcomePage() {
             Welcome to the group
           </h1>
           <p className="mt-6 text-lg text-white/70 leading-relaxed">
-            Thank you for raising your hand. You&rsquo;re now standing with 200+ CPG founders
+            Thank you for raising your hand. You&rsquo;re now standing with 275+ CPG founders
             who are building the same thing you are, usually at 11pm, usually with fewer
             answers than they&rsquo;d like.
           </p>
@@ -101,14 +84,56 @@ export default function WelcomePage() {
               No cost, no call, no pitch. Built from real mistakes, most of them Jeff&rsquo;s.
             </p>
           </div>
+
+          {/* Babu gets the whole width - it's the one we want people to open first */}
+          <a
+            href="https://www.askbabu.ai"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group block bg-foreground text-white rounded-2xl p-8 sm:p-12 mb-6 hover:shadow-xl transition-all"
+          >
+            <div className="grid lg:grid-cols-5 gap-8 items-center">
+              <div className="lg:col-span-3">
+                <span className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider bg-accent text-white rounded-full mb-5">
+                  10 days free
+                </span>
+                <p className="text-5xl mb-4">🤖</p>
+                <h3 className="text-3xl sm:text-4xl font-bold tracking-tight">Babu AI</h3>
+                <p className="mt-4 text-lg text-white/70 leading-relaxed">
+                  An AI advisor trained on 35+ years of CPG operating experience. Pricing,
+                  promo math, retailer strategy, fundraising prep. Underneath it sit 40+
+                  purpose-trained Gurus, each one built for a single job - brand
+                  positioning, investor pitch prep, product line P&amp;L, co-man contract
+                  review, fatal flaw assessment - so you get an operator&rsquo;s answer, not
+                  a search result.
+                </p>
+                <span className="mt-8 inline-flex items-center justify-center px-8 py-4 bg-accent group-hover:bg-accent-dark text-white font-semibold rounded-lg transition-colors text-lg">
+                  Start the free trial &rarr;
+                </span>
+              </div>
+              <ul className="lg:col-span-2 space-y-3 text-white/70">
+                {[
+                  "Brand Positioning Guru",
+                  "Investor Pitch Prep Coach",
+                  "Fatal Flaw Assessment",
+                  "Product Line P&L",
+                  "Co-Man Contract Review",
+                  "...and 35 more",
+                ].map((g) => (
+                  <li key={g} className="flex items-start gap-3">
+                    <span className="text-accent font-bold">&rarr;</span>
+                    <span>{g}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </a>
+
           <div className="grid gap-6 sm:grid-cols-2">
             {freeStuff.map((card) => (
               <Link
                 key={card.title}
                 href={card.href}
-                {...(card.external
-                  ? { target: "_blank", rel: "noopener noreferrer" }
-                  : {})}
                 className="group bg-card rounded-xl border border-border p-6 sm:p-8 flex flex-col hover:shadow-lg hover:border-accent/30 transition-all"
               >
                 <p className="text-4xl mb-4">{card.emoji}</p>
