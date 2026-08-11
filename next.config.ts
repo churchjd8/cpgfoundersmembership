@@ -6,12 +6,15 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
-      { source: "/vip-day-apply", destination: "/work-with-jeff", permanent: true },
-      { source: "/vip-day-apply/:path*", destination: "/work-with-jeff/:path*", permanent: true },
-      { source: "/vipday", destination: "/work-with-jeff", permanent: true },
-      { source: "/90-day-breakthrough", destination: "/work-with-jeff", permanent: false },
-      { source: "/90-day-breakthrough-apply", destination: "/work-with-jeff", permanent: false },
-      { source: "/advisory", destination: "/work-with-jeff", permanent: false },
+      // /apply is the canonical application URL — everything funnels there.
+      { source: "/work-with-jeff", destination: "/apply", permanent: true },
+      { source: "/work-with-jeff/:path*", destination: "/apply/:path*", permanent: true },
+      { source: "/vip-day-apply", destination: "/apply", permanent: true },
+      { source: "/vip-day-apply/:path*", destination: "/apply/:path*", permanent: true },
+      { source: "/vipday", destination: "/apply", permanent: true },
+      { source: "/90-day-breakthrough", destination: "/apply", permanent: false },
+      { source: "/90-day-breakthrough-apply", destination: "/apply", permanent: false },
+      { source: "/advisory", destination: "/apply", permanent: false },
     ];
   },
 };

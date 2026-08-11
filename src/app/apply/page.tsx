@@ -33,7 +33,7 @@ export default function WorkWithJeffApplyPage() {
       });
 
       if (res.ok) {
-        router.push("/work-with-jeff/thank-you");
+        router.push("/apply/thank-you");
       } else {
         setStatus("error");
       }
@@ -48,8 +48,12 @@ export default function WorkWithJeffApplyPage() {
       <section className="relative bg-foreground text-white overflow-hidden">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
           <div className="max-w-3xl mx-auto text-center">
-            <span className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider bg-accent text-white rounded-full mb-6">
-              Application
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 text-xs font-bold uppercase tracking-wider bg-green-600 text-white rounded-full mb-6">
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full rounded-full bg-white opacity-75 animate-ping" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-white" />
+              </span>
+              Currently accepting applications
             </span>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight tracking-tight">
               Apply to Work with Jeff
@@ -59,10 +63,11 @@ export default function WorkWithJeffApplyPage() {
               Tell us where you are and what you&rsquo;re facing, and we&rsquo;ll get back to you
               within 2 business days with next steps.
             </p>
-            <p className="mt-3 text-sm text-white/40">
-              Jeff is at capacity and unable to accept everyone. Each engagement is custom-built
-              around your business and what will move the needle most. If it&rsquo;s the right fit,
-              we&rsquo;ll be in touch.
+            <p className="mt-6 text-base text-white/80 max-w-2xl mx-auto leading-relaxed">
+              Jeff has room for <strong className="text-white">2-3 more founders</strong> right
+              now. He works with a small number at a time because each engagement is built around
+              your business, not a template. When those spots fill, this closes until one opens
+              back up.
             </p>
           </div>
         </div>

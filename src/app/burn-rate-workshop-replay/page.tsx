@@ -211,7 +211,7 @@ export default function BurnRateWorkshopReplayPage() {
             </p>
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
-                href="/90-day-breakthrough-apply"
+                href="/apply"
                 className="inline-flex items-center justify-center px-8 py-4 bg-accent hover:bg-accent-dark text-white font-semibold rounded-lg transition-colors text-lg"
               >
                 Apply for the 90-Day Breakthrough &rarr;

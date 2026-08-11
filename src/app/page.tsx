@@ -63,7 +63,7 @@ const offers = [
       "Bring Jeff Church's experience and strategy into your business in a 1:1 way. A custom engagement built around your business and the decisions in front of you - strategy, fundraising, retail, margins, team, or category.",
     who: "Founders ready for direct, hands-on work with Jeff. Due to capacity, he isn't able to accept everyone - submit a form if you're interested.",
     cta: "Apply now",
-    href: "/work-with-jeff",
+    href: "/apply",
   },
 ];
 

@@ -55,8 +55,12 @@ export default function ResourcesPage() {
                 Free Resources for CPG Founders
               </h1>
               <p className="mt-6 text-lg text-white/70 max-w-2xl leading-relaxed">
-                Free tools, templates, and training from Jeff Church to help you with everything
-                from fundraising and cash management to retail strategy and scaling operations.
+                The calculators, models, white papers, and training Jeff Church built across 35
+                years and eight companies. Fundraising, cash management, retail strategy,
+                margins, operations.
+              </p>
+              <p className="mt-4 text-lg text-white/70 max-w-2xl leading-relaxed">
+                All of it free. No call, no pitch, no catch.
               </p>
               <div className="mt-8">
                 <ResourceModal
@@ -77,6 +81,30 @@ export default function ResourcesPage() {
                 />
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========== WHATSAPP BAND ========== */}
+      <section className="bg-green-600 text-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
+          <div className="flex flex-col md:flex-row md:items-center gap-6 md:gap-8">
+            <p className="text-4xl shrink-0">💬</p>
+            <div className="flex-1">
+              <h2 className="text-xl sm:text-2xl font-bold tracking-tight">
+                The resources are free. So is the room they came from.
+              </h2>
+              <p className="mt-2 text-white/80 leading-relaxed">
+                275+ CPG founders in one WhatsApp group, answering each other&rsquo;s questions
+                in real time. Nobody sells anything in there.
+              </p>
+            </div>
+            <Link
+              href="/founders-only"
+              className="shrink-0 inline-flex items-center justify-center px-6 py-3 bg-white text-green-700 hover:bg-white/90 font-semibold rounded-lg transition-colors"
+            >
+              Request to join &rarr;
+            </Link>
           </div>
         </div>
       </section>
@@ -240,52 +268,49 @@ export default function ResourcesPage() {
         </div>
       </section>
 
-      {/* ========== COMMUNITY & BABU ========== */}
+      {/* ========== BABU ========== */}
       <section className="py-16 md:py-24 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
-              Connect and build with other founders
-            </h2>
-          </div>
-
-          <div className="grid gap-6 md:grid-cols-2">
-            {/* WhatsApp */}
-            <div className="bg-card rounded-xl border border-border p-6 sm:p-8 flex flex-col">
-              <p className="text-3xl mb-3">💬</p>
-              <h3 className="text-xl font-bold mb-2">CPG Founders WhatsApp Group</h3>
-              <p className="text-muted leading-relaxed flex-1">
-                Join 275+ CPG founders for peer-to-peer support, quick answers, vetted partner
-                introductions, and curated resources. Free, forever.
-              </p>
-              <div className="mt-6 pt-4 border-t border-border">
-                <Link
-                  href="/founders-only"
-                  className="inline-flex items-center px-5 py-2.5 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-colors text-sm"
-                >
-                  Request to join &rarr;
-                </Link>
+          <a
+            href="https://www.askbabu.ai"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group block bg-foreground text-white rounded-2xl p-8 sm:p-12 hover:shadow-xl transition-all"
+          >
+            <div className="grid lg:grid-cols-5 gap-8 items-center">
+              <div className="lg:col-span-3">
+                <span className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider bg-accent text-white rounded-full mb-5">
+                  10 days free
+                </span>
+                <p className="text-5xl mb-4">🤖</p>
+                <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">Babu AI</h2>
+                <p className="mt-4 text-lg text-white/70 leading-relaxed">
+                  The tools on this page answer one question each. Babu answers whatever you
+                  bring it - pricing, promo math, retailer strategy, fundraising prep - trained
+                  on 35+ years of CPG operating experience. Underneath it sit 40+ purpose-trained
+                  Gurus, each built for a single job.
+                </p>
+                <span className="mt-8 inline-flex items-center justify-center px-8 py-4 bg-accent group-hover:bg-accent-dark text-white font-semibold rounded-lg transition-colors text-lg">
+                  Start the free trial &rarr;
+                </span>
               </div>
+              <ul className="lg:col-span-2 space-y-3 text-white/70">
+                {[
+                  "Brand Positioning Guru",
+                  "Investor Pitch Prep Coach",
+                  "Fatal Flaw Assessment",
+                  "Product Line P&L",
+                  "Co-Man Contract Review",
+                  "...and 35 more",
+                ].map((g) => (
+                  <li key={g} className="flex items-start gap-3">
+                    <span className="text-accent font-bold">&rarr;</span>
+                    <span>{g}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
-
-            {/* Babu */}
-            <div className="bg-card rounded-xl border border-border p-6 sm:p-8 flex flex-col">
-              <p className="text-3xl mb-3">🤖</p>
-              <h3 className="text-xl font-bold mb-2">Babu AI - Free Trial</h3>
-              <p className="text-muted leading-relaxed flex-1">
-                Your on-demand CPG advisor. Deep Research, Launch Checklists, financial review,
-                pricing analysis, and more. Trained on Jeff&rsquo;s 35+ years of CPG experience.
-              </p>
-              <div className="mt-6 pt-4 border-t border-border">
-                <Link
-                  href="/babu-early"
-                  className="inline-flex items-center px-5 py-2.5 bg-accent hover:bg-accent-dark text-white font-semibold rounded-lg transition-colors text-sm"
-                >
-                  Get free beta access &rarr;
-                </Link>
-              </div>
-            </div>
-          </div>
+          </a>
         </div>
       </section>
 
@@ -352,32 +377,36 @@ export default function ResourcesPage() {
         </div>
       </section>
 
-      {/* ========== 90-DAY BREAKTHROUGH CTA ========== */}
+      {/* ========== ADVISORY CTA ========== */}
       <section className="py-16 md:py-24 bg-foreground text-white">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
-          <span className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider bg-accent text-white rounded-full mb-6">
-            Go Deeper
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 text-xs font-bold uppercase tracking-wider bg-green-600 text-white rounded-full mb-6">
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full rounded-full bg-white opacity-75 animate-ping" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-white" />
+            </span>
+            Currently accepting applications
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
-            Ready to work through it with Jeff?
+            Want Jeff&rsquo;s eyes on your business?
           </h2>
           <p className="mt-6 text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
-            The 90-Day Breakthrough is where Jeff works directly with founders to break through
-            whatever&rsquo;s blocking the next stage. Onboarding diagnostic, 3x/month group sessions,
-            weekly accountability calls, email access to Jeff, and the full toolkit.
+            Everything on this page is what Jeff learned the hard way. If you want him working
+            through it with you directly, he takes on a small number of founders at a time and
+            has room for 2-3 more right now.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
-              href="/90-day-breakthrough-apply"
+              href="/apply"
               className="inline-flex items-center justify-center px-8 py-4 bg-accent hover:bg-accent-dark text-white font-semibold rounded-lg transition-colors text-lg"
             >
-              Apply for the 90-Day Breakthrough &rarr;
+              Apply to work with Jeff &rarr;
             </Link>
             <Link
-              href="/#programs"
+              href="/mba-for-cpg"
               className="inline-flex items-center justify-center px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg transition-colors text-lg"
             >
-              See all programs
+              Or start with the MBA for CPG
             </Link>
           </div>
         </div>

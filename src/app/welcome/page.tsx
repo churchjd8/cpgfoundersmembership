@@ -43,7 +43,7 @@ const paidStuff = [
     price: "Selective, application only",
     description:
       "Work with Jeff directly on growth, fundraising, and exit planning. A small number of founders at a time, because that's the only way it works.",
-    href: "/advisory",
+    href: "/apply",
     linkLabel: "Learn more",
   },
 ];
