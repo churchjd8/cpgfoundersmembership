@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { NewsletterForm } from "@/components/newsletter-form";
+import { BookWaitlistForm } from "@/components/book-waitlist-form";
 
 export const metadata: Metadata = {
   title: "Welcome to the CPG Founders Group",
@@ -170,7 +170,7 @@ export default function WelcomePage() {
             Drop your email and you&rsquo;ll hear the moment it&rsquo;s out, along with
             Jeff&rsquo;s notes for founders in between.
           </p>
-          <NewsletterForm />
+          <BookWaitlistForm />
         </div>
       </section>
 
