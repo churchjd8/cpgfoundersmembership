@@ -1,5 +1,5 @@
 # New Contact Nurture Sequence — REBUILD
-## CPG Founders Group | 9 emails over 30 days
+## CPG Founders Group | 10 emails over 31 days
 
 Replaces `Nurture Email Sequence - Part 2.md`. Drafted 2026-08-11.
 
@@ -19,11 +19,14 @@ Replaces `Nurture Email Sequence - Part 2.md`. Drafted 2026-08-11.
 
 | Trigger | Action |
 |---|---|
-| Submits `/apply` | **Exit sequence immediately.** Route to hot-lead flow. Nobody who raised their hand keeps getting nurtured. |
+| **Converts to a paying client** | **Exit sequence immediately.** This is the only hard exit. |
+| Submits `/apply` | **Stays in the flow.** Applying isn't converting — keep warming them. Notify Jeff, don't unsubscribe. |
 | Buys MBA for CPG | Skip email 6 |
 | Starts Babu trial or pays | Skip email 4 |
 | Has `WhatsApp Group` tag | Skip email 5 |
 | Has `CPT Book Waitlist` tag | Skip email 7 |
+
+> One consequence of keeping applicants in: someone who applies on day 12 still gets the day-31 close asking them to apply. Softened by the fact that email 10 opens by acknowledging the month rather than assuming they've done nothing — but if it grates, the cheap fix is a single conditional line at the top of email 10 for anyone carrying an application tag.
 
 ### Open dependencies
 
@@ -54,7 +57,7 @@ Hey {{first_name}},
 
 Quick note so you know what you signed up for.
 
-Over the next month I'm going to send you nine emails. Some are stories from thirty years of building consumer brands — including the ones that went badly, which are usually the useful ones. Some are tools. A couple will mention things I sell, and I'll be obvious about it when I do.
+Over the next month I'm going to send you ten emails. Some are stories from thirty years of building consumer brands — including the ones that went badly, which are usually the useful ones. Some are tools. A couple will mention things I sell, and I'll be obvious about it when I do.
 
 If that's not what you want, unsubscribe. There's a link at the bottom and it won't hurt my feelings. I'm sixty-four and building my ninth company. I've made peace with not being for everyone.
 
@@ -271,7 +274,7 @@ Jeff
 
 ---
 
-# EMAIL 7 — The Book (Day 23)
+# EMAIL 7 — The Book (Day 22)
 **Purpose:** Free ask, keeps momentum, feeds the launch list.
 **CTA:** Book waitlist
 **P.S.:** WhatsApp group
@@ -308,7 +311,46 @@ Jeff
 
 ---
 
-# EMAIL 8 — Why He's Still Doing This (Day 27)
+# EMAIL 8 — Client Results (Day 25)
+**Purpose:** The only proof email in the sequence. Shows what working with Jeff actually produces, so the day-31 close isn't asking for trust the sequence never earned.
+**CTA:** `/apply`
+**P.S.:** Babu, as the cheaper rung on the same ladder
+**⚠️ Needs Jeff's sign-off before send — real client, real financials, real name.** Confirm Krystal is fine being named and that the $250K bridge figure is still accurate and shareable. If she'd rather not be named, "a founder I worked with last year" costs almost nothing in credibility. What can't be swapped out is the specificity of the move.
+
+**Subject:** `she raised $250K in her first month`
+
+Hey {{first_name}},
+
+I've told you a lot of my own stories this month. Here's someone else's.
+
+A founder named Krystal came to me with investors sitting on the fence. She'd been grinding the raise for months. The interest was real. The conviction wasn't. Anyone who's run a process knows exactly what that limbo feels like — nobody says no, nobody wires anything.
+
+In our first session I suggested a completely different approach to the debt and equity split in her financing.
+
+It wasn't obvious. She wouldn't have landed on it herself, and I don't say that as a knock — I only saw it because I've watched that specific situation play out dozens of times across thirty years and forty-four rounds. That's the whole value of doing something this long. Pattern recognition you can't shortcut.
+
+From there we retooled the deck and built her full five-year bottom-up model.
+
+The investors who'd been on the fence came over. She closed **$250,000 in a bridge round in her first month.**
+
+Her words: *"I would never have thought to do that without Jeff's push."*
+
+I'm not telling you this because every founder gets that result. They don't, and anyone promising you they do is selling something. Some of the work I do is slower and less dramatic — margin architecture that pays off eighteen months later, a co-man agreement renegotiated, a hire not made.
+
+I'm telling you because of what the work actually is. It isn't motivation. It's someone who's already made your mistake looking at your specific situation and saying *"don't do that, do this instead."*
+
+That's the whole offer. If you want that on your business:
+
+**[Apply here](https://cpgfoundersgroup.com/apply)**
+
+Talk soon,
+Jeff
+
+*P.S. If 1:1 isn't where you are right now, [Babu](https://www.askbabu.ai) is the cheap version of the same idea — the pattern recognition without me in the room. Ten days free.*
+
+---
+
+# EMAIL 9 — Why He's Still Doing This (Day 28)
 **Purpose:** Emotional peak. **No ask.** The email before the close should cost the reader nothing.
 **CTA:** None
 **P.S.:** Reply invitation only
@@ -345,7 +387,7 @@ Jeff
 
 ---
 
-# EMAIL 9 — The Close (Day 30)
+# EMAIL 10 — The Close (Day 31)
 **Purpose:** Direct, specific, no manufactured urgency. Lands right after the emotional peak.
 **CTA:** `/apply`
 **P.S.:** Everything else, for the people who aren't ready
@@ -354,7 +396,9 @@ Jeff
 
 Hey {{first_name}},
 
-Over the last month I've sent you the end zone, the July 3rd phone call, the margin math, the bell I didn't get to ring. I hope some of it was useful.
+Over the last month I've sent you the end zone, the July 3rd phone call, the margin math, the bell I didn't get to ring, and Krystal's raise. I hope some of it was useful.
+
+If you've already applied — thank you, I've got it, and you can ignore the rest of this one.
 
 Here's the one direct ask of the whole sequence.
 
