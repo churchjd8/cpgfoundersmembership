@@ -31,10 +31,12 @@ const teamSizes = [
 export default function FoundersOnlyPage() {
   const router = useRouter();
   const [status, setStatus] = useState<"idle" | "loading" | "error">("idle");
+  const [errorMsg, setErrorMsg] = useState("");
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setStatus("loading");
+    setErrorMsg("");
 
     const form = e.currentTarget;
     const data = Object.fromEntries(new FormData(form));
@@ -49,6 +51,9 @@ export default function FoundersOnlyPage() {
       if (res.ok) {
         router.push("/founders-only/welcome");
       } else {
+        // A rejected phone number is fixable by the founder, so say which one.
+        const body = await res.json().catch(() => null);
+        setErrorMsg(body?.error || "");
         setStatus("error");
       }
     } catch {
@@ -151,6 +156,25 @@ export default function FoundersOnlyPage() {
             </div>
 
             <div>
+              <label htmlFor="fo-phone" className="block text-sm font-medium mb-1">
+                WhatsApp Number <span className="text-red-500">*</span>
+              </label>
+              <input
+                type="tel"
+                id="fo-phone"
+                name="phone"
+                required
+                autoComplete="tel"
+                placeholder="+1 (555) 123-4567"
+                className="w-full px-4 py-3 rounded-lg border border-border bg-white focus:outline-none focus:ring-2 focus:ring-accent"
+              />
+              <p className="mt-1 text-xs text-muted">
+                Include your country code. This must be the number you&rsquo;ll join
+                from &mdash; we use it to approve your request.
+              </p>
+            </div>
+
+            <div>
               <label htmlFor="fo-business" className="block text-sm font-medium mb-1">
                 Business Name <span className="text-red-500">*</span>
               </label>
@@ -239,7 +263,7 @@ export default function FoundersOnlyPage() {
 
             {status === "error" && (
               <p className="text-sm text-red-500 text-center">
-                Something went wrong. Please try again.
+                {errorMsg || "Something went wrong. Please try again."}
               </p>
             )}
           </form>

@@ -1,4 +1,6 @@
 import { NextResponse } from "next/server";
+import { getSupabaseAdmin } from "@/lib/supabase";
+import { phoneKey, toE164 } from "@/lib/phone";
 
 const WHATSAPP_FORM_ID = "2149419862";
 
@@ -20,63 +22,106 @@ async function getKajabiToken() {
 
 export async function POST(request: Request) {
   try {
-    const { name, email, business, stage, revenue, team } = await request.json();
+    const { name, email, business, stage, revenue, team, phone } =
+      await request.json();
 
-    if (!name || !email || !business || !stage || !revenue || !team) {
+    if (!name || !email || !business || !stage || !revenue || !team || !phone) {
       return NextResponse.json(
         { error: "All fields are required" },
         { status: 400 }
       );
     }
 
-    const accessToken = await getKajabiToken();
-    const headers = {
-      Authorization: `Bearer ${accessToken}`,
-      "Content-Type": "application/vnd.api+json",
-    };
+    // The number is how we verify the WhatsApp join request later, so a bad one
+    // is worse than none — reject it here rather than storing junk.
+    const phoneE164 = toE164(String(phone));
+    if (!phoneE164) {
+      return NextResponse.json(
+        { error: "Please enter a valid WhatsApp number, including country code." },
+        { status: 400 }
+      );
+    }
 
-    // Submit through the Kajabi WhatsApp Group form
-    // custom_2 = Business Name, custom_3 = Brand Stage, custom_4 = Revenue, custom_5 = Team Size
-    const formRes = await fetch(
-      `https://api.kajabi.com/v1/forms/${WHATSAPP_FORM_ID}/submit`,
-      {
-        method: "POST",
-        headers,
-        body: JSON.stringify({
-          data: {
-            type: "form_submissions",
-            attributes: {
-              name,
-              email,
-              custom_2: business,
-              custom_3: stage,
-              custom_4: revenue,
-              custom_5: team,
-            },
-          },
-        }),
-      }
-    );
+    // Kajabi is the marketing list; Supabase is the verification record. Write
+    // ours first so a Kajabi hiccup can't lose the number.
+    const supabase = getSupabaseAdmin();
+    const supabasePromise = supabase
+      ? supabase
+          .from("whatsapp_signups")
+          .insert({
+            name,
+            email,
+            business,
+            stage,
+            revenue,
+            team,
+            phone_raw: String(phone),
+            phone_e164: phoneE164,
+            phone_key: phoneKey(phoneE164),
+          })
+          .then(({ error }) => {
+            if (error) console.error("whatsapp_signups insert error:", error);
+          })
+      : Promise.resolve();
 
-    if (!formRes.ok) {
-      const err = await formRes.json();
-      console.error("Kajabi form error:", err);
-      // Fallback: create contact directly
-      await fetch("https://api.kajabi.com/v1/contacts", {
-        method: "POST",
-        headers,
-        body: JSON.stringify({
-          data: {
-            type: "contacts",
-            attributes: { name, email, subscribed: true },
-            relationships: {
-              site: {
-                data: { type: "sites", id: process.env.KAJABI_SITE_ID! },
+    try {
+      const accessToken = await getKajabiToken();
+      const headers = {
+        Authorization: `Bearer ${accessToken}`,
+        "Content-Type": "application/vnd.api+json",
+      };
+
+      // Submit through the Kajabi WhatsApp Group form
+      // custom_2 = Business Name, custom_3 = Brand Stage, custom_4 = Revenue, custom_5 = Team Size
+      // custom_6 = WhatsApp Number. Kajabi silently drops values for fields that
+      // don't exist on the form, so this is a no-op until the field is added in
+      // the Kajabi UI. Supabase is the source of truth either way.
+      const formRes = await fetch(
+        `https://api.kajabi.com/v1/forms/${WHATSAPP_FORM_ID}/submit`,
+        {
+          method: "POST",
+          headers,
+          body: JSON.stringify({
+            data: {
+              type: "form_submissions",
+              attributes: {
+                name,
+                email,
+                custom_2: business,
+                custom_3: stage,
+                custom_4: revenue,
+                custom_5: team,
+                custom_6: phoneE164,
               },
             },
-          },
-        }),
-      });
+          }),
+        }
+      );
+
+      if (!formRes.ok) {
+        const err = await formRes.json();
+        console.error("Kajabi form error:", err);
+        // Fallback: create contact directly
+        await fetch("https://api.kajabi.com/v1/contacts", {
+          method: "POST",
+          headers,
+          body: JSON.stringify({
+            data: {
+              type: "contacts",
+              attributes: { name, email, subscribed: true },
+              relationships: {
+                site: {
+                  data: { type: "sites", id: process.env.KAJABI_SITE_ID! },
+                },
+              },
+            },
+          }),
+        });
+      }
+    } finally {
+      // Always settle the write, even if Kajabi threw — otherwise the insert can
+      // be cut off when the serverless function freezes.
+      await supabasePromise;
     }
 
     return NextResponse.json({ success: true });
