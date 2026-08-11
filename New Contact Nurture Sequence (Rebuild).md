@@ -315,7 +315,7 @@ Jeff
 **Purpose:** The only proof email in the sequence. Shows what working with Jeff actually produces, so the day-31 close isn't asking for trust the sequence never earned.
 **CTA:** `/apply`
 **P.S.:** Babu, as the cheaper rung on the same ladder
-**⚠️ Needs Jeff's sign-off before send — real client, real financials, real name.** Confirm Krystal is fine being named and that the $250K bridge figure is still accurate and shareable. If she'd rather not be named, "a founder I worked with last year" costs almost nothing in credibility. What can't be swapped out is the specificity of the move.
+**✅ Cleared to send.** Krystal signed off on being named with the $250K bridge figure (confirmed 2026-08-11). If the copy changes materially from what's below, re-check with her before it goes out.
 
 **Subject:** `she raised $250K in her first month`
 
