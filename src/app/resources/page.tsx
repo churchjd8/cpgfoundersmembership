@@ -268,6 +268,49 @@ export default function ResourcesPage() {
         </div>
       </section>
 
+      {/* ========== BOOK CALLOUT ========== */}
+      <section className="py-16 md:py-24 bg-background">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <div className="bg-card rounded-xl border border-border p-6 sm:p-8 md:p-10">
+            <div className="grid md:grid-cols-3 gap-8 items-center">
+              <div className="md:col-span-2">
+                <span className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider bg-accent text-white rounded-full mb-4">
+                  Coming soon
+                </span>
+                <h2 className="text-2xl sm:text-3xl font-bold tracking-tight">
+                  The Cold-Pressed Truth
+                </h2>
+                <p className="mt-3 text-lg font-medium leading-snug">
+                  A Founder&rsquo;s Field Guide to Building, Scaling, and Selling a Consumer
+                  Brand
+                </p>
+                <p className="mt-3 text-sm font-semibold text-accent">Foreword by Jay Shetty</p>
+                <p className="mt-4 text-muted leading-relaxed">
+                  Suja from an ice closet to $100 million in six years, the July 3rd call from
+                  Coca-Cola, and everything it cost. Part memoir, part operating manual - it
+                  keeps stopping to hand you a tool.
+                </p>
+                <div className="mt-6">
+                  <Link
+                    href="/book"
+                    className="inline-flex items-center px-6 py-3 bg-accent hover:bg-accent-dark text-white font-semibold rounded-lg transition-colors"
+                  >
+                    Join the waitlist &rarr;
+                  </Link>
+                </div>
+              </div>
+              <div className="text-center">
+                <div className="bg-background rounded-xl p-8">
+                  <p className="text-5xl mb-3">📕</p>
+                  <p className="text-3xl font-bold text-accent">23</p>
+                  <p className="text-muted mt-1">chapters, three parts</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ========== BABU ========== */}
       <section className="py-16 md:py-24 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

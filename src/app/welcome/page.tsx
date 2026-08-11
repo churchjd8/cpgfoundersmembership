@@ -161,9 +161,13 @@ export default function WelcomePage() {
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
             The Cold-Pressed Truth
           </h2>
+          <p className="mt-4 text-lg sm:text-xl text-white/80 font-medium leading-snug">
+            A Founder&rsquo;s Field Guide to Building, Scaling, and Selling a Consumer Brand
+          </p>
+          <p className="mt-4 text-accent font-semibold">Foreword by Jay Shetty</p>
           <p className="mt-6 text-lg text-white/70 leading-relaxed">
-            Jeff&rsquo;s book on building Suja from a garage to $100 million in five years, and
-            everything that cost him along the way. The wins are in there. So are the parts
+            Jeff&rsquo;s book on building Suja from an ice closet to $100 million in six years,
+            and everything that cost him along the way. The wins are in there. So are the parts
             most founders never say out loud.
           </p>
           <p className="mt-4 text-white/50">
@@ -171,6 +175,14 @@ export default function WelcomePage() {
             Jeff&rsquo;s notes for founders in between.
           </p>
           <BookWaitlistForm />
+          <p className="mt-6">
+            <Link
+              href="/book"
+              className="text-accent hover:text-accent-dark font-semibold transition-colors"
+            >
+              More about the book &rarr;
+            </Link>
+          </p>
         </div>
       </section>
 
