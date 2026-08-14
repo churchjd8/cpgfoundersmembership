@@ -57,6 +57,31 @@ export default async function BookCoverVotesPage() {
   const comments = rows.filter((r) => r.comment);
   const leader = COVERS.reduce((best, c) => (counts[c.id] > counts[best.id] ? c : best), COVERS[0]);
 
+  // Repeat voting is blocked per device, not per person — someone determined
+  // can vote from a second browser. Rather than cap by IP (phones on cellular
+  // share addresses, so a cap would reject real votes), surface the overlap
+  // and let a human judge it.
+  const perNetwork = new Map<string, number>();
+  for (const row of rows) {
+    if (row.ip_hash) perNetwork.set(row.ip_hash, (perNetwork.get(row.ip_hash) || 0) + 1);
+  }
+  const sharedNetworks = [...perNetwork.entries()].filter(([, n]) => n > 1);
+  const votesFromSharedNetworks = sharedNetworks.reduce((sum, [, n]) => sum + n, 0);
+
+  // The tally with each shared network collapsed to a single vote — a floor to
+  // sanity-check the headline numbers against.
+  const seenNetwork = new Set<string>();
+  const uniqueCounts: Record<Choice, number> = { A: 0, B: 0, C: 0 };
+  let uniqueTotal = 0;
+  for (const row of [...rows].reverse()) {
+    if (row.ip_hash) {
+      if (seenNetwork.has(row.ip_hash)) continue;
+      seenNetwork.add(row.ip_hash);
+    }
+    if (uniqueCounts[row.choice] !== undefined) uniqueCounts[row.choice] += 1;
+    uniqueTotal += 1;
+  }
+
   return (
     <div>
       <div className="mb-6">
@@ -77,6 +102,24 @@ export default async function BookCoverVotesPage() {
             If the table is missing, run{" "}
             <code>src/app/api/book-cover-vote/schema.sql</code> in the Supabase SQL editor.
           </span>
+        </div>
+      )}
+
+      {sharedNetworks.length > 0 && (
+        <div className="mb-6 rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900">
+          <p className="font-medium">
+            {votesFromSharedNetworks} {votesFromSharedNetworks === 1 ? "vote" : "votes"} came from{" "}
+            {sharedNetworks.length} shared {sharedNetworks.length === 1 ? "network" : "networks"}.
+          </p>
+          <p className="mt-1 text-amber-800/90">
+            Usually innocent — a couple on the same wifi, or phones behind one carrier address.
+            Counting each of those networks once would give{" "}
+            <span className="font-medium">
+              A {uniqueCounts.A} &middot; B {uniqueCounts.B} &middot; C {uniqueCounts.C}
+            </span>{" "}
+            across {uniqueTotal} {uniqueTotal === 1 ? "vote" : "votes"}. If that flips the winner,
+            trust the narrower number.
+          </p>
         </div>
       )}
 
@@ -164,7 +207,17 @@ export default async function BookCoverVotesPage() {
             )}
             {rows.map((row, i) => (
               <tr key={i} className="border-b border-border last:border-0">
-                <td className="px-4 py-3 whitespace-nowrap text-muted">{fmtDate(row.created_at)}</td>
+                <td className="px-4 py-3 whitespace-nowrap text-muted">
+                  {fmtDate(row.created_at)}
+                  {row.ip_hash && (perNetwork.get(row.ip_hash) || 0) > 1 && (
+                    <span
+                      title="Another vote came from this same network"
+                      className="ml-2 rounded bg-amber-100 px-1.5 py-0.5 text-xs font-medium text-amber-800"
+                    >
+                      shared network
+                    </span>
+                  )}
+                </td>
                 <td className="px-4 py-3 font-semibold">Cover {row.choice}</td>
                 <td className="px-4 py-3">{row.name || "—"}</td>
                 <td className="px-4 py-3">
