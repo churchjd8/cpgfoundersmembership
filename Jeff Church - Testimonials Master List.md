@@ -1,6 +1,8 @@
 # Jeff Church — Testimonials Master List
 
-Compiled 2026-08-14. Sources: live site (cpgfoundersgroup.com), old Squarespace site (dreammakershq.com, via Wayback), book page endorsements.
+Compiled 2026-08-14. Sources: live site (cpgfoundersgroup.com), old Squarespace site (dreammakershq.com, via Wayback), testimonial graphics (full originals), book page endorsements.
+
+**For book endorsement use, skip to [Book Endorsement Versions](#book-endorsement-versions-reworked) below.**
 
 ---
 
@@ -73,8 +75,58 @@ Different asset class — blurbs from industry names, not client results.
 
 ---
 
+## Book Endorsement Versions (reworked)
+
+For *The Cold-Pressed Truth*. Program/bootcamp references stripped so each quote reads as an endorsement of Jeff and his CPG knowledge, not of a specific offer. Edits are minimal and noted under each. Source for the full originals: testimonial graphics dated 2026-08-14 (the live site runs trimmed versions of these).
+
+### Erik Rothchild — CEO, WheyUP
+> "Jeff has been a tremendous asset to the growth and future of my brand WheyUP. As someone with the success that Jeff has had in the beverage industry, he is incredibly gracious with his time, experience and guidance. I am very fortunate to have someone of Jeff's experience in the beverage world and quality as a human on my side!"
+
+*Edit: "For me personally, this has been" → "Jeff has been." Nothing else changed.*
+
+### Simon Solis-Cohen — Founder, Huxley
+> "Working with Jeff has been a game changing crash course for my business. It really is an MBA in CPG. His lessons were full of relevant and detail, and the dialogue along the way has been invaluable. Jeff is a wealth of knowledge when it comes to finance, fundraising, brand strategy, and more."
+
+*Edits: "The CPG Accelerator" → "Working with Jeff"; "The bootcamp videos were" → "His lessons were"; "during the in-person calls" → "along the way"; "Jeff and his team are" → "Jeff is."*
+
+### Carolyn Hamlet — Founder, Oku Conscious Energy Gummy Snacks
+> "Learning from Jeff has been an absolute game-changer for my CPG brand. His depth of insight into launching and scaling a brand is unparalleled, offering practical, MBA-level education that has far exceeded my expectations in terms of ROI. Jeff's thoughtful leadership, unwavering integrity, and genuine passion for helping others succeed make him not only a brilliant mentor but also an exceptional person, whose guidance has saved me invaluable time and money."
+
+*Edits: "Being part of this bootcamp" → "Learning from Jeff"; "The program's depth" → "His depth."*
+
+### Hannah Minardi — Co-Founder, Standard Self Care
+> "Working with Jeff was an incredible momentum shift for my business in 2024. From exposure to the most connected CPG community, to the level of detail that Jeff brought to every conversation. He tailored everything to be intentional with each brand. We loved being involved in the network that spiraled from it as well!"
+
+*Edits: "The bootcamp created by Jeff" → "Working with Jeff"; "had in each session" → "brought to every conversation."*
+
+### Abe Schwartz and Todd Strauss — Co-Founders, TIZZ
+> "Jeff was a huge help for TIZZ. My partner Todd and I are both entertainment professionals, with zero beverage or CPG experience, but learning from Jeff was the perfect way to understand many aspects of the business and set us up for success going forward."
+
+*Edits: "The bootcamp program that Jeff and his partners put together was" → "Jeff was"; "going through the bootcamp" → "learning from Jeff"; "learn" → "understand."*
+
+### Austin Wiberg — Co-Founder, G7 Studio
+> "Working with Jeff was amazing. With each lesson it seemed as if Jeff told an entire story and without even knowing it I had acquired some amazing and company changing skills. Jeff's extraordinary knowledge of CPG helped us develop the blueprint of success for many products in both wholesale and DTC alike. His humble and KPI based approach is much appreciated!"
+
+*Edits: "The bootcamp that we did was amazing, with each slide" → "Working with Jeff was amazing. With each lesson."*
+
+### Tiffany Tatom — Co-Founder & CEO, Live Pure — no rework needed
+> "Prior to meeting Jeff I knew that we were missing something. With Jeff's amazing CPG knowledge, business experience and life lessons, his input has been invaluable. He led us all the way through a successful $1.5M Angel fund raising and it worked out exactly as he designed it. Access to Jeff's team of CPG experts has also been hugely helpful. In addition to being a great leader Jeff is extremely humble and approachable which made it very easy to work with him. 5 star review from Live Pure!"
+
+### Kim Perell — Co-Founder & CEO, JUNI — no rework needed
+> "Jeff is a rare individual in that he has deep knowledge of all departments and functional areas whether it be financial model building, sales, marketing, cost accounting, operations and whatever else, he can add deep value in any of these areas. Jeff was the primary reason that we got Juni into Moscoe and helped us secure Presence Marketing as our Natural Foods broker. Jeff is extremely well connected in the CPG world and more specifically the food and beverage areas. Jeff's amiable aggressive personality makes him very easy to work with."
+
+*(Kim also has a dedicated book blurb below — use one or the other, not both.)*
+
+### Colin Mckenna — Founder & CEO, LIXIR — no rework needed
+> "Jeff's contribution to LIXIR has been beyond anything I would have ever expected. Jeff was also pivotal in securing our first retailers and our first DSD Distributors."
+
+---
+
 ## Notes / open items
 
+- **"Erik" vs "Erick" Rothchild.** The testimonial graphic says Erik; the site says Erick. Verify before the book goes to print.
+- **Get sign-off on the reworked quotes.** The edits are light and none change meaning, but each person should approve their book version before print.
+- **The site runs trimmed versions.** The graphics hold the full originals for Rothchild, Solis-Cohen, Hamlet, Minardi, Schwartz/Strauss, and Wiberg. Worth restoring the fuller text on the site too.
 - **Tiffany Tatom brand naming is inconsistent.** Site testimonials say "Live Pure"; the MCP contact + story data (`mcp-server/data/stories.js`, `contacts.js`) says "Waav Organic" (frozen smoothie cubes). Pick one and make it consistent.
 - **Colin Mckenna / LIXIR is the only quote lost in the site migration.** Easy add if Jeff still wants it.
 - **The old /testimonials page was never archived** — likely more quotes there. Pull from the Squarespace account if it's still accessible.
