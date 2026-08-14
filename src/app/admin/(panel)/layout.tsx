@@ -12,10 +12,15 @@ export default function PanelLayout({ children }: { children: React.ReactNode })
     <div className="min-h-screen bg-stone-50">
       <header className="border-b border-border bg-white">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
-          <Link href="/admin" className="flex items-baseline gap-2">
-            <span className="font-serif text-lg font-bold">CPG Admin</span>
-            <span className="text-xs text-muted">Client Command Center</span>
-          </Link>
+          <div className="flex items-baseline gap-5">
+            <Link href="/admin" className="flex items-baseline gap-2">
+              <span className="font-serif text-lg font-bold">CPG Admin</span>
+              <span className="hidden text-xs text-muted sm:inline">Client Command Center</span>
+            </Link>
+            <Link href="/admin/book-covers" className="text-sm text-muted hover:text-accent">
+              Book poll
+            </Link>
+          </div>
           <LogoutButton />
         </div>
       </header>
