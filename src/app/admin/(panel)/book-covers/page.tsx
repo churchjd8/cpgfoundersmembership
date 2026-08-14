@@ -15,8 +15,8 @@ type VoteRow = {
 };
 
 const COVERS: { id: Choice; note: string; src: string }[] = [
-  { id: "A", note: "Cream", src: "/images/book-covers/cover-a.jpg" },
-  { id: "B", note: "Green", src: "/images/book-covers/cover-b.jpg" },
+  { id: "A", note: "Green", src: "/images/book-covers/cover-a.jpg" },
+  { id: "B", note: "Cream", src: "/images/book-covers/cover-b.jpg" },
   { id: "C", note: "Citrus", src: "/images/book-covers/cover-c.jpg" },
 ];
 
@@ -98,8 +98,8 @@ export default async function BookCoverVotesPage() {
                   src={cover.src}
                   alt={`Cover ${cover.id}`}
                   width={825}
-                  height={1275}
-                  className="h-20 w-auto rounded shadow-sm"
+                  height={1280}
+                  className="h-20 w-auto rounded border border-black/10 shadow-sm"
                 />
                 <div className="min-w-0">
                   <p className="text-xs uppercase tracking-wide text-muted">{cover.note}</p>

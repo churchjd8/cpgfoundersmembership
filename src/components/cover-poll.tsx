@@ -5,14 +5,9 @@ import { useEffect, useState, type FormEvent } from "react";
 
 type Choice = "A" | "B" | "C";
 
-type Results = {
-  counts: Record<Choice, number>;
-  total: number;
-} | null;
-
 const COVERS: { id: Choice; note: string; src: string }[] = [
-  { id: "A", note: "Cream", src: "/images/book-covers/cover-a.jpg" },
-  { id: "B", note: "Green", src: "/images/book-covers/cover-b.jpg" },
+  { id: "A", note: "Green", src: "/images/book-covers/cover-a.jpg" },
+  { id: "B", note: "Cream", src: "/images/book-covers/cover-b.jpg" },
   { id: "C", note: "Citrus", src: "/images/book-covers/cover-c.jpg" },
 ];
 
@@ -37,7 +32,6 @@ function readVoterId() {
 export function CoverPoll() {
   const [selected, setSelected] = useState<Choice | null>(null);
   const [voted, setVoted] = useState(false);
-  const [results, setResults] = useState<Results>(null);
   const [voting, setVoting] = useState(false);
   const [voteError, setVoteError] = useState(false);
   const [zoom, setZoom] = useState<Choice | null>(null);
@@ -77,8 +71,6 @@ export function CoverPoll() {
 
       if (!res.ok) throw new Error("vote failed");
 
-      const data = await res.json();
-      setResults(data.results ?? null);
       setVoted(true);
       try {
         localStorage.setItem(CHOICE_KEY, selected);
@@ -126,6 +118,7 @@ export function CoverPoll() {
   }
 
   const zoomCover = COVERS.find((c) => c.id === zoom);
+  const votedCover = COVERS.find((c) => c.id === selected);
 
   return (
     <>
@@ -173,14 +166,19 @@ export function CoverPoll() {
                         : "ring-1 ring-border shadow-sm hover:shadow-lg hover:ring-accent/40"
                     }`}
                   >
-                    <Image
-                      src={cover.src}
-                      alt={`Cover ${cover.id} — ${cover.note}`}
-                      width={825}
-                      height={1275}
-                      priority={cover.id === "A"}
-                      className="w-full h-auto"
-                    />
+                    {/* The hairline keeps the cream cover from dissolving into
+                        the white card and reading smaller than the other two. */}
+                    <span className="relative block">
+                      <Image
+                        src={cover.src}
+                        alt={`Cover ${cover.id} — ${cover.note}`}
+                        width={825}
+                        height={1280}
+                        priority
+                        className="block w-full h-auto"
+                      />
+                      <span className="pointer-events-none absolute inset-0 border border-black/15" />
+                    </span>
                     <span
                       className={`flex items-center justify-center gap-2 py-3 text-sm font-bold uppercase tracking-wider transition-colors ${
                         isSelected ? "bg-accent text-white" : "bg-white text-foreground"
@@ -250,63 +248,35 @@ export function CoverPoll() {
         </>
       )}
 
-      {/* ========== RESULTS + OPT-IN ========== */}
+      {/* ========== CONFIRMATION + OPT-IN ========== */}
+      {/* Running totals stay private — voters shouldn't be swayed by the pack. */}
       {voted && (
         <>
-          {results && results.total > 0 && (
-            <div className="mt-8 rounded-2xl border border-border bg-card p-5 sm:p-6">
-              <p className="text-xs font-bold uppercase tracking-wider text-muted">
-                Where it stands ({results.total} {results.total === 1 ? "vote" : "votes"})
-              </p>
-              <div className="mt-4 space-y-4">
-                {COVERS.map((cover) => {
-                  const count = results.counts[cover.id] ?? 0;
-                  const percent = results.total ? Math.round((count / results.total) * 100) : 0;
-                  return (
-                    <div key={cover.id} className="flex items-center gap-3">
-                      <Image
-                        src={cover.src}
-                        alt=""
-                        width={825}
-                        height={1275}
-                        className="h-14 w-auto rounded shadow-sm shrink-0"
-                      />
-                      <div className="flex-1 min-w-0">
-                        <div className="flex items-baseline justify-between gap-2 text-sm">
-                          <span
-                            className={`font-semibold ${
-                              selected === cover.id ? "text-accent" : ""
-                            }`}
-                          >
-                            Cover {cover.id}
-                            {selected === cover.id && (
-                              <span className="ml-1 font-normal text-muted">(yours)</span>
-                            )}
-                          </span>
-                          <span className="text-muted tabular-nums">
-                            {percent}% &middot; {count}
-                          </span>
-                        </div>
-                        <div className="mt-1.5 h-2.5 rounded-full bg-stone-200 overflow-hidden">
-                          <div
-                            className={`h-full rounded-full transition-all duration-700 ${
-                              selected === cover.id ? "bg-accent" : "bg-stone-400"
-                            }`}
-                            style={{ width: `${percent}%` }}
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  );
-                })}
+          {votedCover && (
+            <div className="mt-8 flex items-center gap-4 rounded-2xl border border-border bg-card p-4 sm:p-5">
+              <span className="relative block shrink-0">
+                <Image
+                  src={votedCover.src}
+                  alt={`Cover ${votedCover.id}`}
+                  width={825}
+                  height={1280}
+                  className="block h-20 w-auto rounded shadow-sm"
+                />
+                <span className="pointer-events-none absolute inset-0 rounded border border-black/15" />
+              </span>
+              <div className="min-w-0">
+                <p className="text-xs font-bold uppercase tracking-wider text-accent">
+                  Your vote is in
+                </p>
+                <p className="mt-1 font-serif text-xl font-bold">Cover {votedCover.id}</p>
+                <button
+                  type="button"
+                  onClick={() => setVoted(false)}
+                  className="mt-1 text-sm text-muted underline underline-offset-4 hover:text-accent"
+                >
+                  Change my vote
+                </button>
               </div>
-              <button
-                type="button"
-                onClick={() => setVoted(false)}
-                className="mt-5 text-sm text-muted underline underline-offset-4 hover:text-accent"
-              >
-                Change my vote
-              </button>
             </div>
           )}
 
@@ -384,7 +354,7 @@ export function CoverPoll() {
             src={zoomCover.src}
             alt={`Cover ${zoomCover.id} — ${zoomCover.note}`}
             width={825}
-            height={1275}
+            height={1280}
             className="max-h-[88vh] w-auto rounded-lg shadow-2xl"
           />
           <button

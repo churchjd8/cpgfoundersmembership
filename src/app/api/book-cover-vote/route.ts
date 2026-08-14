@@ -4,7 +4,7 @@ import { getSupabaseAdmin } from "@/lib/supabase";
 import { submitToKajabiForm, BOOK_WAITLIST_FORM_ID } from "@/lib/kajabi";
 
 // Cover poll for The Cold-Pressed Truth — see /bookcovers.
-//   POST  cast (or change) a vote, returns the running tally
+//   POST  cast (or change) a vote
 //   PUT   attach name/email/comment to that vote and join the book waitlist
 
 const CHOICES = ["A", "B", "C"] as const;
@@ -26,23 +26,6 @@ function hashIp(request: Request) {
   if (!ip) return null;
   const salt = process.env.ADMIN_PASSWORD || "cpg";
   return createHash("sha256").update(`${salt}:${ip}`).digest("hex").slice(0, 32);
-}
-
-async function getTallies() {
-  const supabase = getSupabaseAdmin();
-  if (!supabase) return null;
-
-  const { data, error } = await supabase.from(TABLE).select("choice");
-  if (error) {
-    console.error("Cover vote tally error:", error);
-    return null;
-  }
-
-  const counts: Record<Choice, number> = { A: 0, B: 0, C: 0 };
-  for (const row of data || []) {
-    if (isChoice(row.choice)) counts[row.choice] += 1;
-  }
-  return { counts, total: (data || []).length };
 }
 
 export async function POST(request: Request) {
@@ -77,7 +60,9 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Failed to record vote" }, { status: 500 });
     }
 
-    return NextResponse.json({ success: true, results: await getTallies() });
+    // Deliberately no tally in the response — running totals stay private so
+    // voters aren't swayed by the pack. Results live at /admin/book-covers.
+    return NextResponse.json({ success: true });
   } catch (err) {
     console.error("Cover vote error:", err);
     return NextResponse.json({ error: "Something went wrong" }, { status: 500 });
