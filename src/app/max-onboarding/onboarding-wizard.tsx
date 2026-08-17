@@ -124,6 +124,10 @@ function OverviewStep({ onNext }: { onNext: () => void }) {
           <span className="font-serif text-3xl font-bold text-foreground">
             ${ENGAGEMENT.totalInitialUsd.toLocaleString()}
           </span>
+          <span className="text-lg text-muted">
+            ${ENGAGEMENT.initialFeeUsd.toLocaleString()}/month &times;{" "}
+            {ENGAGEMENT.initialMonths}
+          </span>
           <span className="rounded-full bg-accent px-3 py-1 text-xs font-semibold uppercase tracking-wide text-white">
             Friends &amp; family rate
           </span>
