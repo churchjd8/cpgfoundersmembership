@@ -1,0 +1,173 @@
+# Babu Launch Emails — Copy/Paste HTML
+
+Two emails ready to paste into your email editor's HTML/source view. Both link to askbabu.ai/#pricing.
+
+---
+
+## Email 1 — Send TODAY
+
+**Subject:** Babu goes paid at midnight tomorrow (+ Babu now remembers you)
+
+```html
+<!-- Babu — "We're going paid" announcement email (send today) -->
+<!-- Plain-text copy + designed pricing cards. Paste into your ESP. All styles inline. -->
+<div style="font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.6;color:#1c1917;max-width:600px;">
+
+  <p>Hi friend,</p>
+
+  <p>Quick heads up. Starting tomorrow at midnight, Babu moves from free access to paid plans. To keep asking Babu anything, anytime, you'll want to pick a plan before then.</p>
+
+  <p>Upgrading takes about a minute, and you keep everything you've built so far.</p>
+
+  <p><strong>New: Babu now remembers you.</strong> Babu has memory now. It remembers facts about you and your brand, how you like to communicate, your past Guru activity, and your past conversations. The more you use it, the more it feels like a co-founder who actually knows your business.</p>
+
+  <p style="margin-bottom:6px;"><strong>Pick your plan</strong> <span style="color:#78716c;font-weight:normal;">&nbsp;·&nbsp; annual billing = 2 months free</span></p>
+
+  <!-- ============ PRICING CARDS ============ -->
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:separate;">
+    <tr>
+
+      <!-- BASE -->
+      <td width="33%" valign="top" style="padding:6px;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border:1px solid #e7e5e4;border-radius:12px;background-color:#ffffff;">
+          <tr><td style="padding:20px 16px;text-align:center;">
+            <div style="font-size:13px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#78716c;">Base</div>
+            <div style="font-size:32px;font-weight:800;color:#1c1917;margin-top:10px;line-height:1;">$39</div>
+            <div style="font-size:12px;color:#78716c;margin-top:4px;">per month</div>
+            <div style="font-size:12px;color:#a8a29e;margin-top:2px;">or $32/mo annually</div>
+            <div style="height:1px;background-color:#e7e5e4;margin:16px 0;"></div>
+            <div style="font-size:13px;line-height:1.5;color:#57534e;">Baseline usage<br>10 starter Gurus</div>
+          </td></tr>
+        </table>
+      </td>
+
+      <!-- PRO (highlighted) -->
+      <td width="34%" valign="top" style="padding:6px;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border:2px solid #b45309;border-radius:12px;background-color:#fffdf9;">
+          <tr><td style="background-color:#b45309;border-radius:9px 9px 0 0;text-align:center;padding:6px;font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#ffffff;">Most popular</td></tr>
+          <tr><td style="padding:18px 16px 20px;text-align:center;">
+            <div style="font-size:13px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#b45309;">Pro</div>
+            <div style="font-size:32px;font-weight:800;color:#1c1917;margin-top:10px;line-height:1;">$99</div>
+            <div style="font-size:12px;color:#78716c;margin-top:4px;">per month</div>
+            <div style="font-size:12px;color:#a8a29e;margin-top:2px;">or $82/mo annually</div>
+            <div style="height:1px;background-color:#f3e2c7;margin:16px 0;"></div>
+            <div style="font-size:13px;line-height:1.5;color:#57534e;">3&times; usage<br><strong style="color:#1c1917;">All 40+ Gurus unlocked</strong></div>
+          </td></tr>
+        </table>
+      </td>
+
+      <!-- CO-FOUNDER -->
+      <td width="33%" valign="top" style="padding:6px;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border:1px solid #e7e5e4;border-radius:12px;background-color:#ffffff;">
+          <tr><td style="padding:20px 16px;text-align:center;">
+            <div style="font-size:13px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#78716c;">Co-Founder</div>
+            <div style="font-size:32px;font-weight:800;color:#1c1917;margin-top:10px;line-height:1;">$199</div>
+            <div style="font-size:12px;color:#78716c;margin-top:4px;">per month</div>
+            <div style="font-size:12px;color:#a8a29e;margin-top:2px;">or $165/mo annually</div>
+            <div style="height:1px;background-color:#e7e5e4;margin:16px 0;"></div>
+            <div style="font-size:13px;line-height:1.5;color:#57534e;">15&times; usage · all Gurus<br>Jeff's monthly live call</div>
+          </td></tr>
+        </table>
+      </td>
+
+    </tr>
+  </table>
+  <!-- ============ /PRICING CARDS ============ -->
+
+  <table role="presentation" cellpadding="0" cellspacing="0" style="margin:22px auto 8px;">
+    <tr><td style="border-radius:9999px;background-color:#b45309;">
+      <a href="https://askbabu.ai/#pricing" style="display:inline-block;padding:14px 40px;font-size:16px;font-weight:700;color:#ffffff;text-decoration:none;">Upgrade your plan &rarr;</a>
+    </td></tr>
+  </table>
+
+  <p style="margin-top:22px;">See you in there.</p>
+
+  <p>Jeff</p>
+
+  <p style="margin-top:20px;font-size:15px;color:#57534e;"><strong>P.S.</strong> Already a paying <a href="https://cpgfoundersgroup.com" style="color:#b45309;font-weight:bold;">CPG Founders Group</a> client? Co-Founder access is included in your membership. Just reply and we'll get you set up.</p>
+
+</div>
+```
+
+---
+
+## Email 2 — Send TOMORROW (reminder)
+
+**Subject:** Last day: upgrade Babu before midnight
+
+```html
+<!-- Babu — "Last day to upgrade" reminder email (send tomorrow) -->
+<!-- Plain-text copy + designed pricing cards. Paste into your ESP. All styles inline. -->
+<div style="font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.6;color:#1c1917;max-width:600px;">
+
+  <p>Hi friend,</p>
+
+  <p>This is the last one from me on this. At midnight tonight, Babu moves to paid plans. If you want to keep using it without interruption, today is the day to lock in your plan.</p>
+
+  <p>And remember, Babu now has memory. It remembers you, your brand, how you like to communicate, your past Guru activity, and your past conversations. Don't lose that momentum right as it's getting good.</p>
+
+  <p style="margin-bottom:6px;"><strong>Pick your plan</strong> <span style="color:#78716c;font-weight:normal;">&nbsp;·&nbsp; annual billing = 2 months free</span></p>
+
+  <!-- ============ PRICING CARDS ============ -->
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:separate;">
+    <tr>
+
+      <!-- BASE -->
+      <td width="33%" valign="top" style="padding:6px;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border:1px solid #e7e5e4;border-radius:12px;background-color:#ffffff;">
+          <tr><td style="padding:20px 16px;text-align:center;">
+            <div style="font-size:13px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#78716c;">Base</div>
+            <div style="font-size:32px;font-weight:800;color:#1c1917;margin-top:10px;line-height:1;">$39</div>
+            <div style="font-size:12px;color:#78716c;margin-top:4px;">per month</div>
+            <div style="font-size:12px;color:#a8a29e;margin-top:2px;">or $32/mo annually</div>
+            <div style="height:1px;background-color:#e7e5e4;margin:16px 0;"></div>
+            <div style="font-size:13px;line-height:1.5;color:#57534e;">Baseline usage<br>10 starter Gurus</div>
+          </td></tr>
+        </table>
+      </td>
+
+      <!-- PRO (highlighted) -->
+      <td width="34%" valign="top" style="padding:6px;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border:2px solid #b45309;border-radius:12px;background-color:#fffdf9;">
+          <tr><td style="background-color:#b45309;border-radius:9px 9px 0 0;text-align:center;padding:6px;font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#ffffff;">Most popular</td></tr>
+          <tr><td style="padding:18px 16px 20px;text-align:center;">
+            <div style="font-size:13px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#b45309;">Pro</div>
+            <div style="font-size:32px;font-weight:800;color:#1c1917;margin-top:10px;line-height:1;">$99</div>
+            <div style="font-size:12px;color:#78716c;margin-top:4px;">per month</div>
+            <div style="font-size:12px;color:#a8a29e;margin-top:2px;">or $82/mo annually</div>
+            <div style="height:1px;background-color:#f3e2c7;margin:16px 0;"></div>
+            <div style="font-size:13px;line-height:1.5;color:#57534e;">3&times; usage<br><strong style="color:#1c1917;">All 40+ Gurus unlocked</strong></div>
+          </td></tr>
+        </table>
+      </td>
+
+      <!-- CO-FOUNDER -->
+      <td width="33%" valign="top" style="padding:6px;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border:1px solid #e7e5e4;border-radius:12px;background-color:#ffffff;">
+          <tr><td style="padding:20px 16px;text-align:center;">
+            <div style="font-size:13px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#78716c;">Co-Founder</div>
+            <div style="font-size:32px;font-weight:800;color:#1c1917;margin-top:10px;line-height:1;">$199</div>
+            <div style="font-size:12px;color:#78716c;margin-top:4px;">per month</div>
+            <div style="font-size:12px;color:#a8a29e;margin-top:2px;">or $165/mo annually</div>
+            <div style="height:1px;background-color:#e7e5e4;margin:16px 0;"></div>
+            <div style="font-size:13px;line-height:1.5;color:#57534e;">15&times; usage · all Gurus<br>Jeff's monthly live call</div>
+          </td></tr>
+        </table>
+      </td>
+
+    </tr>
+  </table>
+  <!-- ============ /PRICING CARDS ============ -->
+
+  <table role="presentation" cellpadding="0" cellspacing="0" style="margin:22px auto 8px;">
+    <tr><td style="border-radius:9999px;background-color:#b45309;">
+      <a href="https://askbabu.ai/#pricing" style="display:inline-block;padding:14px 40px;font-size:16px;font-weight:700;color:#ffffff;text-decoration:none;">Upgrade before midnight &rarr;</a>
+    </td></tr>
+  </table>
+
+  <p style="margin-top:22px;">Jeff</p>
+
+  <p style="margin-top:20px;font-size:15px;color:#57534e;"><strong>P.S.</strong> Already a paying <a href="https://cpgfoundersgroup.com" style="color:#b45309;font-weight:bold;">CPG Founders Group</a> client? Co-Founder access is included in your membership. Just reply and we'll get you set up.</p>
+
+</div>
+```

@@ -18,8 +18,8 @@ If you haven't dug in yet, now's the time. Go to [askBabu.ai](https://askbabu.ai
 
 If you're currently [working with me](https://cpgfoundersgroup.com/#programs), whether that's the 90-Day Breakthrough, VIP Day, or Advisory, your Babu Pro access is included as part of your program. Nothing changes for you. Continued access after May, no action needed.
 
-For everyone else, after May 31 we'll be transitioning Babu to our paid plans. We're finalizing the details now, pricing, tiers, what's included at each level, and we'll send you everything before that date. No surprises.
+For everyone else, after May 31 we'll be transitioning Babu to our paid plans. We're finalizing the details now, pricing, tiers, what's included at each level, and we'll send you everything before that date so there's no surprises.
 
-You've got the rest of May. Make it count.
+You've got the rest of May to play around with it!
 
 Jeff

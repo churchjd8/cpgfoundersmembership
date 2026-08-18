@@ -2,7 +2,7 @@
 
 **From:** Jeff Church
 **To:** CPG Founders Group founding members
-**Subject:** A few changes (and a thank you) for our founding members
+**Subject:** A few changes for our work together
 
 ---
 
@@ -10,17 +10,17 @@ Hi founders,
 
 I wanted to share an update with you all on our work together in the CPG Founders Membership. 
 
-When we launched the membership, The intention was for it to be built largely around group delivery through office hours, email support, and tool access. That was the plan on paper and why we were able to price the membership where we did. But here's what actually happened: the one-on-one calls turned out to be where the real value was. The group stuff sounded great in theory, but in practice, the one-on-ones have been what is really required for me to support you the way I want.
+When we launched the membership, The intention was for it to be built largely around group delivery through office hours, email support, and tool access. That was the plan on paper and why we were able to price the membership where we did. But here's what actually happened: the one-on-one calls turned out to be where the real value was. The group stuff sounded great in theory, but in practice, the one-on-ones have been what is really required for me to support you the way I want. 
 
-After reaching full capacity with this, I have to restructure slightly to lean into what's actually helping you and what can be sustainable for me. With the launch of Proda on top of everything else, I can't be in fifteen places at half-strength. I'd rather be in fewer places at full strength and show up fully for you.
+After reaching full capacity with my client load the last few months, I have to restructure slightly to lean into what's actually helping you and what can be sustainable for me. With the launch of Proda on top of everything else, I can't be in fifteen places at half-strength. I'd rather be in fewer places at full strength and show up fully for you.
 
 Here's what that looks like.
 
-**A note on new clients.** Going forward, anyone new I take on will be coming in at $5,000/month, built entirely around one-on-one work and access to my tools. As founding members, you've been with me for a while, and I want to honor that. You will not be paying new-client rates.
+**A note on new clients.** Going forward, anyone new I take on will be coming in at $5,000/month, built entirely around one-on-one work and access to my tools. As founding members, you've been with me for a while, and I want to honor that. You will NOT be paying new-client rates.
 
-**For most of you, this won't change much.** I just have to get tighter around how I structure it. At your $1,500/month rate, here's what you keep:
+**For most of you, this won't change much.** I just have to get tighter around how I structure our 1:1 time. At your $1,500/month rate, here's what you will keep:
 
-- One full hour 1:1 with me each month as the centerpiece.
+- One full hour 1:1 with me each month as the centerpiece, scheduled ahead.
 - Email support beyond that. I'm in your corner between calls.
 - BabuAI Pro included ($200/month), plus access to all of my models and tools and the MBA for CPG modules.
 - Emergency availability when you actually need it. If something's on fire, I won't leave you high and dry.

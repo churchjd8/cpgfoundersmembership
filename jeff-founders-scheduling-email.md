@@ -8,7 +8,7 @@ Following up on Jeff's note from earlier this week. As he mentioned, I'm going t
 
 Here's your link to grab your July 1:1:
 
-- July session: https://cpgfoundersgroup.com/clients/schedule-session/july
+👉 July session: https://cpgfoundersgroup.com/clients/schedule-session/july
 
 Book whatever time works best for you. One quick scheduling note: Jeff is on the East Coast with family starting mid-July, so July calls are happening early in the month. Grab your spot soon so you get the time you want.
 

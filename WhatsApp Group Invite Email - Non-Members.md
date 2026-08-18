@@ -10,7 +10,7 @@
 
 1. we just crossed 200 founders
 2. 200 founders in the group chat
-3. come join the founders group
+3. come join the founders group with 200 others
 
 ---
 
@@ -18,7 +18,7 @@
 
 Hi {{first_name}},
 
-We just crossed 200 founders in the CPG Founders WhatsApp group.
+We just crossed 200 founders in the CPG Founders WhatsApp group!
 
 When I started it I figured maybe a few dozen people would want a place to ask the questions you can't really ask anywhere else. The ones you don't want to put in front of your board, or your investors, or your own team.
 
