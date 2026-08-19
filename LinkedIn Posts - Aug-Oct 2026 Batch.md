@@ -5,32 +5,50 @@ Picks up after "People Were Upset When I Did The Coke Deal" (Thu Aug 13).
 
 Odd numbers are storytelling. Even numbers are technical playbook posts pulled from the blog.
 
+**Every advice post now previews one of the 12 webinar topics from the poll.** So the whole batch ladders into the workshops — by the time Jeff runs the top vote-getters, the feed has already been warmed on that exact subject.
+
 ## Posting Schedule
 
-| # | Date | Day | Post | Type |
-| --- | --- | --- | --- | --- |
-| 0 | Aug 20 | Thu | Which Workshop Should I Run First? | Poll |
-| 1 | Aug 25 | Tue | The Target Buyers In The Bed | STORY |
-| 2 | Aug 27 | Thu | 40% Is The Floor, Not The Ceiling | ADVICE |
-| 3 | Sep 1 | Tue | "What's A Cat Man?" | STORY |
-| 4 | Sep 3 | Thu | "What's Your Gross-To-Net?" | ADVICE |
-| 5 | Sep 8 | Tue | I Almost Killed The Coca-Cola Deal | STORY |
-| 6 | Sep 10 | Thu | Know Your Velocity Before Your Buyer Tells You | ADVICE |
-| 7 | Sep 15 | Tue | The Green Juice Guy On A Skateboard | STORY |
-| 8 | Sep 17 | Thu | Start With Your Margin, Not Your Cost | ADVICE |
-| 9 | Sep 22 | Tue | I Said Yes To A Smoothie I Didn't Want To Make | STORY |
-| 10 | Sep 24 | Thu | The Order You Enter Channels | ADVICE |
-| 11 | Sep 29 | Tue | Our Kombucha Was Making 12% | STORY |
-| 12 | Oct 1 | Thu | Costco Wants $1,000 Per Club Per Week | ADVICE |
-| 13 | Oct 6 | Tue | 3,000% In One Year | STORY |
-| 14 | Oct 8 | Thu | Dollar General Has 19,000 Doors | ADVICE |
-| 15 | Oct 13 | Tue | I Called Seth Goldman | STORY |
-| 16 | Oct 15 | Thu | A Wish List With A Spreadsheet Attached | ADVICE |
-| 17 | Oct 20 | Tue | "What Does Your Brand Look Like On Instacart?" | STORY |
-| 18 | Oct 22 | Thu | The PO You Can't Fill | ADVICE |
-| 19 | Oct 27 | Tue | The Most Beautiful Brand Was Running 28% | STORY |
-| 20 | Oct 29 | Thu | The Monday Morning Dashboard | ADVICE |
+| # | Date | Day | Post | Type | Webinar topic |
+| --- | --- | --- | --- | --- | --- |
+| 0 | Aug 20 | Thu | Which Workshop Should I Run First? | Poll | — |
+| 1 | Aug 25 | Tue | The Target Buyers In The Bed | STORY | 6 — buyer meeting to PO |
+| 2 | Aug 27 | Thu | 40% Is The Floor, Not The Ceiling | ADVICE | **8 — gross margin architecture** |
+| 3 | Sep 1 | Tue | "What's A Cat Man?" | STORY | 11 — velocity before volume |
+| 4 | Sep 3 | Thu | "What's Your Gross-To-Net?" | ADVICE | **3 — CPG-specific P&L** |
+| 5 | Sep 8 | Tue | I Almost Killed The Coca-Cola Deal | STORY | 2 — getting investor-ready |
+| 6 | Sep 10 | Thu | Know Your Velocity Before Your Buyer Tells You | ADVICE | **11 — velocity before volume** |
+| 7 | Sep 15 | Tue | The Green Juice Guy On A Skateboard | STORY | 12 — finding white space |
+| 8 | Sep 17 | Thu | Why Does The Shelf Need You? | ADVICE | **10 + 12 — positioning / white space** |
+| 9 | Sep 22 | Tue | I Said Yes To A Smoothie I Didn't Want To Make | STORY | 6 — buyer meeting to PO |
+| 10 | Sep 24 | Thu | The Four That Keep Killing Good Brands | ADVICE | **1 — fatal flaws** |
+| 11 | Sep 29 | Tue | Our Kombucha Was Making 12% | STORY | 8 — gross margin architecture |
+| 12 | Oct 1 | Thu | What Retail Actually Costs You | ADVICE | **7 — slotting, MCBs, hidden costs** |
+| 13 | Oct 6 | Tue | 3,000% In One Year | STORY | 4 — killing your burn |
+| 14 | Oct 8 | Thu | Profitability Is A Decision, Not A Destination | ADVICE | **4 — killing your burn** |
+| 15 | Oct 13 | Tue | I Called Seth Goldman | STORY | — |
+| 16 | Oct 15 | Thu | A Wish List With A Spreadsheet Attached | ADVICE | **2 + 3 — investor-ready / P&L** |
+| 17 | Oct 20 | Tue | "What Does Your Brand Look Like On Instacart?" | STORY | 11 — velocity before volume |
+| 18 | Oct 22 | Thu | 44 Rounds | ADVICE | **5 — pitch deck rebuilt live** |
+| 19 | Oct 27 | Tue | The Most Beautiful Brand Was Running 28% | STORY | 8 — gross margin architecture |
+| 20 | Oct 29 | Thu | The Monday Morning Dashboard | ADVICE | **3 + 4 — P&L / runway** |
 
+### Webinar topic coverage
+
+| # | Topic | Covered by |
+| --- | --- | --- |
+| 1 | The fatal flaws that kill early CPG brands | #10 |
+| 2 | Getting investor-ready, first meeting to close | #16, #5 |
+| 3 | Building a CPG-specific P&L | #4, #16, #20 |
+| 4 | Killing your burn and buying runway | #14, #20, #13 |
+| 5 | Your pitch deck, torn apart and rebuilt live | #18 |
+| 6 | Buyer meeting to PO | #1, #9 |
+| 7 | Slotting fees, MCBs, hidden cost of retail | #12 |
+| 8 | Gross margin architecture, building to 50% | #2, #11, #19 |
+| 9 | Trade spend, working vs. burning cash | *already ran June batch — "Trade Spend Is The Line Nobody Audits"* |
+| 10 | Positioning so a buyer gets it in five seconds | #8 |
+| 11 | Velocity before volume | #6, #3, #17 |
+| 12 | Finding the white space nobody has filled | #8, #7 |
 ---
 
 ## 0. "Which Workshop Should I Run First?" — Thu Aug 20
@@ -74,7 +92,7 @@ Thanks for helping me point this in the right direction!
 
 ## 1. "The Target Buyers In The Bed" — Tue Aug 25
 
-**STORY**
+**STORY — supports webinar topic 6**
 
 I want to tell you about a dinner I'll never forget.
 
@@ -110,7 +128,7 @@ You'd be amazed what a loaf of bread and an oversized bed can do for a business.
 
 ## 2. "40% Is The Floor, Not The Ceiling" — Thu Aug 27
 
-**ADVICE**
+**ADVICE — previews webinar topic 8**
 
 Okay folks, let's talk about the one number that decides whether you survive.
 
@@ -148,7 +166,7 @@ Go calculate yours correctly this week. Not the version in your deck. The real o
 
 ## 3. "What's A Cat Man?" — Tue Sep 1
 
-**STORY**
+**STORY — supports webinar topic 11**
 
 True story that my team still gives me grief about.
 
@@ -182,7 +200,7 @@ It's actually the thing that decides whether you're still on the shelf next spri
 
 ## 4. "What's Your Gross-To-Net?" — Thu Sep 3
 
-**ADVICE**
+**ADVICE — previews webinar topic 3**
 
 Let's talk about the number that's hiding inside your P&L.
 
@@ -216,7 +234,7 @@ Know both cold. Investors will ask, and the founders who can answer in one breat
 
 ## 5. "I Almost Killed The Coca-Cola Deal" — Tue Sep 8
 
-**STORY**
+**STORY — supports webinar topic 2**
 
 I want to tell you about the moment I nearly blew up the Coca-Cola deal.
 
@@ -254,7 +272,7 @@ Do it before you need to know.
 
 ## 6. "Know Your Velocity Before Your Buyer Tells You" — Thu Sep 10
 
-**ADVICE**
+**ADVICE — previews webinar topic 11**
 
 I've watched founders come back from a buyer meeting absolutely lit up. "We got into 800 Kroger stores." "We're in Sprouts nationwide."
 
@@ -296,7 +314,7 @@ Don't confuse distribution gains with velocity gains. Only one of those keeps yo
 
 ## 7. "The Green Juice Guy On A Skateboard" — Tue Sep 15
 
-**STORY**
+**STORY — supports webinar topic 12**
 
 There's a guy in my world I call the green juice guy.
 
@@ -327,50 +345,48 @@ Customers don't reward passion. They reward value.
 Go find out which one you're actually selling before you write the big check.
 
 ---
+## 8. "Why Does The Shelf Need You?" — Thu Sep 17
 
-## 8. "Start With Your Margin, Not Your Cost" — Thu Sep 17
+**ADVICE — previews webinar topics 10 & 12**
 
-**ADVICE**
+Here's a pattern I see more than almost any other.
 
-Most founders set their price one of two ways. They look at what competitors charge and match it, or they take their cost and add a margin that sounds reasonable.
+A founder has a product they genuinely love. Real passion behind it. They get into a few stores. And then they stall.
 
-Both are incomplete, and pricing is far too high-leverage a decision to get approximately right.
+Not because the product is bad. Because nobody knows what to think about it.
 
-Start with your target gross margin and work backward. Not with your cost and work forward.
+I'll ask them what they make and I get something like, "we make clean, organic snacks for health-conscious families."
 
-In CPG you need to be at 45 to 50% gross margin, excluding freight, by year two or three. If you can't get there, your business model has a structural problem that no amount of revenue growth is going to fix.
+Okay. So does everyone else on that shelf. Why should a consumer reach for you instead of the brand six inches to your left?
 
-Here's the math.
+Positioning is not your tagline and it's not your packaging copy. It's the answer to one question. Why you, for who, and why now?
 
-Say your COGS is $1.50 a unit and you need 50% gross margin. Your net revenue per unit needs to be at least $3.00. If trade spend is running 20% of gross revenue, your gross revenue per unit needs to be around $3.75. Now work backward from there to your suggested retail price.
+And the reason it matters isn't philosophical, it's financial. Consistent clarity directly impacts velocity, and velocity earns you shelf space. If a buyer and a consumer can't immediately understand why you exist, your turns will show it, and low turns get you pulled from the planogram. That's how good brands die quietly.
 
-And understand every layer between the shelf price and what you actually collect, because founders skip this constantly.
+Here's the other piece worth sitting with. Products are copyable. Brands are not. Somebody can copy your formula and they can copy your packaging. They cannot copy what you mean to someone.
 
-Your SRP is what the consumer sees. Your wholesale price to the distributor is typically 40 to 50% below that, so a $4.99 SRP is maybe $2.50 to $3.00 wholesale. Your net revenue is that wholesale price minus trade spend, which runs 15 to 25% of gross depending on channel. Your gross profit is what's left after COGS, and that has to fund the entire rest of your company.
+I've used the same framework to evaluate every opportunity for 30 years. I call it MAP. Market, Audience, Positioning.
 
-If you don't understand each of those layers you will set a price that looks great on the shelf and leaves you nothing to operate on.
+Start with Market, and define it in four nested layers instead of one vague one. Industry, category, segment, niche. Not "we're in the health food space," because that's an aspiration, not a market. Beverages, then non-alcoholic beverages, then juice, then organic cold-pressed juice shots. For each layer you want the real market size, the five year CAGR, who the actual competitors are, and how that niche sits as a percentage of the broader market.
 
-Then there's what your price says about you.
+That work is what surfaces white space. And white space is rarely "nobody makes this." It's usually a gap in what the category MEANS to people, not a gap in what's on the shelf.
 
-Too low and you signal commodity. You attract price-sensitive consumers who leave the moment something cheaper shows up, and you killed your margin to get them.
+For Suja the white space was premium organic juice that made healthy living feel accessible instead of punishing. Health without the punishment. A Whole Foods juice bar in a bottle.
 
-Too high and you limit trial. Nobody takes a $7.99 risk on a brand they've never heard of when there's a trusted option sitting at $4.99. You earn the right to premium pricing through brand building and proof of quality, not by declaring it.
+That's the whole thing in one sentence, and it's the sentence we built the company on.
 
-The sweet spot is at or slightly above category average for your channel. Premium without a trial barrier. Once your velocity proves the demand, you can test increases.
+What you're looking for is a category that's new but not too new. Consumers already understand what they're buying. Retailers are actively expanding shelf space. And the early leaders have made enough mistakes that there's room to improve on something that genuinely matters to somebody.
 
-One more thing while we're here.
+So here's the exercise. Write your positioning as one sentence in this shape.
 
-Roughly half of your trade spend is wasted. Half of what you spend on promotion would have been bought at full price anyway, and the other half drives real incremental trial and volume.
+We're the only [X] that [Y] for [Z].
 
-The problem is that most founders can't tell you which half is which, because they've never measured lift against a baseline.
-
-Know your baseline velocity before you run the promotion. Otherwise you're not promoting. You're just discounting.
-
+If you can't fill in those blanks without hedging, you don't have a marketing problem. You've got work to do before you spend another dollar on packaging.
 ---
 
 ## 9. "I Said Yes To A Smoothie I Didn't Want To Make" — Tue Sep 22
 
-**STORY**
+**STORY — supports webinar topic 6**
 
 Here's one of the not-obvious decisions I made at Suja that I would make again tomorrow.
 
@@ -401,48 +417,44 @@ I'm telling you to know exactly what you're buying with it before you sign. If t
 If the answer is just "more revenue," walk away.
 
 ---
+## 10. "The Four That Keep Killing Good Brands" — Thu Sep 24
 
-## 10. "The Order You Enter Channels" — Thu Sep 24
+**ADVICE — previews webinar topic 1**
 
-**ADVICE**
+Let's talk about what actually kills early CPG brands, because it's almost never the product.
 
-A senior Target buyer pulled me aside one night, back when Suja was scaling fast and we'd just announced we were going into Walmart.
+I've built 8 companies and invested in dozens more over 40 years, and the thing that still gets me is founders getting tripped up by stuff that was completely avoidable. Not obscure regulatory landmines. Basic contract terms nobody bothered to read.
 
-She said, "Jeff, if you use the same barcode and the same pack size at Walmart that you use here, we're going to price-match them. You'll kill your margin at Target and you'll lose the account."
+Here are four I'd put on a wall.
 
-I had no idea.
+**Long-term contracts.** Never sign anything longer than a year when you're early stage, and I don't care how good the terms look. Your business is going to change dramatically in the next twelve months. Your co-man might not be the right fit. Your distributor might not perform. You might pivot your entire product line, and if you're honest with yourself you probably will.
 
-We fixed it immediately. Launched a 10.5-ounce bottle at Walmart, kept the 12-ounce at Target. The pricing held, Target stayed, and Walmart grew into one of our biggest customers.
+I've watched founders stuck paying a co-manufacturer they'd completely outgrown because they signed a three year deal for a slightly better per-unit price. That savings cost them hundreds of thousands in opportunity cost. If a vendor won't do 12 months, that tells you something about how much they actually value the relationship.
 
-That one conversation probably saved us several million dollars in margin erosion. But the deeper lesson wasn't about barcodes.
+**Evergreen clauses.** This one is sneaky and it catches smart people constantly. An evergreen contract auto-renews unless you give formal written notice, usually 60 to 90 days before the renewal date. Miss that window by a single day and you're locked in for another full term.
 
-The order you enter retail channels matters as much as which channels you enter.
+One day. I've seen founders accidentally renew broker agreements, warehouse leases, and co-man deals because nobody put the cancellation deadline on a calendar. The day you sign anything with an evergreen clause, put that notice deadline in your calendar with multiple reminders and treat it like a fundraising deadline. Because it is one.
 
-When a founder gets their first big retail win the instinct is always the same. Whole Foods said yes, so go get Kroger. Kroger picked you up, go to Target. Target's on board, go to Walmart. More doors, more revenue, more growth.
+**Trademark conflicts.** You spend two years building awareness, getting into retail, building a following, and then a cease and desist shows up because another food brand in a completely unrelated category has a similar name.
 
-That logic is seductive and it's wrong, because every channel has a different velocity expectation, a different price architecture, a different promotional cadence, and a different consumer. Enter one before your brand is ready for it and you don't just underperform there. You contaminate everything that comes after.
+Now you're looking at a full rebrand. New packaging, new marketing materials, new retailer presentations, new consumer education. I've seen that cost brands north of $500,000 and set them back 18 months, and some never recover. All that equity you built, gone.
 
-I've watched brands land Walmart six months after launch, have a disastrous first year on shelf, get discontinued, and then try to go back to Whole Foods and find the door closed. The natural channel didn't want a brand that had already failed at mass.
+Before you spend a dollar on branding, pay a trademark attorney for a comprehensive search across all food and beverage categories. Not a Google search. A real one. Those few thousand dollars are the best insurance you will ever buy.
 
-Here's how I'd map it.
+**Overpromising capacity.** When you land the big account, the temptation is to say yes to everything. Yes we can fill 500 stores. Yes we can hit that delivery window. Yes we can handle that volume, we'll figure out the supply chain later.
 
-Stage one is natural and specialty. Whole Foods, Sprouts, Fresh Market, Natural Grocers. This is where you earn the right to exist. That consumer is forgiving, vocal, and loyal, and if your product doesn't resonate here it isn't going to resonate anywhere. It's also where you build your velocity data. Hit at least the 50th percentile of category velocity before you go anywhere else, ideally 60 to 70%. If you're at 30% you have a product problem, not a distribution problem, and more doors will not fix it.
+Retailers have zero tolerance for out of stocks. One missed window and you're on probation. Two and you might lose the account. And buyers talk to each other, more than you think.
 
-And don't evaluate Whole Foods purely on P&L. It's also a marketing platform. It signals to every other retailer that you're legit.
+Better to launch in 100 stores and crush it than launch in 500 and fail to keep them stocked. Scale your supply chain ahead of your distribution, not behind it.
 
-Stage two is regional conventional. Kroger, Publix, Albertsons, HEB. Once your velocity story is clean and your gross margins are north of 40%, you're ready to go broader. This stage tests your promotional discipline, because conventional will ask for trade spend, scan deals, and TPRs from day one. If you haven't modeled what velocity you need to justify those promotions, you'll bleed out slowly.
+(I've written before about personal guarantees. Same list, and the answer is still don't.)
 
-Stage three is mass. Target, then Walmart, and I'd sequence it in that order nearly every time. Target's consumer skews better-for-you, natural, and premium. They'll pay more and they'll repeat, and they're much closer to your natural channel consumer than Walmart's is.
-
-Credibility compounds. Get the order right and each channel gives you leverage in the next one.
-
-Get it wrong and the whole thing unravels in the wrong order.
-
+None of these are sophisticated problems. That's exactly why they keep working.
 ---
 
 ## 11. "Our Kombucha Was Making 12%" — Tue Sep 29
 
-**STORY**
+**STORY — supports webinar topic 8**
 
 Let me tell you about one of the quietest and most expensive mistakes I made at Suja.
 
@@ -475,48 +487,48 @@ We cut the kombucha. Margins went from 32% to 40%.
 Gross margin determines destiny.
 
 ---
+## 12. "What Retail Actually Costs You" — Thu Oct 1
 
-## 12. "Costco Wants $1,000 Per Club Per Week" — Thu Oct 1
+**ADVICE — previews webinar topic 7**
 
-**ADVICE**
+Okay folks, let's talk about what it actually costs to get on a shelf, because the number is almost never the number you were quoted.
 
-Let's talk about Costco, because I don't think most founders understand what they're actually signing up for.
+Slotting fees are upfront payments you make to a retailer in exchange for shelf space. Some call them new item fees, some call them stocking allowances. The name changes, the math doesn't. You're writing a check before you've sold a single unit.
 
-A Costco buyer called our San Diego office and wanted to run a head-to-head test. Suja's wellness shot against a competitor's, side by side, in clubs across the Pacific Northwest. And oh, by the way, could we also develop a plant-based milk? They wanted to test that too.
+From the retailer's side it makes complete sense. They have finite shelf space and hundreds of brands knocking, so a slotting fee is a financial filter. It signals you're serious, and it partially offsets their cost if you don't perform.
 
-My production team's reaction was not enthusiasm. We had never made plant-based milk. It was outside everything we did well, operationally messy, and a genuine distraction.
+From your side it's the first real test of whether your unit economics survive contact with retail.
 
-We did it anyway.
+The spectrum is much wider than most founders expect.
 
-The milk struggled. The wellness shot did about $2,000 per club per week.
+In natural, Whole Foods, Sprouts, and most natural independents typically charge little to no formal slotting. That channel rewards distribution-readiness and brand story over financial power. When Suja launched in 50 Southern California Whole Foods stores in 2012, we didn't write a slotting check. We got in on the product, the relationships, and the velocity data.
 
-That experience crystallized how I think about Costco. It is simultaneously the most rewarding and the most unforgiving channel in CPG. Rewarding because the volume and velocity, when you get it right, are unlike anything else in this industry. Unforgiving because Costco does not have time for products that aren't performing. You perform or you don't, and you find out fast.
+In conventional it gets real. Kroger, Albertsons, Safeway, Publix can run anywhere from a few thousand per SKU per store cluster to hundreds of thousands across a division. A regional rollout at a mid-size chain might be $50,000 to $200,000 before you see your first sale.
 
-Here's the number that should reframe things for you.
+In mass, Walmart is largely slotting-free, but don't mistake that for free. Their everyday low price model requires you to deliver margin, and the cost of meeting their volume expectations is its own kind of commitment. Target has historically charged modest new item fees. Mass usually gets you on trade spend, not slotting.
 
-A mid-tier grocery account expects your product to move maybe $15 per store per week. At that velocity you keep the shelf and maybe you grow.
+At club, Costco doesn't charge traditional slotting either. They want a killer product at a killer price with a margin structure that works for both sides. But they'll ask you to fund samples, in-store demos, and promotional discounts, and those add up fast.
 
-Costco expects $1,000 per club per week. Minimum.
+Then there are MCBs, manufacturer chargebacks, and this is the line item nobody warns you about.
 
-That's roughly sixty-seven times the volume. Let that sit for a second before you go chasing a Costco meeting.
+MCBs are deductions the retailer takes against your invoice. Damaged goods, short shipments, compliance issues, and a dozen other things. New founders see them show up and assume somebody made a mistake.
 
-Because everything about your business has to be built for that number. Your co-man capacity. Your working capital. Your pack configuration. Your ability to fund demos across an entire region. If any one of those isn't ready, Costco does not wound you slowly the way grocery does.
+It's not a mistake. Budget 2 to 5% of gross revenue in MCBs from day one in conventional.
 
-A few things worth knowing before you walk in.
+And audit them monthly. Some are legitimate and plenty are not. I've seen brands recover six figures just by disputing deductions they never should have accepted. Most retailers and distributors have a dispute window, and once you miss it that money is gone for good.
 
-Costco doesn't charge traditional slotting, but that doesn't make it free. They'll expect you to fund samples, in-store demos, and promotional discounts, and those add up quickly.
+Two negotiating moves most founders never make.
 
-They buy in a road-show and regional rollout structure, so a yes is rarely a national yes. Treat the first region as the audition it actually is.
+Offer scan-down trade instead of upfront cash. Some retailers will accept a per-unit discount off invoice for a defined period, say 12 to 16 weeks, in place of a lump sum. That aligns your cost with your actual sales, so you only pay if the product moves.
 
-And your pack has to be built for their format from the start. Retrofitting a grocery pack into a club pack after you've won the meeting is how founders blow up their own margins.
+And propose a pilot. Instead of paying for 300 stores out of the gate, ask for a 50-store test in your highest-potential markets, show 90 days of velocity, then expand. More buyers take that deal than you'd expect.
 
-Costco is not a grocery store with bigger boxes. It's a different business, and the brands that win there built for it on purpose.
-
+Slotting gets you the chance. Everything that comes after it determines whether you keep it.
 ---
 
 ## 13. "3,000% In One Year" — Tue Oct 6
 
-**STORY**
+**STORY — supports webinar topic 4**
 
 In 2013 Suja went from $600,000 in annual revenue to $18 million in a single year.
 
@@ -541,37 +553,45 @@ That inventory isn't an asset at that point. It's cash wearing a costume.
 Neither of these is bad luck. Both are planning failures, and both get fixed by a forecast you update every week against real sell-through instead of the number you promised your board back in January.
 
 ---
+## 14. "Profitability Is A Decision, Not A Destination" — Thu Oct 8
 
-## 14. "Dollar General Has 19,000 Doors" — Thu Oct 8
+**ADVICE — previews webinar topic 4**
 
-**ADVICE**
+I believed for years that growth was the strategy.
 
-A founder told me she was close to closing Dollar General and I didn't say congratulations.
+Grow fast enough and the numbers sort themselves out. Build the brand, win the shelf, drive velocity, expand distribution, and somewhere downstream profitability follows.
 
-I said, "walk me through the unit economics first."
+It doesn't. Not automatically, and not without intention.
 
-She paused. She hadn't done them. She'd gotten a meeting, the buyer seemed interested, and she assumed that meant it was a good idea.
+In 2018 I finally had to sit down and confront the actual economics of Suja. Not the narrative, not the projections, not the pitch deck version. The real numbers.
 
-That's how a lot of good brands end up in trouble in the dollar channel.
+We were losing $10 million a year on $100 million in revenue. Gross margins below 32%. Products sitting on shelf generating 12% margin because we'd outsourced production to chase a category trend. Marketing spend that wasn't moving velocity. And overhead built for a company that was about to get absorbed into one of the largest beverage companies in the world, right up until it wasn't.
 
-Let me give you the scale first, because it is genuinely seductive. Dollar General has more than 19,000 stores. Dollar Tree and Family Dollar combined have another 17,000. That's more retail doors than Walmart and Target put together. For a brand doing a few million in revenue, that call feels like the big break.
+None of that was going to work anymore.
 
-Sometimes it is. More often it's the start of a slow-motion margin collapse and a positioning problem that takes years to undo.
+Here's the thing nobody tells you about that moment. It was clarifying. When you have no choice but to get honest, you get honest fast.
 
-Here's the math nobody runs before the meeting.
+We went from losing $10 million on an EBITDA basis to generating positive $3 million. In a single year.
 
-In natural grocery your 12-ounce beverage might retail at $4.99, and if you've built it right you're running 45 to 50% gross margin. You've got room for trade, for the distributor's cut, for a slotting hit, and you still have a real business.
+So let me give you the actual moves, because not one of them was clever.
 
-Now put that same product in Dollar General. Their price architecture for food and beverage runs at $1.25, $2, $3, or $4. If your product retails at $4.99 elsewhere and DG prices it at $3, your landed economics just got repriced against a ceiling that was never designed for you.
+We cut every low-margin product line. Not trimmed, cut. The 12% margin SKUs went away and the internally-produced high-margin ones got that capacity back.
 
-Your COGS didn't change. Freight didn't get cheaper, and their DC compliance requirements are demanding. But you're now selling into a price point that compresses your gross margin by 15 to 20 points. A brand running 45% in natural might be running 25 to 28% in the dollar channel, if they're lucky.
+We stopped spending marketing dollars we couldn't trace to velocity. If we couldn't see it moving product in a store, it stopped.
 
-Then there's the part that never shows up on a spreadsheet. Your consumer sees your product at $3 in Dollar General and $4.99 in Whole Foods, and you have just taught them which one is the real price.
+We took overhead down to fit the company we actually were, not the one we thought we were about to become. That part was genuinely painful and it involved people I cared about.
 
-None of this means never. Some brands are built for that channel from day one, with the pack size and the cost structure to match, and for them it's a genuinely great business.
+And we moved from monthly reporting to weekly cash projections, which is a completely different way of running a business.
 
-It means don't let the door count do your thinking for you. Run the unit economics before you take the meeting, not after.
+Here's what I'd want you to take from it.
 
+Most founders treat profitability like a destination. Someday, when we're at scale, when distribution fills out, when the brand has enough awareness, we'll turn the corner.
+
+Hope is not a strategy.
+
+Profitability is a decision you make, and you can make it a lot earlier than you think. You do not need permission from your board, and you definitely don't need a crisis from an acquirer, to go line by line through your own P&L this month.
+
+I needed the crisis. You don't have to.
 ---
 
 ## 15. "I Called Seth Goldman" — Tue Oct 13
@@ -610,7 +630,7 @@ And when you find the ones who do, keep them close and actually use them. An adv
 
 ## 16. "A Wish List With A Spreadsheet Attached" — Thu Oct 15
 
-**ADVICE**
+**ADVICE — previews webinar topics 2 & 3**
 
 Let's talk about the financial model, because I see the same one over and over and it isn't a model.
 
@@ -650,7 +670,7 @@ Your financial model isn't a document you build for investors. It's your decisio
 
 ## 17. "What Does Your Brand Look Like On Instacart?" — Tue Oct 20
 
-**STORY**
+**STORY — supports webinar topic 11**
 
 A Whole Foods buyer said something to me in 2019 that stopped me cold.
 
@@ -679,42 +699,48 @@ Most brands I look at are losing on that screen for reasons that take a week and
 We were one of them, and we were doing nine figures at the time. 😊
 
 ---
+## 18. "44 Rounds" — Thu Oct 22
 
-## 18. "The PO You Can't Fill" — Thu Oct 22
+**ADVICE — previews webinar topic 5**
 
-**ADVICE**
+I was watching football with my oldest son Josh a few years back and he asked me an offhand question. How many fundraising rounds had I actually done over my career?
 
-Here's a moment almost every CPG founder hits, and almost nobody talks about it.
+I figured it would take five minutes to answer. It took 45.
 
-There's a purchase order sitting on your desk. Could be Whole Foods, could be Target, could be Costco. More revenue than you've ever seen in a single order. Your hands are shaking a little as you read the line items.
+The number was 44. Forty-four rounds across 30-plus years and 8 companies. Around $200 million raised from friends and family, angels, PE firms, and VCs. At Suja alone we ran 11 rounds in 7 years. Some years we were raising twice.
 
-And you cannot fill it.
+I don't tell you that to brag. I tell you because I've sat across the table from investors more times than almost anyone, and I've watched founders waste 80% of their prep time on the wrong things.
 
-Not because the product isn't ready and not because the relationship isn't there. Because you don't have the cash to buy raw materials, pay the co-man, and bridge the 60 to 90 days before the retailer actually pays you.
+They obsess over the deck. They perfect every slide. They agonize over fonts and colors and whether to use bullet points or icons.
 
-So you do what most founders do. You start thinking about your next equity round. You call investors, build a deck, take the meetings. And quietly, without quite noticing it happen, you trade away another 15 or 20% of your company to solve what was fundamentally an inventory financing problem.
+And then they walk in with no clarity on their economics, no traction data, and no real understanding of what the investor is actually trying to decide.
 
-I've watched this play out over and over, and I want to give you a different way to think about it.
+The deck doesn't get you funded. You do. The deck is just how you organize the evidence.
 
-Equity is forever. A purchase order loan is not.
+Start by keeping it under 25 slides. Not 40, not 52. I've reviewed thousands of these, and the 50-slide decks don't get funded because the founder was more thorough. They get skimmed, then shelved. Clarity is respect.
 
-Run the math on what that "cheap" equity actually costs. If your company eventually exits at $50 million, every single point you gave up early to bridge a cash gap is worth $500,000 at exit. Twenty points is $10 million. To cover an inventory build.
+Here's where I'd spend the time instead.
 
-There's a whole set of tools built for exactly this problem that most CPG founders never look at.
+Your cover is one sentence that tells me your niche and why it's interesting. "The first organic wellness shot in the club channel, growing 40% year over year." Done. Not a mission statement.
 
-Purchase order financing, where a lender funds your production against a confirmed retailer PO. Inventory lines of credit. Receivables factoring against your retailer invoices. Revenue-based financing. Equipment leasing instead of buying. State and USDA programs depending on what you make and where you make it. And negotiated terms with your co-man, which costs you nothing except a hard conversation.
+Your positioning is one sentence in this shape: we're the only [X] that [Y] for [Z]. At Suja ours was essentially a Whole Foods juice bar in a bottle. Simple, sticky, differentiated.
 
-None of it is free, and some of it is genuinely expensive. That's fine. Expensive money you pay back beats cheap money you never get back.
+Your market slide should be nested, not broad. Industry, category, segment, niche, with a five year CAGR at the niche level. Anything growing over 20% a year is worth attention. Anything under 5% probably isn't your path to $100 million.
 
-Match the financing to the problem. Working capital problems deserve working capital solutions.
+Your traction slide is the most important one in the whole deck if you've been in market. Velocity, repeat rate, distribution, revenue trajectory. Don't cherry-pick your best stores. Show the full picture and tell me what you're doing about the weak spots, because diligence is going to find them anyway and it's much better coming from you.
 
-Save your equity for what equity is actually for, which is building the team and the brand that make the whole thing worth owning.
+I'll be direct about the bar. Most institutional investors today want to see $3 to $5 million in trailing twelve month net revenue and gross margins above 40% before they'll write a meaningful check. If you're below that, know it and frame your ask accordingly.
 
+And on unit economics, lead with gross margin. This is where most founders lose me. Show me your margin today, your path to 50%, and what's driving the improvement. A 35% gross margin brand and a 55% gross margin brand look completely different to a sophisticated investor at the exact same revenue.
+
+Then be specific in the ask. How much, what structure, what valuation, what runway, and what milestones this round actually funds.
+
+The deck is just a container. What you put in it is the whole job.
 ---
 
 ## 19. "The Most Beautiful Brand Was Running 28%" — Tue Oct 27
 
-**STORY**
+**STORY — supports webinar topic 8**
 
 A founder I was advising a couple years back had one of the most beautiful brands I've ever seen. Stop-you-in-the-aisle beautiful.
 
@@ -746,7 +772,7 @@ Your package is your best salesperson, and it's also one of the most leverageabl
 
 ## 20. "The Monday Morning Dashboard" — Thu Oct 29
 
-**ADVICE**
+**ADVICE — previews webinar topics 3 & 4**
 
 The week Coca-Cola told us they weren't completing the acquisition, I sat in my office and tried to remember the last time I'd actually looked at our gross margin by channel.
 
@@ -781,41 +807,46 @@ Put an hour on your calendar every Monday morning, before anybody else needs you
 It's the cheapest insurance policy in this business.
 
 ---
-
 # BENCH — Ready For The Next Batch
 
-These are written and voice-checked, just pulled from this batch to hold the story/advice alternation. Drop them straight in next time.
+Written and voice-checked, pulled from this batch to make room for the webinar-topic posts. Drop them straight in next time.
 
 **STORIES**
 
 - **"Getting Picked Up Isn't Getting Distributed"** — the breathless broker call about UNFI, then the deduction report six months later. Bill Weiland / Presence Marketing, broker vs. distributor, fill rate below 90%. *(cpg-distributor-strategy-unfi-kehe)*
 - **"73% Of Revenue Came From Repeat Customers"** — Ryan's cohort slide in the founder group session. Losing money on the first sale, $293 LTV on a 4x buyer. *(cpg-amazon-dtc-strategy)*
+- **"Costco Wants $1,000 Per Club Per Week"** — the head-to-head wellness shot test, the plant-based milk they never should have made, $15/store/week vs. $1,000/club/week. *(cpg-costco-strategy)*
+- **"The Order You Enter Channels"** — the Target buyer warning him about the barcode price-match before Walmart. 10.5oz at Walmart, 12oz at Target. Then the three-stage sequencing map. *(cpg-distribution-sequencing-strategy)*
 
 **ADVICE**
 
-- **"International Isn't A Reward. It's A Stress Test."** — the trade show inbound from Toronto or London, distribution vs. velocity gains abroad, "if you can't name who owns that market Monday morning, you're exporting inventory and hoping." *(cpg-international-expansion-strategy)*
+- **"Start With Your Margin, Not Your Cost"** — working backward from target margin, every layer from SRP to net, and "half your trade spend is wasted and you can't tell which half." Natural pair with webinar topic 9. *(cpg-pricing-strategy)*
+- **"Dollar General Has 19,000 Doors"** — the founder who hadn't run unit economics, price architecture at $1.25/$2/$3/$4, 15-20 points of margin compression. *(cpg-dollar-channel-strategy)*
+- **"The PO You Can't Fill"** — equity is forever, a PO loan isn't. Every early point is worth $500K at a $50M exit. Purchase order financing, inventory lines, factoring. *(cpg-non-dilutive-funding)*
+- **"International Isn't A Reward. It's A Stress Test."** — the trade show inbound from Toronto or London, "if you can't name who owns that market Monday morning, you're exporting inventory and hoping." *(cpg-international-expansion-strategy)*
 - **"Your Broker Can't Name Your Top 3 SKUs"** — 5% to 3% commission, they rep 80 other brands, "they'll push the point but they'll cave much quicker than you would." *(cpg-broker-strategy)*
 
 **NOT YET WRITTEN — strong untapped material**
 
 - The co-founder story: Eric Ethans, Bryan Riblett, James Brennan. Three strangers, zero formal agreement, $0 to $100M in six years. *(cpg-co-founder-strategy)*
 - The airline procurement call nobody expects. Foodservice as a trial channel. *(cpg-foodservice-strategy)*
-- "It's never just a conversation" — what actually happens when a strategic buyer calls. *(cpg-acquisition-process-ma-guide)*
+- "It's never just a conversation" — what actually happens when a strategic buyer calls. Good pair with webinar topic 2. *(cpg-acquisition-process-ma-guide)*
 - The woman in the Whole Foods aisle: "Oh, I read about this in Shape magazine." *(cpg-earned-media-pr-strategy)*
 - 275 SKUs cut to 55. The innovation pipeline. *(cpg-product-innovation-pipeline)*
-
+- Jason Polinsky and "the truth of the business is at the shelf" — why Jeff had his cat man report directly to him. Good pair with webinar topic 11. *(cpg-slotting-fees-strategy)*
 ---
-
 ## Notes
 
-**Structure.** Strict alternation — odd numbers are storytelling, even numbers are technical playbook. Every technical post still opens with a scene or a line of dialogue so the hook works in the feed, but the body is the actual advice.
+**Structure.** Strict alternation — odd numbers are storytelling, even numbers are technical playbook. Every technical post opens with a scene or a line of dialogue so the hook still works in the feed, but the body is the actual advice.
 
-**Removed.** "We Paid Almost $1M To Get Into Albertsons" is gone entirely, you already ran it. The Rowdy slotting story also opens the velocity blog post, so #6 was rewritten from a different angle ("We got into 800 Kroger stores") to keep it clean.
+**Webinar tie-in.** All ten advice posts now preview one of the 12 poll topics, tagged under each headline and mapped in the coverage table above. Ten of the twelve get real coverage in the batch. Topic 9 (trade spend) already ran in the June batch as "Trade Spend Is The Line Nobody Audits," so it's deliberately not repeated. Topic 6 (buyer meeting to PO) is carried by the two story posts rather than a dedicated advice post — if the poll comes back with 6 in the top three, that's the first gap I'd fill.
 
-**New this round.** Five technical posts added from blog material that hadn't been touched: gross margin benchmarks (#2), velocity benchmarking (#6), the pricing framework (#8), distribution sequencing (#10), and the bottom-up financial model (#16). The Target barcode/price-match conversation in #10 is a genuinely great untapped story.
+**Swapped in this round.** Five advice posts rebuilt to cover the topic gaps: positioning and white space (#8), fatal flaws (#10), slotting and MCBs (#12), killing your burn (#14), and the pitch deck (#18). What they replaced went to the bench, not the trash.
+
+**Watch-outs.** #7 (green juice guy) and #8 (positioning) both come from material that opens with the kale story, so #8 was written from a different angle to avoid the echo two posts apart. #12 avoids the Rowdy / Albertsons slotting opener since that post already ran. #14 opens on "growth was the strategy" rather than the July 3rd Coke call, which also already ran.
 
 **Deliberately avoided** (already posted April–Aug): July 3rd Coke call, rehab / oxygen mask, the 2 AM tree climb, HACCP plan, $1M spoilage hit, Dirty Girl naming, hero SKU, Rowdy 20,000 doors, trade spend audit, the 60-SKU / 61st post, agencies, psychic medium, personal guarantee, beet juice forklift, Albertsons slotting.
 
-**Poll post (#0).** Uses Jeff's own topic list from the Aug 6 WhatsApp poll thread, trimmed from 17 to 12 for readability. Held back: repeat purchase engine, understanding your consumer, first sales team, DTC proof-of-concept, competitors on price, scaling without breaking, and Jeff's 25 most significant plays. LinkedIn's native poll caps at 4 options, so this runs as comment-your-top-3, which drives better comment volume anyway.
+**Poll post (#0).** Uses Jeff's own topic list from the Aug 6 WhatsApp thread, trimmed from 17 to 12 for readability. Held back: repeat purchase engine, understanding your consumer, first sales team, DTC proof-of-concept, competitors on price, scaling without breaking, and Jeff's 25 most significant plays. LinkedIn's native poll caps at 4 options, so this runs as comment-your-top-3, which drives better comment volume anyway.
 
-**CTAs.** Kept light throughout. #2, #4, #16, and #20 are the natural places to hang a workshop registration or the vetted-services link.
+**CTAs.** Kept light throughout. #2, #4, #16, #18, and #20 are the natural places to hang a workshop registration once the poll results are in.
