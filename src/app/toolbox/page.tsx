@@ -58,12 +58,8 @@ const kits = [
     ],
   },
   {
-    label: "White Papers",
+    label: "White Paper",
     items: [
-      {
-        title: "Suja: Lessons Learned",
-        body: "What actually took us from $600K to $100 million in six years, and what I'd do differently.",
-      },
       {
         title: "CPG Fatal Flaws",
         body: "The 18 mistakes that kill emerging brands before they get a fair shot. Learn them on my dime.",
@@ -90,8 +86,9 @@ export default function ToolboxPage() {
               </h1>
               <p className="mt-6 text-lg text-white/70 leading-relaxed">
                 I wrote <em>The Cold-Pressed Truth</em> to hand you things, not just tell you
-                things. Everything below is what I use with the founders I advise - the
-                calculators, the models, the workshops, the war stories.
+                things. So here is 10 days of Babu AI free, the WhatsApp group where 275+ CPG
+                founders answer each other in real time, and every calculator, model, and
+                workshop I use with the founders I advise.
               </p>
               <p className="mt-4 text-lg text-white/70 leading-relaxed">
                 One signup. One email. All of it. No cost, no call, no pitch.
@@ -129,11 +126,68 @@ export default function ToolboxPage() {
               What&rsquo;s inside
             </span>
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
-              Thirteen tools, three trainings, two white papers
+              Start with these two
             </h2>
             <p className="mt-4 text-lg text-muted leading-relaxed">
-              Built over 35 years and eight companies. Most of them exist because I got something
-              wrong first and had to build the thing that would have saved me.
+              The book is the thinking. These two are the thinking on demand - one machine that
+              answers whatever you bring it, and 275 founders who have already been where you
+              are. Everything else in the toolbox comes with them.
+            </p>
+          </div>
+
+          {/* Two headliners */}
+          <div className="grid gap-6 lg:grid-cols-2 mb-16">
+            <a
+              href="https://www.askbabu.ai"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex flex-col bg-foreground text-white rounded-2xl p-8 hover:shadow-xl transition-all"
+            >
+              <span className="inline-block self-start px-3 py-1 text-xs font-bold uppercase tracking-wider bg-accent text-white rounded-full mb-5">
+                10 days free
+              </span>
+              <p className="text-4xl mb-4">🤖</p>
+              <h3 className="text-2xl font-bold tracking-tight">Babu AI</h3>
+              <p className="mt-3 text-white/70 leading-relaxed flex-1">
+                Every spreadsheet below answers one question. Babu answers whatever you bring it -
+                pricing, promo math, retailer strategy, co-man contracts, fundraising prep -
+                trained on 35+ years of operating experience and 4,000+ of my own resources.
+                Underneath it sit 40+ purpose-built Gurus, each one built for a single job.
+              </p>
+              <span className="mt-6 inline-flex items-center font-semibold text-accent group-hover:text-white transition-colors">
+                Start the free trial &rarr;
+              </span>
+            </a>
+
+            <Link
+              href="/founders-only"
+              className="group flex flex-col bg-green-600 text-white rounded-2xl p-8 hover:shadow-xl transition-all"
+            >
+              <span className="inline-block self-start px-3 py-1 text-xs font-bold uppercase tracking-wider bg-white text-green-700 rounded-full mb-5">
+                Always free
+              </span>
+              <p className="text-4xl mb-4">💬</p>
+              <h3 className="text-2xl font-bold tracking-tight">The CPG Founders Club</h3>
+              <p className="mt-3 text-white/80 leading-relaxed flex-1">
+                275+ CPG founders in one WhatsApp group, every stage from pre-launch to exit,
+                answering each other&rsquo;s questions in real time. Somebody in there has already
+                solved the thing you&rsquo;re stuck on today. Nobody sells anything in there - that
+                is the whole rule, and it is why it works.
+              </p>
+              <span className="mt-6 inline-flex items-center font-semibold text-white/90 group-hover:text-white transition-colors">
+                Request to join &rarr;
+              </span>
+            </Link>
+          </div>
+
+          <div className="max-w-3xl mb-10 pt-4 border-t border-border">
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight">
+              And the rest of the toolbox
+            </h2>
+            <p className="mt-3 text-lg text-muted leading-relaxed">
+              Thirteen tools, three trainings, and the white paper. Built over 35 years and eight
+              companies. Most of them exist because I got something wrong first and had to build
+              the thing that would have saved me.
             </p>
           </div>
 
@@ -156,30 +210,6 @@ export default function ToolboxPage() {
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ========== WHATSAPP BAND ========== */}
-      <section className="bg-green-600 text-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
-          <div className="flex flex-col md:flex-row md:items-center gap-6 md:gap-8">
-            <p className="text-4xl shrink-0">💬</p>
-            <div className="flex-1">
-              <h2 className="text-xl sm:text-2xl font-bold tracking-tight">
-                The tools are free. So is the room they came from.
-              </h2>
-              <p className="mt-2 text-white/80 leading-relaxed">
-                275+ CPG founders in one WhatsApp group, answering each other&rsquo;s questions in
-                real time. Nobody sells anything in there. The link is in your email too.
-              </p>
-            </div>
-            <Link
-              href="/founders-only"
-              className="shrink-0 inline-flex items-center justify-center px-6 py-3 bg-white text-green-700 hover:bg-white/90 font-semibold rounded-lg transition-colors"
-            >
-              Request to join &rarr;
-            </Link>
           </div>
         </div>
       </section>

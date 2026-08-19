@@ -14,7 +14,7 @@ const LINKS = {
   burnWorkshop: `${SITE}/burn-rate-workshop-replay`,
   playbookTraining: `${SITE}/cpg-playbook-training`,
   whatsapp: `${SITE}/founders-only`,
-  babu: `${SITE}/babu-early`,
+  babu: "https://www.askbabu.ai",
   chartOfAccounts: "https://drive.google.com/uc?export=download&id=1tqSBrstaRNyrdK3jVNWPH8odWWGhO0JD",
   capitalRaise: "https://drive.google.com/uc?export=download&id=1ITv8j6I0le2Ge6jdIE26Ef-iom91BUHC",
   capitalRaiseVideo: "https://drive.google.com/uc?export=download&id=10vAkJYhL_na6kqXmE7EJjz6IjSgZ_2bM",
@@ -25,8 +25,6 @@ const LINKS = {
   skuRationalization: "https://drive.google.com/uc?export=download&id=1TsyjcooNakJi4ROVMEB0Ta8e-MO4rqGa",
   cashConversion: "https://drive.google.com/uc?export=download&id=1eejrhY2elYC-mO5lG4b2GWvmhzEpv3AF",
   cashRunway: "https://drive.google.com/uc?export=download&id=1scxRZdGvg1YSDGpY828dT7j_oBrH-0Ck",
-  sujaLessons:
-    "https://docs.google.com/document/d/1TMV6SR8pToDTAjAmmbiaREqGwxRopJaq/edit?usp=sharing&ouid=102243953732961922783&rtpof=true&sd=true",
   fatalFlaws:
     "https://docs.google.com/document/d/1MMAs1gP76y98A3JY9agd5GOsH4TAKh0H/edit?usp=sharing&ouid=102243953732961922783&rtpof=true&sd=true",
 };
@@ -73,6 +71,14 @@ function deliveryHtml(firstName: string) {
 
     <p style="margin:0 0 28px;">Bookmark this email. You'll come back to it.</p>
 
+    <h2 style="font-size:18px;font-weight:700;margin:32px 0 12px;border-top:1px solid #e7e5e4;padding-top:24px;">Start with these two</h2>
+
+    <p style="margin:0 0 8px;"><strong>1. ${link(LINKS.babu, "Babu AI &mdash; 10 days free")}</strong></p>
+    <p style="margin:0 0 20px;">Every spreadsheet below answers one question. Babu answers whatever you bring it &mdash; pricing, promo math, retailer strategy, co-man contracts, fundraising prep &mdash; trained on 35+ years of operating experience and 4,000+ of my own resources. Underneath it sit 40+ purpose-built Gurus, each one built for a single job. Take the 10 days and push on it.</p>
+
+    <p style="margin:0 0 8px;"><strong>2. ${link(LINKS.whatsapp, "The CPG Founders Club &mdash; always free")}</strong></p>
+    <p style="margin:0 0 20px;">275+ CPG founders in one WhatsApp group, every stage from pre-launch to exit, answering each other in real time. Somebody in there has already solved the thing you're stuck on today. Nobody sells anything in there. That's the whole rule, and it's why it works.</p>
+
     <h2 style="font-size:18px;font-weight:700;margin:32px 0 12px;border-top:1px solid #e7e5e4;padding-top:24px;">Video Trainings</h2>
     <ul style="margin:0;padding-left:20px;">
       ${tool(LINKS.burnWorkshop, "Reducing the Burn Workshop", "90 minutes on getting to profitability faster. Pricing, trade spend, SKU rationalization, cash conversion, runway planning.")}
@@ -96,16 +102,12 @@ function deliveryHtml(firstName: string) {
       ${tool(LINKS.unitPricing, "Unit Pricing &amp; Break-Even Model", "Find your break-even point and test pricing scenarios.", ` (${link(LINKS.unitPricingVideo, "video walkthrough")})`)}
     </ul>
 
-    <h2 style="font-size:18px;font-weight:700;margin:32px 0 12px;border-top:1px solid #e7e5e4;padding-top:24px;">White Papers</h2>
+    <h2 style="font-size:18px;font-weight:700;margin:32px 0 12px;border-top:1px solid #e7e5e4;padding-top:24px;">White Paper</h2>
     <ul style="margin:0;padding-left:20px;">
-      ${tool(LINKS.sujaLessons, "Suja: Lessons Learned", "What actually took us from $600K to $100 million, and what I'd do differently.")}
       ${tool(LINKS.fatalFlaws, "CPG Fatal Flaws", "18 mistakes that kill emerging brands, and how to avoid every one of them.")}
     </ul>
 
-    <h2 style="font-size:18px;font-weight:700;margin:32px 0 12px;border-top:1px solid #e7e5e4;padding-top:24px;">The Room</h2>
-    <p style="margin:0 0 16px;">${link(LINKS.whatsapp, "The CPG Founders WhatsApp Group")} &mdash; 275+ founders answering each other's questions in real time. Nobody sells anything in there. Free to join.</p>
-
-    <p style="margin:32px 0 16px;border-top:1px solid #e7e5e4;padding-top:24px;">Where to start? Pre-launch, take the Chart of Accounts and the Fatal Flaws paper &mdash; they'll save you from expensive early mistakes. Already selling? The Playbook and the Fundraising Masterclass will sharpen your game fast. Burning cash faster than you'd like? Start with Reducing the Burn and the Profitability Kit.</p>
+    <p style="margin:32px 0 16px;border-top:1px solid #e7e5e4;padding-top:24px;">Where to start? Pre-launch, take the Chart of Accounts and the Fatal Flaws paper &mdash; they'll save you from expensive early mistakes. Already selling? The Playbook and the Fundraising Masterclass will sharpen your game fast. Burning cash faster than you'd like? Start with Reducing the Burn and the Profitability Kit. And whatever stage you're at, get in the WhatsApp group. That one costs you nothing and pays the fastest.</p>
 
     <p style="margin:0 0 16px;">Use them. That's the whole point.</p>
 
