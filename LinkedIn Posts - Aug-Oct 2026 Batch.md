@@ -1,7 +1,8 @@
 # LinkedIn Posts — Jeff Church (Aug–Oct 2026 batch)
 
 **21 posts.** 1 webinar topic poll + 20 posts that strictly alternate: story, CPG advice, story, CPG advice.
-Picks up after "People Were Upset When I Did The Coke Deal" (Thu Aug 13).
+
+**Status:** Post 0 (the poll) went live Wed Aug 19. Thu Aug 20 is already spoken for by a previously queued post. The batch proper starts **Tue Aug 25** and runs Tue/Thu through Thu Oct 29.
 
 Odd numbers are storytelling. Even numbers are technical playbook posts pulled from the blog.
 
@@ -11,7 +12,8 @@ Odd numbers are storytelling. Even numbers are technical playbook posts pulled f
 
 | # | Date | Day | Post | Type | Webinar topic |
 | --- | --- | --- | --- | --- | --- |
-| 0 | Aug 20 | Thu | Which Workshop Should I Run First? | Poll | — |
+| 0 | Aug 19 | Wed | Which Workshop Should I Run First? | Poll | ✅ POSTED |
+| — | Aug 20 | Thu | *(previously queued post)* | — | — |
 | 1 | Aug 25 | Tue | The Target Buyers In The Bed | STORY | 6 — buyer meeting to PO |
 | 2 | Aug 27 | Thu | 40% Is The Floor, Not The Ceiling | ADVICE | **8 — gross margin architecture** |
 | 3 | Sep 1 | Tue | "What's A Cat Man?" | STORY | 11 — velocity before volume |
@@ -51,7 +53,7 @@ Odd numbers are storytelling. Even numbers are technical playbook posts pulled f
 | 12 | Finding the white space nobody has filled | #8, #7 |
 ---
 
-## 0. "Which Workshop Should I Run First?" — Thu Aug 20
+## 0. "Which Workshop Should I Run First?" — Wed Aug 19 ✅ POSTED
 
 **Poll**
 
