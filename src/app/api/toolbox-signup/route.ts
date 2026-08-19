@@ -77,7 +77,7 @@ function deliveryHtml(firstName: string) {
     <p style="margin:0 0 20px;">Every spreadsheet below answers one question. Babu answers whatever you bring it &mdash; pricing, promo math, retailer strategy, co-man contracts, fundraising prep &mdash; trained on 35+ years of operating experience and 4,000+ of my own resources. Underneath it sit 40+ purpose-built Gurus, each one built for a single job. Take the 10 days and push on it.</p>
 
     <p style="margin:0 0 8px;"><strong>2. ${link(LINKS.whatsapp, "The CPG Founders Club &mdash; always free")}</strong></p>
-    <p style="margin:0 0 20px;">275+ CPG founders in one WhatsApp group, every stage from pre-launch to exit, answering each other in real time. Somebody in there has already solved the thing you're stuck on today. Nobody sells anything in there. That's the whole rule, and it's why it works.</p>
+    <p style="margin:0 0 20px;">350+ CPG founders in one WhatsApp group, every stage from pre-launch to exit, answering each other in real time. Somebody in there has already solved the thing you're stuck on today. Nobody sells anything in there. That's the whole rule, and it's why it works.</p>
 
     <h2 style="font-size:18px;font-weight:700;margin:32px 0 12px;border-top:1px solid #e7e5e4;padding-top:24px;">Video Trainings</h2>
     <ul style="margin:0;padding-left:20px;">

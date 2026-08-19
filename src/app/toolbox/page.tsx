@@ -84,7 +84,7 @@ export default function ToolboxPage() {
               </h1>
               <p className="mt-6 text-lg text-white/70 leading-relaxed">
                 I wrote <em>The Cold-Pressed Truth</em> to hand you things, not just tell you
-                things. So here is 10 days of Babu AI free, the WhatsApp group where 275+ CPG
+                things. So here is 10 days of Babu AI free, the WhatsApp group where 350+ CPG
                 founders answer each other in real time, and every calculator, model, and
                 workshop I use with the founders I advise.
               </p>
@@ -128,7 +128,7 @@ export default function ToolboxPage() {
             </h2>
             <p className="mt-4 text-lg text-muted leading-relaxed">
               The book is the thinking. These two are the thinking on demand - one machine that
-              answers whatever you bring it, and 275 founders who have already been where you
+              answers whatever you bring it, and 350 founders who have already been where you
               are. Everything else in the toolbox comes with them.
             </p>
           </div>
@@ -152,27 +152,27 @@ export default function ToolboxPage() {
                 trained on 35+ years of operating experience and 4,000+ of my own resources.
                 Underneath it sit 40+ purpose-built Gurus, each one built for a single job.
               </p>
-              <span className="mt-6 inline-flex items-center font-semibold text-accent group-hover:text-white transition-colors">
+              <span className="mt-6 inline-flex items-center font-semibold text-gold group-hover:text-white transition-colors">
                 Start the free trial &rarr;
               </span>
             </a>
 
             <Link
               href="/founders-only"
-              className="group flex flex-col bg-green-600 text-white rounded-2xl p-8 hover:shadow-xl transition-all"
+              className="group flex flex-col bg-ridge text-white rounded-2xl p-8 hover:shadow-xl transition-all"
             >
-              <span className="inline-block self-start px-3 py-1 text-xs font-bold uppercase tracking-wider bg-white text-green-700 rounded-full mb-5">
+              <span className="inline-block self-start px-3 py-1 text-xs font-bold uppercase tracking-wider bg-gold text-foreground rounded-full mb-5">
                 Always free
               </span>
               <p className="text-4xl mb-4">💬</p>
               <h3 className="text-2xl font-bold tracking-tight">The CPG Founders Club</h3>
               <p className="mt-3 text-white/80 leading-relaxed flex-1">
-                275+ CPG founders in one WhatsApp group, every stage from pre-launch to exit,
+                350+ CPG founders in one WhatsApp group, every stage from pre-launch to exit,
                 answering each other&rsquo;s questions in real time. Somebody in there has already
                 solved the thing you&rsquo;re stuck on today. Nobody sells anything in there - that
                 is the whole rule, and it is why it works.
               </p>
-              <span className="mt-6 inline-flex items-center font-semibold text-white/90 group-hover:text-white transition-colors">
+              <span className="mt-6 inline-flex items-center font-semibold text-gold group-hover:text-white transition-colors">
                 Request to join &rarr;
               </span>
             </Link>

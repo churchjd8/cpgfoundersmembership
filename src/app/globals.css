@@ -1,16 +1,30 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fafaf9;
-  --foreground: #1c1917;
-  --accent: #b45309;
-  --accent-light: #fef3c7;
-  --accent-dark: #92400e;
-  --muted: #78716c;
-  --border: #e7e5e4;
+  /* CPG Founders Group is a HUMAN surface in the brand system:
+     warm paper + deep navy + gold. Signal blue belongs to Babu
+     (machine surfaces) and is only used here when pointing at it. */
+
+  /* Foundation — 70% */
+  --background: #f7f5f1; /* Warm paper */
+  --foreground: #0b1a2e; /* Deep navy */
   --card: #ffffff;
-  --card-flagship: #fffbeb;
+  --border: #e4e0d9; /* paper-tinted */
+  --muted: #5f6b78; /* Stone, darkened to 5:1 on paper for body copy */
+  --stone: #75828f; /* Stone as specced — decorative and on-navy use */
+
+  /* Brand temperature — 20% */
+  --ridge: #1b3a5f; /* Ridge blue */
+  --accent: #a56a16; /* Deep amber — the gold that survives a light surface */
+  --accent-dark: #8a5814; /* hover */
+  --accent-light: #faf0de; /* gold tint */
+  --card-flagship: #fdf6ea;
+
+  /* Signal / emphasis — 10% */
+  --gold: #dfa13c; /* Summit gold — navy surfaces only, 7.7:1 on navy */
+  --signal: #2b4cf0; /* Signal blue — Babu and machine surfaces only */
 }
+
 
 @theme inline {
   --color-background: var(--background);
@@ -22,6 +36,10 @@
   --color-border: var(--border);
   --color-card: var(--card);
   --color-card-flagship: var(--card-flagship);
+  --color-stone: var(--stone);
+  --color-ridge: var(--ridge);
+  --color-gold: var(--gold);
+  --color-signal: var(--signal);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }

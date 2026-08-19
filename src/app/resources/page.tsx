@@ -86,7 +86,7 @@ export default function ResourcesPage() {
       </section>
 
       {/* ========== WHATSAPP BAND ========== */}
-      <section className="bg-green-600 text-white">
+      <section className="bg-ridge text-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex flex-col md:flex-row md:items-center gap-6 md:gap-8">
             <p className="text-4xl shrink-0">💬</p>
@@ -95,13 +95,13 @@ export default function ResourcesPage() {
                 The resources are free. So is the room they came from.
               </h2>
               <p className="mt-2 text-white/80 leading-relaxed">
-                275+ CPG founders in one WhatsApp group, answering each other&rsquo;s questions
+                350+ CPG founders in one WhatsApp group, answering each other&rsquo;s questions
                 in real time. Nobody sells anything in there.
               </p>
             </div>
             <Link
               href="/founders-only"
-              className="shrink-0 inline-flex items-center justify-center px-6 py-3 bg-white text-green-700 hover:bg-white/90 font-semibold rounded-lg transition-colors"
+              className="shrink-0 inline-flex items-center justify-center px-6 py-3 bg-gold text-foreground hover:bg-gold/90 font-semibold rounded-lg transition-colors"
             >
               Request to join &rarr;
             </Link>

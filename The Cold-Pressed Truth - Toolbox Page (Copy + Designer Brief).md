@@ -31,7 +31,7 @@ Same models, trainings, and tools I use with the founders I advise. No cost, no 
 - **Babu AI — 10 days free.** Every spreadsheet below answers one question. Babu answers
   whatever you bring it: pricing, promo math, retailer strategy, co-man contracts, fundraising
   prep. Trained on 35 years of operating experience, with 40+ purpose-built Gurus underneath it.
-- **The CPG Founders Club.** 275+ founders in one WhatsApp group, every stage from pre-launch
+- **The CPG Founders Club.** 350+ founders in one WhatsApp group, every stage from pre-launch
   to exit, answering each other in real time. Nobody sells anything in there. That's the whole
   rule, and it's why it works.
 
@@ -68,7 +68,7 @@ tools — the same ones I use with the founders I advise. No cost, no call, no p
 
 - **Babu AI — 10 days free.** Ask it anything: pricing, promo math, retailer strategy,
   fundraising prep. 40+ purpose-built Gurus underneath it.
-- **The CPG Founders Club.** 275+ founders in one WhatsApp group, answering each other in real
+- **The CPG Founders Club.** 350+ founders in one WhatsApp group, answering each other in real
   time. Nobody sells anything in there.
 
 **Then the rest:**
@@ -89,7 +89,7 @@ Take the tools. Then let's get to work.
 ## Part 2 — Designer Brief
 
 **Two deliverables from one build: a grayscale version for the book interior, and a color
-version for the website.** Design in color first, then convert — but check the grayscale
+version for the website in the CPG Founders Group brand (paper + navy + gold).** Design in color first, then convert — but check the grayscale
 conversion constantly, because the B&W version is the one that has to survive ink on uncoated
 paper.
 
@@ -135,23 +135,44 @@ monitor and turn to sludge in print.
 - The Option B cover is green-on-cream. In grayscale the letterforms lose contrast fast. Boost
   the contrast on that asset specifically so "COLD PRESSED TRUTH" still reads.
 
-### Version B — Website (color)
+### Version B — Website (color) — CPG Founders Group brand
 
 Goes on **cpgfoundersgroup.com/toolbox**, in the hero beside the opt-in form and/or above the
 "Start with these two" cards.
 
-- **Site palette** (match these exactly):
-  - Accent / burnt amber: `#b45309` — hover `#92400e`
-  - Near-black: `#1c1917`
-  - Page background: `#fafaf9`
-  - Card white: `#ffffff`
-  - Border: `#e7e5e4`
-  - Muted text: `#78716c`
-  - WhatsApp green: `#16a34a`
-- The hero sits on the **near-black `#1c1917` background**, so build the color version to work
-  on dark. Give it a transparent background and light edges, or a soft amber glow behind the
-  stack for separation.
-- **Deliver at 2400px wide**, transparent PNG, plus a WebP export. Site images run with Next.js
+**Build this in the CPG Founders Group identity, not a one-off palette.** In the brand system,
+CPG Founders Group is a **human surface: warm paper + deep navy + gold.** Signal blue belongs to
+Babu (machine surfaces) and appears here only on the Babu asset itself.
+
+**Core palette — use these exact values:**
+
+| Role | Name | Hex |
+|---|---|---|
+| Primary dark / type | Deep navy | `#0B1A2E` |
+| Secondary surface | Ridge blue | `#1B3A5F` |
+| Machine / Babu only | Signal blue | `#2B4CF0` |
+| Emphasis on navy | Summit gold | `#DFA13C` |
+| Gold on light surfaces | Deep amber | `#A56A16` |
+| Background | Warm paper | `#F7F5F1` |
+| Muted / secondary | Stone | `#75828F` |
+
+**Usage ratio: 70 / 20 / 10.** 70% neutral foundation (paper, navy, stone), 20% brand
+temperature (ridge blue, deep amber), 10% signal or emphasis (summit gold). Do not let gold
+creep past roughly a tenth of the composition — it stops being emphasis the moment it's
+everywhere.
+
+**The one rule that will bite you:** Summit gold `#DFA13C` only clears 2.3:1 on a light
+background. It is a *navy-surface* color (7.7:1 on deep navy, excellent). On paper or white,
+use Deep amber `#A56A16` instead. Never set gold type on paper.
+
+**The mark:** the CPG Founders Group mountain — gold foothill, deep navy summit, ridge blue
+shoulder, signal blue summit flag. It's live in the site header if you need to pull it.
+
+**Specs:**
+- The `/toolbox` hero sits on **deep navy `#0B1A2E`**, so build the color version to work on
+  dark. Transparent background with light edges, or a soft summit-gold glow behind the stack
+  for separation.
+- **2400px wide**, transparent PNG, plus a WebP export. Site images run with Next.js
   optimization off, so **keep the WebP under 300KB** or the page gets slow.
 - Also supply a **1200×630 version on a solid background** for the OG / social share card.
 
@@ -188,7 +209,7 @@ Live at `/toolbox`. One opt-in delivers all of it in one email.
 
 **Headliners**
 - Babu AI — 10-day free trial (askbabu.ai)
-- CPG Founders Club WhatsApp group — 275+ founders
+- CPG Founders Club WhatsApp group — 350+ founders
 
 **Profitability Kit** — Pricing Calculator · Trade Promo Break-Even · SKU Rationalization ·
 Cash Conversion Cycle · Cash Runway · *Reducing the Burn* workshop (90 min)

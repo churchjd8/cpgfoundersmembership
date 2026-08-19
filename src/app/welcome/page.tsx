@@ -61,7 +61,7 @@ export default function WelcomePage() {
             Welcome to the group
           </h1>
           <p className="mt-6 text-lg text-white/70 leading-relaxed">
-            Thank you for raising your hand. You&rsquo;re now standing with 275+ CPG founders
+            Thank you for raising your hand. You&rsquo;re now standing with 350+ CPG founders
             who are building the same thing you are, usually at 11pm, usually with fewer
             answers than they&rsquo;d like.
           </p>

@@ -81,7 +81,7 @@ export default function FoundersOnlyPage() {
               <ul className="mt-6 space-y-3">
                 <li className="flex gap-2 text-white/70">
                   <span className="text-accent font-bold">&#10003;</span>
-                  275+ active CPG founders across every stage
+                  350+ active CPG founders across every stage
                 </li>
                 <li className="flex gap-2 text-white/70">
                   <span className="text-accent font-bold">&#10003;</span>
@@ -105,7 +105,7 @@ export default function FoundersOnlyPage() {
             <div className="text-center">
               <div className="inline-flex flex-col items-center gap-4 bg-white/5 rounded-2xl p-8 sm:p-12">
                 <p className="text-6xl">💬</p>
-                <p className="text-4xl sm:text-5xl font-bold text-accent">275+</p>
+                <p className="text-4xl sm:text-5xl font-bold text-accent">350+</p>
                 <p className="text-lg text-white/70">CPG founders and counting</p>
                 <p className="text-sm text-white/40 max-w-xs">
                   From pre-launch to $10M+. Every stage, every category, one community.

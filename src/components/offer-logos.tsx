@@ -2,7 +2,7 @@ export function BreakthroughLogo({ className = "h-10 w-auto" }: { className?: st
   return (
     <svg viewBox="0 0 200 48" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
       {/* Arrow breaking through a barrier */}
-      <rect x="0" y="0" width="48" height="48" rx="10" fill="#b45309" />
+      <rect x="0" y="0" width="48" height="48" rx="10" fill="#a56a16" />
       <path
         d="M14 32L24 16L34 32"
         stroke="white"
@@ -27,7 +27,7 @@ export function BabuLogo({ className = "h-10 w-auto" }: { className?: string }) 
   return (
     <svg viewBox="0 0 140 48" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
       {/* AI brain/circuit icon */}
-      <rect x="0" y="0" width="48" height="48" rx="10" fill="#1c1917" />
+      <rect x="0" y="0" width="48" height="48" rx="10" fill="#0b1a2e" />
       {/* Brain outline */}
       <path
         d="M24 12C19 12 15 16 15 21C15 24 16.5 26.5 19 28V34H29V28C31.5 26.5 33 24 33 21C33 16 29 12 24 12Z"
@@ -60,7 +60,7 @@ export function MbaLogo({ className = "h-10 w-auto" }: { className?: string }) {
   return (
     <svg viewBox="0 0 160 48" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
       {/* Graduation cap icon */}
-      <rect x="0" y="0" width="48" height="48" rx="10" fill="#92400e" />
+      <rect x="0" y="0" width="48" height="48" rx="10" fill="#8a5814" />
       <path
         d="M12 22L24 16L36 22L24 28Z"
         fill="white"
@@ -89,7 +89,7 @@ export function WorkWithJeffLogo({ className = "h-10 w-auto" }: { className?: st
   return (
     <svg viewBox="0 0 220 48" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
       {/* Diamond premium icon */}
-      <rect x="0" y="0" width="48" height="48" rx="10" fill="#1c1917" />
+      <rect x="0" y="0" width="48" height="48" rx="10" fill="#0b1a2e" />
       <path
         d="M16 20H32L36 26L24 38L12 26Z"
         stroke="white"

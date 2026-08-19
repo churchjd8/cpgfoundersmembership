@@ -19,11 +19,11 @@ export function Footer() {
           <div>
             <div className="flex items-center gap-2">
               <svg viewBox="0 0 48 32" className="h-8 w-11 flex-shrink-0" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M30 13L41 27H19Z" fill="#d97706" />
-                <path d="M20 7L33 27H7Z" fill="#b45309" />
-                <path d="M10 18L19 27H1Z" fill="#fbbf24" />
-                <line x1="20" y1="1" x2="20" y2="7" stroke="#92400e" strokeWidth="1.8" strokeLinecap="round" />
-                <path d="M20.2 1L25.5 3.5L20.2 5.5" fill="#d97706" stroke="#92400e" strokeWidth="0.5" strokeLinejoin="round" />
+                <path d="M30 13L41 27H19Z" fill="#1b3a5f" />
+                <path d="M20 7L33 27H7Z" fill="#0b1a2e" />
+                <path d="M10 18L19 27H1Z" fill="#dfa13c" />
+                <line x1="20" y1="1" x2="20" y2="7" stroke="#0b1a2e" strokeWidth="1.8" strokeLinecap="round" />
+                <path d="M20.2 1L25.5 3.5L20.2 5.5" fill="#2b4cf0" stroke="#0b1a2e" strokeWidth="0.5" strokeLinejoin="round" />
               </svg>
               <p className="text-lg font-bold text-white">CPG Founders Group</p>
             </div>
