@@ -23,43 +23,41 @@ export const metadata: Metadata = {
 
 const kits = [
   {
-    label: "Video Trainings",
-    items: [
-      {
-        title: "Reducing the Burn",
-        body: "90 minutes on getting to profitability faster. Pricing, trade spend, SKU rationalization, cash conversion, and runway planning.",
-      },
-      {
-        title: "Fundraising Masterclass",
-        body: "Three hours on raising capital. Valuations, decks, investor targeting, dilution math, SAFEs vs. equity - the frameworks from 44 rounds and $275M+ raised.",
-      },
-      {
-        title: "The CPG Playbook Training",
-        body: "All 23 plays for building and scaling a brand, walked through live. KPIs to exit planning.",
-      },
-    ],
-  },
-  {
-    label: "Profitability Kit",
+    label: "The Profitability Kit",
+    lead: "Five tools and the workshop that goes with them.",
     items: [
       { title: "Pricing Calculator", body: "Start from MSRP or COGS, compare both, find your optimal price." },
       { title: "Trade Promo Break-Even Calculator", body: "Know if a promo is worth running before you commit." },
       { title: "SKU Rationalization Tool", body: "See which SKUs carry your brand and which ones to cut." },
       { title: "Cash Conversion Cycle Tool", body: "See how your payment terms trap or free cash." },
       { title: "Cash Runway Calculator", body: "Model your burn across three years and size your next raise." },
+      {
+        title: "Reducing the Burn (90-min workshop)",
+        body: "Getting to profitability faster. Pricing, trade spend, SKU rationalization, cash conversion, runway planning.",
+      },
     ],
   },
   {
-    label: "Fundraising Kit",
+    label: "The Fundraising Kit",
+    lead: "Three tools and the three-hour masterclass.",
     items: [
       { title: "CPG Chart of Accounts", body: "Set up your financials correctly from day one." },
       { title: "Capital Raise & Runway Calculator", body: "Model your burn rate and plan your raise. Includes a video walkthrough." },
       { title: "Unit Pricing & Break-Even Model", body: "Find your break-even point and test pricing scenarios. Includes a video walkthrough." },
+      {
+        title: "Fundraising Masterclass (3 hrs)",
+        body: "Valuations, decks, investor targeting, dilution math, SAFEs vs. equity - the frameworks from 44 rounds and $275M+ raised.",
+      },
     ],
   },
   {
-    label: "White Paper",
+    label: "Training & White Paper",
+    lead: "The operating system, and the mistakes to avoid building it.",
     items: [
+      {
+        title: "The CPG Playbook Training",
+        body: "All 23 plays for building and scaling a brand, walked through live. KPIs to exit planning.",
+      },
       {
         title: "CPG Fatal Flaws",
         body: "The 18 mistakes that kill emerging brands before they get a fair shot. Learn them on my dime.",
@@ -185,7 +183,7 @@ export default function ToolboxPage() {
               And the rest of the toolbox
             </h2>
             <p className="mt-3 text-lg text-muted leading-relaxed">
-              Thirteen tools, three trainings, and the white paper. Built over 35 years and eight
+              Two kits, the Playbook, and the Fatal Flaws paper. Built over 35 years and eight
               companies. Most of them exist because I got something wrong first and had to build
               the thing that would have saved me.
             </p>
@@ -194,9 +192,12 @@ export default function ToolboxPage() {
           <div className="space-y-12">
             {kits.map((kit) => (
               <div key={kit.label}>
-                <h3 className="text-sm font-bold uppercase tracking-wider text-accent border-b border-border pb-3 mb-6">
-                  {kit.label}
-                </h3>
+                <div className="border-b border-border pb-3 mb-6">
+                  <h3 className="text-sm font-bold uppercase tracking-wider text-accent">
+                    {kit.label}
+                  </h3>
+                  <p className="mt-1 text-sm text-muted">{kit.lead}</p>
+                </div>
                 <div className="grid gap-6 sm:grid-cols-2">
                   {kit.items.map((item) => (
                     <div key={item.title} className="flex gap-3">
