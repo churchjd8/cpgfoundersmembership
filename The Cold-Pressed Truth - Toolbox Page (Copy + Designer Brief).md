@@ -88,10 +88,11 @@ Take the tools. Then let's get to work.
 
 ## Part 2 — Designer Brief
 
-**Two deliverables from one build: a grayscale version for the book interior, and a color
-version for the website in the CPG Founders Group brand (paper + navy + gold).** Design in color first, then convert — but check the grayscale
-conversion constantly, because the B&W version is the one that has to survive ink on uncoated
-paper.
+**Two deliverables from one build:** a grayscale version for the book interior, and a color
+version for the website in the CPG Founders Group brand (warm paper + deep navy + gold).
+
+Design in color first, then convert — but check the grayscale constantly, because the B&W
+version is the one that has to survive ink on uncoated paper.
 
 ### The graphic: the toolbox bundle
 
@@ -166,7 +167,8 @@ background. It is a *navy-surface* color (7.7:1 on deep navy, excellent). On pap
 use Deep amber `#A56A16` instead. Never set gold type on paper.
 
 **The mark:** the CPG Founders Group mountain — gold foothill, deep navy summit, ridge blue
-shoulder, signal blue summit flag. It's live in the site header if you need to pull it.
+shoulder, signal blue summit flag. Download the vector directly:
+`https://cpgfoundersgroup.com/images/brand/cpg-founders-mark.svg`
 
 **Specs:**
 - The `/toolbox` hero sits on **deep navy `#0B1A2E`**, so build the color version to work on
