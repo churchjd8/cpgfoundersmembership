@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-// Unlisted overview of the 3-Month Intensive, sent by hand to founders who have
-// applied at /apply. Not linked from nav or the footer and noindexed — the link
-// is the invitation. Content is the same offer Joshua sends in the application
-// response email, so the two must move together: source of truth is
-// "Jeff Church Advisory - Offers One-Pager.md".
+// Step 2 of the work-with-Jeff funnel: /apply (form) → this page (sent by hand
+// in Joshua's response email) → the intro call booking. Unlisted rather than
+// gated — not linked from nav or the footer and noindexed — so the link itself
+// is the invitation, and the page can talk about capacity and pricing frankly.
+// Source of truth for the offer is "Jeff Church Advisory - Offers One-Pager.md";
+// that file, this page, and the response email must move together.
 
 export const metadata: Metadata = {
   title: "Working with Jeff Church - The 3-Month Intensive",
@@ -14,8 +15,7 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
-const contactHref =
-  "mailto:info@teamchurch.co?subject=Working with Jeff — next steps";
+const bookingHref = "https://cal.arkpartners.ai/joshua/intro";
 
 const tiers = [
   {
@@ -120,6 +120,24 @@ const credentials = [
   "35+ years in CPG with deep relationships across buyers, investors, brokers, and operators",
 ];
 
+const steps = [
+  {
+    n: "01",
+    title: "You applied",
+    body: "Done. Jeff and I read every application that comes in, and we look at the brand before we reply to anyone.",
+  },
+  {
+    n: "02",
+    title: "You're reading this",
+    body: "The full offer, the real numbers, nothing held back for a sales call. Take your time with it and figure out whether it's worth a conversation.",
+  },
+  {
+    n: "03",
+    title: "We talk",
+    body: "A short intro call to make sure it's a fit in both directions, and to point you at the right tier. If we're aligned, we get your kickoff with Jeff on the calendar.",
+  },
+];
+
 function Check() {
   return (
     <svg
@@ -145,22 +163,36 @@ export default function IntensivePage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-28">
           <div className="max-w-3xl">
             <span className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider bg-accent text-white rounded-full mb-6">
-              For founders who applied
+              Private &mdash; by application only
             </span>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight tracking-tight">
               What working with Jeff actually looks like.
             </h1>
             <p className="mt-6 text-lg text-white/70 leading-relaxed">
-              A focused three-month intensive where Jeff gets deep in your business, builds
-              the strategy and roadmap with you, and stays in your corner while you execute.
-              There are two ways in. The difference is how much direct time you get with him.
+              You&rsquo;re reading this because your application made it through. This page
+              isn&rsquo;t linked anywhere on the site and isn&rsquo;t public. It goes to the
+              founders we think Jeff can actually move the needle for.
+            </p>
+            <p className="mt-6 text-lg text-white/70 leading-relaxed">
+              What he does is a focused three-month intensive. He gets deep in your business,
+              builds the strategy and roadmap with you, and stays in your corner while you
+              execute. There are two ways in. The difference is how much direct time you get
+              with him.
+            </p>
+            <p className="mt-6 rounded-xl border border-gold/30 bg-white/5 px-5 py-4 text-white/80 leading-relaxed">
+              <strong className="text-gold">Jeff has room for 1-2 more founders right now.</strong>{" "}
+              He works with a small number at a time because every engagement is built around
+              your business, not a template. When those spots fill, this closes until one opens
+              back up.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
               <a
-                href={contactHref}
+                href={bookingHref}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-accent hover:bg-accent-dark text-white font-semibold transition-colors"
               >
-                Get a call on the books
+                Book your intro call
               </a>
               <a
                 href="#compare"
@@ -332,26 +364,56 @@ export default function IntensivePage() {
         </div>
       </section>
 
+      {/* ========== HOW THIS WORKS ========== */}
+      <section className="py-16 md:py-24 bg-card border-t border-border">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="max-w-2xl">
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight">How this works</h2>
+            <p className="mt-4 text-muted leading-relaxed">
+              Three steps, and you&rsquo;ve already done the first one.
+            </p>
+          </div>
+          <div className="mt-12 grid md:grid-cols-3 gap-6">
+            {steps.map((step) => (
+              <div key={step.n} className="rounded-xl border border-border bg-background p-6">
+                <span className="text-sm font-bold tracking-wider text-accent">{step.n}</span>
+                <h3 className="mt-3 font-bold">{step.title}</h3>
+                <p className="mt-2 text-sm text-muted leading-relaxed">{step.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ========== CTA ========== */}
       <section className="py-16 md:py-24">
-        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight">
-            Which direction are you leaning?
-          </h2>
-          <p className="mt-6 text-muted leading-relaxed">
-            Reply to the email that brought you here, or hit the button below, and we&rsquo;ll
-            get a call on the books with Joshua and Jeff to talk it through.
-          </p>
-          <div className="mt-8">
-            <a
-              href={contactHref}
-              className="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-accent hover:bg-accent-dark text-white font-semibold transition-colors"
-            >
-              Get a call on the books
-            </a>
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight">
+              The last step is a conversation.
+            </h2>
+            <p className="mt-6 text-muted leading-relaxed">
+              Before anyone starts, we get on a call to make sure it&rsquo;s a fit in both
+              directions. Twenty minutes. We&rsquo;ll talk through where you are, what
+              you&rsquo;re trying to hit, and which of the two tiers actually makes sense for
+              you. If it isn&rsquo;t a fit, we&rsquo;ll tell you that too.
+            </p>
+            <div className="mt-8">
+              <a
+                href={bookingHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-accent hover:bg-accent-dark text-white font-semibold transition-colors"
+              >
+                Book your intro call
+              </a>
+            </div>
+            <p className="mt-4 text-sm text-muted">
+              Booking with Joshua from Jeff&rsquo;s team. Pick any time that works.
+            </p>
           </div>
 
-          <div className="mt-16 pt-10 border-t border-border text-left">
+          <div className="mt-16 pt-10 border-t border-border">
             <h3 className="font-bold">If the timing isn&rsquo;t right yet</h3>
             <p className="mt-3 text-muted leading-relaxed">
               The{" "}

@@ -64,7 +64,7 @@ export default function WorkWithJeffApplyPage() {
               within 2 business days with next steps.
             </p>
             <p className="mt-6 text-base text-white/80 max-w-2xl mx-auto leading-relaxed">
-              Jeff has room for <strong className="text-white">2-3 more founders</strong> right
+              Jeff has room for <strong className="text-white">1-2 more founders</strong> right
               now. He works with a small number at a time because each engagement is built around
               your business, not a template. When those spots fill, this closes until one opens
               back up.
