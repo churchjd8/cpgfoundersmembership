@@ -24,6 +24,75 @@ export const metadata: Metadata = {
   },
 };
 
+const KIT_VISUALS = {
+  profitability: {
+    image: "/images/resources/profitability-kit.webp",
+    alt: "Profitability kit with calculators, charts, and CPG product boxes",
+    accent: "bg-accent",
+    tint: "bg-accent-light",
+    stat: "6 resources",
+  },
+  fundraising: {
+    image: "/images/resources/fundraising-kit.webp",
+    alt: "Fundraising kit with investor materials, charts, and CPG product boxes",
+    accent: "bg-ridge",
+    tint: "bg-blue-50",
+    stat: "4 resources",
+  },
+  "starting-line": {
+    image: "/images/resources/starting-line-kit.webp",
+    alt: "Starting line kit with a playbook, checklist, map, and launch materials",
+    accent: "bg-green-700",
+    tint: "bg-green-50",
+    stat: "4 resources",
+  },
+} as const;
+
+const KIND_LABELS = {
+  training: "Training",
+  tool: "Tool",
+  paper: "Paper",
+  assessment: "Assessment",
+} as const;
+
+function ResourceIcon({ kind }: { kind: keyof typeof KIND_LABELS }) {
+  const common = "h-4 w-4";
+
+  if (kind === "training") {
+    return (
+      <svg className={common} viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M4 6.5h16v11H4z" stroke="currentColor" strokeWidth="2" />
+        <path d="M10 9.5l5 2.5-5 2.5z" fill="currentColor" />
+      </svg>
+    );
+  }
+
+  if (kind === "paper") {
+    return (
+      <svg className={common} viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M7 3.5h7l3 3v14H7z" stroke="currentColor" strokeWidth="2" />
+        <path d="M14 3.5v4h4M9.5 12h5M9.5 16h5" stroke="currentColor" strokeWidth="2" />
+      </svg>
+    );
+  }
+
+  if (kind === "assessment") {
+    return (
+      <svg className={common} viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M8 11l2.5 2.5L16 8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+        <path d="M5 4.5h14v15H5z" stroke="currentColor" strokeWidth="2" />
+      </svg>
+    );
+  }
+
+  return (
+    <svg className={common} viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M4 19h16M7 16v-5M12 16V7M17 16v-8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      <path d="M6 5h12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+    </svg>
+  );
+}
+
 export default function ResourcesPage() {
   const posts = getAllPosts();
   const featuredPost = posts.find((p) => p.featured);
@@ -34,7 +103,8 @@ export default function ResourcesPage() {
     <>
       {/* ========== HERO ========== */}
       <section className="relative bg-foreground text-white overflow-hidden">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+        <div className="absolute inset-0 opacity-10 bg-[linear-gradient(120deg,transparent_0,transparent_46%,#dfa13c_46%,#dfa13c_47%,transparent_47%,transparent_100%)]" />
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <span className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider bg-accent text-white rounded-full mb-6">
@@ -62,16 +132,59 @@ export default function ResourcesPage() {
                   See what&rsquo;s in them &rarr;
                 </a>
               </div>
+              <div className="mt-10 grid grid-cols-3 gap-3 max-w-xl">
+                {[
+                  ["14", "resources"],
+                  ["3", "kits"],
+                  ["0", "pitch calls"],
+                ].map(([value, label]) => (
+                  <div key={label} className="border border-white/15 bg-white/5 rounded-lg p-4">
+                    <p className="text-2xl font-bold text-gold">{value}</p>
+                    <p className="mt-1 text-xs uppercase tracking-wider text-white/55">{label}</p>
+                  </div>
+                ))}
+              </div>
             </div>
             <div className="relative">
-              <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
-                <Image
-                  src="/images/jeff-teaching.webp"
-                  alt="Jeff Church teaching at whiteboard"
-                  fill
-                  className="object-cover"
-                  priority
-                />
+              <div className="rounded-2xl border border-white/15 bg-white/[0.06] p-4 shadow-2xl">
+                <div className="grid gap-3">
+                  {KITS.map((kit, index) => {
+                    const visual = KIT_VISUALS[kit.id];
+                    return (
+                      <div
+                        key={kit.id}
+                        className={`grid grid-cols-[96px_1fr] items-center gap-4 rounded-xl bg-white text-foreground p-3 shadow-lg ${
+                          index === 1 ? "translate-x-0 sm:translate-x-6" : ""
+                        }`}
+                      >
+                        <div className="relative aspect-[4/3] overflow-hidden rounded-lg bg-background">
+                          <Image
+                            src={visual.image}
+                            alt=""
+                            fill
+                            className="object-cover"
+                            sizes="96px"
+                            priority={index === 0}
+                          />
+                        </div>
+                        <div className="min-w-0">
+                          <div className="flex items-center gap-2">
+                            <span className={`h-2.5 w-2.5 rounded-full ${visual.accent}`} />
+                            <p className="text-xs font-bold uppercase tracking-wider text-muted">
+                              {visual.stat}
+                            </p>
+                          </div>
+                          <p className="mt-1 font-bold leading-snug">{kit.name}</p>
+                          <p className="mt-1 text-sm text-muted line-clamp-2">{kit.promise}</p>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+              <div className="absolute -bottom-6 -left-4 hidden sm:block rounded-xl bg-gold px-5 py-4 text-foreground shadow-xl">
+                <p className="text-sm font-bold">Built from Jeff&rsquo;s operating files</p>
+                <p className="mt-1 text-xs text-foreground/70">Spreadsheets, workshops, and playbooks</p>
               </div>
             </div>
           </div>
@@ -160,34 +273,65 @@ export default function ResourcesPage() {
             {KITS.map((kit) => (
               <div
                 key={kit.id}
-                className="flex flex-col bg-card rounded-2xl border border-border p-6 sm:p-7"
+                className="group flex flex-col overflow-hidden bg-card rounded-2xl border border-border shadow-sm hover:shadow-xl transition-shadow"
               >
-                <h3 className="text-xl font-bold tracking-tight leading-snug">{kit.name}</h3>
-                <p className="mt-2 text-sm font-semibold text-accent leading-snug">
-                  {kit.promise}
-                </p>
-                <p className="mt-3 text-sm text-muted leading-relaxed">{kit.lead}</p>
-
-                <ul className="mt-6 space-y-4 flex-1">
-                  {kit.items.map((item) => (
-                    <li key={item.title} className="flex gap-2.5">
-                      <span className="text-accent font-bold mt-0.5 shrink-0">&#10003;</span>
-                      <div>
-                        <p className="font-bold text-sm leading-snug">{item.title}</p>
-                        <p className="mt-1 text-xs text-muted leading-relaxed">{item.body}</p>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-
-                <div className="mt-7 pt-5 border-t border-border">
-                  <KitModal
-                    kit={kit.id as KitTarget}
-                    source="resources"
-                    idPrefix={`kit-${kit.id}`}
-                    kitName={kit.name}
-                    buttonLabel="Get this kit &rarr;"
+                <div className="relative aspect-[4/3] overflow-hidden bg-background">
+                  <Image
+                    src={KIT_VISUALS[kit.id].image}
+                    alt={KIT_VISUALS[kit.id].alt}
+                    fill
+                    className="object-cover group-hover:scale-[1.03] transition-transform duration-500"
+                    sizes="(min-width: 1024px) 33vw, 100vw"
                   />
+                  <div className="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1 text-xs font-bold uppercase tracking-wider text-foreground shadow-sm">
+                    {KIT_VISUALS[kit.id].stat}
+                  </div>
+                </div>
+
+                <div className="flex flex-1 flex-col p-6 sm:p-7">
+                  <div
+                    className={`mb-5 h-1.5 w-16 rounded-full ${KIT_VISUALS[kit.id].accent}`}
+                    aria-hidden="true"
+                  />
+                  <h3 className="text-xl font-bold tracking-tight leading-snug">{kit.name}</h3>
+                  <p className="mt-2 text-sm font-semibold text-accent leading-snug">
+                    {kit.promise}
+                  </p>
+                  <p className="mt-3 text-sm text-muted leading-relaxed">{kit.lead}</p>
+
+                  <ul className="mt-6 space-y-3 flex-1">
+                    {kit.items.map((item) => (
+                      <li
+                        key={item.title}
+                        className={`rounded-xl border border-border p-3 ${KIT_VISUALS[kit.id].tint}`}
+                      >
+                        <div className="flex items-start gap-3">
+                          <span className="mt-0.5 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-white text-accent shadow-sm">
+                            <ResourceIcon kind={item.kind} />
+                          </span>
+                          <div>
+                            <div className="flex flex-wrap items-center gap-2">
+                              <p className="font-bold text-sm leading-snug">{item.title}</p>
+                              <span className="rounded-full bg-white px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-muted">
+                                {KIND_LABELS[item.kind]}
+                              </span>
+                            </div>
+                            <p className="mt-1 text-xs text-muted leading-relaxed">{item.body}</p>
+                          </div>
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <div className="mt-7 pt-5 border-t border-border">
+                    <KitModal
+                      kit={kit.id as KitTarget}
+                      source="resources"
+                      idPrefix={`kit-${kit.id}`}
+                      kitName={kit.name}
+                      buttonLabel="Get this kit"
+                    />
+                  </div>
                 </div>
               </div>
             ))}
