@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { BookingEmbed, BOOKING_URL } from "./booking-embed";
 
 // Step 2 of the work-with-Jeff funnel: /apply (form) → this page (sent by hand
 // in Joshua's response email) → the intro call booking. Unlisted rather than
@@ -15,7 +16,8 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
-const bookingHref = "https://cal.arkpartners.ai/joshua/intro";
+// The booking widget lives on the page itself; the hero button scrolls to it.
+const bookingAnchor = "#book";
 
 const tiers = [
   {
@@ -104,10 +106,22 @@ const comparison = [
   { label: "Monthly speaker series", a: true, b: true },
   { label: "Retailer + investor pitch slams", a: true, b: true },
   { label: "Founder community", a: true, b: true },
+  { label: "ROI guarantee", a: true, b: true },
   {
     label: "After 3 months",
     a: "Month-to-month, $1,500–$4,000/mo",
     b: "Month-to-month, $1,500–$4,000/mo",
+  },
+];
+
+const guaranteeTerms = [
+  {
+    title: "You show up 100%",
+    body: "Every call on the calendar, pre-work done before it, and you\u2019re there ready to work. No ghosting a month and calling it a wash.",
+  },
+  {
+    title: "You work the strategy",
+    body: "Jeff builds the plan with you, not for you. The guarantee counts when you actually run it, not when it sits in a doc.",
   },
 ];
 
@@ -185,11 +199,17 @@ export default function IntensivePage() {
               your business, not a template. When those spots fill, this closes until one opens
               back up.
             </p>
+            <p className="mt-4 text-white/70 leading-relaxed">
+              And it&rsquo;s backed. If you show up 100%, work Jeff&rsquo;s strategy, and
+              still don&rsquo;t see a tangible return by the end of the three months, he keeps
+              working with you for free until you do or refunds you in full.{" "}
+              <a href="#guarantee" className="text-gold font-semibold hover:underline">
+                The full terms are here.
+              </a>
+            </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
               <a
-                href={bookingHref}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={bookingAnchor}
                 className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-accent hover:bg-accent-dark text-white font-semibold transition-colors"
               >
                 Book your intro call
@@ -364,6 +384,52 @@ export default function IntensivePage() {
         </div>
       </section>
 
+      {/* ========== ROI GUARANTEE ========== */}
+      <section
+        id="guarantee"
+        className="py-16 md:py-24 bg-card-flagship border-b border-border scroll-mt-20"
+      >
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          <div className="rounded-2xl border-2 border-accent bg-background p-8 md:p-12">
+            <span className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider bg-accent text-white rounded-full">
+              The guarantee
+            </span>
+            <h2 className="mt-6 text-2xl sm:text-3xl font-bold tracking-tight leading-tight">
+              If you don&rsquo;t see a tangible return in three months, Jeff keeps working with
+              you for free until you do &mdash; or refunds you 100%.
+            </h2>
+            <p className="mt-6 text-muted leading-relaxed">
+              Your call which one. At the end of the three months, if you&rsquo;ve shown up
+              fully and worked the strategy and there is still no real return on what you put
+              in, you tell us which you want and that&rsquo;s what happens. No panel, no
+              hoops, no fine print about &ldquo;qualifying results.&rdquo;
+            </p>
+
+            <div className="mt-10 pt-8 border-t border-border">
+              <h3 className="text-sm font-bold uppercase tracking-wider text-accent">
+                What we ask in return
+              </h3>
+              <div className="mt-6 grid sm:grid-cols-2 gap-6">
+                {guaranteeTerms.map((term) => (
+                  <div key={term.title} className="flex gap-3">
+                    <Check />
+                    <div>
+                      <p className="font-semibold">{term.title}</p>
+                      <p className="mt-1 text-sm text-muted leading-relaxed">{term.body}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <p className="mt-8 text-muted leading-relaxed">
+              That&rsquo;s the whole deal. Jeff is willing to carry the risk on his side
+              because he&rsquo;s asking you to go all in on yours.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* ========== HOW THIS WORKS ========== */}
       <section className="py-16 md:py-24 bg-card border-t border-border">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -385,8 +451,8 @@ export default function IntensivePage() {
         </div>
       </section>
 
-      {/* ========== CTA ========== */}
-      <section className="py-16 md:py-24">
+      {/* ========== CTA + BOOKING ========== */}
+      <section id="book" className="py-16 md:py-24 scroll-mt-20">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-2xl sm:text-3xl font-bold tracking-tight">
@@ -398,20 +464,27 @@ export default function IntensivePage() {
               you&rsquo;re trying to hit, and which of the two tiers actually makes sense for
               you. If it isn&rsquo;t a fit, we&rsquo;ll tell you that too.
             </p>
-            <div className="mt-8">
-              <a
-                href={bookingHref}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-accent hover:bg-accent-dark text-white font-semibold transition-colors"
-              >
-                Book your intro call
-              </a>
-            </div>
             <p className="mt-4 text-sm text-muted">
               Booking with Joshua from Jeff&rsquo;s team. Pick any time that works.
             </p>
           </div>
+
+          <div className="mt-10">
+            <BookingEmbed />
+          </div>
+
+          <p className="mt-4 text-center text-sm text-muted">
+            Prefer to open it in its own tab?{" "}
+            <a
+              href={BOOKING_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-accent font-semibold hover:underline"
+            >
+              Book here instead
+            </a>
+            .
+          </p>
 
           <div className="mt-16 pt-10 border-t border-border">
             <h3 className="font-bold">If the timing isn&rsquo;t right yet</h3>

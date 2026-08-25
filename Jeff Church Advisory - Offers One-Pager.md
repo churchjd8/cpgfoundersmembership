@@ -20,6 +20,7 @@ A focused 3-month intensive where Jeff gets deep in your business, builds the st
 | **Monthly speaker series** | ✓ | ✓ |
 | **Retailer + investor pitch slams** | ✓ | ✓ |
 | **Founder community** | ✓ | ✓ |
+| **ROI guarantee** | ✓ | ✓ |
 | **After 3 months** | Month-to-month, $1,500–$4,000/mo* | Month-to-month, $1,500–$4,000/mo* |
 
 \*Reduced rate and cadence, determined during your 3 months based on Jeff's time and involvement.
@@ -59,6 +60,19 @@ For founders who want Jeff close, with more face time and a deeper, hands-on kic
 - **Founder community** of other operators going through it alongside you.
 - **Investment:** $15,000 total, billed at $5,000/month.
 - **After the 3 months:** continue with month-to-month support at a reduced rate and cadence, determined during your 3 months based on Jeff's time and involvement (roughly $1,500–$4,000/mo). Cancel anytime.
+
+---
+
+## The ROI Guarantee (both tiers)
+
+At the end of the 3 months, if you haven't seen a tangible return on what you put in, Jeff will either **keep working with you for free until you do, or refund you 100%.** Your call which one.
+
+Two conditions:
+
+1. **You show up 100%.** Every call on the calendar, pre-work done before it, present and ready to work.
+2. **You work the strategy.** Jeff builds the plan with you, not for you. The guarantee counts when you actually run it.
+
+No panel, no hoops, no fine print about "qualifying results." Jeff carries the risk on his side because he's asking you to go all in on yours.
 
 ---
 
