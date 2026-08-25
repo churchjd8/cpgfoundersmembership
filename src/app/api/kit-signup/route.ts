@@ -1,21 +1,17 @@
 import { NextResponse } from "next/server";
 import { ALL_KITS_FORM_ID, ALL_KITS_TAG, KITS, getKit, type Kit } from "@/lib/kits";
-import { escapeHtml, kitEmailHtml, kitEmailSubject, type KitEmailSource } from "@/lib/kit-email";
+import { escapeHtml, type KitEmailSource } from "@/lib/kit-email";
 
 // One endpoint behind every free-resource opt-in on the site.
 //
-// Delivery is split deliberately:
-//   Resend  — sends the email, because the copy lives in this repo
-//   Kajabi  — gets the contact, the tag, the custom fields and a note
+// Kajabi owns delivery. This route's job is to register the contact against
+// the right form so Kajabi's automation applies the tag and sends the kit —
+// plus the custom fields and a note the forms can't carry on their own.
 //
-// The Kajabi side still goes through the same per-resource forms that have
-// always been there, so the tag automations Jeff already built keep firing and
-// nothing in the dashboard has to be rewired. The one manual change needed is
-// switching OFF the delivery email on those form automations, otherwise a
-// signup gets both this email and the old Kajabi one.
-
-const FROM = "Jeff Church <jeff@cpgfoundersgroup.com>";
-const REPLY_TO = "jeff@cpgfoundersgroup.com";
+// The email copy still lives in this repo (src/lib/kit-email.ts) because it
+// has to stay in step with what the pages promise. It is authored here and
+// pasted into Kajabi; run `npx tsx scripts/render-kit-emails.ts` after editing.
+// Nothing here sends a delivery email — that would double up on Kajabi.
 
 async function sendEmail(payload: Record<string, unknown>) {
   const res = await fetch("https://api.resend.com/emails", {
@@ -74,14 +70,15 @@ async function submitForm(
 
   if (!res.ok) {
     const errText = await res.text();
-    console.error(`Kit signup: form ${formId} failed (${res.status}): ${errText.slice(0, 200)}`);
+    throw new Error(`Kajabi form ${formId} failed (${res.status}): ${errText.slice(0, 200)}`);
   }
 }
 
 /**
- * Everything Kajabi needs, run as one best-effort block. A CRM hiccup must
- * never surface to a founder who just asked for a free spreadsheet — the email
- * is the thing that has to land, and that already went out by this point.
+ * Registers the contact and fires the form(s) whose automations tag them and
+ * send the kit. The form submit is the delivery, so it throws on failure; the
+ * contact-record extras afterwards are best effort, since a missing custom
+ * field is not worth failing a signup over.
  */
 async function syncToKajabi({
   kits,
@@ -121,11 +118,51 @@ async function syncToKajabi({
     }
   }
 
-  for (const formId of [...new Set(formIds)]) {
-    await submitForm(headers, formId, fields);
+  const [primary, ...extras] = [...new Set(formIds)];
+  await submitForm(headers, primary, fields);
+
+  for (const formId of extras) {
+    try {
+      await submitForm(headers, formId, fields);
+    } catch (err) {
+      console.error(`Kit signup: secondary form ${formId} failed`, err);
+    }
   }
 
-  // custom_4 (challenge) isn't on the forms, so it goes through the contacts API.
+  // The kit is on its way. Everything below only enriches the contact record,
+  // so it must never take a signup down with it.
+  try {
+    await enrichContactRecord({ headers, kits, isAllKits, first, last, email, stage, challenge, source });
+  } catch (err) {
+    console.error("Kit signup: contact enrichment failed", err);
+  }
+}
+
+/**
+ * custom_4 (challenge) isn't a field on the Kajabi forms, and neither is a
+ * note, so both go through the contacts API after the form has done its job.
+ */
+async function enrichContactRecord({
+  headers,
+  kits,
+  isAllKits,
+  first,
+  last,
+  email,
+  stage,
+  challenge,
+  source,
+}: {
+  headers: Headers;
+  kits: Kit[];
+  isAllKits: boolean;
+  first: string;
+  last: string;
+  email: string;
+  stage: string;
+  challenge: string;
+  source: KitEmailSource;
+}) {
   let contactId: string | null = null;
 
   const contactRes = await fetch("https://api.kajabi.com/v1/contacts", {
@@ -239,33 +276,22 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Unknown kit" }, { status: 400 });
     }
 
-    // The kit itself. This one has to land, so a failure is a real failure.
-    await sendEmail({
-      from: FROM,
-      to: email,
-      reply_to: REPLY_TO,
-      subject: kitEmailSubject(kits, source),
-      html: kitEmailHtml({ firstName, kits, source }),
+    // Kajabi delivers the kit, so registering the contact IS the delivery here.
+    // A failure has to surface rather than silently leave someone empty-handed.
+    await syncToKajabi({
+      kits,
+      isAllKits,
+      first: firstName,
+      last: lastName,
+      email,
+      stage,
+      challenge,
+      source,
     });
 
     console.log(
       `Kit signup [${source}]: ${firstName} ${lastName} <${email}> -> ${isAllKits ? "all" : kitParam}`,
     );
-
-    try {
-      await syncToKajabi({
-        kits,
-        isAllKits,
-        first: firstName,
-        last: lastName,
-        email,
-        stage,
-        challenge,
-        source,
-      });
-    } catch (kajabiErr) {
-      console.error("Kit signup: Kajabi sync failed", kajabiErr);
-    }
 
     try {
       await sendEmail({
