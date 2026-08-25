@@ -399,10 +399,11 @@ export default function IntensivePage() {
               you for free until you do &mdash; or refunds you 100%.
             </h2>
             <p className="mt-6 text-muted leading-relaxed">
-              Your call which one. At the end of the three months, if you&rsquo;ve shown up
-              fully and worked the strategy and there is still no real return on what you put
-              in, you tell us which you want and that&rsquo;s what happens. No panel, no
-              hoops, no fine print about &ldquo;qualifying results.&rdquo;
+              At the end of the three months, if you&rsquo;ve shown up fully and worked the
+              strategy and there is still no real return on what you put in, we make it right.
+              Either Jeff stays in it with you at no cost until the return shows up, or you get
+              every dollar back. No panel, no hoops, no fine print about &ldquo;qualifying
+              results.&rdquo;
             </p>
 
             <div className="mt-10 pt-8 border-t border-border">

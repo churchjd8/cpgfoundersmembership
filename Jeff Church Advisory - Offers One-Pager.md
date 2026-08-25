@@ -65,7 +65,7 @@ For founders who want Jeff close, with more face time and a deeper, hands-on kic
 
 ## The ROI Guarantee (both tiers)
 
-At the end of the 3 months, if you haven't seen a tangible return on what you put in, Jeff will either **keep working with you for free until you do, or refund you 100%.** Your call which one.
+At the end of the 3 months, if you haven't seen a tangible return on what you put in, Jeff will either **keep working with you for free until you do, or refund you 100%.**
 
 Two conditions:
 
