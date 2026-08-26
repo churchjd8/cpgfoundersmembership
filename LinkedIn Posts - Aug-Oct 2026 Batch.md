@@ -1,10 +1,10 @@
 # LinkedIn Posts — Jeff Church (Aug–Oct 2026 batch)
 
-**21 posts.** 1 webinar topic poll + 20 posts that strictly alternate: story, CPG advice, story, CPG advice.
+**24 posts.** 1 webinar topic poll + 20 posts that strictly alternate story / CPG advice, plus 3 Friday posts that carry the CTAs: two driving the CPG Founders Club and one blunt advisory apply.
 
 **Status:** Post 0 (the poll) went live Wed Aug 19. Thu Aug 20 is already spoken for by a previously queued post. The batch proper starts **Tue Aug 25** and runs Tue/Thu through Thu Oct 29.
 
-Odd numbers are storytelling. Even numbers are technical playbook posts pulled from the blog.
+Odd numbers are storytelling. Even numbers are technical playbook posts pulled from the blog. Lettered posts (A, B, C) are the Friday CTA posts and sit outside the alternation on purpose, so the Tue/Thu rhythm stays intact.
 
 **Every advice post now previews one of the 12 webinar topics from the poll.** So the whole batch ladders into the workshops — by the time Jeff runs the top vote-getters, the feed has already been warmed on that exact subject.
 
@@ -20,16 +20,19 @@ Odd numbers are storytelling. Even numbers are technical playbook posts pulled f
 | 4 | Sep 3 | Thu | "What's Your Gross-To-Net?" | ADVICE | **3 — CPG-specific P&L** |
 | 5 | Sep 8 | Tue | I Almost Killed The Coca-Cola Deal | STORY | 2 — getting investor-ready |
 | 6 | Sep 10 | Thu | Know Your Velocity Before Your Buyer Tells You | ADVICE | **11 — velocity before volume** |
+| **A** | **Sep 11** | **Fri** | **393 Questions In Ten Months** | **COMMUNITY** | → Founders Club |
 | 7 | Sep 15 | Tue | The Green Juice Guy On A Skateboard | STORY | 12 — finding white space |
 | 8 | Sep 17 | Thu | Why Does The Shelf Need You? | ADVICE | **10 + 12 — positioning / white space** |
 | 9 | Sep 22 | Tue | I Said Yes To A Smoothie I Didn't Want To Make | STORY | 6 — buyer meeting to PO |
 | 10 | Sep 24 | Thu | The Four That Keep Killing Good Brands | ADVICE | **1 — fatal flaws** |
 | 11 | Sep 29 | Tue | Our Kombucha Was Making 12% | STORY | 8 — gross margin architecture |
 | 12 | Oct 1 | Thu | What Retail Actually Costs You | ADVICE | **7 — slotting, MCBs, hidden costs** |
+| **B** | **Oct 2** | **Fri** | **76 Scheduled Jobs, 204 Automations** | **COMMUNITY** | → Founders Club |
 | 13 | Oct 6 | Tue | 3,000% In One Year | STORY | 4 — killing your burn |
 | 14 | Oct 8 | Thu | Profitability Is A Decision, Not A Destination | ADVICE | **4 — killing your burn** |
 | 15 | Oct 13 | Tue | I Called Seth Goldman | STORY | — |
 | 16 | Oct 15 | Thu | A Wish List With A Spreadsheet Attached | ADVICE | **2 + 3 — investor-ready / P&L** |
+| **C** | **Oct 16** | **Fri** | **A Spot Just Opened Up** | **OFFER** | → /apply |
 | 17 | Oct 20 | Tue | "What Does Your Brand Look Like On Instacart?" | STORY | 11 — velocity before volume |
 | 18 | Oct 22 | Thu | 44 Rounds | ADVICE | **5 — pitch deck rebuilt live** |
 | 19 | Oct 27 | Tue | The Most Beautiful Brand Was Running 28% | STORY | 8 — gross margin architecture |
@@ -98,17 +101,17 @@ Thanks for helping me point this in the right direction!
 
 I want to tell you about a dinner I'll never forget.
 
-It's 2015 and the Target buying team is flying out to see our manufacturing facility in San Diego. Target was one of the most important relationships we had at Suja, so we decided not to do the usual thing. No plant tour, no conference room, no deck.
+It's 2015 and the Target buying team is flying out to see our manufacturing facility in San Diego. Target was one of the most important relationships we had at Suja, so we decided to do something different. 
 
 We invited them to stay overnight and have dinner at our house.
 
-Linda cooked. My mother-in-law Rachel made this beautiful Challah bread, braided and golden, and somehow she had worked both the Coca-Cola and Suja logos right into the design. When it came out of the kitchen the whole table went quiet.
+My wife Linda cooked, my mother-in-law Rachel made this beautiful Challah bread, braided and golden, and somehow she had worked both the Target circle and the Suja logos right into the design. When it came out of the kitchen the whole table took out their phones to snap photos and loved it.
 
-There were cocktails. There was real laughter, the kind you cannot schedule.
+We broke bread, shared cocktails, food, and laughter.
 
-Later that night I was giving everybody a tour of the house, and one of the rooms has this oversized bed in it, and somebody said we should all pile in for a photo.
+Later that night I was giving everybody a tour of the house, and our master bedroom has this oversized double king bed in it (that my kids all slept in through admittedly way too long!), and somebody said we should all pile in for a photo.
 
-So we did. Buyers, founders, sales team, everyone. (Harmless fun, and yes, my wife was right there with us. 😉)
+So we did. Buyers, founders, sales team, my family, everyone. (Harmless fun, and yes, my wife was right there with us. 😉)
 
 That photo did not close a single deal.
 
@@ -126,17 +129,21 @@ Feed people. Show them your operation. Let them meet the team that actually make
 
 You'd be amazed what a loaf of bread and an oversized bed can do for a business.
 
+INSERT TARGET PHOTO.
+
 ---
 
 ## 2. "40% Is The Floor, Not The Ceiling" — Thu Aug 27
 
 **ADVICE — previews webinar topic 8**
 
-Okay folks, let's talk about the one number that decides whether you survive.
+Okay folks, let's talk about the one number that decides whether you survive in this wild jungle that is CPG industry.
 
-Not revenue. Not door count. Not followers. Gross margin.
+It's not revenue, not door count, and not TikTok followers. It's...Gross margin!
 
-Gross margin is what's left after you pay for the product itself. Ingredients, packaging, co-man fees, and inbound freight to your warehouse. It's the money that funds everything else, your team, your marketing, your trade spend, your growth.
+And I see this all the time especially with smart business people taking their first spin at a CPG brand...because the way you list your chart of accounts and calculate your gross margin in CPG is different than any other industry. Let me break it down for you.
+
+For starters, gross margin is what's left after you pay for the product itself. Ingredients, packaging, co-man fees, and inbound freight to your warehouse. It's the money that funds everything else, your team, your marketing, your trade spend, your growth.
 
 If it's too thin, nothing else works. You can't afford to promote. You can't afford to hire. You can't afford to raise at a valuation that doesn't wreck your equity.
 
@@ -162,7 +169,7 @@ I know 40% sounds impossible when you're sitting at 31% staring at a co-man invo
 
 Gross margin determines destiny.
 
-Go calculate yours correctly this week. Not the version in your deck. The real one.
+Go calculate yours correctly this week. If you want my free CPG Chart of Accounts template I share, I offer it in my free resources www.cpgfoundersgroup.com/resources and I have a couple spots left for coaching if you want my eyes on your financials and in your business www.cpgfoundersgroup.com/apply  
 
 ---
 
@@ -170,19 +177,19 @@ Go calculate yours correctly this week. Not the version in your deck. The real o
 
 **STORY — supports webinar topic 11**
 
-True story that my team still gives me grief about.
+My head of sales Nicky gave me a look I came to know very well. The one that means *Jeff, you have no idea what you're talking about.*
 
 The year was 2014. Suja had just landed major distribution at Whole Foods, Costco, and Target. We'd gone from $600,000 in revenue in 2012 to $44 million in two years and we were not slowing down.
 
 I walked into a team meeting feeling about as good as a founder can feel and said something like, "I can't wait until we achieve full distribution and have nothing left to worry about."
 
-My head of sales Nicky gave me a look I came to know very well. The one that means *Jeff, you have no idea what you're talking about.*
+That's when the look from Nicky came flying in. 
 
 "Two years from now," she said, "we'll be fighting tooth and nail to maintain our shelf space. We'll need the right cat man to win."
 
 I stared at her and said, "What's a cat man?"
 
-They have never let me forget it.
+She has never let me forget it.
 
 Here's what Nicky understood that I did not yet. Getting into retail is a transaction. Staying in retail is a relationship, and that relationship gets stress tested once or twice a year in something called the line review.
 
@@ -190,9 +197,9 @@ A line review is when the retailer resets the category. They pull the whole set 
 
 Most founders don't think about the line review until they're sitting in one. By then it's usually too late.
 
-The brands that win line reviews are not the ones with the best pitch on the day. They're the ones who spent the previous eleven months building the case with the buyer. Velocity data. Category growth. What your brand brings to the shelf that isn't already there.
+The brands that win line reviews are not the ones with the best pitch on the day. They're the ones who spent the previous eleven months building the case with the buyer across velocity data, category growth, and what your brand brings to the shelf that isn't already there.
 
-Category management, the cat man function, is the discipline that builds that case in the language the retailer actually speaks.
+Category management...the "cat man function"...is the discipline that builds that case in the language the retailer actually speaks.
 
 It sounds like a big-company thing you'll get to later.
 
@@ -204,17 +211,13 @@ It's actually the thing that decides whether you're still on the shelf next spri
 
 **ADVICE — previews webinar topic 3**
 
-Let's talk about the number that's hiding inside your P&L.
+There's a metric hiding in your P&L that is a big deal in the CPG world.
 
-I sat down with a founder recently who was genuinely lit up. Eight million dollars in annual revenue, multiple retail accounts, growing fast. He wanted to talk about Series A timing.
+I sat down with a founder recently who was lit up. She had two million dollars in annual revenue, multiple retail accounts, growing fast. She brought me in as an advisor to help her with the strategy and planning of her Series A.
 
-I asked him one question. "What's your gross-to-net?"
+I asked her one question. "What's your gross-to-net?"
 
-He looked at me like I'd switched languages mid-sentence.
-
-Here's the thing. That $8 million is not $8 million. After retailer margin, distributor markup, trade spend, promotional funding, deductions and chargebacks, he was looking at something closer to $4.2 million actually reaching his business.
-
-Nearly half the revenue he thought he had was spoken for before his product ever left the warehouse.
+She gave me the look I've come accostomed to seeing from first time CPG founders.
 
 Let me walk the waterfall for a conventional grocery item so you can run yours.
 
@@ -228,9 +231,11 @@ Then spoilage and returns. We lived this one. We took on spoilage risk with a di
 
 Add it all up and that $5.99 bottle might deliver you somewhere between $1.80 and $2.20 of net realized revenue. Everything from your COGS to your marketing budget to your payroll has to fit inside that number.
 
-Gross revenue is the number you quote at a dinner party. Net revenue is what your business actually gets to work with.
+Gross revenue is the number you quote at a networking event. Net revenue is what your business actually gets to work with.
 
 Know both cold. Investors will ask, and the founders who can answer in one breath are the ones who get taken seriously.
+
+If you want the two tools I use to run this math, the Pricing Calculator and the Trade Promo Break-Even Calculator, both are in my free resources: www.cpgfoundersgroup.com/resources
 
 ---
 
@@ -244,7 +249,7 @@ July 2015. We were in the final stages of what became one of the most significan
 
 Then our attorney walked me through the preference stack.
 
-The way the terms were structured, nearly all of Coca-Cola's $90 million would flow straight to a private equity fund that had been in the deal for less than twelve months. Not to the angels who believed in us before we had a dollar of institutional money. Not to the founders who built the thing from nothing.
+The way the terms were structured, nearly all of Coca-Cola's $90 million would flow straight to a private equity fund that had been in the deal for less than twelve months. Not to the angels who believed in us before we had a dollar of institutional money. Not to us founders or founding team either.
 
 Some of those angels had written checks before we had a co-manufacturer, before we had consistent shelf life, before any of it felt real. And they were going to see almost nothing out of a $90 million investment from the most recognizable beverage company on the planet.
 
@@ -256,19 +261,19 @@ I've never regretted it for a second.
 
 Here's why I'm telling you. Founders talk about their raise. They talk about their valuation. They post the round announcement. Almost nobody talks about the actual mechanics of the cap table, usually because they don't fully understand what they signed and the realization arrives at the worst possible moment.
 
-I've watched founders sell for $200 million and walk away with 4% of it. Eight million dollars before taxes after ten years of 80-hour weeks. That's not failure, that's poor equity management, and it's far more common than you'd think.
+I've watched founders sell for $200 million and walk away with 4% of it. Eight million dollars before taxes after ten years of 80-hour weeks. That's not a failure by any stretch of the imagination, but it is poor equity management, and it's far more common than you'd think.
 
 Equity feels cheap when you're desperate for validation. An advisor wants 2%. A consultant wants 1%. Somebody who made an intro wants half a point. Each piece feels small, and then one day you're closing a Series B and you own 18% of your own company.
 
-Two numbers worth holding onto.
+Here's two numbers worth holding onto.
 
 Try not to dilute more than 10 to 15% in any single round. If you're raising $1 million and giving up 30%, the math is telling you something about either your valuation or your timing.
 
 And try to hold 50% or more through your first two rounds, so you've got room to dilute later without landing in single digits at exit.
 
-Go read your preference stack. Not the summary your lawyer emails you. The actual waterfall, with real exit numbers plugged in.
+Go read your preference stack. And I recommend reading the actual waterfall with real exit numbers plugged in, not just the summary your lawyer emails you. 
 
-Do it before you need to know.
+I have an equity and dilution model I built I walk my clients through. comment EQUITY and I'll send it your way!
 
 ---
 
@@ -276,7 +281,7 @@ Do it before you need to know.
 
 **ADVICE — previews webinar topic 11**
 
-I've watched founders come back from a buyer meeting absolutely lit up. "We got into 800 Kroger stores." "We're in Sprouts nationwide."
+I've watched founders come back from a buyer meeting absolutely lit up. "We got into 800 Kroger stores!" "We're in Sprouts nationwide!"
 
 I get it, I really do. Distribution feels like winning. It's tangible, you can point to it on a map, you can post about it.
 
@@ -310,7 +315,43 @@ Is your best SKU actually on the shelf? Sounds obvious. I've walked into countle
 
 Is the category itself growing or shrinking? If the whole category is contracting, this might have less to do with your brand than with the macro trend. Know the difference.
 
-Don't confuse distribution gains with velocity gains. Only one of those keeps you on the shelf.
+To sum it up once again...Don't confuse distribution gains with velocity gains. Only one of those keeps you on the shelf!!
+
+---
+
+## A. "393 Questions In Ten Months" — Fri Sep 11
+
+**COMMUNITY — drives the CPG Founders Club**
+
+I did something this week I probably should have done a year ago.
+
+I pulled every message out of our CPG founders WhatsApp group and read the whole thing start to finish. 1,869 messages. Ten months. Around 300 founders.
+
+I wanted to know what people are actually stuck on, not what I assume they're stuck on.
+
+393 questions got asked in there. Here's how they broke down.
+
+Digital marketing was number one at 47 asks, and almost all of it was some version of "who do I actually trust to run my Meta account."
+
+Retail entry was second at 41. Target, Costco, Sprouts, who's the buyer, how do I get in front of them.
+
+Then packaging at 38. Boxes, pouches, and who will actually take a short first run.
+
+Then AI tools at 33, which would have been close to zero a year ago.
+
+Then distributor terms at 32, and it's mostly KeHE and UNFI deductions.
+
+The one that stopped me was this. The category with the most questions is also the category with the least agreement, and that's agencies. One founder posted a 16x ROAS with a shop she loved, and inside the same day somebody else warned the group off that exact same shop.
+
+That's not a marketing problem. That's a trust problem, and it's a big part of why the group exists.
+
+Here's the number I'm most proud of though. 94% of the questions asked in there got a real answer inside 24 hours, and almost none of them came from me. They came from other founders who had already paid for that answer the hard way.
+
+Nobody sells anything in that room. That's the whole rule, and it's the reason it works.
+
+We're 350+ founders now and I read everything that goes through it. If you're building in CPG and you want in, it's free.
+
+www.cpgfoundersgroup.com/founders-only
 
 ---
 
@@ -322,13 +363,13 @@ There's a guy in my world I call the green juice guy.
 
 His name is Eric Ethans, and in his early twenties he was making cold-pressed juice at a raw food restaurant in Encinitas, California. He had about 10 recipes. Every day he'd load up those bottles and deliver them door to door in his neighborhood, on his skateboard.
 
-That was his consumer research. Informal, sure, but it was real. He was watching people drink his product. Seeing their faces. Getting repeat orders, or not getting them.
+This was his consumer research. Watching people's faces as they tried the juice and got addicted to how they felt from drinking it.
 
-When my partner James Brennan started bringing one of those bottles into my office, I refused it. Multiple times. I was busy, I didn't want kale, I had other things going on.
+When my partner James Brennan started bringing one of those bottles into my office, I refused it. I wouldn't touch any green juice with a ten foot pole.After all, you can take the man out of the Midwest but you can't take the Midwest out of the man!!
 
-Eventually I tried it. Three ingredients. Apple, kale, lemon.
+Eventually I tried it. It was three ingredients: Apple, kale, lemon.
 
-I called Linda that night and said, "honey, if I can love a product with kale in it, with my unrefined Midwestern palate, then anyone on the planet can."
+I called Linda that night and said, "honey, if I can love a product with kale in it, with my unrefined Cleveland palate, then anyone on the planet can."
 
 That became Suja's Green Supreme.
 
@@ -353,7 +394,7 @@ Go find out which one you're actually selling before you write the big check.
 
 Here's a pattern I see more than almost any other.
 
-A founder has a product they genuinely love. Real passion behind it. They get into a few stores. And then they stall.
+A founder has a product they absolutely love and are passionate about it. They get into a few stores. And then they stall.
 
 Not because the product is bad. Because nobody knows what to think about it.
 
@@ -361,7 +402,9 @@ I'll ask them what they make and I get something like, "we make clean, organic s
 
 Okay. So does everyone else on that shelf. Why should a consumer reach for you instead of the brand six inches to your left?
 
-Positioning is not your tagline and it's not your packaging copy. It's the answer to one question. Why you, for who, and why now?
+Positioning is not your tagline and it's not your packaging copy. It's the answer to one question. 
+
+--> Why you, for who, and why now?
 
 And the reason it matters isn't philosophical, it's financial. Consistent clarity directly impacts velocity, and velocity earns you shelf space. If a buyer and a consumer can't immediately understand why you exist, your turns will show it, and low turns get you pulled from the planogram. That's how good brands die quietly.
 
@@ -452,19 +495,21 @@ Better to launch in 100 stores and crush it than launch in 500 and fail to keep 
 (I've written before about personal guarantees. Same list, and the answer is still don't.)
 
 None of these are sophisticated problems. That's exactly why they keep working.
+
+There are 18 of these, not four. I wrote the whole list up as CPG Fatal Flaws and it's free in my resources. Learn them on my dime instead of your own: www.cpgfoundersgroup.com/resources
 ---
 
 ## 11. "Our Kombucha Was Making 12%" — Tue Sep 29
 
 **STORY — supports webinar topic 8**
 
-Let me tell you about one of the quietest and most expensive mistakes I made at Suja.
+Let me tell you about one of the most expensive mistakes I made at Suja.
 
 We launched a kombucha.
 
 Not because consumers were asking Suja for kombucha. Because everyone in the natural channel was launching kombucha. GT's was everywhere. Health-Ade was everywhere. The category was on fire and we did not want to miss it.
 
-The product was genuinely good. We'd actually solved a hard technical problem that most brands in the category struggled with, which was keeping alcohol levels consistent.
+The product was actually good. We'd actually solved a hard technical problem that most brands in the category struggled with, which was keeping alcohol levels consistent.
 
 Here's what I ignored.
 
@@ -472,7 +517,7 @@ Consumers did not see Suja as a kombucha brand. And we were outsourcing producti
 
 Our wellness shots, which we produced internally, were running about 60%.
 
-Both were on the shelf. Both were selling. One was quietly making us and one was quietly bleeding us, and the blended number hid the whole thing from me.
+Both were on the shelf. Both were selling. One was slowly making us and one was slowly bleeding us, and the blended number hid the whole thing from me.
 
 That's the product mix trap, and it's worth checking for this week.
 
@@ -487,6 +532,8 @@ So pull your P&L apart by SKU. Not by category, not by channel. By SKU. Then be 
 We cut the kombucha. Margins went from 32% to 40%.
 
 Gross margin determines destiny.
+
+The SKU Rationalization Tool I use for exactly this pull-apart is free in my resources if you want it: www.cpgfoundersgroup.com/resources
 
 ---
 ## 12. "What Retail Actually Costs You" — Thu Oct 1
@@ -526,6 +573,36 @@ Offer scan-down trade instead of upfront cash. Some retailers will accept a per-
 And propose a pilot. Instead of paying for 300 stores out of the gate, ask for a 50-store test in your highest-potential markets, show 90 days of velocity, then expand. More buyers take that deal than you'd expect.
 
 Slotting gets you the chance. Everything that comes after it determines whether you keep it.
+
+Before you say yes to the next promo, run it through the Trade Promo Break-Even Calculator first. Free in my resources: www.cpgfoundersgroup.com/resources
+---
+
+## B. "76 Scheduled Jobs, 204 Automations" — Fri Oct 2
+
+**COMMUNITY — drives the CPG Founders Club**
+
+Something shifted in our founders group between March and August and I don't think most of the people in there noticed it happening.
+
+Back in March, every AI question was some version of "is anybody actually using this for anything real, or is it all hype." Careful questions. A little skeptical, which honestly I liked.
+
+By August it wasn't a debate anymore. It was founders trading setups with each other.
+
+One founder in there described his operation to the group like this. 76 scheduled jobs. 204 automations running. And then the line that got me, "I review work now instead of producing it."
+
+That's a very small team operating like a company with a real ops function behind it.
+
+Here's what I want you to take from that, and it isn't go buy AI tools.
+
+Every one of those founders got there because somebody else had already gone first and was willing to show their actual work. The whole group moved on this in about five months because 300 people were comparing notes out loud instead of guessing in private.
+
+It's the same reason the retail wins in there happen the way they do. One founder in the group is in 245 Walmart doors right now. Another one crossed 2,000 doors. Another just landed a 330 store trial. In almost every one of those, the first step wasn't a cold email. It was somebody saying "I know that buyer, let me make the intro."
+
+I spent the first stretch of my career figuring this business out alone and I paid full tuition for it. I don't recommend it.
+
+350+ CPG founders, every stage from pre-launch to exit, free, and nobody is allowed to pitch anything in there.
+
+www.cpgfoundersgroup.com/founders-only
+
 ---
 
 ## 13. "3,000% In One Year" — Tue Oct 6
@@ -542,7 +619,7 @@ We were making cold-pressed juice with a 24-day shelf life. Every bottle we prod
 
 We over-produced and watched product expire. We under-produced and couldn't fill Whole Foods orders. We made promises we couldn't keep, and promises we kept but barely.
 
-That year burned demand planning into my DNA, because when your product dies in 24 days and you're growing 30% month over month, a bad forecast isn't an inconvenience. It's an existential threat.
+That year burned demand planning into my DNA, because when your product dies in 24 days and you're growing 30% month over month, a bad forecast isn't an inconvenience...it's an existential threat.
 
 Most founders I talk to now have the same problem in a different costume, and it shows up two ways.
 
@@ -581,7 +658,7 @@ We cut every low-margin product line. Not trimmed, cut. The 12% margin SKUs went
 
 We stopped spending marketing dollars we couldn't trace to velocity. If we couldn't see it moving product in a store, it stopped.
 
-We took overhead down to fit the company we actually were, not the one we thought we were about to become. That part was genuinely painful and it involved people I cared about.
+We took overhead down to fit the company we actually were, not the one we thought we were about to become. That part was painful and it involved people I cared about.
 
 And we moved from monthly reporting to weekly cash projections, which is a completely different way of running a business.
 
@@ -594,6 +671,9 @@ Hope is not a strategy.
 Profitability is a decision you make, and you can make it a lot earlier than you think. You do not need permission from your board, and you definitely don't need a crisis from an acquirer, to go line by line through your own P&L this month.
 
 I needed the crisis. You don't have to.
+
+Everything I use for this sits in one place. The 90 minute Reducing the Burn workshop plus the five calculators that go with it, pricing, trade promo, SKU rationalization, cash conversion, and runway. All of it free: www.cpgfoundersgroup.com/resources
+
 ---
 
 ## 15. "I Called Seth Goldman" — Tue Oct 13
@@ -612,9 +692,9 @@ I wrote it down. Then I called John Foraker, who'd run General Mills' natural se
 
 He said almost exactly the same thing.
 
-Two different people. Zero coordination. Identical answer. That's when I knew what to do.
+Two different people. Zero coordination and they gave the identical answer. That's when I knew what to do.
 
-That is what a real advisory relationship feels like. Not a name on a slide. Not a logo in a deck. Someone who has already been in the foxhole you're about to walk into, who picks up the phone when everything is on fire.
+That is what a real advisory relationship feels like. Not a name on a slide, but someone who has already been in the foxhole you're about to walk into, who picks up the phone when everything is on fire.
 
 Most founders build advisory boards backwards. They collect impressive names, put the logos on slide 14, schedule a kickoff call, and then the advisor doesn't hear from them for six months until a warm intro is needed.
 
@@ -627,6 +707,8 @@ Then go find the person who has already done that specific thing, and ask them f
 You'll learn very quickly who actually shows up.
 
 And when you find the ones who do, keep them close and actually use them. An advisor you never call is just a logo, and a logo has never once saved a company.
+
+I've been on both sides of that phone call, and these days I'm mostly on Seth's side of it. I keep room for a handful of founders 1 on 1 at a time. If you want me in the foxhole with you, apply here: www.cpgfoundersgroup.com/apply
 
 ---
 
@@ -668,13 +750,37 @@ What we didn't have was a model that was telling us the truth.
 
 Your financial model isn't a document you build for investors. It's your decision-making infrastructure. If it's wrong, every decision downstream of it is wrong, and in this business wrong decisions compound fast.
 
+If you want to build one properly, the Capital Raise & Runway Calculator and the Unit Pricing & Break-Even Model are both free in my resources, and both come with a walkthrough video of me using them: www.cpgfoundersgroup.com/resources
+
+---
+
+## C. "A Spot Just Opened Up" — Fri Oct 16
+
+**OFFER — blunt advisory apply**
+
+Short and direct one today.
+
+A spot just opened up in my private advisory.
+
+I work with a small number of founders 1 on 1 at any given time. Not a course, not a group program, not a community with my name on it. Me in your business, in your numbers, and on the phone when something is on fire.
+
+It's usually some mix of the same handful of things. Building a P&L that actually tells you the truth. Getting gross margin from wherever it is now to where it needs to be. Prepping a raise, or figuring out that you shouldn't raise yet. Walking into a retailer meeting knowing exactly what you're going to say when they push on price.
+
+I keep the number small on purpose. Every engagement gets built around the business in front of me and I can't do that for twenty people at once.
+
+The bar I hold myself to is simple. If I'm not returning at least 5 to 10 times what you're paying me, in capital raised or cost taken back out, then I'm not doing my job.
+
+If you've been circling this one, now is the window. When it fills, it closes again until somebody rolls off.
+
+www.cpgfoundersgroup.com/apply
+
 ---
 
 ## 17. "What Does Your Brand Look Like On Instacart?" — Tue Oct 20
 
 **STORY — supports webinar topic 11**
 
-A Whole Foods buyer said something to me in 2019 that stopped me cold.
+I rarely get stumped. A Whole Foods buyer said something to me in 2019 that did just that.
 
 "Jeff, do you know what your brand looks like on Instacart?"
 
@@ -682,9 +788,9 @@ I thought I did. We were in every major Whole Foods in the country, our shelf se
 
 It did not.
 
-She pulled up her phone right there in the meeting and showed me. No lifestyle image. A generic product description somebody had clearly written in thirty seconds. And we were buried on page four of the cold-pressed juice results, behind brands that were nowhere close to our velocity on the actual shelf.
+She pulled up her phone right there in the meeting and showed me. There was no lifestyle image, instead a generic product description somebody had clearly written in thirty seconds. And we were buried on page four of the cold-pressed juice results, behind brands that were nowhere close to our velocity on the actual shelf.
 
-She wasn't criticizing us. She was genuinely trying to help. But the thing that rattled me was this: the brands beating us on that screen weren't beating us on product. They were playing a different game and they knew the rules.
+She wasn't criticizing us. She was actually trying to help. But the thing that rattled me was this: the brands beating us on that screen weren't beating us on product. They were playing a different game and they knew the rules.
 
 Here's the part most founders miss.
 
@@ -700,16 +806,18 @@ Most brands I look at are losing on that screen for reasons that take a week and
 
 We were one of them, and we were doing nine figures at the time. 😊
 
+If you want a second set of eyes on a question like this without waiting on me, I built Babu, an AI trained on 35 years of my operating experience and 4,000+ of my own resources. First 10 days are free: www.askbabu.ai
+
 ---
 ## 18. "44 Rounds" — Thu Oct 22
 
 **ADVICE — previews webinar topic 5**
 
-I was watching football with my oldest son Josh a few years back and he asked me an offhand question. How many fundraising rounds had I actually done over my career?
+I was watching football with my oldest son Joshua a few years back and he asked me an offhand question. How many fundraising rounds had I actually done over my career?
 
-I figured it would take five minutes to answer. It took 45.
+I figured it would take five minutes to answer. It took an hour.
 
-The number was 44. Forty-four rounds across 30-plus years and 8 companies. Around $200 million raised from friends and family, angels, PE firms, and VCs. At Suja alone we ran 11 rounds in 7 years. Some years we were raising twice.
+The number was 44. Forty-four rounds across 30-plus years and 8 companies. Over $300 million raised from friends and family, angels, PE firms, and VCs. At Suja alone we ran 11 rounds in 7 years. Some years we were raising twice. (WOULD NOT RECOMMEND :))
 
 I don't tell you that to brag. I tell you because I've sat across the table from investors more times than almost anyone, and I've watched founders waste 80% of their prep time on the wrong things.
 
@@ -738,6 +846,8 @@ And on unit economics, lead with gross margin. This is where most founders lose 
 Then be specific in the ask. How much, what structure, what valuation, what runway, and what milestones this round actually funds.
 
 The deck is just a container. What you put in it is the whole job.
+
+I recorded a 3 hour masterclass on the whole raise. Valuation, the deck, investor targeting, dilution math, and the terms nobody explains to you until you've already signed them. It's free in my resources: www.cpgfoundersgroup.com/resources
 ---
 
 ## 19. "The Most Beautiful Brand Was Running 28%" — Tue Oct 27
@@ -778,7 +888,7 @@ Your package is your best salesperson, and it's also one of the most leverageabl
 
 The week Coca-Cola told us they weren't completing the acquisition, I sat in my office and tried to remember the last time I'd actually looked at our gross margin by channel.
 
-Not a quarterly report. Not a board slide. Our actual weekly number.
+Not just a quarterly report or a board slide, but our actual weekly number.
 
 I couldn't remember.
 
@@ -788,7 +898,7 @@ And somewhere in all that velocity, I had traded the discipline of looking at th
 
 That was a big mistake, and it's the one I see most often in founders who are doing well.
 
-By the time Todd Fisher, our CFO, and I were living inside weekly cash projections trying to figure out whether Suja would survive, I finally understood something I should have understood years earlier.
+By the time our CFO, and I were living inside weekly cash projections trying to figure out whether Suja would survive, I finally understood something I should have understood years earlier.
 
 The data that saves a company is never the data you review after a crisis. It's the data you review every Monday morning before one starts.
 
@@ -807,6 +917,10 @@ None of this requires an analytics team or a BI platform. It requires discipline
 Put an hour on your calendar every Monday morning, before anybody else needs you.
 
 It's the cheapest insurance policy in this business.
+
+That's the last one in this run, so here's everything in one place. Every workshop, calculator, model, and white paper I've pointed at across these posts is free right here: www.cpgfoundersgroup.com/resources
+
+And if you'd rather have me looking at your numbers with you instead of you doing it alone on a Monday morning, I keep room for a handful of founders 1 on 1: www.cpgfoundersgroup.com/apply
 
 ---
 # BENCH — Ready For The Next Batch
@@ -851,4 +965,8 @@ Written and voice-checked, pulled from this batch to make room for the webinar-t
 
 **Poll post (#0).** Uses Jeff's own topic list from the Aug 6 WhatsApp thread, trimmed from 17 to 12 for readability. Held back: repeat purchase engine, understanding your consumer, first sales team, DTC proof-of-concept, competitors on price, scaling without breaking, and Jeff's 25 most significant plays. LinkedIn's native poll caps at 4 options, so this runs as comment-your-top-3, which drives better comment volume anyway.
 
-**CTAs.** Kept light throughout. #2, #4, #16, #18, and #20 are the natural places to hang a workshop registration once the poll results are in.
+**CTAs.** Now wired to the live inventory on `/resources`, matched to the post rather than bolted on generically. #4 → Pricing Calculator + Trade Promo Break-Even. #10 → CPG Fatal Flaws. #11 → SKU Rationalization Tool. #12 → Trade Promo Break-Even. #14 → the full Profitability Kit and the Reducing the Burn replay. #16 → Capital Raise & Runway + Unit Pricing & Break-Even. #17 → Babu. #18 → the 3-hour Fundraising Masterclass. #20 → everything, plus /apply as the closer. #2 and #5 keep the CTAs Jeff/Joshua already wrote. #15 (Seth Goldman / John Foraker) carries the soft /apply CTA because the post is literally about what a real advisory relationship is worth. Every kit link routes through `/resources` rather than the individual asset pages, so there's one door and one Kajabi tag path.
+
+**The three Friday posts (A, B, C).** Added outside the Tue/Thu alternation so the story/advice rhythm stays clean, and spaced roughly three weeks apart. A (Sep 11) and B (Oct 2) drive the CPG Founders Club and are both built from the Aug 26 WhatsApp analysis (1,869 messages, Oct 7 2025 – Aug 25 2026). C (Oct 16) is the blunt advisory apply, deliberately placed three days after #15 so the Seth Goldman story does the emotional setup and the blunt post closes it.
+
+**⚠️ Permissions check before B goes out.** Post B uses real member outcomes from the private group analysis — the 76 jobs / 204 automations quote, 245 Walmart doors, 2,000+ doors, the 330-store trial. They're written de-identified on purpose. If Jeff wants to name the founders (it would hit harder), get a thumbs up from each of them in the group first. The source analysis is marked "private group use," so nothing in it should go out attributed without an explicit OK. The aggregate stats in post A (1,869 messages, 393 asks, 94% response rate, the category counts) are fine to publish as-is — they're Jeff's own group data and identify nobody.
