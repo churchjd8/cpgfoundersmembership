@@ -2,7 +2,7 @@
 
 **24 posts.** 1 webinar topic poll + 20 posts that strictly alternate story / CPG advice, plus 3 Friday posts that carry the CTAs: two driving the CPG Founders Club and one blunt advisory apply.
 
-**Status:** Post 0 (the poll) went live Wed Aug 19. Thu Aug 20 is already spoken for by a previously queued post. The batch proper starts **Tue Aug 25** and runs Tue/Thu through Thu Oct 29.
+**Status:** Post 0 (the poll) went live Wed Aug 19. Thu Aug 20 was a previously queued post. #1 ran **Tue Aug 25**. Thu Aug 27 goes dark and the batch picks back up **Tue Sep 1** with #2, then runs Tue/Thu through **Tue Nov 3**.
 
 Odd numbers are storytelling. Even numbers are technical playbook posts pulled from the blog. Lettered posts (A, B, C) are the Friday CTA posts and sit outside the alternation on purpose, so the Tue/Thu rhythm stays intact.
 
@@ -15,28 +15,29 @@ Odd numbers are storytelling. Even numbers are technical playbook posts pulled f
 | 0 | Aug 19 | Wed | Which Workshop Should I Run First? | Poll | ✅ POSTED |
 | — | Aug 20 | Thu | *(previously queued post)* | — | — |
 | 1 | Aug 25 | Tue | The Target Buyers In The Bed | STORY | 6 — buyer meeting to PO |
-| 2 | Aug 27 | Thu | 40% Is The Floor, Not The Ceiling | ADVICE | **8 — gross margin architecture** |
-| 3 | Sep 1 | Tue | "What's A Cat Man?" | STORY | 11 — velocity before volume |
-| 4 | Sep 3 | Thu | "What's Your Gross-To-Net?" | ADVICE | **3 — CPG-specific P&L** |
-| 5 | Sep 8 | Tue | I Almost Killed The Coca-Cola Deal | STORY | 2 — getting investor-ready |
-| 6 | Sep 10 | Thu | Know Your Velocity Before Your Buyer Tells You | ADVICE | **11 — velocity before volume** |
-| **A** | **Sep 11** | **Fri** | **393 Questions In Ten Months** | **COMMUNITY** | → Founders Club |
-| 7 | Sep 15 | Tue | The Green Juice Guy On A Skateboard | STORY | 12 — finding white space |
-| 8 | Sep 17 | Thu | Why Does The Shelf Need You? | ADVICE | **10 + 12 — positioning / white space** |
-| 9 | Sep 22 | Tue | I Said Yes To A Smoothie I Didn't Want To Make | STORY | 6 — buyer meeting to PO |
-| 10 | Sep 24 | Thu | The Four That Keep Killing Good Brands | ADVICE | **1 — fatal flaws** |
-| 11 | Sep 29 | Tue | Our Kombucha Was Making 12% | STORY | 8 — gross margin architecture |
-| 12 | Oct 1 | Thu | What Retail Actually Costs You | ADVICE | **7 — slotting, MCBs, hidden costs** |
+| — | Aug 27 | Thu | *(dark — batch resets to Sep 1)* | — | — |
+| 2 | Sep 1 | Tue | 40% Is The Floor, Not The Ceiling | ADVICE | **8 — gross margin architecture** |
+| 3 | Sep 3 | Thu | "What's A Cat Man?" | STORY | 11 — velocity before volume |
+| 4 | Sep 8 | Tue | "What's Your Gross-To-Net?" | ADVICE | **3 — CPG-specific P&L** |
+| 5 | Sep 10 | Thu | I Almost Killed The Coca-Cola Deal | STORY | 2 — getting investor-ready |
+| 6 | Sep 15 | Tue | Know Your Velocity Before Your Buyer Tells You | ADVICE | **11 — velocity before volume** |
+| 7 | Sep 17 | Thu | The Green Juice Guy On A Skateboard | STORY | 12 — finding white space |
+| **A** | **Sep 18** | **Fri** | **393 Questions In Ten Months** | **COMMUNITY** | → Founders Club |
+| 8 | Sep 22 | Tue | Why Does The Shelf Need You? | ADVICE | **10 + 12 — positioning / white space** |
+| 9 | Sep 24 | Thu | I Said Yes To A Smoothie I Didn't Want To Make | STORY | 6 — buyer meeting to PO |
+| 10 | Sep 29 | Tue | The Four That Keep Killing Good Brands | ADVICE | **1 — fatal flaws** |
+| 11 | Oct 1 | Thu | Our Kombucha Was Making 12% | STORY | 8 — gross margin architecture |
 | **B** | **Oct 2** | **Fri** | **76 Scheduled Jobs, 204 Automations** | **COMMUNITY** | → Founders Club |
-| 13 | Oct 6 | Tue | 3,000% In One Year | STORY | 4 — killing your burn |
-| 14 | Oct 8 | Thu | Profitability Is A Decision, Not A Destination | ADVICE | **4 — killing your burn** |
-| 15 | Oct 13 | Tue | I Called Seth Goldman | STORY | — |
-| 16 | Oct 15 | Thu | A Wish List With A Spreadsheet Attached | ADVICE | **2 + 3 — investor-ready / P&L** |
+| 12 | Oct 6 | Tue | What Retail Actually Costs You | ADVICE | **7 — slotting, MCBs, hidden costs** |
+| 13 | Oct 8 | Thu | 3,000% In One Year | STORY | 4 — killing your burn |
+| 14 | Oct 13 | Tue | Profitability Is A Decision, Not A Destination | ADVICE | **4 — killing your burn** |
+| 15 | Oct 15 | Thu | I Called Seth Goldman | STORY | — |
 | **C** | **Oct 16** | **Fri** | **A Spot Just Opened Up** | **OFFER** | → /apply |
-| 17 | Oct 20 | Tue | "What Does Your Brand Look Like On Instacart?" | STORY | 11 — velocity before volume |
-| 18 | Oct 22 | Thu | 44 Rounds | ADVICE | **5 — pitch deck rebuilt live** |
-| 19 | Oct 27 | Tue | The Most Beautiful Brand Was Running 28% | STORY | 8 — gross margin architecture |
-| 20 | Oct 29 | Thu | The Monday Morning Dashboard | ADVICE | **3 + 4 — P&L / runway** |
+| 16 | Oct 20 | Tue | A Wish List With A Spreadsheet Attached | ADVICE | **2 + 3 — investor-ready / P&L** |
+| 17 | Oct 22 | Thu | "What Does Your Brand Look Like On Instacart?" | STORY | 11 — velocity before volume |
+| 18 | Oct 27 | Tue | 44 Rounds | ADVICE | **5 — pitch deck rebuilt live** |
+| 19 | Oct 29 | Thu | The Most Beautiful Brand Was Running 28% | STORY | 8 — gross margin architecture |
+| 20 | Nov 3 | Tue | The Monday Morning Dashboard | ADVICE | **3 + 4 — P&L / runway** |
 
 ### Webinar topic coverage
 
@@ -133,7 +134,7 @@ INSERT TARGET PHOTO.
 
 ---
 
-## 2. "40% Is The Floor, Not The Ceiling" — Thu Aug 27
+## 2. "40% Is The Floor, Not The Ceiling" — Tue Sep 1
 
 **ADVICE — previews webinar topic 8**
 
@@ -173,7 +174,7 @@ Go calculate yours correctly this week. If you want my free CPG Chart of Account
 
 ---
 
-## 3. "What's A Cat Man?" — Tue Sep 1
+## 3. "What's A Cat Man?" — Thu Sep 3
 
 **STORY — supports webinar topic 11**
 
@@ -207,7 +208,7 @@ It's actually the thing that decides whether you're still on the shelf next spri
 
 ---
 
-## 4. "What's Your Gross-To-Net?" — Thu Sep 3
+## 4. "What's Your Gross-To-Net?" — Tue Sep 8
 
 **ADVICE — previews webinar topic 3**
 
@@ -239,7 +240,7 @@ If you want the two tools I use to run this math, the Pricing Calculator and the
 
 ---
 
-## 5. "I Almost Killed The Coca-Cola Deal" — Tue Sep 8
+## 5. "I Almost Killed The Coca-Cola Deal" — Thu Sep 10
 
 **STORY — supports webinar topic 2**
 
@@ -277,7 +278,7 @@ I have an equity and dilution model I built I walk my clients through. comment E
 
 ---
 
-## 6. "Know Your Velocity Before Your Buyer Tells You" — Thu Sep 10
+## 6. "Know Your Velocity Before Your Buyer Tells You" — Tue Sep 15
 
 **ADVICE — previews webinar topic 11**
 
@@ -319,43 +320,7 @@ To sum it up once again...Don't confuse distribution gains with velocity gains. 
 
 ---
 
-## A. "393 Questions In Ten Months" — Fri Sep 11
-
-**COMMUNITY — drives the CPG Founders Club**
-
-I did something this week I probably should have done a year ago.
-
-I pulled every message out of our CPG founders WhatsApp group and read the whole thing start to finish. 1,869 messages. Ten months. Around 300 founders.
-
-I wanted to know what people are actually stuck on, not what I assume they're stuck on.
-
-393 questions got asked in there. Here's how they broke down.
-
-Digital marketing was number one at 47 asks, and almost all of it was some version of "who do I actually trust to run my Meta account."
-
-Retail entry was second at 41. Target, Costco, Sprouts, who's the buyer, how do I get in front of them.
-
-Then packaging at 38. Boxes, pouches, and who will actually take a short first run.
-
-Then AI tools at 33, which would have been close to zero a year ago.
-
-Then distributor terms at 32, and it's mostly KeHE and UNFI deductions.
-
-The one that stopped me was this. The category with the most questions is also the category with the least agreement, and that's agencies. One founder posted a 16x ROAS with a shop she loved, and inside the same day somebody else warned the group off that exact same shop.
-
-That's not a marketing problem. That's a trust problem, and it's a big part of why the group exists.
-
-Here's the number I'm most proud of though. 94% of the questions asked in there got a real answer inside 24 hours, and almost none of them came from me. They came from other founders who had already paid for that answer the hard way.
-
-Nobody sells anything in that room. That's the whole rule, and it's the reason it works.
-
-We're 350+ founders now and I read everything that goes through it. If you're building in CPG and you want in, it's free.
-
-www.cpgfoundersgroup.com/founders-only
-
----
-
-## 7. "The Green Juice Guy On A Skateboard" — Tue Sep 15
+## 7. "The Green Juice Guy On A Skateboard" — Thu Sep 17
 
 **STORY — supports webinar topic 12**
 
@@ -388,7 +353,49 @@ Customers don't reward passion. They reward value.
 Go find out which one you're actually selling before you write the big check.
 
 ---
-## 8. "Why Does The Shelf Need You?" — Thu Sep 17
+## A. "393 Questions In Ten Months" — Fri Sep 18
+
+**COMMUNITY — drives the CPG Founders Club**
+
+I did something this week I probably should have done a year ago.
+
+I pulled every message out of our CPG founders WhatsApp group and read the whole thing start to finish. 1,869 messages. Ten months. Around 300 founders.
+
+I wanted to know what people are actually stuck on, not what I assume they're stuck on.
+
+393 questions got asked in there. A good chunk of them are the easy kind. Does anybody have a 3PL in Salt Lake. Who's your bookkeeper. Which broker actually gets you in front of Sprouts. Those usually get answered in about nine minutes and they save somebody a month of vetting.
+
+But that's not the half that got my attention.
+
+The other half is founders walking in with the actual problem, and usually it's one they haven't said out loud anywhere else yet.
+
+A deduction report comes back with charges nobody can explain and the distributor rep has stopped returning calls.
+
+A retailer wants a forecast for an onboarding date the founder has no possible way to predict, and there's a penalty attached to guessing wrong.
+
+An insurance rider shows up demanding coverage the brand can't carry at its current revenue.
+
+Somebody realizes the SKU that's growing fastest is the one quietly wrecking the blended margin.
+
+Somebody else is deciding between a bridge round and cutting headcount, and the board meeting is Thursday.
+
+Those aren't referral questions. Those are the 2am ones, and most founders sit on them alone for weeks, because saying it out loud feels a little like admitting the whole thing is shakier than the deck says it is.
+
+Here's the number I'm most proud of. 94% of what got asked in there got a real answer inside 24 hours, and almost none of those answers came from me. They came from other founders who had already paid for that answer the hard way.
+
+There are still a few sitting in there unanswered and they're good ones. How Trader Joe's actually runs its category review calendar. Whether Costco lets you staff a roadshow yourself or makes you use a third party. Whether anybody has an insurance broker covering 3PL inventory who has actually paid out on a claim.
+
+If you know any of those, come tell us.
+
+Nobody sells anything in that room. That's the whole rule and it's the reason it works.
+
+350+ CPG founders, every stage from pre-launch to exit, free.
+
+www.cpgfoundersgroup.com/founders-only
+
+---
+
+## 8. "Why Does The Shelf Need You?" — Tue Sep 22
 
 **ADVICE — previews webinar topics 10 & 12**
 
@@ -429,7 +436,7 @@ We're the only [X] that [Y] for [Z].
 If you can't fill in those blanks without hedging, you don't have a marketing problem. You've got work to do before you spend another dollar on packaging.
 ---
 
-## 9. "I Said Yes To A Smoothie I Didn't Want To Make" — Tue Sep 22
+## 9. "I Said Yes To A Smoothie I Didn't Want To Make" — Thu Sep 24
 
 **STORY — supports webinar topic 6**
 
@@ -462,7 +469,7 @@ I'm telling you to know exactly what you're buying with it before you sign. If t
 If the answer is just "more revenue," walk away.
 
 ---
-## 10. "The Four That Keep Killing Good Brands" — Thu Sep 24
+## 10. "The Four That Keep Killing Good Brands" — Tue Sep 29
 
 **ADVICE — previews webinar topic 1**
 
@@ -499,7 +506,7 @@ None of these are sophisticated problems. That's exactly why they keep working.
 There are 18 of these, not four. I wrote the whole list up as CPG Fatal Flaws and it's free in my resources. Learn them on my dime instead of your own: www.cpgfoundersgroup.com/resources
 ---
 
-## 11. "Our Kombucha Was Making 12%" — Tue Sep 29
+## 11. "Our Kombucha Was Making 12%" — Thu Oct 1
 
 **STORY — supports webinar topic 8**
 
@@ -536,7 +543,35 @@ Gross margin determines destiny.
 The SKU Rationalization Tool I use for exactly this pull-apart is free in my resources if you want it: www.cpgfoundersgroup.com/resources
 
 ---
-## 12. "What Retail Actually Costs You" — Thu Oct 1
+## B. "76 Scheduled Jobs, 204 Automations" — Fri Oct 2
+
+**COMMUNITY — drives the CPG Founders Club**
+
+Something shifted in our founders group between March and August and I don't think most of the people in there noticed it happening.
+
+Back in March, every AI question was some version of "is anybody actually using this for anything real, or is it all hype." Careful questions. A little skeptical, which honestly I liked.
+
+By August it wasn't a debate anymore. It was founders trading setups with each other.
+
+One founder in there described his operation to the group like this. 76 scheduled jobs. 204 automations running. And then the line that got me, "I review work now instead of producing it."
+
+That's a very small team operating like a company with a real ops function behind it.
+
+Here's what I want you to take from that, and it isn't go buy AI tools.
+
+Every one of those founders got there because somebody else had already gone first and was willing to show their actual work. The whole group moved on this in about five months because 300 people were comparing notes out loud instead of guessing in private.
+
+It's the same reason the retail wins in there happen the way they do. One founder in the group is in 245 Walmart doors right now. Another one crossed 2,000 doors. Another just landed a 330 store trial. In almost every one of those, the first step wasn't a cold email. It was somebody saying "I know that buyer, let me make the intro."
+
+I spent the first stretch of my career figuring this business out alone and I paid full tuition for it. I don't recommend it.
+
+350+ CPG founders, every stage from pre-launch to exit, free, and nobody is allowed to pitch anything in there.
+
+www.cpgfoundersgroup.com/founders-only
+
+---
+
+## 12. "What Retail Actually Costs You" — Tue Oct 6
 
 **ADVICE — previews webinar topic 7**
 
@@ -577,35 +612,7 @@ Slotting gets you the chance. Everything that comes after it determines whether 
 Before you say yes to the next promo, run it through the Trade Promo Break-Even Calculator first. Free in my resources: www.cpgfoundersgroup.com/resources
 ---
 
-## B. "76 Scheduled Jobs, 204 Automations" — Fri Oct 2
-
-**COMMUNITY — drives the CPG Founders Club**
-
-Something shifted in our founders group between March and August and I don't think most of the people in there noticed it happening.
-
-Back in March, every AI question was some version of "is anybody actually using this for anything real, or is it all hype." Careful questions. A little skeptical, which honestly I liked.
-
-By August it wasn't a debate anymore. It was founders trading setups with each other.
-
-One founder in there described his operation to the group like this. 76 scheduled jobs. 204 automations running. And then the line that got me, "I review work now instead of producing it."
-
-That's a very small team operating like a company with a real ops function behind it.
-
-Here's what I want you to take from that, and it isn't go buy AI tools.
-
-Every one of those founders got there because somebody else had already gone first and was willing to show their actual work. The whole group moved on this in about five months because 300 people were comparing notes out loud instead of guessing in private.
-
-It's the same reason the retail wins in there happen the way they do. One founder in the group is in 245 Walmart doors right now. Another one crossed 2,000 doors. Another just landed a 330 store trial. In almost every one of those, the first step wasn't a cold email. It was somebody saying "I know that buyer, let me make the intro."
-
-I spent the first stretch of my career figuring this business out alone and I paid full tuition for it. I don't recommend it.
-
-350+ CPG founders, every stage from pre-launch to exit, free, and nobody is allowed to pitch anything in there.
-
-www.cpgfoundersgroup.com/founders-only
-
----
-
-## 13. "3,000% In One Year" — Tue Oct 6
+## 13. "3,000% In One Year" — Thu Oct 8
 
 **STORY — supports webinar topic 4**
 
@@ -632,7 +639,7 @@ That inventory isn't an asset at that point. It's cash wearing a costume.
 Neither of these is bad luck. Both are planning failures, and both get fixed by a forecast you update every week against real sell-through instead of the number you promised your board back in January.
 
 ---
-## 14. "Profitability Is A Decision, Not A Destination" — Thu Oct 8
+## 14. "Profitability Is A Decision, Not A Destination" — Tue Oct 13
 
 **ADVICE — previews webinar topic 4**
 
@@ -676,7 +683,7 @@ Everything I use for this sits in one place. The 90 minute Reducing the Burn wor
 
 ---
 
-## 15. "I Called Seth Goldman" — Tue Oct 13
+## 15. "I Called Seth Goldman" — Thu Oct 15
 
 **STORY**
 
@@ -712,7 +719,29 @@ I've been on both sides of that phone call, and these days I'm mostly on Seth's 
 
 ---
 
-## 16. "A Wish List With A Spreadsheet Attached" — Thu Oct 15
+## C. "A Spot Just Opened Up" — Fri Oct 16
+
+**OFFER — blunt advisory apply**
+
+Short and direct one today.
+
+A spot just opened up in my private advisory.
+
+I work with a small number of founders 1 on 1 at any given time. Not a course, not a group program, not a community with my name on it. Me in your business, in your numbers, and on the phone when something is on fire.
+
+It's usually some mix of the same handful of things. Building a P&L that actually tells you the truth. Getting gross margin from wherever it is now to where it needs to be. Prepping a raise, or figuring out that you shouldn't raise yet. Walking into a retailer meeting knowing exactly what you're going to say when they push on price.
+
+I keep the number small on purpose. Every engagement gets built around the business in front of me and I can't do that for twenty people at once.
+
+The bar I hold myself to is simple. If I'm not returning at least 5 to 10 times what you're paying me, in capital raised or cost taken back out, then I'm not doing my job.
+
+If you've been circling this one, now is the window. When it fills, it closes again until somebody rolls off.
+
+www.cpgfoundersgroup.com/apply
+
+---
+
+## 16. "A Wish List With A Spreadsheet Attached" — Tue Oct 20
 
 **ADVICE — previews webinar topics 2 & 3**
 
@@ -754,29 +783,7 @@ If you want to build one properly, the Capital Raise & Runway Calculator and the
 
 ---
 
-## C. "A Spot Just Opened Up" — Fri Oct 16
-
-**OFFER — blunt advisory apply**
-
-Short and direct one today.
-
-A spot just opened up in my private advisory.
-
-I work with a small number of founders 1 on 1 at any given time. Not a course, not a group program, not a community with my name on it. Me in your business, in your numbers, and on the phone when something is on fire.
-
-It's usually some mix of the same handful of things. Building a P&L that actually tells you the truth. Getting gross margin from wherever it is now to where it needs to be. Prepping a raise, or figuring out that you shouldn't raise yet. Walking into a retailer meeting knowing exactly what you're going to say when they push on price.
-
-I keep the number small on purpose. Every engagement gets built around the business in front of me and I can't do that for twenty people at once.
-
-The bar I hold myself to is simple. If I'm not returning at least 5 to 10 times what you're paying me, in capital raised or cost taken back out, then I'm not doing my job.
-
-If you've been circling this one, now is the window. When it fills, it closes again until somebody rolls off.
-
-www.cpgfoundersgroup.com/apply
-
----
-
-## 17. "What Does Your Brand Look Like On Instacart?" — Tue Oct 20
+## 17. "What Does Your Brand Look Like On Instacart?" — Thu Oct 22
 
 **STORY — supports webinar topic 11**
 
@@ -809,7 +816,7 @@ We were one of them, and we were doing nine figures at the time. 😊
 If you want a second set of eyes on a question like this without waiting on me, I built Babu, an AI trained on 35 years of my operating experience and 4,000+ of my own resources. First 10 days are free: www.askbabu.ai
 
 ---
-## 18. "44 Rounds" — Thu Oct 22
+## 18. "44 Rounds" — Tue Oct 27
 
 **ADVICE — previews webinar topic 5**
 
@@ -850,7 +857,7 @@ The deck is just a container. What you put in it is the whole job.
 I recorded a 3 hour masterclass on the whole raise. Valuation, the deck, investor targeting, dilution math, and the terms nobody explains to you until you've already signed them. It's free in my resources: www.cpgfoundersgroup.com/resources
 ---
 
-## 19. "The Most Beautiful Brand Was Running 28%" — Tue Oct 27
+## 19. "The Most Beautiful Brand Was Running 28%" — Thu Oct 29
 
 **STORY — supports webinar topic 8**
 
@@ -882,7 +889,7 @@ Your package is your best salesperson, and it's also one of the most leverageabl
 
 ---
 
-## 20. "The Monday Morning Dashboard" — Thu Oct 29
+## 20. "The Monday Morning Dashboard" — Tue Nov 3
 
 **ADVICE — previews webinar topics 3 & 4**
 
@@ -967,6 +974,10 @@ Written and voice-checked, pulled from this batch to make room for the webinar-t
 
 **CTAs.** Now wired to the live inventory on `/resources`, matched to the post rather than bolted on generically. #4 → Pricing Calculator + Trade Promo Break-Even. #10 → CPG Fatal Flaws. #11 → SKU Rationalization Tool. #12 → Trade Promo Break-Even. #14 → the full Profitability Kit and the Reducing the Burn replay. #16 → Capital Raise & Runway + Unit Pricing & Break-Even. #17 → Babu. #18 → the 3-hour Fundraising Masterclass. #20 → everything, plus /apply as the closer. #2 and #5 keep the CTAs Jeff/Joshua already wrote. #15 (Seth Goldman / John Foraker) carries the soft /apply CTA because the post is literally about what a real advisory relationship is worth. Every kit link routes through `/resources` rather than the individual asset pages, so there's one door and one Kajabi tag path.
 
-**The three Friday posts (A, B, C).** Added outside the Tue/Thu alternation so the story/advice rhythm stays clean, and spaced roughly three weeks apart. A (Sep 11) and B (Oct 2) drive the CPG Founders Club and are both built from the Aug 26 WhatsApp analysis (1,869 messages, Oct 7 2025 – Aug 25 2026). C (Oct 16) is the blunt advisory apply, deliberately placed three days after #15 so the Seth Goldman story does the emotional setup and the blunt post closes it.
+**The three Friday posts (A, B, C).** Added outside the Tue/Thu alternation so the story/advice rhythm stays clean, and now spaced exactly two weeks apart — A (Sep 18), B (Oct 2), C (Oct 16). A and B drive the CPG Founders Club and are both built from the Aug 26 WhatsApp analysis (1,869 messages, Oct 7 2025 – Aug 25 2026). C is the blunt advisory apply, and it now runs the day after #15 so the Seth Goldman story does the emotional setup and the blunt post closes it the next morning.
 
-**⚠️ Permissions check before B goes out.** Post B uses real member outcomes from the private group analysis — the 76 jobs / 204 automations quote, 245 Walmart doors, 2,000+ doors, the 330-store trial. They're written de-identified on purpose. If Jeff wants to name the founders (it would hit harder), get a thumbs up from each of them in the group first. The source analysis is marked "private group use," so nothing in it should go out attributed without an explicit OK. The aggregate stats in post A (1,869 messages, 393 asks, 94% response rate, the category counts) are fine to publish as-is — they're Jeff's own group data and identify nobody.
+**Post A angle.** Deliberately not a referral-desk post. The vendor asks are acknowledged in one paragraph and then it pivots to the harder half — unexplained deductions, un-forecastable onboarding dates with penalties attached, insurance riders, margin discoveries, bridge-vs-headcount calls. Ends on three genuinely unanswered questions from the group, which doubles as the comment hook. The individual challenges are written as composites of real ask categories from the analysis, not as any one member's situation.
+
+**Date shift (Aug 26).** #2 moved from Thu Aug 27 to Tue Sep 1 and everything after it slid forward one slot, pushing #20 to Tue Nov 3. Thu Aug 27 goes dark. Side effect worth knowing: the story/advice alternation is intact post-to-post, but it flipped day-of-week — advice now lands Tuesday and stories land Thursday. If Jeff wants stories back on Tuesday, the fix is to insert or drop one post, not to re-date.
+
+**⚠️ Permissions check before B goes out.** Post B uses real member outcomes from the private group analysis — the 76 jobs / 204 automations quote, 245 Walmart doors, 2,000+ doors, the 330-store trial. They're written de-identified on purpose. If Jeff wants to name the founders (it would hit harder), get a thumbs up from each of them in the group first. The source analysis is marked "private group use," so nothing in it should go out attributed without an explicit OK. The aggregate stats in post A (1,869 messages, 393 asks, 94% response rate) are fine to publish as-is — they're Jeff's own group data and identify nobody, and the challenge examples in it are composites rather than any single member's situation.
