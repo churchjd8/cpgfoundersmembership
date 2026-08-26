@@ -108,18 +108,19 @@ async function main() {
   // Hand-picked heroes (e.g. the featured post uses a photo of Jeff). Never
   // let an automated run replace one.
   const pinned = new Set(queries._pinned ?? [])
-  for (const slug of slugs) {
-    if (pinned.has(slug)) {
-      throw new Error(
-        `${slug} is pinned in blog-image-queries.json (_pinned) and must keep its hand-picked image. ` +
-          `Remove it from _pinned first if you really want to replace it.`
-      )
-    }
+  if (ONLY && pinned.has(ONLY)) {
+    throw new Error(
+      `${ONLY} is pinned in blog-image-queries.json (_pinned) and must keep its hand-picked image. ` +
+        `Remove it from _pinned first if you really want to replace it.`
+    )
   }
+  // A bulk run just walks past pinned posts. Throwing here made every bulk run
+  // abort as soon as one pinned slug had a query defined.
+  const targets = slugs.filter((slug) => !pinned.has(slug))
   const failures = []
   let updated = 0
 
-  for (const slug of slugs) {
+  for (const slug of targets) {
     const query = queries[slug]
     if (!query) {
       failures.push(`${slug}: no query defined in blog-image-queries.json`)

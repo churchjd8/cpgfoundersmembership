@@ -81,12 +81,12 @@ function deliveryHtml(firstName: string) {
 
     <h2 style="font-size:18px;font-weight:700;margin:32px 0 12px;border-top:1px solid #e7e5e4;padding-top:24px;">Video Trainings</h2>
     <ul style="margin:0;padding-left:20px;">
-      ${tool(LINKS.burnWorkshop, "Reducing the Burn Workshop", "90 minutes on getting to profitability faster. Pricing, trade spend, SKU rationalization, cash conversion, runway planning.")}
-      ${tool(LINKS.fundraisingMasterclass, "Fundraising Masterclass", "3 hours on raising capital. Valuations, decks, investor targeting, dilution math, SAFEs vs. equity &mdash; the frameworks from 44 rounds and $275M+ raised.")}
+      ${tool(LINKS.burnWorkshop, "Reducing the Burn Workshop", "90 minutes on cutting your burn rate without cutting your growth. Pricing, trade spend, SKU rationalization, cash conversion, runway planning.")}
+      ${tool(LINKS.fundraisingMasterclass, "Close Your Investment Round (3-hr masterclass)", "Valuation, deck, investor targeting, dilution math, and the terms nobody explains to you &mdash; the frameworks behind 45 rounds and $300M+ raised.")}
       ${tool(LINKS.playbookTraining, "CPG Playbook Training", "All 23 plays for building and scaling a brand. KPIs, retail strategy, operations, team, exit planning.")}
     </ul>
 
-    <h2 style="font-size:18px;font-weight:700;margin:32px 0 12px;border-top:1px solid #e7e5e4;padding-top:24px;">Profitability Kit</h2>
+    <h2 style="font-size:18px;font-weight:700;margin:32px 0 12px;border-top:1px solid #e7e5e4;padding-top:24px;">The Fastest Path to Profitability Kit</h2>
     <ul style="margin:0;padding-left:20px;">
       ${tool(LINKS.pricingCalculator, "Pricing Calculator", "Start from MSRP or COGS, compare both, find your optimal price.")}
       ${tool(LINKS.tradePromo, "Trade Promo Break-Even Calculator", "Know if a promo is worth running before you commit.")}
@@ -95,11 +95,16 @@ function deliveryHtml(firstName: string) {
       ${tool(LINKS.cashRunway, "Cash Runway Calculator", "Model your burn across 3 years and figure out how much to raise.")}
     </ul>
 
-    <h2 style="font-size:18px;font-weight:700;margin:32px 0 12px;border-top:1px solid #e7e5e4;padding-top:24px;">Fundraising Kit</h2>
+    <h2 style="font-size:18px;font-weight:700;margin:32px 0 12px;border-top:1px solid #e7e5e4;padding-top:24px;">The $300M Fundraising Kit</h2>
     <ul style="margin:0;padding-left:20px;">
       ${tool(LINKS.chartOfAccounts, "CPG Chart of Accounts", "Set up your financials correctly from day one.")}
       ${tool(LINKS.capitalRaise, "Capital Raise &amp; Runway Calculator", "Model your burn rate and plan your next raise.", ` (${link(LINKS.capitalRaiseVideo, "video walkthrough")})`)}
       ${tool(LINKS.unitPricing, "Unit Pricing &amp; Break-Even Model", "Find your break-even point and test pricing scenarios.", ` (${link(LINKS.unitPricingVideo, "video walkthrough")})`)}
+    </ul>
+
+    <h2 style="font-size:18px;font-weight:700;margin:32px 0 12px;border-top:1px solid #e7e5e4;padding-top:24px;">Know Where You Stand</h2>
+    <ul style="margin:0;padding-left:20px;">
+      ${tool(LINKS.babu, "Entrepreneurial Readiness Assessment", "50 questions on your experience, your product idea, and your route to market. Twenty minutes now can save you two years. Run it as a Guru inside Babu on your free trial.")}
     </ul>
 
     <h2 style="font-size:18px;font-weight:700;margin:32px 0 12px;border-top:1px solid #e7e5e4;padding-top:24px;">White Paper</h2>

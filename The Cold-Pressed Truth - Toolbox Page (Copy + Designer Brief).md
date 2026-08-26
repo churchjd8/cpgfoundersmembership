@@ -17,39 +17,50 @@ pages, before the Table of Contents.
 **Note for the typesetter:** the URL and QR code go at the foot of *this* page, not the
 facing one. The reader should never have to turn a page to act.
 
+**Note on the numbers:** the print copy says "hundreds of founders" rather than a hard count.
+The group grows every week and the book does not, so a specific number is stale the day it
+ships. The website carries the live count instead.
+
 ---
 
 ### HERE'S THE TOOLBOX. IT'S FREE.
 
-I wrote this book to hand you things, not just tell you things. So before you read a word of
-Chapter One, go get the toolbox.
+I didn't write this book to give you ideas. I wrote it to give you tools.
 
-Same models, trainings, and tools I use with the founders I advise. No cost, no call, no pitch.
+So before you read a word of Chapter One, go get them. Same models, trainings, and calculators
+I use with the founders I advise. No cost, no call, no catch.
 
-**Start with these two:**
+*[BUNDLE GRAPHIC]*
 
-- **Babu AI — 10 days free.** Every spreadsheet below answers one question. Babu answers
-  whatever you bring it: pricing, promo math, retailer strategy, co-man contracts, fundraising
-  prep. Trained on 35 years of operating experience, with 40+ purpose-built Gurus underneath it.
-- **The CPG Founders Club.** 350+ founders in one WhatsApp group, every stage from pre-launch
-  to exit, answering each other in real time. Nobody sells anything in there. That's the whole
-  rule, and it's why it works.
+**Some of the free resources in this book include:**
 
-**Then the rest of it:**
-
-- **The Profitability Kit** — five tools: Pricing Calculator, Trade Promo Break-Even,
-  SKU Rationalization, Cash Conversion Cycle, and Cash Runway. Plus *Reducing the Burn*, the
-  90-minute workshop that goes with them.
-- **The Fundraising Kit** — three tools: CPG Chart of Accounts, Capital Raise & Runway
-  Calculator, and Unit Pricing & Break-Even Model. Plus the three-hour Fundraising Masterclass,
-  the frameworks behind 44 rounds and $275M+ raised.
-- **The CPG Playbook** — all 23 plays, walked through live. KPIs to exit planning.
-- **Fatal Flaws** — the 18 mistakes that kill emerging brands before they get a fair shot.
-  Learn them on my dime.
+- **The CPG Founders Club** — hundreds of CPG founders in one WhatsApp group, every stage from
+  pre-launch to exit, answering each other in real time. Post a question at 11 p.m., wake up to
+  three real answers. Nobody sells anything in there. That's the whole rule, and it's why it
+  works.
+- **The Entrepreneurial Readiness Assessment** — 50 questions on your experience, your product
+  idea, and your route to market. Twenty minutes now can save you two years and your savings.
+  Most founders find out they're ready for a different next step than the one they'd planned.
+- **The Fastest Path to Profitability Kit** — five tools that find the money already sitting in
+  your P&L: Pricing Calculator, Trade Promo Break-Even, SKU Rationalization, Cash Conversion
+  Cycle, and Cash Runway.
+- **Reducing the Burn** — the 90-minute workshop on cutting your burn rate without cutting your
+  growth.
+- **The $300M Fundraising Kit** — the three models I hand a founder before they talk to a single
+  investor: CPG Chart of Accounts, Capital Raise & Runway Calculator, and Unit Pricing &
+  Break-Even Model.
+- **Close Your Investment Round** — the three-hour masterclass behind 45 rounds and $300M+
+  raised. Valuation, deck, investor targeting, dilution math, and the terms nobody explains
+  to you.
+- **My CPG Playbook** — all 23 plays, walked through live. KPIs to exit planning. The whole
+  operating system in one sitting.
+- **Babu AI, free for 10 days** — ask it anything: pricing, promo math, retailer strategy,
+  co-man contracts, fundraising prep. Trained on 35 years of operating experience, with 40+
+  purpose-built Gurus underneath it. The advisor that's awake at 2 a.m. when you are.
 
 Take the tools. Then let's get to work.
 
-**Get the whole toolbox here:**
+**Get your free resources here:**
 
 **cpgfoundersgroup.com/toolbox**
 
@@ -61,22 +72,21 @@ Take the tools. Then let's get to work.
 
 ### HERE'S THE TOOLBOX. IT'S FREE.
 
-I wrote this book to hand you things, not just tell you things. Before Chapter One, go get the
-tools — the same ones I use with the founders I advise. No cost, no call, no pitch.
+I didn't write this book to give you ideas. I wrote it to give you tools. Go get them before
+Chapter One. No cost, no call, no catch.
 
-**Start with these two:**
+**Some of the free resources in this book include:**
 
-- **Babu AI — 10 days free.** Ask it anything: pricing, promo math, retailer strategy,
-  fundraising prep. 40+ purpose-built Gurus underneath it.
-- **The CPG Founders Club.** 350+ founders in one WhatsApp group, answering each other in real
-  time. Nobody sells anything in there.
-
-**Then the rest:**
-
-- **The Profitability Kit** — 5 tools + the *Reducing the Burn* workshop
-- **The Fundraising Kit** — 3 tools + the three-hour Fundraising Masterclass
-- **The CPG Playbook** — all 23 plays, live
-- **Fatal Flaws** — the 18 mistakes that kill brands early
+- **The CPG Founders Club** — hundreds of founders in one WhatsApp group, answering each other
+  in real time. Nobody sells anything in there.
+- **The Entrepreneurial Readiness Assessment** — 50 questions on your experience, your idea, and
+  your route to market. Twenty minutes now can save you two years.
+- **The Fastest Path to Profitability Kit** — five tools that find the money already sitting in
+  your P&L, plus the 90-minute *Reducing the Burn* workshop.
+- **The $300M Fundraising Kit** — three investor-ready models, plus *Close Your Investment
+  Round*, the masterclass behind 45 rounds and $300M+ raised.
+- **My CPG Playbook** — all 23 plays, walked through live. KPIs to exit planning.
+- **Babu AI, free for 10 days** — the advisor that's awake at 2 a.m. when you are.
 
 Take the tools. Then let's get to work.
 
@@ -211,7 +221,9 @@ Live at `/toolbox`. One opt-in delivers all of it in one email.
 
 **Headliners**
 - Babu AI — 10-day free trial (askbabu.ai)
-- CPG Founders Club WhatsApp group — 350+ founders
+- Entrepreneurial Readiness Assessment — 50 questions. NOTE: currently lives as a Guru inside
+  Babu and has no standalone URL. See the open question at the foot of this doc.
+- CPG Founders Club WhatsApp group — 350+ founders (print copy says "hundreds")
 
 **Profitability Kit** — Pricing Calculator · Trade Promo Break-Even · SKU Rationalization ·
 Cash Conversion Cycle · Cash Runway · *Reducing the Burn* workshop (90 min)
@@ -219,8 +231,31 @@ Cash Conversion Cycle · Cash Runway · *Reducing the Burn* workshop (90 min)
 **Fundraising Kit** — CPG Chart of Accounts · Capital Raise & Runway Calculator · Unit Pricing &
 Break-Even Model · Fundraising Masterclass (3 hrs)
 
+*The print copy names each kit for its outcome: "The Fastest Path to Profitability Kit",
+"The $300M Fundraising Kit", "Close Your Investment Round", "My CPG Playbook". The delivery
+email uses the plain names, since by then the reader has already converted.*
+
 **Training** — CPG Playbook, all 23 plays
 
 **White paper** — CPG Fatal Flaws
 
 *Suja: Lessons Learned is deliberately excluded — the book covers that ground in full.*
+
+
+---
+
+## Open question — the Readiness Assessment needs a home
+
+The Entrepreneurial Readiness Assessment is real (50 multiple-choice questions on founder
+experience, product idea, and route to market) and the manuscript already treats it as a QR
+funnel hook. But right now it exists only as a Guru *inside* askBabu.ai. It has no page and no
+link of its own on cpgfoundersgroup.com.
+
+That matters, because a free 50-question diagnostic is one of the strongest standalone lead
+magnets in the whole toolbox — and burying it behind a product trial is the one place it
+converts worst. A founder who isn't sure they're ready is exactly the person who won't sign up
+for an AI tool first.
+
+Recommended: build it as its own gated page (`/readiness`), scored, with the result emailed.
+Until then the toolbox links it into Babu and says so plainly, rather than promising a page
+that doesn't exist.
