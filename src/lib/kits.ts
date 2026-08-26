@@ -189,10 +189,9 @@ export const KITS: Kit[] = [
         title: "Suja Lessons Learned",
         body:
           "How Suja went from $600K to $100M, what worked, what didn't, and what I'd do differently if I started it tomorrow.",
-        href: "/book",
+        href:
+          "https://docs.google.com/document/d/1TMV6SR8pToDTAjAmmbiaREqGwxRopJaq/edit?usp=sharing&ouid=102243953732961922783&rtpof=true&sd=true",
         kind: "paper",
-        deliveredVia: "kajabi",
-        legacyFormId: "2149549977",
       },
     ],
   },
