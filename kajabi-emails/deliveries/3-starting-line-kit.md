@@ -10,7 +10,7 @@ The Starting Line Kit
 
 ## BODY
 
-Hey {{contact.first_name}},
+Hey {{first_name}},
 
 Before you build it, know what you're building.
 

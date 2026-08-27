@@ -10,7 +10,7 @@ The $300M Fundraising Kit
 
 ## BODY
 
-Hey {{contact.first_name}},
+Hey {{first_name}},
 
 Everything I hand a founder before they talk to a single investor:
 

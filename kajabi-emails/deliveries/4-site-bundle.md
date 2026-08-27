@@ -10,7 +10,7 @@ All three kits, as promised
 
 ## BODY
 
-Hey {{contact.first_name}},
+Hey {{first_name}},
 
 You asked for everything. Here it is, one folder:
 

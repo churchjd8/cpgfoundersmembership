@@ -17,7 +17,7 @@ internal notification. The Kajabi automation IS the delivery.
 | 4 | 4-site-bundle.md | TBD | Kit - All Three (Site) |
 | 5 | 5-book-bundle.md | TBD | Kit - All Three (Book) |
 
-Keep {{contact.first_name}} exactly as written — that's Kajabi's merge field.
+Keep {{first_name}} exactly as written — that's Kajabi's merge field.
 
 Paste as plain text. URLs sit on their own line so Kajabi auto-links them; turn
 the folder link into a button if you want.

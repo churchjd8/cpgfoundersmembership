@@ -45,7 +45,7 @@ Pricing & Break-Even Model (+ video)
 
 # The emails
 
-Paste into each form's automation. Keep `{{contact.first_name}}` intact.
+Paste into each form's automation. Keep `{{first_name}}` intact.
 
 ---
 
@@ -53,7 +53,7 @@ Paste into each form's automation. Keep `{{contact.first_name}}` intact.
 
 **Subject:** The Fastest Path to Profitability Kit
 
-Hey {{contact.first_name}},
+Hey {{first_name}},
 
 Here's the whole kit, one folder:
 
@@ -77,7 +77,7 @@ Jeff
 
 **Subject:** The $300M Fundraising Kit
 
-Hey {{contact.first_name}},
+Hey {{first_name}},
 
 Everything I hand a founder before they talk to a single investor:
 
@@ -100,7 +100,7 @@ Jeff
 
 **Subject:** The Starting Line Kit
 
-Hey {{contact.first_name}},
+Hey {{first_name}},
 
 Before you build it, know what you're building.
 
@@ -125,7 +125,7 @@ Jeff
 
 **Subject:** All three kits, as promised
 
-Hey {{contact.first_name}},
+Hey {{first_name}},
 
 You asked for everything. Here it is, one folder:
 
@@ -158,7 +158,7 @@ rule and it's why it works.
 
 **Subject:** Your CPG toolbox (from the book)
 
-Hey {{contact.first_name}},
+Hey {{first_name}},
 
 Thanks for picking up the book. I didn't write it to give you ideas. I wrote it
 to give you tools.

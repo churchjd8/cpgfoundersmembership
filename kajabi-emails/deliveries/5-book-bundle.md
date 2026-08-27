@@ -12,7 +12,7 @@ Your CPG toolbox (from the book)
 
 ## BODY
 
-Hey {{contact.first_name}},
+Hey {{first_name}},
 
 Thanks for picking up the book. I didn't write it to give you ideas. I wrote it to give you tools.
 

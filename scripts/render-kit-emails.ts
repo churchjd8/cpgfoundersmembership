@@ -69,7 +69,7 @@ fs.mkdirSync(outDir, { recursive: true });
 for (const v of VARIANTS) {
   // Kajabi's merge field, so the greeting still personalizes.
   const full = kitEmailHtml({
-    firstName: "{{contact.first_name}}",
+    firstName: "{{first_name}}",
     kits: v.kits,
     source: v.source,
   });

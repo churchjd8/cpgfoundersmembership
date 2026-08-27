@@ -3,7 +3,7 @@
 Everything below is plain text. Copy the SUBJECT line and the block under BODY
 straight into the Kajabi automation. No markdown, no formatting to strip.
 
-Keep {{contact.first_name}} exactly as written. URLs sit on their own line so
+Keep {{first_name}} exactly as written. URLs sit on their own line so
 Kajabi auto-links them.
 
 Every automation needs BOTH actions: apply the tag AND send the email.
@@ -27,7 +27,7 @@ The Fastest Path to Profitability Kit
 
 BODY
 
-Hey {{contact.first_name}},
+Hey {{first_name}},
 
 Here's the whole kit, one folder:
 
@@ -56,7 +56,7 @@ The $300M Fundraising Kit
 
 BODY
 
-Hey {{contact.first_name}},
+Hey {{first_name}},
 
 Everything I hand a founder before they talk to a single investor:
 
@@ -83,7 +83,7 @@ The Starting Line Kit
 
 BODY
 
-Hey {{contact.first_name}},
+Hey {{first_name}},
 
 Before you build it, know what you're building.
 
@@ -116,7 +116,7 @@ All three kits, as promised
 
 BODY
 
-Hey {{contact.first_name}},
+Hey {{first_name}},
 
 You asked for everything. Here it is, one folder:
 
@@ -159,7 +159,7 @@ Your CPG toolbox (from the book)
 
 BODY
 
-Hey {{contact.first_name}},
+Hey {{first_name}},
 
 Thanks for picking up the book. I didn't write it to give you ideas. I wrote it to give you tools.
 

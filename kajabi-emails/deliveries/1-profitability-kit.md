@@ -10,7 +10,7 @@ The Fastest Path to Profitability Kit
 
 ## BODY
 
-Hey {{contact.first_name}},
+Hey {{first_name}},
 
 Here's the whole kit, one folder:
 
