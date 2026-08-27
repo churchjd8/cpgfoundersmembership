@@ -1,4 +1,4 @@
-// Single source of truth for the ABV Beverage Group onboarding agreement. Used
+// Single source of truth for the ABV Corp onboarding agreement. Used
 // by the onboarding wizard (display) and the API routes (signing record +
 // Stripe checkout metadata) so the terms can never drift between them.
 //
@@ -9,21 +9,18 @@
 // STANDARD rate, not a discounted one (unlike Max's friends-and-family deal),
 // so there is no strike-through price anywhere in this flow.
 //
-// Two things to confirm before this link goes out:
-//   1. `business` — the 8/24 application came in as "ABV Corp"
-//      (t.zhao@abvcorp.net); Joshua said "ABV Beverage Group" on the call.
-//      Whichever is the legal entity should be what's here.
-//   2. Section 4 carries the ROI guarantee from /intensive, which makes fees
-//      refundable under the stated conditions. Max's agreement said flatly
-//      "non-refundable" — that predates the guarantee going on the page. Since
-//      ABV bought off /intensive, the guarantee is written in here.
+// One thing worth knowing: Section 4 carries the ROI guarantee from
+// /intensive, which makes fees refundable under the stated conditions. Max's
+// agreement said flatly "non-refundable" — that predates the guarantee going
+// on the page. Since ABV bought off /intensive, the guarantee is written in
+// here.
 
 export const AGREEMENT_VERSION = "2026-08-27";
 
 export const ENGAGEMENT = {
-  clientName: "ABV Beverage Group",
-  business: "ABV Beverage Group",
-  contacts: "Teng Zhao and James",
+  clientName: "ABV Corp",
+  business: "ABV Corp",
+  contacts: "Teng and James",
   providerName: "Jeffrey Church",
   providerAddress: "PO Box 2036, Rancho Santa Fe, CA 92067",
   effectiveDateLabel: "August 27, 2026",
