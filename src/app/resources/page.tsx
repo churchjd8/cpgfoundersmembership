@@ -394,11 +394,18 @@ export default function ResourcesPage() {
                 </div>
               </div>
               <div className="text-center">
-                <div className="bg-background rounded-xl p-8">
-                  <p className="text-5xl mb-3">📕</p>
-                  <p className="text-3xl font-bold text-accent">23</p>
-                  <p className="text-muted mt-1">chapters, three parts</p>
+                <div className="relative aspect-[1007/1562] max-w-[220px] mx-auto rounded-lg overflow-hidden shadow-xl">
+                  <Image
+                    src="/images/book-covers/cold-pressed-truth.png"
+                    alt="Cold Pressed Truth by Jeff Church"
+                    fill
+                    sizes="(max-width: 768px) 220px, 220px"
+                    className="object-cover"
+                  />
                 </div>
+                <p className="mt-4 text-sm text-muted">
+                  <span className="font-bold text-accent">23</span> chapters, three parts
+                </p>
               </div>
             </div>
           </div>

@@ -67,13 +67,14 @@ export default function ToolboxPage() {
             </div>
 
             <div className="lg:pl-8">
-              <div className="relative aspect-[2/3] max-w-sm mx-auto rounded-xl overflow-hidden shadow-2xl">
+              <div className="relative aspect-[1007/1562] max-w-sm mx-auto rounded-xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/book-covers/cover-b.jpg"
-                  alt="The Cold-Pressed Truth by Jeff Church"
+                  src="/images/book-covers/cold-pressed-truth.png"
+                  alt="Cold Pressed Truth by Jeff Church"
                   fill
+                  sizes="(max-width: 1024px) 100vw, 384px"
                   className="object-cover"
-                  priority
+                  preload
                 />
               </div>
               <p className="mt-6 text-center text-sm text-white/50 max-w-sm mx-auto">
