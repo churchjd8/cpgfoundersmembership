@@ -8,10 +8,10 @@ Merge field is `{{first_name}}`.
 | File | Form ID | Tag | Subject |
 |------|---------|-----|---------|
 | 1-profitability.html | 2149705461 | Kit - Profitability | The Fastest Path to Profitability Kit |
-| 2-fundraising.html | TBD | Kit - Fundraising | The $300M Fundraising Kit |
-| 3-starting-line.html | TBD | Kit - Starting Line | The Starting Line Kit |
-| 4-site-bundle.html | TBD | Kit - All Three (Site) | All three kits, as promised |
-| 5-book-bundle.html | TBD | Kit - All Three (Book) | Your CPG toolbox (from the book) |
+| 2-fundraising.html | 2149705466 | Kit - Fundraising | The $300M Fundraising Kit |
+| 3-starting-line.html | 2149705467 | Kit - Starting Line | The Starting Line Kit |
+| 4-site-bundle.html | 2149705468 | Kit - All Three (Site) | All three kits, as promised |
+| 5-book-bundle.html | 2149705470 | Kit - All Three (Book) | Your CPG toolbox (from the book) |
 
 `_preview-all.html` renders all five in a browser so you can proof them before
 pasting. It is not for pasting into Kajabi.

@@ -55,9 +55,15 @@ export const LINKS = {
   book: "/book",
 } as const;
 
-/** Kajabi form for the "send me all three kits" path. */
-export const ALL_KITS_FORM_ID = "2149549983";
-export const ALL_KITS_TAG = "All Free Resources Bundle";
+/**
+ * The "send me all three kits" path. Both doors deliver the same Drive folder;
+ * they get separate forms so a book reader and a site visitor stay tellable
+ * apart by tag, which is the whole reason /toolbox exists as its own page.
+ */
+export const ALL_KITS_FORMS = {
+  resources: { formId: "2149705468", tag: "Kit - All Three (Site)" },
+  toolbox: { formId: "2149705470", tag: "Kit - All Three (Book)" },
+} as const;
 
 export const KITS: Kit[] = [
   {
@@ -67,8 +73,8 @@ export const KITS: Kit[] = [
     lead:
       "Five tools that find the cash you're already leaving on the table, and the 90-minute workshop that walks you through using them.",
     page: "/burn-rate-workshop-replay",
-    kajabiFormId: "2149558655",
-    kajabiTag: "Burn Rate Workshop Replay Access",
+    kajabiFormId: "2149705461",
+    kajabiTag: "Kit - Profitability",
     items: [
       {
         title: "Reducing the Burn (90-min workshop)",
@@ -118,8 +124,8 @@ export const KITS: Kit[] = [
     lead:
       "The three models and the masterclass behind 45 rounds and $300M+ raised. Build the numbers before you build the deck.",
     page: "/fundraising-masterclass",
-    kajabiFormId: "2149549980",
-    kajabiTag: "Fundraising Masterclass Replay (3 Hours)",
+    kajabiFormId: "2149705466",
+    kajabiTag: "Kit - Fundraising",
     items: [
       {
         title: "Close Your Investment Round (3-hr masterclass)",
@@ -160,8 +166,8 @@ export const KITS: Kit[] = [
     lead:
       "Where you actually stand, the whole operating system, and the mistakes that kill brands before they get a fair shot.",
     page: "/cpg-playbook-training",
-    kajabiFormId: "2149549982",
-    kajabiTag: "CPG Playbook Video Replay",
+    kajabiFormId: "2149705467",
+    kajabiTag: "Kit - Starting Line",
     items: [
       {
         title: "Entrepreneurial Readiness Assessment",

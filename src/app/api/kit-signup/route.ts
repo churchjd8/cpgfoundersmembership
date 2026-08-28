@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { ALL_KITS_FORM_ID, ALL_KITS_TAG, KITS, getKit, type Kit } from "@/lib/kits";
+import { ALL_KITS_FORMS, KITS, getKit, type Kit } from "@/lib/kits";
 import { escapeHtml, type KitEmailSource } from "@/lib/kit-email";
 
 // One endpoint behind every free-resource opt-in on the site.
@@ -107,7 +107,10 @@ async function syncToKajabi({
   const fields = { first, last, email, stage };
 
   // The kit tag(s). "All three" has its own bundle form and tag.
-  const formIds = isAllKits ? [ALL_KITS_FORM_ID] : kits.map((k) => k.kajabiFormId);
+  // The bundle has a form per door so the two audiences stay tellable apart.
+  const formIds = isAllKits
+    ? [ALL_KITS_FORMS[source].formId]
+    : kits.map((k) => k.kajabiFormId);
 
   // Plus any asset Kajabi is still the only one able to deliver.
   for (const kit of kits) {
@@ -219,7 +222,9 @@ async function enrichContactRecord({
 
   if (contactId) {
     const door = source === "toolbox" ? "the book (/toolbox)" : "the site (/resources)";
-    const tags = isAllKits ? ALL_KITS_TAG : kits.map((k) => k.kajabiTag).join(", ");
+    const tags = isAllKits
+      ? ALL_KITS_FORMS[source].tag
+      : kits.map((k) => k.kajabiTag).join(", ");
     await fetch("https://api.kajabi.com/v1/contact_notes", {
       method: "POST",
       headers,

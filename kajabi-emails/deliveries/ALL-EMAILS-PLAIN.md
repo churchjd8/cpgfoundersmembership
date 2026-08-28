@@ -11,10 +11,10 @@ Every automation needs BOTH actions: apply the tag AND send the email.
 | # | Form ID | Tag | Subject |
 |---|---------|-----|---------|
 | 1 | 2149705461 | Kit - Profitability | The Fastest Path to Profitability Kit |
-| 2 | TBD | Kit - Fundraising | The $300M Fundraising Kit |
-| 3 | TBD | Kit - Starting Line | The Starting Line Kit |
-| 4 | TBD | Kit - All Three (Site) | All three kits, as promised |
-| 5 | TBD | Kit - All Three (Book) | Your CPG toolbox (from the book) |
+| 2 | 2149705466 | Kit - Fundraising | The $300M Fundraising Kit |
+| 3 | 2149705467 | Kit - Starting Line | The Starting Line Kit |
+| 4 | 2149705468 | Kit - All Three (Site) | All three kits, as promised |
+| 5 | 2149705470 | Kit - All Three (Book) | Your CPG toolbox (from the book) |
 
 
 ===============================================================================
@@ -47,7 +47,7 @@ Jeff
 
 
 ===============================================================================
-FORM 2 — FUNDRAISING KIT                    form TBD / tag: Kit - Fundraising
+FORM 2 — FUNDRAISING KIT                     tag: Kit - Fundraising
 ===============================================================================
 
 SUBJECT
@@ -74,7 +74,7 @@ Jeff
 
 
 ===============================================================================
-FORM 3 — STARTING LINE KIT                form TBD / tag: Kit - Starting Line
+FORM 3 — STARTING LINE KIT                 tag: Kit - Starting Line
 ===============================================================================
 
 SUBJECT
@@ -107,7 +107,7 @@ Jeff
 
 
 ===============================================================================
-FORM 4 — ALL THREE KITS (SITE)       form TBD / tag: Kit - All Three (Site)
+FORM 4 — ALL THREE KITS (SITE)        tag: Kit - All Three (Site)
 ===============================================================================
 
 SUBJECT
@@ -150,7 +150,7 @@ https://cpgfoundersgroup.com/founders-only
 
 
 ===============================================================================
-FORM 5 — THE TOOLBOX (BOOK)          form TBD / tag: Kit - All Three (Book)
+FORM 5 — THE TOOLBOX (BOOK)           tag: Kit - All Three (Book)
 ===============================================================================
 
 SUBJECT
