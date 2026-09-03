@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: "A searchable, plain-English guide to 218 CPG retail, distribution, ecommerce, margin, velocity, operations, packaging, fundraising, and food-regulation terms.",
   alternates: { canonical: "https://cpgfoundersgroup.com/cpg-glossary" },
   openGraph: {
-    title: "The CPG Glossary — Speak CPG without the decoder ring",
+    title: "The CPG Glossary — Learn to speak CPG",
     description: "218 terms, acronyms, formulas, and field notes for first-time CPG founders.",
     url: "https://cpgfoundersgroup.com/cpg-glossary",
     siteName: "CPG Founders Group",
@@ -38,9 +38,9 @@ export default function CpgGlossaryPage() {
         <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_82%_18%,#dfa13c_0,transparent_26%),linear-gradient(135deg,transparent_0,transparent_58%,#1b3a5f_58%,#1b3a5f_100%)]" />
         <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 md:py-24 lg:px-8">
           <div className="max-w-4xl">
-            <p className="mb-5 text-xs font-bold uppercase tracking-[0.24em] text-gold">The founder’s field guide</p>
+            <p className="mb-5 text-xs font-bold uppercase tracking-[0.24em] text-gold">CPG, translated</p>
             <h1 className="max-w-3xl font-[family-name:var(--font-playfair)] text-4xl font-bold leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl">
-              Speak CPG without the decoder ring.
+              Learn to speak CPG.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/72 sm:text-xl">
               Retail buyers, brokers, distributors, investors, and operators all speak in shorthand. This is the plain-English translation—plus the part that matters when you’re building the company.
