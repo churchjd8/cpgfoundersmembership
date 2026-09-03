@@ -1,6 +1,6 @@
 # Jeff Founders — September Scheduling Email
 
-One send to the whole coaching group. Drafted Thu Sep 3, 2026.
+One send to the whole coaching group, To: Jeff, BCC: all 22 clients. Drafted Thu Sep 3, 2026 in Superhuman from joshua@teamchurch.co.
 
 **Booking link:** https://cpgfoundersgroup.com/clients/schedule-session/september
 
@@ -12,7 +12,7 @@ One send to the whole coaching group. Drafted Thu Sep 3, 2026.
 
 **Subject: Book your September 1:1 with Jeff (plus Seth Goldman on the 17th)**
 
-Hi [First Name],
+Hi all,
 
 Jeff's September times are open. Here's your link to grab your 1:1:
 
@@ -31,5 +31,3 @@ If anything looks off with your scheduling or you need to move a session, I'm yo
 Talk soon,
 
 Joshua
-
-P.S. If you want to get on a regular cadence so you're not thinking about scheduling every month, tell me and I'll get your sessions on the books ahead of time.
