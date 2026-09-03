@@ -3,12 +3,12 @@ import { GlossaryExplorer } from "./glossary-explorer";
 import { GLOSSARY_ENTRIES, GLOSSARY_SOURCES } from "@/lib/cpg-glossary";
 
 export const metadata: Metadata = {
-  title: "The CPG Glossary — 218 Terms Every Founder Should Know",
-  description: "A searchable, plain-English guide to 218 CPG retail, distribution, ecommerce, margin, velocity, operations, packaging, fundraising, and food-regulation terms.",
+  title: "The CPG Glossary — 331 Terms Every Founder Should Know",
+  description: "A searchable, plain-English guide to 331 CPG retail, distribution, ecommerce, margin, velocity, operations, packaging, fundraising, and food-regulation terms.",
   alternates: { canonical: "https://cpgfoundersgroup.com/cpg-glossary" },
   openGraph: {
     title: "The CPG Glossary — Learn to speak CPG",
-    description: "218 terms, acronyms, formulas, and field notes for first-time CPG founders.",
+    description: "331 terms, acronyms, formulas, and field notes for first-time CPG founders.",
     url: "https://cpgfoundersgroup.com/cpg-glossary",
     siteName: "CPG Founders Group",
     type: "website",

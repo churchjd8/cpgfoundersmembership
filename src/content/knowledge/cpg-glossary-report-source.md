@@ -18,7 +18,7 @@ A natural channel broker is a manufacturer's representative specializing in natu
 
 Jeff Church's material is the editorial backbone. His recurring operating distinctions shape the definitions and founder notes: broker versus distributor; authorization versus availability; sell-in versus sell-through; distribution versus velocity; gross sales versus net revenue; and gross margin versus contribution margin. External sources are used to verify regulatory language, standardized identifiers, syndicated-data measures, and securities terminology.
 
-The published page contains 218 unique terms across nine operating areas. Entries are searchable by term, expansion, alias, definition, and founder note. Direct fragment links make individual answers shareable. The ecommerce and digital-marketing section includes acquisition, attribution, media efficiency, conversion, retention, repeat-purchase, and customer-value terminology.
+The published page contains 331 unique terms across nine operating areas. Entries are searchable by term, expansion, alias, definition, and founder note. Direct fragment links make individual answers shareable. The ecommerce and digital-marketing section includes acquisition, attribution, media efficiency, conversion, retention, repeat-purchase, and customer-value terminology. Jeff's 304-term `CPG_Founders_Dictionary.md` was subsequently reconciled with the original web dataset: overlapping concepts were merged, while gaps in trade spend, channels, retail compliance, manufacturing, Amazon, fundraising, data, and the CPG ecosystem were added.
 
 ## Material limitations
 
@@ -32,6 +32,7 @@ The published page contains 218 unique terms across nine operating areas. Entrie
 | Claim family | Source | Publisher / author | Date or update | URL | Access note |
 |---|---|---|---|---|---|
 | Natural channel, broker role, UNFI/KeHE, velocity | The Natural Channel Playbook | Jeff Church | 2026-05-20 | `/blog/cpg-natural-channel-strategy` | Repository source reviewed in full |
+| Cross-functional founder terminology and benchmarks | The CPG Founder's Dictionary | Jeff Church / CPG Founders Group knowledge base | 2026 | `CPG_Founders_Dictionary.md` | 304 source entries reviewed and reconciled with the web glossary |
 | Broker compensation, selection, management, contracts | CPG Broker Strategy | Jeff Church | 2026-04-15 | `/blog/cpg-broker-strategy` | Repository source reviewed in full |
 | ACV, POS data, velocity and syndicated data | SPINS and Scan Data | Jeff Church | 2026 | `/blog/cpg-scan-data-spins-nielsen-guide` | Repository source reviewed |
 | GTIN-12, GTIN-14 and UPC distinction | What is a GTIN? | GS1 US | Accessed 2026-09-03 | https://www.gs1us.org/upcs-barcodes-prefixes/what-is-a-gtin | Official standards-body guidance |
