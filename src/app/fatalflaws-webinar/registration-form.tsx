@@ -124,19 +124,6 @@ export function RegistrationForm() {
         </div>
       </div>
 
-      <div>
-        <label htmlFor="fatal-flaws-question" className="mb-1.5 block text-sm font-semibold text-foreground">
-          What business question would you ask Jeff? <span className="font-normal text-muted">(optional)</span>
-        </label>
-        <textarea
-          id="fatal-flaws-question"
-          name="question"
-          rows={3}
-          placeholder="Share the decision, risk, or roadblock you want Jeff to address..."
-          className="w-full resize-none rounded-lg border border-border bg-white px-4 py-3 text-foreground outline-none transition focus:border-accent focus:ring-2 focus:ring-accent/20"
-        />
-      </div>
-
       <button
         type="submit"
         disabled={status === "loading"}

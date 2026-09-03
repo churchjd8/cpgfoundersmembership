@@ -63,7 +63,7 @@ const faqs = [
   ["Who is this webinar for?", "CPG founders and leadership teams from pre-launch through growth stage. It is especially useful if you are signing contracts, raising capital, expanding retail, building a team, or managing a tightening runway."],
   ["Is it really free?", "Yes. The 60-minute training, 30-minute live Q&A, assessment, field guide, and replay are all free when you register."],
   ["Where will it take place?", "Online. Your confirmation and reminders will include the link to join the live session."],
-  ["What if I can&rsquo;t attend live?", "Register anyway. We&rsquo;ll email the replay to registrants after the webinar. You can also submit a question in advance on the registration form."],
+  ["What if I can&rsquo;t attend live?", "Register anyway. We&rsquo;ll email the replay to registrants after the webinar."],
   ["Can Jeff answer a question about my actual business?", "That is exactly what the final 30 minutes are for. Bring a real decision, problem, or risk. Jeff will answer as many founder questions as time allows."],
 ];
 

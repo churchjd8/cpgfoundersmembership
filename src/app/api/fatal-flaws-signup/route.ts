@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import { submitToKajabiForm } from "@/lib/kajabi";
 
+const FATAL_FLAWS_FORM_ID = "2149711410";
+
 export async function POST(request: Request) {
   try {
     const { name, email } = await request.json();
@@ -9,13 +11,10 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Name and a valid email are required." }, { status: 400 });
     }
 
-    const formId = process.env.KAJABI_FATAL_FLAWS_FORM_ID;
-    if (!formId) {
-      console.error("Fatal Flaws signup is missing KAJABI_FATAL_FLAWS_FORM_ID");
-      return NextResponse.json({ error: "Registration is not configured." }, { status: 503 });
-    }
-
-    await submitToKajabiForm(formId, { name: name.trim(), email: email.trim() });
+    await submitToKajabiForm(FATAL_FLAWS_FORM_ID, {
+      name: name.trim(),
+      email: email.trim(),
+    });
     return NextResponse.json({ success: true });
   } catch (error) {
     console.error("Fatal Flaws webinar signup error:", error);
