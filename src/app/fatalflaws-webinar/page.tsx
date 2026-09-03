@@ -6,10 +6,10 @@ import { TestimonialCarousel } from "./testimonial-carousel";
 export const metadata: Metadata = {
   title: "The 18 Fatal Flaws That Kill CPG Brands | Free Live Webinar",
   description:
-    "Join 8x CPG founder Jeff Church live on September 15 for a free 90-minute webinar covering the avoidable legal, financial, operational, people, sales, and marketing mistakes that derail promising brands.",
+    "Join 8x CPG founder Jeff Church live on September 16 for a free 90-minute webinar covering the avoidable legal, financial, operational, people, sales, and marketing mistakes that derail promising brands.",
   openGraph: {
     title: "The 18 Fatal Flaws That Kill CPG Brands",
-    description: "Free 90-minute live webinar and founder Q&A with Jeff Church — September 15, 2026.",
+    description: "Free 90-minute live webinar and founder Q&A with Jeff Church — September 16, 2026.",
     images: ["/images/jeff-teaching.webp"],
   },
 };
@@ -128,7 +128,7 @@ export default function FatalFlawsWebinarPage() {
   return (
     <>
       <div className="bg-accent px-4 py-2.5 text-center text-xs font-bold uppercase tracking-[0.16em] text-white sm:text-sm">
-        Free live webinar · Tuesday, September 15, 2026
+        Free live webinar · Wednesday, September 16, 2026
       </div>
 
       <section className="relative isolate overflow-hidden bg-foreground text-white">
@@ -150,7 +150,7 @@ export default function FatalFlawsWebinarPage() {
             <div className="mt-8 grid max-w-xl gap-3 sm:grid-cols-2">
               <div className="flex items-center gap-3 rounded-lg border border-white/12 bg-white/[0.06] px-4 py-3">
                 <span className="text-gold"><CalendarIcon /></span>
-                <div><p className="text-xs uppercase tracking-wider text-white/50">Date</p><p className="text-sm font-bold">Tuesday, September 15</p></div>
+                <div><p className="text-xs uppercase tracking-wider text-white/50">Date</p><p className="text-sm font-bold">Wednesday, September 16</p></div>
               </div>
               <div className="flex items-center gap-3 rounded-lg border border-white/12 bg-white/[0.06] px-4 py-3">
                 <span className="text-gold"><ClockIcon /></span>
@@ -319,7 +319,7 @@ export default function FatalFlawsWebinarPage() {
             <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">Catch the flaw before it becomes the failure.</h2>
             <p className="mt-5 text-lg leading-relaxed text-muted">Join Jeff live for 90 practical minutes built around the decisions CPG founders are making right now.</p>
             <div className="mt-8 space-y-4 border-l-2 border-accent/30 pl-5">
-              <div><p className="text-xs font-bold uppercase tracking-wider text-muted">When</p><p className="mt-1 font-bold">Tuesday, September 15, 2026</p></div>
+              <div><p className="text-xs font-bold uppercase tracking-wider text-muted">When</p><p className="mt-1 font-bold">Wednesday, September 16, 2026</p></div>
               <div><p className="text-xs font-bold uppercase tracking-wider text-muted">Time</p><p className="mt-1 font-bold">9:00–10:30 AM Pacific</p></div>
               <div><p className="text-xs font-bold uppercase tracking-wider text-muted">Format</p><p className="mt-1 font-bold">Live online · Replay included</p></div>
               <div><p className="text-xs font-bold uppercase tracking-wider text-muted">Price</p><p className="mt-1 font-bold text-accent">Free</p></div>
