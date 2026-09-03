@@ -103,7 +103,7 @@ export function GlossaryExplorer({ entries }: { entries: GlossaryEntry[] }) {
           {"ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map((item) => <button key={item} disabled={!availableLetters.has(item)} onClick={() => setLetter(letter === item ? "All" : item)} className={`h-8 w-8 rounded-md text-xs font-bold transition ${letter === item ? "bg-accent text-white" : availableLetters.has(item) ? "text-muted hover:bg-white hover:text-foreground" : "cursor-not-allowed text-border"}`}>{item}</button>)}
         </div>
 
-        <div className="mt-8 grid gap-8 lg:grid-cols-[minmax(0,1fr)_260px]">
+        <div className="mt-8">
           <div>
             <div className="mb-4 flex items-baseline justify-between gap-4">
               <p className="text-sm text-muted"><strong className="text-foreground">{filtered.length}</strong> {filtered.length === 1 ? "term" : "terms"}{query ? <> matching <span className="font-medium text-foreground">“{query}”</span></> : ""}</p>
@@ -141,20 +141,6 @@ export function GlossaryExplorer({ entries }: { entries: GlossaryEntry[] }) {
             </div> : <div className="rounded-2xl border border-dashed border-border bg-white px-6 py-16 text-center"><p className="text-4xl">⌕</p><h2 className="mt-3 text-xl font-bold">No exact match yet</h2><p className="mx-auto mt-2 max-w-md text-sm leading-relaxed text-muted">Try an acronym, a broader phrase, or clear the filters. If this is CPG language you heard in the wild, tell us—we’ll add it.</p><button onClick={clearFilters} className="mt-5 rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-white hover:bg-accent-dark">Show all terms</button></div>}
           </div>
 
-          <aside className="space-y-4 lg:sticky lg:top-48 lg:self-start">
-            <div className="rounded-2xl bg-foreground p-6 text-white">
-              <p className="text-xs font-bold uppercase tracking-[0.18em] text-gold">Start here</p>
-              <h2 className="mt-2 font-[family-name:var(--font-playfair)] text-2xl font-bold">What’s a natural channel broker?</h2>
-              <p className="mt-3 text-sm leading-relaxed text-white/70">The question that started this glossary—and one every first-time founder deserves a straight answer to.</p>
-              <button onClick={() => { setQuery("natural channel broker"); setCategory("All"); setLetter("All"); setExpanded("natural-channel-broker"); setTimeout(() => document.getElementById("natural-channel-broker")?.scrollIntoView({ behavior: "smooth", block: "center" }), 50); }} className="mt-5 text-sm font-semibold text-gold hover:text-white">Read the answer →</button>
-            </div>
-            <div className="rounded-2xl border border-border bg-white p-6">
-              <p className="text-xs font-bold uppercase tracking-[0.18em] text-accent">A Jeff rule worth keeping</p>
-              <blockquote className="mt-3 font-[family-name:var(--font-playfair)] text-xl font-bold leading-snug">“Don’t confuse distribution gains with velocity gains.”</blockquote>
-              <p className="mt-3 text-sm leading-relaxed text-muted">Getting into more doors is only progress if product moves once it gets there.</p>
-            </div>
-            <a href="mailto:info@teamchurch.co?subject=CPG%20Glossary%20term%20request" className="block rounded-2xl border border-border p-5 text-sm text-muted transition hover:border-accent/40 hover:bg-white"><strong className="block text-foreground">Missing something?</strong><span className="mt-1 block">Send us the jargon you just heard →</span></a>
-          </aside>
         </div>
       </div>
     </section>

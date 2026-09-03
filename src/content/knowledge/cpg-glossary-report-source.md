@@ -18,7 +18,7 @@ A natural channel broker is a manufacturer's representative specializing in natu
 
 Jeff Church's material is the editorial backbone. His recurring operating distinctions shape the definitions and founder notes: broker versus distributor; authorization versus availability; sell-in versus sell-through; distribution versus velocity; gross sales versus net revenue; and gross margin versus contribution margin. External sources are used to verify regulatory language, standardized identifiers, syndicated-data measures, and securities terminology.
 
-The published page contains 198 unique terms across nine operating areas. Entries are searchable by term, expansion, alias, definition, and founder note. Direct fragment links make individual answers shareable.
+The published page contains 218 unique terms across nine operating areas. Entries are searchable by term, expansion, alias, definition, and founder note. Direct fragment links make individual answers shareable. The ecommerce and digital-marketing section includes acquisition, attribution, media efficiency, conversion, retention, repeat-purchase, and customer-value terminology.
 
 ## Material limitations
 
