@@ -7,6 +7,7 @@ import { useState } from "react";
 const navLinks = [
   { label: "About", href: "/about-jeff" },
   { label: "Free Resources", href: "/resources" },
+  { label: "Glossary", href: "/cpg-glossary" },
   { label: "Blog", href: "/blog" },
   { label: "BabuAI", href: "https://www.askbabu.ai", external: true },
   { label: "Contact", href: "/contact" },
@@ -39,7 +40,7 @@ export function Header() {
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-6">
+          <nav className="hidden lg:flex items-center gap-5">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -60,7 +61,7 @@ export function Header() {
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden p-2 text-foreground"
+            className="lg:hidden p-2 text-foreground"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
           >
@@ -78,7 +79,7 @@ export function Header() {
 
         {/* Mobile nav */}
         {mobileOpen && (
-          <nav className="md:hidden pb-4 border-t border-border pt-4">
+          <nav className="lg:hidden pb-4 border-t border-border pt-4">
             <div className="flex flex-col gap-3">
               {navLinks.map((link) => (
                 <Link

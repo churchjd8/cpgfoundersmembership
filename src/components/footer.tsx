@@ -3,6 +3,7 @@ import Link from "next/link";
 const footerLinks = [
   { label: "Home", href: "/" },
   { label: "About Jeff", href: "/about-jeff" },
+  { label: "CPG Glossary", href: "/cpg-glossary" },
   { label: "90-Day Breakthrough", href: "/90-day-breakthrough" },
   { label: "VIP Day", href: "/vip-day-apply" },
   { label: "MBA for CPG", href: "/mba-for-cpg" },
