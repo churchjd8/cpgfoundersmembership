@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { RegistrationForm } from "./registration-form";
+import { TestimonialCarousel } from "./testimonial-carousel";
 
 export const metadata: Metadata = {
   title: "The 18 Fatal Flaws That Kill CPG Brands | Free Live Webinar",
@@ -66,6 +67,45 @@ const faqs = [
   ["Can Jeff answer a question about my actual business?", "That is exactly what the final 30 minutes are for. Bring a real decision, problem, or risk. Jeff will answer as many founder questions as time allows."],
 ];
 
+const testimonials = [
+  {
+    tag: "From the foreword",
+    quote: "The golden thread running through every chapter of this book is the generosity with which Jeff prepares founders and leaders for what lies ahead. I would strongly consider it essential reading for entrepreneurs in consumer-related industries.",
+    name: "Jay Shetty",
+    title: "Author of Think Like a Monk",
+  },
+  {
+    tag: "Advance praise",
+    quote: "Jeff shows that great companies aren’t built on shortcuts or luck — they’re built on timeless principles, disciplined execution, and relentless learning. This is required reading for anyone building a brand they want to endure.",
+    name: "Mark Rampolla",
+    title: "Founder of ZICO Coconut Water",
+  },
+  {
+    tag: "Advance praise",
+    quote: "Jeff is truly the Yoda of CPG. When I made the leap from tech into beverage with JUNI, his guidance helped us avoid mistakes that could have cost us years and millions. Practical, honest, and packed with hard-earned wisdom. Must-read.",
+    name: "Kim Perell",
+    title: "Co-Founder of JUNI Adaptogen Tea; bestselling author",
+  },
+  {
+    tag: "Advance praise",
+    quote: "In CPG, the difference between the brands that endure and the brands that disappear comes down to discipline — about margin, about culture, about cash. Jeff teaches it with a generosity that’s rare in this industry.",
+    name: "John Foraker",
+    title: "Co-Founder & CEO, Once Upon a Farm; former CEO, Annie’s",
+  },
+  {
+    tag: "Advance praise",
+    quote: "Jeff Church has done it all as an entrepreneur — driven hypergrowth and delivered stellar returns to investors. But he’s also managed disappointments and setbacks. Any entrepreneur at any stage can learn from his wisdom — I know I did!",
+    name: "Seth Goldman",
+    title: "Founder of Honest Tea",
+  },
+  {
+    tag: "Founder result",
+    quote: "Jeff has amazing CPG knowledge, business experience and life lessons. Jeff led us all the way through a successful $1.5M angel fundraising.",
+    name: "Tiffany Tatom",
+    title: "Co-Founder & CEO, Live Pure",
+  },
+];
+
 function CalendarIcon() {
   return (
     <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5" aria-hidden="true">
@@ -127,9 +167,10 @@ export default function FatalFlawsWebinarPage() {
             </div>
           </div>
 
-          <div className="relative mx-auto w-full max-w-xl">
-            <div className="absolute -inset-3 rotate-2 rounded-3xl border border-gold/25" aria-hidden="true" />
-            <div className="relative overflow-hidden rounded-2xl border border-white/15 bg-ridge shadow-2xl">
+          <div className="mx-auto w-full max-w-xl">
+            <div className="relative">
+              <div className="absolute -inset-3 rotate-2 rounded-3xl border border-gold/25" aria-hidden="true" />
+              <div className="relative overflow-hidden rounded-2xl border border-white/15 bg-ridge shadow-2xl">
               {promoVideoUrl ? (
                 <div className="aspect-video">
                   <iframe src={promoVideoUrl} title="A message from Jeff Church about the CPG Fatal Flaws webinar" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen className="h-full w-full" />
@@ -144,10 +185,12 @@ export default function FatalFlawsWebinarPage() {
                   </div>
                 </div>
               )}
+              </div>
             </div>
-            <div className="absolute -bottom-6 -left-4 rounded-xl bg-white px-5 py-4 text-foreground shadow-xl sm:-left-8">
-              <p className="text-3xl font-bold text-accent">35+ years</p>
-              <p className="text-xs font-semibold uppercase tracking-wider text-muted">of lessons earned the hard way</p>
+            <div className="mt-5 flex items-center gap-4 rounded-xl border border-white/12 bg-white/[0.07] px-5 py-4">
+              <p className="shrink-0 text-3xl font-bold text-gold">35+ years</p>
+              <div className="h-8 w-px bg-white/15" aria-hidden="true" />
+              <p className="text-xs font-semibold uppercase leading-relaxed tracking-wider text-white/60">of lessons earned the hard way</p>
             </div>
           </div>
         </div>
@@ -249,10 +292,23 @@ export default function FatalFlawsWebinarPage() {
               <p className="mt-4 leading-relaxed text-muted">This isn&rsquo;t theory from the sidelines. It&rsquo;s the pattern recognition that comes from building eight companies, navigating hard turns, and seeing which small decisions create very expensive problems.</p>
             </div>
             <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-2">
-              {[["8x", "CPG founder"], ["$275M+", "capital raised"], ["5", "successful exits"], ["Harvard", "MBA · CPA"]].map(([number, label]) => (
+              {[["8x", "CPG founder"], ["$300M", "capital raised"], ["5", "successful exits"], ["Harvard", "MBA · CPA"]].map(([number, label]) => (
                 <div key={label} className="rounded-xl border border-accent/20 bg-white p-6 shadow-sm"><p className="text-3xl font-bold text-accent">{number}</p><p className="mt-1 text-sm font-semibold text-muted">{label}</p></div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="overflow-hidden border-t border-border bg-background py-16 md:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl">
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-accent">Trusted by people who have built it</p>
+            <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">Industry leaders on Jeff&rsquo;s hard-earned playbook.</h2>
+            <p className="mt-4 text-lg leading-relaxed text-muted">Highlights from Jay Shetty&rsquo;s foreword and advance praise for Jeff&rsquo;s upcoming book, <em>The Cold-Pressed Truth</em>.</p>
+          </div>
+          <div className="mt-4">
+            <TestimonialCarousel testimonials={testimonials} />
           </div>
         </div>
       </section>
