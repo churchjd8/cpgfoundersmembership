@@ -69,40 +69,39 @@ const faqs = [
 
 const testimonials = [
   {
-    tag: "From the foreword",
-    quote: "The golden thread running through every chapter of this book is the generosity with which Jeff prepares founders and leaders for what lies ahead. I would strongly consider it essential reading for entrepreneurs in consumer-related industries.",
+    tag: "Author & entrepreneur",
+    quote: "In a world that often glorifies hype, noise, and overnight success, Jeff Church has chosen a different path. He also knows that outcomes are shaped long before they are visible, through the countless small decisions most people never see.",
     name: "Jay Shetty",
     title: "Author of Think Like a Monk",
+    image: "/images/testimonials/jay-shetty.jpg",
   },
   {
-    tag: "Advance praise",
+    tag: "CPG industry leader",
     quote: "Jeff shows that great companies aren’t built on shortcuts or luck — they’re built on timeless principles, disciplined execution, and relentless learning. This is required reading for anyone building a brand they want to endure.",
     name: "Mark Rampolla",
     title: "Founder of ZICO Coconut Water",
+    image: "/images/testimonials/mark-rampolla.jpg",
   },
   {
-    tag: "Advance praise",
-    quote: "Jeff is truly the Yoda of CPG. When I made the leap from tech into beverage with JUNI, his guidance helped us avoid mistakes that could have cost us years and millions. Practical, honest, and packed with hard-earned wisdom. Must-read.",
+    tag: "Founder & investor",
+    quote: "Jeff is truly the Yoda of CPG. When I made the leap from tech into beverage with JUNI, his guidance helped us avoid mistakes that could have cost us years and millions.",
     name: "Kim Perell",
     title: "Co-Founder of JUNI Adaptogen Tea; bestselling author",
+    image: "/images/testimonials/kim-perell.jpg",
   },
   {
-    tag: "Advance praise",
-    quote: "In CPG, the difference between the brands that endure and the brands that disappear comes down to discipline — about margin, about culture, about cash. Jeff teaches it with a generosity that’s rare in this industry.",
+    tag: "CPG industry leader",
+    quote: "In CPG, the difference between the brands that endure and the brands that disappear comes down to discipline — about margin, about culture, about cash. Jeff has built it, lost it, and won it back.",
     name: "John Foraker",
     title: "Co-Founder & CEO, Once Upon a Farm; former CEO, Annie’s",
+    image: "/images/testimonials/john-foraker.jpg",
   },
   {
-    tag: "Advance praise",
+    tag: "CPG industry leader",
     quote: "Jeff Church has done it all as an entrepreneur — driven hypergrowth and delivered stellar returns to investors. But he’s also managed disappointments and setbacks. Any entrepreneur at any stage can learn from his wisdom — I know I did!",
     name: "Seth Goldman",
     title: "Founder of Honest Tea",
-  },
-  {
-    tag: "Founder result",
-    quote: "Jeff has amazing CPG knowledge, business experience and life lessons. Jeff led us all the way through a successful $1.5M angel fundraising.",
-    name: "Tiffany Tatom",
-    title: "Co-Founder & CEO, Live Pure",
+    image: "/images/testimonials/seth-goldman.jpg",
   },
 ];
 
@@ -282,6 +281,19 @@ export default function FatalFlawsWebinarPage() {
         </div>
       </section>
 
+      <section className="overflow-hidden bg-background py-16 md:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl">
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-accent">Trusted by people who have built it</p>
+            <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">What leading founders say about Jeff.</h2>
+            <p className="mt-4 text-lg leading-relaxed text-muted">Entrepreneurs and CPG leaders on the judgment, discipline, and hard-earned experience Jeff brings to founders.</p>
+          </div>
+          <div className="mt-4">
+            <TestimonialCarousel testimonials={testimonials} />
+          </div>
+        </div>
+      </section>
+
       <section className="bg-card-flagship py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-10 lg:grid-cols-[1fr_1.15fr] lg:items-center">
@@ -296,19 +308,6 @@ export default function FatalFlawsWebinarPage() {
                 <div key={label} className="rounded-xl border border-accent/20 bg-white p-6 shadow-sm"><p className="text-3xl font-bold text-accent">{number}</p><p className="mt-1 text-sm font-semibold text-muted">{label}</p></div>
               ))}
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="overflow-hidden border-t border-border bg-background py-16 md:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <p className="text-xs font-bold uppercase tracking-[0.18em] text-accent">Trusted by people who have built it</p>
-            <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">Industry leaders on Jeff&rsquo;s hard-earned playbook.</h2>
-            <p className="mt-4 text-lg leading-relaxed text-muted">Highlights from Jay Shetty&rsquo;s foreword and advance praise for Jeff&rsquo;s upcoming book, <em>The Cold-Pressed Truth</em>.</p>
-          </div>
-          <div className="mt-4">
-            <TestimonialCarousel testimonials={testimonials} />
           </div>
         </div>
       </section>
