@@ -24,28 +24,53 @@ function SearchIcon() {
   return <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="currentColor" strokeWidth="2"/><path d="m16.5 16.5 4 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/></svg>;
 }
 
+const START_HERE = [
+  "MCB", "Free fill", "Velocity", "ACV", "Gross-to-net", "Trade spend",
+  "Category review", "Threshold velocity", "Broker", "Distributor", "OTIF",
+  "MOQ", "Incrementality", "Sell-in", "Working capital",
+] as const;
+
 export function GlossaryExplorer({ entries }: { entries: GlossaryEntry[] }) {
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState("All");
   const [letter, setLetter] = useState("All");
   const [expanded, setExpanded] = useState<string | null>("natural-channel-broker");
   const [copied, setCopied] = useState<string | null>(null);
+  const [pageCopied, setPageCopied] = useState(false);
+  const [urlReady, setUrlReady] = useState(false);
   const searchRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     const hash = window.location.hash.slice(1);
     const params = new URLSearchParams(window.location.search);
     const initialQuery = params.get("q");
+    const initialCategory = params.get("category");
+    const initialLetter = params.get("letter");
     const hasHash = hash && entries.some((item) => slugify(item.term) === hash);
     const frame = requestAnimationFrame(() => {
       if (initialQuery) setQuery(initialQuery);
+      if (initialCategory && GLOSSARY_CATEGORIES.includes(initialCategory as (typeof GLOSSARY_CATEGORIES)[number])) setCategory(initialCategory);
+      if (initialLetter && /^[A-Z]$/.test(initialLetter)) setLetter(initialLetter);
       if (hasHash) {
         setExpanded(hash);
         requestAnimationFrame(() => document.getElementById(hash)?.scrollIntoView({ behavior: "smooth", block: "center" }));
       }
+      setUrlReady(true);
     });
     return () => cancelAnimationFrame(frame);
   }, [entries]);
+
+  useEffect(() => {
+    if (!urlReady) return;
+    const url = new URL(window.location.href);
+    if (query) url.searchParams.set("q", query);
+    else url.searchParams.delete("q");
+    if (category !== "All") url.searchParams.set("category", category);
+    else url.searchParams.delete("category");
+    if (letter !== "All") url.searchParams.set("letter", letter);
+    else url.searchParams.delete("letter");
+    window.history.replaceState(null, "", `${url.pathname}${url.search}${url.hash}`);
+  }, [category, letter, query, urlReady]);
 
   useEffect(() => {
     const onKeyDown = (event: KeyboardEvent) => {
@@ -77,15 +102,47 @@ export function GlossaryExplorer({ entries }: { entries: GlossaryEntry[] }) {
 
   async function copyLink(item: GlossaryEntry) {
     const slug = slugify(item.term);
-    await navigator.clipboard.writeText(`${window.location.origin}${window.location.pathname}#${slug}`);
-    window.history.replaceState(null, "", `#${slug}`);
+    const url = new URL(window.location.href);
+    url.hash = slug;
+    await navigator.clipboard.writeText(url.toString());
+    window.history.replaceState(null, "", `${url.pathname}${url.search}${url.hash}`);
     setCopied(slug);
     setTimeout(() => setCopied(null), 1500);
+  }
+
+  async function shareDictionary() {
+    const share = { title: "The CPG Founder's Dictionary", text: `${entries.length} CPG terms, acronyms, formulas, and founder notes—in plain English.`, url: window.location.href };
+    if (navigator.share) await navigator.share(share);
+    else {
+      await navigator.clipboard.writeText(window.location.href);
+      setPageCopied(true);
+      setTimeout(() => setPageCopied(false), 1800);
+    }
   }
 
   return (
     <section className="bg-background py-10 md:py-14">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mb-8 rounded-2xl border border-accent/20 bg-white p-5 shadow-sm sm:p-7">
+          <div className="flex flex-wrap items-start justify-between gap-4">
+            <div className="max-w-3xl">
+              <p className="text-xs font-bold uppercase tracking-[0.18em] text-accent">Start here</p>
+              <h2 className="mt-2 text-2xl font-bold tracking-tight">The 15 terms most likely to cost you money</h2>
+              <p className="mt-2 text-sm leading-relaxed text-muted">Learn these before your next buyer meeting, promotion, production run, or distributor negotiation.</p>
+            </div>
+            <button onClick={shareDictionary} className="rounded-lg border border-border bg-background px-4 py-2 text-sm font-semibold text-foreground hover:border-accent/40 hover:text-accent">
+              {pageCopied ? "Dictionary link copied ✓" : "Share dictionary"}
+            </button>
+          </div>
+          <div className="mt-5 flex flex-wrap gap-2">
+            {START_HERE.map((term) => {
+              const item = entries.find((candidate) => candidate.term === term);
+              if (!item) return null;
+              const slug = slugify(term);
+              return <button key={term} onClick={() => { setQuery(""); setCategory("All"); setLetter("All"); setExpanded(slug); requestAnimationFrame(() => document.getElementById(slug)?.scrollIntoView({ behavior: "smooth", block: "center" })); }} className="rounded-full border border-border bg-background px-3 py-1.5 text-sm font-semibold text-foreground hover:border-accent hover:text-accent">{term}</button>;
+            })}
+          </div>
+        </div>
         <div className="sticky top-16 z-30 -mx-4 border-y border-border bg-background/95 px-4 py-4 shadow-sm backdrop-blur sm:mx-0 sm:rounded-2xl sm:border sm:px-5">
           <div className="relative">
             <span className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-muted"><SearchIcon /></span>
@@ -138,7 +195,7 @@ export function GlossaryExplorer({ entries }: { entries: GlossaryEntry[] }) {
                   </div>}
                 </article>;
               })}
-            </div> : <div className="rounded-2xl border border-dashed border-border bg-white px-6 py-16 text-center"><p className="text-4xl">⌕</p><h2 className="mt-3 text-xl font-bold">No exact match yet</h2><p className="mx-auto mt-2 max-w-md text-sm leading-relaxed text-muted">Try an acronym, a broader phrase, or clear the filters. If this is CPG language you heard in the wild, tell us—we’ll add it.</p><button onClick={clearFilters} className="mt-5 rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-white hover:bg-accent-dark">Show all terms</button></div>}
+            </div> : <div className="rounded-2xl border border-dashed border-border bg-white px-6 py-16 text-center"><p className="text-4xl">⌕</p><h2 className="mt-3 text-xl font-bold">No exact match yet</h2><p className="mx-auto mt-2 max-w-md text-sm leading-relaxed text-muted">Try an acronym or broader phrase. If this is CPG language you heard in the wild, bring it to the Founders Group and we&rsquo;ll consider it for the dictionary.</p><div className="mt-5 flex flex-wrap justify-center gap-3"><button onClick={clearFilters} className="rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-white hover:bg-accent-dark">Show all terms</button><Link href="/founders-only" className="rounded-lg border border-border px-4 py-2 text-sm font-semibold text-foreground hover:border-accent">Suggest it in the group</Link></div></div>}
           </div>
 
         </div>

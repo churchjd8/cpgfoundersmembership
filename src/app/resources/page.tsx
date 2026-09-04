@@ -4,6 +4,7 @@ import Link from "next/link";
 import { getAllPosts } from "@/lib/blog";
 import { ALWAYS_ON, KITS } from "@/lib/kits";
 import { KitModal, KitOptIn, type KitTarget } from "@/components/kit-form";
+import { GLOSSARY_ENTRIES } from "@/lib/cpg-glossary";
 
 // The public door to the free library. Same inventory and same three kits as
 // /toolbox (the book door) — both render from src/lib/kits.ts so they can't
@@ -11,11 +12,11 @@ import { KitModal, KitOptIn, type KitTarget } from "@/components/kit-form";
 // why the tools are worth having, where the book has already done that.
 
 export const metadata: Metadata = {
-  title: "Free CPG Kits from Jeff Church - CPG Founders Group",
+  title: "Free CPG Resources from Jeff Church - CPG Founders Group",
   description:
-    "Three free kits for CPG founders: profitability, fundraising, and getting started. Every calculator, model, workshop, and white paper Jeff Church uses with the founders he advises.",
+    `The CPG Founder's Dictionary plus three free kits for profitability, fundraising, and getting started.`,
   openGraph: {
-    title: "Free CPG Kits from Jeff Church",
+    title: "Free CPG Resources from Jeff Church",
     description:
       "Every calculator, model, workshop, and white paper Jeff Church uses with the founders he advises. Free.",
     url: "https://cpgfoundersgroup.com/resources",
@@ -199,13 +200,24 @@ export default function ResourcesPage() {
               Start here
             </span>
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
-              These two need no signup
+              These three need no signup
             </h2>
             <p className="mt-4 text-lg text-muted leading-relaxed">
-              Every spreadsheet in the kits answers one question. These two answer whatever you
-              bring them &mdash; one machine, and 350 founders who have already been where you
-              are. Go get them right now, then come back for the kits.
+              Learn the language, ask the machine, or bring the question to 350 founders who have
+              already been where you are. Use them right now, then come back for the kits.
             </p>
+          </div>
+
+          <div className="mb-6 rounded-2xl border border-border bg-background p-8 shadow-sm">
+            <div className="grid gap-6 sm:grid-cols-[1fr_auto] sm:items-center">
+              <div>
+                <span className="inline-block rounded-full bg-accent px-3 py-1 text-xs font-bold uppercase tracking-wider text-white">No signup</span>
+                <p className="mt-5 text-4xl">📖</p>
+                <h3 className="mt-4 text-2xl font-bold tracking-tight">The CPG Founder&rsquo;s Dictionary</h3>
+                <p className="mt-3 max-w-2xl leading-relaxed text-muted">{GLOSSARY_ENTRIES.length} terms, acronyms, formulas, and founder notes—translated into plain English and searchable in seconds.</p>
+              </div>
+              <Link href="/cpg-dictionary" className="inline-flex rounded-lg bg-foreground px-5 py-3 text-sm font-semibold text-white hover:bg-ridge">Search the dictionary &rarr;</Link>
+            </div>
           </div>
 
           <div className="grid gap-6 lg:grid-cols-2">

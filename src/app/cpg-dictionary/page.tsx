@@ -3,13 +3,13 @@ import { GlossaryExplorer } from "./glossary-explorer";
 import { GLOSSARY_ENTRIES, GLOSSARY_SOURCES } from "@/lib/cpg-glossary";
 
 export const metadata: Metadata = {
-  title: "The CPG Glossary — 331 Terms Every Founder Should Know",
-  description: "A searchable, plain-English guide to 331 CPG retail, distribution, ecommerce, margin, velocity, operations, packaging, fundraising, and food-regulation terms.",
-  alternates: { canonical: "https://cpgfoundersgroup.com/cpg-glossary" },
+  title: `The CPG Founder's Dictionary — ${GLOSSARY_ENTRIES.length} Terms`,
+  description: `A searchable, plain-English guide to ${GLOSSARY_ENTRIES.length} CPG retail, distribution, ecommerce, margin, velocity, operations, packaging, fundraising, and food-regulation terms.`,
+  alternates: { canonical: "https://cpgfoundersgroup.com/cpg-dictionary" },
   openGraph: {
-    title: "The CPG Glossary — Learn to speak CPG",
-    description: "331 terms, acronyms, formulas, and field notes for first-time CPG founders.",
-    url: "https://cpgfoundersgroup.com/cpg-glossary",
+    title: "The CPG Founder's Dictionary — Learn to speak CPG",
+    description: `${GLOSSARY_ENTRIES.length} terms, acronyms, formulas, and field notes for CPG founders.`,
+    url: "https://cpgfoundersgroup.com/cpg-dictionary",
     siteName: "CPG Founders Group",
     type: "website",
   },
@@ -20,14 +20,14 @@ export default function CpgGlossaryPage() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "DefinedTermSet",
-    name: "The CPG Glossary",
+    name: "The CPG Founder's Dictionary",
     description: "Plain-English CPG terminology for first-time founders.",
-    url: "https://cpgfoundersgroup.com/cpg-glossary",
+    url: "https://cpgfoundersgroup.com/cpg-dictionary",
     hasDefinedTerm: GLOSSARY_ENTRIES.map((item) => ({
       "@type": "DefinedTerm",
       name: item.term,
       description: item.definition,
-      url: `https://cpgfoundersgroup.com/cpg-glossary#${item.term.toLowerCase().replace(/&/g, "and").replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}`,
+      url: `https://cpgfoundersgroup.com/cpg-dictionary#${item.term.toLowerCase().replace(/&/g, "and").replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}`,
     })),
   };
 
@@ -38,7 +38,7 @@ export default function CpgGlossaryPage() {
         <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_82%_18%,#dfa13c_0,transparent_26%),linear-gradient(135deg,transparent_0,transparent_58%,#1b3a5f_58%,#1b3a5f_100%)]" />
         <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 md:py-24 lg:px-8">
           <div className="max-w-4xl">
-            <p className="mb-5 text-xs font-bold uppercase tracking-[0.24em] text-gold">CPG, translated</p>
+            <p className="mb-5 text-xs font-bold uppercase tracking-[0.24em] text-gold">The CPG Founder&rsquo;s Dictionary</p>
             <h1 className="max-w-3xl font-[family-name:var(--font-playfair)] text-4xl font-bold leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl">
               Learn to speak CPG.
             </h1>
@@ -49,12 +49,27 @@ export default function CpgGlossaryPage() {
               <span className="rounded-full border border-white/15 bg-white/8 px-4 py-2"><strong className="text-gold">{GLOSSARY_ENTRIES.length}</strong> terms</span>
               <span className="rounded-full border border-white/15 bg-white/8 px-4 py-2"><strong className="text-gold">{categoryCount}</strong> operating areas</span>
               <span className="rounded-full border border-white/15 bg-white/8 px-4 py-2"><strong className="text-gold">0</strong> assumed experience</span>
+              <span className="rounded-full border border-white/15 bg-white/8 px-4 py-2">Reviewed <strong className="text-gold">September 2026</strong></span>
             </div>
           </div>
         </div>
       </section>
 
       <GlossaryExplorer entries={GLOSSARY_ENTRIES} />
+
+      <section className="border-t border-border bg-foreground py-14 text-white">
+        <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[1fr_auto] lg:items-center lg:px-8">
+          <div>
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold">Keep learning</p>
+            <h2 className="mt-3 text-2xl font-bold tracking-tight sm:text-3xl">More help for the decisions behind the definitions.</h2>
+            <p className="mt-3 max-w-2xl leading-relaxed text-white/70">Use Jeff&rsquo;s free calculators, workshops, and playbooks—or bring the term you heard in the wild to 350+ CPG founders.</p>
+          </div>
+          <div className="flex flex-wrap gap-3">
+            <a href="/resources" className="rounded-lg bg-accent px-5 py-3 text-sm font-semibold text-white hover:bg-accent-dark">Explore free resources</a>
+            <a href="/founders-only" className="rounded-lg border border-white/25 px-5 py-3 text-sm font-semibold text-white hover:bg-white/10">Join the Founders Group</a>
+          </div>
+        </div>
+      </section>
 
       <section className="border-t border-border bg-white py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

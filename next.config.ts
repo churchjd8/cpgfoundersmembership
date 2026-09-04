@@ -16,6 +16,9 @@ const nextConfig: NextConfig = {
       { source: "/90-day-breakthrough-apply", destination: "/apply", permanent: false },
       { source: "/advisory", destination: "/apply", permanent: false },
 
+      // The dictionary is the canonical public name; preserve old glossary links.
+      { source: "/cpg-glossary", destination: "/cpg-dictionary", permanent: true },
+
       // /toolbox is printed in "The Cold-Pressed Truth" — catch the near misses
       // so a mistyped URL from the page still lands.
       { source: "/tools", destination: "/toolbox", permanent: true },

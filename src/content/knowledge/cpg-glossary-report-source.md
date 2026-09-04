@@ -4,7 +4,7 @@
 
 **Date:** September 3, 2026
 
-**Deliverable:** Interactive glossary at `/cpg-glossary`
+**Deliverable:** Interactive dictionary at `/cpg-dictionary`
 
 ## Scope and assumptions
 
