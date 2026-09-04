@@ -22,6 +22,7 @@ function rows(data: Submission) {
     firstName: "First name", lastName: "Last name", email: "Email", brand: "Brand",
     needs: "Vendor needs", timing: "Hiring timing", details: "Need details",
     attribution: "Attribution", vendorName: "Vendor", vendorWebsite: "Website",
+    vendorContactName: "Vendor contact", vendorContactEmail: "Vendor contact email",
     category: "Category", workPeriod: "Worked together", scope: "Scope",
     companyStage: "Company stage", investment: "Investment", quality: "Quality",
     communication: "Communication", delivery: "On-time delivery", value: "Value",
