@@ -5,12 +5,12 @@ export const metadata: Metadata = {
   title: "CPG Match by Jeff Church | Founder-Recommended CPG Vendors",
   description:
     "Help build a trusted, founder-powered guide to CPG service providers. Recommend a vendor or join the list for launch access.",
-  alternates: { canonical: "https://cpgfoundersgroup.com/cpg-match" },
+  alternates: { canonical: "https://cpgmatch.com" },
   openGraph: {
     title: "CPG Match by Jeff Church",
     description:
       "Founder-to-founder recommendations for the vendors behind growing CPG brands.",
-    url: "https://cpgfoundersgroup.com/cpg-match",
+    url: "https://cpgmatch.com",
     siteName: "CPG Founders Group",
     type: "website",
   },
