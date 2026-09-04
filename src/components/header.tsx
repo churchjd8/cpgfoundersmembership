@@ -8,6 +8,7 @@ const navLinks = [
   { label: "About", href: "/about-jeff" },
   { label: "Free Resources", href: "/resources" },
   { label: "Dictionary", href: "/cpg-dictionary" },
+  { label: "CPG Match", href: "/cpg-match" },
   { label: "Blog", href: "/blog" },
   { label: "BabuAI", href: "https://www.askbabu.ai", external: true },
   { label: "Contact", href: "/contact" },
