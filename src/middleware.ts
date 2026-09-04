@@ -5,10 +5,18 @@ import { ADMIN_COOKIE, isValidToken } from "@/lib/admin-auth";
 export async function middleware(req: NextRequest) {
   const host = (req.headers.get("host") || "").split(":")[0];
   const onAdminSubdomain = host.startsWith("admin.");
+  const onCpgMatchDomain = host === "cpgmatch.com" || host === "www.cpgmatch.com";
 
   const url = req.nextUrl.clone();
   let pathname = url.pathname;
   let doRewrite = false;
+
+  // Give CPG Match its own root domain while keeping the launch page in this app.
+  if (onCpgMatchDomain && pathname === "/") {
+    url.pathname = "/cpg-match";
+    pathname = url.pathname;
+    doRewrite = true;
+  }
 
   // Serve the admin panel at the root of the admin subdomain by mapping its
   // paths onto the /admin route tree. (API routes are left untouched.)
@@ -27,7 +35,9 @@ export async function middleware(req: NextRequest) {
   );
 
   // Everything outside the /admin tree and the gated list passes straight through.
-  if (!pathname.startsWith("/admin") && !isGatedPath) return NextResponse.next();
+  if (!pathname.startsWith("/admin") && !isGatedPath) {
+    return doRewrite ? NextResponse.rewrite(url) : NextResponse.next();
+  }
 
   // Gate the /admin tree and the listed paths (login page excepted).
   if (pathname !== "/admin/login") {
