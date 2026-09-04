@@ -54,6 +54,12 @@ html {
   scroll-behavior: smooth;
 }
 
+/* CPG Match is a standalone product surface with its own focused chrome. */
+body:has(.cpg-match-page) > header,
+body:has(.cpg-match-page) > footer {
+  display: none;
+}
+
 /* Blog content typography */
 .blog-content h2 {
   font-size: 1.5rem;
