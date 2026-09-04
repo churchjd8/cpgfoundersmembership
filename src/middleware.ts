@@ -1,10 +1,12 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import { ADMIN_COOKIE, isValidToken } from "@/lib/admin-auth";
+import { CPG_MATCH_ADMIN_COOKIE, isCpgMatchAdmin } from "@/lib/cpg-match-admin-auth";
 
 export async function middleware(req: NextRequest) {
   const host = (req.headers.get("host") || "").split(":")[0];
   const onAdminSubdomain = host.startsWith("admin.");
+  const onCpgMatchAdmin = host === "admin.cpgmatch.com";
   const onCpgMatchDomain = host === "cpgmatch.com" || host === "www.cpgmatch.com";
 
   const url = req.nextUrl.clone();
@@ -21,7 +23,8 @@ export async function middleware(req: NextRequest) {
   // Serve the admin panel at the root of the admin subdomain by mapping its
   // paths onto the /admin route tree. (API routes are left untouched.)
   if (onAdminSubdomain && !pathname.startsWith("/admin") && !pathname.startsWith("/api")) {
-    url.pathname = pathname === "/" ? "/admin" : `/admin${pathname}`;
+    const root = onCpgMatchAdmin ? "/cpg-match-admin" : "/admin";
+    url.pathname = pathname === "/" ? root : `${root}${pathname}`;
     pathname = url.pathname;
     doRewrite = true;
   }
@@ -33,6 +36,18 @@ export async function middleware(req: NextRequest) {
   const isGatedPath = GATED_PATHS.some(
     (p) => pathname === p || pathname.startsWith(`${p}/`)
   );
+
+  if (pathname.startsWith("/cpg-match-admin")) {
+    if (pathname !== "/cpg-match-admin/login") {
+      const token = req.cookies.get(CPG_MATCH_ADMIN_COOKIE)?.value;
+      if (!(await isCpgMatchAdmin(token))) {
+        const redirect = req.nextUrl.clone();
+        redirect.pathname = onCpgMatchAdmin ? "/login" : "/cpg-match-admin/login";
+        return NextResponse.redirect(redirect);
+      }
+    }
+    return NextResponse.rewrite(url);
+  }
 
   // Everything outside the /admin tree and the gated list passes straight through.
   if (!pathname.startsWith("/admin") && !isGatedPath) {

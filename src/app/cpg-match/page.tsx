@@ -4,7 +4,7 @@ import { CpgMatchIntake } from "./cpg-match-intake";
 export const metadata: Metadata = {
   title: "CPG Match by Jeff Church | Founder-Recommended CPG Vendors",
   description:
-    "Help build a trusted, founder-powered guide to CPG service providers. Recommend a vendor or join the list for launch access.",
+            "Help build a trusted, founder-powered guide to CPG service providers. Recommend a vendor(s) or join the list for launch access.",
   alternates: { canonical: "https://cpgmatch.com" },
   openGraph: {
     title: "CPG Match by Jeff Church",
@@ -38,7 +38,7 @@ export default function CpgMatchPage() {
       </header>
       <section className="relative overflow-hidden bg-foreground text-white">
         <div className="absolute inset-0 opacity-25 bg-[radial-gradient(circle_at_84%_12%,#dfa13c_0,transparent_25%),linear-gradient(135deg,transparent_0,transparent_58%,#1b3a5f_58%,#1b3a5f_100%)]" />
-        <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 md:py-24 lg:px-8">
+        <div className="relative mx-auto max-w-7xl px-4 pb-24 pt-12 sm:px-6 md:pb-28 md:pt-16 lg:px-8">
           <div className="max-w-4xl">
             <div className="mb-7 flex flex-wrap items-center gap-3 text-xs font-bold uppercase tracking-[0.2em]"><span className="rounded-md border border-gold/40 px-3 py-2 text-gold">CPG Match</span><span className="text-white/55">by Jeff Church + CPG Founders Group</span></div>
             <h1 className="max-w-4xl font-[family-name:var(--font-playfair)] text-4xl font-bold leading-[1.06] tracking-tight sm:text-5xl lg:text-6xl">
@@ -47,7 +47,7 @@ export default function CpgMatchPage() {
             <p className="mt-6 max-w-3xl text-lg leading-relaxed text-white/75 sm:text-xl">
               Real feedback on quality, cost, fit, and what it&rsquo;s like to work together.
             </p>
-            <p className="mt-7 text-sm font-semibold text-gold">Verified founder reviews. No vendor self-nominations. Free for founders.</p>
+            <p className="mt-7 text-sm font-semibold text-gold">Verified founder reviews. No vendor(s) self-nominations. Free for founders.</p>
           </div>
         </div>
       </section>
