@@ -17,26 +17,6 @@ function escapeHtml(value: unknown) {
   return text.replace(/[&<>"']/g, char => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;" })[char]!);
 }
 
-function rows(data: Submission) {
-  const labels: Record<string, string> = {
-    firstName: "First name", lastName: "Last name", email: "Email", brand: "Brand",
-    needs: "Vendor needs", timing: "Hiring timing", details: "Need details",
-    attribution: "Attribution", vendorName: "Vendor", vendorWebsite: "Website",
-    vendorContactName: "Vendor contact", vendorContactEmail: "Vendor contact email",
-    category: "Category", workPeriod: "Worked together", scope: "Scope",
-    companyStage: "Company stage", investment: "Investment", quality: "Quality",
-    communication: "Communication", delivery: "On-time delivery", value: "Value",
-    expectations: "Sales promise vs. delivery", stageFit: "Stage fit",
-    disappointed: "If unavailable", bestFor: "Best fit", knowBeforeHiring: "Know before hiring",
-    privateNotes: "Private notes", certification: "First-hand certification",
-  };
-  return Object.entries(labels).map(([key, label]) => {
-    const value = data[key];
-    if (value === undefined || value === null || value === "" || (Array.isArray(value) && !value.length)) return "";
-    return `<tr><td style="padding:7px 14px 7px 0;color:#68717d;vertical-align:top;white-space:nowrap">${label}</td><td style="padding:7px 0;white-space:pre-wrap">${escapeHtml(value)}</td></tr>`;
-  }).join("");
-}
-
 async function addToKajabi(data: Submission) {
   if (!process.env.KAJABI_API_KEY || !process.env.KAJABI_API_SECRET) return;
   try {
@@ -84,19 +64,14 @@ export async function POST(request: Request) {
 
     const isReview = data.type === "recommendation";
     const emailHeaders = { Authorization: `Bearer ${process.env.RESEND_API_KEY}`, "Content-Type": "application/json" };
-    const [emailResponse, confirmationResponse] = await Promise.all([
-      fetch("https://api.resend.com/emails", { method: "POST", headers: emailHeaders, body: JSON.stringify({
-        from: "CPG Match <scheduling@cpgfoundersgroup.com>",
-        to: process.env.CONTACT_FORM_NOTIFY_EMAIL!,
-        reply_to: data.email,
-        subject: isReview ? `CPG Match recommendation: ${data.vendorName} — ${data.firstName} ${data.lastName}` : `CPG Match waitlist: ${data.firstName} ${data.lastName} — ${data.brand}`,
-        html: `<div style="font-family:system-ui,sans-serif;max-width:720px;color:#0b1a2e"><p style="color:#a56a16;font-weight:700;text-transform:uppercase;letter-spacing:.1em">CPG Match ${isReview ? "recommendation" : "waitlist"}</p><h2>${isReview ? escapeHtml(data.vendorName) : `${escapeHtml(data.firstName)} ${escapeHtml(data.lastName)}`}</h2><table style="border-collapse:collapse;width:100%">${rows(data)}</table><hr style="margin:28px 0;border:0;border-top:1px solid #e4e0d9"><p style="color:#68717d;font-size:12px">Submitted from cpgmatch.com</p></div>`,
-      }) }),
+    // Internal notification intentionally removed: submissions are saved to Supabase
+    // and visible at /cpg-match-admin, so no email goes to the notify inbox.
+    const [confirmationResponse] = await Promise.all([
       fetch("https://api.resend.com/emails", { method: "POST", headers: emailHeaders, body: JSON.stringify({ from: "CPG Match <scheduling@cpgfoundersgroup.com>", to: data.email, subject: isReview ? "Your CPG Match review was received" : "You’re on the CPG Match database waitlist", html: confirmationHtml(data) }) }),
       addToKajabi(data),
     ]);
     await databaseSave;
-    if (!emailResponse.ok || !confirmationResponse.ok) { console.error("CPG Match Resend error:", await Promise.all([emailResponse.text(), confirmationResponse.text()])); return Response.json({ error: "Submission failed" }, { status: 500 }); }
+    if (!confirmationResponse.ok) { console.error("CPG Match Resend error:", await confirmationResponse.text()); return Response.json({ error: "Submission failed" }, { status: 500 }); }
     return Response.json({ success: true });
   } catch (error) {
     console.error("CPG Match submission error:", error);

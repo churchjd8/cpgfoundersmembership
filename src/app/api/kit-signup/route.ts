@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { ALL_KITS_FORMS, KITS, getKit, type Kit } from "@/lib/kits";
-import { escapeHtml, type KitEmailSource } from "@/lib/kit-email";
+import { type KitEmailSource } from "@/lib/kit-email";
 
 // One endpoint behind every free-resource opt-in on the site.
 //
@@ -12,22 +12,6 @@ import { escapeHtml, type KitEmailSource } from "@/lib/kit-email";
 // has to stay in step with what the pages promise. It is authored here and
 // pasted into Kajabi; run `npx tsx scripts/render-kit-emails.ts` after editing.
 // Nothing here sends a delivery email — that would double up on Kajabi.
-
-async function sendEmail(payload: Record<string, unknown>) {
-  const res = await fetch("https://api.resend.com/emails", {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(payload),
-  });
-
-  if (!res.ok) {
-    const errText = await res.text();
-    throw new Error(`Resend ${res.status}: ${errText.slice(0, 300)}`);
-  }
-}
 
 async function getKajabiToken() {
   const res = await fetch("https://api.kajabi.com/v1/oauth/token", {
@@ -298,26 +282,8 @@ export async function POST(request: Request) {
       `Kit signup [${source}]: ${firstName} ${lastName} <${email}> -> ${isAllKits ? "all" : kitParam}`,
     );
 
-    try {
-      await sendEmail({
-        from: "CPG Founders Group <scheduling@cpgfoundersgroup.com>",
-        to: process.env.CONTACT_FORM_NOTIFY_EMAIL,
-        reply_to: email,
-        subject: `Kit signup (${source}): ${firstName} ${lastName}`,
-        html: `
-          <h2>New free-kit signup</h2>
-          <p><strong>Name:</strong> ${escapeHtml(firstName)} ${escapeHtml(lastName)}</p>
-          <p><strong>Email:</strong> ${escapeHtml(email)}</p>
-          <p><strong>Kit:</strong> ${escapeHtml(isAllKits ? "All three kits" : kits[0].name)}</p>
-          <p><strong>Stage:</strong> ${escapeHtml(stage || "Not provided")}</p>
-          <p><strong>Challenge:</strong> ${escapeHtml(challenge || "Not provided")}</p>
-          <hr>
-          <p style="color:#999;font-size:12px;">Source: cpgfoundersgroup.com/${source}</p>
-        `,
-      });
-    } catch (notifyErr) {
-      console.error("Kit signup: notification email failed", notifyErr);
-    }
+    // Internal notification intentionally removed: Kajabi tags the contact and
+    // sends the kit, so no email goes to the notify inbox.
 
     // Single-kit signups get dropped straight onto the kit page. The bundle has
     // no single home, so those stay on the success state.
