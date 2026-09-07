@@ -19,7 +19,7 @@ function elementFor(anchor: Anchor): Element | null {
 
 function anchorLabel(anchor: Anchor) {
   const el = elementFor(anchor);
-  const section = el?.closest("section,header,footer") || el;
+  const section = el?.closest("article,section,header,footer") || el;
   return anchor.label || (section?.querySelector("h1,h2,h3")?.textContent || el?.textContent || "Page").trim().slice(0,90);
 }
 
@@ -43,7 +43,7 @@ function capture(el: Element, x: number, y: number): Anchor {
     node = node.parentElement;
   }
   const r = el.getBoundingClientRect();
-  const section = el.closest("section,header,footer") || el;
+  const section = el.closest("article,section,header,footer") || el;
   const label = (section.querySelector("h1,h2,h3")?.textContent || el.textContent || "Page").trim().slice(0,90);
   const base = root.id ? `cpg-id:${root.id}` : "cpg-pin";
   return { el: base + (parts.length ? "/" + parts.join("/") : ""), xp: (x-r.left)/r.width, yp: (y-r.top)/r.height, label };
@@ -167,7 +167,7 @@ function Review({ scope, label }: { scope: string; label: string }) {
     }}>
       <strong>Leave feedback</strong><small>{draft.label}</small>
       <label>Your name<input required maxLength={60} value={author} onChange={e => setAuthor(e.target.value)} autoComplete="name" /></label>
-      <label>Comment<textarea autoFocus required maxLength={4000} value={text} onChange={e => setText(e.target.value)} placeholder="What should change?" /></label>
+      <label htmlFor="cr-comment">Comment<textarea id="cr-comment" autoFocus required maxLength={4000} value={text} onChange={e => setText(e.target.value)} placeholder="What should change?" /></label>
       <div className="cr-actions"><button type="button" disabled={busy} onClick={() => setDraft(null)}>Cancel</button><button disabled={busy}>{busy ? "Saving…" : "Post comment"}</button></div>
     </form>}
     {panel && <aside className="cr-panel" aria-label="Page feedback">
@@ -179,7 +179,7 @@ function Review({ scope, label }: { scope: string; label: string }) {
         {c.replies.map((r,i) => <div className="cr-reply" key={i}><strong>{r.author}</strong><p>{r.text}</p></div>)}
         <div className="cr-actions"><button onClick={() => { setActive(c.id); setReply(""); }}>Reply</button><button disabled={busy} onClick={() => void mutate({ action: "resolve", id: c.id, resolved: !c.resolved })}>{c.resolved ? "Reopen" : "Resolve ✓"}</button></div>
         {active === c.id && <form className="cr-reply-form" onSubmit={async e => { e.preventDefault(); if (author.trim() && reply.trim() && await mutate({ action: "replies", id: c.id, author: author.trim(), text: reply.trim() })) setReply(""); }}>
-          <label>Your name<input required maxLength={60} value={author} onChange={e => setAuthor(e.target.value)} /></label><label>Reply<textarea required maxLength={4000} value={reply} onChange={e => setReply(e.target.value)} /></label><button disabled={busy}>{busy ? "Saving…" : "Send reply"}</button>
+          <label>Your name<input required maxLength={60} value={author} onChange={e => setAuthor(e.target.value)} /></label><label htmlFor="cr-reply">Reply<textarea id="cr-reply" required maxLength={4000} value={reply} onChange={e => setReply(e.target.value)} /></label><button disabled={busy}>{busy ? "Saving…" : "Send reply"}</button>
         </form>}
       </article>)}</div>
     </aside>}
