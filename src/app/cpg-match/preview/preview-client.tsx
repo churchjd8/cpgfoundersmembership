@@ -317,7 +317,7 @@ export function Directory() {
                         ✦ Preferred partner <span>Example placement</span>
                       </div>
                     )}
-                    <div className="mp-card-body">
+                    <div className="mp-card-body" id={`review-card-${v.slug}`}>
                       <div className="mp-card-top">
                         <Avatar vendor={v} />
                         <Save

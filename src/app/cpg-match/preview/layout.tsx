@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Suspense } from "react";
+import Feedback from "./feedback";
 import "./preview.css";
 export const metadata: Metadata = {
   title: "CPG Match | Directory preview",
@@ -34,6 +36,7 @@ export default function PreviewLayout({
         </nav>
       </header>
       {children}
+      <Suspense fallback={null}><Feedback /></Suspense>
       <footer className="mp-footer">
         <Link className="mp-logo" href="/cpg-match/preview">
           CPG<span className="mp-logo-light">match</span>
