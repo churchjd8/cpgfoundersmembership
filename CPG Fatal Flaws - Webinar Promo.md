@@ -52,15 +52,26 @@ Hope to see you there!
 
 ## 2. Email — full Kajabi list
 
-**Subject:** You voted. Here's the first free workshop.
+**Subject (recommended):** It's almost never the product that kills the brand
 
-**Alt subject:** The fatal flaws webinar is next Wednesday
+**Alt subjects:**
+- Are any of these 18 hiding in your business?
+- The mistake that cost a founder $500K and 18 months
+- 18 ways a good CPG brand dies (free live session next Wednesday)
+
+**Preview text:** Free live webinar next Wednesday. 60 minutes of teaching, 30 minutes of your questions.
 
 Hi {{first_name}},
 
-A few weeks ago I asked which topics you were most interested in learning more about in the CPG space, and close to 200 of you voted. The winner (by far) was the fatal flaws that kill early CPG brands.
+Here's something I've learned over 35+ years of building and advising CPG companies.
 
-So I'm running a series of free live workshops on the top vote-getters, and that's where we're starting!
+It's almost never the product that kills the brand.
+
+It's a three year co-man contract signed for a slightly better per-unit price. It's an evergreen broker agreement nobody put on the calendar, and one missed notice date later you're locked in for another year. It's a personal guarantee on a line of credit. It's a trademark you never searched properly, and a cease and desist two years in that costs you a full rebrand and every ounce of awareness you built.
+
+None of those look dangerous the day you sign them. That's the whole problem.
+
+I've counted 18 of these over the years, and I've made a good number of them myself. Next Wednesday I'm teaching all 18 in a free live webinar.
 
 **The 18 Fatal Flaws That Kill CPG Brands**
 Wednesday, September 16
@@ -69,21 +80,16 @@ Free, live on Zoom, replay included
 
 **[Save your free seat here](https://cpgfoundersgroup.com/fatalflaws-webinar)**
 
-Here's the thing about fatal flaws. They rarely look dangerous when you're signing them. A multi-year contract with a better per-unit price. A broker agreement that auto-renews unless you give 90 days notice. A quick equity handshake with a friend who helped early on. A yes to a retailer for 500 stores when your supply chain is built for 100.
+Here's how the 90 minutes breaks down:
 
-I've made a good number of these myself, and I've watched the rest happen to smart founders I was advising. Almost all of them were avoidable with awareness. That's the whole point of this session.
+- 60 minutes on all 18 flaws, organized by legal and equity, cash and operations, people and focus, and sales and marketing. For each one: what it looks like, what it costs, and the prevention rule I use.
+- 30 minutes of live Q&A. Bring the contract, the hire, the retailer, the decision you're actually wrestling with.
 
-What we'll cover:
-
-- 60 minutes on all 18 flaws, organized by legal and equity, cash and operations, people and focus, and sales and marketing
-- 30 minutes of live Q&A. Bring the actual decision you're wrestling with.
-
-Everyone who registers gets:
-
-- The full replay, so sign up even if you can't make it live (it goes out the next morning)
-- The CPG Fatal Flaw Assessment, a 30 question scorecard you can run on your own business
+Everyone who registers gets the full replay (it goes out the next morning), plus a 30 question Fatal Flaw Assessment you can run on your own business to see which of these are already in the building.
 
 **[Register here](https://cpgfoundersgroup.com/fatalflaws-webinar)**
+
+One more thing. A few weeks ago I asked which topics you were most interested in learning more about, and close to 200 of you voted. This one won (by far). So this is the first in a series, and I'm starting with what you asked for.
 
 Whether you're pre-launch or ten years in, there's something on this list you haven't run into yet. Learn it on my dime instead of your own.
 
@@ -91,7 +97,7 @@ See you there,
 
 Jeff
 
-P.S. This is the first of several. The rest of the top vote-getters are coming over the next few months, so watch your inbox.
+P.S. If you can't make it live, register anyway. The replay and the assessment go to everyone who signs up.
 
 ---
 
