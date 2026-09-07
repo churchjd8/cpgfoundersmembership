@@ -99,6 +99,50 @@ Jeff
 
 P.S. If you can't make it live, register anyway. The replay and the assessment go to everyone who signs up.
 
+### Email HTML (paste into a Kajabi HTML/code block)
+
+```html
+<p>Hi {{first_name}},</p>
+
+<p>Here's something I've learned over 35+ years of building and advising CPG companies.</p>
+
+<p><strong>It's almost never the product that kills the brand.</strong></p>
+
+<p>It's a three year co-man contract signed for a slightly better per-unit price. It's an evergreen broker agreement nobody put on the calendar, and one missed notice date later you're locked in for another year. It's a personal guarantee on a line of credit. It's a trademark you never searched properly, and a cease and desist two years in that costs you a full rebrand and every ounce of awareness you built.</p>
+
+<p>None of those look dangerous the day you sign them. That's the whole problem.</p>
+
+<p>I've counted 18 of these over the years, and I've made a good number of them myself. Next Wednesday I'm teaching all 18 in a free live webinar.</p>
+
+<p><strong>The 18 Fatal Flaws That Kill CPG Brands</strong><br>
+Wednesday, September 16<br>
+9:00 to 10:30 AM PT<br>
+Free, live on Zoom, replay included</p>
+
+<p><strong><a href="https://cpgfoundersgroup.com/fatalflaws-webinar">Save your free seat here</a></strong></p>
+
+<p>Here's how the 90 minutes breaks down:</p>
+
+<ul>
+  <li><strong>60 minutes</strong> on all 18 flaws, organized by legal and equity, cash and operations, people and focus, and sales and marketing. For each one: what it looks like, what it costs, and the prevention rule I use.</li>
+  <li><strong>30 minutes</strong> of live Q&amp;A. Bring the contract, the hire, the retailer, the decision you're actually wrestling with.</li>
+</ul>
+
+<p>Everyone who registers gets the full replay (it goes out the next morning), plus a 30 question Fatal Flaw Assessment you can run on your own business to see which of these are already in the building.</p>
+
+<p><strong><a href="https://cpgfoundersgroup.com/fatalflaws-webinar">Register here</a></strong></p>
+
+<p>One more thing. A few weeks ago I asked which topics you were most interested in learning more about, and close to 200 of you voted. This one won (by far). So this is the first in a series, and I'm starting with what you asked for.</p>
+
+<p>Whether you're pre-launch or ten years in, there's something on this list you haven't run into yet. Learn it on my dime instead of your own.</p>
+
+<p>See you there,</p>
+
+<p>Jeff</p>
+
+<p>P.S. If you can't make it live, register anyway. The replay and the assessment go to everyone who signs up.</p>
+```
+
 ---
 
 ## 3. LinkedIn post — Monday, September 14 (two days out, value-driven)
