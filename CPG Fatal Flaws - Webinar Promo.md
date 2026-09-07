@@ -1,11 +1,11 @@
 # CPG Fatal Flaws Webinar — Promo Copy
 
-Status: Draft for Jeff review. Written September 7, 2026.
+Status: LinkedIn post #1 finalized by Joshua Sep 7. Email, Sep 14 post, and WhatsApp note updated to match.
 Event: The 18 Fatal Flaws That Kill CPG Brands
 Wednesday, September 16, 2026, 9:00–10:30 AM Pacific. Live on Zoom. Free. Replay to all registrants.
 Format: 60 minutes of teaching, 30 minutes of live founder Q&A.
 Registration: https://cpgfoundersgroup.com/fatalflaws-webinar
-Bonuses for registrants: full replay, 30-question CPG Fatal Flaw Assessment, complete Fatal Flaws white paper.
+Bonuses mentioned in copy: full replay and the 30-question CPG Fatal Flaw Assessment. (Landing page also lists the white paper; Jeff cut it from the LinkedIn post, so it is cut everywhere here.)
 
 Poll context: 187 votes across WhatsApp (101), LinkedIn (47), and email (39). Fatal flaws won with 27 votes. Buyer meeting to PO was second with 22. Copy says "close to 200" to stay accurate.
 
@@ -24,25 +24,27 @@ Scheduling note: the Aug–Oct LinkedIn batch already has "What's Your Gross-To-
 
 ---
 
-## 1. LinkedIn post — Tuesday, September 8
+## 1. LinkedIn post — Tuesday, September 8 (FINAL, Joshua's edit)
 
-Greetings founders. A few weeks ago I asked you which workshop I should run first, and close to 200 of you voted.
+Greetings founders!
 
-The winner, and it wasn't close, was the fatal flaws that kill early CPG brands.
+A few weeks ago I asked you which topics you were most interested in learning more about in the CPG space, and close to 200 of you voted.
 
-So that's where we're starting. Next Wednesday, September 16, at 9am Pacific, I'm hosting a free live webinar called The 18 Fatal Flaws That Kill CPG Brands.
+The winner (by far) was the fatal flaws that kill early CPG brands.
+
+So that's where we're starting! Next Wednesday, September 16, at 9am PT, I'm hosting a free live webinar called The 18 Fatal Flaws That Kill CPG Brands.
 
 Here's something I've learned over 35+ years of building and advising these companies. It's almost never the product that kills the brand. It's a three year co-man contract signed for a slightly better per-unit price. It's an evergreen clause nobody put on the calendar. It's a personal guarantee on a line of credit. It's saying yes to 500 stores when you should have crushed it in 100. Not one of those is sophisticated, and that's exactly why they keep working.
 
-I've made a good number of them myself (some more than once, sadly), and I've watched promising founders get derailed by the rest.
+I've made a good number of them myself, and I've watched promising founders get derailed by the rest.
 
 The format is simple. 60 minutes of me teaching all 18, organized by legal, cash and operations, people, and sales and marketing. Then 30 minutes of live Q&A with real founders bringing real questions. That second half is usually my favorite part.
 
-Everyone who registers gets the full replay, plus a 30 question Fatal Flaw Assessment you can run on your own business and the complete white paper. So sign up even if you can't make it live (the replay goes out the next morning, btw).
+Everyone who registers gets the full replay, plus a 30 question Fatal Flaw Assessment you can run on your own business. So sign up even if you can't make it live (the replay goes out the next morning, btw).
 
 Whether you're pre-launch or you've been at this ten years, there's something on that list you haven't hit yet. Better to hear about it from me than from your attorney.
 
-Save your free seat here: https://cpgfoundersgroup.com/fatalflaws-webinar
+Save your free seat here: https://lnkd.in/g8_KuxgY
 
 Hope to see you there!
 
@@ -56,20 +58,20 @@ Hope to see you there!
 
 Hi {{first_name}},
 
-A few weeks ago I asked which topics you'd actually block time to learn, and close to 200 of you voted. The runaway winner was the fatal flaws that kill early CPG brands.
+A few weeks ago I asked which topics you were most interested in learning more about in the CPG space, and close to 200 of you voted. The winner (by far) was the fatal flaws that kill early CPG brands.
 
-So I'm running a series of free live workshops on the top vote-getters, and we're starting with that one.
+So I'm running a series of free live workshops on the top vote-getters, and that's where we're starting!
 
 **The 18 Fatal Flaws That Kill CPG Brands**
 Wednesday, September 16
-9:00 to 10:30 AM Pacific
+9:00 to 10:30 AM PT
 Free, live on Zoom, replay included
 
 **[Save your free seat here](https://cpgfoundersgroup.com/fatalflaws-webinar)**
 
 Here's the thing about fatal flaws. They rarely look dangerous when you're signing them. A multi-year contract with a better per-unit price. A broker agreement that auto-renews unless you give 90 days notice. A quick equity handshake with a friend who helped early on. A yes to a retailer for 500 stores when your supply chain is built for 100.
 
-I've made several of these myself, and most of the others I've watched happen to smart founders I was advising. Almost all of them were avoidable with awareness. That's the whole point of this session.
+I've made a good number of these myself, and I've watched the rest happen to smart founders I was advising. Almost all of them were avoidable with awareness. That's the whole point of this session.
 
 What we'll cover:
 
@@ -78,9 +80,8 @@ What we'll cover:
 
 Everyone who registers gets:
 
-- The full replay, so sign up even if you can't make it live
-- The CPG Fatal Flaw Assessment, a 30 question scorecard to surface what's already hiding in your business
-- The complete Fatal Flaws white paper to review with your team
+- The full replay, so sign up even if you can't make it live (it goes out the next morning)
+- The CPG Fatal Flaw Assessment, a 30 question scorecard you can run on your own business
 
 **[Register here](https://cpgfoundersgroup.com/fatalflaws-webinar)**
 
@@ -106,7 +107,7 @@ Okay folks, we're two days out from the Fatal Flaws webinar, so let me give you 
 
 None of those are complicated. That's what makes them fatal. Smart people walk into them every week because they're busy, they're optimistic, and nobody warned them.
 
-There are 15 more, and I'm covering all of them live this Wednesday, September 16 at 9am Pacific. 60 minutes of teaching, then 30 minutes of Q&A where you can bring your actual situation and we'll work through it together.
+There are 15 more, and I'm covering all of them live this Wednesday, September 16 at 9am PT. 60 minutes of teaching, then 30 minutes of Q&A where you can bring your actual situation and we'll work through it together.
 
 It's free, everyone who registers gets the replay plus a 30 question assessment to run on your own business, and there are still seats: https://cpgfoundersgroup.com/fatalflaws-webinar
 
@@ -116,15 +117,15 @@ Hope to see you Wednesday!
 
 ## 4. WhatsApp group note — Tuesday, September 8
 
-Hi everyone. A few weeks ago I asked this group what you most wanted me to teach, and over a hundred of you weighed in right here (close to 200 counting LinkedIn and email). Thank you for that.
+Hi everyone! A few weeks ago I asked this group which topics you were most interested in learning more about, and over a hundred of you weighed in right here (close to 200 counting LinkedIn and email). Thank you for that.
 
-The clear winner was the fatal flaws that kill early CPG brands. So I'm going to run a series of free live workshops on the top vote-getters, starting with that one.
+The winner (by far) was the fatal flaws that kill early CPG brands. So I'm going to run a series of free live workshops on the top vote-getters, and that's where we're starting!
 
 The 18 Fatal Flaws That Kill CPG Brands
-Wednesday, September 16, 9 to 10:30am Pacific
+Wednesday, September 16, 9 to 10:30am PT
 60 minutes of teaching, then 30 minutes of open Q&A with you all.
 
-It's free, and everyone who registers gets the replay plus a 30 question Fatal Flaw Assessment and the full white paper. So register even if you can't make it live.
+It's free, and everyone who registers gets the replay plus a 30 question Fatal Flaw Assessment you can run on your own business. So register even if you can't make it live.
 
 https://cpgfoundersgroup.com/fatalflaws-webinar
 
@@ -137,6 +138,5 @@ Jeff
 ## Notes for Joshua
 
 - The Sep 14 post deliberately uses flaws that are NOT in the Sep 29 "The Four That Keep Killing Good Brands" post (long-term contracts, evergreen clauses, trademarks, overpromising capacity). No overlap, and the Sep 29 post can still run as a post-webinar follow-up pointing to the replay.
-- The Sep 8 post does name-check a few of those same four in one sentence as teasers. Fine for a hook, but if you want zero overlap with Sep 29, swap that sentence for the personal guarantee / casual equity examples.
-- Vote count: 187 total votes, so "close to 200" rather than "hundreds." Change it if you want the rounder number, but Jeff's crowd includes people who voted and can count.
+- Vote count: 187 total votes, so "close to 200" everywhere.
 - Email P.S. is intentionally vague about which session is next. Buyer meeting to PO came in second if Jeff wants to name it.
