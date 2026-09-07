@@ -105,11 +105,11 @@ P.S. If you can't make it live, register anyway. The replay and the assessment g
 
 Okay folks, we're two days out from the Fatal Flaws webinar, so let me give you a preview of three I see over and over.
 
-**Personal guarantees.** You'll be tempted. The bank wants one, the landlord wants one, the equipment lender wants one, and it feels like the only way to get the deal done. Don't do it. A personal guarantee survives the business. It survives a shutdown, a restructuring, even a bankruptcy, and it follows you home to your family. I've skirted them for 40 years and you can too. Equity first, then asset-backed financing, then PO financing. It costs more per dollar and it's worth every penny.
+**Raising too late.** Every founder I've worked with underestimates how long a raise takes, and I did too. My rule is the Rule of Twos. It takes twice as long and costs twice as much as you planned. So if you start your next round with three months of runway, you're not raising, you're begging, and investors can smell it from the first meeting. Start the process with at least four months left, and keep 12 to 18 months in the tank whenever you can. Enthusiasm attracts. Desperation repels.
 
-**Casual equity.** Early on equity feels cheap. A point here for an advisor, two for a friend who helped find the first co-packer, a few for a hire you needed to close. Here's the math I walk every founder through. Your company sells for $200 million and you own 4%. That's $8 million before taxes for ten years of your life. Every one of those handshakes was a real decision, and most founders never treated them like one. Vest everything. Every piece.
+**The wrong-stage hire.** You land a big account and decide it's time for a "real" VP of Sales, so you hire the person with the Fortune 500 resume. Six months later they've built a beautiful deck, asked for a bigger team, and haven't closed a single new door themselves. It's not their fault. They were hired for a stage you're not at. Early on you need people who will load the van, work the demo, and call the buyer back at 6pm. Hire for the stage, not the resume, and put vesting on every single share you give out.
 
-**Chronic over-promoting.** This one hides in plain sight because the promo "worked." Velocity jumped the week you were on deal, so you run another one. And another. Six months later you've trained your consumer to wait for the yellow tag, your gross margin has quietly dropped ten points, and your base velocity, the number a buyer actually cares about, is lower than when you started. Promotions should be a calendar, not a reflex.
+**Handing your sales to someone else.** A broker calls and says they'll take the whole region off your plate. It sounds like relief. What actually happens is the relationships with your buyers now live in somebody else's phone, your brand is one of forty in their bag, and when velocity slips you're the last to hear about it. Brokers can be a great tool, but somebody on your team has to own the buyer relationship. Outsource the legwork if you need to. Never outsource the accountability.
 
 None of those are complicated. That's what makes them fatal. Smart people walk into them every week because they're busy, they're optimistic, and nobody warned them.
 
@@ -143,6 +143,6 @@ Jeff
 
 ## Notes for Joshua
 
-- The Sep 14 post deliberately uses flaws that are NOT in the Sep 29 "The Four That Keep Killing Good Brands" post (long-term contracts, evergreen clauses, trademarks, overpromising capacity). No overlap, and the Sep 29 post can still run as a post-webinar follow-up pointing to the replay.
+- The Sep 14 post uses raising too late, the wrong-stage hire, and outsourcing sales. None of those are in the Sep 29 "The Four That Keep Killing Good Brands" post (long-term contracts, evergreen clauses, trademarks, overpromising capacity), and none touch velocity, which the Sep 15 post owns. Previous draft used personal guarantees, casual equity, and chronic over-promoting if you want to swap any back.
 - Vote count: 187 total votes, so "close to 200" everywhere.
 - Email P.S. is intentionally vague about which session is next. Buyer meeting to PO came in second if Jeff wants to name it.
