@@ -4,7 +4,7 @@ import { useEffect, useState, type FormEvent, type ReactNode } from "react";
 
 type Path = "recommend" | "waitlist" | null;
 type Status = "idle" | "loading" | "success" | "error";
-const categories = ["Branding & design", "Packaging", "R&D / formulation", "Co-manufacturing", "Brokers & sales", "Amazon / ecommerce", "Growth marketing", "PR & communications", "Finance / fractional CFO", "Operations & supply chain", "Legal & regulatory", "Data & analytics", "Recruiting & talent", "Other"];
+const categories = ["Branding & design", "Packaging", "R&D / formulation", "Co-manufacturing", "3PL / logistics", "Brokers & sales", "Amazon / ecommerce", "Growth marketing", "PR & communications", "Finance / fractional CFO", "Operations & supply chain", "Legal & regulatory", "Data & analytics", "Recruiting & talent", "Other"];
 const input = "mt-1.5 w-full rounded-lg border border-border bg-white px-4 py-3 outline-none focus:border-accent focus:ring-2 focus:ring-accent/20";
 const label = "block text-sm font-semibold";
 
