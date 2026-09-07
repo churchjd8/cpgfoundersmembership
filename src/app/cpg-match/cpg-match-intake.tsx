@@ -10,7 +10,7 @@ const label = "block text-sm font-semibold";
 
 export function CpgMatchIntake() {
   const [path, setPath] = useState<Path>(null);
-  return <section className="relative z-10 -mt-9 bg-transparent pb-14 md:-mt-12 md:pb-20"><div className="mx-auto max-w-5xl px-4 text-center sm:px-6">
+  return <section id="participate" className="relative z-10 -mt-9 bg-transparent pb-14 md:-mt-12 md:pb-20"><div className="mx-auto max-w-5xl px-4 text-center sm:px-6">
     <div className="rounded-2xl border border-border bg-background p-5 shadow-xl sm:p-8">
     <p className="text-sm font-semibold uppercase tracking-[.16em] text-muted">Choose how you want to participate</p>
     <div className="mx-auto mt-5 grid gap-4 sm:grid-cols-2">
