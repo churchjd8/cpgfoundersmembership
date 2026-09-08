@@ -22,10 +22,13 @@ async function getAccessToken() {
   return data.access_token as string;
 }
 
-/** Submits a name/email to a Kajabi form. Throws if Kajabi rejects it. */
+/**
+ * Submits a name/email (plus any custom_N fields the form defines) to a
+ * Kajabi form. Throws if Kajabi rejects it.
+ */
 export async function submitToKajabiForm(
   formId: string,
-  { name, email }: { name?: string; email: string }
+  { name, email, ...custom }: { name?: string; email: string; [custom: `custom_${number}`]: string }
 ) {
   const accessToken = await getAccessToken();
 
@@ -38,7 +41,7 @@ export async function submitToKajabiForm(
     body: JSON.stringify({
       data: {
         type: "form_submissions",
-        attributes: { name: name || "", email },
+        attributes: { name: name || "", email, ...custom },
       },
     }),
   });
