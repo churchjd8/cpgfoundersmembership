@@ -103,7 +103,6 @@ export const SESSION_MONTHS: SessionMonth[] = [
       { date: "2026-09-10", time: "10:30" }, // Thu 10:30 AM
       { date: "2026-09-10", time: "12:00" }, // Thu 12:00 PM
       { date: "2026-09-11", time: "09:00" }, // Fri 9:00 AM
-      { date: "2026-09-11", time: "10:30" }, // Fri 10:30 AM
       { date: "2026-09-11", time: "12:00" }, // Fri 12:00 PM
       { date: "2026-09-17", time: "09:00" }, // Thu 9:00 AM
       { date: "2026-09-17", time: "10:30" }, // Thu 10:30 AM
