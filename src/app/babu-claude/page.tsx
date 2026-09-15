@@ -32,13 +32,13 @@ const steps = [
   },
   {
     title: "Enter the Babu details",
-    body: "Name: AskBabu. URL: paste the address below exactly. Leave the Advanced settings (OAuth Client ID and Secret) empty. Click Add.",
+    body: "Name it Babu. In the URL field, paste the address below exactly. Then click Continue.",
     code: MCP_URL,
     image: {
       src: "/images/babu-claude/step-add-connector.png",
-      alt: "Claude's Add custom connector dialog filled in with the name AskBabu and the Babu connector URL",
-      width: 598,
-      height: 637,
+      alt: "Claude's Add custom connector dialog filled in with the name Babu and the Babu connector URL",
+      width: 1000,
+      height: 842,
     },
   },
   {
