@@ -34,8 +34,8 @@ const tier = {
       body: "Every other week across all three months. Direct time with him when you're actively working resets, raises, or distributor conversations.",
     },
     {
-      title: "Email and async support in between",
-      body: "A direct line. Gut-checks on a retailer ask, eyes on your model or your deck, whatever you want a second opinion on.",
+      title: "Priority email and async support between calls",
+      body: "A direct line to the front of the queue. Gut-checks on a retailer ask, eyes on your model or your deck, whatever you want a second opinion on, with Jeff getting back to you first.",
     },
   ],
 };
@@ -72,7 +72,7 @@ const summary = [
   { label: "Investment", value: "$5,000/mo — $15,000 total" },
   { label: "Strategy deep dive", value: "Half-day VIP deep dive" },
   { label: "1:1s with Jeff", value: "Bi-weekly 60-min" },
-  { label: "Email & async support", value: true },
+  { label: "Priority email & async support", value: true },
   { label: "Babu Pro ($200/mo)", value: true },
   { label: "MBA for CPG modules", value: true },
   { label: "Templates, tools & white papers", value: true },
