@@ -46,6 +46,7 @@ const CLIENTS: Seed[] = [
   { email: "jade@fermenteria.placeholder", name: "Jade Chang Sheppard", business: "Fermenteria", product: "Fermented Functional Beverage", startDate: "2026-06-16", altEmails: [] },
   { email: "zmoussa@drinktulua.com", name: "Zyad Moussa", business: "Tulua", product: "Shot Company", startDate: null, altEmails: [] },
   { email: "erin@dropsofdough.com", name: "Erin Aliaga", business: "Drops of Dough", product: "Cookie Company", startDate: "2026-06-20", altEmails: [] },
+  { email: "t.zhao@abvcorp.net", name: "Teng Zhao & James Gracey", business: "ABV Corp", product: "Flavor / functional ingredient supplier", startDate: "2026-08-27", altEmails: ["j.gracey@abvcorp.net"] },
 ];
 
 const q = (s: string | null) => (s == null ? "null" : `'${s.replace(/'/g, "''")}'`);
