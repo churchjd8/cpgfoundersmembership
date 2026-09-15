@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Connect Babu to Claude - CPG Founders Group",
@@ -18,6 +19,12 @@ const steps = [
   {
     title: "Open the Connectors menu",
     body: "In the chat box, click the + icon, then choose Connectors. You can also get there from Settings, then Connectors.",
+    image: {
+      src: "/images/babu-claude/step-connectors-menu.png",
+      alt: "Claude's + menu open with Connectors selected, showing the Add connector option",
+      width: 818,
+      height: 491,
+    },
   },
   {
     title: "Add a custom connector",
@@ -27,18 +34,42 @@ const steps = [
     title: "Enter the Babu details",
     body: "Name: AskBabu. URL: paste the address below exactly. Leave the Advanced settings (OAuth Client ID and Secret) empty. Click Add.",
     code: MCP_URL,
+    image: {
+      src: "/images/babu-claude/step-add-connector.png",
+      alt: "Claude's Add custom connector dialog filled in with the name AskBabu and the Babu connector URL",
+      width: 598,
+      height: 637,
+    },
   },
   {
     title: "Sign in to Babu",
     body: "A Babu sign-in page opens. Enter the same email and password you use at askbabu.ai. Claude never sees your Babu password, and Babu never sees your Claude password.",
+    image: {
+      src: "/images/babu-claude/step-sign-in.png",
+      alt: "Babu's Sign in to connect Claude page with email and password fields",
+      width: 445,
+      height: 355,
+    },
   },
   {
     title: "Approve the connection",
     body: "Claude asks permission to see your Babu plan and use Babu tools and gurus on your behalf. Click Approve.",
+    image: {
+      src: "/images/babu-claude/step-approve.png",
+      alt: "Connect Claude to Babu approval screen listing the two permissions with Deny and Approve buttons",
+      width: 728,
+      height: 556,
+    },
   },
   {
     title: "You're connected",
     body: "AskBabu now shows in your connectors list with its tools underneath. Start a new chat and ask a CPG question. Claude picks the right Babu guru or data tool and runs it for you.",
+    image: {
+      src: "/images/babu-claude/step-connected.png",
+      alt: "Claude's Connectors settings showing AskBabu connected with its list of tools",
+      width: 1158,
+      height: 858,
+    },
   },
 ];
 
@@ -165,7 +196,7 @@ export default function BabuClaudePage() {
                 <div className="flex-1 bg-card rounded-xl border border-border p-5 sm:p-6">
                   <h3 className="font-semibold text-lg">{step.title}</h3>
                   <p className="mt-2 text-muted leading-relaxed">{step.body}</p>
-                  {step.code && (
+                  {"code" in step && step.code && (
                     <div className="mt-4">
                       <p className="text-xs font-bold uppercase tracking-wider text-muted mb-2">
                         Connector URL
@@ -173,6 +204,18 @@ export default function BabuClaudePage() {
                       <code className="block w-full overflow-x-auto rounded-lg bg-foreground text-white px-4 py-3 text-sm font-mono select-all">
                         {step.code}
                       </code>
+                    </div>
+                  )}
+                  {"image" in step && step.image && (
+                    <div className="mt-5 overflow-hidden rounded-lg border border-border bg-[#1a1a1a]">
+                      <Image
+                        src={step.image.src}
+                        alt={step.image.alt}
+                        width={step.image.width}
+                        height={step.image.height}
+                        sizes="(max-width: 768px) 100vw, 640px"
+                        className="w-full h-auto"
+                      />
                     </div>
                   )}
                 </div>
