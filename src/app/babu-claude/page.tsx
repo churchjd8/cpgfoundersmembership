@@ -18,12 +18,12 @@ const steps = [
   },
   {
     title: "Open the Connectors menu",
-    body: "In the chat box, click the + icon, then choose Connectors. You can also get there from Settings, then Connectors.",
+    body: "In the chat box, click the + icon, then choose Connectors. Hover Add connector and you'll see Add custom connector, which is what you want in the next step. You can also get there from Settings, then Connectors.",
     image: {
       src: "/images/babu-claude/step-connectors-menu.png",
-      alt: "Claude's + menu open with Connectors selected, showing the Add connector option",
-      width: 818,
-      height: 491,
+      alt: "Claude's + menu open with Connectors selected, then Add connector, then Add custom connector",
+      width: 1200,
+      height: 752,
     },
   },
   {
