@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { connection } from "next/server";
 import { getAllPosts } from "@/lib/blog";
 import { BlogList } from "./blog-list";
 
@@ -8,7 +9,8 @@ export const metadata: Metadata = {
     "Insights on fundraising, retail, margins, and scaling CPG brands from Jeff Church and the CPG Founders Group.",
 };
 
-export default function BlogPage() {
+export default async function BlogPage() {
+  await connection();
   const posts = getAllPosts();
 
   return (

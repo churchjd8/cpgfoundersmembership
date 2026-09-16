@@ -2,19 +2,17 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getAllSlugs, getPostBySlug } from "@/lib/blog";
+import { connection } from "next/server";
+import { getPostBySlug } from "@/lib/blog";
 import { BlogContent } from "./blog-content";
 import { BlogNewsletterForm } from "@/components/blog-newsletter-form";
-
-export function generateStaticParams() {
-  return getAllSlugs().map((slug) => ({ slug }));
-}
 
 export async function generateMetadata({
   params,
 }: {
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
+  await connection();
   const { slug } = await params;
   const post = getPostBySlug(slug);
   if (!post) return { title: "Post Not Found" };
@@ -26,7 +24,7 @@ export async function generateMetadata({
       title: post.title,
       description: post.description,
       type: "article",
-      publishedTime: post.date,
+      publishedTime: post.publishAt || post.date,
       authors: [post.author],
       ...(post.image ? { images: [post.image] } : {}),
     },
@@ -38,6 +36,7 @@ export default async function BlogPostPage({
 }: {
   params: Promise<{ slug: string }>;
 }) {
+  await connection();
   const { slug } = await params;
   const post = getPostBySlug(slug);
   if (!post) notFound();

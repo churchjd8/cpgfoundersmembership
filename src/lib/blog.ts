@@ -10,6 +10,7 @@ export interface BlogPost {
   title: string;
   description: string;
   date: string;
+  publishAt?: string;
   author: string;
   image?: string;
   tags: string[];
@@ -18,7 +19,7 @@ export interface BlogPost {
   content: string;
 }
 
-export function getAllPosts(): BlogPost[] {
+export function getAllPosts(now = Date.now()): BlogPost[] {
   const files = fs.readdirSync(BLOG_DIR).filter((f) => f.endsWith(".mdx"));
 
   const posts = files.map((filename) => {
@@ -33,6 +34,7 @@ export function getAllPosts(): BlogPost[] {
       title: data.title,
       description: data.description,
       date: data.date,
+      publishAt: data.publishAt,
       author: data.author || "Jeff Church",
       image: data.image || null,
       tags: data.tags || [],
@@ -42,19 +44,18 @@ export function getAllPosts(): BlogPost[] {
     };
   });
 
-  return posts.sort(
-    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
-  );
+  // An explicit timestamp gates both listings and direct article URLs. Invalid
+  // timestamps stay unpublished; older posts without a schedule keep working.
+  return posts
+    .filter((post) => post.publishAt === undefined || Date.parse(post.publishAt) <= now)
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }
 
-export function getPostBySlug(slug: string): BlogPost | undefined {
-  const posts = getAllPosts();
+export function getPostBySlug(slug: string, now = Date.now()): BlogPost | undefined {
+  const posts = getAllPosts(now);
   return posts.find((p) => p.slug === slug);
 }
 
 export function getAllSlugs(): string[] {
-  return fs
-    .readdirSync(BLOG_DIR)
-    .filter((f) => f.endsWith(".mdx"))
-    .map((f) => f.replace(/\.mdx$/, ""));
+  return getAllPosts().map((post) => post.slug);
 }

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { connection } from "next/server";
 import Image from "next/image";
 import Link from "next/link";
 import { getAllPosts } from "@/lib/blog";
@@ -94,7 +95,8 @@ function ResourceIcon({ kind }: { kind: keyof typeof KIND_LABELS }) {
   );
 }
 
-export default function ResourcesPage() {
+export default async function ResourcesPage() {
+  await connection();
   const posts = getAllPosts();
   const featuredPost = posts.find((p) => p.featured);
   const recentPosts = posts.filter((p) => !p.featured).slice(0, 2);
