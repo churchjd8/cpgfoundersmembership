@@ -28,7 +28,10 @@ export default function FatalFlawsResourcesPage() {
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold">CPG Fatal Flaws · Workshop with Jeff Church</p>
           <h1 className="mt-6 max-w-3xl font-[family-name:var(--font-playfair)] text-4xl font-bold leading-[1.1] tracking-tight sm:text-5xl lg:text-6xl">Catch the flaws.<br />Build a stronger business.</h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/75">Your workshop resources, next steps, and replay. Keep this page handy and start with the challenge that matters most to your brand.</p>
-          <a href="#replay" className="mt-6 inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-gold underline underline-offset-4 hover:text-white">{replay ? "Watch the replay" : "Replay Available Soon"} <span aria-hidden="true">↓</span></a>
+          <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2">
+            <a href="#handout" className="inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-gold underline underline-offset-4 hover:text-white">Get the workshop PDF <span aria-hidden="true">↓</span></a>
+            <a href="#replay" className="inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-gold underline underline-offset-4 hover:text-white">{replay ? "Watch the replay" : "Replay Available Soon"} <span aria-hidden="true">↓</span></a>
+          </div>
         </div>
       </section>
 
@@ -60,6 +63,17 @@ export default function FatalFlawsResourcesPage() {
                 <Link href={resource.href} className="inline-flex min-h-11 items-center gap-2 font-semibold text-accent underline decoration-accent/30 underline-offset-4 hover:text-accent-dark">{resource.cta} <span aria-hidden="true">→</span></Link>
               </article>
             ))}
+          </div>
+        </section>
+
+        <section id="handout" aria-labelledby="handout-title" className="mb-12 scroll-mt-24 rounded-xl border border-border bg-card-flagship p-7 sm:p-9">
+          <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+            <div className="max-w-2xl">
+              <p className="text-xs font-bold uppercase tracking-wider text-accent">Your workshop companion · 6-page PDF</p>
+              <h2 id="handout-title" className="mt-3 text-2xl font-bold tracking-tight sm:text-3xl">Fatal Flaws &amp; Fatal Mistakes</h2>
+              <p className="mt-4 leading-relaxed text-muted">Keep Jeff&rsquo;s concise list of CPG fatal flaws, common mistakes, and the numbers shared in the workshop. Download it, flag the risks that apply to your brand, and use it alongside your Babu assessment.</p>
+            </div>
+            <a href="/downloads/fatal-flaws-and-fatal-mistakes-workshop.pdf" download className="inline-flex min-h-12 shrink-0 items-center justify-center gap-3 rounded-lg bg-accent px-6 py-4 text-center font-bold text-white transition hover:bg-accent-dark focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">Download the PDF <span aria-hidden="true">↓</span></a>
           </div>
         </section>
 
