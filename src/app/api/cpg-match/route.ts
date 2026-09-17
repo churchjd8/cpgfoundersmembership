@@ -57,10 +57,15 @@ export async function POST(request: Request) {
     const data = Object.fromEntries(Object.entries(incoming).map(([key, value]) => [key, Array.isArray(value) ? value.map(item => clean(item, 200)) : clean(value)])) as Submission;
     if (!data.type || !["waitlist", "recommendation"].includes(data.type) || !data.firstName || !data.lastName || !data.email || !data.brand) return Response.json({ error: "Missing required fields" }, { status: 400 });
     if (!/^\S+@\S+\.\S+$/.test(data.email)) return Response.json({ error: "Invalid email" }, { status: 400 });
-    if (data.type === "recommendation" && (!data.vendorName || !data.category || !data.scope || !data.certification)) return Response.json({ error: "Missing recommendation fields" }, { status: 400 });
+    // Keep accepting a single category from forms opened before this update.
+    const selectedCategories = Array.isArray(data.category) ? data.category : [data.category];
+    const validCategories = selectedCategories.length > 0 && selectedCategories.every(value => typeof value === "string" && value.length > 0);
+    if (data.type === "recommendation" && (!data.vendorName || !validCategories || !data.scope || !data.certification)) return Response.json({ error: "Missing recommendation fields" }, { status: 400 });
+
+    if (data.type === "recommendation") data.category = [...new Set(selectedCategories)];
 
     const supabase = getSupabaseAdmin();
-    const databaseSave = supabase ? supabase.from("cpg_match_submissions").insert({ submission_type: data.type, first_name: data.firstName, last_name: data.lastName, email: data.email, brand: data.brand, vendor_name: data.vendorName || null, vendor_category: data.category || null, payload: data }).then(({ error }) => { if (error) console.error("CPG Match Supabase insert error:", error); }) : Promise.resolve();
+    const databaseSave = supabase ? supabase.from("cpg_match_submissions").insert({ submission_type: data.type, first_name: data.firstName, last_name: data.lastName, email: data.email, brand: data.brand, vendor_name: data.vendorName || null, vendor_category: data.type === "recommendation" ? (data.category as string[]).join(", ") : null, payload: data }).then(({ error }) => { if (error) console.error("CPG Match Supabase insert error:", error); }) : Promise.resolve();
 
     const isReview = data.type === "recommendation";
     const emailHeaders = { Authorization: `Bearer ${process.env.RESEND_API_KEY}`, "Content-Type": "application/json" };
