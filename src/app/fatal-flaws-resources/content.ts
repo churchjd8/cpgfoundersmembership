@@ -5,5 +5,8 @@ export const workshop: {
   replay: { kind: "embed" | "video"; url: string } | null;
 } = {
   babuTrialUrl: "https://www.askbabu.ai",
-  replay: null,
+  replay: {
+    kind: "video",
+    url: "https://vo8sl8ej2beje2wu.public.blob.vercel-storage.com/replays/cpg-fatal-flaws-workshop-replay-2026-09-16.mp4",
+  },
 };

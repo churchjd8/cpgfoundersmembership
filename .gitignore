@@ -43,3 +43,7 @@ next-env.d.ts
 # Rendered HTML from scripts/render-kit-emails.ts — regenerate, don't commit.
 # The hand-written .md copy in kajabi-emails/ IS tracked.
 kajabi-emails/*.html
+
+# Raw video sources (hosted on Vercel Blob, never commit)
+*.mp4
+*.mov
