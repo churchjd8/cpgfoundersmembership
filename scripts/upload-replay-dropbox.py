@@ -3,6 +3,9 @@
 
 Usage (from /home/joshua/jeffchurch):
   python3 scripts/upload-replay-dropbox.py <local.mp4> <dropbox-filename.mp4> [content-file]
+  python3 scripts/upload-replay-dropbox.py --link "<dropbox share url>" [content-file]
+      (skip the upload; use a link copied from the Dropbox web UI. Needed while the
+       Dropbox app lacks the sharing.write scope - app ID 7110883, Permissions tab.)
 
   - Uploads in 100 MB chunks to /2026 Dream Makers/Website Media/replays/
   - Creates (or reuses) a public shared link, converts it to a direct raw= link
@@ -31,8 +34,10 @@ def post(url, data=None, headers=None):
 def main():
     if len(sys.argv) < 3:
         print(__doc__); sys.exit(1)
-    src, name = sys.argv[1], sys.argv[2]
     content_file = sys.argv[3] if len(sys.argv) > 3 else "src/app/fatal-flaws-resources/content.ts"
+    if sys.argv[1] == "--link":
+        finish(sys.argv[2], "replay", content_file); return
+    src, name = sys.argv[1], sys.argv[2]
     env()
     tok = post("https://api.dropbox.com/oauth2/token",
         urllib.parse.urlencode({"grant_type": "refresh_token", "refresh_token": os.environ["DROPBOX_REFRESH_TOKEN"],
@@ -66,9 +71,16 @@ def main():
                     json.dumps({"path": dest, "settings": {"requested_visibility": "public", "audience": "public", "access": "viewer"}}).encode(),
                     {**H, "Content-Type": "application/json"})
     except urllib.error.HTTPError as e:
-        body = json.loads(e.read().decode())
-        link = body["error"]["shared_link_already_exists"]["metadata"]
-    url = re.sub(r"[?&]dl=\d", "", link["url"])
+        raw = e.read().decode()
+        try:
+            link = json.loads(raw)["error"]["shared_link_already_exists"]["metadata"]
+        except (ValueError, KeyError):
+            sys.exit(f"upload done but shared link failed ({e.code}): {raw}\n"
+                     "Create the link in the Dropbox web UI and rerun with --link \"<url>\"")
+    finish(link["url"], name, content_file)
+
+def finish(share_url, name, content_file):
+    url = re.sub(r"[?&]dl=\d", "", share_url)
     url += ("&" if "?" in url else "?") + "raw=1"
     print("direct url:", url)
 
