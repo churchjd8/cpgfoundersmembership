@@ -180,3 +180,24 @@ export async function ensureDropboxFolder(path: string): Promise<void> {
   const err = await res.text();
   throw new Error(`Dropbox create_folder failed (${res.status}): ${err}`);
 }
+
+// Mints a direct download URL for a file. Dropbox temporary links last four
+// hours, serve the file with byte-range support, and need only the
+// files.content.read scope (the app has no sharing.* scopes).
+export async function getDropboxTemporaryLink(path: string): Promise<string> {
+  const token = await getAccessToken();
+  const res = await fetch("https://api.dropboxapi.com/2/files/get_temporary_link", {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${token}`,
+      "Content-Type": "application/json",
+    },
+    body: asciiEscape(JSON.stringify({ path })),
+  });
+  if (!res.ok) {
+    const err = await res.text();
+    throw new Error(`Dropbox temporary link failed (${res.status}): ${err}`);
+  }
+  const data = (await res.json()) as { link: string };
+  return data.link;
+}
