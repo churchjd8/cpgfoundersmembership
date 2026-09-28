@@ -32,7 +32,8 @@
     "2026-10-05T12:00:00-07:00": {
       "event_id": "75gmkr8s3pe9amf2i57rppm5g0",
       "month": "October",
-      "status": "hold"
+      "status": "booked",
+      "note": "Tulua / Zeyad Moussa, converted 2026-09-28"
     },
     "2026-10-05T16:00:00-07:00": {
       "event_id": "1k4pnqfk9ndb3795qg2du38pok",
@@ -58,7 +59,8 @@
     "2026-10-06T13:00:00-07:00": {
       "event_id": "g3igolif00dj5u0ho7ipk9sr38",
       "month": "October",
-      "status": "hold"
+      "status": "booked",
+      "note": "BerriPro / Jerome Tse - Berri Organics, converted 2026-09-28"
     },
     "2026-10-12T08:00:00-07:00": {
       "event_id": "uappr2mqo5a69lvlndv05treuo",
