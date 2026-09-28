@@ -52,9 +52,7 @@ export function ReviewForm({ onDone }: { onDone: () => void }) {
     setAnswers((current) => ({
       ...current,
       [key]: value,
-      ...(key === "recommendation" && !isPositive({ recommendation: value })
-        ? { vendorNotificationPermission: "no" }
-        : {}),
+      ...(key === "recommendation" ? { vendorNotificationPermission: "" } : {}),
     }));
   }
   const props = (name: string) => ({
@@ -265,11 +263,6 @@ export function ReviewForm({ onDone }: { onDone: () => void }) {
             relevant to their business. Use the stage of the company involved in
             this engagement, even if you worked at a previous company.
           </p>
-          <Text
-            {...props("engagementCompany")}
-            label="Company involved in this engagement (optional, private)"
-            help="Useful for private verification if this was a previous employer. You can skip this."
-          />
         </div>
         <div data-step="2" hidden={step !== 2} className="space-y-5">
           <h3 className="text-2xl font-bold">How did it go?</h3>
@@ -337,9 +330,7 @@ export function ReviewForm({ onDone }: { onDone: () => void }) {
             </summary>
             <div className="mt-4 space-y-4">
               <p className="text-sm text-muted">
-                Skip any sensitive or identifying details. These describe this
-                engagement, not the vendor’s current prices. They stay private
-                unless you choose to publish them in the final step.
+                please only put details you&apos;re comfortable having shared
               </p>
               <Text
                 {...props("spend")}
@@ -380,7 +371,7 @@ export function ReviewForm({ onDone }: { onDone: () => void }) {
           </details>
           <Text
             {...props("buyerNeeds")}
-            label="Who are you looking for—and what do you want help with? (optional, private)"
+            label="Are there any vendors you're particularly looking for right now?"
             multiline
           />
           {a.buyerNeeds?.trim() && (
@@ -411,9 +402,9 @@ export function ReviewForm({ onDone }: { onDone: () => void }) {
           )}
           <h4 className="font-bold">Private verification</h4>
           <p className="text-sm text-muted">
-            We use your details to verify first-hand experience. Your email,
-            verification contact, previous employer, and sourcing needs are
-            never included in the public review.
+            We use your details to verify you are a founder or operator. Your
+            email, verification contact, and current vendor needs are never
+            included in the public review.
           </p>
           <div className="grid gap-4 sm:grid-cols-2">
             <Text {...props("firstName")} label="First name" required />
@@ -432,27 +423,41 @@ export function ReviewForm({ onDone }: { onDone: () => void }) {
           </div>
           <Select
             {...props("attribution")}
-            label="Public review attribution"
+            label="Do you want your name shown with the review, or to remain anonymous?"
             options={[
               ["anonymous", "Show “Verified CPG Founder”"],
               ["named", "Show my name and current company"],
             ]}
             required
           />
-          {isPositive(a) && (
-            <Select
-              {...props("vendorNotificationPermission")}
-              label="For this positive review, may we tell the vendor you nominated them?"
-              options={[
-                [
-                  "yes",
-                  "Yes — share my name and company for this positive review",
-                ],
-                ["no", "No — do not identify me to the vendor"],
-              ]}
-              required
-            />
-          )}
+          <fieldset className="rounded-lg border border-border p-4">
+            <legend className="text-sm font-semibold">
+              For positive reviews only, may we let the vendor know that you
+              nominated them? *
+            </legend>
+            <div className="mt-3 flex flex-wrap gap-5">
+              {[
+                ["yes", "yes"],
+                ["no", "no"],
+                ["negative", "negative review"],
+              ].map(([value, label]) => (
+                <label key={value} className="flex items-center gap-2 text-sm">
+                  <input
+                    type="radio"
+                    name="vendorNotificationPermission"
+                    value={value}
+                    checked={a.vendorNotificationPermission === value}
+                    onChange={() =>
+                      change("vendorNotificationPermission", value)
+                    }
+                    required
+                    className="h-4 w-4 accent-[var(--accent)]"
+                  />
+                  {label}
+                </label>
+              ))}
+            </div>
+          </fieldset>
           <div className="grid gap-4 sm:grid-cols-2">
             <Text
               {...props("vendorContactName")}
@@ -469,19 +474,6 @@ export function ReviewForm({ onDone }: { onDone: () => void }) {
               required={a.vendorNotificationPermission === "yes"}
             />
           </div>
-          <p className="text-sm text-muted">
-            Providing a vendor contact sends no email. Permission to identify
-            you for a positive review is separate from public anonymity and does
-            not authorize a sourcing introduction.
-          </p>
-          <Check
-            checked={a.certification === "confirmed"}
-            onChange={(value) =>
-              change("certification", value ? "confirmed" : "")
-            }
-            required
-            label="This reflects my genuine first-hand experience."
-          />
         </div>
         <div data-step="4" hidden={step !== 4} className="space-y-5">
           <h3 className="text-2xl font-bold">
@@ -537,45 +529,6 @@ export function ReviewForm({ onDone }: { onDone: () => void }) {
             maxLength={12000}
             required
           />
-          <fieldset className="space-y-3 rounded-lg border border-border p-4">
-            <legend className="font-semibold">Public context</legend>
-            <p className="text-sm">
-              Vendor, categories, and project scope appear publicly. Use Back to
-              generalize your scope or change attribution.
-            </p>
-            <Check
-              checked={a.publishTiming === "yes"}
-              onChange={(value) =>
-                change("publishTiming", value ? "yes" : "no")
-              }
-              label="Include engagement dates publicly"
-            />
-            <Check
-              checked={a.publishStage === "yes"}
-              onChange={(value) => change("publishStage", value ? "yes" : "no")}
-              label="Include company stage during the engagement publicly"
-            />
-          </fieldset>
-          {[a.spend, a.spendCovers, a.commercialTerms].some((x) =>
-            x?.trim(),
-          ) && (
-            <div className="space-y-2">
-              <Select
-                {...props("commercialVisibility")}
-                label="Optional commercial details"
-                options={[
-                  ["public", "May be published with my review."],
-                  ["private", "For CPG Match’s private research only."],
-                ]}
-                required
-              />
-              <p className="text-sm text-muted">
-                If published, these details always include engagement timing and
-                scope for context. Omit them or keep them private if they could
-                identify you.
-              </p>
-            </div>
-          )}
           <h4 className="font-bold">
             Public preview — this is what you’re approving
           </h4>

@@ -11,7 +11,9 @@ function permission(entry: Entry) {
     ? "Yes — positive reviews only"
     : entry.payload.vendorNotificationPermission === "no"
       ? "No — do not identify reviewer"
-      : "Not recorded — do not identify reviewer";
+      : entry.payload.vendorNotificationPermission === "negative"
+        ? "Negative review — do not identify reviewer"
+        : "Not recorded — do not identify reviewer";
 }
 
 export function Submissions({ entries: initialEntries }: { entries: Entry[] }) {
@@ -124,7 +126,12 @@ export function Submissions({ entries: initialEntries }: { entries: Entry[] }) {
     );
   return (
     <section className="mt-7">
-      <a href="/api/cpg-match-admin/export?audience=public" className="mb-4 inline-block text-sm font-semibold text-accent underline">Export public reviews only (approved and verified)</a>
+      <a
+        href="/api/cpg-match-admin/export?audience=public"
+        className="mb-4 inline-block text-sm font-semibold text-accent underline"
+      >
+        Export public reviews only (approved and verified)
+      </a>
       <div className="flex flex-wrap gap-3" aria-label="Submission type">
         {[
           ["recommendation", "Vendor nominations"],
@@ -243,6 +250,7 @@ export function Submissions({ entries: initialEntries }: { entries: Entry[] }) {
                 <option value="">All permissions</option>
                 <option value="yes">Yes — positive reviews only</option>
                 <option value="no">No</option>
+                <option value="negative">Negative review</option>
                 <option value="unrecorded">Not recorded</option>
               </select>
             </label>
@@ -275,7 +283,8 @@ export function Submissions({ entries: initialEntries }: { entries: Entry[] }) {
       <p className="my-4 text-sm text-muted">
         {visible.length}{" "}
         {type === "recommendation" ? "nominations" : "waitlist signups"} shown.
-        Private CRM exports contain verification, sourcing and internal notes. Do not share them publicly.
+        Private CRM exports contain verification, sourcing and internal notes.
+        Do not share them publicly.
       </p>
       <div className="space-y-3">
         {visible.map((entry) => (
@@ -373,7 +382,14 @@ export function Submissions({ entries: initialEntries }: { entries: Entry[] }) {
                 {Object.entries(entry.payload || {})
                   .filter(
                     ([key, value]) =>
-                      !["type", "schemaVersion", "draftAcknowledgement", "approvedPublicReview"].includes(key) && value !== "" && value != null,
+                      ![
+                        "type",
+                        "schemaVersion",
+                        "draftAcknowledgement",
+                        "approvedPublicReview",
+                      ].includes(key) &&
+                      value !== "" &&
+                      value != null,
                   )
                   .map(([key, value]) => (
                     <div key={key}>

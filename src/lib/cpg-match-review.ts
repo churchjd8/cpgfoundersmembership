@@ -59,7 +59,7 @@ export const ratingFields = [
   ["communication", "Communication"],
   ["delivery", "On-time delivery"],
   ["value", "Value for cost"],
-  ["expectations", "Promise vs. delivery"],
+  ["expectations", "expectation/promise vs. actual result"],
   ["stageFit", "Fit for your stage"],
 ] as const;
 export const unavailableOptions = [
@@ -98,7 +98,7 @@ export function engagementLabel(a: ReviewAnswers) {
   if (a.engagementStatus === "unknown") return "Engagement dates not recalled";
   return `${a.startYear}–${a.engagementStatus === "ongoing" ? "ongoing at submission" : a.endYear}`;
 }
-export function buildReviewDraft(a: ReviewAnswers) {
+export function buildReviewDraft(a: ReviewAnswers, legacyLabels = false) {
   const paragraphs = [
     `We hired ${a.vendorName || "this vendor"} to: ${a.scope || "[project scope]"}`,
   ];
@@ -106,7 +106,10 @@ export function buildReviewDraft(a: ReviewAnswers) {
     paragraphs.push(`What was especially valuable: ${a.valuable.trim()}`);
   const scores = ratingFields
     .filter(([field]) => a[field])
-    .map(([field, label]) => `${label}: ${a[field]}`);
+    .map(
+      ([field, label]) =>
+        `${legacyLabels && field === "expectations" ? "Promise vs. delivery" : label}: ${a[field]}`,
+    );
   if (scores.length) paragraphs.push(scores.join(". ") + ".");
   if (a.disappointed)
     paragraphs.push(
@@ -319,11 +322,11 @@ export function parseReview(body: Record<string, unknown>) {
     !sourcingTimes.includes(a.sourcingTimeline)
   )
     throw new Error("Choose a valid sourcing timeline.");
-  if (!["yes", "no"].includes(a.vendorNotificationPermission))
+  if (!["yes", "no", "negative"].includes(a.vendorNotificationPermission))
     throw new Error(
       "Choose whether we may identify you to the vendor for a positive review.",
     );
-  if (!isPositive(a) && a.vendorNotificationPermission !== "no")
+  if (!isPositive(a) && a.vendorNotificationPermission === "yes")
     throw new Error(
       "Vendor notification permission applies only to positive recommendations.",
     );
@@ -331,11 +334,13 @@ export function parseReview(body: Record<string, unknown>) {
     throw new Error("Provide the vendor contact email when giving permission.");
   if (a.vendorContactEmail && !/^\S+@\S+\.\S+$/.test(a.vendorContactEmail))
     throw new Error("Enter a valid vendor contact email.");
-  if (a.certification !== "confirmed" || body.reviewApproved !== true)
-    throw new Error(
-      "Confirm your first-hand experience and approve the public review.",
-    );
-  if (a.draftAcknowledgement !== buildReviewDraft(a))
+  if (body.reviewApproved !== true)
+    throw new Error("Please approve the public review.");
+  // Existing approvals and forms opened before the rating label changed remain valid.
+  if (
+    a.draftAcknowledgement !== buildReviewDraft(a) &&
+    a.draftAcknowledgement !== buildReviewDraft(a, true)
+  )
     throw new Error(
       "Your answers changed. Review the updated suggestion before approving.",
     );

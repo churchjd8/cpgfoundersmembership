@@ -248,3 +248,21 @@ test("vendor intake validates its own confirmation and current pricing independe
     "",
   );
 });
+
+test("simplified form accepts no certification and an explicit negative-review permission choice", () => {
+  const a = answers({ certification: "", vendorNotificationPermission: "negative" });
+  const parsed = parseReview(submission(a));
+  assert.equal(parsed.answers.certification, "");
+  assert.equal(parsed.answers.vendorNotificationPermission, "negative");
+  assert.equal(parsed.publicReview.commercial, undefined);
+  assert.throws(() => parseReview(submission(answers({ vendorNotificationPermission: "" }))));
+  assert.throws(() => parseReview(submission(answers({ vendorNotificationPermission: "yes", vendorContactEmail: "vendor@example.invalid" }))));
+});
+test("rating label changes preserve approval compatibility without changing existing review text", () => {
+  const a = answers();
+  a.reviewText = buildReviewDraft(a, true);
+  const old = { ...submission(a), draftAcknowledgement: buildReviewDraft(a, true) };
+  assert.equal(parseReview(old).publicReview.text, a.reviewText);
+  assert.match(buildReviewDraft(a), /expectation\/promise vs\. actual result/);
+  assert.throws(() => parseReview({ ...old, expectations: "5 — Excellent" }));
+});

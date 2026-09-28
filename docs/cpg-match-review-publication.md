@@ -67,3 +67,15 @@ refresh, approval tampering, private projection checks across HTML/API/CSV, hist
 record readability, verified publication/unpublication, and vendor intake persistence.
 Review submission calls and confirmation emails were mocked; database integration tests
 used temporary records and removed them afterward.
+
+## Simplified form copy update
+
+The current UI no longer asks for the previous employer or a first-hand-experience
+certification checkbox. Vendor notification uses a required Yes / No / Negative review
+choice; only Yes on a positive recommendation grants that permission. Nina can filter
+negative-review permission responses separately. The public-context and commercial
+publication selectors have been removed from the UI: new submissions keep timing,
+stage and supplementary commercial answers private by default. Reviewers still approve
+the exact editable text, attribution and displayed scope. Earlier recorded publication
+choices are preserved, and the former rating label remains accepted when validating
+an existing approved draft; existing review text is never rewritten.
