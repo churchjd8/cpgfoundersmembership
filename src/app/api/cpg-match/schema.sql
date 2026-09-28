@@ -15,3 +15,8 @@ alter table public.cpg_match_submissions enable row level security;
 
 create index if not exists cpg_match_submissions_type_created_idx
   on public.cpg_match_submissions (submission_type, created_at desc);
+
+-- Private admin workflow, kept separate from the founder's submitted answers.
+alter table public.cpg_match_submissions
+  add column if not exists crm jsonb not null default '{}'::jsonb,
+  add column if not exists crm_version integer not null default 0;

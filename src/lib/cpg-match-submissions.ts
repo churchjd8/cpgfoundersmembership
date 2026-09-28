@@ -1,6 +1,7 @@
+import type { VendorCrm } from "@/lib/cpg-match-crm";
 import { getSupabaseAdmin } from "@/lib/supabase";
 
-export type Entry = { id: string; submission_type: string; first_name: string; last_name: string; email: string; brand: string; vendor_name: string | null; vendor_category: string | null; payload: Record<string, unknown>; created_at: string };
+export type Entry = { id: string; submission_type: string; first_name: string; last_name: string; email: string; brand: string; vendor_name: string | null; vendor_category: string | null; payload: Record<string, unknown>; created_at: string; crm: Partial<VendorCrm>; crm_version: number };
 
 export async function loadSubmissions(type?: string) {
   const supabase = getSupabaseAdmin();

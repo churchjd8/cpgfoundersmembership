@@ -1,3 +1,4 @@
+import { vendorCrm } from "@/lib/cpg-match-crm";
 import { cookies } from "next/headers";
 import { loadSubmissions } from "@/lib/cpg-match-submissions";
 import { CPG_MATCH_ADMIN_COOKIE, isCpgMatchAdmin } from "@/lib/cpg-match-admin-auth";
@@ -15,8 +16,8 @@ export async function GET(request: Request) {
   try {
     const data = await loadSubmissions(type);
     const fields = ["vendorContactName", "vendorContactEmail", "vendorNotificationPermission", "vendorPermissionRecordedAt", "vendorPermissionScope", "attribution", "scope", "workPeriod", "quality", "communication", "delivery", "value", "expectations", "stageFit", "disappointed", "companyStage", "investment", "bestFor", "knowBeforeHiring", "certification", "needs"];
-    const header = ["id", "type", "first_name", "last_name", "email", "brand", "vendor_name", "vendor_category", "created_at", ...fields, "full_response"];
-    const lines = data.map(row => [row.id, row.submission_type, row.first_name, row.last_name, row.email, row.brand, row.vendor_name, row.vendor_category, row.created_at, ...fields.map(field => row.payload?.[field] ?? (field === "vendorNotificationPermission" ? "Not recorded" : "")), JSON.stringify(row.payload)].map(csv).join(","));
+    const header = ["id", "type", "first_name", "last_name", "email", "brand", "vendor_name", "vendor_category", "created_at", ...fields, "status", "owner", "next_action", "follow_up_date", "last_updated", "activity_and_notes", "full_response"];
+    const lines = data.map(row => [row.id, row.submission_type, row.first_name, row.last_name, row.email, row.brand, row.vendor_name, row.vendor_category, row.created_at, ...fields.map(field => row.payload?.[field] ?? (field === "vendorNotificationPermission" ? "Not recorded" : "")), ...(row.submission_type === "recommendation" ? [vendorCrm(row.crm).status, vendorCrm(row.crm).owner, vendorCrm(row.crm).nextAction, vendorCrm(row.crm).followUpDate, vendorCrm(row.crm).updatedAt, vendorCrm(row.crm).activity.map(item => `${item.at}: ${item.text}`).join("\n\n")] : ["", "", "", "", "", ""]), JSON.stringify(row.payload)].map(csv).join(","));
     return new Response("\uFEFF" + [header.join(","), ...lines].join("\r\n"), { headers: { "Content-Type": "text/csv; charset=utf-8", "Content-Disposition": `attachment; filename=cpg-match-${type === "recommendation" ? "nominations" : type || "submissions"}.csv`, "Cache-Control": "no-store" } });
   } catch (error) {
     console.error("CPG Match export error:", error);
