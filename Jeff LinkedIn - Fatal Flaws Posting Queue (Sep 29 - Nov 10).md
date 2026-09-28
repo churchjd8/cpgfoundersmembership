@@ -9,11 +9,12 @@
 | --- | --- | --- | --- |
 | Sep 29 | Tue | FF #3: THE $38,000 SIGNATURE | Fatal Flaws assessment |
 | Oct 1 | Thu | FF #5: PARK CITY MISSED THE DATE BY 2 DAYS | none |
-| Oct 2 | Fri | WhatsApp promo (new): THE QUESTION THAT COMES UP MORE THAN ANY OTHER | Founders Club (WhatsApp) |
+| Oct 2 | Fri | WhatsApp promo: THE TIMESTAMP (post + 3-slide image) | Founders Club (WhatsApp) |
 | Oct 6 | Tue | FF #8: I KEPT MISSING MY NUMBERS AT THE BOARD MEETING | Models in the kits |
 | Oct 8 | Thu | FF #6: THE DINNER TEST | none |
 | Oct 13 | Tue | FF #12: DO YOU OWN YOUR FORMULA? (ARE YOU SURE?) | Fatal Flaws assessment |
 | Oct 15 | Thu | FF #9: "IN A YEAR EVERYBODY'S WILL TASTE JUST AS GOOD" | none |
+| Oct 16 | Fri | WhatsApp promo: THE QUESTION THAT COMES UP MORE THAN ANY OTHER | Founders Club (WhatsApp) |
 | Oct 20 | Tue | FF #11: THE CASH GAP, 5 DAYS AT A TIME | Cash runway calculator |
 | Oct 22 | Thu | FF #4: "THEY KIND OF HAD AMNESIA" | none |
 | Oct 27 | Tue | FF #2: THE PHONE CALL TO COKE | Fatal Flaws replay + assessment |
@@ -28,7 +29,7 @@
 - **Dilution and Coke stories are spaced away from the Sep 24 post.** FF #1 ($100M exit / dilution) is nearly the same lesson as the Coke deal post that just ran, so it goes last (Nov 10, seven weeks apart). FF #2 (the recall call to Coke) sits at Oct 27, five weeks after. FF #3 mentions selling to Coke but the story is about paperwork, so it leads.
 - **CTA posts alternate with no-CTA posts.** Every Tuesday carries a resource link, every Thursday is a straight story or lesson. Seven of the thirteen have a link, so this keeps the feed from feeling like a pitch every post.
 - **"Go do this this week" posts land on weekdays with runway.** Park City (pull your contracts) and Formula ownership (pull your agreement) both sit on Tue/Thu early in the week. Peel The Onion ("go peel it back this weekend") is a Thursday.
-- **The WhatsApp promo takes the Friday slot** (Oct 2), matching the Friday CTA rhythm from the Aug–Oct batch. Post A ("393 Questions") and Post B ("76 Scheduled Jobs") from that batch are still unposted and can run as later Friday posts.
+- **WhatsApp promos take the Friday slots**, matching the Friday CTA rhythm from the Aug–Oct batch. "The Timestamp" runs Fri Oct 2 and "The Question That Comes Up More Than Any Other" runs Fri Oct 16. Post A ("393 Questions") and Post B ("76 Scheduled Jobs") from the old batch are still unposted and can take Fridays after that.
 
 ## Things for Jeff to check before these go out
 
@@ -99,9 +100,33 @@ And while you're in there... I won't sign anything longer than 3 months with an 
 
 ---
 
-## Fri Oct 2 — WhatsApp promo (new): THE QUESTION THAT COMES UP MORE THAN ANY OTHER
+## Fri Oct 2 — WhatsApp promo: THE TIMESTAMP
 
-**CTA: Founders Club.** Full copy lives in `LinkedIn - WhatsApp Group Promo (Oct 2).md`.
+**CTA: Founders Club.** Runs with a 3-slide image of recreated chat bubbles (spec below). All examples are real September threads from the group, de-identified.
+
+Something I want to show you from our CPG founders WhatsApp group, because I think it explains the whole thing better than I can...
+
+Last Monday at 2:31 in the afternoon a founder asked if the quote he'd just gotten for a work for hire formulation was fair.
+
+At 2:32 two other founders had answered. Seems high for one SKU. Flavor houses run higher than an independent food scientist because of the overhead, so you've probably got some room to negotiate.
+
+One minute. Not a Google search, not a sales deck, not a consultant on retainer. Two people who had already paid that invoice.
+
+That's the part I didn't expect when I started this group. I figured I'd be answering most of the questions. Turns out I'm maybe 5% of the answers, and the other 95% come faster than I could type them.
+
+Somebody asks who to use for non-GMO certification and gets a name in under a minute. Somebody gets told by a distributor they need $12 million in insurance coverage and a founder replies "everything is negotiable, I got a waiver with a letter, I did it myself." Somebody asks about 3PLs and gets a full breakdown of pick fees, weekly billing and why you should be shipping on your own UPS account.
+
+Nobody in there is smarter than the internet. They're just faster, and they've already paid for the answer.
+
+350 CPG founders, every stage from pre-launch to exit, and nobody is selling anything (that's the one rule). It's free.
+
+cpgfoundersgroup.com/founders-only
+
+**Image spec (3 slides, chat-bubble style, names blurred, timestamps visible):**
+
+- Slide 1: "2:31 PM — Has anyone negotiated a work for hire formulation? Looking for a gut check on the quote I got, three rounds included." / "2:32 PM — Seems high." / "2:32 PM — What category? How many SKUs?" / "2:34 PM — Flavor houses have more overhead so they charge more. You've still got a negotiation window though."
+- Slide 2: "2:58 PM — Anyone recommend a company for non-GMO certification?" / "2:59 PM — Mine is the best, responds very quickly." / "3:02 PM — Used them for non-GMO and organic. Non-GMO is fine. Organic was a whole thing... don't get me started."
+- Slide 3: "2:25 PM — Who's the best beverage insurance provider? Distributor wants us at $12M." / "11:37 AM (next Tue) — Everything is negotiable and that $12M certainly is. A letter requesting a waiver is sufficient. I did it myself."
 
 ---
 
@@ -208,6 +233,12 @@ But for most of us, the recipe isn't the moat.
 So the question I'd ask is where your time and money are going right now. If it's all going into making the product 5% better and none of it is going into making the brand mean something to somebody, I'd take a hard look at that.
 
 A great product gets you in the game, the brand is what keeps you there.
+
+---
+
+## Fri Oct 16 — WhatsApp promo: THE QUESTION THAT COMES UP MORE THAN ANY OTHER
+
+**CTA: Founders Club.** Full copy lives in `LinkedIn - WhatsApp Group Promo (Oct 16).md` (re-dated to Oct 16).
 
 ---
 

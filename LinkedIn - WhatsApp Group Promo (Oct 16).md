@@ -1,6 +1,6 @@
 # LinkedIn Post — CPG Founders WhatsApp Group Promo
 
-**Post date:** Fri Oct 2, 2026 (Friday CTA slot, between FF #5 Park City on Thu Oct 1 and FF #8 on Tue Oct 6)
+**Post date:** Fri Oct 16, 2026 (moved from Oct 2; "The Timestamp" took that slot, see the posting queue file)
 **Angle:** The most-asked question in the group isn't the one people would guess. Uses the top five ask categories from the Aug 26 group analysis (aggregate stats only, no member names).
 **Link (in body, not comments):** cpgfoundersgroup.com/founders-only
 
