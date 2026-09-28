@@ -132,7 +132,7 @@ export const SESSION_MONTHS: SessionMonth[] = [
       { date: "2026-10-05", time: "16:00" }, // Mon 4:00 PM
       { date: "2026-10-06", time: "08:00" }, // Tue 8:00 AM
       { date: "2026-10-06", time: "09:30" }, // Tue 9:30 AM
-      { date: "2026-10-06", time: "11:00" }, // Tue 11:00 AM
+      // { date: "2026-10-06", time: "11:00" }, // Tue 11:00 AM — pulled 9/28: proposed to Connor Duggan (SEA-WTR) intro; restore if he declines
       { date: "2026-10-06", time: "13:00" }, // Tue 1:00 PM
       { date: "2026-10-12", time: "08:00" }, // Mon 8:00 AM
       { date: "2026-10-12", time: "09:30" }, // Mon 9:30 AM
