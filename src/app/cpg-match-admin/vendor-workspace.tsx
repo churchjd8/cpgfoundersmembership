@@ -2,6 +2,7 @@
 
 import { useEffect, useState, type FormEvent } from "react";
 import { CRM_STATUSES, vendorCrm, type CrmStatus } from "@/lib/cpg-match-crm";
+import { ReviewPublication } from "./review-publication";
 import type { Entry } from "@/lib/cpg-match-submissions";
 
 const input = "mt-1 w-full rounded-lg border border-border bg-white px-3 py-2";
@@ -217,6 +218,8 @@ export function VendorWorkspace({
           </p>
         )}
       </div>
+      {typeof entry.payload.buyerNeeds === "string" && entry.payload.buyerNeeds && <section className="mt-6 rounded-lg bg-background p-4"><h3 className="font-bold">Private sourcing request</h3><p className="mt-2 whitespace-pre-wrap text-sm">{entry.payload.buyerNeeds}</p>{entry.payload.sourcingTimeline ? <p className="mt-2 text-sm">Timing: {String(entry.payload.sourcingTimeline)}</p> : null}{entry.payload.sourcingBudget ? <p className="mt-2 text-sm">Budget / order size: {String(entry.payload.sourcingBudget)}</p> : null}<p className="mt-2 text-sm font-semibold">Nina follow-up permission: {entry.payload.ninaFollowUp === "yes" ? "Yes" : "Not granted"}</p><p className="mt-2 text-xs text-muted">Private to CPG Match. Obtain approval for each specific introduction before sharing contact information or a project brief with vendors.</p></section>}
+      <ReviewPublication entry={entry} onSaved={onSaved} />
     </section>
   );
 }

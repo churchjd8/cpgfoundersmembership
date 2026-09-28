@@ -53,6 +53,7 @@ export default function CpgMatchPage() {
       </section>
 
       <CpgMatchIntake />
+      <p className="mb-8 text-center text-sm text-muted">Represent a vendor? <a className="font-semibold text-accent underline" href="/cpg-match/vendor-intake">Share your current services and availability</a>.</p>
 
       <section className="border-t border-border bg-white py-10">
         <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">

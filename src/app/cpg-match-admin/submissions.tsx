@@ -124,6 +124,7 @@ export function Submissions({ entries: initialEntries }: { entries: Entry[] }) {
     );
   return (
     <section className="mt-7">
+      <a href="/api/cpg-match-admin/export?audience=public" className="mb-4 inline-block text-sm font-semibold text-accent underline">Export public reviews only (approved and verified)</a>
       <div className="flex flex-wrap gap-3" aria-label="Submission type">
         {[
           ["recommendation", "Vendor nominations"],
@@ -267,15 +268,14 @@ export function Submissions({ entries: initialEntries }: { entries: Entry[] }) {
           className={`${control} font-bold text-accent`}
           href={`/api/cpg-match-admin/export?type=${type}`}
         >
-          Export all{" "}
+          Export private{" "}
           {type === "recommendation" ? "nominations" : "waitlist signups"} CSV
         </a>
       </div>
       <p className="my-4 text-sm text-muted">
         {visible.length}{" "}
         {type === "recommendation" ? "nominations" : "waitlist signups"} shown.
-        CSV exports include the full selected list for sorting in Excel or
-        Google Sheets.
+        Private CRM exports contain verification, sourcing and internal notes. Do not share them publicly.
       </p>
       <div className="space-y-3">
         {visible.map((entry) => (
@@ -373,7 +373,7 @@ export function Submissions({ entries: initialEntries }: { entries: Entry[] }) {
                 {Object.entries(entry.payload || {})
                   .filter(
                     ([key, value]) =>
-                      key !== "type" && value !== "" && value != null,
+                      !["type", "schemaVersion", "draftAcknowledgement", "approvedPublicReview"].includes(key) && value !== "" && value != null,
                   )
                   .map(([key, value]) => (
                     <div key={key}>
