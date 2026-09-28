@@ -15,6 +15,9 @@ Follow this exactly. Every Superhuman Mail call MUST pass `acting_email: "joshua
 
 ## Steps
 
+0. **Sync the repo.** The checkout may be in detached HEAD. Run `git checkout -B main origin/main && git pull origin main`
+   before reading `scheduling/holds.json`, so you are on `main` and can push later with `git push origin main`.
+
 1. **Find new bookings.** `list_threads` with `from: ["scheduling@cpgfoundersgroup.com"]`, `start_date` = 21 days ago, `limit: 50`.
    Skip any thread whose `labels` already include `1:1 Booked`. Skip threads whose subject does not contain `1:1 request:`.
    If nothing is left, stop. Do not send anything.
@@ -25,7 +28,7 @@ Follow this exactly. Every Superhuman Mail call MUST pass `acting_email: "joshua
    `YYYY-MM-DDTHH:MM:00-07:00` when the subject says PDT, `-08:00` when it says PST. Session length is 60 minutes.
    If the slot is already in the past, label the thread `1:1 Booked`, note it in the report, and do not create anything.
 
-3. **Brand name.** Look up the client's email domain in `scheduling/clients.json`. If missing, use the domain's first label
+3. **Brand name.** Always look up the client's email domain in `scheduling/clients.json` first (use this for invite titles AND report lines). If missing, use the domain's first label
    in Title Case (e.g. `drinkfoo.com` -> `Drinkfoo`) and flag it in the report so a human can fix the map.
 
 4. **Convert the hold into the invite.** Look up the slot key in `scheduling/holds.json`.
@@ -46,7 +49,7 @@ Follow this exactly. Every Superhuman Mail call MUST pass `acting_email: "joshua
 
 7. **Record it.** Edit `scheduling/holds.json`: set that slot's `status` to `"booked"` and add a `note` of `"<Brand> / <Name>, converted <today>"`.
    If no hold existed, add a new entry with the new `event_id` and `status: "booked"`. Commit with message
-   `Book <Brand> 1:1 (<Month> <Day>)` and push to `main`. If the push fails, say so in the report; do not retry more than twice.
+   `Book <Brand> 1:1 (<Month> <Day>)` and push with `git push origin main`. If the push fails, say so in the report; do not retry more than twice.
 
 8. **Report.** Only if at least one booking was processed OR something was flagged/failed, email joshua@teamchurch.co
    (`create_or_update_draft` with `type: "new"`, `from` and `to` both `joshua@teamchurch.co`, then `send_draft`).
