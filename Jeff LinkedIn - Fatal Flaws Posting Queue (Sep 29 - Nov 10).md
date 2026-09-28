@@ -1,5 +1,5 @@
 # Jeff LinkedIn — Fatal Flaws Batch, Posting Queue (Tue Sep 29 – Tue Nov 10, 2026)
-**Where we are.** The Aug–Oct batch stalled after #5 ("I Almost Killed The Coca-Cola Deal"), which was scheduled for Thu Sep 10 and actually went out Thu Sep 24. Nothing after it has posted (#6–#20 and the three Friday posts A, B, C are all still in the can). The 13 Fatal Flaws posts are the timelier batch (webinar was Sep 16, replay and assessment are live on /resources), so they run next, Tue/Thu, and the Aug–Oct batch resumes at #6 on Thu Nov 12.
+**Where we are.** The Aug–Oct batch is current through #5 ("I Almost Killed The Coca-Cola Deal"), posted Thu Sep 24. It was scheduled for Sep 10, but the two Fatal Flaws webinar promo posts (Sep 8 and Sep 14) took two slots and slid the batch two weeks. Nothing after #5 has posted (#6–#20 and the three Friday posts A, B, C are all still in the can). The 13 Fatal Flaws posts are the timelier batch (webinar was Sep 16, replay and assessment are live on /resources), so they run next, Tue/Thu, and the Aug–Oct batch resumes at #6 on Thu Nov 12.
 
 **Source text.** Pulled verbatim from Jeff's edited copy (`Jeff LinkedIn - Fatal Flaws Webinar Posts (For Jeff's Review).md`). Four tiny edits were made in this queue, all listed under "Edits made" below.
 
