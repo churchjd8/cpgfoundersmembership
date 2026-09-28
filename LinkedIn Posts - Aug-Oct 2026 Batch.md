@@ -4,6 +4,8 @@
 
 **Status:** Post 0 (the poll) went live Wed Aug 19. Thu Aug 20 was a previously queued post. #1 ran **Tue Aug 25**. Thu Aug 27 goes dark and the batch picks back up **Tue Sep 1** with #2, then runs Tue/Thu through **Tue Nov 3**.
 
+**Status update (Sep 28):** The batch ran behind. #5 (Coca-Cola deal) posted **Thu Sep 24** and is the last one live. #6 onward and A/B/C are unposted. The 13 Fatal Flaws webinar posts run next (Tue Sep 29 – Tue Nov 10, see `Jeff LinkedIn - Fatal Flaws Posting Queue (Sep 29 - Nov 10).md`), then this batch resumes at #6 on **Thu Nov 12**. Dates in the table below are the original plan and need re-dating when it resumes.
+
 Odd numbers are storytelling. Even numbers are technical playbook posts pulled from the blog. Lettered posts (A, B, C) are the Friday CTA posts and sit outside the alternation on purpose, so the Tue/Thu rhythm stays intact.
 
 **Every advice post now previews one of the 12 webinar topics from the poll.** So the whole batch ladders into the workshops — by the time Jeff runs the top vote-getters, the feed has already been warmed on that exact subject.
