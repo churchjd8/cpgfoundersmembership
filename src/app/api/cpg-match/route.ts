@@ -62,21 +62,31 @@ export async function POST(request: Request) {
     const validCategories = selectedCategories.length > 0 && selectedCategories.every(value => typeof value === "string" && value.length > 0);
     if (data.type === "recommendation" && (!data.vendorName || !validCategories || !data.scope || !data.certification)) return Response.json({ error: "Missing recommendation fields" }, { status: 400 });
 
-    if (data.type === "recommendation") data.category = [...new Set(selectedCategories)];
+    if (data.type === "recommendation") {
+      if (!["yes", "no"].includes(String(data.vendorNotificationPermission))) return Response.json({ error: "Please choose whether we may identify you to the vendor for a positive review." }, { status: 400 });
+      if (data.vendorNotificationPermission === "yes" && !data.vendorContactEmail) return Response.json({ error: "Please provide the vendor contact email when giving permission." }, { status: 400 });
+      if (data.vendorContactEmail && (typeof data.vendorContactEmail !== "string" || !/^\S+@\S+\.\S+$/.test(data.vendorContactEmail))) return Response.json({ error: "Please enter a valid vendor contact email." }, { status: 400 });
+      if (data.certification !== "confirmed") return Response.json({ error: "Please confirm this reflects your first-hand experience." }, { status: 400 });
+      data.category = [...new Set(selectedCategories)];
+      data.vendorPermissionRecordedAt = new Date().toISOString();
+      data.vendorPermissionScope = "Share reviewer name and company with vendor for a positive review only";
+    }
 
     const supabase = getSupabaseAdmin();
-    const databaseSave = supabase ? supabase.from("cpg_match_submissions").insert({ submission_type: data.type, first_name: data.firstName, last_name: data.lastName, email: data.email, brand: data.brand, vendor_name: data.vendorName || null, vendor_category: data.type === "recommendation" ? (data.category as string[]).join(", ") : null, payload: data }).then(({ error }) => { if (error) console.error("CPG Match Supabase insert error:", error); }) : Promise.resolve();
+    if (!supabase) return Response.json({ error: "Submissions are temporarily unavailable. Please try again." }, { status: 503 });
+    const { error: saveError } = await supabase.from("cpg_match_submissions").insert({ submission_type: data.type, first_name: data.firstName, last_name: data.lastName, email: data.email, brand: data.brand, vendor_name: data.vendorName || null, vendor_category: data.type === "recommendation" ? (data.category as string[]).join(", ") : null, payload: data });
+    if (saveError) { console.error("CPG Match Supabase insert error:", saveError); return Response.json({ error: "We couldn’t save your submission. Please try again." }, { status: 500 }); }
 
     const isReview = data.type === "recommendation";
     const emailHeaders = { Authorization: `Bearer ${process.env.RESEND_API_KEY}`, "Content-Type": "application/json" };
     // Internal notification intentionally removed: submissions are saved to Supabase
     // and visible at /cpg-match-admin, so no email goes to the notify inbox.
-    const [confirmationResponse] = await Promise.all([
+    const [confirmationResult] = await Promise.allSettled([
       fetch("https://api.resend.com/emails", { method: "POST", headers: emailHeaders, body: JSON.stringify({ from: "CPG Match <scheduling@cpgfoundersgroup.com>", to: data.email, subject: isReview ? "Your CPG Match review was received" : "You’re on the CPG Match database waitlist", html: confirmationHtml(data) }) }),
       addToKajabi(data),
     ]);
-    await databaseSave;
-    if (!confirmationResponse.ok) { console.error("CPG Match Resend error:", await confirmationResponse.text()); return Response.json({ error: "Submission failed" }, { status: 500 }); }
+    if (confirmationResult.status === "rejected") console.error("CPG Match confirmation error:", confirmationResult.reason);
+    else if (!confirmationResult.value.ok) console.error("CPG Match Resend error:", await confirmationResult.value.text());
     return Response.json({ success: true });
   } catch (error) {
     console.error("CPG Match submission error:", error);
