@@ -51,10 +51,11 @@ Follow this exactly. Every Superhuman Mail call MUST pass `acting_email: "joshua
    If no hold existed, add a new entry with the new `event_id` and `status: "booked"`. Commit with message
    `Book <Brand> 1:1 (<Month> <Day>)` and push with `git push origin main`. If the push fails, say so in the report; do not retry more than twice.
 
-8. **Report.** Only if at least one booking was processed OR something was flagged/failed, email joshua@teamchurch.co
-   (`create_or_update_draft` with `type: "new"`, `from` and `to` both `joshua@teamchurch.co`, then `send_draft`).
-   Subject: `Booking agent: <N> invite(s) sent`. Body: one line per booking (`Brand / Name / date time PT / hold converted or new event`)
-   plus any flags. Plain, short, no fluff. If nothing happened, send nothing.
+8. **Report.** Email joshua@teamchurch.co ONLY when at least one calendar invite was actually created or converted, or when
+   a calendar update or push FAILED. Never email for zero invites, past-slot skips, or label-only housekeeping; in those cases
+   send nothing at all. When you do send: `create_or_update_draft` with `type: "new"`, `from` and `to` both `joshua@teamchurch.co`,
+   then `send_draft`. Subject: `Booking agent: <N> invite(s) sent`. Body: one line per booking
+   (`Brand / Name / date time PT / hold converted or new event`) plus any flags. Plain, short, no fluff.
 
 ## Never
 - Never email the client. The Google Calendar invite is their confirmation.
