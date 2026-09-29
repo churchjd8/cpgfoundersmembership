@@ -5,10 +5,13 @@
 
 ## HEADLINE
 
-**Current:** Serial Entrepreneur | CPG Consultant & Advisor
+**Current (live since the first rewrite):** Co-Founder of Proda | Former Co-Founder of Suja Juice | Founder of CPG Founders Group — Helping Founders Launch, Scale & Exit
 
-**New:**
-Co-Founder of Proda | Former Co-Founder of Suja Juice | Founder of CPG Founders Group — Helping Founders Launch, Scale & Exit
+**New (Sep 2026, from the growth plan):**
+I help CPG founders avoid the fatal flaws that kill brands | Co-founder & former CEO, Suja Juice | 8 ventures, nearly $700M returned to investors | Building Proda | Founder, CPG Founders Group
+
+(192 of 220 characters. Leads with who it's for and what they get, then the proof. See `Jeff LinkedIn - Growth Plan (Sep 2026).md` for why.)
+
 ---
 
 ## WEBSITE LINK
@@ -21,19 +24,30 @@ Co-Founder of Proda | Former Co-Founder of Suja Juice | Founder of CPG Founders 
 
 ## ABOUT
 
-**Current:** References TeamChurch.co, outdated framing
+**Previous version:** opened with "35 years of entrepreneurial experience," founder audience only showed up in the last paragraph.
 
-**New:**
+**New (Sep 2026):**
 
-With over 35 years of entrepreneurial experience, I am passionate about creating, building, and ultimately selling consumer brands that are market disruptors and that make a positive impact in the world. Through eight companies, I've had five home runs and three blazing strikeouts — and I own both equally because I think about all of them.
+I've spent 35 years building consumer brands, and I've made just about every mistake a CPG founder can make.
 
-One of my proudest business achievements was co-founding and leading Suja Juice, the leading cold-pressed juice brand in the US, which grew to over $100 million in revenue in just six years. I was honored to receive the Ernst & Young Entrepreneur of the Year award and the BevNet Person of the Year award for my role in Suja's success. But I also learned what it costs you personally to build something at that pace. That experience changed everything about how I approach business and life today.
+I co-founded Suja Juice and ran it as CEO as it grew into the leading cold-pressed juice brand in the country. Coca-Cola invested, Suja later sold for about $300M, and in May 2026 it went public on Nasdaq at a valuation north of $700M. Across eight ventures I've had five home runs and three blazing strikeouts, raised $212M and returned nearly $700M to investors. I own the strikeouts as much as the home runs, because they taught me more.
 
-But of all the things I've built, what I'm proudest of is my marriage of 35 years to Linda and our four amazing kids. That's the real scoreboard.
+Here's what I've learned. Brands rarely die from a bad product. They die from avoidable mistakes in pricing, velocity, distribution, cash and the team. I call them the fatal flaws, and I've watched every one of them sink good companies (a few of them mine).
 
-Woven through it all is a compelling desire to share with aspiring entrepreneurs both the successes and losses I've incurred along the way, with the hope that my experiences can be others' shortcuts. Now I'm up to bat for the ninth time with Proda, and I'm pouring everything I've learned into CPG Founders Group — hands-on advisory, AI-powered tools, and a community of 200+ founders helping each other launch, scale, and exit.
+So now I share what I learned the hard way:
+• Weekly lessons here on LinkedIn from Suja, Proda and the other builds
+• CPG Founders Group, where I advise founders directly
+• The Founders Club, a free community of 300+ founders helping founders
+• CPG Match, founder-reviewed vendors so you stop guessing who to hire
+• The Cold-Pressed Truth, my book on building, scaling and selling a consumer brand
 
-Harvard Business School MBA. Former CPA (Ernst & Young). 55+ marathons and ultramarathons. Climbed 6 of 7 summits. Still searching for the next one.
+I'm also up to bat for the ninth time with Proda, a protein soda, so I'm living these lessons again in real time.
+
+If you're building a food, beverage or wellness brand, follow along. And if you have a question, send it my way. My best posts start with a founder's question.
+
+Of everything I've built, what I'm proudest of is my marriage to Linda and our four kids. That's the real scoreboard.
+
+Harvard Business School MBA. Former CPA (Ernst & Young). EY Entrepreneur of the Year and BevNet Person of the Year. 55+ marathons and ultramarathons, and six of the Seven Summits.
 
 cpgfoundersgroup.com
 

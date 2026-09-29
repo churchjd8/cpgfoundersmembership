@@ -6,7 +6,7 @@ import "./preview.css";
 export const metadata: Metadata = {
   title: "CPG Match | Directory preview",
   description:
-    "Explore the first four founder-submitted vendors and compare organic and preferred vendor profiles.",
+    "Explore customer-approved vendor reviews, verified privately by CPG Match.",
   robots: { index: false, follow: false },
 };
 export default function PreviewLayout({
@@ -17,8 +17,7 @@ export default function PreviewLayout({
   return (
     <div className="cpg-match-page match-preview">
       <div className="mp-notice">
-        <span>EARLY LOOK</span> Four real submissions. Preferred placements are
-        examples; reviews await verification.
+        <span>EARLY LOOK</span> Only explicitly approved review content appears here after private verification.
       </div>
       <header className="mp-header">
         <Link className="mp-logo" href="/cpg-match/preview">

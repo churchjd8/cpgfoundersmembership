@@ -14,15 +14,15 @@ export async function middleware(req: NextRequest) {
   let doRewrite = false;
 
   // Give CPG Match its own root domain while keeping the launch page in this app.
-  if (onCpgMatchDomain && pathname === "/") {
-    url.pathname = "/cpg-match";
+  if (onCpgMatchDomain && (pathname === "/" || pathname === "/vendor-intake")) {
+    url.pathname = pathname === "/vendor-intake" ? "/cpg-match/vendor-intake" : "/cpg-match";
     pathname = url.pathname;
     doRewrite = true;
   }
 
   // Serve the admin panel at the root of the admin subdomain by mapping its
   // paths onto the /admin route tree. (API routes are left untouched.)
-  if (onAdminSubdomain && !pathname.startsWith("/admin") && !pathname.startsWith("/api")) {
+  if (onAdminSubdomain && !pathname.startsWith("/cpg-match-admin") && !pathname.startsWith("/admin") && !pathname.startsWith("/api")) {
     const root = onCpgMatchAdmin ? "/cpg-match-admin" : "/admin";
     url.pathname = pathname === "/" ? root : `${root}${pathname}`;
     pathname = url.pathname;
