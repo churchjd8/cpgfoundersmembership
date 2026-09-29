@@ -2,16 +2,17 @@
   "_comment": "Google Calendar event IDs for Jeff's 1:1 HOLD events on the CPG Founders Membership calendar, keyed by slot start (Pacific, ISO with offset). Written when the month's holds are created; the booking agent converts a hold into the client's invite in place. status: 'hold' = open, 'booked' = converted, 'reserved' = Jeff holding it privately (not on booking page).",
   "calendar_id": "c_2a32074bdc3b3b5dd2b50996b3f81dda49c47357f80da5db45df3955b6db664f@group.calendar.google.com",
   "holds": {
-    "2026-09-29T15:00:00-07:00": {
+    "2026-09-29T16:00:00-07:00": {
       "event_id": "2e6o65v0qf05kr6gubg1co6cis",
       "month": "October",
-      "status": "reserved",
-      "note": "Jeff holding for Max / Oroma"
+      "status": "booked",
+      "note": "Oroma / Max Ryan, moved from 3pm to 4pm per Jeff, invite sent 9/29"
     },
     "2026-09-30T10:00:00-07:00": {
       "event_id": "ngnqc5aqojlbs8h3vduu24u95k",
       "month": "October",
-      "status": "hold"
+      "status": "cancelled",
+      "note": "Jeff cancelled 9/28; off booking page; event retitled CANCELLED, needs manual delete"
     },
     "2026-09-30T12:00:00-07:00": {
       "event_id": "cs54iosm00o54j2ds58fe1gmvc",
@@ -43,7 +44,8 @@
     "2026-10-06T08:00:00-07:00": {
       "event_id": "7f6bkd7v2ooll9m15a5bj8fe7k",
       "month": "October",
-      "status": "hold"
+      "status": "cancelled",
+      "note": "Jeff cancelled 9/28; off booking page; event retitled CANCELLED, needs manual delete"
     },
     "2026-10-06T09:30:00-07:00": {
       "event_id": "roup7qf8629og31oqeq7q86cvc",
@@ -54,8 +56,8 @@
     "2026-10-06T11:00:00-07:00": {
       "event_id": "5mfn293q6ai717ah6gvq5gv2ao",
       "month": "October",
-      "status": "reserved",
-      "note": "Proposed to Connor Duggan (SEA-WTR) for 30-min intro 11:00-11:30, pending confirmation; off booking page"
+      "status": "booked",
+      "note": "Connor Duggan / SEA-WTR intro 11:00-11:30, invite sent 9/29"
     },
     "2026-10-06T13:00:00-07:00": {
       "event_id": "g3igolif00dj5u0ho7ipk9sr38",

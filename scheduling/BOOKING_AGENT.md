@@ -37,6 +37,8 @@ Follow this exactly. Every Superhuman Mail call MUST pass `acting_email: "joshua
      `timezone: "America/Los_Angeles"`, `attendees: ["jeff@teamchurch.co", "<client email>"]`, `location` = Zoom URL,
      `description` = `1:1 coaching session with Jeff Church.<br><br>Zoom: <a href="ZOOM">ZOOM</a>`, `conference: false`.
    - Found with `status: "booked"` -> do NOT touch the event. Flag as a possible double booking in the report and still label the thread.
+   - Found with `status: "cancelled"` -> Jeff cancelled that slot. Do NOT touch any event. Flag it in the report as
+     "booked a cancelled slot, needs a human" and still label the thread.
    - Found with `status: "reserved"` -> Jeff was holding it privately; still convert it (the booking page should not have shown it, so flag it).
    - Not found -> create a NEW event with the same fields (no `event_id`), then flag "no hold existed" in the report.
 
