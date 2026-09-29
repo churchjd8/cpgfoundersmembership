@@ -12,7 +12,7 @@
       "event_id": "ngnqc5aqojlbs8h3vduu24u95k",
       "month": "October",
       "status": "cancelled",
-      "note": "Jeff cancelled 9/28; off booking page; event retitled CANCELLED, needs manual delete"
+      "note": "Jeff cancelled 9/28; off booking page; event deleted 9/29"
     },
     "2026-09-30T12:00:00-07:00": {
       "event_id": "cs54iosm00o54j2ds58fe1gmvc",
@@ -45,7 +45,7 @@
       "event_id": "7f6bkd7v2ooll9m15a5bj8fe7k",
       "month": "October",
       "status": "cancelled",
-      "note": "Jeff cancelled 9/28; off booking page; event retitled CANCELLED, needs manual delete"
+      "note": "Jeff cancelled 9/28; off booking page; event deleted 9/29"
     },
     "2026-10-06T09:30:00-07:00": {
       "event_id": "roup7qf8629og31oqeq7q86cvc",
