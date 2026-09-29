@@ -22,7 +22,7 @@ Follow this exactly. Every Superhuman Mail call MUST pass `acting_email: "joshua
    Skip any thread whose `labels` already include `1:1 Booked`. Skip threads whose subject does not contain `1:1 request:`.
    If nothing is left, stop. Do not send anything.
 
-2. **Parse each booking.** `get_thread` for the body. Extract: client name, client email, month label (from subject), and the
+2. **Parse each booking.** `get_thread` for the body. Extract: client name, client email, any Guests (comma-separated emails; invite them too), month label (from subject), and the
    Pacific date + time. Year = the year of the email's sent date (bookings are always within a few weeks of the email; if the
    month is January and the email was sent in December, use next year). Build the slot key as ISO with Pacific offset:
    `YYYY-MM-DDTHH:MM:00-07:00` when the subject says PDT, `-08:00` when it says PST. Session length is 60 minutes.
@@ -34,7 +34,7 @@ Follow this exactly. Every Superhuman Mail call MUST pass `acting_email: "joshua
 4. **Convert the hold into the invite.** Look up the slot key in `scheduling/holds.json`.
    - Found with `status: "hold"` -> call `create_or_update_event` with that `event_id`, `calendar_id` = group calendar,
      `title` = `<Brand> 1:1 Jeff Church (<Month>)`, `start`/`end` = the slot and slot + 60 min (RFC3339 with the Pacific offset),
-     `timezone: "America/Los_Angeles"`, `attendees: ["jeff@teamchurch.co", "<client email>"]`, `location` = Zoom URL,
+     `timezone: "America/Los_Angeles"`, `attendees: ["jeff@teamchurch.co", "<client email>", ...<every address in the booking email's Guests row>]`, `location` = Zoom URL,
      `description` = `1:1 coaching session with Jeff Church.<br><br>Zoom: <a href="ZOOM">ZOOM</a>`, `conference: false`.
    - Found with `status: "booked"` -> do NOT touch the event. Flag as a possible double booking in the report and still label the thread.
    - Found with `status: "cancelled"` -> Jeff cancelled that slot. Do NOT touch any event. Flag it in the report as
@@ -44,7 +44,7 @@ Follow this exactly. Every Superhuman Mail call MUST pass `acting_email: "joshua
 
 5. **Strip Joshua.** The calendar API auto-adds joshua@teamchurch.co as an attendee on create and sometimes on update. Check the
    response's `attendees`. If joshua@teamchurch.co is present, call `create_or_update_event` again with the same `event_id` and
-   `attendees` set to exactly `["jeff@teamchurch.co", "<client email>"]`. Confirm the response no longer lists Joshua.
+   `attendees` set to exactly Jeff + client + any guests (never Joshua). Confirm the response no longer lists Joshua.
 
 6. **Mark processed.** `update_thread` on the booking thread with `add_labels: ["1:1 Booked"]`, `mark_read: true`
    (pass the thread's `last_message_id`). Do this only after the calendar update succeeded.
