@@ -68,7 +68,8 @@
     "2026-10-12T08:00:00-07:00": {
       "event_id": "uappr2mqo5a69lvlndv05treuo",
       "month": "October",
-      "status": "hold"
+      "status": "booked",
+      "note": "Grounded / Bryn Ferris + gabriel@groundedshakes.com (guest), converted 2026-09-30"
     },
     "2026-10-12T09:30:00-07:00": {
       "event_id": "n8smfb4k683ul66hbkirk357ug",
@@ -84,7 +85,8 @@
     "2026-10-13T08:00:00-07:00": {
       "event_id": "v54ikqpgqrq6s742pd6tfan5ng",
       "month": "October",
-      "status": "hold"
+      "status": "booked",
+      "note": "No Biggie / Ali Weiss, converted 2026-09-30"
     },
     "2026-10-13T09:30:00-07:00": {
       "event_id": "sku9mvjtvknsc4n0mcma0me7ec",
