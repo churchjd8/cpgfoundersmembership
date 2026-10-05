@@ -53,3 +53,74 @@ export async function submitToKajabiForm(
     );
   }
 }
+
+/**
+ * Grants a Kajabi offer to an email, for sales that happen outside Kajabi's
+ * own checkout. Creates the contact if the email is new. Kajabi then creates
+ * the customer login and sends its welcome email, and skips the grant if the
+ * contact already has the offer. Throws if any step fails.
+ */
+export async function grantKajabiOffer(
+  offerId: string,
+  { name, email }: { name?: string; email: string }
+) {
+  const accessToken = await getAccessToken();
+  const headers = {
+    Authorization: `Bearer ${accessToken}`,
+    "Content-Type": "application/vnd.api+json",
+  };
+
+  let contactId: string | null = null;
+
+  const createRes = await fetch("https://api.kajabi.com/v1/contacts", {
+    method: "POST",
+    headers,
+    body: JSON.stringify({
+      data: {
+        type: "contacts",
+        attributes: { name: name || "", email },
+        relationships: {
+          site: { data: { type: "sites", id: process.env.KAJABI_SITE_ID! } },
+        },
+      },
+    }),
+  });
+
+  if (createRes.ok) {
+    contactId = (await createRes.json()).data.id;
+  } else {
+    // Already a contact — find them by exact email.
+    const searchRes = await fetch(
+      `https://api.kajabi.com/v1/contacts?filter[email_contains]=${encodeURIComponent(email)}`,
+      { headers }
+    );
+    if (searchRes.ok) {
+      const searchData = await searchRes.json();
+      const match = searchData.data?.find(
+        (c: { attributes: { email: string } }) =>
+          c.attributes.email.toLowerCase() === email.toLowerCase()
+      );
+      if (match) contactId = match.id;
+    }
+  }
+
+  if (!contactId) {
+    throw new Error(`Kajabi contact could not be created or found for ${email}`);
+  }
+
+  const grantRes = await fetch(
+    `https://api.kajabi.com/v1/contacts/${contactId}/relationships/offers`,
+    {
+      method: "POST",
+      headers,
+      body: JSON.stringify({ data: [{ type: "offers", id: offerId }] }),
+    }
+  );
+
+  if (!grantRes.ok) {
+    const errText = await grantRes.text();
+    throw new Error(
+      `Kajabi offer ${offerId} grant failed (${grantRes.status}): ${errText.slice(0, 200)}`
+    );
+  }
+}
