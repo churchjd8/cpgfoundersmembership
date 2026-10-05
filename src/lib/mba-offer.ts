@@ -18,3 +18,9 @@ export const MBA_LOGIN_URL = "https://learn.cpgfoundersgroup.com/login";
 
 /** Kajabi's own card-only checkout. Fallback if Stripe Checkout can't start. */
 export const MBA_KAJABI_CHECKOUT_URL = "https://learn.cpgfoundersgroup.com/offers/MGU8pLuV";
+
+// Stripe publishable key, used in the browser for the Klarna messaging on
+// /mba-for-cpg. Publishable keys are public by design, so it lives here
+// rather than in an env var.
+export const STRIPE_PUBLISHABLE_KEY =
+  "pk_live_51Qn0r8G6eE6wSi3m5BukLJEbAlqpW05nA8eH9HLiykEi6YgX8oPU10DUY9sURCDhwffPWuQRfCbQM48qiWVXNv1s00ZRogx9xt";

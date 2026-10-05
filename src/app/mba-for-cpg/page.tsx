@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { MBA_PLAN, MBA_PRICE_USD } from "@/lib/mba-offer";
+import { KlarnaMessaging } from "@/components/klarna-messaging";
+import { MBA_PRICE_USD, STRIPE_PUBLISHABLE_KEY } from "@/lib/mba-offer";
 
 export const metadata: Metadata = {
   title: "MBA for CPG - CPG Founders Group",
@@ -148,23 +149,20 @@ const includes = [
   { icon: "📖", label: "Jeff's 25-play CPG Playbook" },
 ];
 
-const planLabel = `${MBA_PLAN.payments} monthly payments of $${MBA_PLAN.amountUsd}`;
-
-// Buy buttons are plain forms that POST to /api/mba-checkout, which redirects
-// to Stripe Checkout. "full" is one payment (card, Apple Pay, Klarna);
-// "plan" is the monthly payment plan.
+// The buy button is a plain form that POSTs to /api/mba-checkout, which
+// redirects to Stripe Checkout (card, Apple Pay, Klarna). Paying over time is
+// Klarna's job: the buyer picks a Klarna plan at checkout and we're paid in
+// full up front.
 function CheckoutButton({
-  plan,
   className,
   children,
 }: {
-  plan: "full" | "plan";
   className: string;
   children: React.ReactNode;
 }) {
   return (
     <form action="/api/mba-checkout" method="POST">
-      <input type="hidden" name="plan" value={plan} />
+      <input type="hidden" name="plan" value="full" />
       <button type="submit" className={`${className} cursor-pointer`}>
         {children}
       </button>
@@ -195,33 +193,23 @@ export default function MbaForCpgPage() {
                 ${MBA_PRICE_USD}{" "}
                 <span className="text-base font-normal text-white/50">one-time, lifetime access</span>
               </p>
-              <p className="mt-1 text-sm text-white/60">
-                Or {planLabel}. Klarna available at checkout.
-              </p>
+              <KlarnaMessaging
+                publishableKey={STRIPE_PUBLISHABLE_KEY}
+                amountUsd={MBA_PRICE_USD}
+                dark
+                className="mt-2 max-w-md"
+              />
               <div className="mt-8 flex flex-col sm:flex-row gap-4">
-                <CheckoutButton
-                  plan="full"
-                  className="inline-flex w-full items-center justify-center px-6 py-3 bg-accent hover:bg-accent-dark text-white font-semibold rounded-lg transition-colors text-base"
-                >
+                <CheckoutButton className="inline-flex w-full items-center justify-center px-6 py-3 bg-accent hover:bg-accent-dark text-white font-semibold rounded-lg transition-colors text-base">
                   Get lifetime access &rarr;
                 </CheckoutButton>
-                <CheckoutButton
-                  plan="plan"
-                  className="inline-flex w-full items-center justify-center px-6 py-3 border border-white/30 hover:border-white/60 text-white font-semibold rounded-lg transition-colors text-base"
-                >
-                  Pay in {MBA_PLAN.payments} installments
-                </CheckoutButton>
-              </div>
-              <p className="mt-4 text-sm text-white/50">
-                Questions?{" "}
                 <a
                   href="mailto:info@teamchurch.co?subject=Questions about MBA for CPG"
-                  className="underline hover:text-white transition-colors"
+                  className="inline-flex items-center justify-center px-6 py-3 border border-white/30 hover:border-white/60 text-white font-semibold rounded-lg transition-colors text-base"
                 >
-                  Email us
+                  Questions? Email us
                 </a>
-                .
-              </p>
+              </div>
             </div>
             <div className="relative">
               <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
@@ -393,9 +381,13 @@ export default function MbaForCpgPage() {
               MBA for CPG
             </span>
             <p className="text-4xl sm:text-5xl font-bold">${MBA_PRICE_USD}</p>
-            <p className="mt-2 text-muted">
-              One-time payment, or {planLabel}. Lifetime access either way.
-            </p>
+            <p className="mt-2 text-muted">One-time payment. Lifetime access. No subscription.</p>
+            <KlarnaMessaging
+              publishableKey={STRIPE_PUBLISHABLE_KEY}
+              amountUsd={MBA_PRICE_USD}
+              centered
+              className="mt-3 mx-auto max-w-md"
+            />
             <ul className="mt-6 space-y-2 text-left max-w-md mx-auto">
               {[
                 "8 comprehensive modules narrated by Jeff",
@@ -413,20 +405,11 @@ export default function MbaForCpgPage() {
               ))}
             </ul>
             <div className="mt-8 flex flex-col items-center gap-3">
-              <CheckoutButton
-                plan="full"
-                className="inline-flex items-center justify-center px-8 py-4 bg-accent hover:bg-accent-dark text-white font-semibold rounded-lg transition-colors text-lg"
-              >
+              <CheckoutButton className="inline-flex items-center justify-center px-8 py-4 bg-accent hover:bg-accent-dark text-white font-semibold rounded-lg transition-colors text-lg">
                 Get lifetime access &rarr;
               </CheckoutButton>
-              <CheckoutButton
-                plan="plan"
-                className="text-sm font-semibold text-accent-dark underline underline-offset-4 hover:text-foreground transition-colors"
-              >
-                Or pay in {planLabel}
-              </CheckoutButton>
               <p className="text-xs text-muted">
-                Card, Apple Pay, and Klarna accepted at checkout.
+                Pay in full or over time with Klarna. Card and Apple Pay accepted too.
               </p>
             </div>
             <p className="mt-4 text-xs text-muted">
