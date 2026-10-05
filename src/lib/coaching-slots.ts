@@ -129,7 +129,7 @@ export const SESSION_MONTHS: SessionMonth[] = [
       { date: "2026-09-30", time: "13:30" }, // Wed 1:30 PM
       { date: "2026-10-02", time: "12:00" }, // Fri 12:00 PM
       { date: "2026-10-05", time: "12:00" }, // Mon 12:00 PM
-      { date: "2026-10-05", time: "16:00" }, // Mon 4:00 PM
+      // { date: "2026-10-05", time: "16:00" }, // Mon 4:00 PM — pulled 10/5: Tulua (Zeyad) moved here from noon
       // { date: "2026-10-06", time: "08:00" }, // Tue 8:00 AM — cancelled by Jeff 9/28 (other meeting)
       { date: "2026-10-06", time: "09:30" }, // Tue 9:30 AM
       // { date: "2026-10-06", time: "11:00" }, // Tue 11:00 AM — pulled 9/28: CONFIRMED Connor Duggan (SEA-WTR) intro 11-11:30 PT

@@ -33,13 +33,14 @@
     "2026-10-05T12:00:00-07:00": {
       "event_id": "75gmkr8s3pe9amf2i57rppm5g0",
       "month": "October",
-      "status": "booked",
-      "note": "Tulua / Zeyad Moussa, converted 2026-09-28"
+      "status": "cancelled",
+      "note": "Tulua / Zeyad Moussa moved to 4pm same day on 2026-10-05 (Jeff's request); this event now lives at 16:00"
     },
     "2026-10-05T16:00:00-07:00": {
-      "event_id": "1k4pnqfk9ndb3795qg2du38pok",
+      "event_id": "75gmkr8s3pe9amf2i57rppm5g0",
       "month": "October",
-      "status": "hold"
+      "status": "booked",
+      "note": "Tulua / Zeyad Moussa, moved from noon 2026-10-05; leftover hold event 1k4pnqfk9ndb3795qg2du38pok still on calendar"
     },
     "2026-10-06T08:00:00-07:00": {
       "event_id": "7f6bkd7v2ooll9m15a5bj8fe7k",
