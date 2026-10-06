@@ -1,5 +1,7 @@
-# Jeff LinkedIn — Fatal Flaws Batch, Posting Queue (Tue Sep 29 – Tue Nov 10, 2026)
-**Where we are.** The Aug–Oct batch is current through #5 ("I Almost Killed The Coca-Cola Deal"), posted Thu Sep 24. It was scheduled for Sep 10, but the two Fatal Flaws webinar promo posts (Sep 8 and Sep 14) took two slots and slid the batch two weeks. Nothing after #5 has posted (#6–#20 and the three Friday posts A, B, C are all still in the can). The 13 Fatal Flaws posts are the timelier batch (webinar was Sep 16, replay and assessment are live on /resources), so they run next, Tue/Thu, and the Aug–Oct batch resumes at #6 on Thu Nov 12.
+# Jeff LinkedIn — Fatal Flaws Batch, Posting Queue (Tue Oct 6 – Tue Nov 17, 2026)
+**Where we are.** The Aug–Oct batch is current through #5 ("I Almost Killed The Coca-Cola Deal"), posted Thu Sep 24. It was scheduled for Sep 10, but the two Fatal Flaws webinar promo posts (Sep 8 and Sep 14) took two slots and slid the batch two weeks. Nothing after #5 has posted (#6–#20 and the three Friday posts A, B, C are all still in the can). The 13 Fatal Flaws posts are the timelier batch (webinar was Sep 16, replay and assessment are live on /resources), so they run next, Tue/Thu, and the Aug–Oct batch resumes at #6 on Thu Nov 19.
+
+**Re-dated Oct 5.** Nothing from this queue went out the week of Sep 28 (the CPG Match launch post ran Sep 29 instead), so the whole queue slid one week. Same order, same Tue/Thu/Fri rhythm, 10:00 AM Pacific. First post is Tue Oct 6.
 
 **Source text.** Pulled verbatim from Jeff's edited copy (`Jeff LinkedIn - Fatal Flaws Webinar Posts (For Jeff's Review).md`). Four tiny edits were made in this queue, all listed under "Edits made" below.
 
@@ -7,50 +9,50 @@
 
 | Date | Day | Post | CTA |
 | --- | --- | --- | --- |
-| Sep 29 | Tue | FF #3: THE $38,000 SIGNATURE | Fatal Flaws assessment |
-| Oct 1 | Thu | FF #5: PARK CITY MISSED THE DATE BY 2 DAYS | none |
-| Oct 2 | Fri | WhatsApp promo: THE TIMESTAMP (post + 3-slide image) | Founders Club (WhatsApp) |
-| Oct 6 | Tue | FF #8: I KEPT MISSING MY NUMBERS AT THE BOARD MEETING | Models in the kits |
-| Oct 8 | Thu | FF #6: THE DINNER TEST | none |
-| Oct 13 | Tue | FF #12: DO YOU OWN YOUR FORMULA? (ARE YOU SURE?) | Fatal Flaws assessment |
-| Oct 15 | Thu | FF #9: "IN A YEAR EVERYBODY'S WILL TASTE JUST AS GOOD" | none |
-| Oct 16 | Fri | WhatsApp promo: THE QUESTION THAT COMES UP MORE THAN ANY OTHER | Founders Club (WhatsApp) |
-| Oct 20 | Tue | FF #11: THE CASH GAP, 5 DAYS AT A TIME | Cash runway calculator |
-| Oct 22 | Thu | FF #4: "THEY KIND OF HAD AMNESIA" | none |
-| Oct 27 | Tue | FF #2: THE PHONE CALL TO COKE | Fatal Flaws replay + assessment |
-| Oct 29 | Thu | FF #10: THE $10 GREEN JUICE | none |
-| Nov 3 | Tue | FF #7: MONTHS 10 TO 18 | Fundraising Kit |
-| Nov 5 | Thu | FF #13: PEEL THE ONION (short one) | none |
-| Nov 10 | Tue | FF #1: THE $100M EXIT THAT PAID $5M | Fundraising Kit |
-| Nov 12 | Thu | Resume Aug–Oct batch at #6 (Know Your Velocity Before Your Buyer Tells You) | — |
+| Oct 6 | Tue | FF #3: THE $38,000 SIGNATURE | Fatal Flaws assessment |
+| Oct 8 | Thu | FF #5: PARK CITY MISSED THE DATE BY 2 DAYS | none |
+| Oct 9 | Fri | WhatsApp promo: THE TIMESTAMP (post + 3-slide image) | Founders Club (WhatsApp) |
+| Oct 13 | Tue | FF #8: I KEPT MISSING MY NUMBERS AT THE BOARD MEETING | Models in the kits |
+| Oct 15 | Thu | FF #6: THE DINNER TEST | none |
+| Oct 20 | Tue | FF #12: DO YOU OWN YOUR FORMULA? (ARE YOU SURE?) | Fatal Flaws assessment |
+| Oct 22 | Thu | FF #9: "IN A YEAR EVERYBODY'S WILL TASTE JUST AS GOOD" | none |
+| Oct 23 | Fri | WhatsApp promo: THE QUESTION THAT COMES UP MORE THAN ANY OTHER | Founders Club (WhatsApp) |
+| Oct 27 | Tue | FF #11: THE CASH GAP, 5 DAYS AT A TIME | Cash runway calculator |
+| Oct 29 | Thu | FF #4: "THEY KIND OF HAD AMNESIA" | none |
+| Nov 3 | Tue | FF #2: THE PHONE CALL TO COKE | Fatal Flaws replay + assessment |
+| Nov 5 | Thu | FF #10: THE $10 GREEN JUICE | none |
+| Nov 10 | Tue | FF #7: MONTHS 10 TO 18 | Fundraising Kit |
+| Nov 12 | Thu | FF #13: PEEL THE ONION (short one) | none |
+| Nov 17 | Tue | FF #1: THE $100M EXIT THAT PAID $5M | Fundraising Kit |
+| Nov 19 | Thu | Resume Aug–Oct batch at #6 (Know Your Velocity Before Your Buyer Tells You) | — |
 
 ## Why this order
 
-- **Dilution and Coke stories are spaced away from the Sep 24 post.** FF #1 ($100M exit / dilution) is nearly the same lesson as the Coke deal post that just ran, so it goes last (Nov 10, seven weeks apart). FF #2 (the recall call to Coke) sits at Oct 27, five weeks after. FF #3 mentions selling to Coke but the story is about paperwork, so it leads.
+- **Dilution and Coke stories are spaced away from the Sep 24 post.** FF #1 ($100M exit / dilution) is nearly the same lesson as the Coke deal post that just ran, so it goes last (Nov 17, eight weeks apart). FF #2 (the recall call to Coke) sits at Nov 3, six weeks after. FF #3 mentions selling to Coke but the story is about paperwork, so it leads.
 - **CTA posts alternate with no-CTA posts.** Every Tuesday carries a resource link, every Thursday is a straight story or lesson. Seven of the thirteen have a link, so this keeps the feed from feeling like a pitch every post.
 - **"Go do this this week" posts land on weekdays with runway.** Park City (pull your contracts) and Formula ownership (pull your agreement) both sit on Tue/Thu early in the week. Peel The Onion ("go peel it back this weekend") is a Thursday.
-- **WhatsApp promos take the Friday slots**, matching the Friday CTA rhythm from the Aug–Oct batch. "The Timestamp" runs Fri Oct 2 and "The Question That Comes Up More Than Any Other" runs Fri Oct 16. Post A ("393 Questions") and Post B ("76 Scheduled Jobs") from the old batch are still unposted and can take Fridays after that.
+- **WhatsApp promos take the Friday slots**, matching the Friday CTA rhythm from the Aug–Oct batch. "The Timestamp" runs Fri Oct 9 and "The Question That Comes Up More Than Any Other" runs Fri Oct 23. Post A ("393 Questions") and Post B ("76 Scheduled Jobs") from the old batch are still unposted and can take Fridays after that.
 
 ## Things for Jeff to check before these go out
 
 1. **Dilution numbers disagree with the Sep 24 post.** The Coke deal post said "try not to dilute more than 10 to 15% in any single round" and "hold 50% or more through your first two rounds." FF #1 says "15 to 20% in any single round," "directionally above 80% after friends and family," and "at least 50% when you're all done." Pick one set of numbers so the two posts don't contradict each other. FF #1 is dated last on purpose to give room to fix it.
 2. **FF #12 says "roughly a third of these agreements" broaden flavor to formula.** That's a strong stat. Worth confirming it's Jeff's real read and not a rough guess from the webinar.
-3. **FF #9 says "over 20 brands" in protein soda today.** Confirm the count is still right by Oct 15.
-4. **FF #10 quotes Proda at $3.49 and modern sodas at $2.49.** Confirm pricing is current by Oct 29.
+3. **FF #9 says "over 20 brands" in protein soda today.** Confirm the count is still right by Oct 22.
+4. **FF #10 quotes Proda at $3.49 and modern sodas at $2.49.** Confirm pricing is current by Nov 5.
 5. Park City / Vail is verified: PCMR missed its Talisker lease renewal by two days in 2011, lost in court, and Vail took over the resort in 2014. Safe to post as written.
 
 ## Edits made to Jeff's text (all small)
 
-- FF #2: "I walked through all 30 questions live last week" became "live on my Fatal Flaws webinar last month" (posts Oct 27, webinar was Sep 16). Also removed a doubled period after "what a HACCP plan actually is."
+- FF #2: "I walked through all 30 questions live last week" became "live on my Fatal Flaws webinar in September" (posts Nov 3, webinar was Sep 16). Also removed a doubled period after "what a HACCP plan actually is."
 - FF #4: "save you're friendship" became "save your friendship."
 - FF #9: "when i got involved" became "when I got involved."
-- FF #12: "(I had one on my webinar this week" became "(I had one on my Fatal Flaws webinar last month" (posts Oct 13).
+- FF #12: "(I had one on my webinar this week" became "(I had one on my Fatal Flaws webinar last month" (posts Oct 20).
 
 ---
 
 # Posting-ready copy
 
-## Tue Sep 29 — FF #3: THE $38,000 SIGNATURE
+## Tue Oct 6 — FF #3: THE $38,000 SIGNATURE
 
 **CTA: Fatal Flaws assessment**
 
@@ -76,7 +78,7 @@ This is one of the 30 questions in my Fatal Flaws assessment. It's free and it t
 
 ---
 
-## Thu Oct 1 — FF #5: PARK CITY MISSED THE DATE BY 2 DAYS
+## Thu Oct 8 — FF #5: PARK CITY MISSED THE DATE BY 2 DAYS
 
 **CTA: none**
 
@@ -100,7 +102,7 @@ And while you're in there... I won't sign anything longer than 3 months with an 
 
 ---
 
-## Fri Oct 2 — WhatsApp promo: THE TIMESTAMP
+## Fri Oct 9 — WhatsApp promo: THE TIMESTAMP
 
 **CTA: Founders Club.** Runs with a 3-slide image of recreated chat bubbles (spec below). All examples are real September threads from the group, de-identified.
 
@@ -130,7 +132,7 @@ cpgfoundersgroup.com/founders-only
 
 ---
 
-## Tue Oct 6 — FF #8: I KEPT MISSING MY NUMBERS AT THE BOARD MEETING
+## Tue Oct 13 — FF #8: I KEPT MISSING MY NUMBERS AT THE BOARD MEETING
 
 **CTA: Models in the kits**
 
@@ -162,7 +164,7 @@ The models I use are in the free kits here: cpgfoundersgroup.com/resources
 
 ---
 
-## Thu Oct 8 — FF #6: THE DINNER TEST
+## Thu Oct 15 — FF #6: THE DINNER TEST
 
 **CTA: none**
 
@@ -186,7 +188,7 @@ You learn more over one dinner than you do in three interviews.
 
 ---
 
-## Tue Oct 13 — FF #12: DO YOU OWN YOUR FORMULA? (ARE YOU SURE?)
+## Tue Oct 20 — FF #12: DO YOU OWN YOUR FORMULA? (ARE YOU SURE?)
 
 **CTA: Fatal Flaws assessment**
 
@@ -212,7 +214,7 @@ It's one of the 30 questions in my free Fatal Flaws assessment: cpgfoundersgroup
 
 ---
 
-## Thu Oct 15 — FF #9: "IN A YEAR EVERYBODY'S WILL TASTE JUST AS GOOD"
+## Thu Oct 22 — FF #9: "IN A YEAR EVERYBODY'S WILL TASTE JUST AS GOOD"
 
 **CTA: none**
 
@@ -236,13 +238,13 @@ A great product gets you in the game, the brand is what keeps you there.
 
 ---
 
-## Fri Oct 16 — WhatsApp promo: THE QUESTION THAT COMES UP MORE THAN ANY OTHER
+## Fri Oct 23 — WhatsApp promo: THE QUESTION THAT COMES UP MORE THAN ANY OTHER
 
-**CTA: Founders Club.** Full copy lives in `LinkedIn - WhatsApp Group Promo (Oct 16).md` (re-dated to Oct 16).
+**CTA: Founders Club.** Full copy lives in `LinkedIn - WhatsApp Group Promo (Oct 23).md` (re-dated to Oct 23).
 
 ---
 
-## Tue Oct 20 — FF #11: THE CASH GAP, 5 DAYS AT A TIME
+## Tue Oct 27 — FF #11: THE CASH GAP, 5 DAYS AT A TIME
 
 **CTA: Cash runway calculator**
 
@@ -274,7 +276,7 @@ There's a free cash runway calculator in the kits here: cpgfoundersgroup.com/res
 
 ---
 
-## Thu Oct 22 — FF #4: "THEY KIND OF HAD AMNESIA"
+## Thu Oct 29 — FF #4: "THEY KIND OF HAD AMNESIA"
 
 **CTA: none**
 
@@ -296,7 +298,7 @@ It takes about an hour and it could save your friendship.
 
 ---
 
-## Tue Oct 27 — FF #2: THE PHONE CALL TO COKE
+## Tue Nov 3 — FF #2: THE PHONE CALL TO COKE
 
 **CTA: Fatal Flaws replay + assessment**
 
@@ -320,13 +322,13 @@ Mine turned out to be a false alarm and it STILL almost cost me one of the bigge
 
 So invest in your QA early, audit your suppliers, know how to trace your lots all the way back to the product being in the ground and know what a HACCP plan actually is. And if the bad news ever does come... make the call yourself.
 
-I walked through all 30 questions live on my Fatal Flaws webinar last month. The replay and the assessment are both free:
+I walked through all 30 questions live on my Fatal Flaws webinar in September. The replay and the assessment are both free:
 
 cpgfoundersgroup.com/resources
 
 ---
 
-## Thu Oct 29 — FF #10: THE $10 GREEN JUICE
+## Thu Nov 5 — FF #10: THE $10 GREEN JUICE
 
 **CTA: none**
 
@@ -350,7 +352,7 @@ If you're way out of whack on price, you'll sell some and the people who buy it 
 
 ---
 
-## Tue Nov 3 — FF #7: MONTHS 10 TO 18
+## Tue Nov 10 — FF #7: MONTHS 10 TO 18
 
 **CTA: Fundraising Kit**
 
@@ -382,7 +384,7 @@ If you're about to raise, my Fundraising Kit is free: cpgfoundersgroup.com/resou
 
 ---
 
-## Thu Nov 5 — FF #13: PEEL THE ONION (short one)
+## Thu Nov 12 — FF #13: PEEL THE ONION (short one)
 
 **CTA: none**
 
@@ -400,7 +402,7 @@ So if something has felt off lately and you can't say why... go peel it back thi
 
 ---
 
-## Tue Nov 10 — FF #1: THE $100M EXIT THAT PAID $5M
+## Tue Nov 17 — FF #1: THE $100M EXIT THAT PAID $5M
 
 **CTA: Fundraising Kit**
 

@@ -59,7 +59,7 @@ Alternates:
 
 ## Cadence: merge, don't replace
 
-Jeff's plan calls for a new 16-post calendar. We already have ~30 approved posts in the can: the Fatal Flaws queue (Tue/Thu, Sep 29–Nov 10) and the paused Aug–Oct batch (#6–#20 plus Fridays A, B, C). So we move from 2 to 4 posts/week by filling his Monday and Friday slots from that inventory. No new writing needed to start.
+Jeff's plan calls for a new 16-post calendar. We already have ~30 approved posts in the can: the Fatal Flaws queue (Tue/Thu, Oct 6–Nov 17, re-dated Oct 5) and the paused Aug–Oct batch (#6–#20 plus Fridays A, B, C). So we move from 2 to 4 posts/week by filling his Monday and Friday slots from that inventory. No new writing needed to start.
 
 - **Mon — Framework:** the tactical posts from the Aug–Oct batch
 - **Tue — CTA story:** Fatal Flaws queue (unchanged)
@@ -68,12 +68,12 @@ Jeff's plan calls for a new 16-post calendar. We already have ~30 approved posts
 
 | Week | Mon | Tue | Thu | Fri |
 | --- | --- | --- | --- | --- |
-| Sep 28 | (passed) | FF #3 The $38,000 Signature | FF #5 Park City Missed the Date | WhatsApp promo |
-| Oct 5 | #6 Know Your Velocity | FF #8 Missing My Numbers | FF #6 The Dinner Test | A. 393 Questions |
-| Oct 12 | #10 The Four That Keep Killing Good Brands | FF #12 Do You Own Your Formula? | FF #9 "In a Year…" | Founder Q&A (new, from a real founder question) |
-| Oct 19 | #12 What Retail Actually Costs You | FF #11 The Cash Gap | FF #4 "They Kind of Had Amnesia" | Founder spotlight (new, tag them) |
+| Oct 5 | (passed) | FF #3 The $38,000 Signature | FF #5 Park City Missed the Date | WhatsApp promo |
+| Oct 12 | #6 Know Your Velocity | FF #8 Missing My Numbers | FF #6 The Dinner Test | A. 393 Questions |
+| Oct 19 | #10 The Four That Keep Killing Good Brands | FF #12 Do You Own Your Formula? | FF #9 "In a Year…" | Founder Q&A (new, from a real founder question) |
+| Oct 26 | #12 What Retail Actually Costs You | FF #11 The Cash Gap | FF #4 "They Kind of Had Amnesia" | Founder spotlight (new, tag them) |
 
-After Oct 23: Mondays keep pulling from the Aug–Oct batch (#14 Profitability, #16 Wish List, #20 Monday Dashboard), and the Nov 12 "resume Aug–Oct at #6" step in the posting queue drops those already used.
+After Oct 30: Mondays keep pulling from the Aug–Oct batch (#14 Profitability, #16 Wish List, #20 Monday Dashboard), and the Nov 19 "resume Aug–Oct at #6" step in the posting queue drops those already used.
 
 **Carousels.** Jeff's research says they reach and save well. Cheapest source: the Fatal Flaws webinar deck (`Fatal Flaws and Fatal Mistakes Webinar 9.16.26.pdf`). Cut one flaw into a 6–8 slide PDF carousel and test it in a Monday slot in week 3. If it beats the text-post median, make it weekly.
 
@@ -87,7 +87,7 @@ After Oct 23: Mondays keep pulling from the Aug–Oct batch (#14 Profitability, 
 - End with a question that invites a comment. Keep the didactic wrap-up light, per Joshua's edits.
 - On the 1–2 best posts each week, add: "Follow me for weekly lessons from 8 CPG ventures."
 - Post weekday mornings PT. Jeff replies to every comment in the first hour.
-- **Links:** Jeff's research says link in first comment; our calibrated default has been inline `cpgfoundersgroup.com/resources`. **Test it:** run the Oct 6 and Oct 13 CTA posts with the link in the first comment and compare impressions and resource clicks to Sep 29. Keep whichever wins on founder clicks, not just reach. Either way, delete the link preview card.
+- **Links:** Jeff's research says link in first comment; our calibrated default has been inline `cpgfoundersgroup.com/resources`. **Test it:** run the Oct 13 and Oct 20 CTA posts with the link in the first comment and compare impressions and resource clicks to Oct 6. Keep whichever wins on founder clicks, not just reach. Either way, delete the link preview card.
 
 ## Daily, 20–30 minutes (Jeff)
 

@@ -1,6 +1,6 @@
 # LinkedIn Post — CPG Founders WhatsApp Group Promo
 
-**Post date:** Fri Oct 16, 2026 (moved from Oct 2; "The Timestamp" took that slot, see the posting queue file)
+**Post date:** Fri Oct 23, 2026 (moved from Oct 16 when the whole queue slid a week; "The Timestamp" runs Fri Oct 9, see the posting queue file)
 **Angle:** The most-asked question in the group isn't the one people would guess. Uses the top five ask categories from the Aug 26 group analysis (aggregate stats only, no member names).
 **Link (in body, not comments):** cpgfoundersgroup.com/founders-only
 
@@ -31,5 +31,5 @@ Tell us what you're building and what you're stuck on when you get in. Chances a
 ## Notes
 
 - Top ask categories from the Aug 26 analysis: agencies/digital marketing (47 asks), retail entry (41), packaging (38), AI tools (33), distributor terms (32). The post names all five in that order.
-- "350 founders" matches the number on the site. Bump it if the group has grown by Oct 2.
+- "350 founders" matches the number on the site. Bump it if the group has grown by Oct 23.
 - Deliberately different from the two unposted Friday posts in the Aug–Oct batch: Post A leans on the 1,869 / 393 / 94% stats and Post B on member outcomes. Both stay fresh for later Fridays.
