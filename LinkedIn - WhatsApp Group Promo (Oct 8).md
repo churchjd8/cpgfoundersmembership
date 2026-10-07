@@ -1,6 +1,6 @@
 # LinkedIn Post — CPG Founders WhatsApp Group Promo
 
-**Post date:** Fri Oct 23, 2026 (moved from Oct 16 when the whole queue slid a week; "The Timestamp" runs Fri Oct 9, see the posting queue file)
+**Post date:** Thu Oct 8, 2026 (moved up from Oct 23 to pair with the Kajabi email, see `WhatsApp Group Email - The Most-Asked Question (Oct 8).md`)
 **Angle:** The most-asked question in the group isn't the one people would guess. Uses the top five ask categories from the Aug 26 group analysis (aggregate stats only, no member names).
 **Link (in body, not comments):** cpgfoundersgroup.com/founders-only
 

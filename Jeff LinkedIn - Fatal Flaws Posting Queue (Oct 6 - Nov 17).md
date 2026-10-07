@@ -3,6 +3,8 @@
 
 **Re-dated Oct 5.** Nothing from this queue went out the week of Sep 28 (the CPG Match launch post ran Sep 29 instead), so the whole queue slid one week. Same order, same Tue/Thu/Fri rhythm, 10:00 AM Pacific. First post is Tue Oct 6.
 
+**Rearranged Oct 7.** The WhatsApp promo ("The Question That Comes Up More Than Any Other") moved up to Thu Oct 8 to go out alongside a Kajabi email to non-members. Park City slid one day to Fri Oct 9. The Timestamp takes the open Fri Oct 23 slot once its image exists. FF #1 is scheduled as written for Tue Nov 17.
+
 **Source text.** Pulled verbatim from Jeff's edited copy (`Jeff LinkedIn - Fatal Flaws Webinar Posts (For Jeff's Review).md`). Four tiny edits were made in this queue, all listed under "Edits made" below.
 
 ## Schedule
@@ -10,13 +12,13 @@
 | Date | Day | Post | CTA |
 | --- | --- | --- | --- |
 | Oct 6 | Tue | FF #3: THE $38,000 SIGNATURE | Fatal Flaws assessment |
-| Oct 8 | Thu | FF #5: PARK CITY MISSED THE DATE BY 2 DAYS | none |
-| Oct 9 | Fri | WhatsApp promo: THE TIMESTAMP (post + 3-slide image) | Founders Club (WhatsApp) |
+| Oct 8 | Thu | WhatsApp promo: THE QUESTION THAT COMES UP MORE THAN ANY OTHER (pairs with the Kajabi email to non-members) | Founders Club (WhatsApp) |
+| Oct 9 | Fri | FF #5: PARK CITY MISSED THE DATE BY 2 DAYS | none |
 | Oct 13 | Tue | FF #8: I KEPT MISSING MY NUMBERS AT THE BOARD MEETING | Models in the kits |
 | Oct 15 | Thu | FF #6: THE DINNER TEST | none |
 | Oct 20 | Tue | FF #12: DO YOU OWN YOUR FORMULA? (ARE YOU SURE?) | Fatal Flaws assessment |
 | Oct 22 | Thu | FF #9: "IN A YEAR EVERYBODY'S WILL TASTE JUST AS GOOD" | none |
-| Oct 23 | Fri | WhatsApp promo: THE QUESTION THAT COMES UP MORE THAN ANY OTHER | Founders Club (WhatsApp) |
+| Oct 23 | Fri | WhatsApp promo: THE TIMESTAMP (post + 3-slide image). Not scheduled, waiting on the image | Founders Club (WhatsApp) |
 | Oct 27 | Tue | FF #11: THE CASH GAP, 5 DAYS AT A TIME | Cash runway calculator |
 | Oct 29 | Thu | FF #4: "THEY KIND OF HAD AMNESIA" | none |
 | Nov 3 | Tue | FF #2: THE PHONE CALL TO COKE | Fatal Flaws replay + assessment |
@@ -78,7 +80,7 @@ This is one of the 30 questions in my Fatal Flaws assessment. It's free and it t
 
 ---
 
-## Thu Oct 8 — FF #5: PARK CITY MISSED THE DATE BY 2 DAYS
+## Fri Oct 9 — FF #5: PARK CITY MISSED THE DATE BY 2 DAYS
 
 **CTA: none**
 
@@ -102,7 +104,7 @@ And while you're in there... I won't sign anything longer than 3 months with an 
 
 ---
 
-## Fri Oct 9 — WhatsApp promo: THE TIMESTAMP
+## Fri Oct 23 — WhatsApp promo: THE TIMESTAMP
 
 **CTA: Founders Club.** Runs with a 3-slide image of recreated chat bubbles (spec below). All examples are real September threads from the group, de-identified.
 
@@ -238,9 +240,9 @@ A great product gets you in the game, the brand is what keeps you there.
 
 ---
 
-## Fri Oct 23 — WhatsApp promo: THE QUESTION THAT COMES UP MORE THAN ANY OTHER
+## Thu Oct 8 — WhatsApp promo: THE QUESTION THAT COMES UP MORE THAN ANY OTHER
 
-**CTA: Founders Club.** Full copy lives in `LinkedIn - WhatsApp Group Promo (Oct 23).md` (re-dated to Oct 23).
+**CTA: Founders Club.** Full copy lives in `LinkedIn - WhatsApp Group Promo (Oct 8).md` (moved up to Oct 8).
 
 ---
 
