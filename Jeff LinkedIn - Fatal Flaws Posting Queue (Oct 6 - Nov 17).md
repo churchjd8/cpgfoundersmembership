@@ -7,6 +7,8 @@
 
 **Rearranged again Oct 7.** Tomorrow's WhatsApp promo was rewritten around Jeff's own GNC vs Vitamin Shoppe question, because the "most-asked question" version read too close to the Sep 29 CPG Match email. Park City moved from Fri Oct 9 to the end of the run, Thu Nov 19. Fri Oct 9 is now empty.
 
+**Book teasers added Oct 7.** The ten posts from Oct 13 through Nov 12 each end with a one-line teaser for *The Cold-Pressed Truth* (out Nov 17), supplied by Joshua. Two were adjusted: Oct 29 says "Less than three weeks" (it is 19 days out), and the Nov 3 line was finished with the standard "Out Nov 17, first access at cpgfoundersgroup.com/book". FF #1 (Nov 17, launch day) and Park City (Nov 19) have no teaser yet.
+
 **Source text.** Pulled verbatim from Jeff's edited copy (`Jeff LinkedIn - Fatal Flaws Webinar Posts (For Jeff's Review).md`). Four tiny edits were made in this queue, all listed under "Edits made" below.
 
 ## Schedule
@@ -166,6 +168,8 @@ You don't have to be right. You have to know why you were wrong.
 
 The models I use are in the free kits here: cpgfoundersgroup.com/resources
 
+I go deeper on this in Chapter 7 of The Cold-Pressed Truth, out Nov 17. First access at cpgfoundersgroup.com/book
+
 ---
 
 ## Thu Oct 15 — FF #6: THE DINNER TEST
@@ -189,6 +193,8 @@ Because the thing I hate more than anything is somebody who is great to you as t
 That person will interview beautifully. They'll also wreck the culture you're trying to build, and you won't hear about it until the damage is done.
 
 You learn more over one dinner than you do in three interviews.
+
+There's a whole chapter on this (Chapter 8) in my book, out November 17.
 
 ---
 
@@ -216,6 +222,8 @@ So go pull your agreement this week and find the ownership language. If you don'
 
 It's one of the 30 questions in my free Fatal Flaws assessment: cpgfoundersgroup.com/resources
 
+This is one of the pre-launch checks in Chapter 3 of The Cold-Pressed Truth. Out Nov 17, first access at cpgfoundersgroup.com/book
+
 ---
 
 ## Thu Oct 22 — FF #9: "IN A YEAR EVERYBODY'S WILL TASTE JUST AS GOOD"
@@ -239,6 +247,8 @@ But for most of us, the recipe isn't the moat.
 So the question I'd ask is where your time and money are going right now. If it's all going into making the product 5% better and none of it is going into making the brand mean something to somebody, I'd take a hard look at that.
 
 A great product gets you in the game, the brand is what keeps you there.
+
+Chapter 13 of the book is about exactly this. November 17.
 
 ---
 
@@ -278,6 +288,8 @@ Cash exhaustion is about 35% of the reason brands fail. This is one of the few l
 
 There's a free cash runway calculator in the kits here: cpgfoundersgroup.com/resources
 
+Chapter 7 of The Cold-Pressed Truth walks through the cash gap in detail. Out Nov 17, first access at cpgfoundersgroup.com/book
+
 ---
 
 ## Thu Oct 29 — FF #4: "THEY KIND OF HAD AMNESIA"
@@ -299,6 +311,8 @@ So now I do something simple. I write a Memorandum of Understanding “MOU” be
 Just put it down on paper while everybody still likes each other.
 
 It takes about an hour and it could save your friendship.
+
+It made the list in Chapter 21 of my book. Less than three weeks until it's out.
 
 ---
 
@@ -330,6 +344,8 @@ I walked through all 30 questions live on my Fatal Flaws webinar in September. T
 
 cpgfoundersgroup.com/resources
 
+The whole Coca-Cola story is Chapters 14 through 16 of The Cold-Pressed Truth. Out Nov 17, first access at cpgfoundersgroup.com/book
+
 ---
 
 ## Thu Nov 5 — FF #10: THE $10 GREEN JUICE
@@ -353,6 +369,8 @@ So if the math doesn't work at that price, you have a few options. Look at your 
 I'm dealing with this myself right now. Proda is at $3.49 and the modern sodas are at $2.49. I'd love to be at $3.99 to cover the increasing cost of protein, however we feel like we’d lose the market.
 
 If you're way out of whack on price, you'll sell some and the people who buy it will love it. You just won't sell it at scale.
+
+Chapter 6 of the book is the full Suja pricing story. Twelve days.
 
 ---
 
@@ -386,6 +404,8 @@ It's not you, it's the calendar... so manage your cash and hang in there.
 
 If you're about to raise, my Fundraising Kit is free: cpgfoundersgroup.com/resources
 
+One week until The Cold-Pressed Truth is out. Chapter 7 is this post, times ten.
+
 ---
 
 ## Thu Nov 12 — FF #13: PEEL THE ONION (short one)
@@ -403,6 +423,8 @@ A lot of the time I can't even fix it right away. But finding it puts me in a mu
 It's the same with your business. Knowing the problem is better than not knowing the problem.
 
 So if something has felt off lately and you can't say why... go peel it back this weekend.
+
+Five days. Chapter 20 is the full field guide.
 
 ---
 
