@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { isChromeless } from "@/lib/internal-routes";
 
 const navLinks = [
   { label: "About", href: "/about-jeff" },
@@ -17,6 +18,9 @@ const navLinks = [
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();
+
+  // Internal working pages (see src/lib/internal-routes.ts) render without site chrome.
+  if (isChromeless(pathname)) return null;
 
   function handleLogoClick(e: React.MouseEvent) {
     if (pathname === "/") {

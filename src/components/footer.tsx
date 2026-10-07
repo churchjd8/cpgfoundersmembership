@@ -1,3 +1,7 @@
+"use client";
+
+import { usePathname } from "next/navigation";
+import { isChromeless } from "@/lib/internal-routes";
 import Link from "next/link";
 
 const footerLinks = [
@@ -12,6 +16,9 @@ const footerLinks = [
 ];
 
 export function Footer() {
+  const pathname = usePathname();
+  if (isChromeless(pathname)) return null;
+
   return (
     <footer className="bg-foreground text-white/80">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
