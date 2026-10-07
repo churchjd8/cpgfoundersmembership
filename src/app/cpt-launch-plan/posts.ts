@@ -22,22 +22,21 @@ export const posts: Post[] = [
     date: "Mon Oct 12",
     iso: "2026-10-12",
     type: "Milestone",
-    title: "I wrote a book",
+    title: "My book is finally done and getting ready for print!",
     slot: "Takes the Monday slot. Tue/Thu Fatal Flaws run as scheduled.",
-    needs: "/book insider page updated to 'Out November 17' before this goes live.",
-    body: `I wrote a book.
+    needs: "/book insider page updated to 'Out November 17' before this goes live. A photo works here: Jeff with the print layout on screen, or the proof PDF open on his desk.",
+    check: "'Read the first 100 pages and couldn't stop' is from Jeff's own Sep 23 email to Emma. Kilimanjaro and Babu are the Preface. Eight ventures, five home runs, three strikeouts is the credential line.",
+    body: `My book is finally done and getting ready for print!
 
-It's called The Cold-Pressed Truth, and it comes out on November 17.
+I still can't believe I'm typing that. The Cold-Pressed Truth comes out November 17, and last week I read the first 100 pages of the print layout and couldn't put it down (and I wrote the thing, although I had massive editing help from everyone!).
 
-I want to tell you why, because for a long time I didn't think I had any business writing one. I'm an operator, not an author. But a few years ago I was climbing Kilimanjaro with my kids, and somewhere around day three the local guides started calling me Babu. It's Swahili for grandpa. Partly for my pace (slow), and partly because I couldn't stop handing out advice on the trail.
+Quick story on where it came from. A few years ago I was climbing Kilimanjaro with my kids, and somewhere around day three the local guides started calling me Babu. It's Swahili for grandpa. Partly for my pace (slow), and partly because I couldn't stop handing out advice on the trail. Somewhere between that mountain and the boardroom it hit me that this is the role I've been playing for 30 years anyway. The guy walking alongside you, pointing out what's ahead and being honest about what's behind.
 
-Somewhere between that mountain and the boardroom it hit me that this is the role I've been playing for 30 years. The guy walking alongside you, pointing out what's ahead while being honest about what's behind.
+So that's the book! Eight ventures, five home runs, three strikeouts. Building Suja from an ice closet to $100 million in six years, and the July 3rd phone call when Coca-Cola decided not to buy the rest of it. The frameworks I actually used, and the mistakes I'd pay good money to take back.
 
-So that's what the book is. Eight ventures, five home runs, three strikeouts. Building Suja from an ice closet to $100 million in six years, and the July 3rd phone call when Coca-Cola decided not to buy the rest of it. The frameworks I actually used, and the mistakes I'd pay a lot of money to take back.
+It's the book I wish someone had handed me before my first startup, and I can't wait to get it in your hands!
 
-It's the book I wish someone had handed me before my first startup.
-
-If you want to be the first to know when it's out (plus the founder tools that come with it), put your name here: cpgfoundersgroup.com/book
+If you want to be first to know when it's out (plus the founder tools that go with it), put your name here: cpgfoundersgroup.com/book
 
 More soon!`,
   },
@@ -46,7 +45,7 @@ More soon!`,
     iso: "2026-10-19",
     type: "Milestone",
     title: "Cover reveal, one month out",
-    slot: "Monday slot. Pre-schedule before Europe (wheels up Oct 16).",
+    slot: "Monday slot.",
     needs: "Final cover from BIB. If it isn't locked by Oct 15, run the 'One month from tomorrow' version without the image and reveal the cover Mon Oct 26.",
     check: "Confirm Jeff is comfortable naming all five blurb writers publicly before the book is out.",
     body: `Here it is.
@@ -67,27 +66,25 @@ Insider access (and the founder tools from the book) is here: cpgfoundersgroup.c
     date: "Fri Oct 23",
     iso: "2026-10-23",
     type: "Promo",
-    title: "Launch team: comment BOOK",
-    slot: "Friday slot. The Timestamp WhatsApp promo (still waiting on its image) moves to Fri Oct 30.",
-    needs: "The AI DM reply ready: PDF arrives ~Nov 2, kits link, launch-day instructions. Launch team email #1 goes to the full list Tue Oct 20, so this is the LinkedIn version of the same ask.",
-    body: `Okay folks, I need some help.
+    title: "Podcast tour: whose show should I be on?",
+    slot: "Friday slot. The Timestamp WhatsApp promo (still waiting on its image) moves to Fri Oct 30. Every show named in the comments goes into the Launch Vault podcast tracker.",
+    needs: "Nothing. Joshua logs the replies.",
+    body: `My book comes out in less than four weeks, and I'm doing a podcast tour!
 
-The Cold-Pressed Truth comes out in less than four weeks, and I'm putting together a launch team. It's a small group of people who get the book before anyone else and help me get it off the ground that first week.
+Here's the thing. I've spent the last couple of years telling founders to stop hiding behind the brand and go tell the story themselves, so I figure it's time I took my own advice.
 
-Here's the deal. You get the full book as a PDF two weeks before it comes out, plus the three founder kits I built to go with it (the Fundraising Kit, the Profitability Kit and the Starting Line Kit). In return, I'm asking for three things on launch day: grab the ebook (it'll be 99 cents that week), leave an honest review, and share it with one founder who needs it.
+The Cold-Pressed Truth is 30 years of building, scaling and selling consumer brands, including the whole Suja story start to finish (the ice closet, the $100 million, the Coca-Cola call). I'm happy to talk about any of it, including the parts that didn't go well, which are usually the more useful ones anyway.
 
-That's it. No pitch, no upsell. Just a favor from a guy who has asked a lot of favors in his life and is grateful for every one of them.
+So, whose show should I be on? If you host a podcast, or you know someone who does and think this would be a fit for their audience, drop it in the comments or send me a note. It doesn't have to be big. It has to be the right room.
 
-If you're in, comment BOOK below and I'll send you the details.
-
-Thank you. I mean that.`,
+And if you want first access to the book when it's out: cpgfoundersgroup.com/book`,
   },
   {
     date: "Mon Oct 26",
     iso: "2026-10-26",
     type: "Educational",
     title: "The three problems the book solves",
-    slot: "Monday slot. Pre-scheduled; Jeff is in Europe.",
+    slot: "Monday slot.",
     check: "'Faster than KIND, Honest Tea, and ZICO' is from the jacket copy. 'What's a cat man' is Ch. 12. 'Never financed from weakness' is in the quote bank.",
     body: `Here's something I tell every founder I work with. Most brands don't die from one big mistake. They die from three small ones that compound.
 
@@ -106,7 +103,7 @@ If you've been living inside one of these, the book is for you. It's out Novembe
     iso: "2026-11-02",
     type: "Milestone",
     title: "Holding it for the first time (unboxing)",
-    slot: "Monday slot. Hardcover author copies land Fri Oct 30; Jeff is back Oct 29.",
+    slot: "Monday slot. Hardcover author copies land Fri Oct 30.",
     needs: "The unboxing video. Phone, kitchen, Linda filming. One take, do not polish it. Highest-engagement post of the run.",
     check: "The two brothers story is Ch. 19. Confirm Jeff wants it in public before the book is out.",
     body: `I held my book for the first time on Friday.
@@ -115,16 +112,16 @@ Thirty years of building companies, and I was not ready for how that felt. Linda
 
 I keep thinking about two brothers who have both invested in my companies over the years. One of them has only ever invested in the winners. The other has only ever invested in the losers. Same deals on the table, different timing. A lot of this book exists because of the second brother, and the traps I wish I'd seen coming for him.
 
-Anyway. It's real now. November 17.
+Anyway. It's real now. November 17!
 
-If you want to be on the launch team and get it early, there's still room: comment BOOK and I'll send you the details.`,
+If you want it the morning it comes out (plus the founder tools that go with it), put your name here: cpgfoundersgroup.com/book`,
   },
   {
     date: "Fri Nov 6",
     iso: "2026-11-06",
     type: "Promo",
-    title: "The foreword, and last call for the launch team",
-    slot: "Friday slot. Pairs with launch team email #2 (last chance) that week.",
+    title: "The foreword",
+    slot: "Friday slot. Pairs with email #2 ('Two weeks') that week.",
     needs: "Quote card graphic: Jay's line, his photo, the cover.",
     check: "Foreword quote is verbatim from cpt-00-book-facts. 'During a period of growth and change' is how Jay describes meeting Jeff in the foreword.",
     body: `True story. A few years ago Jay Shetty's team brought me in during a period of real growth and change for them, and we ended up spending a lot of time together.
@@ -135,7 +132,7 @@ One line from it has stuck with me: "In a world that often glorifies hype, noise
 
 I'm not sure I chose it so much as got dragged down it (the ice closet, the beet juice all over the loading dock, the July 3rd phone call). But I'll take it.
 
-The Cold-Pressed Truth comes out a week from Tuesday. Last call for the launch team: comment BOOK and I'll get you the early copy and the kits this weekend.`,
+The Cold-Pressed Truth comes out a week from Tuesday. If you want it the morning it's live, put your name here: cpgfoundersgroup.com/book`,
   },
   {
     date: "Mon Nov 9",
@@ -186,7 +183,7 @@ Fourteen years ago I was standing on a loading dock with beet juice running down
 
 The Cold-Pressed Truth goes live on Amazon tomorrow. 99 cents for the ebook all week. I'll post the link right here the moment it's up.
 
-If you're on the launch team, check your inbox in the morning. If you're not, no problem, the link is coming to everyone.
+If you're on the insider list, the link hits your inbox first thing in the morning. If you're not, no problem, I'll post it right here too.
 
 Thank you for following along with this. Let's go!`,
   },
@@ -258,7 +255,7 @@ export const chapterLines: { date: string; post: string; chapter: string; line: 
   { date: "Thu Oct 22", post: "FF #9: In a year everybody's will taste just as good", chapter: "Ch. 12 Battle of the Shelf / Ch. 13 Innovation", line: "Chapter 13 of the book is about exactly this. November 17." },
   { date: "Tue Oct 27", post: "FF #11: The cash gap, 5 days at a time", chapter: "Ch. 7 Fundraising", line: "Chapter 7 of The Cold-Pressed Truth walks through the cash gap in detail. Out Nov 17, first access at cpgfoundersgroup.com/book" },
   { date: "Thu Oct 29", post: "FF #4: They kind of had amnesia", chapter: "Ch. 21 Fatal Flaws and Recoverable Mistakes", line: "It made the list in Chapter 21 of my book. Three weeks until it's out." },
-  { date: "Tue Nov 3", post: "FF #2: The phone call to Coke", chapter: "Ch. 14 / 16 Coca-Cola", line: "The whole Coca-Cola story is Chapters 14 through 16 of The Cold-Pressed Truth. Two weeks. Launch team is still open at cpgfoundersgroup.com/book" },
+  { date: "Tue Nov 3", post: "FF #2: The phone call to Coke", chapter: "Ch. 14 / 16 Coca-Cola", line: "The whole Coca-Cola story is Chapters 14 through 16 of The Cold-Pressed Truth. Two weeks. First access at cpgfoundersgroup.com/book" },
   { date: "Thu Nov 5", post: "FF #10: The $10 green juice", chapter: "Ch. 6 Life Stages of a Brand", line: "Chapter 6 of the book is the full Suja pricing story. Twelve days." },
   { date: "Tue Nov 10", post: "FF #7: Months 10 to 18", chapter: "Ch. 7 Fundraising", line: "One week until The Cold-Pressed Truth is out. Chapter 7 is this post, times ten." },
   { date: "Thu Nov 12", post: "FF #13: Peel the onion", chapter: "Ch. 20 Babu's Field Guide", line: "Five days. Chapter 20 is the full field guide." },
