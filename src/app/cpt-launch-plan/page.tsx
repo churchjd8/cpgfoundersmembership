@@ -573,7 +573,7 @@ function ListTab() {
   return (
     <div className="space-y-10">
       <div>
-        <H2 sub="Type names straight in. It saves in this browser as you go; Export CSV hands Joshua the file for the outreach queue. Name and how to reach them is enough.">
+        <H2 sub="One shared list for both of us. Type names straight in, or hit Download Excel, add names in the spreadsheet (tier dropdown included), and Import it back. Every add, edit, download and import is logged with who did it. Name and how to reach them is enough.">
           Jeff&rsquo;s list
         </H2>
         <LaunchList />
