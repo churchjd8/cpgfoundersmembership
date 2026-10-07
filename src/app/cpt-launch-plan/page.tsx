@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { LaunchList } from "./launch-list-client";
 import { Tabs } from "./tabs";
 import { Countdown, Section, CopyButton, WeekList, Who, type WeekBlock } from "./ui";
@@ -59,7 +60,7 @@ const publishing = [
   { label: "KDP + IngramSpark", status: "Set up, verified, Emma uploading.", done: true },
   { label: "Hardcover", status: "Approved on KDP. 10 author copies ordered, arriving Oct 30. IngramSpark version (with dust jacket) is ready for review as of Oct 7.", done: true },
   { label: "Paperback", status: "Waiting on approval (any day). Order author copies the same day it lands.", done: false },
-  { label: "Cover", status: "Being finalized by BIB. Needed by Oct 15 for the Oct 19 reveal post.", done: false },
+  { label: "Cover", status: "In hand (top of this page). Confirm with BIB that it's the final file before the Oct 19 reveal post.", done: true },
   { label: "Ebook", status: "Uploads with the paperback. $0.99 launch-week price set at listing.", done: false },
 ];
 
@@ -573,7 +574,7 @@ function ListTab() {
   return (
     <div className="space-y-10">
       <div>
-        <H2 sub="One shared list for both of us. Type names straight in, or hit Download Excel, add names in the spreadsheet (tier dropdown included), and Import it back. Every add, edit, download and import is logged with who did it. Name and how to reach them is enough.">
+        <H2 sub="One shared list for both of us. Type names straight in, or hit Download Excel, add names in the spreadsheet (tier dropdown included), and Import it back. Name and how to reach them is enough.">
           Jeff&rsquo;s list
         </H2>
         <LaunchList />
@@ -663,10 +664,20 @@ export default function LaunchPlanPage() {
   return (
     <div className="min-h-screen bg-background">
       <header className="bg-foreground text-white">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-6 flex flex-wrap items-end justify-between gap-3">
-          <div>
-            <div className="text-xs font-bold uppercase tracking-wider text-gold">Internal &middot; Jeff + Joshua</div>
-            <h1 className="mt-1 text-2xl sm:text-3xl font-bold tracking-tight">The Cold-Pressed Truth &middot; Launch</h1>
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-5 flex flex-wrap items-center justify-between gap-4">
+          <div className="flex items-center gap-4">
+            <Image
+              src="/cpt-cover.jpg"
+              alt="The Cold-Pressed Truth cover"
+              width={56}
+              height={90}
+              priority
+              className="h-[90px] w-auto rounded-sm shadow-lg shadow-black/40 ring-1 ring-white/10"
+            />
+            <div>
+              <div className="text-xs font-bold uppercase tracking-wider text-gold">Internal &middot; Jeff + Joshua</div>
+              <h1 className="mt-1 text-2xl sm:text-3xl font-bold tracking-tight">The Cold-Pressed Truth &middot; Launch</h1>
+            </div>
           </div>
           <div className="text-right">
             <div className="text-lg sm:text-xl font-bold text-gold">

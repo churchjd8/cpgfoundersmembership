@@ -14,8 +14,6 @@ const TIERS: { key: Tier; hint: string; target: string }[] = [
   { key: "Champion", hint: "Held for after the Amazon week. One specific ask each.", target: "5-15" },
 ];
 const CHANNELS = ["Text", "Call", "Email", "WhatsApp", "LinkedIn", "In person"];
-const PEOPLE = ["Jeff", "Joshua"];
-const WHO_KEY = "cpt-launch-list-who";
 const LEGACY_KEY = "cpt-launch-list-v1";
 
 type Contact = {
@@ -33,14 +31,6 @@ type Contact = {
 type Activity = { id: string; who: string; action: string; detail: string; created_at: string };
 
 type Draft = Omit<Contact, "id" | "added_by" | "created_at" | "updated_at">;
-
-function readWho(): string {
-  try {
-    return localStorage.getItem(WHO_KEY) || "";
-  } catch {
-    return "";
-  }
-}
 
 // Names typed into the old browser-only version of this list, if any.
 function readLegacy(): Draft[] {
@@ -75,7 +65,7 @@ function ago(iso: string): string {
 const inputCls = "w-full bg-transparent px-1 py-1.5 focus:outline-none focus:ring-1 focus:ring-accent rounded";
 
 export function LaunchList() {
-  const [who, setWho] = useState<string>(readWho);
+  const who = "";
   const [contacts, setContacts] = useState<Contact[]>([]);
   const [activity, setActivity] = useState<Activity[]>([]);
   const [tier, setTier] = useState<Tier>("Tier 1");
@@ -84,7 +74,6 @@ export function LaunchList() {
   const [legacy, setLegacy] = useState<Draft[]>([]);
   const [busy, setBusy] = useState(false);
   const fileRef = useRef<HTMLInputElement>(null);
-  const viewLogged = useRef(false);
 
   const load = useCallback(async () => {
     try {
@@ -106,28 +95,7 @@ export function LaunchList() {
     setLegacy(readLegacy());
   }, [load]);
 
-  // One "opened the list" entry per visit, once we know who it is.
-  useEffect(() => {
-    if (!who || viewLogged.current) return;
-    viewLogged.current = true;
-    void fetch("/api/cpt-launch-list", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ action: "view", who }),
-    }).catch(() => {});
-  }, [who]);
-
-  function pickWho(name: string) {
-    setWho(name);
-    try {
-      localStorage.setItem(WHO_KEY, name);
-    } catch {
-      // fine
-    }
-  }
-
   async function add() {
-    if (!who) return setError("Pick who you are first (top right).");
     setBusy(true);
     const row: Draft = { tier, name: "", how_i_know_them: "", channel: "", contact: "", notes: "" };
     // Name is required server-side, so new rows start as a local draft and
@@ -188,7 +156,6 @@ export function LaunchList() {
   }
 
   async function importFile(file: File) {
-    if (!who) return setError("Pick who you are first (top right).");
     setBusy(true);
     setStatus("Reading the file…");
     const fd = new FormData();
@@ -213,7 +180,6 @@ export function LaunchList() {
   }
 
   async function importLegacy() {
-    if (!who) return setError("Pick who you are first (top right).");
     setBusy(true);
     for (const row of legacy) {
       await fetch("/api/cpt-launch-list", {
@@ -268,21 +234,6 @@ export function LaunchList() {
         <span className="text-xs text-muted">
           The Excel has every name already here plus the tier dropdown. Add rows, save, upload it back.
         </span>
-        <label className="ml-auto flex items-center gap-2 text-sm">
-          <span className="text-muted">I am</span>
-          <select
-            value={who}
-            onChange={(e) => pickWho(e.target.value)}
-            className={`rounded-lg border px-2 py-1.5 bg-background ${who ? "border-border" : "border-accent"}`}
-          >
-            <option value="">Pick one</option>
-            {PEOPLE.map((p) => (
-              <option key={p} value={p}>
-                {p}
-              </option>
-            ))}
-          </select>
-        </label>
       </div>
 
       {(status || error) && (
@@ -331,7 +282,6 @@ export function LaunchList() {
                 <th className="px-2 py-2 min-w-[130px]">Best channel</th>
                 <th className="px-2 py-2 min-w-[170px]">Phone or email</th>
                 <th className="px-2 py-2 min-w-[200px]">Notes / the ask</th>
-                <th className="px-2 py-2 min-w-[90px]">Added by</th>
                 <th className="px-2 py-2 w-10"></th>
               </tr>
             </thead>
@@ -341,7 +291,7 @@ export function LaunchList() {
               ))}
               {rows.length === 0 && (
                 <tr>
-                  <td colSpan={7} className="px-4 py-8 text-center text-muted">
+                  <td colSpan={6} className="px-4 py-8 text-center text-muted">
                     {status ? status : "No names yet. Add the first one, or download the Excel and fill it in."}
                   </td>
                 </tr>
@@ -364,14 +314,13 @@ export function LaunchList() {
       {/* Activity */}
       <details className="rounded-xl border border-border bg-card">
         <summary className="cursor-pointer select-none px-4 py-3 text-sm font-semibold">
-          Recent activity <span className="font-normal text-muted">(who did what)</span>
+          Recent activity
         </summary>
         <ul className="divide-y divide-border px-4 pb-3 text-sm">
           {activity.length === 0 && <li className="py-2 text-muted">Nothing yet.</li>}
           {activity.map((a) => (
             <li key={a.id} className="flex flex-wrap gap-x-3 py-2">
-              <span className="font-semibold">{a.who || "someone"}</span>
-              <span>{a.action}</span>
+              <span className="font-semibold">{a.action}</span>
               <span className="text-muted">{a.detail}</span>
               <span className="ml-auto text-xs text-muted">{ago(a.created_at)}</span>
             </li>
@@ -418,7 +367,6 @@ function Row({ c, onSave, onRemove }: { c: Contact; onSave: (c: Contact, patch: 
       </td>
       <td className="px-2 py-1">{field("contact", "Optional")}</td>
       <td className="px-2 py-1">{field("notes", c.tier === "Champion" ? "Podcast / post / intro / bulk" : "Anything useful")}</td>
-      <td className="px-2 py-1 text-xs text-muted whitespace-nowrap">{c.added_by || "—"}</td>
       <td className="px-2 py-1 text-center">
         <button type="button" onClick={() => onRemove(c)} aria-label="Remove" className="text-muted hover:text-accent">
           &times;
