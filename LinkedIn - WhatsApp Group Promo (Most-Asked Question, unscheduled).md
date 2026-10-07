@@ -1,6 +1,6 @@
 # LinkedIn Post — CPG Founders WhatsApp Group Promo
 
-**Post date:** Thu Oct 8, 2026 (moved up from Oct 23 to pair with the Kajabi email, see `WhatsApp Group Email - The Most-Asked Question (Oct 8).md`)
+**Post date:** Unscheduled. Pulled from Thu Oct 8 on Oct 7 because it read too close to the Sep 29 CPG Match email. Replaced by the GNC or Vitamin Shoppe post. Hold for a later Friday, well clear of any CPG Match push.
 **Angle:** The most-asked question in the group isn't the one people would guess. Uses the top five ask categories from the Aug 26 group analysis (aggregate stats only, no member names).
 **Link (in body, not comments):** cpgfoundersgroup.com/founders-only
 

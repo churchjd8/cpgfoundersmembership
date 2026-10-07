@@ -5,6 +5,8 @@
 
 **Rearranged Oct 7.** The WhatsApp promo ("The Question That Comes Up More Than Any Other") moved up to Thu Oct 8 to go out alongside a Kajabi email to non-members. Park City slid one day to Fri Oct 9. The Timestamp takes the open Fri Oct 23 slot once its image exists. FF #1 is scheduled as written for Tue Nov 17.
 
+**Rearranged again Oct 7.** Tomorrow's WhatsApp promo was rewritten around Jeff's own GNC vs Vitamin Shoppe question, because the "most-asked question" version read too close to the Sep 29 CPG Match email. Park City moved from Fri Oct 9 to the end of the run, Thu Nov 19. Fri Oct 9 is now empty.
+
 **Source text.** Pulled verbatim from Jeff's edited copy (`Jeff LinkedIn - Fatal Flaws Webinar Posts (For Jeff's Review).md`). Four tiny edits were made in this queue, all listed under "Edits made" below.
 
 ## Schedule
@@ -12,8 +14,7 @@
 | Date | Day | Post | CTA |
 | --- | --- | --- | --- |
 | Oct 6 | Tue | FF #3: THE $38,000 SIGNATURE | Fatal Flaws assessment |
-| Oct 8 | Thu | WhatsApp promo: THE QUESTION THAT COMES UP MORE THAN ANY OTHER (pairs with the Kajabi email to non-members) | Founders Club (WhatsApp) |
-| Oct 9 | Fri | FF #5: PARK CITY MISSED THE DATE BY 2 DAYS | none |
+| Oct 8 | Thu | WhatsApp promo: GNC OR VITAMIN SHOPPE? (pairs with the Kajabi email to non-members) | Founders Club (WhatsApp) |
 | Oct 13 | Tue | FF #8: I KEPT MISSING MY NUMBERS AT THE BOARD MEETING | Models in the kits |
 | Oct 15 | Thu | FF #6: THE DINNER TEST | none |
 | Oct 20 | Tue | FF #12: DO YOU OWN YOUR FORMULA? (ARE YOU SURE?) | Fatal Flaws assessment |
@@ -26,7 +27,8 @@
 | Nov 10 | Tue | FF #7: MONTHS 10 TO 18 | Fundraising Kit |
 | Nov 12 | Thu | FF #13: PEEL THE ONION (short one) | none |
 | Nov 17 | Tue | FF #1: THE $100M EXIT THAT PAID $5M | Fundraising Kit |
-| Nov 19 | Thu | Resume Aug–Oct batch at #6 (Know Your Velocity Before Your Buyer Tells You) | — |
+| Nov 19 | Thu | FF #5: PARK CITY MISSED THE DATE BY 2 DAYS | none |
+| Nov 24 | Tue | Resume Aug–Oct batch at #6 (Know Your Velocity Before Your Buyer Tells You). Not scheduled | — |
 
 ## Why this order
 
@@ -80,7 +82,7 @@ This is one of the 30 questions in my Fatal Flaws assessment. It's free and it t
 
 ---
 
-## Fri Oct 9 — FF #5: PARK CITY MISSED THE DATE BY 2 DAYS
+## Thu Nov 19 — FF #5: PARK CITY MISSED THE DATE BY 2 DAYS
 
 **CTA: none**
 
@@ -240,9 +242,9 @@ A great product gets you in the game, the brand is what keeps you there.
 
 ---
 
-## Thu Oct 8 — WhatsApp promo: THE QUESTION THAT COMES UP MORE THAN ANY OTHER
+## Thu Oct 8 — WhatsApp promo: GNC OR VITAMIN SHOPPE?
 
-**CTA: Founders Club.** Full copy lives in `LinkedIn - WhatsApp Group Promo (Oct 8).md` (moved up to Oct 8).
+**CTA: Founders Club.** Full copy lives in `WhatsApp Group Email - GNC or Vitamin Shoppe (Oct 8).md`, alongside the email version. The older "most-asked question" post is parked in `LinkedIn - WhatsApp Group Promo (Most-Asked Question, unscheduled).md`.
 
 ---
 
