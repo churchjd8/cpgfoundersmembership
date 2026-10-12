@@ -5,7 +5,7 @@ import { BookWaitlistForm } from "@/components/book-waitlist-form";
 export const metadata: Metadata = {
   title: "The Cold-Pressed Truth - A Founder's Field Guide | Jeff Church",
   description:
-    "Jeff Church's book on building Suja from an ice closet to $100 million in six years. A Founder's Field Guide to Building, Scaling, and Selling a Consumer Brand. Foreword by Jay Shetty. Join the waitlist.",
+    "Jeff Church's book on building Suja from an ice closet to $100 million in six years. A Founder's Field Guide to Building, Scaling, and Selling a Consumer Brand. Foreword by Jay Shetty. Out November 17, 2026. Join the insider list for first access.",
 };
 
 const praise = [
@@ -64,7 +64,7 @@ export default function BookPage() {
       <section className="relative bg-foreground text-white overflow-hidden">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-20 md:py-28 text-center">
           <span className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider bg-accent text-white rounded-full mb-6">
-            Coming soon
+            Out November 17
           </span>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
             The Cold-Pressed Truth
@@ -82,7 +82,7 @@ export default function BookPage() {
             working manual for anyone building a consumer brand.
           </p>
           <p className="mt-6 text-white/50">
-            It isn&rsquo;t out yet. Drop your name below and you&rsquo;ll hear the day it lands.
+            It comes out Tuesday, November 17. Drop your name below and you&rsquo;ll get first access the morning it&rsquo;s live.
           </p>
           <BookWaitlistForm />
         </div>
@@ -187,7 +187,7 @@ export default function BookPage() {
       <section className="py-16 md:py-24 bg-foreground text-white">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
-            Know the day it lands
+            Out November 17. Get first access.
           </h2>
           <p className="mt-4 text-lg text-white/70 leading-relaxed">
             <strong className="text-white">The Cold-Pressed Truth: A Founder&rsquo;s Field Guide
