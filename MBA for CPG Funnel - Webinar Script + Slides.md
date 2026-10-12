@@ -1,6 +1,7 @@
 # CPG Is a Different Beast — Webinar Script + Slides
 
 Status: DRAFT for Jeff's markup, Oct 12 2026.
+Slide deck (talk track is in the speaker notes): https://claude.ai/artifact/Mt6rStDFpN4nH29XwYFMoE
 Companion file: `MBA for CPG Funnel - Map.md`
 
 **Format:** recorded, slides with Jeff on camera in the corner. About 48 minutes.
@@ -275,8 +276,8 @@ Anything that gives away your formula.
 ## THE TURN
 
 ### Slide 29 — What you just saw
-**On slide:** The five lessons again, each with a dollar figure next to it.
-Under-budgeting: $125K+ · Wrong margin: the whole company · Wrong stores: $1M · Careless equity: most of your exit · A handshake: $1M
+**On slide:** The five lessons again, each with its bill.
+Under-budgeting: twice what you planned · Wrong margin: the whole company · Wrong stores: $1M in slotting · Careless equity: most of your exit · A handshake: $1M in deductions
 
 **Say:**
 "That's five. Let me be clear about something. Those are five out of a few hundred.
@@ -334,16 +335,16 @@ I went to Harvard Business School, and I'm grateful for it. It didn't teach me a
 **On slide:**
 Bonus 1: The Fatal Flaws session and the 30-question Fatal Flaw Assessment
 Bonus 2: The Pre-Launch Roadmap worksheet
-Bonus 3: 30 days of Babu, my CPG AI
-Bonus 4: The Founders Club, 300+ founders on WhatsApp
+Bonus 3: The Founders Club, 300+ founders on WhatsApp
+Footer line: try Babu, my CPG AI, free for 10 days
 
 **Say (beats):**
 - Fatal Flaws: tonight's Lesson 5 was three of them. There are 18. You get the full 90-minute session and the assessment to score your own business.
 - Roadmap: the 8 phases from Lesson 1 as a worksheet with your own dates and dollars.
-- Babu: ask it questions while you go through the modules. It's trained on everything I've written.
 - Founders Club: the best part of this industry is the other founders. Come meet them.
+- Babu: there's a free 10-day trial. Ask it questions while you go through the modules.
 
-*(Bonuses 2 and 3 are pending Jeff's OK. Cut the slide lines for anything not approved.)*
+*(Bonus 2, the roadmap worksheet, still needs to be built.)*
 
 ### Slide 36 — The price
 **On slide:** Regular price $997. Founder price **$497**. Or pay over time with Klarna. 72 hours.
@@ -363,7 +364,6 @@ If $497 at once is a stretch right now, you can spread it out with Klarna at che
 
 Think about what tonight's five lessons cost me. One slotting fee you don't pay, one contract you don't sign, one point of equity you don't give away covers this hundreds of times over."
 
-*(Pending Jeff's OK on the guarantee.)*
 
 ### Slide 38 — Close
 **On slide:** The button text and URL. "Get the MBA for CPG — $497." Below it: "Raise your hand."
@@ -385,4 +385,4 @@ Whether you join us inside or not, thank you for spending this time with me. I'm
 - **Recording:** one sitting. Don't chase a perfect take. A stumble or two reads as real, and Jeff teaching naturally beats Jeff reading.
 - **Same session:** record the six 30 to 60 second ad hooks from the funnel map, and a 20-second "your training is ready" clip for the confirmation email.
 - **Offer timestamp:** note the exact minute Slide 31 starts. The watch page reveals the offer button at that point.
-- **Things to confirm before recording:** the waterfall percentages on Slide 13, the Suja "$0 to $100M in six years" phrasing on Slide 6, the bonuses on Slide 35, the price and guarantee on Slides 36 and 37.
+- **Things to confirm before recording:** the waterfall percentages on Slide 13, the Suja "$0 to $100M in six years" phrasing on Slide 6, the Harvard line on Slides 2 and 30.

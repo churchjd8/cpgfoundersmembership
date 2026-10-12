@@ -122,10 +122,11 @@ Full slide-by-slide and talk track are in the script file.
 2. 5-year financial model, Trade Spend Calculator, investor and retailer deck templates, 30 white papers, the Playbook (already included)
 3. **Bonus: The Fatal Flaws session.** Full replay of the Sept 16 webinar plus the 30-question Fatal Flaw Assessment. (exists)
 4. **Bonus: The Pre-Launch Roadmap worksheet.** The 8 phases, $250K budget and 12-month timeline from the book as a fillable sheet. (needs building, about an hour)
-5. **Bonus: 30 days of Babu.** Jeff's CPG AI, so they can ask questions as they go through the modules. (needs Jeff's OK. Current free trial is 10 days.)
-6. **Bonus: The Founders Club.** Invite to the 300+ founder WhatsApp group. (exists, free anyway, still worth naming)
+5. **Bonus: The Founders Club.** Invite to the 300+ founder WhatsApp group. (exists, free anyway, still worth naming)
 
-**Optional and worth a real conversation with Jeff:** a monthly live group Q&A for course buyers. Self-paced courses have a completion problem and "you can ask Jeff a question once a month" is the single biggest conversion lever available. It also costs Jeff an hour a month. He already runs the monthly speaker series, so it may fold into that.
+Babu stays on its standard free 10-day trial. The training mentions it, but it is not a bonus.
+
+**Decided Oct 12:** $497 founder price, 30-day guarantee yes, no monthly live Q&A, no extended Babu trial.
 
 ---
 
@@ -154,7 +155,7 @@ All in this repo, same design system as `/fatalflaws-webinar`.
 - After the deadline: page flips to the regular $997 offer.
 
 **[4] `/mba-for-cpg/welcome` — existing**
-- Add: start your Babu bonus, join the Founders Club, and a short "already selling? Apply for the Intensive" block.
+- Add: start your free Babu trial, join the Founders Club, and a short "already selling? Apply for the Intensive" block.
 
 **Tracking:** Meta pixel is already on the site. Events needed: `Lead` (registration), `ViewContent` (watch page), `InitiateCheckout` (offer button), `Purchase` (welcome page, value 497).
 
@@ -220,7 +221,7 @@ Budget to test: about $1,500 over 14 days ($100/day), 2 angles x 3 creatives.
 
 | When | What | Who |
 |---|---|---|
-| This week (by Oct 16) | Jeff reads the script, marks it up. Decide price, guarantee, Babu bonus, monthly Q&A. | Jeff, Joshua |
+| This week (by Oct 16) | Jeff reads the script, marks it up. Fill in the waterfall percentages. | Jeff, Joshua |
 | Oct 19 to 23 | Build the slide deck from the approved script. Jeff records the training and the six ad videos in one sitting. | Joshua, Jeff |
 | Oct 19 to 26 | Build the three pages, checkout path, Kajabi form and tags, seven emails. | Joshua + Claude |
 | Oct 27 | Warm launch: list, WhatsApp, LinkedIn. | Joshua |
@@ -231,11 +232,10 @@ Budget to test: about $1,500 over 14 days ($100/day), 2 angles x 3 creatives.
 
 ## 9. Open questions for Jeff
 
-1. Price: $497 for 72 hours. Yes, or start higher?
-2. 30-day money-back guarantee. Yes?
-3. 30 days of Babu as a bonus. Yes?
-4. Monthly live Q&A for buyers. Yes, no, or fold into the speaker series?
-5. Is he comfortable with the line "I had a Harvard MBA and didn't know what a HACCP plan was"? It's the strongest hook we have for something called the MBA for CPG.
+1. Is he comfortable with the line "I had a Harvard MBA and didn't know what a HACCP plan was"? It's the strongest hook we have for something called the MBA for CPG.
+2. The price-waterfall percentages for the Lesson 2 slide (placeholders in the deck).
+
+Slides: https://claude.ai/artifact/Mt6rStDFpN4nH29XwYFMoE
 
 ## 10. Things I found that should be made consistent before ads run
 
