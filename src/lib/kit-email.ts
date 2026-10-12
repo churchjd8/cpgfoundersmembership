@@ -122,7 +122,7 @@ ${whereToStart(kits)}
     <p style="margin:0 0 16px;">Use them. That's the whole point.</p>
 
     <p style="margin:0 0 4px;">Jeff</p>
-    <p style="margin:0;color:#78716c;font-size:14px;">Co-founder, Suja Juice<br>Author, <em>The Cold-Pressed Truth</em></p>
+    <p style="margin:0;color:#78716c;font-size:14px;">Co-founder, Suja Juice<br>Author, <em>The Cold Pressed Truth</em></p>
 
     <p style="margin:32px 0 0;color:#78716c;font-size:13px;line-height:1.6;border-top:1px solid #e7e5e4;padding-top:20px;">P.S. If one of these changes something in your business, hit reply and tell me. I read them.</p>
 

@@ -5,7 +5,7 @@
 // asset. Two doors lead to the same inventory:
 //
 //   /resources  — the public door, framed for anyone who finds the site
-//   /toolbox    — the book door, framed for a reader of The Cold-Pressed Truth
+//   /toolbox    — the book door, framed for a reader of The Cold Pressed Truth
 //
 // Both render from this file and both deliver through /api/kit-signup, so the
 // kits can never drift apart. The only difference between the doors is the copy

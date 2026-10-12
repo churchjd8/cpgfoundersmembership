@@ -137,7 +137,7 @@ export function CoverPoll() {
           </p>
         ) : (
           <>
-            <p className="mt-3 text-lg font-semibold">The Cold-Pressed Truth</p>
+            <p className="mt-3 text-lg font-semibold">The Cold Pressed Truth</p>
             <p className="mt-1 text-muted leading-snug">
               A Founder&rsquo;s Field Guide to Building, Scaling &amp; Selling a Consumer Brand
             </p>
@@ -285,7 +285,7 @@ export function CoverPoll() {
               <p className="text-3xl">📚</p>
               <p className="mt-3 font-semibold">You&rsquo;re on the list.</p>
               <p className="mt-1 text-muted text-sm">
-                You&rsquo;ll get the first look at The Cold-Pressed Truth before it goes public.
+                You&rsquo;ll get the first look at The Cold Pressed Truth before it goes public.
               </p>
             </div>
           ) : (

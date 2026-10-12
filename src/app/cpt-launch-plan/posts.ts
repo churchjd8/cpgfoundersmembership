@@ -28,7 +28,7 @@ export const posts: Post[] = [
     check: "'Read the first 100 pages and couldn't stop' is from Jeff's own Sep 23 email to Emma. Kilimanjaro and Babu are the Preface. Eight ventures, five home runs, three strikeouts is the credential line.",
     body: `My book is finally done and getting ready for print!
 
-I still can't believe I'm typing that. The Cold-Pressed Truth comes out November 17, and last week I read the first 100 pages of the print layout and couldn't put it down (and I wrote the thing, although I had massive editing help from everyone!).
+I still can't believe I'm typing that. The Cold Pressed Truth comes out November 17, and last week I read the first 100 pages of the print layout and couldn't put it down (and I wrote the thing, although I had massive editing help from everyone!).
 
 Quick story on where it came from. A few years ago I was climbing Kilimanjaro with my kids, and somewhere around day three the local guides started calling me Babu. It's Swahili for grandpa. Partly for my pace (slow), and partly because I couldn't stop handing out advice on the trail. Somewhere between that mountain and the boardroom it hit me that this is the role I've been playing for 30 years anyway. The guy walking alongside you, pointing out what's ahead and being honest about what's behind.
 
@@ -50,7 +50,7 @@ More soon!`,
     check: "Confirm Jeff is comfortable naming all five blurb writers publicly before the book is out.",
     body: `Here it is.
 
-One month from tomorrow, The Cold-Pressed Truth is out in the world, and today I get to show you the cover for the first time.
+One month from tomorrow, The Cold Pressed Truth is out in the world, and today I get to show you the cover for the first time.
 
 I'll be honest, I stared at this thing for a long time. Linda stared at it longer. (She had opinions, and most of them were right.)
 
@@ -73,7 +73,7 @@ Insider access (and the founder tools from the book) is here: cpgfoundersgroup.c
 
 Here's the thing. I've spent the last couple of years telling founders to stop hiding behind the brand and go tell the story themselves, so I figure it's time I took my own advice.
 
-The Cold-Pressed Truth is 30 years of building, scaling and selling consumer brands, including the whole Suja story start to finish (the ice closet, the $100 million, the Coca-Cola call). I'm happy to talk about any of it, including the parts that didn't go well, which are usually the more useful ones anyway.
+The Cold Pressed Truth is 30 years of building, scaling and selling consumer brands, including the whole Suja story start to finish (the ice closet, the $100 million, the Coca-Cola call). I'm happy to talk about any of it, including the parts that didn't go well, which are usually the more useful ones anyway.
 
 So, whose show should I be on? If you host a podcast, or you know someone who does and think this would be a fit for their audience, drop it in the comments or send me a note. It doesn't have to be big. It has to be the right room.
 
@@ -88,7 +88,7 @@ And if you want first access to the book when it's out: cpgfoundersgroup.com/boo
     check: "'Faster than KIND, Honest Tea, and ZICO' is from the jacket copy. 'What's a cat man' is Ch. 12. 'Never financed from weakness' is in the quote bank.",
     body: `Here's something I tell every founder I work with. Most brands don't die from one big mistake. They die from three small ones that compound.
 
-I wrote The Cold-Pressed Truth around the three I see most often.
+I wrote The Cold Pressed Truth around the three I see most often.
 
 The first is confusing growth with strength. Suja went from zero to $100 million in six years, faster than KIND, Honest Tea or ZICO, and we still had weeks with less than $100,000 in the bank. Growth doesn't create strength. It reveals whether you ever had it.
 
@@ -132,7 +132,7 @@ One line from it has stuck with me: "In a world that often glorifies hype, noise
 
 I'm not sure I chose it so much as got dragged down it (the ice closet, the beet juice all over the loading dock, the July 3rd phone call). But I'll take it.
 
-The Cold-Pressed Truth comes out a week from Tuesday. If you want it the morning it's live, put your name here: cpgfoundersgroup.com/book`,
+The Cold Pressed Truth comes out a week from Tuesday. If you want it the morning it's live, put your name here: cpgfoundersgroup.com/book`,
   },
   {
     date: "Mon Nov 9",
@@ -143,7 +143,7 @@ The Cold-Pressed Truth comes out a week from Tuesday. If you want it the morning
     needs: "Countdown graphic (square). Kim's 'Yoda of CPG' quote card can run as the image.",
     body: `Mark your calendars. Tuesday, November 17.
 
-That's the day The Cold-Pressed Truth goes live, and I'm going to ask for one thing that day. Just one. Grab the ebook. It'll be 99 cents for launch week, which is less than the kale in a bottle of Green Supreme.
+That's the day The Cold Pressed Truth goes live, and I'm going to ask for one thing that day. Just one. Grab the ebook. It'll be 99 cents for launch week, which is less than the kale in a bottle of Green Supreme.
 
 Why 99 cents? Because the thing I actually want is for this book to get into the hands of as many founders as possible in the first week, and the way Amazon works, that first week decides whether anyone finds it afterwards.
 
@@ -166,7 +166,7 @@ I'd been replaying a moment from senior year football for twenty years at that p
 
 What followed was eight companies, $212 million raised, nearly $700 million returned to investors, five home runs and three strikeouts. Suja. Coca-Cola. A month in rehab after I left, because I'd spent eight years running a better-for-you brand while running myself into the ground.
 
-I put all of it in The Cold-Pressed Truth. The wins and the wipeouts get equal time, because that's the only version that would have helped me.
+I put all of it in The Cold Pressed Truth. The wins and the wipeouts get equal time, because that's the only version that would have helped me.
 
 It's out Tuesday. 99 cents for launch week. I'll post the link the morning of.`,
   },
@@ -181,7 +181,7 @@ It's out Tuesday. 99 cents for launch week. I'll post the link the morning of.`,
 
 Fourteen years ago I was standing on a loading dock with beet juice running down my pants because I'd sliced open a pallet with a forklift I had no business driving. Tomorrow morning I'm an author. I'm not sure which one I'm prouder of.
 
-The Cold-Pressed Truth goes live on Amazon tomorrow. 99 cents for the ebook all week. I'll post the link right here the moment it's up.
+The Cold Pressed Truth goes live on Amazon tomorrow. 99 cents for the ebook all week. I'll post the link right here the moment it's up.
 
 If you're on the insider list, the link hits your inbox first thing in the morning. If you're not, no problem, I'll post it right here too.
 
@@ -196,7 +196,7 @@ Thank you for following along with this. Let's go!`,
     needs: "Photo of Jeff holding the book (not a screenshot). The Amazon ebook link, pasted in the body the moment it's live.",
     body: `It's live.
 
-The Cold-Pressed Truth is out today, and I'm sitting here holding it (Linda took the photo, I'm aware of the face I'm making).
+The Cold Pressed Truth is out today, and I'm sitting here holding it (Linda took the photo, I'm aware of the face I'm making).
 
 Here's the ask. The ebook is 99 cents today through the end of the week. If you've ever gotten anything useful from one of my posts, grab it, and if you can, leave an honest review once you've read a chapter or two. That's the whole thing. Reviews are what let a stranger find this book two years from now.
 
@@ -232,7 +232,7 @@ And if you've read a chapter or two, a quick honest review helps more than you'd
     needs: "The ranking screenshot. Fill in the category and the end date of the $0.99 window.",
     body: `We did it.
 
-As of this morning, The Cold-Pressed Truth is the #1 [CATEGORY] book on Amazon. I've started eight companies and I've never once been number one on a list, so forgive me for the screenshot.
+As of this morning, The Cold Pressed Truth is the #1 [CATEGORY] book on Amazon. I've started eight companies and I've never once been number one on a list, so forgive me for the screenshot.
 
 This happened because a few hundred people bought a 99 cent book on the same day because I asked them to. That is the whole strategy. There's no trick to it. Friends, Founders Club members, old colleagues, clients, and a surprising number of people I've never met.
 
@@ -249,14 +249,14 @@ And if you have, the thing that matters most now is a review. Thirty seconds, ho
 // are from the printed table of contents; the mapping is a best read of
 // which chapter each story lives in and Jeff should confirm.
 export const chapterLines: { date: string; post: string; chapter: string; line: string }[] = [
-  { date: "Tue Oct 13", post: "FF #8: I kept missing my numbers at the board meeting", chapter: "Ch. 7 Fundraising + Appendix A", line: "I go deeper on this in Chapter 7 of The Cold-Pressed Truth, out Nov 17. First access at cpgfoundersgroup.com/book" },
+  { date: "Tue Oct 13", post: "FF #8: I kept missing my numbers at the board meeting", chapter: "Ch. 7 Fundraising + Appendix A", line: "I go deeper on this in Chapter 7 of The Cold Pressed Truth, out Nov 17. First access at cpgfoundersgroup.com/book" },
   { date: "Thu Oct 15", post: "FF #6: The dinner test", chapter: "Ch. 8 Culture and People", line: "There's a whole chapter on this (Chapter 8) in my book, out November 17." },
-  { date: "Tue Oct 20", post: "FF #12: Do you own your formula?", chapter: "Ch. 2 or 3 Pre-Launch", line: "This is one of the pre-launch checks in Chapter 3 of The Cold-Pressed Truth. Out Nov 17, first access at cpgfoundersgroup.com/book" },
+  { date: "Tue Oct 20", post: "FF #12: Do you own your formula?", chapter: "Ch. 2 or 3 Pre-Launch", line: "This is one of the pre-launch checks in Chapter 3 of The Cold Pressed Truth. Out Nov 17, first access at cpgfoundersgroup.com/book" },
   { date: "Thu Oct 22", post: "FF #9: In a year everybody's will taste just as good", chapter: "Ch. 12 Battle of the Shelf / Ch. 13 Innovation", line: "Chapter 13 of the book is about exactly this. November 17." },
-  { date: "Tue Oct 27", post: "FF #11: The cash gap, 5 days at a time", chapter: "Ch. 7 Fundraising", line: "Chapter 7 of The Cold-Pressed Truth walks through the cash gap in detail. Out Nov 17, first access at cpgfoundersgroup.com/book" },
+  { date: "Tue Oct 27", post: "FF #11: The cash gap, 5 days at a time", chapter: "Ch. 7 Fundraising", line: "Chapter 7 of The Cold Pressed Truth walks through the cash gap in detail. Out Nov 17, first access at cpgfoundersgroup.com/book" },
   { date: "Thu Oct 29", post: "FF #4: They kind of had amnesia", chapter: "Ch. 21 Fatal Flaws and Recoverable Mistakes", line: "It made the list in Chapter 21 of my book. Three weeks until it's out." },
-  { date: "Tue Nov 3", post: "FF #2: The phone call to Coke", chapter: "Ch. 14 / 16 Coca-Cola", line: "The whole Coca-Cola story is Chapters 14 through 16 of The Cold-Pressed Truth. Two weeks. First access at cpgfoundersgroup.com/book" },
+  { date: "Tue Nov 3", post: "FF #2: The phone call to Coke", chapter: "Ch. 14 / 16 Coca-Cola", line: "The whole Coca-Cola story is Chapters 14 through 16 of The Cold Pressed Truth. Two weeks. First access at cpgfoundersgroup.com/book" },
   { date: "Thu Nov 5", post: "FF #10: The $10 green juice", chapter: "Ch. 6 Life Stages of a Brand", line: "Chapter 6 of the book is the full Suja pricing story. Twelve days." },
-  { date: "Tue Nov 10", post: "FF #7: Months 10 to 18", chapter: "Ch. 7 Fundraising", line: "One week until The Cold-Pressed Truth is out. Chapter 7 is this post, times ten." },
+  { date: "Tue Nov 10", post: "FF #7: Months 10 to 18", chapter: "Ch. 7 Fundraising", line: "One week until The Cold Pressed Truth is out. Chapter 7 is this post, times ten." },
   { date: "Thu Nov 12", post: "FF #13: Peel the onion", chapter: "Ch. 20 Babu's Field Guide", line: "Five days. Chapter 20 is the full field guide." },
 ];

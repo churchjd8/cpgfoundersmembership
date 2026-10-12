@@ -107,7 +107,7 @@ const industry = [
   },
   {
     quote:
-      "Jeff is truly the Yoda of CPG. When I made the leap from tech into beverage with JUNI, his guidance helped us avoid mistakes that could have cost us years and millions. The Cold-Pressed Truth is the kind of book every founder should have from day one: practical, honest, and packed with hard-earned wisdom. Must-read.",
+      "Jeff is truly the Yoda of CPG. When I made the leap from tech into beverage with JUNI, his guidance helped us avoid mistakes that could have cost us years and millions. The Cold Pressed Truth is the kind of book every founder should have from day one: practical, honest, and packed with hard-earned wisdom. Must-read.",
     name: "Kim Perell",
     title:
       "Co-Founder of JUNI Adaptogen Tea; bestselling author of Mistakes That Made Me a Millionaire",
@@ -120,7 +120,7 @@ const industry = [
   },
   {
     quote:
-      "In CPG, the difference between the brands that endure and the brands that disappear comes down to discipline - about margin, about culture, about cash. Jeff has built it, lost it, and won it back, and he teaches it here with a generosity that's rare in this industry. The Cold-Pressed Truth belongs on the desk of every CPG founder.",
+      "In CPG, the difference between the brands that endure and the brands that disappear comes down to discipline - about margin, about culture, about cash. Jeff has built it, lost it, and won it back, and he teaches it here with a generosity that's rare in this industry. The Cold Pressed Truth belongs on the desk of every CPG founder.",
     name: "John Foraker",
     title: "Co-Founder & CEO, Once Upon a Farm; former CEO, Annie's",
   },
@@ -244,7 +244,7 @@ export default function ResultsPage() {
               What founders who&rsquo;ve done it at scale say about Jeff
             </h2>
             <p className="mt-4 text-muted leading-relaxed">
-              Advance praise for Jeff&rsquo;s book, <em>The Cold-Pressed Truth</em>.
+              Advance praise for Jeff&rsquo;s book, <em>The Cold Pressed Truth</em>.
             </p>
           </div>
           <div className="grid gap-6 md:grid-cols-2">

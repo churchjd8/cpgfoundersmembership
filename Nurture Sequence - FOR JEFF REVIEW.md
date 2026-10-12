@@ -228,7 +228,7 @@ That's one framework and there are dozens more inside the [MBA for CPG](https://
 Talk soon,
 Jeff
 
-*PS The book is coming this year. It's called The Cold-Pressed Truth and it's the whole story, including a few parts I'd rather not have put in writing. [Get on the list here](https://cpgfoundersgroup.com/book).*
+*PS The book is coming this year. It's called The Cold Pressed Truth and it's the whole story, including a few parts I'd rather not have put in writing. [Get on the list here](https://cpgfoundersgroup.com/book).*
 
 ---
 
@@ -249,7 +249,7 @@ I've turned that morning over in my head a lot since, and I could absolutely wri
 
 That's roughly where the book ends.
 
-It's called **The Cold-Pressed Truth: A Founder's Field Guide to Building, Scaling, and Selling a Consumer Brand**, and Jay Shetty was generous enough to write the foreword for it. It's the honest version of all of it...Suja from an ice closet to $100 million in six years, the July 3rd phone call, and the month I spent in rehab after I left, because eighty-hour weeks for eight straight years had taken more out of me than I understood at the time. Seth Goldman, Mark Rampolla, Kim Perell and John Foraker all read it early and had kind things to say, which still surprises me a little.
+It's called **The Cold Pressed Truth: A Founder's Field Guide to Building, Scaling, and Selling a Consumer Brand**, and Jay Shetty was generous enough to write the foreword for it. It's the honest version of all of it...Suja from an ice closet to $100 million in six years, the July 3rd phone call, and the month I spent in rehab after I left, because eighty-hour weeks for eight straight years had taken more out of me than I understood at the time. Seth Goldman, Mark Rampolla, Kim Perell and John Foraker all read it early and had kind things to say, which still surprises me a little.
 
 It's part memoir and part operating manual, and it keeps interrupting the story to hand you a tool.
 

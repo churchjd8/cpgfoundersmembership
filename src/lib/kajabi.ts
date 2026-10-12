@@ -3,7 +3,7 @@
 // We submit through a form rather than creating the contact directly so that
 // Kajabi applies the form's own automation (tags, sequences) to the contact.
 
-// "CPT Book Waitlist" — The Cold-Pressed Truth launch list.
+// "CPT Book Waitlist" — The Cold Pressed Truth launch list.
 export const BOOK_WAITLIST_FORM_ID = "2149690454";
 
 async function getAccessToken() {

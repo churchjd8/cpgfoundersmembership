@@ -34,7 +34,7 @@ Checked against `src/content/knowledge/cpt-00-book-facts.md` and `storybank.md`.
 | --- | --- | --- |
 | "8 companies built and sold" / "8 CPG exits" | 8 ventures: five home runs, three strikeouts | "8 ventures." The strikeouts are core to his brand; claiming 8 exits contradicts his own book |
 | "40 years in CPG" | 30+ years (back flap); prior About said 35 | Use 35, confirm with Jeff |
-| Book: *Pressure Tested* | *The Cold-Pressed Truth* (title locked) | Use the real title everywhere |
+| Book: *Pressure Tested* | *The Cold Pressed Truth* (title locked) | Use the real title everywhere |
 | (not used) | Nearly $700M returned to investors, $212M raised | Lead proof point. Stronger for founders and investors than exit count |
 | Co-founder and co-CEO of Proda | Book: Proda is his ninth company | Confirm "co-CEO" title |
 | Board of GURU Organic Energy | Not in the book | Confirm before it goes live |
@@ -53,7 +53,7 @@ Why this over Jeff's option 1: same audience-first structure, but "fatal flaws" 
 
 Alternates:
 - (178) Helping food & beverage founders build brands that last | Co-founded Suja Juice (Nasdaq: SUJA) | 30+ years, 8 ventures, ~$700M returned to investors | Founder, CPG Founders Group
-- (183, use once the book is out) 30+ years of CPG lessons, shared so founders don't learn them the hard way | Co-founder, Suja Juice | 8 ventures, ~$700M returned | Now building Proda | Author, The Cold-Pressed Truth
+- (183, use once the book is out) 30+ years of CPG lessons, shared so founders don't learn them the hard way | Co-founder, Suja Juice | 8 ventures, ~$700M returned | Now building Proda | Author, The Cold Pressed Truth
 
 ---
 

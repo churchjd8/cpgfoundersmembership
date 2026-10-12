@@ -1,6 +1,6 @@
-# The Cold-Pressed Truth — Part I: Building a Strong Foundation (Ch. 1–9)
+# The Cold Pressed Truth — Part I: Building a Strong Foundation (Ch. 1–9)
 
-Source: *The Cold-Pressed Truth* manuscript, 8.2.26. Canonical.
+Source: *The Cold Pressed Truth* manuscript, 8.2.26. Canonical.
 
 ---
 

@@ -5,7 +5,7 @@ import { Tabs } from "./tabs";
 import { Countdown, Section, CopyButton, WeekList, Who, type WeekBlock } from "./ui";
 import { posts, chapterLines } from "./posts";
 
-// Internal working page for The Cold-Pressed Truth launch (Tue Nov 17, 2026).
+// Internal working page for The Cold Pressed Truth launch (Tue Nov 17, 2026).
 // Jeff + Joshua only. Unlisted, noindexed, and rendered without the site
 // header/footer (see src/lib/internal-routes.ts). Five tabs:
 // Plan / Timeline / LinkedIn / Jeff's list / Vault.
@@ -16,7 +16,7 @@ import { posts, chapterLines } from "./posts";
 
 export const metadata: Metadata = {
   title: "CPT Launch - Internal",
-  description: "Internal launch workspace for The Cold-Pressed Truth. Not public.",
+  description: "Internal launch workspace for The Cold Pressed Truth. Not public.",
   robots: { index: false, follow: false },
 };
 
@@ -668,7 +668,7 @@ export default function LaunchPlanPage() {
           <div className="flex items-center gap-4">
             <Image
               src="/cpt-cover.jpg"
-              alt="The Cold-Pressed Truth cover"
+              alt="The Cold Pressed Truth cover"
               width={56}
               height={90}
               priority
@@ -676,7 +676,7 @@ export default function LaunchPlanPage() {
             />
             <div>
               <div className="text-xs font-bold uppercase tracking-wider text-gold">Internal &middot; Jeff + Joshua</div>
-              <h1 className="mt-1 text-2xl sm:text-3xl font-bold tracking-tight">The Cold-Pressed Truth &middot; Launch</h1>
+              <h1 className="mt-1 text-2xl sm:text-3xl font-bold tracking-tight">The Cold Pressed Truth &middot; Launch</h1>
             </div>
           </div>
           <div className="text-right">

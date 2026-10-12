@@ -1,6 +1,6 @@
 # Jeff Church Storybank
 
-The retrieval layer for content. Every entry is a **usable unit** — a story with a scene, a quote with a punch, or a number you can put in a headline. Sourced from *The Cold-Pressed Truth* (8.2.26 manuscript). Chapter refs in brackets.
+The retrieval layer for content. Every entry is a **usable unit** — a story with a scene, a quote with a punch, or a number you can put in a headline. Sourced from *The Cold Pressed Truth* (8.2.26 manuscript). Chapter refs in brackets.
 
 Use with `jeff_voice_profile.md` (repo root) for voice. Deeper context lives in `cpt-part1/2/3-*.md`; book/jacket/cover facts live in `cpt-00-book-facts.md`.
 

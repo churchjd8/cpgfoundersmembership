@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { CoverPoll } from "@/components/cover-poll";
 
 const OG_IMAGE = "https://cpgfoundersgroup.com/images/book-covers/og.jpg";
-const TITLE = "Pick the cover — The Cold-Pressed Truth";
+const TITLE = "Pick the cover — The Cold Pressed Truth";
 const DESCRIPTION =
-  "Three final cover options for Jeff Church's book, The Cold-Pressed Truth. Take ten seconds and vote for the one you like best.";
+  "Three final cover options for Jeff Church's book, The Cold Pressed Truth. Take ten seconds and vote for the one you like best.";
 
 export const metadata: Metadata = {
   title: TITLE,

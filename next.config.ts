@@ -19,7 +19,7 @@ const nextConfig: NextConfig = {
       // The dictionary is the canonical public name; preserve old glossary links.
       { source: "/cpg-glossary", destination: "/cpg-dictionary", permanent: true },
 
-      // /toolbox is printed in "The Cold-Pressed Truth" — catch the near misses
+      // /toolbox is printed in "The Cold Pressed Truth" — catch the near misses
       // so a mistyped URL from the page still lands.
       { source: "/tools", destination: "/toolbox", permanent: true },
       { source: "/toolkit", destination: "/toolbox", permanent: true },

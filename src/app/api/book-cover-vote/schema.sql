@@ -1,5 +1,5 @@
 -- Run this in the Supabase SQL editor to create the table behind
--- cpgfoundersgroup.com/bookcovers (the Cold-Pressed Truth cover poll).
+-- cpgfoundersgroup.com/bookcovers (the Cold Pressed Truth cover poll).
 -- Service role writes via /api/book-cover-vote; no client-side reads, so RLS is off.
 
 create table if not exists public.book_cover_votes (

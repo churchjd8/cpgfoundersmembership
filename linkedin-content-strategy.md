@@ -87,4 +87,4 @@
 
 ---
 
-*Note: 5 additional drafted posts are available in linkedin-posts-draft.md (Personal Guarantee, $200K Inventory, Revenue Up 200%, Board Is Not Your Friend, We Didn't Invent Cold-Pressed Juice). These can be scheduled as weeks 9-13 or swapped into the calendar as needed.*
+*Note: 5 additional drafted posts are available in linkedin-posts-draft.md (Personal Guarantee, $200K Inventory, Revenue Up 200%, Board Is Not Your Friend, We Didn't Invent Cold Pressed Juice). These can be scheduled as weeks 9-13 or swapped into the calendar as needed.*

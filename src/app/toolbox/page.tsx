@@ -5,7 +5,7 @@ import { ALWAYS_ON, KITS } from "@/lib/kits";
 import { KitOptIn } from "@/components/kit-form";
 
 // The book door. This is the destination printed as a QR code and URL in the
-// front matter of "The Cold-Pressed Truth", kept separate from /resources so
+// front matter of "The Cold Pressed Truth", kept separate from /resources so
 // book-sourced traffic and signups stay trackable on their own.
 //
 // Same three kits as /resources — both render from src/lib/kits.ts. The
@@ -13,11 +13,11 @@ import { KitOptIn } from "@/components/kit-form";
 // friction: three fields here, because a book reader has already paid in.
 
 export const metadata: Metadata = {
-  title: "The Toolbox - Free CPG Tools from The Cold-Pressed Truth",
+  title: "The Toolbox - Free CPG Tools from The Cold Pressed Truth",
   description:
     "You've got the book. Here's the toolbox that goes with it. Every calculator, model, workshop, and white paper Jeff Church uses with the founders he advises. Free.",
   openGraph: {
-    title: "The Toolbox - Free CPG Tools from The Cold-Pressed Truth",
+    title: "The Toolbox - Free CPG Tools from The Cold Pressed Truth",
     description:
       "Every calculator, model, workshop, and white paper Jeff Church uses with the founders he advises. One signup, one email, all of it.",
     url: "https://cpgfoundersgroup.com/toolbox",
@@ -43,7 +43,7 @@ export default function ToolboxPage() {
                 Here&rsquo;s the toolbox.
               </h1>
               <p className="mt-6 text-lg text-white/70 leading-relaxed">
-                I didn&rsquo;t write <em>The Cold-Pressed Truth</em> to give you ideas. I wrote
+                I didn&rsquo;t write <em>The Cold Pressed Truth</em> to give you ideas. I wrote
                 it to give you tools. So here is 10 days of Babu AI free, the WhatsApp group
                 where 350+ CPG founders answer each other in real time, and all three kits &mdash;
                 every calculator, model, and workshop I use with the founders I advise.
@@ -78,7 +78,7 @@ export default function ToolboxPage() {
                 />
               </div>
               <p className="mt-6 text-center text-sm text-white/50 max-w-sm mx-auto">
-                <em>The Cold-Pressed Truth</em> - A Founder&rsquo;s Field Guide to Building,
+                <em>The Cold Pressed Truth</em> - A Founder&rsquo;s Field Guide to Building,
                 Scaling &amp; Selling a Consumer Brand. Foreword by Jay Shetty.
               </p>
             </div>

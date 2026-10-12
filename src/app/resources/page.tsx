@@ -385,7 +385,7 @@ export default async function ResourcesPage() {
                   Coming soon
                 </span>
                 <h2 className="text-2xl sm:text-3xl font-bold tracking-tight">
-                  The Cold-Pressed Truth
+                  The Cold Pressed Truth
                 </h2>
                 <p className="mt-3 text-lg font-medium leading-snug">
                   A Founder&rsquo;s Field Guide to Building, Scaling, and Selling a Consumer

@@ -98,7 +98,7 @@ If you have a board right now, or you're about to take on investors... understan
 
 ---
 
-## Post 5: We Didn't Invent Cold-Pressed Juice
+## Post 5: We Didn't Invent Cold Pressed Juice
 
 *[Photo suggestion: Early Suja product or Suja in production]*
 

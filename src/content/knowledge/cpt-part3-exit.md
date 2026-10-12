@@ -1,6 +1,6 @@
-# The Cold-Pressed Truth — Part III: The Exit (Ch. 18–23) + Epilogue + Appendix A
+# The Cold Pressed Truth — Part III: The Exit (Ch. 18–23) + Epilogue + Appendix A
 
-Source: *The Cold-Pressed Truth* manuscript, 8.2.26. Canonical.
+Source: *The Cold Pressed Truth* manuscript, 8.2.26. Canonical.
 
 ---
 

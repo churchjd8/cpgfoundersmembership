@@ -8,8 +8,8 @@ Source material for blog posts, LinkedIn content, emails, book marketing, and ot
 
 ## The Book (canonical)
 
-**"The Cold-Pressed Truth: A Founder's Field Guide to Building, Scaling, and Selling a Consumer Brand"** by Jeff Church · Foreword by Jay Shetty · ~53,000 words · 23 chapters in three parts + epilogue and appendix.
-Source docs live in the repo root: `8.2.26 Cold-Pressed Truth Manuscript .docx` and `The Cold-Pressed Truth - 2 Page Summary Brief 8.2.26.docx`.
+**"The Cold Pressed Truth: A Founder's Field Guide to Building, Scaling, and Selling a Consumer Brand"** by Jeff Church · Foreword by Jay Shetty · ~53,000 words · 23 chapters in three parts + epilogue and appendix.
+Source docs live in the repo root: `8.2.26 Cold Pressed Truth Manuscript .docx` and `The Cold Pressed Truth - 2 Page Summary Brief 8.2.26.docx`.
 
 - **[cpt-00-book-facts.md](cpt-00-book-facts.md)** — Title block, jacket copy, advance praise, Jay Shetty foreword pull-quotes, credential lines, TOC, funnel assets, and a **pre-print flag list** (inconsistencies to resolve before cover/marketing copy locks). Use this for anything cover-, jacket-, pitch-, or campaign-related.
 - **[cpt-part1-foundation.md](cpt-part1-foundation.md)** — Part I, Ch. 1–9. Founder's DNA, the end-zone story, pre-launch prep, the $250K roadmap, M.A.P. Framework, Stage-Gate, Life Stages of a Brand, fundraising, culture, ten misconceptions.

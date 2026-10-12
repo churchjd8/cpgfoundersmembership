@@ -1,4 +1,4 @@
-# The Cold-Pressed Truth — "Here's the Toolbox" Page
+# The Cold Pressed Truth — "Here's the Toolbox" Page
 
 Gift-with-purchase page for the front matter. Sends readers to
 **cpgfoundersgroup.com/toolbox** — a dedicated landing page (live now), separate from
@@ -111,7 +111,7 @@ much is in here" — in about one second.
 
 Show six things, overlapping and slightly angled, one asset in front:
 
-1. **The book** — *The Cold-Pressed Truth*, Option B cover (green vegetable letterforms).
+1. **The book** — *The Cold Pressed Truth*, Option B cover (green vegetable letterforms).
    Files: `public/images/book-covers/cover-b.jpg` in the repo.
 2. **Babu AI** — a phone or laptop screen showing the Babu chat interface. This one should sit
    forward in the stack. It's the headline item.

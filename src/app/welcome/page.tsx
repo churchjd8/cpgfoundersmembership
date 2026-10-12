@@ -159,7 +159,7 @@ export default function WelcomePage() {
             Coming soon
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
-            The Cold-Pressed Truth
+            The Cold Pressed Truth
           </h2>
           <p className="mt-4 text-lg sm:text-xl text-white/80 font-medium leading-snug">
             A Founder&rsquo;s Field Guide to Building, Scaling, and Selling a Consumer Brand

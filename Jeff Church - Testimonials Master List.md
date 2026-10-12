@@ -57,7 +57,7 @@ Recovered from Wayback snapshots (Dec 2024 / Feb 2025 / Dec 2025). The domain no
 
 ---
 
-## Book endorsements — *The Cold-Pressed Truth* (/book)
+## Book endorsements — *The Cold Pressed Truth* (/book)
 
 Different asset class — blurbs from industry names, not client results.
 
@@ -68,16 +68,16 @@ Different asset class — blurbs from industry names, not client results.
 > Jeff Church has done it all as an entrepreneur — driven hypergrowth and delivered stellar returns to investors. But he's also managed disappointments and setbacks. Through it all, he's been the same level-headed and resilient leader. Any entrepreneur at any stage can learn from the wisdom in this book — I know I did!
 
 ### Kim Perell — Co-Founder of JUNI Adaptogen Tea; bestselling author of *Mistakes That Made Me a Millionaire*
-> Jeff is truly the Yoda of CPG. When I made the leap from tech into beverage with JUNI, his guidance helped us avoid mistakes that could have cost us years and millions. The Cold-Pressed Truth is the kind of book every founder should have from day one: practical, honest, and packed with hard-earned wisdom. Must-read.
+> Jeff is truly the Yoda of CPG. When I made the leap from tech into beverage with JUNI, his guidance helped us avoid mistakes that could have cost us years and millions. The Cold Pressed Truth is the kind of book every founder should have from day one: practical, honest, and packed with hard-earned wisdom. Must-read.
 
 ### John Foraker — Co-Founder & CEO, Once Upon a Farm; former CEO, Annie's
-> In CPG, the difference between the brands that endure and the brands that disappear comes down to discipline — about margin, about culture, about cash. Jeff has built it, lost it, and won it back, and he teaches it here with a generosity that's rare in this industry. The Cold-Pressed Truth belongs on the desk of every CPG founder.
+> In CPG, the difference between the brands that endure and the brands that disappear comes down to discipline — about margin, about culture, about cash. Jeff has built it, lost it, and won it back, and he teaches it here with a generosity that's rare in this industry. The Cold Pressed Truth belongs on the desk of every CPG founder.
 
 ---
 
 ## Book Endorsement Versions (reworked)
 
-For *The Cold-Pressed Truth*. Program/bootcamp references stripped so each quote reads as an endorsement of Jeff and his CPG knowledge, not of a specific offer. Edits are minimal and noted under each. Source for the full originals: testimonial graphics dated 2026-08-14 (the live site runs trimmed versions of these).
+For *The Cold Pressed Truth*. Program/bootcamp references stripped so each quote reads as an endorsement of Jeff and his CPG knowledge, not of a specific offer. Edits are minimal and noted under each. Source for the full originals: testimonial graphics dated 2026-08-14 (the live site runs trimmed versions of these).
 
 ### Erik Rothchild — CEO, WheyUP
 > "Jeff has been a tremendous asset to the growth and future of my brand WheyUP. As someone with the success that Jeff has had in the beverage industry, he is incredibly gracious with his time, experience and guidance. I am very fortunate to have someone of Jeff's experience in the beverage world and quality as a human on my side!"

@@ -7,7 +7,7 @@
 
 **Rearranged again Oct 7.** Tomorrow's WhatsApp promo was rewritten around Jeff's own GNC vs Vitamin Shoppe question, because the "most-asked question" version read too close to the Sep 29 CPG Match email. Park City moved from Fri Oct 9 to the end of the run, Thu Nov 19. Fri Oct 9 is now empty.
 
-**Book teasers added Oct 7.** The ten posts from Oct 13 through Nov 12 each end with a one-line teaser for *The Cold-Pressed Truth* (out Nov 17), supplied by Joshua. Two were adjusted: Oct 29 says "Less than three weeks" (it is 19 days out), and the Nov 3 line was finished with the standard "Out Nov 17, first access at cpgfoundersgroup.com/book". FF #1 (Nov 17, launch day) and Park City (Nov 19) have no teaser yet.
+**Book teasers added Oct 7.** The ten posts from Oct 13 through Nov 12 each end with a one-line teaser for *The Cold Pressed Truth* (out Nov 17), supplied by Joshua. Two were adjusted: Oct 29 says "Less than three weeks" (it is 19 days out), and the Nov 3 line was finished with the standard "Out Nov 17, first access at cpgfoundersgroup.com/book". FF #1 (Nov 17, launch day) and Park City (Nov 19) have no teaser yet.
 
 **Source text.** Pulled verbatim from Jeff's edited copy (`Jeff LinkedIn - Fatal Flaws Webinar Posts (For Jeff's Review).md`). Four tiny edits were made in this queue, all listed under "Edits made" below.
 
@@ -168,7 +168,7 @@ You don't have to be right. You have to know why you were wrong.
 
 The models I use are in the free kits here: cpgfoundersgroup.com/resources
 
-I go deeper on this in Chapter 7 of The Cold-Pressed Truth, out Nov 17. First access at cpgfoundersgroup.com/book
+I go deeper on this in Chapter 7 of The Cold Pressed Truth, out Nov 17. First access at cpgfoundersgroup.com/book
 
 ---
 
@@ -222,7 +222,7 @@ So go pull your agreement this week and find the ownership language. If you don'
 
 It's one of the 30 questions in my free Fatal Flaws assessment: cpgfoundersgroup.com/resources
 
-This is one of the pre-launch checks in Chapter 3 of The Cold-Pressed Truth. Out Nov 17, first access at cpgfoundersgroup.com/book
+This is one of the pre-launch checks in Chapter 3 of The Cold Pressed Truth. Out Nov 17, first access at cpgfoundersgroup.com/book
 
 ---
 
@@ -288,7 +288,7 @@ Cash exhaustion is about 35% of the reason brands fail. This is one of the few l
 
 There's a free cash runway calculator in the kits here: cpgfoundersgroup.com/resources
 
-Chapter 7 of The Cold-Pressed Truth walks through the cash gap in detail. Out Nov 17, first access at cpgfoundersgroup.com/book
+Chapter 7 of The Cold Pressed Truth walks through the cash gap in detail. Out Nov 17, first access at cpgfoundersgroup.com/book
 
 ---
 
@@ -344,7 +344,7 @@ I walked through all 30 questions live on my Fatal Flaws webinar in September. T
 
 cpgfoundersgroup.com/resources
 
-The whole Coca-Cola story is Chapters 14 through 16 of The Cold-Pressed Truth. Out Nov 17, first access at cpgfoundersgroup.com/book
+The whole Coca-Cola story is Chapters 14 through 16 of The Cold Pressed Truth. Out Nov 17, first access at cpgfoundersgroup.com/book
 
 ---
 
@@ -404,7 +404,7 @@ It's not you, it's the calendar... so manage your cash and hang in there.
 
 If you're about to raise, my Fundraising Kit is free: cpgfoundersgroup.com/resources
 
-One week until The Cold-Pressed Truth is out. Chapter 7 is this post, times ten.
+One week until The Cold Pressed Truth is out. Chapter 7 is this post, times ten.
 
 ---
 

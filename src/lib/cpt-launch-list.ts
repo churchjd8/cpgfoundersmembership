@@ -1,4 +1,4 @@
-// Jeff's launch list for The Cold-Pressed Truth: shared rows in Supabase,
+// Jeff's launch list for The Cold Pressed Truth: shared rows in Supabase,
 // edited on /cpt-launch-plan#list or in Excel (download, add names, re-upload).
 import ExcelJS from "exceljs";
 import { getSupabaseAdmin } from "@/lib/supabase";

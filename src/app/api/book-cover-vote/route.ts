@@ -3,7 +3,7 @@ import { createHash } from "crypto";
 import { getSupabaseAdmin } from "@/lib/supabase";
 import { submitToKajabiForm, BOOK_WAITLIST_FORM_ID } from "@/lib/kajabi";
 
-// Cover poll for The Cold-Pressed Truth — see /bookcovers.
+// Cover poll for The Cold Pressed Truth — see /bookcovers.
 //   POST  cast (or change) a vote
 //   PUT   attach name/email/comment to that vote and join the book waitlist
 

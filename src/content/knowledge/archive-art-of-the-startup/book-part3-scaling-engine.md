@@ -25,7 +25,7 @@ In 2019, Trader Joe's spotted the celery juice trend (boosted by The Rachael Ray
 ### "What's a Cat Man?" (Ch. 15)
 After a grueling battle to gain doors and shelf space, Jeff told his head of sales Nicky: "I can't wait until we achieve full distribution and have nothing to worry about!" Nicky aggressively replied: "Two years from now, we'll be fighting tooth and nail to maintain our shelf space. We'll need the right cat man to win." Jeff asked, "What's a cat man?" -- triggering relentless teasing from the team. He had never needed a category manager at his previous companies (Nika Water, Lynx Grills) because they hadn't reached that scale.
 
-### Dwight Richmond and Whole Foods' Cold-Pressed Bet (Ch. 15)
+### Dwight Richmond and Whole Foods' Cold Pressed Bet (Ch. 15)
 Dwight Richmond, formerly of Whole Foods and an early pioneer in natural foods, envisioned transforming the juice category beyond what Naked and Odwalla could achieve. He later explained that Whole Foods' decision to prioritize and expand the HPP cold-pressed juice category was driven by syndicated data trends, consumer insights, and forager feedback -- proving it wasn't just a fad and could handle multiple brands.
 
 ### Rowdy Energy Slotting Loss (Ch. 15)
@@ -37,7 +37,7 @@ Jeff promoted category manager Jason Polinsky to report directly to him after re
 ### Board Member Challenges Innovation (Ch. 16)
 A Suja board member said at a pre-board dinner with ~14 people: "Jeff, don't you see that what you think is disruptive innovation is just causing unnecessary churn?" Jeff responded: "We would prefer to have a single hero product like Red Bull or Coca-Cola instead of continuously innovating."
 
-### 62 Cold-Pressed Juice Brands at Whole Foods (Ch. 16)
+### 62 Cold Pressed Juice Brands at Whole Foods (Ch. 16)
 Six or seven years after Suja launched, a Whole Foods buyer told them she had 62 cold-pressed juice brands requesting meetings. She couldn't possibly see them all. This reinforced Jeff's belief: it's rarely ideal to be first to market, and it's dangerous to be last.
 
 ### Evolution Fresh and Blueprint Timing (Ch. 13)

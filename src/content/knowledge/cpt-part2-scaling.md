@@ -1,6 +1,6 @@
-# The Cold-Pressed Truth — Part II: Scaling the Engine (Ch. 10–17)
+# The Cold Pressed Truth — Part II: Scaling the Engine (Ch. 10–17)
 
-Source: *The Cold-Pressed Truth* manuscript, 8.2.26. Canonical.
+Source: *The Cold Pressed Truth* manuscript, 8.2.26. Canonical.
 
 ---
 

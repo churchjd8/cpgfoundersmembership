@@ -61,7 +61,7 @@ An AI chat platform and knowledge base built specifically for CPG founders. Alwa
 
 **Naming convention (settled):** the brand is **Babu**, or **Babu AI** where it needs disambiguating from the persona in the book. `askbabu.ai` is the domain only — it is a URL, not the brand name, and should not appear in the logo lockup.
 
-### Arm · the book — The Cold-Pressed Truth
+### Arm · the book — The Cold Pressed Truth
 
 *A Founder's Field Guide to Building, Scaling, and Selling a Consumer Brand.* By Jeff Church, foreword by Jay Shetty. The credibility anchor and the top of the funnel for everything above.
 
@@ -80,7 +80,7 @@ Here's what each one actually is:
 | **Dreammakers** | The parent. Restrained, confident, almost corporate. Should feel like the entity that *owns* things, not the entity that *sells* things. | Jeff, partners, LPs, internal | Dream boldly. Plan soberly. |
 | **CPG Founders Group** | The coaching and capital arm. Human, earned, in-the-trenches. The handshake and the room full of founders. | CPG founders, pre-launch to exit | The operator who's done it eight times |
 | **Babu** | The software. Precise, fast, instrument-like. Should feel like a tool a serious operator keeps open in a tab, not a chatbot. | Same founders, self-serve, 24/7 | Answers, not encouragement |
-| **The Cold-Pressed Truth** | The book. The most editorial artifact in the system and the one that sets the tone for everything else. | Founders, press, speaking bookers | Anti-hype. Admits what it cost. |
+| **The Cold Pressed Truth** | The book. The most editorial artifact in the system and the one that sets the tone for everything else. | Founders, press, speaking bookers | Anti-hype. Admits what it cost. |
 
 ---
 

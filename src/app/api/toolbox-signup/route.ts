@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 
 // Book toolbox opt-in — one signup delivers the whole kit in a single email.
 // Sender lives at /toolbox, which is the QR destination printed in
-// "The Cold-Pressed Truth". Resend only for now; Kajabi gets wired in later
+// "The Cold Pressed Truth". Resend only for now; Kajabi gets wired in later
 // so book-sourced contacts land tagged alongside the /resources signups.
 
 const FROM = "Jeff Church <jeff@cpgfoundersgroup.com>";
@@ -117,7 +117,7 @@ function deliveryHtml(firstName: string) {
     <p style="margin:0 0 16px;">Use them. That's the whole point.</p>
 
     <p style="margin:0 0 4px;">Jeff</p>
-    <p style="margin:0;color:#78716c;font-size:14px;">Co-founder, Suja Juice<br>Author, <em>The Cold-Pressed Truth</em></p>
+    <p style="margin:0;color:#78716c;font-size:14px;">Co-founder, Suja Juice<br>Author, <em>The Cold Pressed Truth</em></p>
 
     <p style="margin:32px 0 0;color:#78716c;font-size:13px;line-height:1.6;border-top:1px solid #e7e5e4;padding-top:20px;">P.S. If one of these tools changes something in your business, hit reply and tell me. I read them.</p>
 
@@ -167,7 +167,7 @@ export async function POST(request: Request) {
           <p><strong>Name:</strong> ${escapeHtml(firstName)} ${escapeHtml(lastName)}</p>
           <p><strong>Email:</strong> ${escapeHtml(email)}</p>
           <hr>
-          <p style="color:#999;font-size:12px;">Source: cpgfoundersgroup.com/toolbox &mdash; The Cold-Pressed Truth QR code</p>
+          <p style="color:#999;font-size:12px;">Source: cpgfoundersgroup.com/toolbox &mdash; The Cold Pressed Truth QR code</p>
         `,
       });
     } catch (notifyErr) {

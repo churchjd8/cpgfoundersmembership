@@ -2,7 +2,7 @@
 
 import { useState, type FormEvent } from "react";
 
-export function BookWaitlistForm() {
+export function BookWaitlistForm({ stacked = false }: { stacked?: boolean }) {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
@@ -44,7 +44,11 @@ export function BookWaitlistForm() {
     <>
       <form
         onSubmit={handleSubmit}
-        className="mt-8 flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
+        className={
+          stacked
+            ? "mt-6 flex flex-col gap-3 max-w-md mx-auto md:mx-0"
+            : "mt-8 flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
+        }
       >
         <input
           type="text"
@@ -65,7 +69,7 @@ export function BookWaitlistForm() {
           disabled={status === "loading"}
           className="px-6 py-3 bg-accent hover:bg-accent-dark text-white font-semibold rounded-lg transition-colors disabled:opacity-50"
         >
-          {status === "loading" ? "Adding..." : "Notify me"}
+          {status === "loading" ? "Adding..." : stacked ? "Get first access" : "Notify me"}
         </button>
       </form>
       {status === "error" && (

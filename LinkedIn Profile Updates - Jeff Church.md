@@ -39,7 +39,7 @@ So now I share what I learned the hard way:
 • CPG Founders Group, where I advise founders directly
 • The Founders Club, a free community of 300+ founders helping founders
 • CPG Match, founder-reviewed vendors so you stop guessing who to hire
-• The Cold-Pressed Truth, my book on building, scaling and selling a consumer brand
+• The Cold Pressed Truth, my book on building, scaling and selling a consumer brand
 
 I'm also up to bat for the ninth time with Proda, a protein soda, so I'm living these lessons again in real time.
 

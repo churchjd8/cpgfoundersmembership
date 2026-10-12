@@ -1,7 +1,7 @@
-# The Cold-Pressed Truth — Book Facts & Positioning Bible
+# The Cold Pressed Truth — Book Facts & Positioning Bible
 
 **Status: LOCKED TITLE. Canonical manuscript as of 8.2.26.**
-Source files: `8.2.26 Cold-Pressed Truth Manuscript .docx` + `The Cold-Pressed Truth - 2 Page Summary Brief 8.2.26.docx` (repo root)
+Source files: `8.2.26 Cold Pressed Truth Manuscript .docx` + `The Cold Pressed Truth - 2 Page Summary Brief 8.2.26.docx` (repo root)
 
 This file is the single source of truth for anything cover-, jacket-, pitch-, or campaign-related.
 
@@ -9,7 +9,7 @@ This file is the single source of truth for anything cover-, jacket-, pitch-, or
 
 ## Title Block
 
-- **Title:** The Cold-Pressed Truth
+- **Title:** The Cold Pressed Truth
 - **Subtitle:** A Founder's Field Guide to Building, Scaling, and Selling a Consumer Brand
 - **Author:** Jeff Church
 - **Foreword by:** Jay Shetty
@@ -48,13 +48,13 @@ CPG/consumer founders first, but the frameworks are written to travel. Also oper
 > "Jeff Church has done it all as an entrepreneur — driven hypergrowth and delivered stellar returns to investors. But he's also managed disappointments and setbacks. Through it all, he's been the same level-headed and resilient leader. Any entrepreneur at any stage can learn from the wisdom in this book — I know I did!"
 
 **Kim Perell, Co-Founder of JUNI Adaptogen Tea; bestselling author of *Mistakes That Made Me a Millionaire*:**
-> "Jeff is truly the Yoda of CPG. When I made the leap from tech into beverage with JUNI, his guidance helped us avoid mistakes that could have cost us years and millions. The Cold-Pressed Truth is the kind of book every founder should have from day one: practical, honest, and packed with hard-earned wisdom. Must-read."
+> "Jeff is truly the Yoda of CPG. When I made the leap from tech into beverage with JUNI, his guidance helped us avoid mistakes that could have cost us years and millions. The Cold Pressed Truth is the kind of book every founder should have from day one: practical, honest, and packed with hard-earned wisdom. Must-read."
 
 **Mark Rampolla, Founder, ZICO Coconut Water; author of *An Entrepreneur's Guide to Freedom* (long form):**
 > "Jeff shows that great companies aren't built on shortcuts or luck — they're built on timeless principles, disciplined execution, and relentless learning. This is required reading for anyone building a brand they want to endure."
 
 **John Foraker, Co-Founder & CEO, Once Upon a Farm; former CEO, Annie's:**
-> "In CPG, the difference between the brands that endure and the brands that disappear comes down to discipline — about margin, about culture, about cash. Jeff has built it, lost it, and won it back, and he teaches it here with a generosity that's rare in this industry. The Cold-Pressed Truth belongs on the desk of every CPG founder."
+> "In CPG, the difference between the brands that endure and the brands that disappear comes down to discipline — about margin, about culture, about cash. Jeff has built it, lost it, and won it back, and he teaches it here with a generosity that's rare in this industry. The Cold Pressed Truth belongs on the desk of every CPG founder."
 
 ## Foreword — Jay Shetty (key pull-quotes)
 
