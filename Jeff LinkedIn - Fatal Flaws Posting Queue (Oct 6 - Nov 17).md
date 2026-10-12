@@ -1,4 +1,34 @@
 # Jeff LinkedIn — Fatal Flaws Batch, Posting Queue (Tue Oct 6 – Tue Nov 17, 2026)
+
+**Book launch takeover, Oct 12.** The book launch posts now own most Tue/Thu slots through launch week, and the title is "The Cold Pressed Truth" (no hyphen) everywhere. The schedule table and dated headings below are superseded. State on LinkedIn as of Oct 12 (all 10:00 AM PT):
+
+| Date | Post |
+| --- | --- |
+| Tue Oct 13 | Forbes / Proda feature (Jeff posts it himself) |
+| Thu Oct 15 | Book: My book is finally done |
+| Tue Oct 20 | Book: Cover reveal (cover image; Jay Shetty, Kim Perell, Mark Rampolla, Seth Goldman, John Foraker tagged) |
+| Thu Oct 22 | FF #8 board meeting (Ch. 7 teaser) |
+| Tue Oct 27 | Book: The three problems the book solves |
+| Thu Oct 29 | Book: Podcast tour |
+| Tue Nov 3 | FF #2 phone call to Coke, holding the slot until the unboxing post has its photo or video |
+| Thu Nov 5 | FF #10 $10 green juice, holding the slot until the foreword post has its quote card |
+| Tue Nov 10 | Book: Mark your calendars |
+| Thu Nov 12 | Book: The journey recap |
+| Mon Nov 16 | Book: Tomorrow |
+| Tue Nov 17 | Book: It's live (manual, needs Amazon link and photo) |
+| Thu Nov 19 | Book: Gift it (manual) |
+| Tue Nov 24 | FF #6 dinner test |
+| Tue Dec 1 | FF #9 taste just as good |
+| Thu Dec 3 | FF #12 formula |
+| Tue Dec 8 | FF #11 cash gap |
+| Thu Dec 10 | FF #4 amnesia |
+| Tue Dec 15 | FF #5 Park City |
+| Tue Dec 22 | FF #7 months 10 to 18 |
+| Tue Jan 5 | FF #13 peel the onion |
+| Thu Jan 7 | FF #1 $100M exit |
+
+Post-launch stories carry "out now" chapter lines instead of countdowns. LinkedIn only schedules 90 days ahead. Book post copy lives in the review doc (https://claude.ai/code/artifact/48854c0f-6598-4860-9804-372f5e5e3d21) and the Google Doc shared with Jeff (https://docs.google.com/document/d/1UDcTrZuVGBs1jF5_ywrhj3v7O5eQZMr8Zgb24Z1bs20/edit). `src/app/cpt-launch-plan/posts.ts` still has the earlier Mon/Fri dates and wording.
+
 **Where we are.** The Aug–Oct batch is current through #5 ("I Almost Killed The Coca-Cola Deal"), posted Thu Sep 24. It was scheduled for Sep 10, but the two Fatal Flaws webinar promo posts (Sep 8 and Sep 14) took two slots and slid the batch two weeks. Nothing after #5 has posted (#6–#20 and the three Friday posts A, B, C are all still in the can). The 13 Fatal Flaws posts are the timelier batch (webinar was Sep 16, replay and assessment are live on /resources), so they run next, Tue/Thu, and the Aug–Oct batch resumes at #6 on Thu Nov 19.
 
 **Re-dated Oct 5.** Nothing from this queue went out the week of Sep 28 (the CPG Match launch post ran Sep 29 instead), so the whole queue slid one week. Same order, same Tue/Thu/Fri rhythm, 10:00 AM Pacific. First post is Tue Oct 6.
