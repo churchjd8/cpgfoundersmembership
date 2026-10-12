@@ -27,9 +27,17 @@ The November 17, 2026 launch of The Cold Pressed Truth: A Founder's Field Guide 
 
 **Particular quote?** Yes
 
-"It's the book I wish someone had handed me before my first startup. The wins and the wipeouts get equal time, because that's the only version that would have helped me." - Jeff Church
+Please use the endorsements rather than a quote from Jeff. In order of preference:
 
-Optional supporting quote from the foreword: "In a world that often glorifies hype, noise, and overnight success, Jeff Church has chosen a different path." - Jay Shetty
+"In a world that often glorifies hype, noise, and overnight success, Jeff Church has chosen a different path." - Jay Shetty, from the foreword
+
+"Jeff is truly the Yoda of CPG. His guidance helped us avoid mistakes that could have cost us years and millions. The Cold Pressed Truth is practical, honest, and packed with hard-earned wisdom. A must-read." - Kim Perell, Co-Founder of JUNI Adaptogen Tea
+
+"Great companies are not built on shortcuts or luck. They are built on timeless principles, disciplined execution, and relentless learning. This is required reading for anyone building a brand they want to endure." - Mark Rampolla, Founder of ZICO Coconut Water
+
+"Jeff Church has done it all as an entrepreneur: driven hypergrowth, delivered stellar returns, and managed disappointments and setbacks. Any entrepreneur at any stage can learn from the wisdom in this book. I know I did!" - Seth Goldman, Founder of Honest Tea
+
+"The brands that endure come down to discipline around margin, culture, and cash. Jeff has built it, lost it, and won it back. The Cold Pressed Truth belongs on the desk of every CPG founder." - John Foraker, Co-Founder and CEO of Once Upon a Farm
 
 **Bio:**
 Jeff Church is a serial entrepreneur, operator and investor with more than 30 years of experience building consumer brands. He is the co-founder and former CEO of Suja Juice, which grew from zero to $100 million in revenue in six years and became one of the fastest-growing food and beverage companies in America, with Coca-Cola as a strategic partner and investor. A Harvard Business School graduate and former CPA, Jeff has raised more than $212 million and returned nearly $700 million to investors across eight ventures: five home runs and three strikeouts.
