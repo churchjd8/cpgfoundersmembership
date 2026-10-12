@@ -349,12 +349,12 @@ Footer line: try Babu, my CPG AI, free for 10 days
 *(Bonus 2, the roadmap worksheet, still needs to be built.)*
 
 ### Slide 36 — The price
-**On slide:** Regular price $997. Founder price **$497**. Or pay over time with Klarna. 72 hours.
+**On slide:** Regular price $997. Founder price **$497**. Or pay over time with Klarna. 3 days.
 
 **Say:**
 "The MBA for CPG is $997, and you can go look at the page on my site, that's what it sells for every day.
 
-Because you gave me 40 minutes, and because most of you are early and watching every dollar, which is exactly what you should be doing, you can get it for $497. That's good for 72 hours from when you registered. After that it goes back to $997. That's a real deadline. I'm not going to play games with you.
+Because you gave me 40 minutes, and because most of you are early and watching every dollar, which is exactly what you should be doing, you can get it for $497. That's good for three days after you registered, and it closes at midnight Pacific on the third day. After that it goes back to $997. That's a real deadline. I'm not going to play games with you.
 
 If $497 at once is a stretch right now, you can spread it out with Klarna at checkout."
 

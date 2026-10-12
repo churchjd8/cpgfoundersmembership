@@ -38,7 +38,7 @@ Ad → free on-demand training ("The First 24 Months of Your CPG Brand") → 72-
 | Live or recorded | **Recorded, watch instantly.** No fake "live," no fake countdown to a start time. | Ad traffic is impatient. Instant access gets 2x the watch rate of "come back Thursday." And pretending it's live is off-brand for Jeff. |
 | One webinar or two | **One webinar, two ad angles.** Segment by the stage dropdown at registration. | Both audiences need the same five lessons. One recording for Jeff, two doors in. |
 | Length | **40 min teaching + 8 min offer.** | Long enough to earn a $497 ask, short enough for cold traffic to finish. |
-| Price | **$497 for 72 hours after registering** (list stays $997). Klarna stays on. | New and pre-launch founders are the most price-sensitive people Jeff sells to. Half off is easy to say and easy to believe because the $997 page is real and public. |
+| Price | **$497 for 3 days after registering (closes midnight Pacific on day 3)** (list stays $997). Klarna stays on. | New and pre-launch founders are the most price-sensitive people Jeff sells to. Half off is easy to say and easy to believe because the $997 page is real and public. |
 | Deadline | **Real one.** After 72 hours the offer page shows $997. | A deadline that doesn't hold is a lie, and Jeff's audience talks to each other in a 300-person WhatsApp group. |
 | Guarantee | **30-day money back.** | The page has none today. Cold traffic buying a $497 course from someone they met 45 minutes ago needs it. Refund rates on real courses run low single digits. |
 | Test order | **Warm audience first, ads second.** | Email list + WhatsApp + LinkedIn cost nothing and tell us in one week whether the webinar converts. Don't pay Meta to find out the pitch is off. |

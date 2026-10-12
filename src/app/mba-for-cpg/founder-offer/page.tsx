@@ -9,7 +9,6 @@ import {
   FOUNDER_GUARANTEE_DAYS,
   FOUNDER_OFFER_COOKIE,
   FOUNDER_PRICE_USD,
-  FOUNDER_WINDOW_HOURS,
   readFounderOfferToken,
 } from "@/lib/founder-offer";
 import { MBA_PRICE_USD, STRIPE_PUBLISHABLE_KEY } from "@/lib/mba-offer";
@@ -103,7 +102,7 @@ export default async function FounderOfferPage() {
     <>
       {founder ? (
         <div className="bg-accent px-4 py-2.5 text-center text-xs font-bold uppercase tracking-[0.16em] text-white sm:text-sm">
-          Founder price for training registrants · {FOUNDER_WINDOW_HOURS} hours only
+          Founder price for training registrants · ends at midnight Pacific
         </div>
       ) : (
         <div className="bg-foreground px-4 py-2.5 text-center text-xs font-bold uppercase tracking-[0.16em] text-white/80 sm:text-sm">

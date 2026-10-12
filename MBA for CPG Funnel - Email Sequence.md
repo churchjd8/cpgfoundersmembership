@@ -1,8 +1,9 @@
 # MBA for CPG Funnel — Email Sequence
 
-Status: DRAFT for Jeff's review, Oct 12 2026. Not in Kajabi yet.
+Status: LOADED INTO KAJABI Oct 12 2026. Not yet triggered by any automation.
 Sender: Jeff Church · Reply-to: info@teamchurch.co
-Trigger: Kajabi form "MBA Funnel - Free Training Registration" (ID `2149751577`)
+Kajabi sequence: "MBA Funnel - Free Training Sequence" https://app.kajabi.com/admin/email_sequences/2148903072
+Trigger (not connected yet): Kajabi form "MBA Funnel - Free Training Registration" (ID `2149751577`)
 Companion files: `MBA for CPG Funnel - Map.md`, `MBA for CPG Funnel - Webinar Script + Slides.md`
 
 **Links**
@@ -11,27 +12,26 @@ Companion files: `MBA for CPG Funnel - Map.md`, `MBA for CPG Funnel - Webinar Sc
 
 ## Schedule
 
-The founder price runs 72 hours from registration, so every send is timed off the form submission.
+Kajabi sequences send on a day number at a fixed clock time (Pacific), not a number of hours after signup. So the founder price closes at midnight Pacific on day 3 after registration, and the last email goes out at 5 PM that day.
 
-| # | Delay after registration | Subject | Job |
+| # | Kajabi timing | Subject | Job |
 |---|---|---|---|
 | 1 | Immediately | Your training is ready | Deliver the link |
-| 2 | 4 hours | "What's a HACCP plan?" | Get non-watchers to watch |
-| 3 | 24 hours | The $1 million handshake | Teach, soft offer |
-| 4 | 30 hours | What's inside the MBA for CPG | Explain the offer |
-| 5 | 48 hours | "Zero beverage or CPG experience" | Proof |
-| 6 | 54 hours | Questions I'm getting | Objections |
-| 7 | 69 hours | The founder price ends tonight | Deadline |
-| B1 | 7 days after purchase | Which module are you on? | Buyers only. Completion and replies. |
+| 2 | Day 1, 7 AM | "What's a HACCP plan?" | Get non-watchers to watch |
+| 3 | Day 1, 5 PM | The $1 million handshake | Teach, soft offer |
+| 4 | Day 2, 7 AM | What's inside the MBA for CPG | Explain the offer |
+| 5 | Day 2, 5 PM | "Zero beverage or CPG experience" | Proof |
+| 6 | Day 3, 7 AM | Questions I'm getting | Objections |
+| 7 | Day 3, 5 PM | The founder price ends tonight | Deadline |
+| B1 | 7 days after purchase | Which module are you on? | Buyers only. NOT in Kajabi yet. |
 
-## Kajabi build notes
+## Still to do in Kajabi
 
-- Build as an email sequence, subscribed by an automation on the form submission.
+- **Turn it on:** add an automation "when form MBA Funnel - Free Training Registration is submitted, subscribe to MBA Funnel - Free Training Sequence."
 - **Stop for buyers:** when the MBA for CPG offer is granted, unsubscribe from this sequence. Emails 3 through 7 should never reach someone who already bought.
 - After email 7, add the `New Contact Nurture Sequence` tag (`2150132224`) so non-buyers roll into the main nurture. Skip that for anyone who already carries `Nurture Complete` or `Paying Customer`.
-- Personalization is `{{first_name}}`.
-- "Tonight" in email 7 is approximate. The window closes 72 hours after they registered, and this lands 3 hours before that.
-- Known gap: the countdown lives in the browser the person registered in. Someone opening these on a different device gets a fresh 72 hours on that device.
+- Build B1 as its own one-email sequence triggered by the MBA offer purchase.
+- Known gap: the countdown lives in the browser the person registered in. Someone opening these on a different device gets a fresh window on that device.
 
 ---
 
@@ -51,7 +51,7 @@ It's about 45 minutes. I'd grab a notebook, because I walk through five things I
 
 If you've just launched, at least two of the five are probably happening to you right now. If you're still planning your launch, good. You get to do them in the right order the first time.
 
-One more thing. At the end I talk about the MBA for CPG, the full program I built for founders. Everyone who registered for this training can get it at a founder price for the next 72 hours. I'll explain it in the video, so no need to do anything with that yet.
+One more thing. At the end I talk about the MBA for CPG, the full program I built for founders. Everyone who registered for this training can get it at a founder price for the next three days. I'll explain it in the video, so no need to do anything with that yet.
 
 Go watch. Then hit reply and tell me which of the five landed hardest. I read these.
 
@@ -61,7 +61,7 @@ P.S. If your brand is already past $1 million in sales, you'll recognize a lot o
 
 ---
 
-## 2. 4 hours
+## 2. Day 1, 7 AM
 
 **Subject:** "What's a HACCP plan?"
 **Preview:** I asked a Whole Foods buyer that. Out loud.
@@ -88,7 +88,7 @@ Jeff
 
 ---
 
-## 3. 24 hours
+## 3. Day 1, 5 PM
 
 **Subject:** The $1 million handshake
 **Preview:** Ninety days later, the deductions showed up.
@@ -119,7 +119,7 @@ Jeff
 
 ---
 
-## 4. 30 hours
+## 4. Day 2, 7 AM
 
 **Subject:** What's inside the MBA for CPG
 **Preview:** The 8 modules, the tools, and who it's for.
@@ -161,7 +161,7 @@ Jeff
 
 ---
 
-## 5. 48 hours
+## 5. Day 2, 5 PM
 
 **Subject:** "Zero beverage or CPG experience"
 **Preview:** What founders who went through it said.
@@ -192,7 +192,7 @@ Jeff
 
 ---
 
-## 6. 54 hours
+## 6. Day 3, 7 AM
 
 **Subject:** Questions I'm getting
 **Preview:** Too early? Not a numbers person? How long does it take?
@@ -225,20 +225,20 @@ Go through it for 30 days. If it isn't worth many times what you paid, email my 
 
 Yes. Choose Klarna at checkout.
 
-The founder price of $497 ends tomorrow: https://cpgfoundersgroup.com/mba-for-cpg/founder-offer
+The founder price of $497 ends tonight at midnight Pacific: https://cpgfoundersgroup.com/mba-for-cpg/founder-offer
 
 Jeff
 
 ---
 
-## 7. 69 hours
+## 7. Day 3, 5 PM
 
 **Subject:** The founder price ends tonight
 **Preview:** A few hours left at $497.
 
 Hi {{first_name}},
 
-Short one. The founder price on the MBA for CPG closes in a few hours. After that it goes back to $997.
+Short one. The founder price on the MBA for CPG closes at midnight Pacific tonight. After that it goes back to $997.
 
 $497, lifetime access, 30-day guarantee:
 https://cpgfoundersgroup.com/mba-for-cpg/founder-offer

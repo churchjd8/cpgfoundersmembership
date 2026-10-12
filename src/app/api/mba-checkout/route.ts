@@ -25,7 +25,7 @@ const SITE_URL =
 //   - "plan": 3 monthly payments of $349. Runs as a subscription that the
 //             webhook caps at 3 payments once checkout completes.
 // A "full" checkout from /mba-for-cpg/founder-offer (offer=founder) charges the
-// founder price while that visitor's 72-hour window is open, and the regular
+// founder price while that visitor's offer window is open, and the regular
 // price once it has closed.
 // Prices are created inline so no dashboard setup is required. Access to the
 // course is granted by /api/stripe-webhook, keyed off metadata.product.
