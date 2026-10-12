@@ -67,7 +67,7 @@ https://airtable.com/appaKM1oF2hMMBpbo/pagysOdGm7GAlzJjO/form
 
 **Name:** Jeff Church
 
-**Quote / catchphrase:** Believe in your brand. Know how to build it.
+**Quote / catchphrase:** The truth about building a consumer brand.
 
 **Social handle or title:** Author of The Cold Pressed Truth | Co-Founder of Suja Juice
 
