@@ -197,7 +197,7 @@ Budget to test: about $1,500 over 14 days ($100/day), 2 angles x 3 creatives.
 **Angle A (just launched)**
 - "I ran six companies and had a Harvard MBA. Then a Whole Foods buyer asked me for my HACCP plan and I had no idea what she was talking about."
 - "You got into 200 stores. Congratulations. Now you have about 9 months to prove you belong there."
-- "A $6.99 shelf price is not $6.99 to you. Here's where the rest goes."
+- "A $5.99 shelf price is about $2 to you. Here's where the rest goes."
 
 **Angle B (pre-launch)**
 - "It costs $150K to $350K to get a food or beverage brand on shelf. Most founders budget half that."
@@ -221,7 +221,7 @@ Budget to test: about $1,500 over 14 days ($100/day), 2 angles x 3 creatives.
 
 | When | What | Who |
 |---|---|---|
-| This week (by Oct 16) | Jeff reads the script, marks it up. Fill in the waterfall percentages. | Jeff, Joshua |
+| This week (by Oct 16) | Jeff reads the script, marks it up.  | Jeff, Joshua |
 | Oct 19 to 23 | Build the slide deck from the approved script. Jeff records the training and the six ad videos in one sitting. | Joshua, Jeff |
 | Oct 19 to 26 | Build the three pages, checkout path, Kajabi form and tags, seven emails. | Joshua + Claude |
 | Oct 27 | Warm launch: list, WhatsApp, LinkedIn. | Joshua |
@@ -233,7 +233,6 @@ Budget to test: about $1,500 over 14 days ($100/day), 2 angles x 3 creatives.
 ## 9. Open questions for Jeff
 
 1. Is he comfortable with the line "I had a Harvard MBA and didn't know what a HACCP plan was"? It's the strongest hook we have for something called the MBA for CPG.
-2. The price-waterfall percentages for the Lesson 2 slide (placeholders in the deck).
 
 Slides: https://claude.ai/artifact/Mt6rStDFpN4nH29XwYFMoE
 

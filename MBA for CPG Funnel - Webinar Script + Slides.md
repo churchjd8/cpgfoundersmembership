@@ -142,14 +142,16 @@ Stay to the end. I'm going to show you how to go a lot deeper on every one of th
 **On slide:** 2. Your margin is decided before you sell a unit.
 
 ### Slide 13 — The waterfall
-**On slide:** A shelf price stepping down. Shelf price → retailer's margin → distributor's margin → trade spend and promotions → your net revenue → cost of goods → what's left.
+**On slide:** A $5.99 shelf price stepping down. Shelf price $5.99 → after the retailer ~$3.50 (35 to 40% margin) → after the distributor ~$2.60 (25 to 30% on cost) → after trade and deductions $1.80 to $2.20 (trade 15 to 25%, deductions 3 to 5%) → after cost of goods ~$0.80 at a 40% gross margin.
 
 **Say (beats):**
-- A consumer pays $6.99. That is not $6.99 to you. Walk down the steps.
-- The retailer takes their margin. The distributor takes theirs. Then promotions, then deductions and chargebacks you didn't know existed.
-- What's left is your net revenue. Then you subtract what it cost to make it.
+- A consumer pays $5.99. That is not $5.99 to you. Walk down the steps.
+- The retailer needs a 35 to 40% margin, so they're buying from the distributor at about $3.50.
+- The distributor takes 25 to 30% on cost, so they're buying from you at about $2.60. That's your invoice price.
+- Then trade spend, 15 to 25% of gross revenue, plus the deductions and chargebacks you didn't know existed. Budget 3 to 5% for those.
+- You're left with somewhere between $1.80 and $2.20. Your cost of goods, your marketing and your team all have to fit inside that number.
 - Most new founders set their price by looking at the competitor on the shelf. Then they find out afterward what's left. That's backwards.
-- (Note for Jeff: use your standard waterfall percentages here. I left the numbers off so they match what you teach in Module 3.)
+- (Numbers are the conventional grocery example from the gross-to-net blog post. The last step assumes about $2.00 net and the 40% target.)
 
 ### Slide 14 — The target
 **On slide:** 40% gross margin by the end of year 2. 50% by year 3 to 4.
@@ -385,4 +387,4 @@ Whether you join us inside or not, thank you for spending this time with me. I'm
 - **Recording:** one sitting. Don't chase a perfect take. A stumble or two reads as real, and Jeff teaching naturally beats Jeff reading.
 - **Same session:** record the six 30 to 60 second ad hooks from the funnel map, and a 20-second "your training is ready" clip for the confirmation email.
 - **Offer timestamp:** note the exact minute Slide 31 starts. The watch page reveals the offer button at that point.
-- **Things to confirm before recording:** the waterfall percentages on Slide 13, the Suja "$0 to $100M in six years" phrasing on Slide 6, the Harvard line on Slides 2 and 30.
+- **Things to confirm before recording:** the Suja "$0 to $100M in six years" phrasing on Slide 6, the Harvard line on Slides 2 and 30.

@@ -67,7 +67,7 @@ const testimonials = [
     title: "Co-Founders, TIZZ",
   },
   {
-    quote: "It really is an MBA in CPG. The bootcamp videos were full of relevant and detailed lessons. Jeff and his team are a wealth of knowledge when it comes to finance, fundraising, brand strategy, and more.",
+    quote: "It really is an MBA in CPG. The bootcamp videos were full of relevant and detailed lessons... Jeff and his team are a wealth of knowledge when it comes to finance, fundraising, brand strategy, and more.",
     name: "Simon Solis-Cohen",
     title: "Founder, Huxley",
   },
