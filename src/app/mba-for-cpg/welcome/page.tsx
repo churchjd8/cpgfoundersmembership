@@ -2,20 +2,24 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Stripe from "stripe";
 import { MBA_LOGIN_URL } from "@/lib/mba-offer";
+import { PurchasePixel } from "./purchase-pixel";
 
 export const metadata: Metadata = {
   title: "Welcome to the MBA for CPG - CPG Founders Group",
   robots: { index: false, follow: false },
 };
 
-async function getPaid(sessionId?: string): Promise<boolean> {
-  if (!sessionId || !process.env.STRIPE_SECRET_KEY) return false;
+async function getSale(sessionId?: string): Promise<{ paid: boolean; amountUsd: number }> {
+  if (!sessionId || !process.env.STRIPE_SECRET_KEY) return { paid: false, amountUsd: 0 };
   try {
     const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
     const session = await stripe.checkout.sessions.retrieve(sessionId);
-    return session.payment_status === "paid" || session.status === "complete";
+    return {
+      paid: session.payment_status === "paid" || session.status === "complete",
+      amountUsd: (session.amount_total ?? 0) / 100,
+    };
   } catch {
-    return false;
+    return { paid: false, amountUsd: 0 };
   }
 }
 
@@ -25,10 +29,11 @@ export default async function MbaWelcomePage({
   searchParams: Promise<{ session_id?: string }>;
 }) {
   const { session_id } = await searchParams;
-  const paid = await getPaid(session_id);
+  const { paid, amountUsd } = await getSale(session_id);
 
   return (
     <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8 py-20 text-center">
+      {paid && session_id && <PurchasePixel sessionId={session_id} valueUsd={amountUsd} />}
       <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-accent-light text-3xl text-accent-dark">
         &#10003;
       </div>
@@ -90,6 +95,48 @@ export default async function MbaWelcomePage({
         >
           Back to the MBA for CPG
         </Link>
+      )}
+
+      {paid && (
+        <div className="mt-12 grid gap-4 text-left sm:grid-cols-2">
+          <div className="rounded-xl border border-border bg-card p-6">
+            <h2 className="font-semibold">Join the Founders Club</h2>
+            <p className="mt-2 text-sm text-muted">
+              300+ CPG founders on WhatsApp, trading answers every day.
+            </p>
+            <a
+              href="https://chat.whatsapp.com/EclqcEFTX2yAeBmwsq88tq"
+              className="mt-4 inline-block text-sm font-semibold text-accent underline hover:text-accent-dark"
+            >
+              Join the group
+            </a>
+          </div>
+          <div className="rounded-xl border border-border bg-card p-6">
+            <h2 className="font-semibold">Try Babu free for 10 days</h2>
+            <p className="mt-2 text-sm text-muted">
+              Jeff&apos;s CPG AI. Ask it questions as you work through the modules.
+            </p>
+            <a
+              href="https://www.askbabu.ai/signup"
+              className="mt-4 inline-block text-sm font-semibold text-accent underline hover:text-accent-dark"
+            >
+              Start your trial
+            </a>
+          </div>
+          <div className="rounded-xl border border-border bg-card p-6 sm:col-span-2">
+            <h2 className="font-semibold">Already selling and want Jeff in your business?</h2>
+            <p className="mt-2 text-sm text-muted">
+              The 3-Month Advisory Intensive includes everything in the MBA for CPG plus
+              direct time with Jeff.
+            </p>
+            <Link
+              href="/advisory"
+              className="mt-4 inline-block text-sm font-semibold text-accent underline hover:text-accent-dark"
+            >
+              See how it works
+            </Link>
+          </div>
+        </div>
       )}
     </div>
   );

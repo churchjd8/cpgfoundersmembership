@@ -5,7 +5,7 @@ Companion file: `MBA for CPG Funnel - Webinar Script + Slides.md`
 
 ## The funnel in one line
 
-Ad → free on-demand training ("CPG Is a Different Beast") → 72-hour founder price on the MBA for CPG → email follow-up → backend (Babu, Intensive).
+Ad → free on-demand training ("The First 24 Months of Your CPG Brand") → 72-hour founder price on the MBA for CPG → email follow-up → backend (Babu, Intensive).
 
 ```
  ADS (Meta) + WARM (email list, WhatsApp, LinkedIn, book)
@@ -86,8 +86,8 @@ Brands past $1M to $2M. They should be sent to the Intensive, and the registrati
 
 ## 3. The training
 
-**Title:** CPG Is a Different Beast
-**Subtitle:** The 5 things every new food and beverage founder has to get right in the first 24 months (and what each one costs when you don't)
+**Title:** The First 24 Months of Your CPG Brand (Joshua's pick, Oct 12)
+**Subtitle:** 5 things every new food and beverage founder has to get right, and what each one costs when you don't.
 
 Why this title: it's the exact phrase Joshua used to describe the audience, it works for both pre-launch and just-launched, and it sets up the offer without naming it. If the industry is a different beast, you need a different education.
 

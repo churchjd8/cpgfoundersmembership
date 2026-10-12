@@ -1,4 +1,4 @@
-# CPG Is a Different Beast — Webinar Script + Slides
+# The First 24 Months of Your CPG Brand — Webinar Script + Slides
 
 Status: DRAFT for Jeff's markup, Oct 12 2026.
 Slide deck (talk track is in the speaker notes): https://claude.ai/artifact/Mt6rStDFpN4nH29XwYFMoE
@@ -29,7 +29,7 @@ Companion file: `MBA for CPG Funnel - Map.md`
 ## OPEN
 
 ### Slide 1 — Title
-**On slide:** CPG Is a Different Beast. The 5 things every new food and beverage founder has to get right in the first 24 months. Jeff Church.
+**On slide:** The First 24 Months of Your CPG Brand. 5 things every new food and beverage founder has to get right, and what each one costs when you don't. Jeff Church.
 
 **Say:**
 "Greetings founders! I'm Jeff Church. Over the next 40 minutes I'm going to walk you through the five things I wish somebody had sat me down and told me before I launched my first food and beverage brand. Each one cost me real money to learn. A couple of them cost me millions. My hope is that they cost you 40 minutes."
