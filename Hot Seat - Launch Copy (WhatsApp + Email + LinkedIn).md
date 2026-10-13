@@ -50,7 +50,7 @@ https://cpgfoundersgroup.com/hot-seat
 ## 2. Email to the full Kajabi list
 
 **Audience:** Whole list (members and non-members). The email handles both.
-**Subject:** Put your biggest problem in front of 350 founders
+**Subject:** Put your biggest problem in front of 375 founders
 
 **Alt subjects:**
 - Who wants the Hot Seat?
@@ -66,7 +66,7 @@ I spent a lot of years learning things the expensive way.
 
 At Suja there were plenty of problems I chewed on for weeks, when a ten minute conversation with a founder who had already been through it would have gotten me there. I just didn't have a room full of those founders to ask.
 
-Now there is one. There are 350 CPG founders in our WhatsApp group, every stage from pre-launch to exit, and the best part of it is how much everybody in there has to share.
+Now there is one. There are 375 CPG founders in our WhatsApp group, every stage from pre-launch to exit, and the best part of it is how much everybody in there has to share.
 
 So we're going to try something new and point all of that at one founder's problem at a time.
 
@@ -98,7 +98,7 @@ We're trying something new in our CPG founders WhatsApp group...
 
 We're calling it the Hot Seat.
 
-One founder. One real business challenge. And 350 CPG founders working on it for 24 hours.
+One founder. One real business challenge. And 375 CPG founders working on it for 24 hours.
 
 Here's where it came from. The best part of that group has nothing to do with me. It's that somebody asks a question at 9 o'clock in the morning and by lunch three or four founders who have already lived it are weighing in. Nobody is getting paid and nobody is selling anything.
 
@@ -123,6 +123,6 @@ What's the one problem in your business you keep going around in circles on?
 - Applications land in the `hot_seat_applications` table in Supabase and send a notification email to joshua@teamchurch.co. Each one has name, email, business, website, a few sentences on the business, the challenge, the one question for the group, and whether they're in the WhatsApp group.
 - The form asks applicants to tick a box agreeing that their business and challenge can be shared with the group if they're chosen.
 - To run the next round, change `HOT_SEAT_DAY` and `APPLY_BY` at the top of `src/app/hot-seat/page.tsx`.
-- "350 founders" matches the site. Bump it everywhere if the group has grown.
+- "375 founders" matches the site (updated Oct 13). Bump it everywhere if the group has grown.
 - The Suja lines ("learning things the expensive way", "chewing on problems by myself") are in Jeff's voice but he should confirm they're true to him before anything goes out.
 - Still to decide: how the chosen founder's challenge gets posted on the 22nd (Jeff posts a written brief, or the founder records a short voice note or video), and whether Jeff adds his own take at the start or the end of the 24 hours.

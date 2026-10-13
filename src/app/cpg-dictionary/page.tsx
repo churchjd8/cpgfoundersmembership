@@ -62,7 +62,7 @@ export default function CpgGlossaryPage() {
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold">Keep learning</p>
             <h2 className="mt-3 text-2xl font-bold tracking-tight sm:text-3xl">More help for the decisions behind the definitions.</h2>
-            <p className="mt-3 max-w-2xl leading-relaxed text-white/70">Use Jeff&rsquo;s free calculators, workshops, and playbooks—or bring the term you heard in the wild to 350+ CPG founders.</p>
+            <p className="mt-3 max-w-2xl leading-relaxed text-white/70">Use Jeff&rsquo;s free calculators, workshops, and playbooks—or bring the term you heard in the wild to 375+ CPG founders.</p>
           </div>
           <div className="flex flex-wrap gap-3">
             <a href="/resources" className="rounded-lg bg-accent px-5 py-3 text-sm font-semibold text-white hover:bg-accent-dark">Explore free resources</a>
