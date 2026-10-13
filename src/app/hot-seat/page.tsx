@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import HotSeatForm from "./hot-seat-form";
 
@@ -39,24 +40,32 @@ export default function HotSeatPage() {
       {/* ========== HERO ========== */}
       <section className="relative bg-foreground text-white overflow-hidden">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
-          <div className="max-w-3xl mx-auto text-center">
-            <span className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider bg-accent text-white rounded-full mb-6">
-              CPG Founders WhatsApp Group
-            </span>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight tracking-tight">
-              The Hot Seat
-            </h1>
-            <p className="mt-6 text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
-              One founder. One real business challenge. 350+ CPG founders weighing in for 24
-              hours.
-            </p>
-            <p className="mt-4 text-white/70 max-w-2xl mx-auto leading-relaxed">
-              The best part of this group is how much everybody in it has to share. The Hot Seat
-              points all of that at one founder&rsquo;s problem at a time.
-            </p>
-            <p className="mt-6 text-sm font-semibold text-accent">
-              Next Hot Seat: {HOT_SEAT_DAY}. Apply by {APPLY_BY}.
-            </p>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <span className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider bg-accent text-white rounded-full mb-6">
+                CPG Founders WhatsApp Group
+              </span>
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight tracking-tight">
+                The Hot Seat
+              </h1>
+              <p className="mt-6 text-lg text-white/70 max-w-2xl leading-relaxed">
+                One founder. One real business challenge. 350+ CPG founders weighing in for 24
+                hours.
+              </p>
+              <p className="mt-6 text-sm font-semibold text-accent">
+                Next Hot Seat: {HOT_SEAT_DAY}. Apply by {APPLY_BY}.
+              </p>
+            </div>
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
+              <Image
+                src="/images/jeff-teaching.webp"
+                alt="Jeff Church strategizing at the whiteboard"
+                fill
+                priority
+                className="object-cover"
+                sizes="(min-width: 1024px) 50vw, 100vw"
+              />
+            </div>
           </div>
         </div>
       </section>
