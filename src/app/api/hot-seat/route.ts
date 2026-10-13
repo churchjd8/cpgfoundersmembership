@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import { getSupabaseAdmin } from "@/lib/supabase";
 
+const NOTIFY_EMAIL = "joshua@teamchurch.co";
+
 type Application = {
   name: string;
   email: string;
@@ -29,8 +31,10 @@ async function sendNotificationEmail(a: Application) {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      from: "CPG Founders Group <onboarding@resend.dev>",
-      to: process.env.CONTACT_FORM_NOTIFY_EMAIL!,
+      // Sent from the verified domain: the resend.dev sender only delivers to
+      // the Resend account owner's own address.
+      from: "CPG Founders Group <hotseat@cpgfoundersgroup.com>",
+      to: NOTIFY_EMAIL,
       reply_to: a.email,
       subject: `🔥 Hot Seat Application: ${a.name} (${a.business})`,
       html: `

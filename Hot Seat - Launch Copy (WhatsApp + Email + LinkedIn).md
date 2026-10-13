@@ -120,7 +120,7 @@ What's the one problem in your business you keep going around in circles on?
 
 ## Notes
 
-- Applications land in the `hot_seat_applications` table in Supabase and send a notification email to Joshua. Each one has name, email, business, website, a few sentences on the business, the challenge, the one question for the group, and whether they're in the WhatsApp group.
+- Applications land in the `hot_seat_applications` table in Supabase and send a notification email to joshua@teamchurch.co. Each one has name, email, business, website, a few sentences on the business, the challenge, the one question for the group, and whether they're in the WhatsApp group.
 - The form asks applicants to tick a box agreeing that their business and challenge can be shared with the group if they're chosen.
 - To run the next round, change `HOT_SEAT_DAY` and `APPLY_BY` at the top of `src/app/hot-seat/page.tsx`.
 - "350 founders" matches the site. Bump it everywhere if the group has grown.
