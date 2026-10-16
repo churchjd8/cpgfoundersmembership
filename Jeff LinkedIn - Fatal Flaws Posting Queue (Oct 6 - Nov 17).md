@@ -2,7 +2,7 @@
 
 **Book launch takeover, Oct 12.** The book launch posts now own most Tue/Thu slots through launch week, and the title is "The Cold Pressed Truth" (no hyphen) everywhere. The schedule table and dated headings below are superseded. State on LinkedIn as of Oct 16 (all 10:00 AM PT) is in the table after the next note.
 
-**Rearranged Oct 16.** Hot Seat moved up to Fri Oct 16. The Inc. CPG Power List post (Jeff listed #2, with the inc.com link card) took Mon Oct 19. The cover reveal moved to Wed Oct 21, with "Four weeks from today" changed to "In less than four weeks". FF #8 moved to the end of the run, Tue Jan 12, with its teaser changed to "out now at cpgfoundersgroup.com/book". The table below reflects it.
+**Rearranged Oct 16.** Hot Seat moved up to Fri Oct 16. The Inc. CPG Power List post (Jeff listed #2, with the native graphic in `Inc Power List Graphic/`; link stays in the text) took Mon Oct 19. The cover reveal moved to Wed Oct 21, with "Four weeks from today" changed to "In less than four weeks". FF #8 moved to the end of the run, Tue Jan 12, with its teaser changed to "out now at cpgfoundersgroup.com/book". The table below reflects it.
 
 | Date | Post |
 | --- | --- |
