@@ -1,13 +1,16 @@
 # Jeff LinkedIn — Fatal Flaws Batch, Posting Queue (Tue Oct 6 – Tue Nov 17, 2026)
 
-**Book launch takeover, Oct 12.** The book launch posts now own most Tue/Thu slots through launch week, and the title is "The Cold Pressed Truth" (no hyphen) everywhere. The schedule table and dated headings below are superseded. State on LinkedIn as of Oct 12 (all 10:00 AM PT):
+**Book launch takeover, Oct 12.** The book launch posts now own most Tue/Thu slots through launch week, and the title is "The Cold Pressed Truth" (no hyphen) everywhere. The schedule table and dated headings below are superseded. State on LinkedIn as of Oct 16 (all 10:00 AM PT) is in the table after the next note.
+
+**Rearranged Oct 16.** Hot Seat moved up to Fri Oct 16. The Inc. CPG Power List post (Jeff listed #2, with the inc.com link card) took Mon Oct 19. The cover reveal moved to Wed Oct 21, with "Four weeks from today" changed to "In less than four weeks". FF #8 moved to the end of the run, Tue Jan 12, with its teaser changed to "out now at cpgfoundersgroup.com/book". The table below reflects it.
 
 | Date | Post |
 | --- | --- |
 | Tue Oct 13 | Forbes / Proda feature (Jeff posts it himself) |
 | Thu Oct 15 | Book: My book is finally done |
-| Tue Oct 20 | Book: Cover reveal (cover image; Jay Shetty, Kim Perell, Mark Rampolla, Seth Goldman, John Foraker tagged) |
-| Thu Oct 22 | FF #8 board meeting (Ch. 7 teaser) |
+| Fri Oct 16 | Hot Seat launch |
+| Mon Oct 19 | Inc. CPG Power List (#2) |
+| Wed Oct 21 | Book: Cover reveal (cover image; Jay Shetty, Kim Perell, Mark Rampolla, Seth Goldman, John Foraker tagged) |
 | Tue Oct 27 | Book: The three problems the book solves |
 | Thu Oct 29 | Book: Podcast tour |
 | Tue Nov 3 | FF #2 phone call to Coke, holding the slot until the unboxing post has its photo or video |
@@ -26,6 +29,7 @@
 | Tue Dec 22 | FF #7 months 10 to 18 |
 | Tue Jan 5 | FF #13 peel the onion |
 | Thu Jan 7 | FF #1 $100M exit |
+| Tue Jan 12 | FF #8 board meeting (Ch. 7, out now) |
 
 Post-launch stories carry "out now" chapter lines instead of countdowns. LinkedIn only schedules 90 days ahead. Book post copy lives in the review doc (https://claude.ai/code/artifact/48854c0f-6598-4860-9804-372f5e5e3d21) and the Google Doc shared with Jeff (https://docs.google.com/document/d/1UDcTrZuVGBs1jF5_ywrhj3v7O5eQZMr8Zgb24Z1bs20/edit). `src/app/cpt-launch-plan/posts.ts` still has the earlier Mon/Fri dates and wording.
 
