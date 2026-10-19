@@ -4,8 +4,8 @@ import { getStripe } from "@/lib/stripe";
 // Babu (AskBabu) subscription MRR review: today, peak, churn and plan mix.
 // Served as a standalone document, pulled live from Stripe on each load.
 //
-// Access is gated: middleware requires the admin cookie for this path. The page
-// carries revenue and churn, so it must not be reachable without a login.
+// Public by request (shared by direct link with Jeff), but kept out of search
+// engines via noindex. It carries revenue and churn, no customer details.
 
 export const dynamic = "force-dynamic";
 
