@@ -31,8 +31,9 @@ export async function middleware(req: NextRequest) {
 
   // Paths outside /admin that still require a login. /jeff-budget carries the
   // full P&L — client counts, churn, cost structure, comp — so it is gated even
-  // though it sits at the public root.
-  const GATED_PATHS = ["/jeff-budget"];
+  // though it sits at the public root. /babu-review-stats carries Babu's MRR and
+  // churn.
+  const GATED_PATHS = ["/jeff-budget", "/babu-review-stats"];
   const isGatedPath = GATED_PATHS.some(
     (p) => pathname === p || pathname.startsWith(`${p}/`)
   );
