@@ -205,7 +205,7 @@ export default async function ResourcesPage() {
               These three need no signup
             </h2>
             <p className="mt-4 text-lg text-muted leading-relaxed">
-              Learn the language, ask the machine, or bring the question to 375 founders who have
+              Learn the language, ask the machine, or bring the question to 400+ founders who have
               already been where you are. Use them right now, then come back for the kits.
             </p>
           </div>

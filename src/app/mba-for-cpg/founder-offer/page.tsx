@@ -55,7 +55,7 @@ const bonuses = [
   {
     label: "Bonus 3",
     title: "The Founders Club",
-    description: "An invite to 300+ CPG founders on WhatsApp, trading answers every day.",
+    description: "An invite to 400+ CPG founders on WhatsApp, trading answers every day.",
   },
 ];
 

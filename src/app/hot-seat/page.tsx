@@ -8,7 +8,7 @@ const HOT_SEAT_DAY = "Thursday, October 22";
 const APPLY_BY = "Monday, October 19";
 
 const description =
-  "One founder, one real business challenge, 375+ CPG founders weighing in for 24 hours. Apply to be in the Hot Seat in the CPG Founders WhatsApp group.";
+  "One founder, one real business challenge, 400+ CPG founders weighing in for 24 hours. Apply to be in the Hot Seat in the CPG Founders WhatsApp group.";
 
 export const metadata: Metadata = {
   title: "The Hot Seat - CPG Founders Group",
@@ -49,7 +49,7 @@ export default function HotSeatPage() {
                 The Hot Seat
               </h1>
               <p className="mt-6 text-lg text-white/70 max-w-2xl leading-relaxed">
-                One founder. One real business challenge. 375+ CPG founders weighing in for 24
+                One founder. One real business challenge. 400+ CPG founders weighing in for 24
                 hours.
               </p>
               <p className="mt-6 text-sm font-semibold text-accent">

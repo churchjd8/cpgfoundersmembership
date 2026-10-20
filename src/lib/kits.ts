@@ -229,7 +229,7 @@ export const ALWAYS_ON = [
     external: false,
     emoji: "💬",
     body:
-      "375+ CPG founders in one WhatsApp group, every stage from pre-launch to exit, answering each other in real time. Somebody in there has already solved the thing you're stuck on today. Nobody sells anything in there — that's the whole rule, and it's why it works.",
+      "400+ CPG founders in one WhatsApp group, every stage from pre-launch to exit, answering each other in real time. Somebody in there has already solved the thing you're stuck on today. Nobody sells anything in there — that's the whole rule, and it's why it works.",
     cta: "Request to join",
   },
 ] as const;

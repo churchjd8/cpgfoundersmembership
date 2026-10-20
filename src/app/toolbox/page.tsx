@@ -45,7 +45,7 @@ export default function ToolboxPage() {
               <p className="mt-6 text-lg text-white/70 leading-relaxed">
                 I didn&rsquo;t write <em>The Cold Pressed Truth</em> to give you ideas. I wrote
                 it to give you tools. So here is 10 days of Babu AI free, the WhatsApp group
-                where 375+ CPG founders answer each other in real time, and all three kits &mdash;
+                where 400+ CPG founders answer each other in real time, and all three kits &mdash;
                 every calculator, model, and workshop I use with the founders I advise.
               </p>
               <p className="mt-4 text-lg text-white/70 leading-relaxed">
@@ -98,7 +98,7 @@ export default function ToolboxPage() {
             </h2>
             <p className="mt-4 text-lg text-muted leading-relaxed">
               The book is the thinking. These two are the thinking on demand &mdash; one machine
-              that answers whatever you bring it, and 375 founders who have already been where
+              that answers whatever you bring it, and 400+ founders who have already been where
               you are. Everything else in the toolbox comes with them.
             </p>
           </div>

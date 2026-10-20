@@ -102,7 +102,7 @@ export default async function MbaWelcomePage({
           <div className="rounded-xl border border-border bg-card p-6">
             <h2 className="font-semibold">Join the Founders Club</h2>
             <p className="mt-2 text-sm text-muted">
-              300+ CPG founders on WhatsApp, trading answers every day.
+              400+ CPG founders on WhatsApp, trading answers every day.
             </p>
             <a
               href="https://chat.whatsapp.com/EclqcEFTX2yAeBmwsq88tq"
