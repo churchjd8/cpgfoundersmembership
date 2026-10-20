@@ -32,6 +32,10 @@ create table if not exists public.cpt_launch_list_activity (
   created_at timestamptz not null default now()
 );
 create index if not exists cpt_launch_list_activity_created_idx on public.cpt_launch_list_activity (created_at desc);
+
+-- Service-role API routes bypass RLS; no policies means the anon key gets nothing.
+alter table public.cpt_launch_contacts enable row level security;
+alter table public.cpt_launch_list_activity enable row level security;
 `;
 
 async function main() {
