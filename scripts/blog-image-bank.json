@@ -1,0 +1,521 @@
+{
+  "_comment": "Offline fallback for blog hero images. The remote blog agent can't reach Pexels, so fetch-blog-images.mjs claims the best-matching photo from here (matching on words in its query), moves it to public/images/<slug>.jpg and deletes the entry. Restock from a machine with Pexels access: node scripts/fetch-blog-images.mjs --stock-bank 60. Add to _stockQueries to widen the variety.",
+  "_stockQueries": [
+    "supermarket aisle shelves products",
+    "grocery store produce section shoppers",
+    "beverage bottles cooler store",
+    "juice bottles colorful fresh",
+    "snack food packaging bags",
+    "farmers market stall produce",
+    "food manufacturing production line factory",
+    "bottling plant conveyor bottles",
+    "warehouse pallets forklift logistics",
+    "delivery truck highway freight",
+    "shipping boxes packages ecommerce",
+    "commercial kitchen food preparation",
+    "food scientist laboratory testing",
+    "fresh ingredients cutting board kitchen",
+    "coffee shop laptop founder working",
+    "startup team meeting office table",
+    "boardroom meeting presentation screen",
+    "two people business conversation cafe",
+    "contract signing pen documents",
+    "calculator spreadsheet finance desk",
+    "financial charts laptop analytics",
+    "notebook planning desk coffee",
+    "trade show booth exhibition crowd",
+    "product sampling tasting event",
+    "smartphone filming content creator",
+    "online shopping laptop credit card",
+    "retail store checkout cashier",
+    "price tags supermarket shelf",
+    "kraft paper packaging eco",
+    "city skyline sunrise",
+    "mountain summit hiker",
+    "running track athlete start",
+    "chess board pieces",
+    "rowing team boat water"
+  ],
+  "photos": [
+    {
+      "file": "21582448.jpg",
+      "photoId": 21582448,
+      "photographer": "Kenneth Surillo",
+      "photographerUrl": "https://www.pexels.com/@kenzero14",
+      "pexelsUrl": "https://www.pexels.com/photo/laundry-detergent-on-shelf-in-supermarket-21582448/",
+      "query": "supermarket aisle shelves products"
+    },
+    {
+      "file": "4437145.jpg",
+      "photoId": 4437145,
+      "photographer": "Roy Broo",
+      "photographerUrl": "https://www.pexels.com/@roy-broo-1304613",
+      "pexelsUrl": "https://www.pexels.com/photo/various-products-on-half-empty-store-shelves-4437145/",
+      "query": "supermarket aisle shelves products"
+    },
+    {
+      "file": "12932335.jpg",
+      "photoId": 12932335,
+      "photographer": "Atlantic Ambience",
+      "photographerUrl": "https://www.pexels.com/@freestockpro",
+      "pexelsUrl": "https://www.pexels.com/photo/woman-shopping-for-fruits-12932335/",
+      "query": "grocery store produce section shoppers"
+    },
+    {
+      "file": "4971957.jpg",
+      "photoId": 4971957,
+      "photographer": "Gustavo Fring",
+      "photographerUrl": "https://www.pexels.com/@gustavo-fring",
+      "pexelsUrl": "https://www.pexels.com/photo/woman-looking-the-fruit-in-her-shopping-cart-4971957/",
+      "query": "grocery store produce section shoppers"
+    },
+    {
+      "file": "12330187.jpg",
+      "photoId": 12330187,
+      "photographer": "Şüheda Yassıkaya",
+      "photographerUrl": "https://www.pexels.com/@suhedayassikaya",
+      "pexelsUrl": "https://www.pexels.com/photo/coca-cola-refrigerator-at-a-store-12330187/",
+      "query": "beverage bottles cooler store"
+    },
+    {
+      "file": "32827412.jpg",
+      "photoId": 32827412,
+      "photographer": "Onur",
+      "photographerUrl": "https://www.pexels.com/@monurblc",
+      "pexelsUrl": "https://www.pexels.com/photo/man-at-convenience-store-with-beverage-fridge-32827412/",
+      "query": "beverage bottles cooler store"
+    },
+    {
+      "file": "34034733.jpg",
+      "photoId": 34034733,
+      "photographer": "Tahir Xəlfəquliyev",
+      "photographerUrl": "https://www.pexels.com/@tahir",
+      "pexelsUrl": "https://www.pexels.com/photo/colorful-juice-selection-in-glass-bottles-displayed-outdoors-34034733/",
+      "query": "juice bottles colorful fresh"
+    },
+    {
+      "file": "16839663.jpg",
+      "photoId": 16839663,
+      "photographer": "Eftl behll",
+      "photographerUrl": "https://www.pexels.com/@eftl-behll-566169563",
+      "pexelsUrl": "https://www.pexels.com/photo/two-bottles-of-juice-16839663/",
+      "query": "juice bottles colorful fresh"
+    },
+    {
+      "file": "37324664.jpg",
+      "photoId": 37324664,
+      "photographer": "Andry Sasongko",
+      "photographerUrl": "https://www.pexels.com/@andrysso",
+      "pexelsUrl": "https://www.pexels.com/photo/variety-of-traditional-snack-foods-on-market-display-37324664/",
+      "query": "snack food packaging bags"
+    },
+    {
+      "file": "13060681.jpg",
+      "photoId": 13060681,
+      "photographer": "Srattha Nualsate",
+      "photographerUrl": "https://www.pexels.com/@srattha-nualsate-2695613",
+      "pexelsUrl": "https://www.pexels.com/photo/delicious-potato-chips-13060681/",
+      "query": "snack food packaging bags"
+    },
+    {
+      "file": "32465897.jpg",
+      "photoId": 32465897,
+      "photographer": "Karen Longwell",
+      "photographerUrl": "https://www.pexels.com/@karen-longwell-1620497134",
+      "pexelsUrl": "https://www.pexels.com/photo/vibrant-farmers-market-in-toronto-with-fresh-produce-32465897/",
+      "query": "farmers market stall produce"
+    },
+    {
+      "file": "33554298.jpg",
+      "photoId": 33554298,
+      "photographer": "Airam Dato-on",
+      "photographerUrl": "https://www.pexels.com/@airamdphoto",
+      "pexelsUrl": "https://www.pexels.com/photo/vibrant-farmers-market-with-fresh-produce-33554298/",
+      "query": "farmers market stall produce"
+    },
+    {
+      "file": "18631424.jpg",
+      "photoId": 18631424,
+      "photographer": "Vladimir Srajber",
+      "photographerUrl": "https://www.pexels.com/@vladimirsrajber",
+      "pexelsUrl": "https://www.pexels.com/photo/bottles-of-water-in-factory-18631424/",
+      "query": "food manufacturing production line factory"
+    },
+    {
+      "file": "36823725.jpg",
+      "photoId": 36823725,
+      "photographer": "Adrien Olichon",
+      "photographerUrl": "https://www.pexels.com/@adrien-olichon-1257089",
+      "pexelsUrl": "https://www.pexels.com/photo/modern-industrial-food-production-facility-interior-36823725/",
+      "query": "food manufacturing production line factory"
+    },
+    {
+      "file": "17765440.jpg",
+      "photoId": 17765440,
+      "photographer": "Mark Stebnicki",
+      "photographerUrl": "https://www.pexels.com/@nc-farm-bureau-mark",
+      "pexelsUrl": "https://www.pexels.com/photo/wine-production-line-17765440/",
+      "query": "bottling plant conveyor bottles"
+    },
+    {
+      "file": "36423811.jpg",
+      "photoId": 36423811,
+      "photographer": "Keegan Checks",
+      "photographerUrl": "https://www.pexels.com/@keeganjchecks",
+      "pexelsUrl": "https://www.pexels.com/photo/automated-glass-bottle-production-line-36423811/",
+      "query": "bottling plant conveyor bottles"
+    },
+    {
+      "file": "36696522.jpg",
+      "photoId": 36696522,
+      "photographer": "amerimet  suppliers",
+      "photographerUrl": "https://www.pexels.com/@amerimet-suppliers-2160399490",
+      "pexelsUrl": "https://www.pexels.com/photo/industrial-warehouse-with-forklifts-in-action-36696522/",
+      "query": "warehouse pallets forklift logistics"
+    },
+    {
+      "file": "1267329.jpg",
+      "photoId": 1267329,
+      "photographer": "ELEVATE",
+      "photographerUrl": "https://www.pexels.com/@elevate",
+      "pexelsUrl": "https://www.pexels.com/photo/man-riding-on-yellow-forklift-1267329/",
+      "query": "warehouse pallets forklift logistics"
+    },
+    {
+      "file": "15379824.jpg",
+      "photoId": 15379824,
+      "photographer": "Efrem  Efre",
+      "photographerUrl": "https://www.pexels.com/@efrem-efre-2786187",
+      "pexelsUrl": "https://www.pexels.com/photo/big-dhl-truck-15379824/",
+      "query": "delivery truck highway freight"
+    },
+    {
+      "file": "31310062.jpg",
+      "photoId": 31310062,
+      "photographer": "Santiago Quiñonez Meza",
+      "photographerUrl": "https://www.pexels.com/@santiago-quinonez-meza-2149863455",
+      "pexelsUrl": "https://www.pexels.com/photo/colorful-cargo-truck-on-open-highway-31310062/",
+      "query": "delivery truck highway freight"
+    },
+    {
+      "file": "9603486.jpg",
+      "photoId": 9603486,
+      "photographer": "Ron Lach",
+      "photographerUrl": "https://www.pexels.com/@ron-lach",
+      "pexelsUrl": "https://www.pexels.com/photo/people-carrying-cardboard-boxes-9603486/",
+      "query": "shipping boxes packages ecommerce"
+    },
+    {
+      "file": "9594420.jpg",
+      "photoId": 9594420,
+      "photographer": "Ron Lach",
+      "photographerUrl": "https://www.pexels.com/@ron-lach",
+      "pexelsUrl": "https://www.pexels.com/photo/brown-cardboard-boxes-on-yellow-surface-9594420/",
+      "query": "shipping boxes packages ecommerce"
+    },
+    {
+      "file": "5793769.jpg",
+      "photoId": 5793769,
+      "photographer": "Tima Miroshnichenko",
+      "photographerUrl": "https://www.pexels.com/@tima-miroshnichenko",
+      "pexelsUrl": "https://www.pexels.com/photo/a-person-slicing-meat-5793769/",
+      "query": "commercial kitchen food preparation"
+    },
+    {
+      "file": "8629081.jpg",
+      "photoId": 8629081,
+      "photographer": "Kampus Production",
+      "photographerUrl": "https://www.pexels.com/@kampus",
+      "pexelsUrl": "https://www.pexels.com/photo/man-in-white-chef-uniform-cooking-in-the-kitchen-8629081/",
+      "query": "commercial kitchen food preparation"
+    },
+    {
+      "file": "8531366.jpg",
+      "photoId": 8531366,
+      "photographer": "olia danilevich",
+      "photographerUrl": "https://www.pexels.com/@olia-danilevich",
+      "pexelsUrl": "https://www.pexels.com/photo/woman-in-white-lab-gown-wearing-face-mask-while-holding-a-test-tube-8531366/",
+      "query": "food scientist laboratory testing"
+    },
+    {
+      "file": "4031687.jpg",
+      "photoId": 4031687,
+      "photographer": "Edward Jenner",
+      "photographerUrl": "https://www.pexels.com/@edward-jenner",
+      "pexelsUrl": "https://www.pexels.com/photo/two-scientists-working-inside-the-laboratory-4031687/",
+      "query": "food scientist laboratory testing"
+    },
+    {
+      "file": "8629083.jpg",
+      "photoId": 8629083,
+      "photographer": "Kampus Production",
+      "photographerUrl": "https://www.pexels.com/@kampus",
+      "pexelsUrl": "https://www.pexels.com/photo/a-person-in-white-uniform-holding-green-vegetables-8629083/",
+      "query": "fresh ingredients cutting board kitchen"
+    },
+    {
+      "file": "7129393.jpg",
+      "photoId": 7129393,
+      "photographer": "Michael Burrows",
+      "photographerUrl": "https://www.pexels.com/@michael-burrows",
+      "pexelsUrl": "https://www.pexels.com/photo/faceless-ethnic-man-cutting-spinach-leaves-in-house-kitchen-7129393/",
+      "query": "fresh ingredients cutting board kitchen"
+    },
+    {
+      "file": "26799322.jpg",
+      "photoId": 26799322,
+      "photographer": "Brunxs",
+      "photographerUrl": "https://www.pexels.com/@brunxs",
+      "pexelsUrl": "https://www.pexels.com/photo/smiling-man-working-on-laptop-26799322/",
+      "query": "coffee shop laptop founder working"
+    },
+    {
+      "file": "17735079.jpg",
+      "photoId": 17735079,
+      "photographer": "iam hogir",
+      "photographerUrl": "https://www.pexels.com/@iamhogir",
+      "pexelsUrl": "https://www.pexels.com/photo/a-woman-using-a-laptop-17735079/",
+      "query": "coffee shop laptop founder working"
+    },
+    {
+      "file": "7413872.jpg",
+      "photoId": 7413872,
+      "photographer": "RDNE Stock project",
+      "photographerUrl": "https://www.pexels.com/@rdne",
+      "pexelsUrl": "https://www.pexels.com/photo/men-working-in-an-office-7413872/",
+      "query": "startup team meeting office table"
+    },
+    {
+      "file": "7180965.jpg",
+      "photoId": 7180965,
+      "photographer": "Thirdman",
+      "photographerUrl": "https://www.pexels.com/@thirdman",
+      "pexelsUrl": "https://www.pexels.com/photo/people-sitting-at-the-table-looking-at-the-man-in-red-sweater-drawing-sketch-on-white-board-7180965/",
+      "query": "startup team meeting office table"
+    },
+    {
+      "file": "7648467.jpg",
+      "photoId": 7648467,
+      "photographer": "RDNE Stock project",
+      "photographerUrl": "https://www.pexels.com/@rdne",
+      "pexelsUrl": "https://www.pexels.com/photo/empty-conference-room-7648467/",
+      "query": "boardroom meeting presentation screen"
+    },
+    {
+      "file": "6814342.jpg",
+      "photoId": 6814342,
+      "photographer": "cottonbro studio",
+      "photographerUrl": "https://www.pexels.com/@cottonbro",
+      "pexelsUrl": "https://www.pexels.com/photo/man-presenting-at-the-meeting-6814342/",
+      "query": "boardroom meeting presentation screen"
+    },
+    {
+      "file": "13335056.jpg",
+      "photoId": 13335056,
+      "photographer": "Mizuno K",
+      "photographerUrl": "https://www.pexels.com/@mizunokozuki",
+      "pexelsUrl": "https://www.pexels.com/photo/two-men-sitting-and-eating-lunch-13335056/",
+      "query": "two people business conversation cafe"
+    },
+    {
+      "file": "4339913.jpg",
+      "photoId": 4339913,
+      "photographer": "Edmond Dantès",
+      "photographerUrl": "https://www.pexels.com/@edmond-dantes",
+      "pexelsUrl": "https://www.pexels.com/photo/coworkers-discussing-work-over-coffee-4339913/",
+      "query": "two people business conversation cafe"
+    },
+    {
+      "file": "7567600.jpg",
+      "photoId": 7567600,
+      "photographer": "Tima Miroshnichenko",
+      "photographerUrl": "https://www.pexels.com/@tima-miroshnichenko",
+      "pexelsUrl": "https://www.pexels.com/photo/person-signing-on-a-paper-7567600/",
+      "query": "contract signing pen documents"
+    },
+    {
+      "file": "7876037.jpg",
+      "photoId": 7876037,
+      "photographer": "https://kaboompics.com/",
+      "photographerUrl": "https://www.pexels.com/@karola-g",
+      "pexelsUrl": "https://www.pexels.com/photo/a-person-signing-divorce-documents-7876037/",
+      "query": "contract signing pen documents"
+    },
+    {
+      "file": "7580852.jpg",
+      "photoId": 7580852,
+      "photographer": "RDNE Stock project",
+      "photographerUrl": "https://www.pexels.com/@rdne",
+      "pexelsUrl": "https://www.pexels.com/photo/calculator-on-top-of-the-paper-7580852/",
+      "query": "calculator spreadsheet finance desk"
+    },
+    {
+      "file": "5915236.jpg",
+      "photoId": 5915236,
+      "photographer": "RDNE Stock project",
+      "photographerUrl": "https://www.pexels.com/@rdne",
+      "pexelsUrl": "https://www.pexels.com/photo/person-using-black-desk-calculator-5915236/",
+      "query": "calculator spreadsheet finance desk"
+    },
+    {
+      "file": "8062289.jpg",
+      "photoId": 8062289,
+      "photographer": "Nataliya Vaitkevich",
+      "photographerUrl": "https://www.pexels.com/@n-voitkevich",
+      "pexelsUrl": "https://www.pexels.com/photo/gray-laptop-beside-white-printer-paper-8062289/",
+      "query": "financial charts laptop analytics"
+    },
+    {
+      "file": "6120214.jpg",
+      "photoId": 6120214,
+      "photographer": "Nataliya Vaitkevich",
+      "photographerUrl": "https://www.pexels.com/@n-voitkevich",
+      "pexelsUrl": "https://www.pexels.com/photo/magnifying-glass-on-white-paper-6120214/",
+      "query": "financial charts laptop analytics"
+    },
+    {
+      "file": "7657877.jpg",
+      "photoId": 7657877,
+      "photographer": "Cup of  Couple",
+      "photographerUrl": "https://www.pexels.com/@cup-of-couple",
+      "pexelsUrl": "https://www.pexels.com/photo/a-cup-of-coffee-on-a-table-7657877/",
+      "query": "notebook planning desk coffee"
+    },
+    {
+      "file": "5408919.jpg",
+      "photoId": 5408919,
+      "photographer": "Leeloo The First",
+      "photographerUrl": "https://www.pexels.com/@leeloothefirst",
+      "pexelsUrl": "https://www.pexels.com/photo/a-cup-of-black-coffee-on-a-notebook-with-notes-of-foreign-language-with-translation-5408919/",
+      "query": "notebook planning desk coffee"
+    },
+    {
+      "file": "38041486.jpg",
+      "photoId": 38041486,
+      "photographer": "Euronewsweek Media",
+      "photographerUrl": "https://www.pexels.com/@euronewsweek-media-2160861246",
+      "pexelsUrl": "https://www.pexels.com/photo/london-tech-week-event-indoor-gathering-38041486/",
+      "query": "trade show booth exhibition crowd"
+    },
+    {
+      "file": "36522033.jpg",
+      "photoId": 36522033,
+      "photographer": "Peter Xie",
+      "photographerUrl": "https://www.pexels.com/@peter-xie-371876898",
+      "pexelsUrl": "https://www.pexels.com/photo/industrial-machinery-at-trade-show-exhibit-36522033/",
+      "query": "trade show booth exhibition crowd"
+    },
+    {
+      "file": "6760854.jpg",
+      "photoId": 6760854,
+      "photographer": "Kampus Production",
+      "photographerUrl": "https://www.pexels.com/@kampus",
+      "pexelsUrl": "https://www.pexels.com/photo/person-holding-a-finger-food-6760854/",
+      "query": "product sampling tasting event"
+    },
+    {
+      "file": "38139753.jpg",
+      "photoId": 38139753,
+      "photographer": "Jonathan Borba",
+      "photographerUrl": "https://www.pexels.com/@jonathanborba",
+      "pexelsUrl": "https://www.pexels.com/photo/woman-interior-designer-arranging-samples-at-office-desk-38139753/",
+      "query": "product sampling tasting event"
+    },
+    {
+      "file": "8357241.jpg",
+      "photoId": 8357241,
+      "photographer": "Ron Lach",
+      "photographerUrl": "https://www.pexels.com/@ron-lach",
+      "pexelsUrl": "https://www.pexels.com/photo/a-woman-smiling-at-the-camera-8357241/",
+      "query": "smartphone filming content creator"
+    },
+    {
+      "file": "8357231.jpg",
+      "photoId": 8357231,
+      "photographer": "Ron Lach",
+      "photographerUrl": "https://www.pexels.com/@ron-lach",
+      "pexelsUrl": "https://www.pexels.com/photo/woman-recording-with-smartphone-8357231/",
+      "query": "smartphone filming content creator"
+    },
+    {
+      "file": "11952304.jpg",
+      "photoId": 11952304,
+      "photographer": "Marcial Comeron",
+      "photographerUrl": "https://www.pexels.com/@marcial-comeron-177639337",
+      "pexelsUrl": "https://www.pexels.com/photo/a-woman-shopping-online-11952304/",
+      "query": "online shopping laptop credit card"
+    },
+    {
+      "file": "5717969.jpg",
+      "photoId": 5717969,
+      "photographer": "https://kaboompics.com/",
+      "photographerUrl": "https://www.pexels.com/@karola-g",
+      "pexelsUrl": "https://www.pexels.com/photo/a-person-holding-a-bank-card-5717969/",
+      "query": "online shopping laptop credit card"
+    },
+    {
+      "file": "8422732.jpg",
+      "photoId": 8422732,
+      "photographer": "Kampus Production",
+      "photographerUrl": "https://www.pexels.com/@kampus",
+      "pexelsUrl": "https://www.pexels.com/photo/paying-using-a-card-8422732/",
+      "query": "retail store checkout cashier"
+    },
+    {
+      "file": "6925800.jpg",
+      "photoId": 6925800,
+      "photographer": "Tom Tillhub",
+      "photographerUrl": "https://www.pexels.com/@tillhub",
+      "pexelsUrl": "https://www.pexels.com/photo/woman-with-mobile-at-counter-in-shop-6925800/",
+      "query": "retail store checkout cashier"
+    },
+    {
+      "file": "7451957.jpg",
+      "photoId": 7451957,
+      "photographer": "Nothing Ahead",
+      "photographerUrl": "https://www.pexels.com/@ian-panelo",
+      "pexelsUrl": "https://www.pexels.com/photo/shelves-with-various-milk-boxes-7451957/",
+      "query": "price tags supermarket shelf"
+    },
+    {
+      "file": "11703475.jpg",
+      "photoId": 11703475,
+      "photographer": "Jonathan Cooper",
+      "photographerUrl": "https://www.pexels.com/@theshuttervision",
+      "pexelsUrl": "https://www.pexels.com/photo/green-bananas-on-shelves-11703475/",
+      "query": "price tags supermarket shelf"
+    },
+    {
+      "file": "10793124.jpg",
+      "photoId": 10793124,
+      "photographer": "MADEINEGYPT.CA",
+      "photographerUrl": "https://www.pexels.com/@madeinegypt-ca-121489142",
+      "pexelsUrl": "https://www.pexels.com/photo/packing-parcels-of-a-canadian-company-made-in-egypt-10793124/",
+      "query": "kraft paper packaging eco"
+    },
+    {
+      "file": "9594423.jpg",
+      "photoId": 9594423,
+      "photographer": "Ron Lach",
+      "photographerUrl": "https://www.pexels.com/@ron-lach",
+      "pexelsUrl": "https://www.pexels.com/photo/brown-cardboard-box-on-white-table-9594423/",
+      "query": "kraft paper packaging eco"
+    },
+    {
+      "file": "18201085.jpg",
+      "photoId": 18201085,
+      "photographer": "Ollie Craig",
+      "photographerUrl": "https://www.pexels.com/@olliecraig1",
+      "pexelsUrl": "https://www.pexels.com/photo/drone-shot-of-auckland-at-sunset-18201085/",
+      "query": "city skyline sunrise"
+    },
+    {
+      "file": "18201091.jpg",
+      "photoId": 18201091,
+      "photographer": "Ollie Craig",
+      "photographerUrl": "https://www.pexels.com/@olliecraig1",
+      "pexelsUrl": "https://www.pexels.com/photo/auckland-at-sunset-18201091/",
+      "query": "city skyline sunrise"
+    }
+  ]
+}
