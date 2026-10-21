@@ -7,10 +7,10 @@ import { RegistrationForm } from "./registration-form";
 export const metadata: Metadata = {
   title: `${TRAINING_TITLE} | Free Training with Jeff Church`,
   description:
-    "A free 45-minute training from 8x founder Jeff Church, co-founder of Suja Juice. The five things every new food and beverage founder has to get right in the first 24 months.",
+    "93% of new CPG brands don't make it. In a free 45-minute training, 8x founder Jeff Church, co-founder of Suja, shows the 5 fatal mistakes founders make in the first 24 months and how to be the 7%.",
   openGraph: {
-    title: TRAINING_TITLE,
-    description: "Free 45-minute training with Jeff Church, co-founder of Suja Juice. Watch right away.",
+    title: "93% of New CPG Brands Don't Make It",
+    description: "The 5 fatal mistakes founders make in the first 24 months. Free training with Jeff Church, co-founder of Suja.",
     images: ["/images/jeff-teaching.webp"],
   },
 };
@@ -18,29 +18,42 @@ export const metadata: Metadata = {
 const lessons = [
   {
     number: "01",
-    title: "The real price of admission",
-    description: "What it costs and how long it takes to get a first brand on shelf, and the 8-phase roadmap to do it in the right order.",
+    title: "Underestimating what it takes to get on shelf",
+    description: "What it really costs and how long it takes to get a first brand on shelf, and the 8-phase roadmap to spend it in the right order.",
   },
   {
     number: "02",
-    title: "Your margin is decided before you sell a unit",
-    description: "Where your shelf price actually goes, the gross margin to plan for, and the one product swap that changed Suja.",
+    title: "Setting your price before you do the math",
+    description: "Where a $5.99 shelf price actually goes, the gross margin to plan for, and the one product swap that took Suja from 32% to 40%.",
   },
   {
     number: "03",
-    title: "Stores are not the goal. Velocity is.",
+    title: "Chasing stores instead of velocity",
     description: "Why more doors can sink you, how long you get to prove you belong on the shelf, and the order to open retailers in.",
   },
   {
     number: "04",
-    title: "Cash is oxygen. Equity is expensive.",
+    title: "Running out of cash, or giving away the company to get it",
     description: "How much runway to raise for, how much of the company to give up per round, and how founders end up owning 4% at exit.",
   },
   {
     number: "05",
-    title: "The paper you sign can end you",
+    title: "Signing the wrong paper",
     description: "The three things Jeff will not sign, and the handshake deal that cost Suja more than $1 million in 90 days.",
   },
+];
+
+const sevenPercent = [
+  { name: "Poppi", line: "Acquired by PepsiCo for $1.95 billion." },
+  { name: "Olipop", line: "Valued at $1.85 billion." },
+  { name: "Grüns", line: "Turned daily nutrition into a gummy and built a category around it." },
+];
+
+const sujaStory = [
+  ["$0 to $100M", "in six years"],
+  ["30%", "stake taken by Coca-Cola in 2015, at a $300M valuation"],
+  ["~10x", "returned to Suja's angel investors"],
+  ["$700M+", "valuation when Suja went public on Nasdaq, May 2026"],
 ];
 
 const audiences = [
@@ -68,7 +81,7 @@ const faqs = [
   ["Is it really free?", "Yes. Register and the full training opens right away. No card, nothing to buy to watch it."],
   ["Is this live?", "No. Jeff recorded it so you can watch it now, pause it, and come back to it."],
   ["How long is it?", "About 45 minutes."],
-  ["I have not launched yet. Is it too early?", "It is the best time. Every one of the five lessons is cheaper to learn before you sign a co-packer agreement or take a first check."],
+  ["I have not launched yet. Is it too early?", "It is the best time. Every one of the five mistakes is cheaper to learn before you sign a co-packer agreement or take a first check."],
   ["I am already past $1M. Is this for me?", "You will recognize most of it. Jeff works with brands at your stage through his advisory programs, and we will point you there after you register."],
 ];
 
@@ -123,10 +136,11 @@ export default function FreeTrainingPage() {
         <div className="mx-auto grid max-w-7xl gap-12 px-4 py-14 sm:px-6 md:py-20 lg:grid-cols-[1.05fr_.95fr] lg:items-center lg:px-8">
           <div>
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/10 px-3 py-1.5 text-xs font-bold uppercase tracking-[0.14em] text-gold">
-              With Jeff Church · 8x founder · Co-founder of Suja Juice
+              For food and beverage founders in their first two years, or about to start
             </div>
-            <h1 className="max-w-3xl text-4xl font-bold leading-[1.03] tracking-[-0.035em] sm:text-5xl lg:text-6xl">
-              The First 24 Months of <span className="text-gold">Your CPG Brand</span>
+            <h1 className="max-w-3xl text-4xl font-bold leading-[1.05] tracking-[-0.035em] sm:text-5xl lg:text-6xl">
+              93% of new CPG brands don&rsquo;t make it.{" "}
+              <span className="text-gold">Here are the 5 fatal mistakes founders make in the first 24 months.</span>
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/72 sm:text-xl">{TRAINING_SUBTITLE}</p>
             <p className="mt-6 max-w-2xl border-l-2 border-gold/50 pl-5 text-base leading-relaxed text-white/72">
@@ -145,6 +159,41 @@ export default function FreeTrainingPage() {
       <section className="border-b border-border bg-white py-7">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <Image src="/images/as-seen-in-banner.png" alt="Jeff Church recognition and media features" width={900} height={100} className="h-auto w-full opacity-80" />
+        </div>
+      </section>
+
+      <section className="bg-white py-16 md:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-accent">How to be the 7%</p>
+            <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">Everyone wants to be the next Poppi.</h2>
+            <p className="mt-5 text-lg leading-relaxed text-muted">Of every 5,000 CPG brands that launch, only about 7% make it to proof of concept. The ones that make it didn&rsquo;t have better ideas. They avoided the mistakes that kill the other 93%.</p>
+          </div>
+
+          <div className="mt-12 grid gap-5 md:grid-cols-3">
+            {sevenPercent.map((brand) => (
+              <article key={brand.name} className="rounded-2xl border border-border bg-card p-7">
+                <h3 className="text-2xl font-bold">{brand.name}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted">{brand.line}</p>
+              </article>
+            ))}
+          </div>
+
+          <div className="mt-5 rounded-2xl bg-foreground p-7 text-white sm:p-10">
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-gold">Jeff&rsquo;s 7% story: Suja</p>
+            <h3 className="mt-3 text-2xl font-bold sm:text-3xl">From juice delivered by skateboard to the Nasdaq.</h3>
+            <div className="mt-8 grid grid-cols-2 gap-6 lg:grid-cols-4">
+              {sujaStory.map(([number, label]) => (
+                <div key={number}>
+                  <p className="text-3xl font-bold text-gold">{number}</p>
+                  <p className="mt-1 text-sm leading-relaxed text-white/65">{label}</p>
+                </div>
+              ))}
+            </div>
+            <p className="mt-8 max-w-3xl text-sm leading-relaxed text-white/65">
+              Along the way Jeff made every one of the five mistakes in this training. One cost a million dollars in 90 days. This is the playbook he wishes he had on day one.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -178,8 +227,8 @@ export default function FreeTrainingPage() {
       <section className="bg-white py-16 md:py-24">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <p className="text-xs font-bold uppercase tracking-[0.18em] text-accent">What Jeff covers</p>
-            <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">Five lessons. Each one cost real money to learn.</h2>
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-accent">The 5 fatal mistakes</p>
+            <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">Jeff made all five. Here&rsquo;s the fix for each.</h2>
           </div>
           <div className="mt-10 divide-y divide-border border-y border-border">
             {lessons.map((lesson) => (
@@ -209,7 +258,7 @@ export default function FreeTrainingPage() {
             <div>
               <p className="text-xs font-bold uppercase tracking-[0.18em] text-accent">Your teacher</p>
               <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">Five home runs. Three strikeouts. Lessons from both.</h2>
-              <p className="mt-5 leading-relaxed text-muted">Jeff Church has started or acquired eight companies and is building his ninth. He co-founded Suja Juice and took it from zero to $100 million in six years, with Coca-Cola and Goldman Sachs as investors.</p>
+              <p className="mt-5 leading-relaxed text-muted">Jeff Church has started or acquired eight companies and is building his ninth. He co-founded Suja Juice and took it from zero to $100 million in six years, with Coca-Cola and Goldman Sachs as investors. Suja sold for about $300 million in 2020 and went public on Nasdaq in 2026.</p>
               <p className="mt-4 leading-relaxed text-muted">He has also paid a million dollars in slotting for a brand that was off the shelf in eight months. This training is what he learned on both sides of that scoreboard.</p>
               <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4">
                 {[["8", "companies"], ["$212M", "raised"], ["~$700M", "returned to investors"], ["44", "fundraising rounds"]].map(([number, label]) => (

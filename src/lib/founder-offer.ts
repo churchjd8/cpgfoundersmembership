@@ -9,9 +9,9 @@ import { createHmac, timingSafeEqual } from "node:crypto";
 // passes, the offer page and /api/mba-checkout both fall back to the regular
 // price.
 
-export const TRAINING_TITLE = "The First 24 Months of Your CPG Brand";
+export const TRAINING_TITLE = "How to Be the 7%: The 5 Fatal Mistakes That Kill New CPG Brands";
 export const TRAINING_SUBTITLE =
-  "5 things every new food and beverage founder has to get right, and what each one costs when you don't.";
+  "What each mistake costs, how to spot it in your business, and what to do instead. From 8x founder Jeff Church, co-founder of Suja.";
 
 /** Kajabi form "MBA Funnel - Free Training Registration". */
 export const TRAINING_KAJABI_FORM_ID = "2149751577";

@@ -38,20 +38,22 @@ Kajabi sequences send on a day number at a fixed clock time (Pacific), not a num
 ## 1. Immediately
 
 **Subject:** Your training is ready
-**Preview:** 45 minutes. Grab a notebook.
+**Preview:** 93% don't make it. Here's how to be the 7%.
 
 Hi {{first_name}},
 
 You're in. Here's your training:
 
-**The First 24 Months of Your CPG Brand**
+**How to Be the 7%: The 5 Fatal Mistakes That Kill New CPG Brands**
 https://cpgfoundersgroup.com/free-training/watch
 
-It's about 45 minutes. I'd grab a notebook, because I walk through five things I wish somebody had sat me down and told me before I launched my first food and beverage brand. Each one cost me real money to learn. A couple of them cost me millions.
+Of every 5,000 CPG brands that launch, only about 7% make it to proof of concept. Everyone wants to be the next Poppi or Olipop. Very few get there.
 
-If you've just launched, at least two of the five are probably happening to you right now. If you're still planning your launch, good. You get to do them in the right order the first time.
+I got to be one of the 7% once, with Suja. We went from zero to $100 million in six years, and the company went public this past May. I also made every one of the five mistakes in this training along the way. A couple of them cost me millions.
 
-One more thing. At the end I talk about the MBA for CPG, the full program I built for founders. Everyone who registered for this training can get it at a founder price for the next three days. I'll explain it in the video, so no need to do anything with that yet.
+It's about 45 minutes. Grab a notebook. If you've just launched, at least two of the five are probably happening to you right now. If you're still planning your launch, good. You get to avoid them the first time.
+
+One more thing. At the end I talk about the MBA for CPG, the full playbook I built for founders. Everyone who registered for this training can get it at a founder price for the next three days. I'll explain it in the video, so no need to do anything with that yet.
 
 Go watch. Then hit reply and tell me which of the five landed hardest. I read these.
 
@@ -80,7 +82,7 @@ It is not a one-page form. A week later I was sitting in an all-day food safety 
 
 Ignorance is expensive in any business. In CPG it's especially expensive, because this industry has its own language, its own math and its own rules, and nobody hands you the rulebook.
 
-That's what the training is. Five of the rules, and what each one cost me.
+That's what the training is. The five fatal mistakes I see new founders make, and what each one cost me.
 
 Watch it here: https://cpgfoundersgroup.com/free-training/watch
 

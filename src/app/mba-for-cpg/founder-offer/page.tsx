@@ -122,7 +122,7 @@ export default async function FounderOfferPage() {
                 Your business school for CPG.
               </h1>
               <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/70 sm:text-xl">
-                The training was five lessons. This is the whole curriculum: 8 modules, 450+ slides narrated by Jeff, his financial model, templates and Playbook. Self-paced, yours for life.
+                The training covered five fatal mistakes. This is the whole playbook: 8 modules, 450+ slides narrated by Jeff, his financial model, templates and Playbook. Self-paced, yours for life.
               </p>
 
               <div className="mt-8 flex flex-wrap items-end gap-x-8 gap-y-6">

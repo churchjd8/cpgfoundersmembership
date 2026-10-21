@@ -5,7 +5,7 @@ Companion file: `MBA for CPG Funnel - Webinar Script + Slides.md`
 
 ## The funnel in one line
 
-Ad → free on-demand training ("The First 24 Months of Your CPG Brand") → 72-hour founder price on the MBA for CPG → email follow-up → backend (Babu, Intensive).
+Ad → free on-demand training ("How to Be the 7%") → 72-hour founder price on the MBA for CPG → email follow-up → backend (Babu, Intensive).
 
 ```
  ADS (Meta) + WARM (email list, WhatsApp, LinkedIn, book)
@@ -86,7 +86,10 @@ Brands past $1M to $2M. They should be sent to the Intensive, and the registrati
 
 ## 3. The training
 
-**Title:** The First 24 Months of Your CPG Brand (Joshua's pick, Oct 12)
+**Headline (Oct 21):** 93% of New CPG Brands Don't Make It. Here Are the 5 Fatal Mistakes Founders Make in the First 24 Months.
+**Training name:** How to Be the 7%: The 5 Fatal Mistakes That Kill New CPG Brands
+**Positioning:** be the 7%, anchored on Poppi, Olipop, Grüns and Jeff's Suja story. The 93% is Jeff's own stat (of every 5,000 brands, ~7% reach proof of concept), not a 24-month failure rate. Never say Suja was sold to Coca-Cola: Coke took a 30% stake in 2015 and passed on buying the rest in 2018.
+**Old title:** The First 24 Months of Your CPG Brand
 **Subtitle:** 5 things every new food and beverage founder has to get right, and what each one costs when you don't.
 
 Why this title: it's the exact phrase Joshua used to describe the audience, it works for both pre-launch and just-launched, and it sets up the offer without naming it. If the industry is a different beast, you need a different education.

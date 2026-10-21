@@ -1,4 +1,4 @@
-# The First 24 Months of Your CPG Brand — Webinar Script + Slides
+# How to Be the 7% — Webinar Script + Slides
 
 Status: DRAFT for Jeff's markup, Oct 12 2026.
 Slide deck (talk track is in the speaker notes): https://claude.ai/artifact/Mt6rStDFpN4nH29XwYFMoE

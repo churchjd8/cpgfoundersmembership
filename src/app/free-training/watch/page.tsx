@@ -67,7 +67,7 @@ export default async function FreeTrainingWatchPage() {
               <p className="text-xs font-bold uppercase tracking-[0.18em] text-accent">For everyone who watched</p>
               <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">The MBA for CPG, at the founder price.</h2>
               <p className="mt-4 text-lg leading-relaxed text-muted">
-                Those were five lessons. The MBA for CPG is the whole curriculum: 8 modules, 450+ slides narrated by Jeff, his 5-year financial model, the Trade Spend Calculator, deck templates and the Playbook.
+                Those were five mistakes. The MBA for CPG is the whole curriculum: 8 modules, 450+ slides narrated by Jeff, his 5-year financial model, the Trade Spend Calculator, deck templates and the Playbook.
               </p>
 
               {offer?.active ? (
