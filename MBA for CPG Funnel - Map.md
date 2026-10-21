@@ -86,7 +86,7 @@ Brands past $1M to $2M. They should be sent to the Intensive, and the registrati
 
 ## 3. The training
 
-**Headline (Oct 21):** 93% of New CPG Brands Don't Make It. Here Are the 5 Fatal Mistakes Founders Make in the First 24 Months.
+**Headline (Oct 21):** 93% of new CPG brands don't make it. 5 fatal mistakes to avoid in your first 24 months.
 **Training name:** How to Be the 7%: The 5 Fatal Mistakes That Kill New CPG Brands
 **Positioning:** be the 7%, anchored on Poppi, Olipop, Grüns and Jeff's Suja story. The 93% is Jeff's own stat (of every 5,000 brands, ~7% reach proof of concept), not a 24-month failure rate. Never say Suja was sold to Coca-Cola: Coke took a 30% stake in 2015 and passed on buying the rest in 2018.
 **Old title:** The First 24 Months of Your CPG Brand

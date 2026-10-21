@@ -136,11 +136,11 @@ export default function FreeTrainingPage() {
         <div className="mx-auto grid max-w-7xl gap-12 px-4 py-14 sm:px-6 md:py-20 lg:grid-cols-[1.05fr_.95fr] lg:items-center lg:px-8">
           <div>
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/10 px-3 py-1.5 text-xs font-bold uppercase tracking-[0.14em] text-gold">
-              For food and beverage founders in their first two years, or about to start
+              Free training for new food and beverage founders
             </div>
             <h1 className="max-w-3xl text-4xl font-bold leading-[1.05] tracking-[-0.035em] sm:text-5xl lg:text-6xl">
               93% of new CPG brands don&rsquo;t make it.{" "}
-              <span className="text-gold">Here are the 5 fatal mistakes founders make in the first 24 months.</span>
+              <span className="text-gold">5 fatal mistakes to avoid in your first 24 months.</span>
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/72 sm:text-xl">{TRAINING_SUBTITLE}</p>
             <p className="mt-6 max-w-2xl border-l-2 border-gold/50 pl-5 text-base leading-relaxed text-white/72">
