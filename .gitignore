@@ -47,3 +47,6 @@ kajabi-emails/*.html
 # Raw video sources (hosted on Vercel Blob, never commit)
 *.mp4
 *.mov
+
+# Jeff book launch contact lists (PII, never commit)
+book-launch-contacts/
