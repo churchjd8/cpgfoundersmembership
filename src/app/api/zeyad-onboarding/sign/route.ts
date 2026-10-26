@@ -38,7 +38,7 @@ export async function POST(request: Request) {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          from: "CPG Founders Group <onboarding@resend.dev>",
+          from: "CPG Founders Group <notifications@cpgfoundersgroup.com>",
           to: notifyTo,
           reply_to: email,
           subject: `✍️ Signed Advisory Agreement — ${fullName} (${ENGAGEMENT.business})`,

@@ -32,7 +32,7 @@ async function sendNotificationEmail(fields: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      from: "CPG Founders Group <onboarding@resend.dev>",
+      from: "CPG Founders Group <notifications@cpgfoundersgroup.com>",
       to: process.env.CONTACT_FORM_NOTIFY_EMAIL!,
       reply_to: fields.email,
       subject: `New contact form: ${fields.firstName} ${fields.lastName} (${fields.business})`,

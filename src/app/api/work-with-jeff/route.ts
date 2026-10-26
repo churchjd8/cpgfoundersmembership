@@ -36,7 +36,9 @@ async function sendNotificationEmail(fields: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      from: "CPG Founders Group <onboarding@resend.dev>",
+      // Verified domain: the resend.dev test sender only delivers to the Resend
+      // account owner, so it silently dropped mail to joshua@teamchurch.co.
+      from: "CPG Founders Group <notifications@cpgfoundersgroup.com>",
       to: process.env.CONTACT_FORM_NOTIFY_EMAIL!,
       reply_to: fields.email,
       subject: `🔥 Work with Jeff Application: ${fields.firstName} ${fields.lastName} (${fields.business})`,

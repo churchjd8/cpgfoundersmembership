@@ -26,7 +26,7 @@ async function sendNotificationEmail(fields: { firstName: string; email: string 
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      from: "CPG Founders Group <onboarding@resend.dev>",
+      from: "CPG Founders Group <notifications@cpgfoundersgroup.com>",
       to: process.env.CONTACT_FORM_NOTIFY_EMAIL!,
       reply_to: fields.email,
       subject: `Vetted Services provider application: ${fields.firstName}`,

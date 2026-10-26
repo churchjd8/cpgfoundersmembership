@@ -76,7 +76,7 @@ async function fulfillMbaSale(
 
   try {
     await resend.emails.send({
-      from: "CPG Founders Group <onboarding@resend.dev>",
+      from: "CPG Founders Group <notifications@cpgfoundersgroup.com>",
       to: process.env.STRIPE_FAILURE_NOTIFY_EMAIL!,
       subject: problems.length
         ? `ACTION NEEDED - MBA for CPG sale - ${name || email}`
@@ -146,7 +146,7 @@ export async function POST(request: Request) {
 
     try {
       await resend.emails.send({
-        from: "CPG Founders Group <onboarding@resend.dev>",
+        from: "CPG Founders Group <notifications@cpgfoundersgroup.com>",
         to: process.env.STRIPE_FAILURE_NOTIFY_EMAIL!,
         subject: `Failed Payment - ${customerName} (${amount})`,
         html: `

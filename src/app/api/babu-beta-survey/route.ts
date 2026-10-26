@@ -201,7 +201,7 @@ export async function POST(request: Request) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        from: "CPG Founders Group <onboarding@resend.dev>",
+        from: "CPG Founders Group <notifications@cpgfoundersgroup.com>",
         to: process.env.CONTACT_FORM_NOTIFY_EMAIL!,
         ...(data.email ? { reply_to: data.email } : {}),
         subject,

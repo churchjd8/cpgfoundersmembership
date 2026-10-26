@@ -96,7 +96,7 @@ export async function POST(request: Request) {
       uploadDocxToDropbox(docxBuffer, destPath),
       sendRecapEmail({
         to: process.env.JEFF_RECAP_RECIPIENT ?? "jeff@cpgfoundersgroup.com",
-        from: process.env.RECAP_FROM_EMAIL ?? "CPG Founders Group <onboarding@resend.dev>",
+        from: process.env.RECAP_FROM_EMAIL ?? "CPG Founders Group <notifications@cpgfoundersgroup.com>",
         subject: recap.subject,
         html: recapToHtml(recap, meeting),
         docx: docxBuffer,
