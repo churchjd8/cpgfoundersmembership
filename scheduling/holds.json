@@ -126,7 +126,8 @@
     "2026-11-03T09:00:00-08:00": {
       "event_id": "sjrfhmn2c81tlt4kqqq5oon9cc",
       "month": "November",
-      "status": "hold"
+      "status": "booked",
+      "note": "Tighties / Krystal Gillis, converted 2026-10-27"
     },
     "2026-11-03T12:00:00-08:00": {
       "event_id": "r1vjgacq5skmaq9ppba7s2gipc",
