@@ -5,7 +5,7 @@ const VIP_DAY_FORM_ID = "2149550479";
 // The ?interest= values from /apply, as labels for the email and Kajabi custom_8.
 const INTEREST_LABELS: Record<string, string> = {
   private: "Private Advisory ($1,997/mo)",
-  vip: "VIP Advisory ($4,990/mo)",
+  vip: "VIP Advisory ($4,997/mo)",
   session: "Strategy Session ($997)",
   unsure: "Not sure, help me choose",
 };

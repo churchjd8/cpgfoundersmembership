@@ -17,7 +17,7 @@ const revenueStages = [
 // Matches the ?interest= values the /work-with-jeff buttons link with.
 const interests = [
   { value: "private", label: "Private Advisory ($1,997/mo, 3-month minimum)" },
-  { value: "vip", label: "VIP Advisory ($4,990/mo, 3-month minimum)" },
+  { value: "vip", label: "VIP Advisory ($4,997/mo, 3-month minimum)" },
   { value: "session", label: "A one-time Strategy Session ($997)" },
   { value: "unsure", label: "Not sure yet, help me choose" },
 ];

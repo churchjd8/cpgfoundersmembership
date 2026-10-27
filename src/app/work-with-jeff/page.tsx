@@ -97,7 +97,7 @@ const advisory = [
   {
     key: "vip",
     name: "VIP Advisory",
-    price: "$4,990",
+    price: "$4,997",
     blurb: "Jeff close, for founders in the middle of a raise, a reset, or a big retail push.",
     flagship: true,
     points: [
@@ -124,7 +124,7 @@ const advisoryIncludes = [
 ];
 
 const comparison: { label: string; s: string | boolean; p: string | boolean; v: string | boolean }[] = [
-  { label: "Investment", s: `${session} one time`, p: "$1,997/mo", v: "$4,990/mo" },
+  { label: "Investment", s: `${session} one time`, p: "$1,997/mo", v: "$4,997/mo" },
   { label: "Commitment", s: "None", p: "3-month minimum", v: "3-month minimum" },
   { label: "How to start", s: "Buy now", p: "Apply", v: "Apply" },
   { label: "Kickoff", s: "90-min session", p: "90-min session", v: "Half-day deep dive" },
