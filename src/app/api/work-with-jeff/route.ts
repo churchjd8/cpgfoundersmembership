@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 
 const VIP_DAY_FORM_ID = "2149550479";
 
-// The ?interest= values from /apply. Email only: the Kajabi form has no field for it.
+// The ?interest= values from /apply, as labels for the email and Kajabi custom_8.
 const INTEREST_LABELS: Record<string, string> = {
   private: "Private Advisory ($2k/mo)",
   vip: "VIP Advisory ($5k/mo)",
@@ -108,6 +108,7 @@ export async function POST(request: Request) {
     //   custom_5  → Biggest challenge
     //   custom_6  → Breakthrough in 90 days
     //   custom_7  → How did you hear about Jeff
+    //   custom_8  → What are you interested in? (text field, gets the label)
     const formRes = await fetch(
       `https://api.kajabi.com/v1/forms/${VIP_DAY_FORM_ID}/submit`,
       {
@@ -126,6 +127,7 @@ export async function POST(request: Request) {
               custom_5: challenge,
               custom_6: breakthrough,
               custom_7: referral || "",
+              custom_8: INTEREST_LABELS[interest] || "",
             },
           },
         }),
