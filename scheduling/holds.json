@@ -182,7 +182,8 @@
     "2026-11-12T10:00:00-08:00": {
       "event_id": "6gauoj9ii3eub89ov3e6mkefp4",
       "month": "November",
-      "status": "hold"
+      "status": "booked",
+      "note": "Shires / Joshua Velasquez + ashok@eatshires.com (guest), converted 2026-10-27"
     },
     "2026-11-12T12:00:00-08:00": {
       "event_id": "1g81it8qqbf6lbkhtvtpsivse0",
