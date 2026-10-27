@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 
 const VIP_DAY_FORM_ID = "2149550479";
 
-// The ?interest= values from /apply, as labels for the email and Kajabi custom_8.
+// The ?interest= values from /apply, as labels for the email and Kajabi custom_20.
 const INTEREST_LABELS: Record<string, string> = {
   private: "Private Advisory ($1,997/mo)",
   vip: "VIP Advisory ($4,997/mo)",
@@ -98,17 +98,18 @@ export async function POST(request: Request) {
 
     // Submit through the Kajabi "VIP Day Application" form.
     // Kajabi handles contact creation, tagging, and automations.
-    // Field mapping (matches form field order in Kajabi):
+    // Field mapping. custom_N are Kajabi's site-wide custom field handles, not
+    // positions on this form (GET /v1/custom_fields lists them):
     //   name      → First Name
     //   email     → Email
     //   custom_1  → Last Name
     //   custom_2  → Business Name
-    //   custom_3  → Business website (if applicable)
     //   custom_4  → Revenue (radio buttons)
-    //   custom_5  → Biggest challenge
-    //   custom_6  → Breakthrough in 90 days
-    //   custom_7  → How did you hear about Jeff
-    //   custom_8  → What are you interested in? (text field, gets the label)
+    //   custom_6  → Business website (if applicable)
+    //   custom_16 → How did you hear about Jeff?
+    //   custom_17 → What's the biggest thing you need support on right now?
+    //   custom_18 → What outcome would make this a complete win?
+    //   custom_20 → What are you interested in? (text field, gets the label)
     const formRes = await fetch(
       `https://api.kajabi.com/v1/forms/${VIP_DAY_FORM_ID}/submit`,
       {
@@ -122,12 +123,12 @@ export async function POST(request: Request) {
               email,
               custom_1: lastName,
               custom_2: business,
-              custom_3: website || "",
               custom_4: revenue,
-              custom_5: challenge,
-              custom_6: breakthrough,
-              custom_7: referral || "",
-              custom_8: INTEREST_LABELS[interest] || "",
+              custom_6: website || "",
+              custom_16: referral || "",
+              custom_17: challenge,
+              custom_18: breakthrough,
+              custom_20: INTEREST_LABELS[interest] || "",
             },
           },
         }),

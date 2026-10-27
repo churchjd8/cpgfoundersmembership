@@ -86,16 +86,17 @@ export async function POST(request: Request) {
 
     // Submit through the Kajabi "90-Day Breakthrough Application" form.
     // Kajabi handles contact creation, tagging, and automations.
-    // Field mapping (matches form field order in Kajabi):
+    // Field mapping. custom_N are Kajabi's site-wide custom field handles, not
+    // positions on this form (GET /v1/custom_fields lists them):
     //   name      → First Name
     //   email     → Email
     //   custom_1  → Last Name
     //   custom_2  → Business Name
-    //   custom_3  → Business website (if applicable)
     //   custom_4  → Revenue (radio buttons)
-    //   custom_5  → Biggest challenge
-    //   custom_6  → Breakthrough in 90 days
-    //   custom_7  → How did you hear about Jeff
+    //   custom_6  → Business website (if applicable)
+    //   custom_14 → Biggest challenge
+    //   custom_15 → Breakthrough in 90 days
+    //   custom_16 → How did you hear about Jeff
     const formRes = await fetch(
       `https://api.kajabi.com/v1/forms/${BREAKTHROUGH_FORM_ID}/submit`,
       {
@@ -109,11 +110,11 @@ export async function POST(request: Request) {
               email,
               custom_1: lastName,
               custom_2: business,
-              custom_3: website || "",
               custom_4: revenue,
-              custom_5: challenge,
-              custom_6: breakthrough,
-              custom_7: referral || "",
+              custom_6: website || "",
+              custom_14: challenge,
+              custom_15: breakthrough,
+              custom_16: referral || "",
             },
           },
         }),
