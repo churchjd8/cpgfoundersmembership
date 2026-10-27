@@ -112,6 +112,101 @@
       "month": "October",
       "status": "booked",
       "note": "Grounded / Bryn Ferris + gabriel@groundedshakes.com (guest), converted 2026-09-30; moved 2026-10-12 per Jeff from Mon 10/12 8am to Thu 10/15 8am PT (same event_id)"
+    },
+    "2026-10-30T11:00:00-07:00": {
+      "event_id": "qbjitn38kuuqai0cnbsi617bbk",
+      "month": "November",
+      "status": "hold"
+    },
+    "2026-11-02T14:00:00-08:00": {
+      "event_id": "i7uod3s4484gg4rrkdje2s79qk",
+      "month": "November",
+      "status": "hold"
+    },
+    "2026-11-03T09:00:00-08:00": {
+      "event_id": "sjrfhmn2c81tlt4kqqq5oon9cc",
+      "month": "November",
+      "status": "hold"
+    },
+    "2026-11-03T12:00:00-08:00": {
+      "event_id": "r1vjgacq5skmaq9ppba7s2gipc",
+      "month": "November",
+      "status": "hold"
+    },
+    "2026-11-05T10:00:00-08:00": {
+      "event_id": "tq3oioon155ph45t3v11cab8tk",
+      "month": "November",
+      "status": "hold"
+    },
+    "2026-11-05T12:00:00-08:00": {
+      "event_id": "bn2ic0hslnr39ei29ct4eavs38",
+      "month": "November",
+      "status": "hold"
+    },
+    "2026-11-05T14:00:00-08:00": {
+      "event_id": "c5d8cgpb7aplcf0q8822bu6eq4",
+      "month": "November",
+      "status": "hold"
+    },
+    "2026-11-06T10:00:00-08:00": {
+      "event_id": "ugcafsoodd5dnrdt5gg5d80hfo",
+      "month": "November",
+      "status": "hold"
+    },
+    "2026-11-06T12:00:00-08:00": {
+      "event_id": "5s2qdd7o0jr2too98buvtv79ks",
+      "month": "November",
+      "status": "hold"
+    },
+    "2026-11-06T14:00:00-08:00": {
+      "event_id": "3knu2fvglah7lak5v8t3d7d770",
+      "month": "November",
+      "status": "hold"
+    },
+    "2026-11-09T14:00:00-08:00": {
+      "event_id": "e8jrnrlbaa048439avi1ctk9n0",
+      "month": "November",
+      "status": "hold"
+    },
+    "2026-11-10T09:00:00-08:00": {
+      "event_id": "kinsgr8vqls2k98ef7hoemfsnc",
+      "month": "November",
+      "status": "hold"
+    },
+    "2026-11-10T12:00:00-08:00": {
+      "event_id": "6pckoqkeuu7bo34et1m90mbfns",
+      "month": "November",
+      "status": "hold"
+    },
+    "2026-11-12T10:00:00-08:00": {
+      "event_id": "6gauoj9ii3eub89ov3e6mkefp4",
+      "month": "November",
+      "status": "hold"
+    },
+    "2026-11-12T12:00:00-08:00": {
+      "event_id": "1g81it8qqbf6lbkhtvtpsivse0",
+      "month": "November",
+      "status": "hold"
+    },
+    "2026-11-12T14:00:00-08:00": {
+      "event_id": "ett5gebcepmtl45grj0vonuaac",
+      "month": "November",
+      "status": "hold"
+    },
+    "2026-11-13T10:00:00-08:00": {
+      "event_id": "4otpa8ivrrpm8goo86oinhat20",
+      "month": "November",
+      "status": "hold"
+    },
+    "2026-11-13T12:00:00-08:00": {
+      "event_id": "r5dvmmrbdkr50q3t4bkd8n6tfk",
+      "month": "November",
+      "status": "hold"
+    },
+    "2026-11-13T14:00:00-08:00": {
+      "event_id": "i1s69k9ribj0kmhg1rhd32pnb0",
+      "month": "November",
+      "status": "hold"
     }
   }
 }

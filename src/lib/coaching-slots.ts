@@ -15,11 +15,17 @@
 // line. Calls run 1 hour; Jeff is fine going back-to-back. An empty `slots`
 // array just shows "no times available yet" on that month's page.
 //
-// DAYLIGHT SAVING: July–Oct are PDT (UTC-07:00). PST (-08:00) begins Nov 1, 2026
-// — if you add November+ dates, flag it and we'll switch the offset.
+// DAYLIGHT SAVING: the offset is picked per slot date. PDT (-07:00) runs until
+// Nov 1, 2026; PST (-08:00) runs Nov 1, 2026 until Mar 14, 2027. Extend
+// pacificOffset() before adding slots past that date.
 
-const PACIFIC_OFFSET = "-07:00"; // PDT
 const CALL_MINUTES = 60;
+
+function pacificOffset(date: string): string {
+  if (date < "2026-11-01") return "-07:00"; // PDT
+  if (date < "2027-03-14") return "-08:00"; // PST
+  throw new Error(`coaching-slots: no Pacific offset defined for ${date}`);
+}
 
 export type SlotInput = {
   /** Pacific calendar date, YYYY-MM-DD */
@@ -144,6 +150,35 @@ export const SESSION_MONTHS: SessionMonth[] = [
       { date: "2026-10-14", time: "13:30" }, // Wed 1:30 PM
     ],
   },
+  {
+    key: "november",
+    label: "November",
+    // Source: Jeff's "coaching dates.xlsx" email, Oct 27 2026. He included
+    // Fri 10/30 in the drop; it lives under the November link so there's one
+    // link to send. Holds for every block are on the CPG Founders Membership
+    // calendar (scheduling/holds.json).
+    slots: [
+      { date: "2026-10-30", time: "11:00" }, // Fri 11:00 AM (PDT)
+      { date: "2026-11-02", time: "14:00" }, // Mon 2:00 PM
+      { date: "2026-11-03", time: "09:00" }, // Tue 9:00 AM
+      { date: "2026-11-03", time: "12:00" }, // Tue 12:00 PM
+      { date: "2026-11-05", time: "10:00" }, // Thu 10:00 AM
+      { date: "2026-11-05", time: "12:00" }, // Thu 12:00 PM
+      { date: "2026-11-05", time: "14:00" }, // Thu 2:00 PM
+      { date: "2026-11-06", time: "10:00" }, // Fri 10:00 AM
+      { date: "2026-11-06", time: "12:00" }, // Fri 12:00 PM
+      { date: "2026-11-06", time: "14:00" }, // Fri 2:00 PM
+      { date: "2026-11-09", time: "14:00" }, // Mon 2:00 PM
+      { date: "2026-11-10", time: "09:00" }, // Tue 9:00 AM
+      { date: "2026-11-10", time: "12:00" }, // Tue 12:00 PM
+      { date: "2026-11-12", time: "10:00" }, // Thu 10:00 AM
+      { date: "2026-11-12", time: "12:00" }, // Thu 12:00 PM
+      { date: "2026-11-12", time: "14:00" }, // Thu 2:00 PM
+      { date: "2026-11-13", time: "10:00" }, // Fri 10:00 AM
+      { date: "2026-11-13", time: "12:00" }, // Fri 12:00 PM
+      { date: "2026-11-13", time: "14:00" }, // Fri 2:00 PM
+    ],
+  },
 ];
 
 export type Slot = {
@@ -158,7 +193,7 @@ export type Slot = {
 function toSlots(inputs: SlotInput[]): Slot[] {
   return inputs
     .map((s) => {
-      const startIso = `${s.date}T${s.time}:00${PACIFIC_OFFSET}`;
+      const startIso = `${s.date}T${s.time}:00${pacificOffset(s.date)}`;
       return { id: startIso, startIso, durationMinutes: CALL_MINUTES };
     })
     .sort((a, b) => a.startIso.localeCompare(b.startIso));
