@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
-import { useRouter } from "next/navigation";
+import { Suspense, useState, type FormEvent } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 
 const revenueStages = [
@@ -14,9 +14,30 @@ const revenueStages = [
   "$10M+",
 ];
 
+// Matches the ?interest= values the /work-with-jeff buttons link with.
+const interests = [
+  { value: "private", label: "Private Advisory ($2,000/mo, 3-month minimum)" },
+  { value: "vip", label: "VIP Advisory ($5,000/mo, 3-month minimum)" },
+  { value: "session", label: "A one-time Strategy Session ($997)" },
+  { value: "unsure", label: "Not sure yet, help me choose" },
+];
+
+// useSearchParams needs a Suspense boundary for the page to prerender.
 export default function WorkWithJeffApplyPage() {
+  return (
+    <Suspense>
+      <ApplyForm />
+    </Suspense>
+  );
+}
+
+function ApplyForm() {
   const router = useRouter();
+  const preset = useSearchParams().get("interest");
   const [status, setStatus] = useState<"idle" | "loading" | "error">("idle");
+  const [interest, setInterest] = useState(
+    interests.some((i) => i.value === preset) ? preset! : "",
+  );
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -33,7 +54,7 @@ export default function WorkWithJeffApplyPage() {
       });
 
       if (res.ok) {
-        router.push("/apply/thank-you");
+        router.push(`/apply/thank-you${interest ? `?interest=${interest}` : ""}`);
       } else {
         setStatus("error");
       }
@@ -60,8 +81,13 @@ export default function WorkWithJeffApplyPage() {
             </h1>
             <p className="mt-6 text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
               Bring Jeff Church&rsquo;s experience and strategy into your business in a 1:1 way.
-              Tell us where you are and what you&rsquo;re facing, and we&rsquo;ll get back to you
-              within 2 business days with next steps.
+              Tell us where you are and what you&rsquo;re facing. As soon as you submit, you can
+              book a short intro call with our team to make sure it&rsquo;s a fit. Every option
+              and price is on the{" "}
+              <Link href="/work-with-jeff" className="text-gold font-semibold hover:underline">
+                Work with Jeff
+              </Link>{" "}
+              page.
             </p>
             <p className="mt-6 text-base text-white/80 max-w-2xl mx-auto leading-relaxed">
               Jeff has room for <strong className="text-white">1-2 more founders</strong> right
@@ -149,6 +175,30 @@ export default function WorkWithJeffApplyPage() {
             <div>
               <fieldset>
                 <legend className="block text-sm font-medium mb-2">
+                  What are you interested in? <span className="text-red-500">*</span>
+                </legend>
+                <div className="space-y-2">
+                  {interests.map((i) => (
+                    <label key={i.value} className="flex items-center gap-3 cursor-pointer">
+                      <input
+                        type="radio"
+                        name="interest"
+                        value={i.value}
+                        required
+                        checked={interest === i.value}
+                        onChange={() => setInterest(i.value)}
+                        className="h-4 w-4 text-accent border-border focus:ring-accent"
+                      />
+                      <span className="text-sm">{i.label}</span>
+                    </label>
+                  ))}
+                </div>
+              </fieldset>
+            </div>
+
+            <div>
+              <fieldset>
+                <legend className="block text-sm font-medium mb-2">
                   What is your revenue (Trailing Twelve Months or expected this year)?{" "}
                   <span className="text-red-500">*</span>
                 </legend>
@@ -218,10 +268,10 @@ export default function WorkWithJeffApplyPage() {
                 disabled={status === "loading"}
                 className="w-full px-6 py-3 bg-accent hover:bg-accent-dark text-white font-semibold rounded-lg transition-colors disabled:opacity-50 text-lg"
               >
-                {status === "loading" ? "Submitting..." : "Submit application"}
+                {status === "loading" ? "Submitting..." : "Submit and book my call"}
               </button>
               <p className="mt-3 text-xs text-muted text-center">
-                We&rsquo;ll review your application and get back to you within 2 business days.
+                Next you&rsquo;ll pick a time for a short intro call.
               </p>
             </div>
 

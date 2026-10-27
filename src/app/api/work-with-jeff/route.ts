@@ -2,6 +2,14 @@ import { NextResponse } from "next/server";
 
 const VIP_DAY_FORM_ID = "2149550479";
 
+// The ?interest= values from /apply. Email only: the Kajabi form has no field for it.
+const INTEREST_LABELS: Record<string, string> = {
+  private: "Private Advisory ($2k/mo)",
+  vip: "VIP Advisory ($5k/mo)",
+  session: "Strategy Session ($997)",
+  unsure: "Not sure, help me choose",
+};
+
 async function getKajabiToken() {
   const res = await fetch("https://api.kajabi.com/v1/oauth/token", {
     method: "POST",
@@ -28,6 +36,7 @@ async function sendNotificationEmail(fields: {
   challenge: string;
   breakthrough: string;
   referral?: string;
+  interest?: string;
 }) {
   const res = await fetch("https://api.resend.com/emails", {
     method: "POST",
@@ -41,13 +50,14 @@ async function sendNotificationEmail(fields: {
       from: "CPG Founders Group <notifications@cpgfoundersgroup.com>",
       to: process.env.CONTACT_FORM_NOTIFY_EMAIL!,
       reply_to: fields.email,
-      subject: `🔥 Work with Jeff Application: ${fields.firstName} ${fields.lastName} (${fields.business})`,
+      subject: `🔥 Work with Jeff Application: ${fields.firstName} ${fields.lastName} (${fields.business})${fields.interest ? ` - ${INTEREST_LABELS[fields.interest] || fields.interest}` : ""}`,
       html: `
         <h2>New Work with Jeff Application</h2>
         <p><strong>Name:</strong> ${fields.firstName} ${fields.lastName}</p>
         <p><strong>Email:</strong> ${fields.email}</p>
         <p><strong>Business:</strong> ${fields.business}</p>
         ${fields.website ? `<p><strong>Website:</strong> ${fields.website}</p>` : ""}
+        <p><strong>Interested in:</strong> ${INTEREST_LABELS[fields.interest || ""] || "Not given"}</p>
         <p><strong>Revenue:</strong> ${fields.revenue}</p>
         <hr>
         <p><strong>Biggest challenge right now:</strong></p>
@@ -57,7 +67,7 @@ async function sendNotificationEmail(fields: {
         <p>${fields.breakthrough.replace(/\n/g, "<br>")}</p>
         ${fields.referral ? `<hr><p><strong>How they heard about Jeff:</strong> ${fields.referral}</p>` : ""}
         <hr>
-        <p style="color:#999;font-size:12px;">Submitted from cpgfoundersgroup.com/work-with-jeff</p>
+        <p style="color:#999;font-size:12px;">Submitted from cpgfoundersgroup.com/apply. They were sent straight to the intro call booking.</p>
       `,
     }),
   });
@@ -70,7 +80,7 @@ async function sendNotificationEmail(fields: {
 
 export async function POST(request: Request) {
   try {
-    const { firstName, lastName, email, business, website, revenue, challenge, breakthrough, referral } =
+    const { firstName, lastName, email, business, website, revenue, challenge, breakthrough, referral, interest } =
       await request.json();
 
     if (!firstName || !lastName || !email || !business || !revenue || !challenge || !breakthrough) {
@@ -138,6 +148,7 @@ export async function POST(request: Request) {
       challenge,
       breakthrough,
       referral,
+      interest,
     });
 
     return NextResponse.json({ success: true });
