@@ -59,6 +59,26 @@ function BabuIcon() {
   );
 }
 
+function PrivateIcon() {
+  // A compass: Jeff steering the plan month to month.
+  return (
+    <svg {...iconProps}>
+      <circle cx="12" cy="12" r="9" />
+      <path d="m15.5 8.5-2 5-5 2 2-5 5-2Z" />
+    </svg>
+  );
+}
+
+function VipIcon() {
+  // A gem: the VIP tier.
+  return (
+    <svg {...iconProps}>
+      <path d="M6.5 4.5h11l3.5 5-9 10-9-10 3.5-5Z" />
+      <path d="M3 9.5h18M9.5 4.5 8 9.5l4 10 4-10-1.5-5" />
+    </svg>
+  );
+}
+
 function MbaIcon() {
   // A graduation cap: the MBA for CPG.
   return (
@@ -126,6 +146,7 @@ const sessionIncludes = [
 const advisory = [
   {
     key: "private",
+    Icon: PrivateIcon,
     name: "Private Advisory",
     price: "$1,997",
     blurb: "Jeff in your corner every month while you execute the plan.",
@@ -144,6 +165,7 @@ const advisory = [
   },
   {
     key: "vip",
+    Icon: VipIcon,
     name: "VIP Advisory",
     price: "$4,997",
     blurb: "Jeff close, for founders in the middle of a raise, a reset, or a big retail push.",
@@ -287,10 +309,12 @@ export default function WorkWithJeffPage() {
           <div className="mt-12 grid md:grid-cols-3 gap-6">
             {selfServe.map((tier) => (
               <div key={tier.name} className="flex flex-col rounded-2xl border border-border bg-card p-8">
-                <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-xl bg-accent-light text-accent-dark">
-                  <tier.Icon />
+                <div className="flex items-center gap-3">
+                  <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-xl bg-accent-light text-accent-dark">
+                    <tier.Icon />
+                  </div>
+                  <h3 className="text-2xl font-bold tracking-tight">{tier.name}</h3>
                 </div>
-                <h3 className="text-xl font-bold">{tier.name}</h3>
                 <p className="mt-3 flex items-baseline gap-1">
                   {"prefix" in tier && (
                     <span className="mr-1 text-sm text-muted">{tier.prefix}</span>
@@ -450,7 +474,12 @@ export default function WorkWithJeffPage() {
                   tier.flagship ? "border-accent bg-card-flagship shadow-sm" : "border-border bg-card"
                 }`}
               >
-                <h3 className="text-2xl font-bold tracking-tight">{tier.name}</h3>
+                <div className="flex items-center gap-3">
+                  <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-xl bg-accent-light text-accent-dark">
+                    <tier.Icon />
+                  </div>
+                  <h3 className="text-2xl font-bold tracking-tight">{tier.name}</h3>
+                </div>
                 <p className="mt-4 flex items-baseline gap-2">
                   <span className="text-4xl font-bold">{tier.price}</span>
                   <span className="text-muted">/month</span>
@@ -493,7 +522,7 @@ export default function WorkWithJeffPage() {
               ))}
             </ul>
             <p className="mt-6 text-sm text-muted leading-relaxed">
-              <strong className="text-foreground">The guarantee:</strong> show up fully, work the
+              <strong className="text-foreground">The guarantee:</strong>{" "}show up fully, work the
               strategy, and if you don&rsquo;t see a tangible return in three months, Jeff keeps
               working with you for free until you do or refunds you 100%.
             </p>
