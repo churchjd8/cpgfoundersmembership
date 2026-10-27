@@ -136,7 +136,8 @@
     "2026-11-05T10:00:00-08:00": {
       "event_id": "tq3oioon155ph45t3v11cab8tk",
       "month": "November",
-      "status": "hold"
+      "status": "booked",
+      "note": "BerriPro / Jerome Tse, converted 2026-10-27"
     },
     "2026-11-05T12:00:00-08:00": {
       "event_id": "bn2ic0hslnr39ei29ct4eavs38",
