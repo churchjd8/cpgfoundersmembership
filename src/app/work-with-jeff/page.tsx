@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { MBA_LIST_PRICE_USD, MBA_PRICE_USD } from "@/lib/mba-offer";
 import {
@@ -26,9 +27,53 @@ const FOUNDERS_GROUP_URL = "https://chat.whatsapp.com/EclqcEFTX2yAeBmwsq88tq";
 
 const session = `$${STRATEGY_SESSION_PRICE_USD.toLocaleString()}`;
 
+// Line icons for the three self-serve cards, drawn in the accent color.
+const iconProps = {
+  className: "h-7 w-7",
+  fill: "none",
+  viewBox: "0 0 24 24",
+  stroke: "currentColor",
+  strokeWidth: 1.75,
+  strokeLinecap: "round" as const,
+  strokeLinejoin: "round" as const,
+  "aria-hidden": true,
+};
+
+function FreeIcon() {
+  // An open book: the free library and blog.
+  return (
+    <svg {...iconProps}>
+      <path d="M12 6.5C10.3 5.2 7.9 4.5 4 4.5v13c3.9 0 6.3.7 8 2 1.7-1.3 4.1-2 8-2v-13c-3.9 0-6.3.7-8 2Z" />
+      <path d="M12 6.5v13" />
+    </svg>
+  );
+}
+
+function BabuIcon() {
+  // A chat bubble mid-reply: the AI advisor.
+  return (
+    <svg {...iconProps}>
+      <path d="M4 5.5h16v10H9l-5 4v-14Z" />
+      <path d="M8.5 10.5h.01M12 10.5h.01M15.5 10.5h.01" strokeWidth={2.5} />
+    </svg>
+  );
+}
+
+function MbaIcon() {
+  // A graduation cap: the MBA for CPG.
+  return (
+    <svg {...iconProps}>
+      <path d="M2.5 9 12 4.5 21.5 9 12 13.5 2.5 9Z" />
+      <path d="M6.5 11v4.5c1.5 1.3 3.4 2 5.5 2s4-.7 5.5-2V11" />
+      <path d="M21.5 9v5" />
+    </svg>
+  );
+}
+
 const selfServe = [
   {
     name: "Free",
+    Icon: FreeIcon,
     price: "$0",
     unit: "",
     blurb: "Start learning from Jeff today.",
@@ -38,6 +83,7 @@ const selfServe = [
   },
   {
     name: "Babu AI",
+    Icon: BabuIcon,
     prefix: "Starting at",
     price: "$29",
     unit: "/mo",
@@ -47,6 +93,7 @@ const selfServe = [
   },
   {
     name: "MBA for CPG",
+    Icon: MbaIcon,
     price: `$${MBA_PRICE_USD}`,
     listPrice: `$${MBA_LIST_PRICE_USD}`,
     unit: " one time",
@@ -72,6 +119,7 @@ const sessionIncludes = [
   {
     title: "MBA for CPG included ($997 value)",
     body: "Lifetime access to the full course, so you can keep building on the session.",
+    link: { label: "See what's in the MBA", href: "/mba-for-cpg" },
   },
 ];
 
@@ -133,7 +181,7 @@ const comparison: { label: string; s: string | boolean; p: string | boolean; v: 
   { label: "MBA for CPG", s: true, p: true, v: true },
   { label: "Babu AI Pro ($200/mo value)", s: false, p: true, v: true },
   { label: "Warm industry intros", s: false, p: true, v: true },
-  { label: "ROI guarantee", s: false, p: true, v: true },
+  { label: "Guarantee", s: "Full refund if it\u2019s not a fit", p: "ROI guarantee", v: "ROI guarantee" },
 ];
 
 const credentials = [
@@ -185,8 +233,8 @@ export default function WorkWithJeffPage() {
     <>
       {/* ========== HERO ========== */}
       <section className="relative bg-foreground text-white overflow-hidden">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-28">
-          <div className="max-w-3xl">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-28 grid lg:grid-cols-2 gap-12 items-center">
+          <div>
             <span className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider bg-accent text-white rounded-full mb-6">
               Work with Jeff
             </span>
@@ -214,6 +262,16 @@ export default function WorkWithJeffPage() {
               </a>
             </div>
           </div>
+          <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
+            <Image
+              src="/images/jeff-teaching.webp"
+              alt="Jeff Church at the whiteboard, mapping out CPG strategy"
+              fill
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              className="object-cover"
+              priority
+            />
+          </div>
         </div>
       </section>
 
@@ -229,6 +287,9 @@ export default function WorkWithJeffPage() {
           <div className="mt-12 grid md:grid-cols-3 gap-6">
             {selfServe.map((tier) => (
               <div key={tier.name} className="flex flex-col rounded-2xl border border-border bg-card p-8">
+                <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-xl bg-accent-light text-accent-dark">
+                  <tier.Icon />
+                </div>
                 <h3 className="text-xl font-bold">{tier.name}</h3>
                 <p className="mt-3 flex items-baseline gap-1">
                   {"prefix" in tier && (
@@ -311,6 +372,28 @@ export default function WorkWithJeffPage() {
                   Pay once. You fill out the intake right after checkout.
                 </p>
               </div>
+              <div className="mt-8 flex gap-3 rounded-xl border border-accent/30 bg-background p-5">
+                <svg
+                  className="h-6 w-6 flex-shrink-0 text-accent"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={1.75}
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M12 3 4.5 6v5.5c0 4.4 3.1 8.2 7.5 9.5 4.4-1.3 7.5-5.1 7.5-9.5V6L12 3Z" />
+                  <path d="m8.8 12 2.2 2.2 4.2-4.4" />
+                </svg>
+                <div>
+                  <p className="font-semibold">The fit guarantee</p>
+                  <p className="mt-1 text-sm text-muted leading-relaxed">
+                    Walk out of your call feeling it wasn&rsquo;t worth it or wasn&rsquo;t the right
+                    fit? Tell us, and Jeff refunds you in full. No hard feelings.
+                  </p>
+                </div>
+              </div>
             </div>
 
             <div className="lg:col-span-3 grid sm:grid-cols-2 gap-5">
@@ -321,6 +404,14 @@ export default function WorkWithJeffPage() {
                     <div>
                       <h3 className="font-bold">{item.title}</h3>
                       <p className="mt-2 text-sm text-muted leading-relaxed">{item.body}</p>
+                      {"link" in item && item.link && (
+                        <Link
+                          href={item.link.href}
+                          className="mt-2 inline-block text-sm font-semibold text-accent hover:underline"
+                        >
+                          {item.link.label} &rarr;
+                        </Link>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -442,7 +533,16 @@ export default function WorkWithJeffPage() {
       {/* ========== WHO ========== */}
       <section className="py-16 md:py-24 bg-foreground text-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
+          <div className="grid lg:grid-cols-[auto_1fr_1fr] gap-12 items-center">
+            <div className="relative mx-auto h-72 w-56 sm:h-80 sm:w-64 rounded-2xl overflow-hidden ring-4 ring-gold/30">
+              <Image
+                src="/images/jeff-headshot.webp"
+                alt="Jeff Church"
+                fill
+                sizes="256px"
+                className="object-cover"
+              />
+            </div>
             <div>
               <h2 className="text-2xl sm:text-3xl font-bold tracking-tight">Who you&rsquo;re working with</h2>
               <p className="mt-6 text-lg text-white/70 leading-relaxed">
