@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { MBA_LIST_PRICE_USD, MBA_PRICE_USD } from "@/lib/mba-offer";
 import {
   STRATEGY_SESSION_CREDIT_DAYS,
   STRATEGY_SESSION_PRICE_USD,
@@ -22,9 +23,6 @@ export const metadata: Metadata = {
 const BABU_URL = "https://www.askbabu.ai";
 const FOUNDERS_GROUP_URL = "https://chat.whatsapp.com/EclqcEFTX2yAeBmwsq88tq";
 
-// The price on the ladder. /mba-for-cpg sells at MBA_PRICE_USD, so these two
-// have to agree before this page goes in the nav.
-const MBA_LADDER_PRICE = "$497";
 
 const session = `$${STRATEGY_SESSION_PRICE_USD.toLocaleString()}`;
 
@@ -48,10 +46,11 @@ const selfServe = [
   },
   {
     name: "MBA for CPG",
-    price: MBA_LADDER_PRICE,
+    price: `$${MBA_PRICE_USD}`,
+    listPrice: `$${MBA_LIST_PRICE_USD}`,
     unit: " one time",
     blurb: "The whole playbook, self-paced.",
-    points: ["8 modules: marketing, sales, manufacturing, team, fundraising", "450+ slides, financial models and templates", "Lifetime access"],
+    points: ["8 modules: marketing, sales, manufacturing, team, fundraising", "450+ slides, financial models and templates", "Lifetime access", "Current founder discount"],
     cta: { label: "Get the MBA", href: "/mba-for-cpg", external: false },
   },
 ];
@@ -70,7 +69,7 @@ const sessionIncludes = [
     body: "You walk out knowing the few things most likely to make or break the business right now, and what to do first.",
   },
   {
-    title: "MBA for CPG included",
+    title: "MBA for CPG included ($997 value)",
     body: "Lifetime access to the full course, so you can keep building on the session.",
   },
 ];
@@ -231,6 +230,9 @@ export default function WorkWithJeffPage() {
               <div key={tier.name} className="flex flex-col rounded-2xl border border-border bg-card p-8">
                 <h3 className="text-xl font-bold">{tier.name}</h3>
                 <p className="mt-3 flex items-baseline gap-1">
+                  {"listPrice" in tier && (
+                    <span className="mr-1 text-lg text-muted line-through">{tier.listPrice}</span>
+                  )}
                   <span className="text-3xl font-bold">{tier.price}</span>
                   <span className="text-muted text-sm">{tier.unit}</span>
                 </p>

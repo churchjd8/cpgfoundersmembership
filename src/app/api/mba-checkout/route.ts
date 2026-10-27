@@ -20,9 +20,9 @@ const SITE_URL =
 // Starts Stripe Checkout for the MBA for CPG. The buy buttons on /mba-for-cpg
 // are plain HTML forms that POST here, so this answers with a redirect to
 // Stripe rather than JSON. Two paths:
-//   - "full": one $997 payment. No payment_method_types, so Stripe shows
+//   - "full": one MBA_PRICE_USD payment. No payment_method_types, so Stripe shows
 //             whatever the account has switched on (card, Apple Pay, Klarna...).
-//   - "plan": 3 monthly payments of $349. Runs as a subscription that the
+//   - "plan": MBA_PLAN monthly payments. Runs as a subscription that the
 //             webhook caps at 3 payments once checkout completes.
 // A "full" checkout from /mba-for-cpg/founder-offer (offer=founder) charges the
 // founder price while that visitor's offer window is open, and the regular

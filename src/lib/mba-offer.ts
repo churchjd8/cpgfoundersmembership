@@ -9,10 +9,14 @@ export const MBA_PRODUCT_KEY = "mba-for-cpg";
 /** Kajabi offer "MBA for CPG" (unlocks the CPG Bootcamp product). */
 export const MBA_KAJABI_OFFER_ID = "2151100632";
 
-export const MBA_PRICE_USD = 997;
+/** List price, shown struck through next to the price buyers actually pay. */
+export const MBA_LIST_PRICE_USD = 997;
+
+/** Current founder discount: what checkout charges. */
+export const MBA_PRICE_USD = 497;
 
 /** Payment plan: billed monthly, stops on its own after the last payment. */
-export const MBA_PLAN = { payments: 3, amountUsd: 349 };
+export const MBA_PLAN = { payments: 3, amountUsd: 179 };
 
 export const MBA_LOGIN_URL = "https://learn.cpgfoundersgroup.com/login";
 

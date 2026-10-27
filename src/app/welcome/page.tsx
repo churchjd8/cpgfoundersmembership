@@ -31,7 +31,7 @@ const paidStuff = [
   {
     emoji: "🎓",
     title: "MBA for CPG",
-    price: "$997, lifetime access",
+    price: "$497 founder price (reg. $997), lifetime access",
     description:
       "8 modules, 450+ slides, the financial models, and the full playbook. Everything you'd get from a $50K business school, built only for CPG founders. Self-paced.",
     href: "/mba-for-cpg",

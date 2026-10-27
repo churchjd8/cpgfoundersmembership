@@ -494,7 +494,7 @@ export default function IntensivePage() {
               <Link href="/mba-for-cpg" className="text-accent font-semibold hover:underline">
                 MBA for CPG
               </Link>{" "}
-              is $997 one time with lifetime access. Eight self-paced modules covering
+              is <span className="line-through">$997</span> $497 one time (current founder discount) with lifetime access. Eight self-paced modules covering
               marketing, sales, manufacturing, team and fundraising, plus the financial models
               and templates. It covers a lot of the same fundamentals without the commitment.
             </p>

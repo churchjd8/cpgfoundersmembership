@@ -11,7 +11,7 @@ import {
   FOUNDER_PRICE_USD,
   readFounderOfferToken,
 } from "@/lib/founder-offer";
-import { MBA_PRICE_USD, STRIPE_PUBLISHABLE_KEY } from "@/lib/mba-offer";
+import { MBA_LIST_PRICE_USD, MBA_PRICE_USD, STRIPE_PUBLISHABLE_KEY } from "@/lib/mba-offer";
 import { CheckoutButton } from "./checkout-button";
 
 export const metadata: Metadata = {
@@ -127,7 +127,7 @@ export default async function FounderOfferPage() {
 
               <div className="mt-8 flex flex-wrap items-end gap-x-8 gap-y-6">
                 <div>
-                  {founder && <p className="text-base text-white/50 line-through">Regular price ${MBA_PRICE_USD}</p>}
+                  <p className="text-base text-white/50 line-through">Regular price ${MBA_LIST_PRICE_USD}</p>
                   <p className="text-5xl font-bold text-gold">${price}</p>
                   <p className="mt-1 text-sm text-white/55">One payment. Lifetime access.</p>
                 </div>
@@ -232,7 +232,7 @@ export default async function FounderOfferPage() {
             <span className="mb-4 inline-block rounded-full bg-accent px-3 py-1 text-xs font-bold uppercase tracking-wider text-white">
               {founder ? "Founder price" : "MBA for CPG"}
             </span>
-            {founder && <p className="text-base text-muted line-through">${MBA_PRICE_USD}</p>}
+            <p className="text-base text-muted line-through">${MBA_LIST_PRICE_USD}</p>
             <p className="text-5xl font-bold">${price}</p>
             <p className="mt-2 text-muted">One-time payment. Lifetime access. No subscription.</p>
             <KlarnaMessaging publishableKey={STRIPE_PUBLISHABLE_KEY} amountUsd={price} centered className="mx-auto mt-3 max-w-md" />

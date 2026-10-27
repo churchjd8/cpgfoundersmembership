@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { KlarnaMessaging } from "@/components/klarna-messaging";
-import { MBA_PRICE_USD, STRIPE_PUBLISHABLE_KEY } from "@/lib/mba-offer";
+import { MBA_LIST_PRICE_USD, MBA_PRICE_USD, STRIPE_PUBLISHABLE_KEY } from "@/lib/mba-offer";
 
 export const metadata: Metadata = {
   title: "MBA for CPG - CPG Founders Group",
   description:
-    "Everything you'd learn in a $50K business school, built specifically for CPG founders. 8 modules, 450+ slides, financial models, and Jeff Church's full playbook. $997, lifetime access.",
+    "Everything you'd learn in a $50K business school, built specifically for CPG founders. 8 modules, 450+ slides, financial models, and Jeff Church's full playbook. $497 founder price (regularly $997), lifetime access.",
 };
 
 const modules = [
@@ -190,8 +190,9 @@ export default function MbaForCpgPage() {
                 Jeff used to build and sell multi-category brands. Self-paced, yours forever.
               </p>
               <p className="mt-4 text-2xl font-bold text-white">
+                <span className="text-lg font-normal text-white/50 line-through">${MBA_LIST_PRICE_USD}</span>{" "}
                 ${MBA_PRICE_USD}{" "}
-                <span className="text-base font-normal text-white/50">one-time, lifetime access</span>
+                <span className="text-base font-normal text-white/50">founder price, one-time, lifetime access</span>
               </p>
               <KlarnaMessaging
                 publishableKey={STRIPE_PUBLISHABLE_KEY}
@@ -281,7 +282,7 @@ export default function MbaForCpgPage() {
               What You Get
             </span>
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
-              Everything included for $997.
+              Everything included for ${MBA_PRICE_USD}.
             </h2>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
@@ -380,7 +381,9 @@ export default function MbaForCpgPage() {
             <span className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider bg-accent text-white rounded-full mb-4">
               MBA for CPG
             </span>
+            <p className="text-base text-muted line-through">${MBA_LIST_PRICE_USD}</p>
             <p className="text-4xl sm:text-5xl font-bold">${MBA_PRICE_USD}</p>
+            <p className="mt-1 text-sm font-semibold text-accent">Current founder discount</p>
             <p className="mt-2 text-muted">One-time payment. Lifetime access. No subscription.</p>
             <KlarnaMessaging
               publishableKey={STRIPE_PUBLISHABLE_KEY}

@@ -10,7 +10,7 @@ import {
   TRAINING_TITLE,
   readFounderOfferToken,
 } from "@/lib/founder-offer";
-import { MBA_PRICE_USD } from "@/lib/mba-offer";
+import { MBA_LIST_PRICE_USD, MBA_PRICE_USD } from "@/lib/mba-offer";
 import { OfferReveal } from "./offer-reveal";
 
 export const metadata: Metadata = {
@@ -73,7 +73,7 @@ export default async function FreeTrainingWatchPage() {
               {offer?.active ? (
                 <div className="mt-8 flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
                   <div>
-                    <p className="text-sm text-muted line-through">Regular price ${MBA_PRICE_USD}</p>
+                    <p className="text-sm text-muted line-through">Regular price ${MBA_LIST_PRICE_USD}</p>
                     <p className="text-5xl font-bold text-accent">${FOUNDER_PRICE_USD}</p>
                     <p className="mt-1 text-sm text-muted">{FOUNDER_GUARANTEE_DAYS}-day money-back guarantee</p>
                   </div>
@@ -83,7 +83,7 @@ export default async function FreeTrainingWatchPage() {
                   </div>
                 </div>
               ) : (
-                <p className="mt-8 text-lg font-semibold">One payment of ${MBA_PRICE_USD}. Lifetime access.</p>
+                <p className="mt-8 text-lg font-semibold"><span className="text-muted font-normal line-through">${MBA_LIST_PRICE_USD}</span> One payment of ${MBA_PRICE_USD}. Lifetime access.</p>
               )}
 
               <div className="mt-8">
