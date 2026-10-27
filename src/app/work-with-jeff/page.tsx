@@ -38,6 +38,7 @@ const selfServe = [
   },
   {
     name: "Babu AI",
+    prefix: "Starting at",
     price: "$29",
     unit: "/mo",
     blurb: "Jeff's 35 years of CPG answers, on call 24/7.",
@@ -78,7 +79,7 @@ const advisory = [
   {
     key: "private",
     name: "Private Advisory",
-    price: "$2,000",
+    price: "$1,997",
     blurb: "Jeff in your corner every month while you execute the plan.",
     flagship: false,
     points: [
@@ -96,7 +97,7 @@ const advisory = [
   {
     key: "vip",
     name: "VIP Advisory",
-    price: "$5,000",
+    price: "$4,990",
     blurb: "Jeff close, for founders in the middle of a raise, a reset, or a big retail push.",
     flagship: true,
     points: [
@@ -114,7 +115,7 @@ const advisory = [
 ];
 
 const advisoryIncludes = [
-  "Babu Pro",
+  "Babu AI Pro subscription ($200/mo value)",
   "MBA for CPG",
   "Warm intros to buyers, brokers, distributors, co-mans and investors",
   "Monthly speaker series",
@@ -123,14 +124,14 @@ const advisoryIncludes = [
 ];
 
 const comparison: { label: string; s: string | boolean; p: string | boolean; v: string | boolean }[] = [
-  { label: "Investment", s: `${session} one time`, p: "$2,000/mo", v: "$5,000/mo" },
+  { label: "Investment", s: `${session} one time`, p: "$1,997/mo", v: "$4,990/mo" },
   { label: "Commitment", s: "None", p: "3-month minimum", v: "3-month minimum" },
   { label: "How to start", s: "Buy now", p: "Apply", v: "Apply" },
   { label: "Kickoff", s: "90-min session", p: "90-min session", v: "Half-day deep dive" },
   { label: "Ongoing 1:1s with Jeff", s: false, p: "Monthly", v: "Bi-weekly" },
   { label: "Email support", s: false, p: true, v: "Priority" },
   { label: "MBA for CPG", s: true, p: true, v: true },
-  { label: "Babu Pro", s: false, p: true, v: true },
+  { label: "Babu AI Pro ($200/mo value)", s: false, p: true, v: true },
   { label: "Warm industry intros", s: false, p: true, v: true },
   { label: "ROI guarantee", s: false, p: true, v: true },
 ];
@@ -230,6 +231,9 @@ export default function WorkWithJeffPage() {
               <div key={tier.name} className="flex flex-col rounded-2xl border border-border bg-card p-8">
                 <h3 className="text-xl font-bold">{tier.name}</h3>
                 <p className="mt-3 flex items-baseline gap-1">
+                  {"prefix" in tier && (
+                    <span className="mr-1 text-sm text-muted">{tier.prefix}</span>
+                  )}
                   {"listPrice" in tier && (
                     <span className="mr-1 text-lg text-muted line-through">{tier.listPrice}</span>
                   )}
