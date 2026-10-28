@@ -169,7 +169,7 @@ function StatusTab({ clients }: { clients: BoardClient[] }) {
   const attention = [...by("past_due"), ...by("not_in_stripe")];
   const paused = by("paused");
   const active = current.length + attention.length;
-  const mrr = current.reduce((sum, c) => sum + c.monthlyAmount, 0);
+  const revenue = [...current, ...attention].reduce((sum, c) => sum + c.monthlyAmount, 0);
   const owed = by("past_due").reduce((sum, c) => sum + c.amountOwed, 0);
 
   return (
@@ -177,18 +177,18 @@ function StatusTab({ clients }: { clients: BoardClient[] }) {
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-5">
         <Stat label="Active clients" value={String(active)} />
         <Stat label="Billing on schedule" value={String(current.length)} />
-        <Stat label="Collecting now" value={`${money(mrr)}/mo`} />
+        <Stat label="Total monthly revenue" value={`${money(revenue)}/mo`} />
         <Stat label="Past due" value={money(owed)} tone={owed ? "text-red-700" : undefined} />
         <Stat label="Paused" value={String(paused.length)} tone={paused.length ? "text-amber-700" : undefined} />
       </div>
       <p className="mt-3 text-xs text-muted">
-        Active = billing on schedule + past due + billed outside Stripe. &ldquo;Collecting now&rdquo; is what the
-        on-schedule clients pay per month. Billing columns are live from Stripe on every page load.
+        Active = billing on schedule + past due + billed outside Stripe. Total monthly revenue is every active
+        client&rsquo;s monthly rate. Billing columns are live from Stripe on every page load.
       </p>
 
-      <StatusTable title="Needs attention" rows={attention} hint="Money owed in Stripe, or a client we can't see in Stripe." />
       <StatusTable title="Billing on schedule" rows={current} />
       <StatusTable title="Paused" rows={paused} hint="Not being charged right now." />
+      <StatusTable title="Needs attention" rows={attention} hint="Money owed in Stripe, or a client we can't see in Stripe." />
       <p className="mt-8 text-sm text-muted">Former clients live on the Past clients tab.</p>
     </div>
   );
