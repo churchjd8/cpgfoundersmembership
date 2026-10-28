@@ -6,9 +6,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --accent: #b45309; --accent-dark: #92400e; --accent-light: #fef3c7;
-    --bg: #fafaf9; --fg: #1c1917; --muted: #78716c; --border: #e7e5e4;
-    --card: #ffffff; --flag: #fffbeb;
+    --accent: #a56a16; --accent-dark: #8a5814; --accent-light: #faf0de; --ridge: #1b3a5f; --gold: #dfa13c; --signal: #2b4cf0;
+    --bg: #f7f5f1; --fg: #0b1a2e; --muted: #5f6b78; --border: #e4e0d9;
+    --card: #ffffff; --flag: #fdf6ea;
   }
   @page { size: Letter; margin: 0; }
   * { box-sizing: border-box; }
@@ -22,11 +22,13 @@
   .eyebrow { font: 600 8pt Inter, sans-serif; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
   .lede { color: var(--muted); font-size: 11pt; margin-bottom: 18px; }
   .foot { position: absolute; bottom: 0.4in; left: 0.75in; right: 0.75in; display: flex; justify-content: space-between; font-size: 7.5pt; color: var(--muted); border-top: 1px solid var(--border); padding-top: 8px; }
-  .foot img { height: 18px; }
+  .brand { display: flex; align-items: center; gap: 8px; font-weight: 700; color: var(--fg); font-size: 9pt; }
+  .brand .mark { height: 18px; width: 27px; }
 
   /* cover */
-  .cover { background: var(--bg); color: var(--fg); border-top: 14px solid var(--accent); display: flex; flex-direction: column; justify-content: space-between; }
-  .cover .logo { height: 110px; align-self: flex-start; }
+  .cover { background: var(--bg); color: var(--fg); border-top: 14px solid var(--fg); display: flex; flex-direction: column; justify-content: space-between; }
+  .cover .brand { font-size: 16pt; gap: 14px; align-self: flex-start; }
+  .cover .brand .mark { height: 46px; width: 69px; }
   .cover h1 { font-size: 40pt; margin-bottom: 18px; }
   .cover .sub { font-size: 13pt; color: var(--muted); max-width: 5.4in; }
   .cover .meta { font-size: 9pt; color: var(--muted); border-top: 1px solid var(--border); padding-top: 14px; }
@@ -54,26 +56,26 @@
   ul { margin: 0 0 10px; padding-left: 18px; }
   li { margin-bottom: 5px; }
   .two { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-  .num-badge { display: inline-flex; width: 22px; height: 22px; border-radius: 50%; background: var(--accent); color: #fff; font-weight: 700; font-size: 9pt; align-items: center; justify-content: center; margin-right: 8px; flex: none; }
+  .num-badge { display: inline-flex; width: 22px; height: 22px; border-radius: 50%; background: var(--fg); color: #fff; font-weight: 700; font-size: 9pt; align-items: center; justify-content: center; margin-right: 8px; flex: none; }
   .row { display: flex; align-items: flex-start; margin-bottom: 10px; }
   .flow { display: grid; grid-template-columns: 1fr; gap: 8px; margin: 10px 0 6px; }
   .flow .step { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 10px 14px; display: grid; grid-template-columns: 1.5in 1fr; gap: 12px; }
-  .flow .step.hot { background: var(--flag); border-color: #fcd34d; }
+  .flow .step.hot { background: var(--flag); border-color: #dfa13c; }
   .flow .k { font-weight: 700; font-family: "Playfair Display", serif; font-size: 11.5pt; }
   .flow .k small { display: block; font-family: Inter, sans-serif; font-weight: 500; font-size: 8pt; color: var(--accent); margin-top: 2px; }
-  .arrow { text-align: center; color: var(--accent); font-size: 10pt; line-height: 1; margin: -2px 0; }
+  .arrow { text-align: center; color: var(--ridge); font-size: 10pt; line-height: 1; margin: -2px 0; }
   .ladder td:first-child { font-weight: 600; }
   .ladder tr.feat td { background: var(--flag); }
-  .pill { display: inline-block; background: var(--accent); color: #fff; border-radius: 999px; padding: 2px 9px; font-size: 7.5pt; font-weight: 600; }
+  .pill { display: inline-block; background: var(--fg); color: #fff; border-radius: 999px; padding: 2px 9px; font-size: 7.5pt; font-weight: 600; }
 </style>
 </head>
 <body>
 
 <!-- 1. Cover -->
 <section class="page cover">
-  <img class="logo" src="logo-stacked.png" alt="CPG Founders Group">
+  <div class="brand"><svg class="mark" viewBox="0 0 48 32" xmlns="http://www.w3.org/2000/svg"><path d="M30 13L41 27H19Z" fill="#1b3a5f"/><path d="M20 7L33 27H7Z" fill="#0b1a2e"/><path d="M10 18L19 27H1Z" fill="#dfa13c"/><line x1="20" y1="1" x2="20" y2="7" stroke="#0b1a2e" stroke-width="1.8" stroke-linecap="round"/><path d="M20.2 1L25.5 3.5L20.2 5.5" fill="#2b4cf0" stroke="#0b1a2e" stroke-width="0.5" stroke-linejoin="round"/></svg>CPG Founders Group</div>
   <div>
-    <div class="peaks"><span style="background:#FBBF24"></span><span style="background:#9A3E12"></span><span style="background:#E08A1E"></span></div>
+    <div class="peaks"><span style="background:#0b1a2e"></span><span style="background:#1b3a5f"></span><span style="background:#dfa13c"></span></div>
     <h1>The Email Engine</h1>
     <p class="sub">What the list is telling us, what's already working, and the rebuild that turns 1,500 founders into steady conversations with Jeff.</p>
   </div>
@@ -99,24 +101,24 @@
     <div class="chart-title">Founders reached per full-list email</div>
     <div class="chart-sub">Recipients on Jeff's broadcast to the whole list, 2026</div>
     <svg viewBox="0 0 640 210" width="100%" height="185" role="img" aria-label="List size grew from 643 in January to 1,545 in October 2026">
-      <g font-family="Inter, sans-serif" font-size="11" fill="#78716c">
-        <line x1="40" y1="170" x2="630" y2="170" stroke="#e7e5e4"/>
-        <line x1="40" y1="110" x2="630" y2="110" stroke="#f0eeec"/>
-        <line x1="40" y1="50" x2="630" y2="50" stroke="#f0eeec"/>
+      <g font-family="Inter, sans-serif" font-size="11" fill="#5f6b78">
+        <line x1="40" y1="170" x2="630" y2="170" stroke="#e4e0d9"/>
+        <line x1="40" y1="110" x2="630" y2="110" stroke="#eeebe6"/>
+        <line x1="40" y1="50" x2="630" y2="50" stroke="#eeebe6"/>
         <text x="34" y="174" text-anchor="end">0</text>
         <text x="34" y="114" text-anchor="end">750</text>
         <text x="34" y="54" text-anchor="end">1,500</text>
       </g>
       <!-- scale: 1,500 = 120px (170 -> 50) ; 0.08 px per contact -->
-      <g fill="#b45309">
-        <path d="M70 170 V122.6 a4 4 0 0 1 4 -4 H128 a4 4 0 0 1 4 4 V170 Z" opacity="0.55"/>
-        <path d="M168 170 V113 a4 4 0 0 1 4 -4 H226 a4 4 0 0 1 4 4 V170 Z" opacity="0.6"/>
-        <path d="M266 170 V112.5 a4 4 0 0 1 4 -4 H324 a4 4 0 0 1 4 4 V170 Z" opacity="0.65"/>
-        <path d="M364 170 V69.5 a4 4 0 0 1 4 -4 H422 a4 4 0 0 1 4 4 V170 Z" opacity="0.8"/>
-        <path d="M462 170 V59.8 a4 4 0 0 1 4 -4 H520 a4 4 0 0 1 4 4 V170 Z" opacity="0.9"/>
-        <path d="M560 170 V50.4 a4 4 0 0 1 4 -4 H618 a4 4 0 0 1 4 4 V170 Z"/>
+      <g fill="#1b3a5f">
+        <path d="M70 170 V122.6 a4 4 0 0 1 4 -4 H128 a4 4 0 0 1 4 4 V170 Z"/>
+        <path d="M168 170 V113 a4 4 0 0 1 4 -4 H226 a4 4 0 0 1 4 4 V170 Z"/>
+        <path d="M266 170 V112.5 a4 4 0 0 1 4 -4 H324 a4 4 0 0 1 4 4 V170 Z"/>
+        <path d="M364 170 V69.5 a4 4 0 0 1 4 -4 H422 a4 4 0 0 1 4 4 V170 Z"/>
+        <path d="M462 170 V59.8 a4 4 0 0 1 4 -4 H520 a4 4 0 0 1 4 4 V170 Z"/>
+        <path fill="#a56a16" d="M560 170 V50.4 a4 4 0 0 1 4 -4 H618 a4 4 0 0 1 4 4 V170 Z"/>
       </g>
-      <g font-family="Inter, sans-serif" font-size="11" fill="#1c1917" font-weight="600" text-anchor="middle">
+      <g font-family="Inter, sans-serif" font-size="11" fill="#0b1a2e" font-weight="600" text-anchor="middle">
         <text x="101" y="112">643</text>
         <text x="199" y="103">763</text>
         <text x="297" y="102">769</text>
@@ -124,7 +126,7 @@
         <text x="493" y="49">1,428</text>
         <text x="591" y="40">1,545</text>
       </g>
-      <g font-family="Inter, sans-serif" font-size="10.5" fill="#78716c" text-anchor="middle">
+      <g font-family="Inter, sans-serif" font-size="10.5" fill="#5f6b78" text-anchor="middle">
         <text x="101" y="188">Jan</text><text x="199" y="188">Feb</text><text x="297" y="188">Apr</text>
         <text x="395" y="188">Jul</text><text x="493" y="188">Sep</text><text x="591" y="188">Oct</text>
         <text x="101" y="202" font-size="8.5">Workshop</text><text x="199" y="202" font-size="8.5">Membership</text><text x="297" y="202" font-size="8.5">Burn Rate</text>
@@ -144,7 +146,7 @@
   </table>
   <p class="note">Open rates are inflated across the industry by Apple Mail's privacy feature, so we treat clicks and replies as the real signal. Even by that stricter measure, Jeff's warm audiences click 5 to 10 times more than a typical list.</p>
 
-  <div class="foot"><img src="logo-horizontal.png" alt=""><span>Email Engine · October 2026</span></div>
+  <div class="foot"><div class="brand"><svg class="mark" viewBox="0 0 48 32" xmlns="http://www.w3.org/2000/svg"><path d="M30 13L41 27H19Z" fill="#1b3a5f"/><path d="M20 7L33 27H7Z" fill="#0b1a2e"/><path d="M10 18L19 27H1Z" fill="#dfa13c"/><line x1="20" y1="1" x2="20" y2="7" stroke="#0b1a2e" stroke-width="1.8" stroke-linecap="round"/><path d="M20.2 1L25.5 3.5L20.2 5.5" fill="#2b4cf0" stroke="#0b1a2e" stroke-width="0.5" stroke-linejoin="round"/></svg>CPG Founders Group</div><span>Email Engine · October 2026</span></div>
 </section>
 
 <!-- 3. What we learned -->
@@ -168,7 +170,7 @@
 
   <div class="callout"><b>Good news:</b> the free-resource delivery is solid. Every kit form tags the founder, sends the kit, and starts the welcome sequence, and every download link works.</div>
 
-  <div class="foot"><img src="logo-horizontal.png" alt=""><span>Email Engine · October 2026</span></div>
+  <div class="foot"><div class="brand"><svg class="mark" viewBox="0 0 48 32" xmlns="http://www.w3.org/2000/svg"><path d="M30 13L41 27H19Z" fill="#1b3a5f"/><path d="M20 7L33 27H7Z" fill="#0b1a2e"/><path d="M10 18L19 27H1Z" fill="#dfa13c"/><line x1="20" y1="1" x2="20" y2="7" stroke="#0b1a2e" stroke-width="1.8" stroke-linecap="round"/><path d="M20.2 1L25.5 3.5L20.2 5.5" fill="#2b4cf0" stroke="#0b1a2e" stroke-width="0.5" stroke-linejoin="round"/></svg>CPG Founders Group</div><span>Email Engine · October 2026</span></div>
 </section>
 
 <!-- 4. The new system -->
@@ -192,7 +194,7 @@
     <div class="card"><div class="chart-title">How we'll know it works</div><p style="font-size:9.5pt;margin:6px 0 0">A weekly scoreboard: new subscribers, replies, Hot List size, Strategy Sessions sold, applications. Every offer link gets tracked so we can see which email sold.</p></div>
   </div>
 
-  <div class="foot"><img src="logo-horizontal.png" alt=""><span>Email Engine · October 2026</span></div>
+  <div class="foot"><div class="brand"><svg class="mark" viewBox="0 0 48 32" xmlns="http://www.w3.org/2000/svg"><path d="M30 13L41 27H19Z" fill="#1b3a5f"/><path d="M20 7L33 27H7Z" fill="#0b1a2e"/><path d="M10 18L19 27H1Z" fill="#dfa13c"/><line x1="20" y1="1" x2="20" y2="7" stroke="#0b1a2e" stroke-width="1.8" stroke-linecap="round"/><path d="M20.2 1L25.5 3.5L20.2 5.5" fill="#2b4cf0" stroke="#0b1a2e" stroke-width="0.5" stroke-linejoin="round"/></svg>CPG Founders Group</div><span>Email Engine · October 2026</span></div>
 </section>
 
 <!-- 5. Offer + next steps -->
@@ -219,7 +221,7 @@
 
   <div class="callout"><b>What I need from you:</b> a read of the Welcome v3 emails (mostly your stories, tightened), and a few minutes a week to answer one founder question for the Mailbag.</div>
 
-  <div class="foot"><img src="logo-horizontal.png" alt=""><span>Email Engine · October 2026</span></div>
+  <div class="foot"><div class="brand"><svg class="mark" viewBox="0 0 48 32" xmlns="http://www.w3.org/2000/svg"><path d="M30 13L41 27H19Z" fill="#1b3a5f"/><path d="M20 7L33 27H7Z" fill="#0b1a2e"/><path d="M10 18L19 27H1Z" fill="#dfa13c"/><line x1="20" y1="1" x2="20" y2="7" stroke="#0b1a2e" stroke-width="1.8" stroke-linecap="round"/><path d="M20.2 1L25.5 3.5L20.2 5.5" fill="#2b4cf0" stroke="#0b1a2e" stroke-width="0.5" stroke-linejoin="round"/></svg>CPG Founders Group</div><span>Email Engine · October 2026</span></div>
 </section>
 
 </body>

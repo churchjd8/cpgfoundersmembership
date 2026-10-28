@@ -25,21 +25,29 @@ Three files in `/logos`:
 
 ## Colors
 
-The palette is a warm amber/stone system. Amber is the brand color, everything else is warm neutral. Use amber as the accent, not the whole page.
+> Updated 2026-10-28 to match the live site (`src/app/globals.css`, rebranded Aug 19, 2026). The older amber/stone palette is retired.
+
+CPG Founders Group is a **human surface**: warm paper + deep navy + gold. Signal blue belongs to Babu (machine surfaces) and only appears here when pointing at Babu, or as the flag on the logo mark.
 
 | Token | Hex | Use |
 |---|---|---|
-| **Accent** | `#b45309` | Primary brand amber. Buttons, links, key highlights, the flagship tier. |
-| **Accent Dark** | `#92400e` | Hover/pressed states, deeper accent. |
-| **Accent Light** | `#fef3c7` | Soft amber fills, highlight boxes, badges. |
-| **Background** | `#fafaf9` | Page background. Warm off-white, not pure white. |
-| **Foreground** | `#1c1917` | Primary text. Near-black, warm. |
-| **Muted** | `#78716c` | Secondary text, captions, body copy in long blocks. |
-| **Border** | `#e7e5e4` | Hairlines, dividers, card outlines. |
-| **Card** | `#ffffff` | Card/surface background on top of the off-white page. |
-| **Card Flagship** | `#fffbeb` | Highlighted/featured card (e.g. the VIP tier). Faint amber tint. |
+| **Background (warm paper)** | `#f7f5f1` | Page background. ~70% of any layout. |
+| **Foreground (deep navy)** | `#0b1a2e` | Primary text, headlines, dark bands. |
+| **Card** | `#ffffff` | Surfaces on top of paper. |
+| **Border** | `#e4e0d9` | Hairlines, dividers, card outlines. |
+| **Muted (stone)** | `#5f6b78` | Body copy in long blocks, captions. 5:1 on paper. |
+| **Stone (decorative)** | `#75828f` | Decorative and on-navy use only. |
+| **Ridge blue** | `#1b3a5f` | Brand temperature: secondary blocks, charts, accents. |
+| **Accent (deep amber)** | `#a56a16` | Links, highlights, eyebrow labels on light surfaces. |
+| **Accent dark** | `#8a5814` | Hover / pressed. |
+| **Accent light (gold tint)** | `#faf0de` | Callout fills. |
+| **Card flagship** | `#fdf6ea` | Featured card (VIP tier, "main ask"). |
+| **Summit gold** | `#dfa13c` | Navy surfaces only (7.7:1 on navy). |
+| **Signal blue** | `#2b4cf0` | Babu / machine surfaces only, plus the logo flag. |
 
-**Logo gradient peaks** (for decorative accents that echo the mark): gold `~#FBBF24`, orange `~#E08A1E`, rust-brown `~#9A3E12`. These all live in the same amber family as the accent.
+**Mix:** 70% foundation (paper, navy, white), 20% brand temperature (ridge, amber), 10% signal/emphasis (gold, signal blue).
+
+**Logo mark (current):** three peaks: ridge-blue back peak, navy center peak with a navy flagpole and signal-blue flag, summit-gold front peak, set next to "CPG Founders Group" in Inter Bold. It lives as inline SVG in `src/components/header.tsx`. The PNGs in `/logos` are the **old** amber mark and shouldn't be used for new work.
 
 ---
 
