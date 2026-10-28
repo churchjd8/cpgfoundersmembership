@@ -4,7 +4,7 @@ replaces: New Contact Nurture Sequence (v2 2026) + New Contact Nurture (30 days)
 length: 10 emails over 21 days, 7:00 AM PT (send_time_in_minutes 420)
 entry: any kit form, WhatsApp form, newsletter, April resource forms (all 16 current triggers)
 stops_on: Paying Customer, MBA Buyer, Strategy Session Buyer, any "Applied …" tag
-on_finish: add tag Nurture Complete → weekly letter
+on_finish: add tag Nurture Complete
 ---
 
 # Welcome sequence v3
@@ -328,7 +328,7 @@ If you reply with three things:
 
 ...I'll tell you straight whether working together makes sense, and what I'd focus on first either way.
 
-If now's not the time, just reply "not now" and I'll stop asking. You'll still get my weekly letter.
+If now's not the time, just reply "not now" and I'll stop asking. You'll still hear from me.
 
 Jeff
 
