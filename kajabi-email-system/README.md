@@ -38,9 +38,12 @@ Kit delivery emails (one per free kit) live in `../kajabi-emails/` and are sent 
 4. **The MBA free-training follow-up isn't wired** to its registration form.
 5. **Replies and applications aren't attributed to emails**, so we're flying blind on what actually works.
 
-## In-flight contacts (decision pending)
+## In-flight contacts
 
-People already inside v2 or the 30-day keep getting those emails until they finish (about 31 days from 2026-10-28). Their only offer CTA is /apply (v2 Email 8 Day 25, Email 10 Day 31). Proposed patch, not yet applied: swap the closing CTA in Email 8 (v2 2151358918, 30-day 2151130439) for the Strategy Session paragraph and link, and swap Email 10's apply block (v2 2151358920, 30-day 2151130448) for v3 Email 9's "Two ways in". Everything else in those sequences stays as is.
+People already inside v2 or the 30-day keep getting those emails until they finish (about 31 days from 2026-10-28). On 2026-10-28 their two offer emails were patched to match v3, and both now point at /work-with-jeff instead of /apply-only:
+- Email 8 (v2 2151358918, 30-day 2151130439): the closing CTA is now the Strategy Session paragraph, with a link to `/work-with-jeff#session`.
+- Email 10 (v2 2151358920, 30-day 2151130448): the apply block is now "Two ways in", with Strategy Session going to `#session` and advisory going to `#advisory`.
+- UTM campaigns: `welcome-v2-e8`, `welcome-v2-e10`, `nurture30-e8`, `nurture30-e10`. Everything else in those sequences is unchanged.
 
 ## How to edit and push
 

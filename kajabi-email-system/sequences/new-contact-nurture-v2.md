@@ -298,9 +298,9 @@ Now, I'm not telling you this because every founder I work with gets that result
 
 I'm telling you because of what the work actually is. It isn't motivation and it isn't cheerleading. It's somebody who has already made your mistake looking at your specific situation and saying don't do that, do this instead.
 
-That's the whole offer, honestly. If you want that pointed at your business:
+That's the work. If you want it pointed at your business, the place to start is a Strategy Session. Ninety minutes, just you and me. You send your deck, model or P&L ahead of time and I actually read it, so we spend the time solving instead of catching me up. It's $997, it comes with lifetime access to the MBA for CPG, and if you decide to keep working with me within 30 days the whole thing is credited.
 
-[Apply here](https://cpgfoundersgroup.com/apply)
+[See how the Strategy Session works](https://cpgfoundersgroup.com/work-with-jeff#session) (utm_campaign=welcome-v2-e8)
 
 Talk soon,
 Jeff
@@ -359,11 +359,13 @@ Right now I have room for two or three more.
 
 I keep it small because every engagement gets built around the specific business in front of me and I can't do that well at volume, so when those spots fill up applications close until one opens back up. That's not a marketing tactic, it's just arithmetic!
 
-If you want my eyes on your business:
+Two ways in:
 
-[Apply here](https://cpgfoundersgroup.com/apply)
+**Start with a Strategy Session ($997).** Ninety minutes on your biggest decision, plus the MBA for CPG for life. If we keep going within 30 days, it's credited. This is where most founders start. [Book it here](https://cpgfoundersgroup.com/work-with-jeff#session)
 
-It takes about five minutes and you just tell me where you are, what's in the way, and what a breakthrough would actually look like for you in ninety days. I read every application that comes in, and if it isn't a fit I'll tell you so directly, and usually I'll point you toward something that suits you better.
+**Or go straight to advisory.** Private Advisory is $1,997 a month, VIP is $4,997, three-month minimum. [See the advisory options](https://cpgfoundersgroup.com/work-with-jeff#advisory) and apply from there. It takes a few minutes, and you can pick a time with my team right after.
+
+(utm_campaign=welcome-v2-e10)
 
 And if now genuinely isn't the time, that's completely fine. Stay on the list, the resources aren't going anywhere and neither am I.
 

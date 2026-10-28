@@ -17,7 +17,8 @@ Pulled from Kajabi on 2026-10-28. Site: CPG Founders Group (site ID 2148589556).
   - April resources + newsletter (were 30-day): 669925, 669927, 669930, 669932, 669934, 669935, 669873, 670003, 669926, 669924.
 - **Buyers-exit automation 1305585** now also unsubscribes from v3.
 - **New automation 1308471** (Published): v3 completed → add tag `Nurture Complete`.
-- **Not done:** v2 and 30-day in-flight emails still carry the old /apply-only CTAs (see README "In-flight contacts"). Link-click → `Hot Lead` automations not built yet.
+- **Patched in-flight CTAs:** v2 and 30-day Email 8 and Email 10 now send to /work-with-jeff (#session / #advisory) instead of /apply (see README "In-flight contacts").
+- **Not done:** Link-click → `Hot Lead` automations not built yet.
 
 ## How a contact gets in today
 
