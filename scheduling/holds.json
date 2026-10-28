@@ -116,7 +116,8 @@
     "2026-10-30T11:00:00-07:00": {
       "event_id": "qbjitn38kuuqai0cnbsi617bbk",
       "month": "November",
-      "status": "hold"
+      "status": "booked",
+      "note": "ABV / Teng Zhao + j.gracey@abvcorp.net (guest), converted 2026-10-28"
     },
     "2026-11-02T14:00:00-08:00": {
       "event_id": "i7uod3s4484gg4rrkdje2s79qk",
