@@ -10,6 +10,7 @@ Everything Jeff's Kajabi (CPG Founders Group) sends automatically, mirrored here
 | [automations-and-forms.md](automations-and-forms.md) | Which form feeds which automation feeds which sequence, free-resource delivery check, bugs |
 | [strategy.md](strategy.md) | The rebuild: welcome v3 + weekly letter + Hot List, Kajabi to-do list, measurement |
 | [drafts/welcome-sequence-v3.md](drafts/welcome-sequence-v3.md) | New 10-email welcome built on Taki Moore's 5 types, Strategy Session as the main ask |
+| [Welcome v3 review doc](https://claude.ai/artifact/LENmRRuLhfGGQpgFRrz1Yt) | Editable copy of welcome v3 for Joshua's edits and comments. **This is the source of truth while v3 is in review**; sync it back into the .md before pushing to Kajabi |
 | [drafts/hot-list-campaign.md](drafts/hot-list-campaign.md) | Every-other-week blunt emails to engaged contacts (cycle 1: gross margin) |
 | [drafts/weekly-letter-template.md](drafts/weekly-letter-template.md) | Weekly letter format + a sample issue |
 
