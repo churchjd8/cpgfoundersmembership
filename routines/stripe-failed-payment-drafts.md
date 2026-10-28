@@ -20,6 +20,7 @@ Steps:
 
 3. Skip an invoice when ANY of these is true:
    - It has a "Payment Recovered" alert (it's paid, go to step 6 for it instead).
+   - The Amount is under $500. This routine is only for high-ticket coaching clients.
    - "Draft client notice" says "no" (AskBabu plan or no payment link).
    - The customer email is unknown, or is a teamchurch.co or cpgfoundersgroup.com address.
    - joshua@teamchurch.co (acting_email joshua@teamchurch.co) already has a draft or a sent email to that customer email in the last 30 days with a subject containing "heads up on your payment". One notice per invoice, never a second one.
