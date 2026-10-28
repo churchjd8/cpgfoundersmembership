@@ -2,6 +2,13 @@
 
 Pulled from Kajabi on 2026-10-28. Site: CPG Founders Group (site ID 2148589556). 59 automations, 32 forms, 11 "Active" sequences.
 
+## Changes made in Kajabi (2026-10-28)
+
+- **New automation "Buyers exit welcome sequences (Paying Customer / MBA)"** (workflow 1305585, Published). Triggers: tag `Paying Customer` added, OR offer `MBA for CPG` granted, OR offer `MBA for CPG` purchased. Actions: unsubscribe from v2, unsubscribe from the 30-day. Since the Stripe webhook grants the MBA offer for both MBA and Strategy Session sales, this covers Strategy Session buyers too.
+- **Published both "Sequence completed → add tag Nurture Complete" automations** (901478 for v2, 902024 for the 30-day). This only applies to people who finish from today on; the ~550 who already finished v2 don't have the tag. Use `Contact Nurtured` or the v2 Email 10 send list to catch them.
+- **Not done: pausing legacy sequences.** Kajabi has no pause or deactivate for sequences, only Delete. They're effectively idle already: Accelerator, Existing Contact and the Babu beta flows have no subscribe trigger, and Fundraising Masterclass is triggered by a form nothing posts to anymore. A handful of Existing Contact subscribers may still be mid-sequence. Delete them by hand if you want them gone from the list.
+- **Not done (on purpose): MBA free-training trigger.** Waiting until traffic goes to /free-training.
+
 ## How a contact gets in today
 
 | Entry point (site page) | Kajabi form | What fires | Lands in |

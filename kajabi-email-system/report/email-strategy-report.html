@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Email Strategy Report</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --accent: #b45309; --accent-dark: #92400e; --accent-light: #fef3c7;
+    --bg: #fafaf9; --fg: #1c1917; --muted: #78716c; --border: #e7e5e4;
+    --card: #ffffff; --flag: #fffbeb;
+  }
+  @page { size: Letter; margin: 0; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 400 10.5pt/1.55 Inter, sans-serif; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .page { width: 8.5in; height: 11in; padding: 0.7in 0.75in 0.6in; position: relative; page-break-after: always; overflow: hidden; }
+  .page:last-child { page-break-after: auto; }
+  h1, h2, h3 { font-family: "Playfair Display", serif; font-weight: 700; margin: 0; line-height: 1.15; }
+  h2 { font-size: 24pt; margin-bottom: 6px; }
+  h3 { font-size: 13pt; margin: 18px 0 6px; }
+  p { margin: 0 0 10px; }
+  .eyebrow { font: 600 8pt Inter, sans-serif; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+  .lede { color: var(--muted); font-size: 11pt; margin-bottom: 18px; }
+  .foot { position: absolute; bottom: 0.4in; left: 0.75in; right: 0.75in; display: flex; justify-content: space-between; font-size: 7.5pt; color: var(--muted); border-top: 1px solid var(--border); padding-top: 8px; }
+  .foot img { height: 18px; }
+
+  /* cover */
+  .cover { background: var(--bg); color: var(--fg); border-top: 14px solid var(--accent); display: flex; flex-direction: column; justify-content: space-between; }
+  .cover .logo { height: 110px; align-self: flex-start; }
+  .cover h1 { font-size: 40pt; margin-bottom: 18px; }
+  .cover .sub { font-size: 13pt; color: var(--muted); max-width: 5.4in; }
+  .cover .meta { font-size: 9pt; color: var(--muted); border-top: 1px solid var(--border); padding-top: 14px; }
+  .peaks { display: flex; gap: 6px; margin-bottom: 22px; }
+  .peaks span { height: 5px; width: 48px; border-radius: 3px; }
+
+  /* stats */
+  .tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 4px 0 14px; }
+  .tile { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 11px 14px; }
+  .tile.flag { background: var(--flag); }
+  .tile .n { font: 700 26pt/1 "Playfair Display", serif; color: var(--fg); }
+  .tile .n small { font-size: 12pt; color: var(--accent); font-family: Inter, sans-serif; font-weight: 600; margin-left: 4px; }
+  .tile .l { font-size: 8.5pt; color: var(--muted); margin-top: 6px; line-height: 1.35; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 16px 18px; }
+  .chart-title { font-weight: 600; font-size: 10pt; margin-bottom: 2px; }
+  .chart-sub { font-size: 8.5pt; color: var(--muted); margin-bottom: 8px; }
+  table { width: 100%; border-collapse: collapse; font-size: 9pt; }
+  th { text-align: left; font-weight: 600; color: var(--muted); font-size: 7.5pt; letter-spacing: .06em; text-transform: uppercase; padding: 6px 8px; border-bottom: 1px solid var(--border); }
+  td { padding: 5px 8px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  tr:last-child td { border-bottom: 0; }
+  .note { font-size: 8pt; color: var(--muted); margin-top: 10px; }
+  .callout { background: var(--accent-light); color: var(--accent-dark); border-radius: 12px; padding: 12px 16px; font-size: 9.5pt; margin: 14px 0; }
+  .callout b { color: var(--accent-dark); }
+  ul { margin: 0 0 10px; padding-left: 18px; }
+  li { margin-bottom: 5px; }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .num-badge { display: inline-flex; width: 22px; height: 22px; border-radius: 50%; background: var(--accent); color: #fff; font-weight: 700; font-size: 9pt; align-items: center; justify-content: center; margin-right: 8px; flex: none; }
+  .row { display: flex; align-items: flex-start; margin-bottom: 10px; }
+  .flow { display: grid; grid-template-columns: 1fr; gap: 8px; margin: 10px 0 6px; }
+  .flow .step { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 10px 14px; display: grid; grid-template-columns: 1.5in 1fr; gap: 12px; }
+  .flow .step.hot { background: var(--flag); border-color: #fcd34d; }
+  .flow .k { font-weight: 700; font-family: "Playfair Display", serif; font-size: 11.5pt; }
+  .flow .k small { display: block; font-family: Inter, sans-serif; font-weight: 500; font-size: 8pt; color: var(--accent); margin-top: 2px; }
+  .arrow { text-align: center; color: var(--accent); font-size: 10pt; line-height: 1; margin: -2px 0; }
+  .ladder td:first-child { font-weight: 600; }
+  .ladder tr.feat td { background: var(--flag); }
+  .pill { display: inline-block; background: var(--accent); color: #fff; border-radius: 999px; padding: 2px 9px; font-size: 7.5pt; font-weight: 600; }
+</style>
+</head>
+<body>
+
+<!-- 1. Cover -->
+<section class="page cover">
+  <img class="logo" src="logo-stacked.png" alt="CPG Founders Group">
+  <div>
+    <div class="peaks"><span style="background:#FBBF24"></span><span style="background:#9A3E12"></span><span style="background:#E08A1E"></span></div>
+    <h1>The Email Engine</h1>
+    <p class="sub">What the list is telling us, what's already working, and the rebuild that turns 1,500 founders into steady conversations with Jeff.</p>
+  </div>
+  <div class="meta">Prepared for Jeff Church by Joshua Church · October 28, 2026 · Data pulled from Kajabi the same day</div>
+</section>
+
+<!-- 2. What's working -->
+<section class="page">
+  <div class="eyebrow">What's working</div>
+  <h2>The list is growing, and it's listening.</h2>
+  <p class="lede">Founders are opening Jeff's emails at rates most lists never see, and almost nobody leaves.</p>
+
+  <div class="tiles">
+    <div class="tile flag"><div class="n">1,545<small>2.4×</small></div><div class="l">founders on the list today, up from 643 in January</div></div>
+    <div class="tile"><div class="n">748</div><div class="l">new founders entered the welcome sequence since mid-August</div></div>
+    <div class="tile"><div class="n">~18,000</div><div class="l">automated emails delivered by Jeff's sequences</div></div>
+    <div class="tile"><div class="n">54%</div><div class="l">average open rate across the 10-email welcome sequence</div></div>
+    <div class="tile"><div class="n">65–79%</div><div class="l">opens on event emails (Fatal Flaws, Burn Rate, workshop follow-ups)</div></div>
+    <div class="tile"><div class="n">≤1%</div><div class="l">unsubscribe rate on every single email. The list wants more of Jeff.</div></div>
+  </div>
+
+  <div class="card">
+    <div class="chart-title">Founders reached per full-list email</div>
+    <div class="chart-sub">Recipients on Jeff's broadcast to the whole list, 2026</div>
+    <svg viewBox="0 0 640 210" width="100%" height="185" role="img" aria-label="List size grew from 643 in January to 1,545 in October 2026">
+      <g font-family="Inter, sans-serif" font-size="11" fill="#78716c">
+        <line x1="40" y1="170" x2="630" y2="170" stroke="#e7e5e4"/>
+        <line x1="40" y1="110" x2="630" y2="110" stroke="#f0eeec"/>
+        <line x1="40" y1="50" x2="630" y2="50" stroke="#f0eeec"/>
+        <text x="34" y="174" text-anchor="end">0</text>
+        <text x="34" y="114" text-anchor="end">750</text>
+        <text x="34" y="54" text-anchor="end">1,500</text>
+      </g>
+      <!-- scale: 1,500 = 120px (170 -> 50) ; 0.08 px per contact -->
+      <g fill="#b45309">
+        <path d="M70 170 V122.6 a4 4 0 0 1 4 -4 H128 a4 4 0 0 1 4 4 V170 Z" opacity="0.55"/>
+        <path d="M168 170 V113 a4 4 0 0 1 4 -4 H226 a4 4 0 0 1 4 4 V170 Z" opacity="0.6"/>
+        <path d="M266 170 V112.5 a4 4 0 0 1 4 -4 H324 a4 4 0 0 1 4 4 V170 Z" opacity="0.65"/>
+        <path d="M364 170 V69.5 a4 4 0 0 1 4 -4 H422 a4 4 0 0 1 4 4 V170 Z" opacity="0.8"/>
+        <path d="M462 170 V59.8 a4 4 0 0 1 4 -4 H520 a4 4 0 0 1 4 4 V170 Z" opacity="0.9"/>
+        <path d="M560 170 V50.4 a4 4 0 0 1 4 -4 H618 a4 4 0 0 1 4 4 V170 Z"/>
+      </g>
+      <g font-family="Inter, sans-serif" font-size="11" fill="#1c1917" font-weight="600" text-anchor="middle">
+        <text x="101" y="112">643</text>
+        <text x="199" y="103">763</text>
+        <text x="297" y="102">769</text>
+        <text x="395" y="59">1,306</text>
+        <text x="493" y="49">1,428</text>
+        <text x="591" y="40">1,545</text>
+      </g>
+      <g font-family="Inter, sans-serif" font-size="10.5" fill="#78716c" text-anchor="middle">
+        <text x="101" y="188">Jan</text><text x="199" y="188">Feb</text><text x="297" y="188">Apr</text>
+        <text x="395" y="188">Jul</text><text x="493" y="188">Sep</text><text x="591" y="188">Oct</text>
+        <text x="101" y="202" font-size="8.5">Workshop</text><text x="199" y="202" font-size="8.5">Membership</text><text x="297" y="202" font-size="8.5">Burn Rate</text>
+        <text x="395" y="202" font-size="8.5">Babu launch</text><text x="493" y="202" font-size="8.5">Fatal Flaws</text><text x="591" y="202" font-size="8.5">Hot Seat</text>
+      </g>
+    </svg>
+  </div>
+
+  <h3>Top performers</h3>
+  <table>
+    <tr><th>Email</th><th class="num">Sent</th><th class="num">Opened</th><th class="num">Clicked</th></tr>
+    <tr><td>Accelerator info packet (hand-raisers)</td><td class="num">26</td><td class="num">96%</td><td class="num">58%</td></tr>
+    <tr><td>Burn Rate workshop follow-up</td><td class="num">118</td><td class="num">78%</td><td class="num">28%</td></tr>
+    <tr><td>Fatal Flaws: "We start in one hour"</td><td class="num">89</td><td class="num">65%</td><td class="num">22%</td></tr>
+    <tr><td>WhatsApp invite: GNC or Vitamin Shoppe</td><td class="num">1,248</td><td class="num">57%</td><td class="num">4%</td></tr>
+    <tr><td>Welcome #1: "what you just signed up for"</td><td class="num">743</td><td class="num">61%</td><td class="num">9%</td></tr>
+  </table>
+  <p class="note">Open rates are inflated across the industry by Apple Mail's privacy feature, so we treat clicks and replies as the real signal. Even by that stricter measure, Jeff's warm audiences click 5 to 10 times more than a typical list.</p>
+
+  <div class="foot"><img src="logo-horizontal.png" alt=""><span>Email Engine · October 2026</span></div>
+</section>
+
+<!-- 3. What we learned -->
+<section class="page">
+  <div class="eyebrow">What we learned</div>
+  <h2>The stories land. The ask comes too late.</h2>
+  <p class="lede">I went through all 11 sequences, 59 automations and the last 30 broadcasts. Five things stood out.</p>
+
+  <div class="row"><span class="num-badge">1</span><div><b>Small, warm groups convert.</b> Event registrants and hand-raisers click 17–58% of the time. The full list clicks 2–5%. That gap is the whole opportunity: the people leaning in should get a different email than everyone else.</div></div>
+  <div class="row"><span class="num-badge">2</span><div><b>Your stories are the engine.</b> The end zone, the July 3rd call, Krystal's raise, Kilimanjaro and the honest ledger hold attention better than anything else in the sequence. They stay.</div></div>
+  <div class="row"><span class="num-badge">3</span><div><b>The welcome sequence never really asks.</b> Over 31 days, the first link to work with you shows up on Day 25. By then a quarter of people have drifted. And the new $997 Strategy Session isn't mentioned at all.</div></div>
+  <div class="row"><span class="num-badge">4</span><div><b>Too many directions.</b> Ten welcome emails point to nine different things: resources, LinkedIn, a poll, Babu, WhatsApp, the MBA, the book, and the application. Each is good. Together, people don't know what you want them to do.</div></div>
+  <div class="row"><span class="num-badge">5</span><div><b>After Day 31, founders go quiet.</b> There's no weekly rhythm after the welcome, so a founder who finishes it only hears from you when there's a launch.</div></div>
+
+  <h3>Housekeeping I'm cleaning up</h3>
+  <ul>
+    <li>Paying clients and buyers still receive "apply to work with me" emails. Adding rules so customers stop getting pitched.</li>
+    <li>Two welcome sequences are running the same copy. Merging them into one.</li>
+    <li>Six older sequences (the DreamMakers accelerator, the February masterclass, the April re-engagement, finished Babu flows) are still switched on, some with dead links and retired offers. Turning them off.</li>
+  </ul>
+
+  <div class="callout"><b>Good news:</b> the free-resource delivery is solid. Every kit form tags the founder, sends the kit, and starts the welcome sequence, and every download link works.</div>
+
+  <div class="foot"><img src="logo-horizontal.png" alt=""><span>Email Engine · October 2026</span></div>
+</section>
+
+<!-- 4. The new system -->
+<section class="page">
+  <div class="eyebrow">The rebuild</div>
+  <h2>Three pieces, one job: more conversations.</h2>
+  <p class="lede">Goal: 2 to 5 sales conversations a week from the list, without becoming the guy who emails too much.</p>
+
+  <div class="flow">
+    <div class="step"><div class="k">Free resource<small>Kits, masterclass, WhatsApp</small></div><div>Already working. Delivers the kit and hands the founder to the welcome sequence.</div></div>
+    <div class="arrow">▼</div>
+    <div class="step"><div class="k">Welcome v3<small>10 emails · 21 days</small></div><div>Your best stories, rebuilt around coach Taki Moore's five email types: <b>Problem, Proof, Philosophy, Plan, Ask</b>. Each ends with "we should talk." The Strategy Session shows up on Day 5 instead of never. Day 1 asks founders to reply with their stage, so we know who's who.</div></div>
+    <div class="arrow">▼</div>
+    <div class="step"><div class="k">The Tuesday Letter<small>Weekly · everyone</small></div><div>One idea a week, pulled from your best LinkedIn post, plus a <b>Founder Mailbag</b>: a real question from a founder and your straight answer. Turns the great replies we're getting into content, and shows people you actually read them.</div></div>
+    <div class="arrow">▼</div>
+    <div class="step hot"><div class="k">The Hot List<small>Every other week · engaged only</small></div><div>Anyone who clicks a "work with Jeff" link, replies, joins an event, or starts Babu gets tagged automatically for 30 days. They get one short, blunt email from you every two weeks that ends in a direct invitation to talk.</div></div>
+  </div>
+
+  <div class="two" style="margin-top:14px">
+    <div class="card"><div class="chart-title">How much email is that?</div><p style="font-size:9.5pt;margin:6px 0 0">About <b>4 a month</b> for most founders. About <b>6 a month</b> for the founders who are actively leaning in. Launches like Hot Seat stay as their own short pushes, 3 to 4 a year.</p></div>
+    <div class="card"><div class="chart-title">How we'll know it works</div><p style="font-size:9.5pt;margin:6px 0 0">A weekly scoreboard: new subscribers, replies, Hot List size, Strategy Sessions sold, applications. Every offer link gets tracked so we can see which email sold.</p></div>
+  </div>
+
+  <div class="foot"><img src="logo-horizontal.png" alt=""><span>Email Engine · October 2026</span></div>
+</section>
+
+<!-- 5. Offer + next steps -->
+<section class="page">
+  <div class="eyebrow">What email sells</div>
+  <h2>One clear front door: the Strategy Session.</h2>
+  <p class="lede">The new Work with Jeff page gives every email a simple, low-regret next step.</p>
+
+  <table class="ladder">
+    <tr><th>Offer</th><th>Price</th><th>Role in email</th></tr>
+    <tr><td>Free resources + WhatsApp group</td><td>Free</td><td>Entry point and trust</td></tr>
+    <tr><td>Babu</td><td>10-day trial, then from $39/mo</td><td>PS line</td></tr>
+    <tr><td>MBA for CPG</td><td>$997</td><td>For founders who want to do it themselves</td></tr>
+    <tr class="feat"><td>Strategy Session <span class="pill">Main ask</span></td><td>$997</td><td>90 minutes 1:1 + the MBA for life. Credited toward advisory within 30 days.</td></tr>
+    <tr><td>Private Advisory</td><td>$1,997/mo, 3-month min.</td><td>By application</td></tr>
+    <tr><td>VIP Advisory</td><td>$4,997/mo, 3-month min.</td><td>By application</td></tr>
+  </table>
+
+  <h3>Next 30 days</h3>
+  <div class="row"><span class="num-badge">1</span><div><b>This week:</b> clean-up in Kajabi (customers stop getting pitched, old sequences off, founders who finish the welcome move on to the weekly letter).</div></div>
+  <div class="row"><span class="num-badge">2</span><div><b>Week 2:</b> Welcome v3 goes live after your review. New subscribers start on it; current ones finish the old version.</div></div>
+  <div class="row"><span class="num-badge">3</span><div><b>Week 2:</b> first Tuesday Letter and first Hot List email (theme: gross margin).</div></div>
+  <div class="row"><span class="num-badge">4</span><div><b>Week 4:</b> first scoreboard: which emails drove replies, Strategy Sessions and applications.</div></div>
+
+  <div class="callout"><b>What I need from you:</b> a read of the Welcome v3 emails (mostly your stories, tightened), and a few minutes a week to answer one founder question for the Mailbag.</div>
+
+  <div class="foot"><img src="logo-horizontal.png" alt=""><span>Email Engine · October 2026</span></div>
+</section>
+
+</body>
+</html>
