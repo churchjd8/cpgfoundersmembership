@@ -143,6 +143,37 @@ async function fulfillStrategySessionSale(resend: Resend, session: Stripe.Checko
   }
 }
 
+// AskBabu shares this Stripe account. Its plan failures are handled by Babu,
+// so the client-notice routine skips them.
+const BABU_PLAN_NAMES = ["Base Plan", "Pro Plan", "Founder Plan"];
+
+// What the failed-payment draft routine needs to write the client a notice.
+// The hosted invoice page lets them pay with a new card.
+function describeInvoice(invoice: Stripe.Invoice) {
+  const product =
+    invoice.lines?.data
+      .map((line) => line.description)
+      .filter(Boolean)
+      .join(", ") || "your plan";
+  const isBabu = BABU_PLAN_NAMES.some((name) => product.includes(name));
+  return {
+    id: invoice.id || "",
+    payLink: invoice.hosted_invoice_url || "",
+    product,
+    attempts: invoice.attempt_count,
+    draftNotice: !isBabu && !!invoice.hosted_invoice_url,
+  };
+}
+
+function invoiceRows(d: ReturnType<typeof describeInvoice>) {
+  return `
+            <tr><td style="padding:8px;font-weight:bold;">Invoice</td><td style="padding:8px;">${d.id}</td></tr>
+            <tr><td style="padding:8px;font-weight:bold;">For</td><td style="padding:8px;">${d.product}</td></tr>
+            <tr><td style="padding:8px;font-weight:bold;">Attempt</td><td style="padding:8px;">${d.attempts}</td></tr>
+            <tr><td style="padding:8px;font-weight:bold;">Payment link</td><td style="padding:8px;">${d.payLink || "None"}</td></tr>
+            <tr><td style="padding:8px;font-weight:bold;">Draft client notice</td><td style="padding:8px;">${d.draftNotice ? "yes" : "no"}</td></tr>`;
+}
+
 export async function POST(request: Request) {
   const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
   const resend = new Resend(process.env.RESEND_API_KEY!);
@@ -174,6 +205,8 @@ export async function POST(request: Request) {
     let amount = "Unknown";
     let failureMessage = "No details available";
 
+    let invoiceDetails: ReturnType<typeof describeInvoice> | null = null;
+
     if (event.type === "invoice.payment_failed") {
       const invoice = event.data.object as Stripe.Invoice;
       customerEmail = invoice.customer_email || "Unknown";
@@ -181,6 +214,7 @@ export async function POST(request: Request) {
       amount = `$${((invoice.amount_due || 0) / 100).toFixed(2)}`;
       failureMessage =
         invoice.last_finalization_error?.message || "Payment method declined";
+      invoiceDetails = describeInvoice(invoice);
     } else {
       const charge = event.data.object as Stripe.Charge;
       customerEmail = charge.billing_details?.email || "Unknown";
@@ -193,7 +227,9 @@ export async function POST(request: Request) {
       await resend.emails.send({
         from: "CPG Founders Group <notifications@cpgfoundersgroup.com>",
         to: process.env.STRIPE_FAILURE_NOTIFY_EMAIL!,
-        subject: `Failed Payment - ${customerName} (${amount})`,
+        // The [in_...] tag in the subject is what the failed-payment draft
+        // routine (routines/stripe-failed-payment-drafts.md) searches for.
+        subject: `Failed Payment - ${customerName} (${amount})${invoiceDetails ? ` [${invoiceDetails.id}]` : ""}`,
         html: `
           <h2>Failed Payment Alert</h2>
           <table style="border-collapse:collapse;font-family:sans-serif;">
@@ -201,6 +237,7 @@ export async function POST(request: Request) {
             <tr><td style="padding:8px;font-weight:bold;">Email</td><td style="padding:8px;">${customerEmail}</td></tr>
             <tr><td style="padding:8px;font-weight:bold;">Amount</td><td style="padding:8px;">${amount}</td></tr>
             <tr><td style="padding:8px;font-weight:bold;">Reason</td><td style="padding:8px;">${failureMessage}</td></tr>
+            ${invoiceDetails ? invoiceRows(invoiceDetails) : ""}
             <tr><td style="padding:8px;font-weight:bold;">Event</td><td style="padding:8px;">${event.type}</td></tr>
             <tr><td style="padding:8px;font-weight:bold;">Time</td><td style="padding:8px;">${new Date(event.created * 1000).toLocaleString("en-US", { timeZone: "America/Los_Angeles" })}</td></tr>
           </table>
@@ -210,6 +247,35 @@ export async function POST(request: Request) {
       console.log(`Failed payment notification sent for ${customerEmail}`);
     } catch (emailErr) {
       console.error("Failed to send payment failure notification:", emailErr);
+    }
+  }
+
+  // A retry or the client's own payment cleared an invoice that had failed.
+  // The draft routine uses this to discard a notice that hasn't been sent.
+  if (event.type === "invoice.paid") {
+    const invoice = event.data.object as Stripe.Invoice;
+    if (invoice.attempt_count > 1) {
+      const name = invoice.customer_name || invoice.customer_email || "Unknown";
+      const paid = `$${((invoice.amount_paid || 0) / 100).toFixed(2)}`;
+      try {
+        await resend.emails.send({
+          from: "CPG Founders Group <notifications@cpgfoundersgroup.com>",
+          to: process.env.STRIPE_FAILURE_NOTIFY_EMAIL!,
+          subject: `Payment Recovered - ${name} (${paid}) [${invoice.id}]`,
+          html: `
+            <h2>Payment Recovered</h2>
+            <p style="font-family:sans-serif;">This invoice failed earlier and has now been paid. Any unsent failed-payment notice to ${invoice.customer_email || "this client"} can be discarded.</p>
+            <table style="border-collapse:collapse;font-family:sans-serif;">
+              <tr><td style="padding:8px;font-weight:bold;">Customer</td><td style="padding:8px;">${name}</td></tr>
+              <tr><td style="padding:8px;font-weight:bold;">Email</td><td style="padding:8px;">${invoice.customer_email || "Unknown"}</td></tr>
+              <tr><td style="padding:8px;font-weight:bold;">Paid</td><td style="padding:8px;">${paid}</td></tr>
+              <tr><td style="padding:8px;font-weight:bold;">Attempts</td><td style="padding:8px;">${invoice.attempt_count}</td></tr>
+            </table>
+          `,
+        });
+      } catch (emailErr) {
+        console.error("Failed to send payment recovered notification:", emailErr);
+      }
     }
   }
 
