@@ -1,7 +1,7 @@
 ---
-status: DRAFT for Joshua + Jeff review (not in Kajabi)
+status: LIVE in Kajabi since 2026-10-28 (sequence 2148913216, "Welcome Sequence v3 (Oct 2026)")
 replaces: New Contact Nurture Sequence (v2 2026) + New Contact Nurture (30 days)
-length: 10 emails over 21 days, 7:00 AM PT
+length: 10 emails over 21 days, 7:00 AM PT (send_time_in_minutes 420)
 entry: any kit form, WhatsApp form, newsletter, April resource forms (all 16 current triggers)
 stops_on: Paying Customer, MBA Buyer, Strategy Session Buyer, any "Applied …" tag
 on_finish: add tag Nurture Complete → weekly letter
@@ -31,6 +31,7 @@ Reused v2 copy is marked. New or rewritten copy is everything else.
 ---
 
 ## Email 1 (Day 1) — Orientation + segmentation
+Kajabi email ID: 2151522081
 **Subject:** what you just signed up for
 **Preview:** and one quick question
 
@@ -61,6 +62,7 @@ PS There are 400+ CPG founders in our WhatsApp group answering each other's ques
 ---
 
 ## Email 2 (Day 3) — Story
+Kajabi email ID: 2151522082
 **Subject:** three seconds I replayed for twenty years
 **Preview:** I didn't raise my hand
 
@@ -92,6 +94,7 @@ Jeff
 ---
 
 ## Email 3 (Day 5) — Proof
+Kajabi email ID: 2151522083
 **Subject:** she raised $250K in her first month
 **Preview:** nobody said no, and nobody wired anything
 
@@ -121,6 +124,7 @@ Jeff
 ---
 
 ## Email 4 (Day 7) — Problem
+Kajabi email ID: 2151522084
 **Subject:** the first number I'd look at
 **Preview:** it isn't revenue
 
@@ -154,6 +158,7 @@ PS The full margin playbook (models, trade spend calculator, all of it) lives in
 ---
 
 ## Email 5 (Day 9) — Philosophy
+Kajabi email ID: 2151522086
 **Subject:** the mistake that quietly kills most raises
 **Preview:** fundraising isn't a project
 
@@ -174,18 +179,19 @@ And they protect the cap table like it's oxygen. My ladder:
 - No single round more than 20% dilutive, ever
 - By your Series A, you and your founding team still own at least half the company
 
-There's a timing piece too. The best time to raise is off your second-half numbers, not your first. I'm bridging a company right now for nine months so they can raise off a $25M run rate instead of $10M. Same company, same team, same product. Roughly double the valuation.
+There's a timing piece too. The best time to raise is off your second-half numbers, not your first. Earlier this year I put a nine-month bridge in place for a company so they could raise off a $25M run rate instead of $10M. Same company, same team, same product. Roughly double the valuation.
 
 If you're raising in the next twelve months, this is the conversation to have before you send the first deck, not after. That's exactly what a [Strategy Session](https://cpgfoundersgroup.com/work-with-jeff) is for. We'll go through your model and your timing, and I'll tell you what I'd do.
 
 Talk soon,
 Jeff
 
-> VERIFY with Jeff: the "bridging a company right now" example is from February. Still current?
+> Reworded to "earlier this year" so it stays true. Swap in a fresher example if Jeff has one.
 
 ---
 
 ## Email 6 (Day 11) — Story (no links)
+Kajabi email ID: 2151522087
 **Subject:** why I'm still doing this at 64
 **Preview:** the honest ledger
 
@@ -212,6 +218,7 @@ PS No link in this one. If something here landed, hit reply and tell me what you
 ---
 
 ## Email 7 (Day 13) — Plan
+Kajabi email ID: 2151522088
 **Subject:** what actually happens in 90 minutes with me
 **Preview:** no pitch, no slides
 
@@ -241,6 +248,7 @@ Jeff
 ---
 
 ## Email 8 (Day 15) — Proof
+Kajabi email ID: 2151522089
 **Subject:** from "not ready" to a $1.5M angel round
 **Preview:** the problem wasn't the pitch
 
@@ -270,6 +278,7 @@ Jeff
 ---
 
 ## Email 9 (Day 18) — Ask
+Kajabi email ID: 2151522090
 **Subject:** two or three founders
 **Preview:** the one direct ask
 
@@ -301,6 +310,7 @@ PS Not ready for either? The [MBA for CPG](https://cpgfoundersgroup.com/mba-for-
 ---
 
 ## Email 10 (Day 21) — Close the loop
+Kajabi email ID: 2151522091
 **Subject:** should we talk or not?
 **Preview:** three lines, then I'll stop asking
 

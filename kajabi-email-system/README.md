@@ -9,8 +9,8 @@ Everything Jeff's Kajabi (CPG Founders Group) sends automatically, mirrored here
 | [engagement-analysis.md](engagement-analysis.md) | Open/click stats for every sequence and broadcast, and what they mean |
 | [automations-and-forms.md](automations-and-forms.md) | Which form feeds which automation feeds which sequence, free-resource delivery check, bugs |
 | [strategy.md](strategy.md) | The rebuild: welcome v3 + weekly letter + Hot List, Kajabi to-do list, measurement |
-| [drafts/welcome-sequence-v3.md](drafts/welcome-sequence-v3.md) | New 10-email welcome built on Taki Moore's 5 types, Strategy Session as the main ask |
-| [Welcome v3 review doc](https://claude.ai/artifact/LENmRRuLhfGGQpgFRrz1Yt) | Editable copy of welcome v3 for Joshua's edits and comments. **This is the source of truth while v3 is in review**; sync it back into the .md before pushing to Kajabi |
+| [drafts/welcome-sequence-v3.md](drafts/welcome-sequence-v3.md) | **Live welcome sequence** (Kajabi 2148913216). 10 emails on Taki Moore's 5 types, Strategy Session as the main ask. Repo copy is the source of truth |
+| [Welcome v3 review doc](https://claude.ai/artifact/LENmRRuLhfGGQpgFRrz1Yt) | Review copy of v3 (rev 13, matches what was pushed except Email 5's "earlier this year" wording). Edit the .md going forward |
 | [drafts/hot-list-campaign.md](drafts/hot-list-campaign.md) | Every-other-week blunt emails to engaged contacts (cycle 1: gross margin) |
 | [drafts/weekly-letter-template.md](drafts/weekly-letter-template.md) | Weekly letter format + a sample issue |
 
@@ -18,8 +18,9 @@ Everything Jeff's Kajabi (CPG Founders Group) sends automatically, mirrored here
 
 | Sequence | Kajabi ID | In it | Status | File |
 |---|---|---|---|---|
-| New Contact Nurture Sequence (v2 2026) | 2148872408 | 748 | **Main welcome.** Full copy mirrored | [sequences/new-contact-nurture-v2.md](sequences/new-contact-nurture-v2.md) |
-| New Contact Nurture (30 days) | 2148811726 | 157 | Duplicate of v2 Emails 2-10 | [sequences/new-contact-nurture-30-day.md](sequences/new-contact-nurture-30-day.md) |
+| Welcome Sequence v3 (Oct 2026) | 2148913216 | 0 (new) | **Main welcome since 2026-10-28.** All 16 entry automations point here | [drafts/welcome-sequence-v3.md](drafts/welcome-sequence-v3.md) |
+| New Contact Nurture Sequence (v2 2026) | 2148872408 | 748 | Closed to new entrants 2026-10-28; in-flight contacts finish it. Full copy mirrored | [sequences/new-contact-nurture-v2.md](sequences/new-contact-nurture-v2.md) |
+| New Contact Nurture (30 days) | 2148811726 | 157 | Closed to new entrants 2026-10-28; in-flight contacts finish it | [sequences/new-contact-nurture-30-day.md](sequences/new-contact-nurture-30-day.md) |
 | Existing Contact Nurture (8 Weeks) | 2148812666 | 734 | Stale, recommend pause. Full copy mirrored | [sequences/existing-contact-nurture.md](sequences/existing-contact-nurture.md) |
 | MBA Funnel - Free Training | 2148903072 | 0 | Not connected to its form | [sequences/mba-free-training.md](sequences/mba-free-training.md) (copy in `../MBA for CPG Funnel - Email Sequence.md`) |
 | Accelerator info request | 2148768820 | 26 | Legacy, dead apply link | [sequences/legacy-accelerator-and-fundraising.md](sequences/legacy-accelerator-and-fundraising.md) |
@@ -36,6 +37,10 @@ Kit delivery emails (one per free kit) live in `../kajabi-emails/` and are sent 
 3. **Buyers keep getting pitched.** v2 has no unsubscribe triggers, and Stripe purchases don't tag anyone in Kajabi.
 4. **The MBA free-training follow-up isn't wired** to its registration form.
 5. **Replies and applications aren't attributed to emails**, so we're flying blind on what actually works.
+
+## In-flight contacts (decision pending)
+
+People already inside v2 or the 30-day keep getting those emails until they finish (about 31 days from 2026-10-28). Their only offer CTA is /apply (v2 Email 8 Day 25, Email 10 Day 31). Proposed patch, not yet applied: swap the closing CTA in Email 8 (v2 2151358918, 30-day 2151130439) for the Strategy Session paragraph and link, and swap Email 10's apply block (v2 2151358920, 30-day 2151130448) for v3 Email 9's "Two ways in". Everything else in those sequences stays as is.
 
 ## How to edit and push
 

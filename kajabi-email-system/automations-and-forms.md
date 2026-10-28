@@ -9,6 +9,16 @@ Pulled from Kajabi on 2026-10-28. Site: CPG Founders Group (site ID 2148589556).
 - **Not done: pausing legacy sequences.** Kajabi has no pause or deactivate for sequences, only Delete. They're effectively idle already: Accelerator, Existing Contact and the Babu beta flows have no subscribe trigger, and Fundraising Masterclass is triggered by a form nothing posts to anymore. A handful of Existing Contact subscribers may still be mid-sequence. Delete them by hand if you want them gone from the list.
 - **Not done (on purpose): MBA free-training trigger.** Waiting until traffic goes to /free-training.
 
+## Welcome v3 go-live (2026-10-28, later the same day)
+
+- **Created sequence "Welcome Sequence v3 (Oct 2026)"** (2148913216), 10 emails, Days 1/3/5/7/9/11/13/15/18/21 at 7:00 AM PT, every link UTM-tagged `utm_campaign=welcome-v3-eN`. Email IDs are in `drafts/welcome-sequence-v3.md`.
+- **Repointed all 16 entry automations from v2 / the 30-day to v3.** v3 now shows 16 subscribe triggers; v2 and the 30-day show 0, so they only drain their in-flight contacts.
+  - Kit + WhatsApp (were v2): 950030 Profitability, 950035 Fundraising, 950038 Starting Line, 950039 All three (site), 950040 All three (book), 950051 WhatsApp.
+  - April resources + newsletter (were 30-day): 669925, 669927, 669930, 669932, 669934, 669935, 669873, 670003, 669926, 669924.
+- **Buyers-exit automation 1305585** now also unsubscribes from v3.
+- **New automation 1308471** (Published): v3 completed → add tag `Nurture Complete`.
+- **Not done:** v2 and 30-day in-flight emails still carry the old /apply-only CTAs (see README "In-flight contacts"). Link-click → `Hot Lead` automations not built yet.
+
 ## How a contact gets in today
 
 | Entry point (site page) | Kajabi form | What fires | Lands in |
