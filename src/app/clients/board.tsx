@@ -4,12 +4,13 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import type { BillingState, BoardClient, Prospect } from "@/lib/client-board";
 
-type Tab = "status" | "schedule" | "prospects";
+type Tab = "status" | "schedule" | "prospects" | "past";
 
 const TABS: { key: Tab; label: string }[] = [
   { key: "status", label: "Billing status" },
   { key: "schedule", label: "Billing schedule" },
   { key: "prospects", label: "Prospects" },
+  { key: "past", label: "Past clients" },
 ];
 
 function money(n: number | null): string {
@@ -167,7 +168,6 @@ function StatusTab({ clients }: { clients: BoardClient[] }) {
   const current = by("current");
   const attention = [...by("past_due"), ...by("not_in_stripe")];
   const paused = by("paused");
-  const ended = by("ended");
   const active = current.length + attention.length;
   const mrr = current.reduce((sum, c) => sum + c.monthlyAmount, 0);
   const owed = by("past_due").reduce((sum, c) => sum + c.amountOwed, 0);
@@ -189,7 +189,7 @@ function StatusTab({ clients }: { clients: BoardClient[] }) {
       <StatusTable title="Needs attention" rows={attention} hint="Money owed in Stripe, or a client we can't see in Stripe." />
       <StatusTable title="Billing on schedule" rows={current} />
       <StatusTable title="Paused" rows={paused} hint="Not being charged right now." />
-      <StatusTable title="Ended" rows={ended} hint="Former clients, kept for the record." />
+      <p className="mt-8 text-sm text-muted">Former clients live on the Past clients tab.</p>
     </div>
   );
 }
@@ -237,6 +237,83 @@ function ScheduleTab({ clients }: { clients: BoardClient[] }) {
                 </td>
                 <td className="px-4 py-3">
                   <Badge state={c.state} />
+                </td>
+                <td className="px-4 py-3 text-right">
+                  <StripeLink url={c.stripeUrl} />
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+}
+
+function fmtMonth(date: string | null): string {
+  if (!date) return "—";
+  return new Intl.DateTimeFormat("en-US", { month: "short", year: "numeric", timeZone: "UTC" }).format(new Date(`${date}T00:00:00Z`));
+}
+
+function PastTab({ clients }: { clients: BoardClient[] }) {
+  const [copied, setCopied] = useState(false);
+  const rows = [...clients].sort((a, b) => (b.endedOn || "").localeCompare(a.endedOn || ""));
+  const allEmails = [...new Set(rows.flatMap((c) => c.contactEmails))];
+
+  return (
+    <div>
+      <div className="flex flex-wrap items-end justify-between gap-3">
+        <p className="text-sm text-muted">
+          Former clients to reach out to for future offers, events, and check-ins. Newest first.
+        </p>
+        <button
+          onClick={async () => {
+            await navigator.clipboard.writeText(allEmails.join(", "));
+            setCopied(true);
+            setTimeout(() => setCopied(false), 2000);
+          }}
+          className="rounded-lg bg-foreground px-4 py-2 text-sm font-semibold text-white"
+        >
+          {copied ? "Copied!" : `Copy all ${allEmails.length} emails`}
+        </button>
+      </div>
+      <div className="mt-4 overflow-x-auto rounded-xl border border-border bg-white">
+        <table className="w-full min-w-[820px] text-sm">
+          <thead>
+            <tr className="border-b border-border text-left text-xs uppercase tracking-wide text-muted">
+              <th className="px-4 py-3 font-medium">Client</th>
+              <th className="px-4 py-3 font-medium">Was on</th>
+              <th className="px-4 py-3 font-medium">Ended</th>
+              <th className="px-4 py-3 font-medium">Contact</th>
+              <th className="w-[32%] px-4 py-3 font-medium">Notes</th>
+              <th className="px-4 py-3 font-medium" />
+            </tr>
+          </thead>
+          <tbody>
+            {rows.map((c) => (
+              <tr key={c.id} className="border-b border-border align-top last:border-0">
+                <td className="px-4 py-3">
+                  <p className="font-semibold">{c.business}</p>
+                  <p className="text-xs text-muted">{c.name}</p>
+                </td>
+                <td className="px-4 py-3">
+                  <p>{c.plan}</p>
+                  <p className="text-xs text-muted">{money(c.monthlyAmount)}/mo</p>
+                </td>
+                <td className="whitespace-nowrap px-4 py-3">{fmtMonth(c.endedOn)}</td>
+                <td className="px-4 py-3">
+                  {c.contactEmails.length ? (
+                    c.contactEmails.map((e) => (
+                      <a key={e} href={`mailto:${e}`} className="block text-xs text-accent hover:underline">
+                        {e}
+                      </a>
+                    ))
+                  ) : (
+                    <span className="text-xs text-muted">—</span>
+                  )}
+                </td>
+                <td className="px-4 py-3">
+                  <NotesCell client={c} />
                 </td>
                 <td className="px-4 py-3 text-right">
                   <StripeLink url={c.stripeUrl} />
@@ -399,6 +476,7 @@ export function Board({ clients, prospects, stripeError }: { clients: BoardClien
         {tab === "status" && <StatusTab clients={clients} />}
         {tab === "schedule" && <ScheduleTab clients={clients} />}
         {tab === "prospects" && <ProspectsTab prospects={prospects} />}
+        {tab === "past" && <PastTab clients={clients.filter((c) => c.state === "ended")} />}
       </main>
     </div>
   );

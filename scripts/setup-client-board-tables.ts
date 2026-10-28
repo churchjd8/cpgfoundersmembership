@@ -28,6 +28,9 @@ create table if not exists public.client_board (
 );
 -- Open Stripe invoices we've decided not to chase, so they don't show as owed.
 alter table public.client_board add column if not exists ignored_invoice_ids text[] not null default '{}';
+-- Past clients: who to reach out to later, and when they ended.
+alter table public.client_board add column if not exists contact_emails text[] not null default '{}';
+alter table public.client_board add column if not exists ended_on date;
 
 create table if not exists public.client_prospects (
   id uuid primary key default gen_random_uuid(),

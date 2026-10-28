@@ -25,6 +25,8 @@ export type BoardClient = {
   term: string; // today: "Month 2 of 3", "Ongoing monthly (...)", "Monthly, no minimum"
   nextTerm: string | null; // the same, for the month the next charge (or resume) lands in
   finalMonth: boolean; // the next charge is the last month of the minimum
+  contactEmails: string[];
+  endedOn: string | null; // YYYY-MM-DD, past clients only
 
 };
 
@@ -49,6 +51,8 @@ type BoardRow = {
   status_override: string | null;
   notes: string | null;
   ignored_invoice_ids: string[] | null;
+  contact_emails: string[] | null;
+  ended_on: string | null;
 };
 
 // Only high-ticket billing matters here; this skips AskBabu plans that share
@@ -130,6 +134,8 @@ function buildClient(
     term,
     nextTerm: null as string | null,
     finalMonth: false,
+    contactEmails: row.contact_emails || [],
+    endedOn: row.ended_on,
     nextCharge: null as string | null,
     pausedUntil: null as string | null,
     amountOwed: 0,
