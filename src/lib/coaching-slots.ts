@@ -159,7 +159,7 @@ export const SESSION_MONTHS: SessionMonth[] = [
     // calendar (scheduling/holds.json).
     slots: [
       { date: "2026-10-30", time: "11:00" }, // Fri 11:00 AM (PDT)
-      { date: "2026-11-02", time: "14:00" }, // Mon 2:00 PM
+      // { date: "2026-11-02", time: "14:00" }, // Mon 2:00 PM — pulled 10/29: penciled for Megan Campbell (Montanya) intro
       { date: "2026-11-03", time: "09:00" }, // Tue 9:00 AM
       { date: "2026-11-03", time: "12:00" }, // Tue 12:00 PM
       { date: "2026-11-05", time: "10:00" }, // Thu 10:00 AM
