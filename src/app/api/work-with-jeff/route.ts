@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { screenApplication } from "@/lib/application-spam";
 
 const VIP_DAY_FORM_ID = "2149550479";
 
@@ -37,7 +38,11 @@ async function sendNotificationEmail(fields: {
   breakthrough: string;
   referral?: string;
   interest?: string;
-}) {
+}, spamReasons?: string[]) {
+  const name = `${fields.firstName} ${fields.lastName} (${fields.business})`;
+  const subject = spamReasons
+    ? `🚫 Likely spam application: ${name}`
+    : `🔥 Work with Jeff Application: ${name}${fields.interest ? ` - ${INTEREST_LABELS[fields.interest] || fields.interest}` : ""}`;
   const res = await fetch("https://api.resend.com/emails", {
     method: "POST",
     headers: {
@@ -50,8 +55,9 @@ async function sendNotificationEmail(fields: {
       from: "CPG Founders Group <notifications@cpgfoundersgroup.com>",
       to: process.env.CONTACT_FORM_NOTIFY_EMAIL!,
       reply_to: fields.email,
-      subject: `🔥 Work with Jeff Application: ${fields.firstName} ${fields.lastName} (${fields.business})${fields.interest ? ` - ${INTEREST_LABELS[fields.interest] || fields.interest}` : ""}`,
+      subject,
       html: `
+        ${spamReasons ? `<p style="color:#b91c1c;"><strong>Filtered as likely spam</strong> (${spamReasons.join(", ")}). Not added to Kajabi and no reply will be drafted. If this is a real founder, reply to them directly.</p>` : ""}
         <h2>New Work with Jeff Application</h2>
         <p><strong>Name:</strong> ${fields.firstName} ${fields.lastName}</p>
         <p><strong>Email:</strong> ${fields.email}</p>
@@ -80,14 +86,29 @@ async function sendNotificationEmail(fields: {
 
 export async function POST(request: Request) {
   try {
-    const { firstName, lastName, email, business, website, revenue, challenge, breakthrough, referral, interest } =
-      await request.json();
+    const body = await request.json();
+    const { firstName, lastName, email, business, website, revenue, challenge, breakthrough, referral, interest } = body;
 
     if (!firstName || !lastName || !email || !business || !revenue || !challenge || !breakthrough) {
       return NextResponse.json(
         { error: "All required fields must be filled out" },
         { status: 400 },
       );
+    }
+
+    // Bots get the same success response so they have nothing to tune against.
+    const verdict = screenApplication(body);
+    if (verdict.kind === "bot") {
+      console.warn(`Dropped bot application from ${email}: ${verdict.reason}`);
+      return NextResponse.json({ success: true });
+    }
+    if (verdict.kind === "likely-spam") {
+      console.warn(`Likely spam application from ${email}: ${verdict.reasons.join(", ")}`);
+      await sendNotificationEmail(
+        { firstName, lastName, email, business, website, revenue, challenge, breakthrough, referral, interest },
+        verdict.reasons,
+      );
+      return NextResponse.json({ success: true });
     }
 
     const accessToken = await getKajabiToken();

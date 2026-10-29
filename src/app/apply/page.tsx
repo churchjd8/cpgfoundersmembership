@@ -1,8 +1,9 @@
 "use client";
 
-import { Suspense, useState, type FormEvent } from "react";
+import { Suspense, useEffect, useRef, useState, type FormEvent } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
+import { HONEYPOT_FIELD } from "@/lib/application-spam";
 
 const revenueStages = [
   "Pre-revenue",
@@ -38,6 +39,11 @@ function ApplyForm() {
   const [interest, setInterest] = useState(
     interests.some((i) => i.value === preset) ? preset! : "",
   );
+  // Set on mount, not at render, so the prerendered page doesn't bake in build time.
+  const startedAt = useRef(0);
+  useEffect(() => {
+    startedAt.current = Date.now();
+  }, []);
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -50,7 +56,7 @@ function ApplyForm() {
       const res = await fetch("/api/work-with-jeff", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+        body: JSON.stringify({ ...data, startedAt: startedAt.current }),
       });
 
       if (res.ok) {
@@ -103,6 +109,11 @@ function ApplyForm() {
       <section className="py-16 md:py-24 bg-white">
         <div className="mx-auto max-w-xl px-4 sm:px-6 lg:px-8">
           <form onSubmit={handleSubmit} className="space-y-5">
+            {/* Honeypot: hidden from people, filled by bots. */}
+            <div aria-hidden="true" className="absolute -left-[9999px] h-0 w-0 overflow-hidden">
+              <label htmlFor="vip-hp">Leave this field empty</label>
+              <input type="text" id="vip-hp" name={HONEYPOT_FIELD} tabIndex={-1} autoComplete="off" />
+            </div>
             <div className="grid sm:grid-cols-2 gap-5">
               <div>
                 <label htmlFor="vip-firstName" className="block text-sm font-medium mb-1">
