@@ -4,6 +4,8 @@
 
 **Rearranged Oct 16.** Hot Seat moved up to Fri Oct 16. The Inc. CPG Power List post (Jeff listed #2, with the native graphic in `Inc Power List Graphic/`; link stays in the text) took Mon Oct 19. The cover reveal moved to Wed Oct 21, with "Four weeks from today" changed to "In less than four weeks". FF #8 moved to the end of the run, Tue Jan 12, with its teaser changed to "out now at cpgfoundersgroup.com/book". The table below reflects it.
 
+**Rearranged Oct 30.** The unboxing video took Tue Nov 3. FF #2 moved to Thu Dec 17, with its teaser changed to "Out now at cpgfoundersgroup.com/book". The video on LinkedIn is the 720p upload copy (the Chrome upload tool caps files at 10 MB). Source files are in `Book Launch Images/unboxing-video/`.
+
 | Date | Post |
 | --- | --- |
 | Tue Oct 13 | Forbes / Proda feature (Jeff posts it himself) |
@@ -13,7 +15,7 @@
 | Wed Oct 21 | Book: Cover reveal (cover image; Jay Shetty, Kim Perell, Mark Rampolla, Seth Goldman, John Foraker tagged) |
 | Tue Oct 27 | Book: The three problems the book solves |
 | Thu Oct 29 | Book: Podcast tour |
-| Tue Nov 3 | FF #2 phone call to Coke, holding the slot until the unboxing post has its photo or video |
+| Tue Nov 3 | Book: Unboxing video (Jay Shetty, Seth Goldman, Kim Perell, Mark Rampolla, John Foraker tagged) |
 | Thu Nov 5 | FF #10 $10 green juice, holding the slot until the foreword post has its quote card |
 | Tue Nov 10 | Book: Mark your calendars |
 | Thu Nov 12 | Book: The journey recap |
@@ -26,6 +28,7 @@
 | Tue Dec 8 | FF #11 cash gap |
 | Thu Dec 10 | FF #4 amnesia |
 | Tue Dec 15 | FF #5 Park City |
+| Thu Dec 17 | FF #2 phone call to Coke (Ch. 14-16, out now) |
 | Tue Dec 22 | FF #7 months 10 to 18 |
 | Tue Jan 5 | FF #13 peel the onion |
 | Thu Jan 7 | FF #1 $100M exit |
@@ -378,7 +381,7 @@ I walked through all 30 questions live on my Fatal Flaws webinar in September. T
 
 cpgfoundersgroup.com/resources
 
-The whole Coca-Cola story is Chapters 14 through 16 of The Cold Pressed Truth. Out Nov 17, first access at cpgfoundersgroup.com/book
+The whole Coca-Cola story is Chapters 14 through 16 of The Cold Pressed Truth. Out now at cpgfoundersgroup.com/book
 
 ---
 
