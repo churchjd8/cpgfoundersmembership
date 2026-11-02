@@ -2,7 +2,7 @@
 
 Schedule: Tuesdays and Fridays, 9:00 AM Pacific (cron `0 9 * * 2,5`)
 
-Setup: in the Claude desktop app, open Routines, then New routine. Use the computer where Chrome is signed in to Jeff's LinkedIn, and pick the `jeffchurch` project folder if that option is offered. Paste everything below the line as the prompt.
+Setup: in the Claude desktop app sidebar, open Scheduled, then New task. Set Weekly on Tue + Fri at 9:00 AM, and paste everything below the line as the prompt. Each run opens as its own session with a notification, and the drafts doc is its final message.
 
 ---
 
@@ -36,15 +36,9 @@ Links (use exactly ONE per DM):
    - Sign off "Jeff".
    - No em-dashes, no "honestly", and no polished AI phrasing like "great proof point", "skip the background" or "that's how the best people find us".
    - Full style guide: /home/joshua/jeffchurch/Jeff Church Voice Profile.md, if you can open it.
-6. Write the drafts doc using the template below. If the jeffchurch project folder is accessible, save it there as `Jeff LinkedIn DM Drafts - <Mon D>.md` (for example "Jeff LinkedIn DM Drafts - Nov 6.md").
-7. If at least one lead was found, email that same doc via the Superhuman connector:
-   - acting_email: joshua@teamchurch.co
-   - to: joshua@teamchurch.co
-   - subject: "Jeff LinkedIn DM Drafts - <Mon D> (N leads)"
-   - body: the full doc as plain text, passed as the exact `body` (not `instructions` mode)
-   - Send it directly. It goes only to Joshua.
-8. If nobody qualifies, don't send an email. Just end with "No new leads".
-9. Close the tab you opened. Never click Send in LinkedIn, and never leave text in a LinkedIn message box.
+6. Write the drafts doc using the template below. Post the full doc as your FINAL message in this session, because that's what Joshua opens and reads. If the jeffchurch project folder is accessible, also save it there as `Jeff LinkedIn DM Drafts - <Mon D>.md` (for example "Jeff LinkedIn DM Drafts - Nov 6.md").
+7. If nobody qualifies, end with "No new leads" and a one-line list of who you skipped.
+8. Close the tab you opened. Never click Send in LinkedIn, and never leave text in a LinkedIn message box.
 
 ## Doc template
 
