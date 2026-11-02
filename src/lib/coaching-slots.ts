@@ -167,7 +167,7 @@ export const SESSION_MONTHS: SessionMonth[] = [
       { date: "2026-11-05", time: "14:00" }, // Thu 2:00 PM
       { date: "2026-11-06", time: "10:00" }, // Fri 10:00 AM
       { date: "2026-11-06", time: "12:00" }, // Fri 12:00 PM
-      { date: "2026-11-06", time: "14:00" }, // Fri 2:00 PM
+      // { date: "2026-11-06", time: "14:00" }, // Fri 2:00 PM — pulled 11/2: Jeff has another call
       { date: "2026-11-09", time: "14:00" }, // Mon 2:00 PM
       { date: "2026-11-10", time: "09:00" }, // Tue 9:00 AM
       { date: "2026-11-10", time: "12:00" }, // Tue 12:00 PM

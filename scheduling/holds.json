@@ -167,7 +167,8 @@
     "2026-11-06T14:00:00-08:00": {
       "event_id": "3knu2fvglah7lak5v8t3d7d770",
       "month": "November",
-      "status": "hold"
+      "status": "cancelled",
+      "note": "Jeff pulled 2026-11-01 (another call), off booking page; hold event still on calendar, Jeff declined it"
     },
     "2026-11-09T14:00:00-08:00": {
       "event_id": "e8jrnrlbaa048439avi1ctk9n0",
