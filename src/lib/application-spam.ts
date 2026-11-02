@@ -24,6 +24,7 @@ type Submission = {
   challenge?: string;
   breakthrough?: string;
   referral?: string;
+  fillMs?: unknown;
   startedAt?: unknown;
   [HONEYPOT_FIELD]?: unknown;
 };
@@ -57,12 +58,18 @@ export function screenApplication(data: Submission, now = Date.now()): SpamVerdi
     return { kind: "bot", reason: "honeypot filled" };
   }
 
-  const startedAt = Number(data.startedAt);
-  if (!Number.isFinite(startedAt) || startedAt <= 0) {
-    return { kind: "bot", reason: "missing form timestamp" };
+  // fillMs is timed in the browser. startedAt is the older client-clock
+  // timestamp, kept so a tab opened before the switch still works.
+  let fillMs = Number(data.fillMs);
+  if (data.fillMs === undefined) {
+    const startedAt = Number(data.startedAt);
+    fillMs = Number.isFinite(startedAt) && startedAt > 0 ? now - startedAt : NaN;
   }
-  if (now - startedAt < MIN_FILL_MS) {
-    return { kind: "bot", reason: `submitted in ${now - startedAt}ms` };
+  if (!Number.isFinite(fillMs) || fillMs <= 0) {
+    return { kind: "bot", reason: "missing form timing" };
+  }
+  if (fillMs < MIN_FILL_MS) {
+    return { kind: "bot", reason: `submitted in ${fillMs}ms` };
   }
 
   const reasons: string[] = [];

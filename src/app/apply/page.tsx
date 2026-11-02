@@ -56,7 +56,12 @@ function ApplyForm() {
       const res = await fetch("/api/work-with-jeff", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...data, startedAt: startedAt.current }),
+        // Measured on this device so a skewed laptop clock can't make a real
+        // founder look like an instant bot submission.
+        body: JSON.stringify({
+          ...data,
+          fillMs: startedAt.current ? Date.now() - startedAt.current : 0,
+        }),
       });
 
       if (res.ok) {

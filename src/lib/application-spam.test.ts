@@ -58,6 +58,14 @@ test("honeypot and timing catch bots", () => {
   assert.equal(screenApplication({ ...megan, [HONEYPOT_FIELD]: "x" }, NOW).kind, "bot");
   assert.equal(screenApplication({ ...megan, startedAt: undefined }, NOW).kind, "bot");
   assert.equal(screenApplication({ ...megan, startedAt: NOW - 1500 }, NOW).kind, "bot");
+  assert.equal(screenApplication({ ...megan, startedAt: undefined, fillMs: 1500 }, NOW).kind, "bot");
+  assert.equal(screenApplication({ ...megan, startedAt: undefined, fillMs: 0 }, NOW).kind, "bot");
+});
+
+test("browser-timed fill wins over a skewed client clock", () => {
+  // Laptop clock 10 minutes fast: the old startedAt check called this a bot.
+  const skewed = { ...megan, startedAt: NOW + 600_000, fillMs: 90_000 };
+  assert.deepEqual(screenApplication(skewed, NOW), { kind: "ok" });
 });
 
 test("one odd signal alone is not spam", () => {
