@@ -183,7 +183,8 @@
     "2026-11-10T12:00:00-08:00": {
       "event_id": "6pckoqkeuu7bo34et1m90mbfns",
       "month": "November",
-      "status": "hold"
+      "status": "cancelled",
+      "note": "Jeff cancelled 2026-11-03, off booking page; hold event deleted from calendar"
     },
     "2026-11-12T10:00:00-08:00": {
       "event_id": "6gauoj9ii3eub89ov3e6mkefp4",
