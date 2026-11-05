@@ -157,7 +157,8 @@
     "2026-11-06T10:00:00-08:00": {
       "event_id": "ugcafsoodd5dnrdt5gg5d80hfo",
       "month": "November",
-      "status": "hold"
+      "status": "cancelled",
+      "note": "Jeff cancelled 2026-11-05 (something came up), off booking page; hold event still on calendar (delete pending)"
     },
     "2026-11-06T12:00:00-08:00": {
       "event_id": "5s2qdd7o0jr2too98buvtv79ks",
