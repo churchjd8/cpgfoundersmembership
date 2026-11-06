@@ -72,8 +72,8 @@ export default async function ApplyThankYouPage({
         <p className="mt-6 text-center text-sm text-muted">
           {!wantsSession && (
             <>
-              Joshua will also email you the full breakdown of both 1:1 advisory tiers before the
-              call.{" "}
+              Joshua will also email you the full breakdown of Private Advisory, including what
+              it costs, before the call.{" "}
             </>
           )}
           Or go back to{" "}

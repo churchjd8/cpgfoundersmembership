@@ -39,7 +39,7 @@ Steps:
 
    {Personal paragraph: 2 to 4 sentences. Reflect their specific challenge and 90-day breakthrough back in plain words, show you actually read it, and say why it's right in Jeff's wheelhouse. Use ONE relevant Jeff credential that matches their challenge: fundraising → "He's raised $275M+ across 40+ rounds"; scaling, retail or distribution → "He co-founded Suja Juice and scaled it past $100M in five years before a $300M exit"; general or exits → "He's been founder/CEO eight times with five exits". Never invent facts about their business.}
 
-   {Breakdown sentence. If "Interested in" is Private Advisory, VIP Advisory or "Not sure": "Since you applied, here's the full breakdown of working with Jeff 1:1. Both tiers, what's included, and what it costs. It isn't linked anywhere public, so this is the only place to see it:" If "Interested in" is Strategy Session: "Everything about the Strategy Session, what's included and what it costs, is here:"}
+   {Breakdown sentence. If "Interested in" is Private Advisory, VIP Advisory or "Not sure": "Since you applied, here's the full breakdown of working with Jeff 1:1. There are two ways to do it, Private and VIP, and both are laid out here with what's included and what it costs. It isn't linked anywhere public, so this is the only place to see it:" If "Interested in" is Strategy Session: "Everything about the Strategy Session, what's included and what it costs, is here:"}
 
    {Work with Jeff link}
 

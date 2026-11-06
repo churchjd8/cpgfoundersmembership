@@ -15,12 +15,12 @@ const revenueStages = [
   "$10M+",
 ];
 
-// Matches the ?interest= values the /work-with-jeff buttons link with. The
-// advisory options carry no price on purpose: the reveal happens on the
-// unlisted /advisory page Joshua sends after the application.
+// Matches the ?interest= values the /work-with-jeff buttons link with. Private
+// Advisory carries no price on purpose, and the Private vs VIP split isn't
+// offered here: both happen on the unlisted /advisory page Joshua sends after
+// the application.
 const interests = [
-  { value: "private", label: "1:1 Private Advisory" },
-  { value: "vip", label: "VIP Advisory" },
+  { value: "private", label: "Private Advisory" },
   { value: "session", label: "A one-time Strategy Session ($997)" },
   { value: "unsure", label: "Not sure yet, help me choose" },
 ];

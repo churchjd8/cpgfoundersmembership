@@ -7,13 +7,12 @@ import {
   STRATEGY_SESSION_PRICE_USD,
 } from "@/lib/strategy-session-offer";
 
-// Every way to work with Jeff on one page, as a ladder: free → Babu → MBA are
-// buy-now, the Strategy Session is buy-now and leads to onboarding, and the two
-// advisory tiers go through /apply, which drops the founder straight onto an
-// intro call. Self-serve prices are shown in full. The two advisory tiers are
-// deliberately unpriced here (apply first): their numbers live on the unlisted
-// /advisory breakdown page Joshua sends after an application, sourced from
-// src/lib/advisory-offer.ts.
+// Every way to work with Jeff on one page. Private Advisory leads and is
+// apply-first: one unpriced block, no tiers and no side-by-side chart. "Apply"
+// drops the founder onto the intro call booking, and Joshua's reply sends the
+// unlisted /advisory breakdown (the two tiers and their prices, from
+// src/lib/advisory-offer.ts). The Strategy Session is buy-now and credited
+// toward advisory; free → Babu → MBA are self-serve and priced in full.
 
 export const metadata: Metadata = {
   title: "Work with Jeff Church - CPG Founders Group",
@@ -66,16 +65,6 @@ function PrivateIcon() {
     <svg {...iconProps}>
       <circle cx="12" cy="12" r="9" />
       <path d="m15.5 8.5-2 5-5 2 2-5 5-2Z" />
-    </svg>
-  );
-}
-
-function VipIcon() {
-  // A gem: the VIP tier.
-  return (
-    <svg {...iconProps}>
-      <path d="M6.5 4.5h11l3.5 5-9 10-9-10 3.5-5Z" />
-      <path d="M3 9.5h18M9.5 4.5 8 9.5l4 10 4-10-1.5-5" />
     </svg>
   );
 }
@@ -144,64 +133,33 @@ const sessionIncludes = [
   },
 ];
 
-const advisory = [
+// One block, written tier-neutral. The Private vs VIP split (kickoff length,
+// 1:1 cadence, price) is deliberately not on this page; it's on /advisory.
+const advisoryPoints = [
   {
-    key: "private",
-    Icon: PrivateIcon,
-    name: "Private Advisory",
-    blurb: "Jeff in your corner every month while you execute the plan.",
-    flagship: false,
-    points: [
-      {
-        title: "Strategy Session to kick off",
-        body: "Your engagement opens with the 90-minute session. Already did one? It's credited.",
-      },
-      { title: "Monthly 60-minute 1:1 with Jeff", body: "Every month, to work the plan and make the calls in real time." },
-      {
-        title: "Email support in between",
-        body: "Gut-checks on a retailer ask, eyes on your model or deck, a second opinion when you need one.",
-      },
-    ],
+    title: "A deep-dive kickoff",
+    body: "Jeff goes deep on your business under NDA, with pre-work and his own research done first. You walk out with the roadmap and your priorities ranked.",
   },
   {
-    key: "vip",
-    Icon: VipIcon,
-    name: "VIP Advisory",
-    blurb: "Jeff close, for founders in the middle of a raise, a reset, or a big retail push.",
-    flagship: true,
-    points: [
-      {
-        title: "Half-day VIP deep dive to kick off",
-        body: "A half day with Jeff under NDA, building your roadmap across every function of the business at once.",
-      },
-      { title: "Bi-weekly 60-minute 1:1s", body: "Every other week. Double the direct time with Jeff." },
-      {
-        title: "Priority email access",
-        body: "You go to the front of the line. Jeff gets back to you first, between every call.",
-      },
-    ],
+    title: "Regular 1:1s with Jeff",
+    body: "Standing calls to work the plan and make the calls in real time, with Jeff in your corner while you execute.",
   },
-];
-
-const advisoryIncludes = [
-  "Babu AI Pro subscription ($200/mo value)",
-  "MBA for CPG",
-  "Warm intros to buyers, brokers, distributors, co-mans and investors",
-  "Monthly speaker series",
-  "Retailer and investor pitch slams",
-  "ROI guarantee",
-];
-
-const comparison: { label: string; s: string | boolean; p: string | boolean; v: string | boolean }[] = [
-  { label: "Investment", s: `${session} one time`, p: "By application", v: "By application" },
-  { label: "How to start", s: "Buy now", p: "Apply", v: "Apply" },
-  { label: "Kickoff", s: "90-min session", p: "90-min session", v: "Half-day deep dive" },
-  { label: "Ongoing 1:1s with Jeff", s: false, p: "Monthly", v: "Bi-weekly" },
-  { label: "Email support", s: false, p: true, v: "Priority" },
-  { label: "MBA for CPG", s: true, p: true, v: true },
-  { label: "Babu AI Pro ($200/mo value)", s: false, p: true, v: true },
-  { label: "Warm industry intros", s: false, p: true, v: true },
-  { label: "Guarantee", s: "Full refund if it\u2019s not a fit", p: "ROI guarantee", v: "ROI guarantee" },
+  {
+    title: "Email access between calls",
+    body: "Gut-checks on a retailer ask, eyes on your model or deck, a second opinion when you need one.",
+  },
+  {
+    title: "Warm industry intros",
+    body: "Buyers, brokers, distributors, co-mans and investors. Jeff is one degree from most of the space.",
+  },
+  {
+    title: "Babu AI Pro and the MBA for CPG included",
+    body: "The AI advisor trained on Jeff's playbook ($200/mo value), plus lifetime access to the full course and template library.",
+  },
+  {
+    title: "The ROI guarantee",
+    body: "Show up fully, work the strategy, and if you don't see a tangible return in three months, Jeff keeps working with you for free until you do or refunds you 100%.",
+  },
 ];
 
 const credentials = [
@@ -213,7 +171,7 @@ const credentials = [
 
 const applySteps = [
   { n: "01", title: "Apply", body: "Two minutes. Tell us where the business is and which option you're leaning toward." },
-  { n: "02", title: "Book a call", body: "You pick a time right after you apply, and we send you the full breakdown of both tiers before we talk." },
+  { n: "02", title: "Book a call", body: "You pick a time right after you apply, and we send you the full breakdown of Private Advisory before we talk." },
   { n: "03", title: "Start with Jeff", body: "If it's a fit both ways, we get your kickoff on Jeff's calendar." },
 ];
 
@@ -227,12 +185,6 @@ function Check() {
       />
     </svg>
   );
-}
-
-function Cell({ value }: { value: string | boolean }) {
-  if (value === true) return <Check />;
-  if (value === false) return <span className="text-border">&mdash;</span>;
-  return <>{value}</>;
 }
 
 function BuySessionButton({ className = "" }: { className?: string }) {
@@ -268,17 +220,17 @@ export default function WorkWithJeffPage() {
               Private 1:1 advisory is by application, with 1-2 spots open right now.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
-              <a
-                href="#session"
+              <Link
+                href="/apply?interest=private"
                 className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-accent hover:bg-accent-dark text-white font-semibold transition-colors"
               >
-                Book a Strategy Session
-              </a>
+                Apply for Private Advisory
+              </Link>
               <a
-                href="#advisory"
+                href="#session"
                 className="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-white/25 hover:bg-white/10 text-white font-semibold transition-colors"
               >
-                See private advisory
+                Book a Strategy Session
               </a>
             </div>
           </div>
@@ -295,74 +247,58 @@ export default function WorkWithJeffPage() {
         </div>
       </section>
 
-      {/* ========== START TODAY ========== */}
-      <section className="py-16 md:py-24">
+      {/* ========== PRIVATE ADVISORY ========== */}
+      <section id="advisory" className="py-16 md:py-24 scroll-mt-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="max-w-2xl">
-            <span className="text-sm font-bold uppercase tracking-wider text-accent">Start today</span>
-            <h2 className="mt-2 text-2xl sm:text-3xl font-bold tracking-tight">Learn Jeff&rsquo;s playbook on your own</h2>
-            <p className="mt-4 text-muted leading-relaxed">No application, no call. Pick one and go.</p>
-          </div>
-
-          <div className="mt-12 grid md:grid-cols-3 gap-6">
-            {selfServe.map((tier) => (
-              <div key={tier.name} className="flex flex-col rounded-2xl border border-border bg-card p-8">
-                <div className="flex items-center gap-3">
+          <div className="rounded-2xl border-2 border-accent bg-card-flagship shadow-sm p-8 md:p-12">
+            <div className="grid lg:grid-cols-5 gap-10 lg:gap-12 items-start">
+              <div className="lg:col-span-2">
+                <span className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider bg-accent text-white rounded-full">
+                  By application
+                </span>
+                <div className="mt-5 flex items-center gap-3">
                   <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-xl bg-accent-light text-accent-dark">
-                    <tier.Icon />
+                    <PrivateIcon />
                   </div>
-                  <h3 className="text-2xl font-bold tracking-tight">{tier.name}</h3>
+                  <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">Private Advisory</h2>
                 </div>
-                <p className="mt-3 flex items-baseline gap-1">
-                  {"prefix" in tier && (
-                    <span className="mr-1 text-sm text-muted">{tier.prefix}</span>
-                  )}
-                  {"listPrice" in tier && (
-                    <span className="mr-1 text-lg text-muted line-through">{tier.listPrice}</span>
-                  )}
-                  <span className="text-3xl font-bold">{tier.price}</span>
-                  <span className="text-muted text-sm">{tier.unit}</span>
+                <p className="mt-4 text-lg font-semibold text-accent">1-2 spots open right now</p>
+                <p className="mt-5 text-muted leading-relaxed">
+                  Jeff in your corner, building the strategy with you and staying close while you
+                  execute. He works with a small number of founders at a time, so this starts with
+                  a short application and a call. The full breakdown, including what it costs,
+                  comes after you apply.
                 </p>
-                <p className="mt-3 text-muted">{tier.blurb}</p>
-                <ul className="mt-6 space-y-3 flex-1">
-                  {tier.points.map((p) => (
-                    <li key={p} className="flex gap-3 text-sm">
-                      <Check />
-                      <span>{p}</span>
-                    </li>
-                  ))}
-                </ul>
-                <div className="mt-8 space-y-3">
-                  {tier.cta.external ? (
-                    <a
-                      href={tier.cta.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block text-center px-6 py-3 rounded-lg border-2 border-foreground hover:bg-foreground hover:text-white font-semibold transition-colors"
-                    >
-                      {tier.cta.label}
-                    </a>
-                  ) : (
-                    <Link
-                      href={tier.cta.href}
-                      className="block text-center px-6 py-3 rounded-lg border-2 border-foreground hover:bg-foreground hover:text-white font-semibold transition-colors"
-                    >
-                      {tier.cta.label}
-                    </Link>
-                  )}
-                  {tier.secondary && (
-                    <a
-                      href={tier.secondary.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block text-center text-sm font-semibold text-accent hover:underline"
-                    >
-                      {tier.secondary.label} &rarr;
-                    </a>
-                  )}
+                <div className="mt-8">
+                  <Link
+                    href="/apply?interest=private"
+                    className="inline-flex w-full sm:w-auto items-center justify-center px-8 py-4 rounded-lg bg-accent hover:bg-accent-dark text-white font-semibold text-lg transition-colors"
+                  >
+                    Apply for Private Advisory &rarr;
+                  </Link>
+                  <p className="mt-3 text-xs text-muted">
+                    Two minutes, then you pick a time for a short intro call.
+                  </p>
                 </div>
               </div>
-            ))}
+
+              <div className="lg:col-span-3 grid sm:grid-cols-2 gap-5">
+                {advisoryPoints.map((item) => (
+                  <div key={item.title} className="rounded-xl border border-border bg-background p-6">
+                    <div className="flex gap-3">
+                      <Check />
+                      <div>
+                        <h3 className="font-bold">{item.title}</h3>
+                        <p className="mt-2 text-sm text-muted leading-relaxed">{item.body}</p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+                <p className="sm:col-span-2 text-sm text-muted leading-relaxed">
+                  Plus the monthly speaker series and the retailer and investor pitch slams.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -373,7 +309,7 @@ export default function WorkWithJeffPage() {
           <div className="grid lg:grid-cols-5 gap-12 items-start">
             <div className="lg:col-span-2">
               <span className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider bg-accent text-white rounded-full">
-                Most founders start here
+                Not ready for advisory? Start here
               </span>
               <h2 className="mt-5 text-3xl sm:text-4xl font-bold tracking-tight">Jeff Strategy Session</h2>
               <p className="mt-4 flex items-baseline gap-2">
@@ -441,7 +377,7 @@ export default function WorkWithJeffPage() {
               <div className="sm:col-span-2 rounded-xl border-2 border-accent bg-background p-6">
                 <h3 className="font-bold">Want to keep going with Jeff?</h3>
                 <p className="mt-2 text-sm text-muted leading-relaxed">
-                  Your {session} is credited toward Private or VIP Advisory if you start within{" "}
+                  Your {session} is credited toward Private Advisory if you start within{" "}
                   {STRATEGY_SESSION_CREDIT_DAYS} days. The session becomes your kickoff, so you
                   lose nothing by starting here.
                 </p>
@@ -451,108 +387,74 @@ export default function WorkWithJeffPage() {
         </div>
       </section>
 
-      {/* ========== ADVISORY ========== */}
-      <section id="advisory" className="py-16 md:py-24 scroll-mt-20">
+      {/* ========== START TODAY ========== */}
+      <section className="py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
-            <span className="text-sm font-bold uppercase tracking-wider text-accent">By application</span>
-            <h2 className="mt-2 text-2xl sm:text-3xl font-bold tracking-tight">Private advisory with Jeff</h2>
-            <p className="mt-4 text-muted leading-relaxed">
-              Jeff in your corner month after month, building the strategy with you and staying
-              close while you execute. He works with 1-2 founders at a time, so these start with
-              a short application and a call, and you get the full breakdown of both tiers before
-              we talk.
-            </p>
+            <span className="text-sm font-bold uppercase tracking-wider text-accent">Start today</span>
+            <h2 className="mt-2 text-2xl sm:text-3xl font-bold tracking-tight">Learn Jeff&rsquo;s playbook on your own</h2>
+            <p className="mt-4 text-muted leading-relaxed">Not ready for 1:1 yet? No application, no call. Pick one and go.</p>
           </div>
 
-          <div className="mt-12 grid lg:grid-cols-2 gap-8 items-stretch">
-            {advisory.map((tier) => (
-              <div
-                key={tier.key}
-                className={`flex flex-col rounded-2xl border p-8 md:p-10 ${
-                  tier.flagship ? "border-accent bg-card-flagship shadow-sm" : "border-border bg-card"
-                }`}
-              >
+          <div className="mt-12 grid md:grid-cols-3 gap-6">
+            {selfServe.map((tier) => (
+              <div key={tier.name} className="flex flex-col rounded-2xl border border-border bg-card p-8">
                 <div className="flex items-center gap-3">
                   <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-xl bg-accent-light text-accent-dark">
                     <tier.Icon />
                   </div>
                   <h3 className="text-2xl font-bold tracking-tight">{tier.name}</h3>
                 </div>
-                <p className="mt-4 flex items-baseline gap-2">
-                  <span className="text-2xl font-bold">By application</span>
+                <p className="mt-3 flex items-baseline gap-1">
+                  {"prefix" in tier && (
+                    <span className="mr-1 text-sm text-muted">{tier.prefix}</span>
+                  )}
+                  {"listPrice" in tier && (
+                    <span className="mr-1 text-lg text-muted line-through">{tier.listPrice}</span>
+                  )}
+                  <span className="text-3xl font-bold">{tier.price}</span>
+                  <span className="text-muted text-sm">{tier.unit}</span>
                 </p>
-                <p className="mt-1 text-sm font-semibold text-accent">1-2 spots open right now</p>
-                <p className="mt-5 text-muted leading-relaxed">{tier.blurb}</p>
-                <ul className="mt-8 space-y-5 flex-1">
-                  {tier.points.map((point) => (
-                    <li key={point.title} className="flex gap-3">
+                <p className="mt-3 text-muted">{tier.blurb}</p>
+                <ul className="mt-6 space-y-3 flex-1">
+                  {tier.points.map((p) => (
+                    <li key={p} className="flex gap-3 text-sm">
                       <Check />
-                      <div>
-                        <p className="font-semibold">{point.title}</p>
-                        <p className="mt-1 text-sm text-muted leading-relaxed">{point.body}</p>
-                      </div>
+                      <span>{p}</span>
                     </li>
                   ))}
                 </ul>
-                <Link
-                  href={`/apply?interest=${tier.key}`}
-                  className={`mt-10 block text-center px-6 py-4 rounded-lg font-semibold transition-colors ${
-                    tier.flagship
-                      ? "bg-accent hover:bg-accent-dark text-white"
-                      : "border-2 border-foreground hover:bg-foreground hover:text-white"
-                  }`}
-                >
-                  Apply to learn more
-                </Link>
+                <div className="mt-8 space-y-3">
+                  {tier.cta.external ? (
+                    <a
+                      href={tier.cta.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block text-center px-6 py-3 rounded-lg border-2 border-foreground hover:bg-foreground hover:text-white font-semibold transition-colors"
+                    >
+                      {tier.cta.label}
+                    </a>
+                  ) : (
+                    <Link
+                      href={tier.cta.href}
+                      className="block text-center px-6 py-3 rounded-lg border-2 border-foreground hover:bg-foreground hover:text-white font-semibold transition-colors"
+                    >
+                      {tier.cta.label}
+                    </Link>
+                  )}
+                  {tier.secondary && (
+                    <a
+                      href={tier.secondary.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block text-center text-sm font-semibold text-accent hover:underline"
+                    >
+                      {tier.secondary.label} &rarr;
+                    </a>
+                  )}
+                </div>
               </div>
             ))}
-          </div>
-
-          <div className="mt-8 rounded-2xl border border-border bg-card p-8">
-            <h3 className="font-bold">Both advisory tiers include</h3>
-            <ul className="mt-5 grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
-              {advisoryIncludes.map((item) => (
-                <li key={item} className="flex gap-3 text-sm">
-                  <Check />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-            <p className="mt-6 text-sm text-muted leading-relaxed">
-              <strong className="text-foreground">The guarantee:</strong>{" "}show up fully, work the
-              strategy, and if you don&rsquo;t see a tangible return in three months, Jeff keeps
-              working with you for free until you do or refunds you 100%.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* ========== COMPARISON ========== */}
-      <section className="py-16 md:py-24 bg-card border-y border-border">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight">Working with Jeff, side by side</h2>
-          <div className="mt-10 overflow-x-auto rounded-2xl border border-border">
-            <table className="w-full min-w-[640px] text-left bg-background">
-              <thead>
-                <tr className="border-b border-border">
-                  <th className="p-5 text-sm font-semibold text-muted w-1/4">&nbsp;</th>
-                  <th className="p-5 text-sm font-bold">Strategy Session</th>
-                  <th className="p-5 text-sm font-bold">Private Advisory</th>
-                  <th className="p-5 text-sm font-bold bg-card-flagship">VIP Advisory</th>
-                </tr>
-              </thead>
-              <tbody>
-                {comparison.map((row) => (
-                  <tr key={row.label} className="border-b border-border last:border-0">
-                    <th className="p-5 text-sm font-semibold align-top">{row.label}</th>
-                    <td className="p-5 text-sm text-muted align-top"><Cell value={row.s} /></td>
-                    <td className="p-5 text-sm text-muted align-top"><Cell value={row.p} /></td>
-                    <td className="p-5 text-sm text-muted align-top bg-card-flagship"><Cell value={row.v} /></td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
           </div>
         </div>
       </section>
