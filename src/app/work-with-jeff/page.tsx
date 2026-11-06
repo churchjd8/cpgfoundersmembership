@@ -10,9 +10,10 @@ import {
 // Every way to work with Jeff on one page, as a ladder: free → Babu → MBA are
 // buy-now, the Strategy Session is buy-now and leads to onboarding, and the two
 // advisory tiers go through /apply, which drops the founder straight onto an
-// intro call. Pricing is shown in full on purpose, so the call is about fit,
-// not price. Source of truth for the offer is
-// "Jeff Church Advisory - Offers One-Pager.md"; keep them moving together.
+// intro call. Self-serve prices are shown in full. The two advisory tiers are
+// deliberately unpriced here (apply first): their numbers live on the unlisted
+// /advisory breakdown page Joshua sends after an application, sourced from
+// src/lib/advisory-offer.ts.
 
 export const metadata: Metadata = {
   title: "Work with Jeff Church - CPG Founders Group",
@@ -148,7 +149,6 @@ const advisory = [
     key: "private",
     Icon: PrivateIcon,
     name: "Private Advisory",
-    price: "$1,997",
     blurb: "Jeff in your corner every month while you execute the plan.",
     flagship: false,
     points: [
@@ -167,7 +167,6 @@ const advisory = [
     key: "vip",
     Icon: VipIcon,
     name: "VIP Advisory",
-    price: "$4,997",
     blurb: "Jeff close, for founders in the middle of a raise, a reset, or a big retail push.",
     flagship: true,
     points: [
@@ -194,8 +193,7 @@ const advisoryIncludes = [
 ];
 
 const comparison: { label: string; s: string | boolean; p: string | boolean; v: string | boolean }[] = [
-  { label: "Investment", s: `${session} one time`, p: "$1,997/mo", v: "$4,997/mo" },
-  { label: "Commitment", s: "None", p: "3-month minimum", v: "3-month minimum" },
+  { label: "Investment", s: `${session} one time`, p: "By application", v: "By application" },
   { label: "How to start", s: "Buy now", p: "Apply", v: "Apply" },
   { label: "Kickoff", s: "90-min session", p: "90-min session", v: "Half-day deep dive" },
   { label: "Ongoing 1:1s with Jeff", s: false, p: "Monthly", v: "Bi-weekly" },
@@ -215,7 +213,7 @@ const credentials = [
 
 const applySteps = [
   { n: "01", title: "Apply", body: "Two minutes. Tell us where the business is and which option you're leaning toward." },
-  { n: "02", title: "Book a call", body: "You pick a time right after you apply. No waiting on an email from us." },
+  { n: "02", title: "Book a call", body: "You pick a time right after you apply, and we send you the full breakdown of both tiers before we talk." },
   { n: "03", title: "Start with Jeff", body: "If it's a fit both ways, we get your kickoff on Jeff's calendar." },
 ];
 
@@ -267,7 +265,7 @@ export default function WorkWithJeffPage() {
               Jeff co-founded Suja Juice and scaled it past $100M in five years before a $300M
               exit. He has raised $275M+ and been founder/CEO eight times. Whether you want to learn from his
               playbook on your own or have him in your corner 1:1, there&rsquo;s a way in.
-              Every price is on this page.
+              Private 1:1 advisory is by application, with 1-2 spots open right now.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
               <a
@@ -460,9 +458,10 @@ export default function WorkWithJeffPage() {
             <span className="text-sm font-bold uppercase tracking-wider text-accent">By application</span>
             <h2 className="mt-2 text-2xl sm:text-3xl font-bold tracking-tight">Private advisory with Jeff</h2>
             <p className="mt-4 text-muted leading-relaxed">
-              Jeff in your corner for three months or more, building the strategy with you and
-              staying close while you execute. He works with a small number of founders at a time,
-              so these start with a short application and a call.
+              Jeff in your corner month after month, building the strategy with you and staying
+              close while you execute. He works with 1-2 founders at a time, so these start with
+              a short application and a call, and you get the full breakdown of both tiers before
+              we talk.
             </p>
           </div>
 
@@ -481,10 +480,9 @@ export default function WorkWithJeffPage() {
                   <h3 className="text-2xl font-bold tracking-tight">{tier.name}</h3>
                 </div>
                 <p className="mt-4 flex items-baseline gap-2">
-                  <span className="text-4xl font-bold">{tier.price}</span>
-                  <span className="text-muted">/month</span>
+                  <span className="text-2xl font-bold">By application</span>
                 </p>
-                <p className="mt-1 text-sm font-semibold text-accent">3-month minimum</p>
+                <p className="mt-1 text-sm font-semibold text-accent">1-2 spots open right now</p>
                 <p className="mt-5 text-muted leading-relaxed">{tier.blurb}</p>
                 <ul className="mt-8 space-y-5 flex-1">
                   {tier.points.map((point) => (
@@ -505,7 +503,7 @@ export default function WorkWithJeffPage() {
                       : "border-2 border-foreground hover:bg-foreground hover:text-white"
                   }`}
                 >
-                  Apply for {tier.name}
+                  Apply to learn more
                 </Link>
               </div>
             ))}

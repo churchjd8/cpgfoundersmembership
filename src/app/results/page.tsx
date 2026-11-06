@@ -273,12 +273,12 @@ export default function ResultsPage() {
             Want to see what working with Jeff looks like?
           </h2>
           <p className="mt-6 text-muted leading-relaxed">
-            The full breakdown of how the three months work, what&rsquo;s included, and the ROI
-            guarantee behind it is all on one page.
+            Every way to work with Jeff, from free resources to private 1:1 advisory, is on one
+            page.
           </p>
           <div className="mt-8">
             <Link
-              href="/intensive"
+              href="/work-with-jeff"
               className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-accent hover:bg-accent-dark text-white font-semibold transition-colors"
             >
               See how it works

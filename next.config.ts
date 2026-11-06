@@ -9,12 +9,16 @@ const nextConfig: NextConfig = {
       // /apply is the canonical application URL. /work-with-jeff is its own
       // page now (the offer ladder), so only its old subpaths still redirect.
       { source: "/work-with-jeff/:path+", destination: "/apply/:path+", permanent: true },
+      // /intensive was the old unlisted advisory breakdown; /advisory replaced it.
+      { source: "/intensive", destination: "/advisory", permanent: false },
+      { source: "/intensive/:path+", destination: "/advisory", permanent: false },
+      { source: "/vip-advisory", destination: "/advisory", permanent: false },
+      { source: "/vip-advisory/:path+", destination: "/advisory", permanent: false },
       { source: "/vip-day-apply", destination: "/apply", permanent: true },
       { source: "/vip-day-apply/:path*", destination: "/apply/:path*", permanent: true },
       { source: "/vipday", destination: "/apply", permanent: true },
       { source: "/90-day-breakthrough", destination: "/apply", permanent: false },
       { source: "/90-day-breakthrough-apply", destination: "/apply", permanent: false },
-      { source: "/advisory", destination: "/apply", permanent: false },
 
       // The dictionary is the canonical public name; preserve old glossary links.
       { source: "/cpg-glossary", destination: "/cpg-dictionary", permanent: true },

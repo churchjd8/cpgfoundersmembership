@@ -15,10 +15,12 @@ const revenueStages = [
   "$10M+",
 ];
 
-// Matches the ?interest= values the /work-with-jeff buttons link with.
+// Matches the ?interest= values the /work-with-jeff buttons link with. The
+// advisory options carry no price on purpose: the reveal happens on the
+// unlisted /advisory page Joshua sends after the application.
 const interests = [
-  { value: "private", label: "Private Advisory ($1,997/mo, 3-month minimum)" },
-  { value: "vip", label: "VIP Advisory ($4,997/mo, 3-month minimum)" },
+  { value: "private", label: "1:1 Private Advisory" },
+  { value: "vip", label: "VIP Advisory" },
   { value: "session", label: "A one-time Strategy Session ($997)" },
   { value: "unsure", label: "Not sure yet, help me choose" },
 ];
@@ -94,7 +96,7 @@ function ApplyForm() {
               Bring Jeff Church&rsquo;s experience and strategy into your business in a 1:1 way.
               Tell us where you are and what you&rsquo;re facing. As soon as you submit, you can
               book a short intro call with our team to make sure it&rsquo;s a fit. Every option
-              and price is on the{" "}
+              is on the{" "}
               <Link href="/work-with-jeff" className="text-gold font-semibold hover:underline">
                 Work with Jeff
               </Link>{" "}

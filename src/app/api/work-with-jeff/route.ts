@@ -1,13 +1,16 @@
 import { NextResponse } from "next/server";
 import { screenApplication } from "@/lib/application-spam";
+import { PRIVATE_ADVISORY_PRICE_USD, VIP_ADVISORY_PRICE_USD } from "@/lib/advisory-offer";
+import { STRATEGY_SESSION_PRICE_USD } from "@/lib/strategy-session-offer";
 
 const VIP_DAY_FORM_ID = "2149550479";
 
 // The ?interest= values from /apply, as labels for the email and Kajabi custom_20.
+// Prices are internal here; the public form shows the advisory tiers unpriced.
 const INTEREST_LABELS: Record<string, string> = {
-  private: "Private Advisory ($1,997/mo)",
-  vip: "VIP Advisory ($4,997/mo)",
-  session: "Strategy Session ($997)",
+  private: `Private Advisory ($${PRIVATE_ADVISORY_PRICE_USD.toLocaleString()}/mo)`,
+  vip: `VIP Advisory ($${VIP_ADVISORY_PRICE_USD.toLocaleString()}/mo)`,
+  session: `Strategy Session ($${STRATEGY_SESSION_PRICE_USD.toLocaleString()})`,
   unsure: "Not sure, help me choose",
 };
 

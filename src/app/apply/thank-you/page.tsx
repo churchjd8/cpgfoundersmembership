@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { BookingEmbed, BOOKING_URL } from "@/app/intensive/booking-embed";
+import { BOOKING_URL } from "@/components/booking-embed";
 
 export const metadata: Metadata = {
   title: "Application Received - Work with Jeff",
@@ -8,8 +8,14 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
-// Pricing now lives on /work-with-jeff, so an application goes straight to the
-// intro call booking instead of waiting on an email with the /intensive link.
+// An application goes straight to the intro call booking, no waiting on an
+// email. Joshua's reply (routines/application-reply-drafts.md) then carries the
+// unlisted /advisory breakdown, with the 1:1 pricing, before the call.
+//
+// The booking is a link rather than the inline Cal.com embed: as of Nov 2026
+// cal.arkpartners.ai's frame-ancestors policy doesn't list this domain, so the
+// embed renders a dead box for six seconds and falls back anyway. Swap
+// BookingEmbed back in once that header includes cpgfoundersgroup.com.
 export default async function ApplyThankYouPage({
   searchParams,
 }: {
@@ -51,16 +57,26 @@ export default async function ApplyThankYouPage({
           </div>
         )}
 
-        <div className="mt-10">
-          <BookingEmbed />
+        <div className="mt-10 rounded-2xl border border-border bg-card p-8 md:p-10 text-center">
+          <a
+            href={BOOKING_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-accent hover:bg-accent-dark text-white font-semibold text-lg transition-colors"
+          >
+            Book your intro call &rarr;
+          </a>
+          <p className="mt-4 text-sm text-muted">Twenty minutes. The scheduler opens in a new tab.</p>
         </div>
 
-        <p className="mt-4 text-center text-sm text-muted">
-          Prefer to open it in its own tab?{" "}
-          <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="text-accent font-semibold hover:underline">
-            Book here instead
-          </a>
-          . Or go back to{" "}
+        <p className="mt-6 text-center text-sm text-muted">
+          {!wantsSession && (
+            <>
+              Joshua will also email you the full breakdown of both 1:1 advisory tiers before the
+              call.{" "}
+            </>
+          )}
+          Or go back to{" "}
           <Link href="/work-with-jeff" className="text-accent font-semibold hover:underline">
             all the ways to work with Jeff
           </Link>

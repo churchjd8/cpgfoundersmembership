@@ -1,6 +1,8 @@
 # Work With Jeff Church
 ## The 3-Month Advisory Intensive — Two Ways to Work Together
 
+> **Superseded Oct 27, 2026.** The current offer is Private Advisory ($1,997/mo) and VIP Advisory ($4,997/mo), 3-month minimum, with the $997 Strategy Session as the Private kickoff. Live source of truth: `src/lib/advisory-offer.ts` and the unlisted page `src/app/advisory/page.tsx` (cpgfoundersgroup.com/advisory). The numbers below are the summer 2026 version, kept for history.
+
 A focused 3-month intensive where Jeff gets deep in your business, builds the strategy and roadmap with you, and stays in your corner as you execute. Two levels, depending on how much direct time with Jeff you want.
 
 ---
