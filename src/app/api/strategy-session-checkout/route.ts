@@ -52,6 +52,6 @@ export async function POST() {
   } catch (err) {
     // No second checkout to fall back on, so send them to apply instead.
     console.error("Strategy session checkout error:", err);
-    return NextResponse.redirect(`${SITE_URL}/apply?interest=session`, 303);
+    return NextResponse.redirect(`${SITE_URL}/work-with-jeff`, 303);
   }
 }

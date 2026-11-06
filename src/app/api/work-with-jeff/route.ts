@@ -5,8 +5,9 @@ import { STRATEGY_SESSION_PRICE_USD } from "@/lib/strategy-session-offer";
 
 const VIP_DAY_FORM_ID = "2149550479";
 
-// The ?interest= values from /apply, as labels for the email and Kajabi custom_20.
-// Prices are internal here; the public form shows the advisory tiers unpriced.
+// Labels for an optional interest value, for the email and Kajabi custom_20.
+// /apply no longer asks the question (one offer, one call), so this only fires
+// for older links or a future form that sends it. Prices are internal here.
 const INTEREST_LABELS: Record<string, string> = {
   private: `Private Advisory ($${PRIVATE_ADVISORY_PRICE_USD.toLocaleString()}/mo)`,
   vip: `VIP Advisory ($${VIP_ADVISORY_PRICE_USD.toLocaleString()}/mo)`,
@@ -66,7 +67,7 @@ async function sendNotificationEmail(fields: {
         <p><strong>Email:</strong> ${fields.email}</p>
         <p><strong>Business:</strong> ${fields.business}</p>
         ${fields.website ? `<p><strong>Website:</strong> ${fields.website}</p>` : ""}
-        <p><strong>Interested in:</strong> ${INTEREST_LABELS[fields.interest || ""] || "Not given"}</p>
+        ${fields.interest ? `<p><strong>Interested in:</strong> ${INTEREST_LABELS[fields.interest] || fields.interest}</p>` : ""}
         <p><strong>Revenue:</strong> ${fields.revenue}</p>
         <hr>
         <p><strong>Biggest challenge right now:</strong></p>

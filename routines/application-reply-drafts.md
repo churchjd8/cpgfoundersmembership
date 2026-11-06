@@ -4,7 +4,7 @@ Schedule: every hour, 7 AM to 9 PM Pacific (cron `0 7-21 * * *`)
 
 Paste everything below the line into a new Routine in the Claude desktop app.
 
-How it works: every /apply submission hits `src/app/api/work-with-jeff/route.ts`, which emails joshua@teamchurch.co a "🔥 Work with Jeff Application: Name (Business) - Interest" notification from notifications@cpgfoundersgroup.com. Bots are dropped before that email goes out, and gibberish submissions arrive as "🚫 Likely spam application: ..." instead (see `src/lib/application-spam.ts`). This routine turns each real notification into a personal reply draft from Joshua that points to the right page (the unlisted /advisory breakdown for the 1:1 tiers, /work-with-jeff for the Strategy Session) and the intro call link. It never sends anything.
+How it works: every /apply submission hits `src/app/api/work-with-jeff/route.ts`, which emails joshua@teamchurch.co a "🔥 Work with Jeff Application: Name (Business) - Interest" notification from notifications@cpgfoundersgroup.com. Bots are dropped before that email goes out, and gibberish submissions arrive as "🚫 Likely spam application: ..." instead (see `src/lib/application-spam.ts`). This routine turns each real notification into a personal reply draft from Joshua that points to the unlisted /advisory breakdown (both 1:1 tiers with prices, Strategy Session as the lighter option) and the intro call link. It never sends anything.
 
 ---
 
@@ -16,7 +16,7 @@ Steps:
 
 1. Search joshua@teamchurch.co for emails from notifications@cpgfoundersgroup.com received in the last 3 days whose subject starts with "🔥 Work with Jeff Application". Ignore anything whose subject starts with "🚫 Likely spam".
 
-2. Open each one and read: Name, Email, Business, Website, Interested in, Revenue, Biggest challenge, What a breakthrough looks like in 90 days, How they heard about Jeff.
+2. Open each one and read: Name, Email, Business, Website, Revenue, Biggest challenge, What a breakthrough looks like in 90 days, How they heard about Jeff. (Older applications may also have an "Interested in" line; ignore it.)
 
 3. Skip an application when ANY of these is true:
    - It looks fake: random letter strings for the name, business or answers, a made-up website, or answers that say nothing. List it in the summary as "skipped, looks like spam" instead of drafting.
@@ -39,11 +39,11 @@ Steps:
 
    {Personal paragraph: 2 to 4 sentences. Reflect their specific challenge and 90-day breakthrough back in plain words, show you actually read it, and say why it's right in Jeff's wheelhouse. Use ONE relevant Jeff credential that matches their challenge: fundraising → "He's raised $275M+ across 40+ rounds"; scaling, retail or distribution → "He co-founded Suja Juice and scaled it past $100M in five years before a $300M exit"; general or exits → "He's been founder/CEO eight times with five exits". Never invent facts about their business.}
 
-   {Breakdown sentence. If "Interested in" is Private Advisory, VIP Advisory or "Not sure": "Since you applied, here's the full breakdown of working with Jeff 1:1. There are two ways to do it, Private and VIP, and both are laid out here with what's included and what it costs. It isn't linked anywhere public, so this is the only place to see it:" If "Interested in" is Strategy Session: "Everything about the Strategy Session, what's included and what it costs, is here:"}
+   Since you applied, here's the full breakdown of working with Jeff 1:1. There are two ways to do it, Private and VIP, and both are laid out here with what's included and what it costs. It isn't linked anywhere public, so this is the only place to see it:
 
-   {Work with Jeff link}
+   https://cpgfoundersgroup.com/advisory
 
-   {If "Interested in" is "Not sure, help me choose": "Since you weren't sure which option fits, have a read, and then grab a time with me here:" Otherwise: "Have a read, and if it feels like the right kind of support, grab a time with me here:"}
+   Have a read, and then grab a time with me here:
 
    https://cal.arkpartners.ai/joshua/intro
 
@@ -53,9 +53,7 @@ Steps:
 
    Joshua
 
-   Work with Jeff link (make it clickable, use the full URL as the link text):
-   - Interested in Strategy Session → https://cpgfoundersgroup.com/work-with-jeff#session
-   - Interested in Private Advisory, VIP Advisory, Not sure, or anything else → https://cpgfoundersgroup.com/advisory
+   Make both links clickable, with the full URL as the link text.
 
    Voice rules: casual but clear, short paragraphs, no em-dashes, no "honestly", sign off just "Joshua". Never call Joshua "Josh".
 

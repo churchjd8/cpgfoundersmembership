@@ -1,7 +1,7 @@
 "use client";
 
-import { Suspense, useEffect, useRef, useState, type FormEvent } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useEffect, useRef, useState, type FormEvent } from "react";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { HONEYPOT_FIELD } from "@/lib/application-spam";
 
@@ -15,32 +15,12 @@ const revenueStages = [
   "$10M+",
 ];
 
-// Matches the ?interest= values the /work-with-jeff buttons link with. Private
-// Advisory carries no price on purpose, and the Private vs VIP split isn't
-// offered here: both happen on the unlisted /advisory page Joshua sends after
-// the application.
-const interests = [
-  { value: "private", label: "Private Advisory" },
-  { value: "session", label: "A one-time Strategy Session ($997)" },
-  { value: "unsure", label: "Not sure yet, help me choose" },
-];
-
-// useSearchParams needs a Suspense boundary for the page to prerender.
+// One application for everything. The form deliberately doesn't ask which
+// offer they want: /work-with-jeff sells one thing (a call), and the call
+// sorts out advisory versus the Strategy Session.
 export default function WorkWithJeffApplyPage() {
-  return (
-    <Suspense>
-      <ApplyForm />
-    </Suspense>
-  );
-}
-
-function ApplyForm() {
   const router = useRouter();
-  const preset = useSearchParams().get("interest");
   const [status, setStatus] = useState<"idle" | "loading" | "error">("idle");
-  const [interest, setInterest] = useState(
-    interests.some((i) => i.value === preset) ? preset! : "",
-  );
   // Set on mount, not at render, so the prerendered page doesn't bake in build time.
   const startedAt = useRef(0);
   useEffect(() => {
@@ -67,7 +47,7 @@ function ApplyForm() {
       });
 
       if (res.ok) {
-        router.push(`/apply/thank-you${interest ? `?interest=${interest}` : ""}`);
+        router.push("/apply/thank-you");
       } else {
         setStatus("error");
       }
@@ -95,12 +75,7 @@ function ApplyForm() {
             <p className="mt-6 text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
               Bring Jeff Church&rsquo;s experience and strategy into your business in a 1:1 way.
               Tell us where you are and what you&rsquo;re facing. As soon as you submit, you can
-              book a short intro call with our team to make sure it&rsquo;s a fit. Every option
-              is on the{" "}
-              <Link href="/work-with-jeff" className="text-gold font-semibold hover:underline">
-                Work with Jeff
-              </Link>{" "}
-              page.
+              book a short intro call with our team to make sure it&rsquo;s a fit.
             </p>
             <p className="mt-6 text-base text-white/80 max-w-2xl mx-auto leading-relaxed">
               Jeff has room for <strong className="text-white">1-2 more founders</strong> right
@@ -188,30 +163,6 @@ function ApplyForm() {
                   className="w-full px-4 py-3 rounded-lg border border-border bg-white focus:outline-none focus:ring-2 focus:ring-accent"
                 />
               </div>
-            </div>
-
-            <div>
-              <fieldset>
-                <legend className="block text-sm font-medium mb-2">
-                  What are you interested in? <span className="text-red-500">*</span>
-                </legend>
-                <div className="space-y-2">
-                  {interests.map((i) => (
-                    <label key={i.value} className="flex items-center gap-3 cursor-pointer">
-                      <input
-                        type="radio"
-                        name="interest"
-                        value={i.value}
-                        required
-                        checked={interest === i.value}
-                        onChange={() => setInterest(i.value)}
-                        className="h-4 w-4 text-accent border-border focus:ring-accent"
-                      />
-                      <span className="text-sm">{i.label}</span>
-                    </label>
-                  ))}
-                </div>
-              </fieldset>
             </div>
 
             <div>
