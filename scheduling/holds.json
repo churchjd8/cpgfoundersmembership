@@ -211,7 +211,8 @@
     "2026-11-13T12:00:00-08:00": {
       "event_id": "r5dvmmrbdkr50q3t4bkd8n6tfk",
       "month": "November",
-      "status": "hold"
+      "status": "booked",
+      "note": "ABV / James Gracey + t.zhao@abvcorp.net (guest), converted 2026-11-09"
     },
     "2026-11-13T14:00:00-08:00": {
       "event_id": "i1s69k9ribj0kmhg1rhd32pnb0",
