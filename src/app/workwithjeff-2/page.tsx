@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ADVISORY_MIN_MONTHS, PRIVATE_ADVISORY_PRICE_USD } from "@/lib/advisory-offer";
 import { STRATEGY_SESSION_PRICE_USD, STRATEGY_SESSION_CREDIT_DAYS } from "@/lib/strategy-session-offer";
 import styles from "./page.module.css";
+import { TestimonialCarousel } from "./testimonial-carousel";
 
 const usd = (value: number) => `$${value.toLocaleString("en-US")}`;
 export const metadata: Metadata = {
@@ -32,7 +33,7 @@ const phases = [
 const faqs = [
   ["Am I speaking with Jeff on the intro call?", "Your first call is with Joshua from Jeff’s team. It’s a 30-minute conversation about your business, what you need, and whether working with Jeff makes sense. Your advisory kickoff and ongoing 1:1 sessions are with Jeff."],
   ["How much does advisory cost?", `Private Advisory starts at ${usd(PRIVATE_ADVISORY_PRICE_USD)} per month with an initial ${ADVISORY_MIN_MONTHS}-month commitment. More frequent support is available through VIP Advisory. After you apply, Joshua shares the full breakdown, including pricing, before your call.`],
-  ["How often would I meet with Jeff?", "Private Advisory includes a 90-minute kickoff and monthly 60-minute 1:1s, with email support between calls. VIP Advisory begins with a half-day deep dive and includes 60-minute 1:1s every other week, plus priority email support."],
+  ["How often would I meet with Jeff?", "It depends on what private advisory track you're a good fit for and what makes sense. We'll explore that on the call."],
   ["Is Jeff doing the work for my team?", "This is direct strategic advisory. Jeff helps you build the roadmap, work through decisions, and address challenges as they come up. You and your team own execution. If you need someone to run a function or deliver a separate consulting project, discuss that with Joshua so expectations are clear."],
   ["Does working with Jeff include investment or guaranteed introductions?", "Advisory is a paid service, separate from any investment discussion. Joining does not promise an investment, a fundraising outcome, or a retail placement. Jeff makes relevant industry introductions where appropriate to the relationship and your business."],
   ["What if I only need help with one decision?", `The ${usd(STRATEGY_SESSION_PRICE_USD)} Strategy Session gives you 90 minutes with Jeff, with preparation beforehand and MBA for CPG access included. It can stand on its own. The fee is credited toward advisory if you start within ${STRATEGY_SESSION_CREDIT_DAYS} days of purchase.`],
@@ -79,10 +80,7 @@ export default function WorkWithJeffSample() {
 
     <section className={styles.section} aria-labelledby="proof-title">
       <div className={styles.proofHeading}><div><p className={styles.eyebrow}>From founders who’ve worked with Jeff</p><h2 id="proof-title">Experience that shows up<br />in someone else’s business.</h2></div><Link className={styles.textLink} href="/results">More founder stories <span aria-hidden="true">↗</span></Link></div>
-      <div className={styles.proofGrid}>
-        <figure><p className={styles.result}>Fundraising</p><blockquote>“Jeff led us all the way through a successful $1.5M Angel fundraising.”</blockquote><figcaption><strong>Tiffany Tatom</strong><span>CEO, Live Pure</span></figcaption></figure>
-        <figure><p className={styles.result}>Retail &amp; distribution</p><blockquote>“Jeff was the primary reason that we got JUNI into Moscoe and helped us secure Presence Marketing as our Natural Foods broker.”</blockquote><figcaption><strong>Kim Perell</strong><span>Co-Founder &amp; CEO, JUNI</span></figcaption></figure>
-      </div>
+      <TestimonialCarousel />
       <p className={styles.proofNote}>Individual experiences from work with Jeff. Engagements and results vary.</p>
     </section>
 

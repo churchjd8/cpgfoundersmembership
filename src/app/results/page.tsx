@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 const highlights = [
   {
     stat: "$1.5M",
-    label: "Angel round raised at Live Pure",
+    label: "Angel round raised at Waav Organic",
     body: "Jeff led the raise all the way through, and it closed the way he designed it.",
   },
   {
@@ -38,7 +38,7 @@ const founders = [
     quote:
       "Prior to meeting Jeff I knew that we were missing something. With Jeff's amazing CPG knowledge, business experience and life lessons, his input has been invaluable. He led us all the way through a successful $1.5M Angel fund raising and it worked out exactly as he designed it. Access to Jeff's team of CPG experts has also been hugely helpful. In addition to being a great leader Jeff is extremely humble and approachable which made it very easy to work with him. 5 star review from Live Pure!",
     name: "Tiffany Tatom",
-    title: "Co-Founder & CEO, Live Pure",
+    title: "Co-Founder & CEO, Waav Organic",
   },
   {
     headline: "Got JUNI into retail and secured our natural foods broker",

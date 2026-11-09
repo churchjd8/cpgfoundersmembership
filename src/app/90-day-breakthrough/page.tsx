@@ -30,7 +30,7 @@ const testimonials = [
       "Jeff has amazing CPG knowledge, business experience and life lessons. 5-star review from us. Jeff led us all the way through a successful $1.5M Angel fundraising.",
     name: "Tiffany Tatom",
     title: "CEO",
-    brand: "Live Pure",
+    brand: "Waav Organic",
   },
   {
     quote:
@@ -62,7 +62,7 @@ const highlights = [
   "Named BevNET's Person of the Year (2015) and E&Y Entrepreneur of the Year",
   "Co-authored a New York Times bestseller (The Suja Juice Solution)",
   "Harvard Business School MBA and CPA",
-  "Advised founders at Health-Ade, Once Upon a Farm, Juni, Live Pure, Cheeky Cocktails, and dozens more",
+  "Advised founders at Health-Ade, Once Upon a Farm, Juni, Waav Organic, Cheeky Cocktails, and dozens more",
 ];
 
 const applyHref = "/90-day-breakthrough-apply";

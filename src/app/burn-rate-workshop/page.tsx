@@ -234,7 +234,7 @@ export default function BurnRateWorkshopPage() {
                 </li>
                 <li className="flex gap-2">
                   <span className="text-accent font-bold">&#10003;</span>
-                  Advised Health-Ade, Once Upon a Farm, Juni, Live Pure & more
+                  Advised Health-Ade, Once Upon a Farm, Juni, Waav Organic & more
                 </li>
                 <li className="flex gap-2">
                   <span className="text-accent font-bold">&#10003;</span>

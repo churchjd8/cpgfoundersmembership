@@ -68,7 +68,7 @@ const competencies = [
   {
     title: "Network & Advising",
     items: [
-      "Advised founders at Health-Ade, Once Upon a Farm, Juni, Live Pure, Cheeky Cocktails, and dozens more",
+      "Advised founders at Health-Ade, Once Upon a Farm, Juni, Waav Organic, Cheeky Cocktails, and dozens more",
       "Deeply connected across CPG: buyers, investors, brokers, operators, and service providers",
       "Guest speakers in his programs include founders from Poppi, Honest Tea, ZICO, and more",
       "One intro away from most CPG needs after 35+ years in the industry",

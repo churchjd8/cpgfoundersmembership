@@ -19,7 +19,7 @@ const testimonials = [
       "Jeff has amazing CPG knowledge, business experience and life lessons. 5-star review from us. Jeff led us all the way through a successful $1.5M Angel fundraising.",
     name: "Tiffany Tatom",
     title: "CEO",
-    brand: "Live Pure",
+    brand: "Waav Organic",
   },
   {
     headline: "A game-changing crash course for my business",
