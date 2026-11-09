@@ -57,7 +57,7 @@ export function Header() {
               </Link>
             ))}
             <Link
-              href="/#programs"
+              href="/work-with-jeff"
               className="px-4 py-2 text-sm font-semibold bg-accent hover:bg-accent-dark text-white rounded-lg transition-colors"
             >
               Work with Jeff
@@ -98,7 +98,7 @@ export function Header() {
                 </Link>
               ))}
               <Link
-                href="/#programs"
+                href="/work-with-jeff"
                 className="text-sm font-semibold text-accent hover:text-accent-dark transition-colors"
                 onClick={() => setMobileOpen(false)}
               >
