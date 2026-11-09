@@ -18,12 +18,16 @@ const testimonials = [
 
 export function TestimonialCarousel() {
   const track = useRef<HTMLDivElement>(null);
-  const [position, setPosition] = useState({ start: true, end: false });
+  const [position, setPosition] = useState({ start: true, end: false, index: 0 });
 
   useEffect(() => {
     const el = track.current;
     if (!el) return;
-    const update = () => setPosition({ start: el.scrollLeft < 2, end: el.scrollLeft + el.clientWidth >= el.scrollWidth - 2 });
+    const update = () => {
+      const first = el.firstElementChild as HTMLElement | null;
+      const width = (first?.getBoundingClientRect().width || el.clientWidth) + (Number.parseFloat(getComputedStyle(el).columnGap) || 0);
+      setPosition({ start: el.scrollLeft < 2, end: el.scrollLeft + el.clientWidth >= el.scrollWidth - 2, index: Math.min(testimonials.length - 1, Math.round(el.scrollLeft / width)) });
+    };
     update();
     el.addEventListener("scroll", update, { passive: true });
     const observer = new ResizeObserver(update);
@@ -41,7 +45,7 @@ export function TestimonialCarousel() {
 
   return <div className={styles.carousel}>
     <div className={styles.carouselControls}>
-      <p>5 founder stories <span aria-hidden="true">·</span> Swipe or use the arrows</p>
+      <p><span className={styles.storyCount} aria-live="polite">{String(position.index + 1).padStart(2, "0")} / 05</span> <span className={styles.swipeHint}>Swipe to explore</span></p>
       <div><button type="button" aria-label="Previous testimonials" aria-controls="founder-testimonials" disabled={position.start} onClick={() => move(-1)}>←</button><button type="button" aria-label="Next testimonials" aria-controls="founder-testimonials" disabled={position.end} onClick={() => move(1)}>→</button></div>
     </div>
     <div id="founder-testimonials" ref={track} className={`${styles.proofGrid} ${styles.testimonialTrack}`} role="region" aria-label="Founder testimonials. Scroll horizontally for more stories." tabIndex={0}>

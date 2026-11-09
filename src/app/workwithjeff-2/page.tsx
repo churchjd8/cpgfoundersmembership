@@ -5,6 +5,7 @@ import { ADVISORY_MIN_MONTHS, PRIVATE_ADVISORY_PRICE_USD } from "@/lib/advisory-
 import { STRATEGY_SESSION_PRICE_USD, STRATEGY_SESSION_CREDIT_DAYS } from "@/lib/strategy-session-offer";
 import styles from "./page.module.css";
 import { TestimonialCarousel } from "./testimonial-carousel";
+import { MobileCallBar } from "./mobile-call-bar";
 
 const usd = (value: number) => `$${value.toLocaleString("en-US")}`;
 export const metadata: Metadata = {
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
 };
 
 function Apply({ light = false }: { light?: boolean }) {
-  return <Link href="/apply" className={`${styles.button} ${light ? styles.lightButton : ""}`}>Apply &amp; book an intro call <span aria-hidden="true">↗</span></Link>;
+  return <Link data-primary-apply href="/apply" className={`${styles.button} ${light ? styles.lightButton : ""}`}>Apply &amp; book an intro call <span aria-hidden="true">↗</span></Link>;
 }
 
 const situations = [
@@ -42,6 +43,11 @@ const faqs = [
 
 export default function WorkWithJeffSample() {
   return <div className={styles.page}>
+    <header className={styles.focusedHeader}>
+      <Link href="/" className={styles.brand} aria-label="CPG Founders Group homepage"><svg viewBox="0 0 48 32" width="31" height="24" aria-hidden="true"><path d="M30 13L41 27H19Z" fill="#1b3a5f"/><path d="M20 7L33 27H7Z" fill="#0b1a2e"/><path d="M10 18L19 27H1Z" fill="#dfa13c"/></svg>CPG Founders Group</Link>
+      <nav aria-label="On this page"><a href="#the-work">The work</a><a href="#proof">Founder stories</a><a href="#next-step">Your call</a></nav>
+      <Link href="/apply" className={styles.headerApply}>Let’s talk <span aria-hidden="true">↗</span></Link>
+    </header>
     <section className={styles.hero} aria-labelledby="hero-title">
       <div className={styles.heroGrid}>
         <div className={styles.heroCopy}>
@@ -65,33 +71,34 @@ export default function WorkWithJeffSample() {
       <div><strong>Founder to founder</strong><span>Direct work on your business</span></div>
     </div>
 
-    <section className={styles.section} aria-labelledby="fit-title">
-      <div className={styles.sectionIntro}><p className={styles.eyebrow}>The moment you’re in</p><h2 id="fit-title">A real business.<br />An important next move.</h2><p>Founders come to Jeff at different stages. What they have in common is a decision with consequences, and a desire to work through it with someone who understands the business from the inside.</p></div>
-      <div className={styles.situations}>{situations.map(([number, title, body]) => <article className={styles.situation} key={number}><span className={styles.number}>{number}</span><div><h3>{title}</h3><p>{body}</p></div></article>)}</div>
+    <section className={`${styles.section} ${styles.fitSection}`} aria-labelledby="fit-title">
+      <div className={styles.sectionIntro}><p className={styles.eyebrow}>The moment you’re in</p><h2 id="fit-title">A real business.<br />{" "}An important next move.</h2><p>Founders come to Jeff at different stages. What they have in common is a decision with consequences, and a desire to work through it with someone who understands the business from the inside.</p></div>
+      <div className={styles.situations}>{situations.map(([number, title, body], index) => <details name="founder-situations" className={styles.situation} key={number} open={index === 0}><summary><span className={styles.number}>{number}</span><h3>{title}</h3><span className={styles.expandIcon} aria-hidden="true">+</span></summary><p>{body}</p></details>)}</div>
     </section>
 
-    <section className={styles.workSection} id="the-work" aria-labelledby="work-title">
-      <div className={styles.wrap}>
-        <div className={styles.workHeading}><div><p className={styles.eyebrow}>What you’re saying yes to</p><h2 id="work-title">A roadmap.<br />A sounding board.<br /><em>Someone who stays close.</em></h2></div><div><p>Private advisory starts with an initial three-month engagement. Jeff gets to know your business, helps you work out the approach, and stays involved while you put it into practice.</p><p className={styles.workBoundary}>The work is personal to your business. The relationship has a clear structure.</p></div></div>
-        <div className={styles.phases}>{phases.map(([label, title, body], i) => <article key={label}><span className={styles.phaseNumber}>0{i + 1}</span><p className={styles.phaseLabel}>{label}</p><h3>{title}</h3><p>{body}</p></article>)}</div>
-        <div className={styles.included}><span>Also in your corner</span><p>Relevant industry introductions · Babu AI Pro · MBA for CPG and its template library</p></div>
-      </div>
-    </section>
-
-    <section className={styles.section} aria-labelledby="proof-title">
-      <div className={styles.proofHeading}><div><p className={styles.eyebrow}>From founders who’ve worked with Jeff</p><h2 id="proof-title">Experience that shows up<br />in someone else’s business.</h2></div><Link className={styles.textLink} href="/results">More founder stories <span aria-hidden="true">↗</span></Link></div>
+    <section className={`${styles.section} ${styles.proofSection}`} id="proof" aria-labelledby="proof-title">
+      <div className={styles.proofHeading}><div><p className={styles.eyebrow}>From founders who’ve worked with Jeff</p><h2 id="proof-title">Experience that shows up<br />{" "}in someone else’s business.</h2></div><Link className={styles.textLink} href="/results">More founder stories <span aria-hidden="true">↗</span></Link></div>
       <TestimonialCarousel />
       <p className={styles.proofNote}>Individual experiences from work with Jeff. Engagements and results vary.</p>
     </section>
 
+    <section className={styles.workSection} id="the-work" aria-labelledby="work-title">
+      <div className={styles.wrap}>
+        <div className={styles.workHeading}><div><p className={styles.eyebrow}>What you’re saying yes to</p><h2 id="work-title">A roadmap.<br />{" "}A sounding board.<br />{" "}<em>Someone who stays close.</em></h2></div><div><p>Private advisory starts with an initial three-month engagement. Jeff gets to know your business, helps you work out the approach, and stays involved while you put it into practice.</p><p className={styles.workBoundary}>The work is personal to your business. The relationship has a clear structure.</p></div></div>
+        <div className={styles.phases}>{phases.map(([label, title, body], i) => <details name="advisory-phases" key={label} open={i === 0}><summary><span className={styles.phaseNumber}>0{i + 1}</span><div><span className={styles.phaseLabel}>{label}</span><h3>{title}</h3></div><span className={styles.expandIcon} aria-hidden="true">+</span></summary><p>{body}</p></details>)}</div>
+        <div className={styles.included}><span>Also in your corner</span><p>Relevant industry introductions · Babu AI Pro · MBA for CPG and its template library</p></div>
+      </div>
+    </section>
+
     <section className={styles.callSection} id="next-step" aria-labelledby="call-title"><div className={styles.callGrid}>
-      <div><p className={styles.eyebrow}>Your first step</p><h2 id="call-title">Let’s talk about<br /><em>what your business needs.</em></h2><p>You don’t have to choose an advisory package before we talk. Start with a short application, then pick a time with Joshua.</p><Apply light /><p className={styles.micro}>Advisory from {usd(PRIVATE_ADVISORY_PRICE_USD)}/month · {ADVISORY_MIN_MONTHS}-month initial commitment</p></div>
+      <div><p className={styles.eyebrow}>Your first step</p><h2 id="call-title">Let’s talk about<br />{" "}<em>what your business needs.</em></h2><p>You don’t have to choose an advisory package before we talk. Start with a short application, then pick a time with Joshua.</p><Apply light /><p className={styles.micro}>Advisory from {usd(PRIVATE_ADVISORY_PRICE_USD)}/month · {ADVISORY_MIN_MONTHS}-month initial commitment</p></div>
       <aside className={styles.callCard}><div className={styles.callCardTop}><span className={styles.avatar}><Image src="/images/joshua-call.webp" alt="Joshua Church, your host for the introductory call" fill sizes="84px" className={styles.joshuaPhoto} /></span><div><strong>Your call is with Joshua</strong><p>Jeff’s team · 30 minutes</p></div></div><ol><li><span>01</span> Tell us where your business is today.</li><li><span>02</span> Talk through the challenge and the support you need.</li><li><span>03</span> Decide whether there’s a fit and what comes next.</li></ol><p className={styles.callCardNote}>After applying, you can book immediately. Joshua will share the full advisory breakdown, including pricing, before your call.</p></aside>
     </div></section>
 
-    <section className={styles.faqSection} aria-labelledby="faq-title"><div><p className={styles.eyebrow}>A few things to know</p><h2 id="faq-title">Before you apply.</h2><p>Clear expectations make for a better working relationship.</p></div><div className={styles.questions}>{faqs.map(([question, answer]) => <details key={question}><summary>{question}<span aria-hidden="true">+</span></summary><p>{answer}</p></details>)}</div></section>
+    <section className={styles.faqSection} aria-labelledby="faq-title"><div><p className={styles.eyebrow}>A few things to know</p><h2 id="faq-title">Before you apply.</h2><p>Clear expectations make for a better working relationship.</p></div><div className={styles.questions}>{faqs.map(([question, answer]) => <details name="advisory-faq" key={question}><summary>{question}<span aria-hidden="true">+</span></summary><p>{answer}</p></details>)}</div></section>
 
-    <section className={styles.sessionSection} aria-labelledby="session-title"><div><p className={styles.eyebrow}>One decision to work through?</p><h2 id="session-title">Start with a Strategy Session.</h2><p>Ninety minutes with Jeff, prepared around the challenge in front of you. MBA for CPG included. {usd(STRATEGY_SESSION_PRICE_USD)} once, credited toward advisory if you start within {STRATEGY_SESSION_CREDIT_DAYS} days of purchase.</p><p className={styles.sessionNote}>After purchase, complete your intake. The team emails Jeff’s booking calendar within one business day.</p></div><form action="/api/strategy-session-checkout" method="POST"><button className={styles.outlineButton} type="submit">Get a Strategy Session <span aria-hidden="true">↗</span></button><span>No ongoing commitment.</span></form></section>
+    <section className={styles.sessionSection} aria-labelledby="session-title"><details><summary><div><p className={styles.eyebrow}>One decision to work through?</p><h2 id="session-title">Start with a Strategy Session.</h2></div><span className={styles.expandIcon} aria-hidden="true">+</span></summary><div className={styles.sessionBody}><div><p>Ninety minutes with Jeff, prepared around the challenge in front of you. MBA for CPG included. {usd(STRATEGY_SESSION_PRICE_USD)} once, credited toward advisory if you start within {STRATEGY_SESSION_CREDIT_DAYS} days of purchase.</p><p className={styles.sessionNote}>After purchase, complete your intake. The team emails Jeff’s booking calendar within one business day.</p></div><form action="/api/strategy-session-checkout" method="POST"><button className={styles.outlineButton} type="submit">Get a Strategy Session <span aria-hidden="true">↗</span></button><span>No ongoing commitment.</span></form></div></details></section>
     <div className={styles.selfServe}>Prefer to work independently? Explore the <Link href="/mba-for-cpg">MBA for CPG</Link>, <a href="https://www.askbabu.ai" target="_blank" rel="noopener noreferrer">Babu AI</a>, or Jeff’s <Link href="/resources">free resources</Link>.</div>
+    <MobileCallBar />
   </div>;
 }
