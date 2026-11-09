@@ -30,7 +30,7 @@ const phases = [
   ["Work the plan", "Stay supported as you execute.", "Use standing 1:1s and email support to review progress, pressure-test decisions, and adjust. You and your team execute; Jeff stays close as an advisor."],
 ];
 const faqs = [
-  ["Am I speaking with Jeff on the intro call?", "Your first call is with Joshua from Jeff’s team. It’s a 20-minute conversation about your business, what you need, and whether working with Jeff makes sense. Your advisory kickoff and ongoing 1:1 sessions are with Jeff."],
+  ["Am I speaking with Jeff on the intro call?", "Your first call is with Joshua from Jeff’s team. It’s a 30-minute conversation about your business, what you need, and whether working with Jeff makes sense. Your advisory kickoff and ongoing 1:1 sessions are with Jeff."],
   ["How much does advisory cost?", `Private Advisory starts at ${usd(PRIVATE_ADVISORY_PRICE_USD)} per month with an initial ${ADVISORY_MIN_MONTHS}-month commitment. More frequent support is available through VIP Advisory. After you apply, Joshua shares the full breakdown, including pricing, before your call.`],
   ["How often would I meet with Jeff?", "Private Advisory includes a 90-minute kickoff and monthly 60-minute 1:1s, with email support between calls. VIP Advisory begins with a half-day deep dive and includes 60-minute 1:1s every other week, plus priority email support."],
   ["Is Jeff doing the work for my team?", "This is direct strategic advisory. Jeff helps you build the roadmap, work through decisions, and address challenges as they come up. You and your team own execution. If you need someone to run a function or deliver a separate consulting project, discuss that with Joshua so expectations are clear."],
@@ -48,7 +48,7 @@ export default function WorkWithJeffSample() {
           <h1 id="hero-title">Make the next big decision with <em>Jeff in your corner.</em></h1>
           <p className={styles.intro}>You’ve built something worth growing. Work directly with Suja co-founder Jeff Church on the fundraising, retail, and operating decisions shaping what comes next.</p>
           <Apply />
-          <p className={styles.micro}>Short application. Then 20 minutes with Joshua from Jeff’s team.</p>
+          <p className={styles.micro}>Short application. 30-minute calls with Jeff’s team.</p>
           <a className={styles.heroAnchor} href="#the-work">See what working together looks like <span aria-hidden="true">↓</span></a>
         </div>
         <div className={styles.heroVisual}>
@@ -88,7 +88,7 @@ export default function WorkWithJeffSample() {
 
     <section className={styles.callSection} id="next-step" aria-labelledby="call-title"><div className={styles.callGrid}>
       <div><p className={styles.eyebrow}>Your first step</p><h2 id="call-title">Let’s talk about<br /><em>what your business needs.</em></h2><p>You don’t have to choose an advisory package before we talk. Start with a short application, then pick a time with Joshua.</p><Apply light /><p className={styles.micro}>Advisory from {usd(PRIVATE_ADVISORY_PRICE_USD)}/month · {ADVISORY_MIN_MONTHS}-month initial commitment</p></div>
-      <aside className={styles.callCard}><div className={styles.callCardTop}><span className={styles.avatar}><Image src="/images/joshua-call.webp" alt="Joshua Church, your host for the introductory call" fill sizes="84px" className={styles.joshuaPhoto} /></span><div><strong>Your call is with Joshua</strong><p>Jeff’s team · 20 minutes</p></div></div><ol><li><span>01</span> Tell us where your business is today.</li><li><span>02</span> Talk through the challenge and the support you need.</li><li><span>03</span> Decide whether there’s a fit and what comes next.</li></ol><p className={styles.callCardNote}>After applying, you can book immediately. Joshua will share the full advisory breakdown, including pricing, before your call.</p></aside>
+      <aside className={styles.callCard}><div className={styles.callCardTop}><span className={styles.avatar}><Image src="/images/joshua-call.webp" alt="Joshua Church, your host for the introductory call" fill sizes="84px" className={styles.joshuaPhoto} /></span><div><strong>Your call is with Joshua</strong><p>Jeff’s team · 30 minutes</p></div></div><ol><li><span>01</span> Tell us where your business is today.</li><li><span>02</span> Talk through the challenge and the support you need.</li><li><span>03</span> Decide whether there’s a fit and what comes next.</li></ol><p className={styles.callCardNote}>After applying, you can book immediately. Joshua will share the full advisory breakdown, including pricing, before your call.</p></aside>
     </div></section>
 
     <section className={styles.faqSection} aria-labelledby="faq-title"><div><p className={styles.eyebrow}>A few things to know</p><h2 id="faq-title">Before you apply.</h2><p>Clear expectations make for a better working relationship.</p></div><div className={styles.questions}>{faqs.map(([question, answer]) => <details key={question}><summary>{question}<span aria-hidden="true">+</span></summary><p>{answer}</p></details>)}</div></section>
