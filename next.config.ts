@@ -10,6 +10,8 @@ const nextConfig: NextConfig = {
       // page now (the offer ladder), so only its old subpaths still redirect.
       { source: "/work-with-jeff/:path+", destination: "/apply/:path+", permanent: true },
       // /intensive was the old unlisted advisory breakdown; /advisory replaced it.
+      { source: "/workwithjeff-2", destination: "/work-with-jeff", permanent: true },
+      { source: "/work-with-jeff-preview", destination: "/work-with-jeff", permanent: false },
       { source: "/intensive", destination: "/advisory", permanent: false },
       { source: "/intensive/:path+", destination: "/advisory", permanent: false },
       { source: "/vip-advisory", destination: "/advisory", permanent: false },
