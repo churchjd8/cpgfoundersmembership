@@ -10,21 +10,49 @@ import styles from "./page.module.css";
 const usd = (amount: number) => `$${amount.toLocaleString("en-US")}`;
 const BOOK_URL = "https://thecoldpressedtruth.com";
 
-// One ladder, top rung first. Every rung shows its price so a founder can place
-// themselves before they ever apply. VIP is not listed: it is offered on the
-// intro call to brands that need more of Jeff's time.
+// The offer ladder as three levels of cards, most hands-on first. Every card
+// shows its price so a founder can place themselves before they apply. VIP is
+// not listed: it is offered on the intro call to brands that need more of Jeff.
+const icon = { width: 24, height: 24, viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: 1.7, strokeLinecap: "round", strokeLinejoin: "round", "aria-hidden": true } as const;
+const Icons = {
+  advisory: <svg {...icon}><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5 5-2Z"/></svg>,
+  session: <svg {...icon}><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2" fill="currentColor"/></svg>,
+  mba: <svg {...icon}><path d="m2.5 9 9.5-4.5L21.5 9 12 13.5 2.5 9Z"/><path d="M6.5 11.2V16c1.6 1.5 3.4 2.2 5.5 2.2s3.9-.7 5.5-2.2v-4.8"/><path d="M21.5 9v5"/></svg>,
+  babu: <svg {...icon}><path d="M20 11.5a7.5 7.5 0 0 1-11.2 6.5L4 19.5l1.3-4.3A7.5 7.5 0 1 1 20 11.5Z"/><path d="M12.5 8.2l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8.8-2Z"/></svg>,
+  community: <svg {...icon}><circle cx="9" cy="9" r="3"/><path d="M3.5 18.5c.6-2.7 2.7-4.3 5.5-4.3s4.9 1.6 5.5 4.3"/><circle cx="17" cy="8" r="2.3"/><path d="M16.5 13.2c2.1.2 3.5 1.5 4 3.6"/></svg>,
+  kits: <svg {...icon}><rect x="3.5" y="8" width="17" height="11" rx="2"/><path d="M9 8V6.5A1.5 1.5 0 0 1 10.5 5h3A1.5 1.5 0 0 1 15 6.5V8"/><path d="M3.5 13h17M12 12v2.2"/></svg>,
+  insights: <svg {...icon}><rect x="3.5" y="5.5" width="17" height="13" rx="2"/><path d="m4.5 7.5 7.5 5.5 7.5-5.5"/></svg>,
+};
+const Arrow = () => <span aria-hidden="true">↗</span>;
+
 function Ladder({ bookLabel }: { bookLabel: string }) {
   return <section className={styles.ladder} id="offers" aria-labelledby="ladder-title"><span id="programs" className={styles.legacyAnchor} aria-hidden="true"/>
-    <div className={styles.sectionHeading}><div><p className={styles.eyebrow}>Every way to work with Jeff</p><h2 id="ladder-title">Find the rung that fits where you are.</h2></div><p>From free tools to Jeff in your corner every month. Start anywhere, move up when you’re ready.</p></div>
-    <ol className={styles.rungs}>
-      <li className={`${styles.rung} ${styles.rungTop}`}><div className={styles.rungWho}><span>Scaling, raising, or heading into retail</span></div><div className={styles.rungMain}><h3>1:1 Private Advisory</h3><p>Jeff in your corner while you execute. Includes a kickoff strategy session, regular 1:1s with Jeff, email support between calls, Babu AI Pro, and all of Jeff’s tools and templates, including the MBA for CPG.</p><p className={styles.rungFine}>By application. More time with Jeff is available for brands that need it.</p></div><div className={styles.rungAction}><p className={styles.rungPrice}><small>Starting at</small>{usd(PRIVATE_ADVISORY_PRICE_USD)}<span>/month</span></p><p className={styles.rungTerm}>{ADVISORY_MIN_MONTHS}-month start</p><Link href="/apply" className={styles.rungButton}>Apply &amp; book an intro call <span aria-hidden="true">↗</span></Link></div></li>
-      <li className={`${styles.rung} ${styles.rungSession}`}><div className={styles.rungWho}><span>One big decision in front of you</span></div><div className={styles.rungMain}><h3>Strategy Session</h3><p>90 minutes with Jeff on the challenge that matters most. He reviews your materials beforehand. MBA for CPG included.</p><p className={styles.rungFine}>Credited in full toward advisory if you start within {STRATEGY_SESSION_CREDIT_DAYS} days.</p></div><div className={styles.rungAction}><p className={styles.rungPrice}>{usd(STRATEGY_SESSION_PRICE_USD)}<span>one time</span></p><form action="/api/strategy-session-checkout" method="POST"><button type="submit" className={styles.rungButton}>Book a Strategy Session <span aria-hidden="true">↗</span></button></form></div></li>
-      <li className={styles.rung}><div className={styles.rungWho}><span>Pre-launch or early, building the fundamentals</span></div><div className={styles.rungMain}><h3>MBA for CPG</h3><p>Jeff’s full playbook, financial models, and templates in a self-paced course.</p></div><div className={styles.rungAction}><p className={styles.rungPrice}>{usd(MBA_PRICE_USD)}<span>lifetime access</span></p><Link href="/mba-for-cpg" className={styles.rungLink}>Explore the course <span aria-hidden="true">↗</span></Link></div></li>
-      <li className={styles.rung}><div className={styles.rungWho}><span>Questions come up every day</span></div><div className={styles.rungMain}><h3>Babu AI</h3><p>An on-demand CPG advisor trained on Jeff’s playbook. Fundraising, retail, margins, and more.</p></div><div className={styles.rungAction}><p className={styles.rungPrice}>Free<span>for 10 days</span></p><a href="https://www.askbabu.ai" className={styles.rungLink}>Start the free trial <span aria-hidden="true">↗</span></a></div></li>
-      <li className={styles.rung}><div className={styles.rungWho}><span>Any founder, any stage</span></div><div className={styles.rungMain}><h3>The Cold-Pressed Truth</h3><p>Jeff’s field guide to building, scaling, and selling a consumer brand. Foreword by Jay Shetty.</p></div><div className={styles.rungAction}><p className={styles.rungPrice}>The book<span>{bookLabel}</span></p><a href={BOOK_URL} className={styles.rungLink}>Explore the book <span aria-hidden="true">↗</span></a></div></li>
-      <li className={`${styles.rung} ${styles.rungFree}`}><div className={styles.rungWho}><span>Just getting to know Jeff</span></div><div className={styles.rungMain}><h3>Community &amp; free tools</h3><p>400+ CPG founders on WhatsApp, three free resource kits, and Jeff’s weekly insights.</p></div><div className={styles.rungAction}><p className={styles.rungPrice}>Free</p><Link href="/founders-only" className={styles.rungLink}>Join the founders group <span aria-hidden="true">↗</span></Link><Link href="/resources" className={styles.rungLink}>Get the free kits <span aria-hidden="true">↗</span></Link></div></li>
-    </ol>
-    <div className={styles.chooseHelp}><div className={styles.joshuaPhoto}><Image src="/images/joshua-call.webp" alt="Joshua Church" fill sizes="44px"/></div><p><strong>Not sure which rung fits?</strong><span>Talk through your business with Jeff’s team.</span></p><Link href="/apply">Start with a 30-minute intro call <span aria-hidden="true">↗</span></Link></div>
+    <div className={styles.ladderHeading}><p className={styles.eyebrow}>Every way to work with Jeff</p><h2 id="ladder-title">Start where you are.</h2><p>Three levels of support. Pick the one that fits your brand today and move up when you’re ready.</p></div>
+
+    <div className={styles.level}><div className={styles.levelLabel}><strong>With Jeff</strong><span>Direct, 1:1 support</span></div>
+      <div className={`${styles.levelCards} ${styles.two}`}>
+        <article className={`${styles.lcard} ${styles.lcardAdvisory}`}><div className={styles.lcardTop}><span className={styles.lcardIcon}>{Icons.advisory}</span><span className={styles.lcardFor}>Scaling, raising, or entering retail</span></div><h3>1:1 Private Advisory</h3><p className={styles.lcardLine}>Jeff in your corner while you execute.</p><ul className={styles.lcardList}><li>Kickoff strategy session</li><li>Regular 1:1s with Jeff</li><li>Email support between calls</li><li>Babu AI Pro, MBA for CPG, and all of Jeff’s tools</li></ul><div className={styles.lcardBottom}><p className={styles.lcardPrice}><small>Starting at</small>{usd(PRIVATE_ADVISORY_PRICE_USD)}<span>/month · {ADVISORY_MIN_MONTHS}-month start</span></p><Link href="/apply" className={styles.lcardButton}>Apply &amp; book an intro call <Arrow/></Link><p className={styles.lcardFine}>By application. More time with Jeff is available for brands that need it.</p></div></article>
+        <article className={`${styles.lcard} ${styles.lcardSession}`}><div className={styles.lcardTop}><span className={styles.lcardIcon}>{Icons.session}</span><span className={styles.lcardFor}>One big decision ahead</span></div><h3>Strategy Session</h3><p className={styles.lcardLine}>A clear next move, no ongoing commitment.</p><ul className={styles.lcardList}><li>90 minutes 1:1 with Jeff</li><li>He reviews your materials first</li><li>MBA for CPG included</li></ul><div className={styles.lcardBottom}><p className={styles.lcardPrice}>{usd(STRATEGY_SESSION_PRICE_USD)}<span>one time</span></p><form action="/api/strategy-session-checkout" method="POST"><button type="submit" className={styles.lcardButton}>Book a Strategy Session <Arrow/></button></form><p className={styles.lcardFine}>Credited in full toward advisory if you start within {STRATEGY_SESSION_CREDIT_DAYS} days.</p></div></article>
+      </div>
+    </div>
+
+    <div className={styles.level}><div className={styles.levelLabel}><strong>On your own</strong><span>Jeff’s playbook, at your pace</span></div>
+      <div className={`${styles.levelCards} ${styles.three}`}>
+        <article className={styles.lcard}><div className={styles.lcardTop}><span className={styles.lcardIcon}>{Icons.mba}</span><span className={styles.lcardFor}>Pre-launch or early</span></div><h3>MBA for CPG</h3><p className={styles.lcardLine}>The full playbook, financial models, and templates in a self-paced course.</p><div className={styles.lcardBottom}><p className={styles.lcardPrice}>{usd(MBA_PRICE_USD)}<span>lifetime access</span></p><Link href="/mba-for-cpg" className={styles.lcardLink}>Explore the course <Arrow/></Link></div></article>
+        <article className={styles.lcard}><div className={styles.lcardTop}><span className={styles.lcardIcon}>{Icons.babu}</span><span className={styles.lcardFor}>Daily questions</span></div><h3>Babu AI</h3><p className={styles.lcardLine}>An on-demand CPG advisor trained on Jeff’s playbook.</p><div className={styles.lcardBottom}><p className={styles.lcardPrice}>Free<span>for 10 days</span></p><a href="https://www.askbabu.ai" className={styles.lcardLink}>Start the free trial <Arrow/></a></div></article>
+        <article className={`${styles.lcard} ${styles.lcardBook}`}><div className={styles.lcardTop}><a href={BOOK_URL} className={styles.lcardCover} aria-label="The Cold-Pressed Truth"><Image src="/images/book-covers/cold-pressed-truth-home.webp" alt="" width={640} height={993} sizes="60px"/></a><span className={styles.lcardFor}>Any founder, any stage</span></div><h3>The Cold-Pressed Truth</h3><p className={styles.lcardLine}>Jeff’s field guide to building, scaling, and selling a consumer brand.</p><div className={styles.lcardBottom}><p className={styles.lcardPrice}>The book<span>{bookLabel}</span></p><a href={BOOK_URL} className={styles.lcardLink}>Explore the book <Arrow/></a></div></article>
+      </div>
+    </div>
+
+    <div className={styles.level}><div className={styles.levelLabel}><strong>Free</strong><span>Get to know Jeff</span></div>
+      <div className={`${styles.levelCards} ${styles.three}`}>
+        <Link href="/founders-only" className={`${styles.lcard} ${styles.lcardFree}`}><span className={styles.lcardIcon}>{Icons.community}</span><div><h3>Founders group</h3><p>400+ CPG founders on WhatsApp.</p></div><Arrow/></Link>
+        <Link href="/resources" className={`${styles.lcard} ${styles.lcardFree}`}><span className={styles.lcardIcon}>{Icons.kits}</span><div><h3>Free resource kits</h3><p>The tools Jeff uses with founders.</p></div><Arrow/></Link>
+        <Link href="/blog" className={`${styles.lcard} ${styles.lcardFree}`}><span className={styles.lcardIcon}>{Icons.insights}</span><div><h3>Weekly insights</h3><p>Fundraising, retail, and margins.</p></div><Arrow/></Link>
+      </div>
+    </div>
+
+    <div className={styles.chooseHelp}><div className={styles.joshuaPhoto}><Image src="/images/joshua-call.webp" alt="Joshua Church" fill sizes="44px"/></div><p><strong>Not sure which level fits?</strong><span>Talk through your business with Jeff’s team.</span></p><Link href="/apply">Start with a 30-minute intro call <Arrow/></Link></div>
   </section>;
 }
 
