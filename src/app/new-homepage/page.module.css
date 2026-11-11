@@ -47,3 +47,6 @@
 @keyframes pressScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @media(max-width:639px){.heroCred{margin-top:20px;padding-left:14px}.heroCred strong{font-size:17px}.heroCred span{font-size:14px}.pressTrack li{padding:15px 22px;gap:8px}.pressTrack strong{font-size:15px}.pressTrack span{font-size:11px}.pressTrack{animation-duration:34s}}
 @media(prefers-reduced-motion:reduce){.press{-webkit-mask-image:none;mask-image:none}.pressTrack{animation:none;width:auto}.pressTrack ul{flex-wrap:wrap;justify-content:center}.pressTrack ul[aria-hidden="true"]{display:none}.pressTrack li{border-right:0}}
+
+/* Header preview, phone: headline, then a larger photo, then the Suja credential. */
+@media(max-width:639px){.heroV2 .heroInner{gap:0}.heroV2 .heroCopy{display:contents}.heroV2 .heroCopy>.eyebrow{order:1}.heroV2 .heroCopy>h1{order:2}.heroV2 .heroFigure{order:3;margin-top:22px}.heroV2 .heroCred{order:4;margin-top:22px}.heroV2 .heroActions{order:5}.heroV2 .heroFigure .heroVisual{aspect-ratio:1.3}.heroV2 .heroFigure .heroPhoto{object-position:center 30%}}
