@@ -57,7 +57,9 @@ function Ladder({ bookLabel }: { bookLabel: string }) {
 }
 
 // Header preview: numbers are the ones on Jeff's own About page.
-const HERO_STATS = [["$100M", "Suja revenue in 5 years"], ["8x", "Founder & CEO"], ["$275M+", "Raised across 40+ rounds"], ["35", "Years in CPG"]] as const;
+const HERO_STATS = [["$700M+", "Returned to investors"], ["$275M+", "Raised across 40+ rounds"], ["8x", "Founder & CEO"], ["35", "Years in CPG"]] as const;
+// Recognition as listed on Jeff's About page and the site's "As seen in" banner.
+const PRESS = [["Forbes", "#2 Most Promising Companies"], ["Inc. 500", "#13 Fastest-Growing Company"], ["BevNET", "Person of the Year"], ["EY", "Entrepreneur of the Year"], ["Whole Foods Market", "Supplier of the Year"], ["The New York Times", "Featured"], ["Prevention", "100 Cleanest Packaged Foods"]] as const;
 const NAV_LINKS = [["About Jeff", "/about-jeff"], ["Work with Jeff", "/work-with-jeff"], ["Free Resources", "/resources"], ["The Book", BOOK_URL]] as const;
 
 export function Home({ ladder = false, header = false }: { ladder?: boolean; header?: boolean }) {
@@ -75,10 +77,11 @@ export function Home({ ladder = false, header = false }: { ladder?: boolean; hea
     <a href={BOOK_URL} className={styles.announcement}><span>{bookLabel}</span><strong>The Cold-Pressed Truth</strong><span>Jeff Church’s new book</span><span aria-hidden="true">↗</span></a>
     {header ? <>
     <section className={`${styles.hero} ${styles.heroV2}`} aria-labelledby="home-title"><div className={styles.heroInner}>
-      <div><p className={styles.eyebrow}>For CPG founders · From Suja co-founder Jeff Church</p><h1 id="home-title">The operator in your corner for your brand’s <em>next big move.</em></h1><p className={styles.heroIntro}>Private advisory, strategy sessions, and tools for CPG founders at every stage.</p><div className={styles.heroActions}><a href="#offers" className={styles.button}>Find your level <span aria-hidden="true">↓</span></a><Link href="/apply" className={styles.heroSecondary}>Apply for advisory <span aria-hidden="true">↗</span></Link></div></div>
+      <div><p className={styles.eyebrow}>Advisory, strategy, and tools for CPG founders</p><h1 id="home-title">The operator in your corner for your brand’s <em>next big move.</em></h1><div className={styles.heroCred}><strong>Jeff Church, former Suja Juice co-founder &amp; CEO</strong><span>Grew Suja to $100M in revenue in 5 years, with Coca-Cola as an investor.</span></div><div className={styles.heroActions}><a href="#offers" className={styles.button}>Find your level <span aria-hidden="true">↓</span></a><Link href="/apply" className={styles.heroSecondary}>Apply for advisory <span aria-hidden="true">↗</span></Link></div></div>
       <figure className={styles.heroFigure}><div className={styles.heroVisual}><Image src="/images/jeff-hero.webp" alt="Jeff Church with CPG founders and their JUNI products" fill priority sizes="(min-width:900px) 40vw, 100vw" className={styles.heroPhoto}/></div><figcaption>Jeff with the founders of JUNI</figcaption></figure>
     </div>
     <dl className={styles.heroStats}>{HERO_STATS.map(([value, label]) => <div key={label}><dt>{value}</dt><dd>{label}</dd></div>)}</dl></section>
+    <section className={styles.press} aria-label="Recognition for Jeff Church and Suja"><div className={styles.pressTrack}>{[0, 1].map((copy) => <ul key={copy} aria-hidden={copy === 1}>{PRESS.map(([name, award]) => <li key={name}><strong>{name}</strong><span>{award}</span></li>)}</ul>)}</div></section>
     </> : <>
     <section className={styles.hero} aria-labelledby="home-title"><div className={styles.heroInner}>
       <div><p className={styles.eyebrow}>For CPG founders · From Jeff Church</p><h1 id="home-title">Big decisions.<br/>The right support.</h1><p className={styles.heroIntro}>Work directly with Suja co-founder Jeff Church, get focused help on one decision, or build at your own pace. There’s a way in for where you are.</p><div className={styles.heroActions}><Link href="/work-with-jeff" className={styles.button}>Work with Jeff <span aria-hidden="true">↗</span></Link><a href="#offers" className={styles.heroSecondary}>{ladder ? "See every way to work with Jeff" : "Compare the options"} <span aria-hidden="true">↓</span></a></div><p className={styles.heroCredentials}>Suja co-founder <span>·</span> 8x founder <span>·</span> 35+ years of experience</p></div>
