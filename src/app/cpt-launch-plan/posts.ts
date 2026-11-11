@@ -193,14 +193,14 @@ Thank you for following along with this. Let's go!`,
     type: "Milestone",
     title: "It's live",
     slot: "Replaces FF #1 ($100M exit that paid $5M) on Nov 17. FF #1 slides to Tue Nov 24 and the Aug-Oct batch resumes Dec 1.",
-    needs: "Photo of Jeff holding the book (not a screenshot). The Amazon ebook link, pasted in the body the moment it's live.",
+    needs: "Photo of Jeff holding the book (not a screenshot). Amazon link is in the body; click it once at launch to confirm the page is live.",
     body: `It's live.
 
 The Cold Pressed Truth is out today, and I'm sitting here holding it (Linda took the photo, I'm aware of the face I'm making).
 
 Here's the ask. The ebook is 99 cents today through the end of the week. If you've ever gotten anything useful from one of my posts, grab it, and if you can, leave an honest review once you've read a chapter or two. That's the whole thing. Reviews are what let a stranger find this book two years from now.
 
-[AMAZON LINK]
+https://www.amazon.com/dp/B0HM123G9W
 
 Thirty years of lessons, eight companies, every mistake I could remember and a few I'd rather not. It's the book I wish someone had handed me before my first startup. I hope it saves you a few of the detours I took.
 
@@ -219,7 +219,7 @@ Yesterday was one of the better days I've had in a while. Not because of the ran
 
 One idea if you've already grabbed it. For 99 cents, this is the easiest gift you'll give all year to the founder in your life who is in the middle of it right now. The one who's raising, or fighting for shelf space, or staring at a cash gap. Send it to them.
 
-Still 99 cents all week: [AMAZON LINK]
+Still 99 cents all week: https://www.amazon.com/dp/B0HM123G9W
 
 And if you've read a chapter or two, a quick honest review helps more than you'd think.`,
   },
@@ -238,7 +238,7 @@ This happened because a few hundred people bought a 99 cent book on the same day
 
 Thank you. I'm going to be saying that a lot this week.
 
-If you haven't grabbed it yet, it's still 99 cents through [DATE]: [AMAZON LINK]
+If you haven't grabbed it yet, it's still 99 cents through [DATE]: https://www.amazon.com/dp/B0HM123G9W
 
 And if you have, the thing that matters most now is a review. Thirty seconds, honest, whatever you actually thought.`,
   },
