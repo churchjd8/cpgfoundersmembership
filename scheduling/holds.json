@@ -196,7 +196,8 @@
     "2026-11-12T12:00:00-08:00": {
       "event_id": "1g81it8qqbf6lbkhtvtpsivse0",
       "month": "November",
-      "status": "hold"
+      "status": "booked",
+      "note": "Tulua / Zeyad Moussa, converted 2026-11-11"
     },
     "2026-11-12T14:00:00-08:00": {
       "event_id": "ett5gebcepmtl45grj0vonuaac",
