@@ -23,17 +23,24 @@ const Icons = {
   kits: <svg {...icon}><rect x="3.5" y="8" width="17" height="11" rx="2"/><path d="M9 8V6.5A1.5 1.5 0 0 1 10.5 5h3A1.5 1.5 0 0 1 15 6.5V8"/><path d="M3.5 13h17M12 12v2.2"/></svg>,
   insights: <svg {...icon}><rect x="3.5" y="5.5" width="17" height="13" rx="2"/><path d="m4.5 7.5 7.5 5.5 7.5-5.5"/></svg>,
 };
-const Arrow = () => <span aria-hidden="true">↗</span>;
+export const Arrow = () => <span aria-hidden="true">↗</span>;
+
+/** The two ways to work with Jeff directly. Shared with the Work with Jeff page. */
+export function DirectCards() {
+  return (
+      <div className={`${styles.levelCards} ${styles.two}`}>
+        <article className={`${styles.lcard} ${styles.lcardAdvisory}`}><div className={styles.lcardTop}><span className={styles.lcardIcon}>{Icons.advisory}</span></div><h3>1:1 Private Advisory</h3><p className={styles.lcardLine}>Jeff in your corner while you execute.</p><ul className={styles.lcardList}><li>Kickoff strategy session</li><li>Regular 1:1s with Jeff</li><li>Email support between calls</li><li>Babu AI Pro, MBA for CPG, and all of Jeff’s tools</li></ul><div className={styles.lcardBottom}><p className={styles.lcardPrice}><small>Starting at</small>{usd(PRIVATE_ADVISORY_PRICE_USD)}<span>/month · {ADVISORY_MIN_MONTHS}-month start</span></p><Link href="/apply" className={styles.lcardButton}>Apply &amp; book an intro call <Arrow/></Link><p className={styles.lcardFine}>By application. More time with Jeff is available for brands that need it.</p></div></article>
+        <article className={`${styles.lcard} ${styles.lcardSession}`}><div className={styles.lcardTop}><span className={styles.lcardIcon}>{Icons.session}</span></div><h3>Strategy Session</h3><p className={styles.lcardLine}>A clear next move, no ongoing commitment.</p><ul className={styles.lcardList}><li>90 minutes 1:1 with Jeff</li><li>He reviews your materials first</li><li>MBA for CPG included</li></ul><div className={styles.lcardBottom}><p className={styles.lcardPrice}>{usd(STRATEGY_SESSION_PRICE_USD)}<span>one time</span></p><form action="/api/strategy-session-checkout" method="POST"><button type="submit" className={styles.lcardButton}>Book a Strategy Session <Arrow/></button></form><p className={styles.lcardFine}>Credited in full toward advisory if you start within {STRATEGY_SESSION_CREDIT_DAYS} days.</p></div></article>
+      </div>
+  );
+}
 
 function Ladder({ bookLabel }: { bookLabel: string }) {
   return <section className={styles.ladder} id="offers" aria-labelledby="ladder-title"><span id="programs" className={styles.legacyAnchor} aria-hidden="true"/>
     <div className={styles.ladderHeading}><p className={styles.eyebrow}>Every way to work with Jeff</p><h2 id="ladder-title">Start where you are.</h2><p>Three levels of support. Pick the one that fits your brand today and move up when you’re ready.</p></div>
 
     <div className={styles.level}><div className={styles.levelLabel}><strong>With Jeff</strong><span>Direct, 1:1 support</span></div>
-      <div className={`${styles.levelCards} ${styles.two}`}>
-        <article className={`${styles.lcard} ${styles.lcardAdvisory}`}><div className={styles.lcardTop}><span className={styles.lcardIcon}>{Icons.advisory}</span></div><h3>1:1 Private Advisory</h3><p className={styles.lcardLine}>Jeff in your corner while you execute.</p><ul className={styles.lcardList}><li>Kickoff strategy session</li><li>Regular 1:1s with Jeff</li><li>Email support between calls</li><li>Babu AI Pro, MBA for CPG, and all of Jeff’s tools</li></ul><div className={styles.lcardBottom}><p className={styles.lcardPrice}><small>Starting at</small>{usd(PRIVATE_ADVISORY_PRICE_USD)}<span>/month · {ADVISORY_MIN_MONTHS}-month start</span></p><Link href="/apply" className={styles.lcardButton}>Apply &amp; book an intro call <Arrow/></Link><p className={styles.lcardFine}>By application. More time with Jeff is available for brands that need it.</p></div></article>
-        <article className={`${styles.lcard} ${styles.lcardSession}`}><div className={styles.lcardTop}><span className={styles.lcardIcon}>{Icons.session}</span></div><h3>Strategy Session</h3><p className={styles.lcardLine}>A clear next move, no ongoing commitment.</p><ul className={styles.lcardList}><li>90 minutes 1:1 with Jeff</li><li>He reviews your materials first</li><li>MBA for CPG included</li></ul><div className={styles.lcardBottom}><p className={styles.lcardPrice}>{usd(STRATEGY_SESSION_PRICE_USD)}<span>one time</span></p><form action="/api/strategy-session-checkout" method="POST"><button type="submit" className={styles.lcardButton}>Book a Strategy Session <Arrow/></button></form><p className={styles.lcardFine}>Credited in full toward advisory if you start within {STRATEGY_SESSION_CREDIT_DAYS} days.</p></div></article>
-      </div>
+      <DirectCards/>
     </div>
 
     <div className={styles.level}><div className={styles.levelLabel}><strong>On your own</strong><span>Jeff’s playbook, at your pace</span></div>
@@ -56,28 +63,25 @@ function Ladder({ bookLabel }: { bookLabel: string }) {
   </section>;
 }
 
-// Header preview: numbers are the ones on Jeff's own About page.
+export function HomeFooter() {
+  return (
+    <footer className={styles.footer} role="contentinfo"><div><strong>CPG Founders Group</strong><p>Tools, training, and direct access to Jeff Church.</p></div><nav aria-label="Footer navigation"><Link href="/about-jeff">About Jeff</Link><Link href="/work-with-jeff">Work with Jeff</Link><a href={BOOK_URL}>The book</a><Link href="/resources">Resources</Link><Link href="/contact">Contact</Link><Link href="/privacy">Privacy</Link></nav><div className={styles.footerBottom}><span>© {new Date().getFullYear()} CPG Founders Group</span><a href="mailto:info@teamchurch.co">info@teamchurch.co</a></div></footer>
+  );
+}
+
+// Numbers are the ones on Jeff's own About page.
 const HERO_STATS = [["$700M+", "Returned to investors"], ["$275M+", "Raised across 40+ rounds"], ["8x", "Founder & CEO"], ["35", "Years in CPG"]] as const;
 // Recognition as listed on Jeff's About page and the site's "As seen in" banner.
 const PRESS = [["Forbes", "#2 Most Promising Companies"], ["Inc. 500", "#13 Fastest-Growing Company"], ["BevNET", "Person of the Year"], ["EY", "Entrepreneur of the Year"], ["Whole Foods Market", "Supplier of the Year"], ["The New York Times", "Featured"], ["Prevention", "100 Cleanest Packaged Foods"]] as const;
-const NAV_LINKS = [["About Jeff", "/about-jeff"], ["Work with Jeff", "/work-with-jeff"], ["Free Resources", "/resources"], ["The Book", BOOK_URL]] as const;
 
 export function Home({ ladder = false, header = false }: { ladder?: boolean; header?: boolean }) {
   const released = Date.now() >= Date.parse("2026-11-17T00:00:00-08:00");
   const bookLabel = released ? "Available now" : "Out November 17";
-  return <div className={`${styles.home} ${header ? styles.ownNav : ""}`}>
-{header ? <>
-    <header className={styles.nav}><div className={styles.navInner}>
-      <Link href="/" className={styles.navBrand} aria-label="CPG Founders Group homepage"><svg viewBox="0 0 48 32" width="31" height="24" aria-hidden="true"><path d="M30 13L41 27H19Z" fill="#1b3a5f"/><path d="M20 7L33 27H7Z" fill="#0b1a2e"/><path d="M10 18L19 27H1Z" fill="#dfa13c"/></svg>CPG Founders Group</Link>
-      <nav className={styles.navLinks} aria-label="Main">{NAV_LINKS.map(([label, href]) => href.startsWith("http") ? <a key={label} href={href}>{label}</a> : <Link key={label} href={href}>{label}</Link>)}</nav>
-      <Link href="/apply" className={styles.navApply}>Apply <span aria-hidden="true">↗</span></Link>
-      <details className={styles.navMenu}><summary aria-label="Menu"><span/><span/><span/></summary><div>{NAV_LINKS.map(([label, href]) => href.startsWith("http") ? <a key={label} href={href}>{label}</a> : <Link key={label} href={href}>{label}</Link>)}<Link href="/blog">Blog</Link><Link href="/contact">Contact</Link></div></details>
-    </div></header>
-</> : null}
+  return <div className={styles.home}>
     <a href={BOOK_URL} className={styles.announcement}><span>{bookLabel}</span><strong>The Cold-Pressed Truth</strong><span>Jeff Church’s new book</span><span aria-hidden="true">↗</span></a>
     {header ? <>
     <section className={`${styles.hero} ${styles.heroV2}`} aria-labelledby="home-title"><div className={styles.heroInner}>
-      <div className={styles.heroCopy}><p className={styles.eyebrow}>Advisory, strategy, and tools for CPG founders</p><h1 id="home-title">The operator in your corner for your brand’s <em>next big move.</em></h1><div className={styles.heroCred}><strong>Jeff Church, former Suja Juice co-founder &amp; CEO</strong><span>Grew Suja to $100M in revenue in 5 years, with Coca-Cola as an investor.</span></div><div className={styles.heroActions}><a href="#offers" className={styles.button}>Find your level <span aria-hidden="true">↓</span></a><Link href="/apply" className={styles.heroSecondary}>Apply for advisory <span aria-hidden="true">↗</span></Link></div></div>
+      <div className={styles.heroCopy}><p className={styles.eyebrow}>Advisory, strategy, and tools for CPG founders</p><h1 id="home-title">The operator in your corner for your brand’s <em>next big move.</em></h1><div className={styles.heroCred}><strong>Jeff Church, former Suja Juice co-founder &amp; CEO</strong><span>Grew Suja to $100M in revenue in 5 years, with Coca-Cola as an investor.</span></div><div className={styles.heroActions}><a href="#offers" className={styles.button}>Find your level <span aria-hidden="true">↓</span></a><Link href="/work-with-jeff" className={styles.heroSecondary}>Work with Jeff <span aria-hidden="true">↗</span></Link></div></div>
       <figure className={styles.heroFigure}><div className={styles.heroVisual}><Image src="/images/jeff-hero.webp" alt="Jeff Church with CPG founders and their JUNI products" fill priority sizes="(min-width:900px) 40vw, 100vw" className={styles.heroPhoto}/></div><figcaption>Jeff with the founders of JUNI</figcaption></figure>
     </div>
     <dl className={styles.heroStats}>{HERO_STATS.map(([value, label]) => <div key={label}><dt>{value}</dt><dd>{label}</dd></div>)}</dl></section>
@@ -109,6 +113,6 @@ export function Home({ ladder = false, header = false }: { ladder?: boolean; hea
     <section className={styles.community} id="community" aria-labelledby="community-title"><div className={styles.communityInner}><div className={styles.communityCopy}><span className={styles.communityIcon} aria-hidden="true"><svg viewBox="0 0 32 32" width="30" height="30" fill="none"><path d="M27 15.3a11 11 0 0 1-16.4 9.6L5 27l1.8-5.8A11 11 0 1 1 27 15.3Z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round"/><path d="M11 11.5c1 4.4 3.8 7.2 8.5 8.3l1.5-2.2-3.1-1.4-1.3 1.3c-1.6-.8-2.8-2-3.6-3.5l1.3-1.3-1.3-3-2 1.8Z" stroke="currentColor" strokeWidth="1.2" strokeLinejoin="round"/></svg></span><div><p className={styles.eyebrow}>Free founder community</p><h2 id="community-title">Join 400+ CPG founders on WhatsApp.</h2><p>Connect with founders building alongside you. Ask questions, share what’s working, and find helpful resources and industry connections.</p></div></div><div className={styles.communityAction}><Link href="/founders-only">Request to join the group <span aria-hidden="true">↗</span></Link><span>Free to join. Founder to founder.</span></div></div></section>
     </>}
     <section className={styles.stayConnected} aria-labelledby="connected-title"><div className={styles.connectedInner}><div><p className={styles.eyebrow}>Start with something free</p><h2 id="connected-title">Stay close to what’s working.</h2><p>Get Jeff’s weekly insights on fundraising, retail, margins, and building a CPG business.</p><div className={styles.freeLinks}><Link href="/resources">Free tools &amp; resources <span aria-hidden="true">↗</span></Link><Link href="/founders-only">Join 400+ CPG founders <span aria-hidden="true">↗</span></Link></div></div><div className={styles.signup}><NewsletterForm/><p className={styles.signupNote}>Unsubscribe anytime. No spam, ever.</p></div></div></section>
-    <footer className={styles.footer} role="contentinfo"><div><strong>CPG Founders Group</strong><p>Tools, training, and direct access to Jeff Church.</p></div><nav aria-label="Footer navigation"><Link href="/about-jeff">About Jeff</Link><Link href="/work-with-jeff">Work with Jeff</Link><a href={BOOK_URL}>The book</a><Link href="/resources">Resources</Link><Link href="/contact">Contact</Link><Link href="/privacy">Privacy</Link></nav><div className={styles.footerBottom}><span>© {new Date().getFullYear()} CPG Founders Group</span><a href="mailto:info@teamchurch.co">info@teamchurch.co</a></div></footer>
+    <HomeFooter/>
   </div>;
 }
