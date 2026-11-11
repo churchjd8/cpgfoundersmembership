@@ -56,15 +56,35 @@ function Ladder({ bookLabel }: { bookLabel: string }) {
   </section>;
 }
 
-export function Home({ ladder = false }: { ladder?: boolean }) {
+// Header preview: numbers are the ones on Jeff's own About page.
+const HERO_STATS = [["$100M", "Suja revenue in 5 years"], ["8x", "Founder & CEO"], ["$275M+", "Raised across 40+ rounds"], ["35", "Years in CPG"]] as const;
+const NAV_LINKS = [["About Jeff", "/about-jeff"], ["Work with Jeff", "/work-with-jeff"], ["Free Resources", "/resources"], ["The Book", BOOK_URL]] as const;
+
+export function Home({ ladder = false, header = false }: { ladder?: boolean; header?: boolean }) {
   const released = Date.now() >= Date.parse("2026-11-17T00:00:00-08:00");
   const bookLabel = released ? "Available now" : "Out November 17";
-  return <div className={styles.home}>
+  return <div className={`${styles.home} ${header ? styles.ownNav : ""}`}>
+{header ? <>
+    <header className={styles.nav}><div className={styles.navInner}>
+      <Link href="/" className={styles.navBrand} aria-label="CPG Founders Group homepage"><svg viewBox="0 0 48 32" width="31" height="24" aria-hidden="true"><path d="M30 13L41 27H19Z" fill="#1b3a5f"/><path d="M20 7L33 27H7Z" fill="#0b1a2e"/><path d="M10 18L19 27H1Z" fill="#dfa13c"/></svg>CPG Founders Group</Link>
+      <nav className={styles.navLinks} aria-label="Main">{NAV_LINKS.map(([label, href]) => href.startsWith("http") ? <a key={label} href={href}>{label}</a> : <Link key={label} href={href}>{label}</Link>)}</nav>
+      <Link href="/apply" className={styles.navApply}>Apply <span aria-hidden="true">↗</span></Link>
+      <details className={styles.navMenu}><summary aria-label="Menu"><span/><span/><span/></summary><div>{NAV_LINKS.map(([label, href]) => href.startsWith("http") ? <a key={label} href={href}>{label}</a> : <Link key={label} href={href}>{label}</Link>)}<Link href="/blog">Blog</Link><Link href="/contact">Contact</Link></div></details>
+    </div></header>
+</> : null}
     <a href={BOOK_URL} className={styles.announcement}><span>{bookLabel}</span><strong>The Cold-Pressed Truth</strong><span>Jeff Church’s new book</span><span aria-hidden="true">↗</span></a>
+    {header ? <>
+    <section className={`${styles.hero} ${styles.heroV2}`} aria-labelledby="home-title"><div className={styles.heroInner}>
+      <div><p className={styles.eyebrow}>For CPG founders · From Suja co-founder Jeff Church</p><h1 id="home-title">The operator in your corner for your brand’s <em>next big move.</em></h1><p className={styles.heroIntro}>Private advisory, strategy sessions, and tools for CPG founders at every stage.</p><div className={styles.heroActions}><a href="#offers" className={styles.button}>Find your level <span aria-hidden="true">↓</span></a><Link href="/apply" className={styles.heroSecondary}>Apply for advisory <span aria-hidden="true">↗</span></Link></div></div>
+      <figure className={styles.heroFigure}><div className={styles.heroVisual}><Image src="/images/jeff-hero.webp" alt="Jeff Church with CPG founders and their JUNI products" fill priority sizes="(min-width:900px) 40vw, 100vw" className={styles.heroPhoto}/></div><figcaption>Jeff with the founders of JUNI</figcaption></figure>
+    </div>
+    <dl className={styles.heroStats}>{HERO_STATS.map(([value, label]) => <div key={label}><dt>{value}</dt><dd>{label}</dd></div>)}</dl></section>
+    </> : <>
     <section className={styles.hero} aria-labelledby="home-title"><div className={styles.heroInner}>
       <div><p className={styles.eyebrow}>For CPG founders · From Jeff Church</p><h1 id="home-title">Big decisions.<br/>The right support.</h1><p className={styles.heroIntro}>Work directly with Suja co-founder Jeff Church, get focused help on one decision, or build at your own pace. There’s a way in for where you are.</p><div className={styles.heroActions}><Link href="/work-with-jeff" className={styles.button}>Work with Jeff <span aria-hidden="true">↗</span></Link><a href="#offers" className={styles.heroSecondary}>{ladder ? "See every way to work with Jeff" : "Compare the options"} <span aria-hidden="true">↓</span></a></div><p className={styles.heroCredentials}>Suja co-founder <span>·</span> 8x founder <span>·</span> 35+ years of experience</p></div>
       <div className={styles.heroVisual}><Image src="/images/jeff-hero.webp" alt="Jeff Church with CPG founders and their JUNI products" fill priority sizes="(min-width:900px) 40vw, 100vw" className={styles.heroPhoto}/></div>
     </div></section>
+    </>}
 
     {ladder ? <Ladder bookLabel={bookLabel}/> : <>
     <section className={styles.offers} id="offers" aria-labelledby="offers-title"><span id="programs" className={styles.legacyAnchor} aria-hidden="true"/><div className={styles.sectionHeading}><div><p className={styles.eyebrow}>Choose the support you need</p><h2 id="offers-title">One decision or the next chapter.</h2></div><p>Direct support from Jeff, or the tools to move forward yourself.</p></div>
