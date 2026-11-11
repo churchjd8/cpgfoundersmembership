@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { screenApplication } from "@/lib/application-spam";
+import { markApplication, saveApplication } from "@/lib/applications";
 import { PRIVATE_ADVISORY_PRICE_USD, READINESS_OPTIONS, VIP_ADVISORY_PRICE_USD } from "@/lib/advisory-offer";
 import { STRATEGY_SESSION_PRICE_USD } from "@/lib/strategy-session-offer";
 
@@ -46,7 +47,7 @@ async function sendNotificationEmail(fields: {
   referral?: string;
   interest?: string;
   readiness?: string;
-}, spamReasons?: string[]) {
+}, spamReasons?: string[]): Promise<boolean> {
   const name = `${fields.firstName} ${fields.lastName} (${fields.business})`;
   const subject = spamReasons
     ? `🚫 Likely spam application: ${name}`
@@ -88,12 +89,15 @@ async function sendNotificationEmail(fields: {
   });
 
   if (!res.ok) {
-    const err = await res.json();
-    console.error("Resend error:", err);
+    console.error("Resend error:", (await res.text()).slice(0, 300));
+    return false;
   }
+  return true;
 }
 
 export async function POST(request: Request) {
+  // Row id in `advisory_applications`, set as soon as the submission is saved.
+  let applicationId: string | null = null;
   try {
     const body = await request.json();
     const { firstName, lastName, email, business, website, revenue, challenge, breakthrough, referral, interest, readiness } = body;
@@ -105,26 +109,25 @@ export async function POST(request: Request) {
       );
     }
 
-    // Bots get the same success response so they have nothing to tune against.
+    // Saved first, whatever the screen decides, so nothing downstream (the bot
+    // screen, Kajabi, Resend) can make an application disappear.
     const verdict = screenApplication(body);
+    applicationId = await saveApplication(body, verdict, request.headers.get("user-agent"));
+
+    // Bots get the same success response so they have nothing to tune against.
     if (verdict.kind === "bot") {
       console.warn(`Dropped bot application from ${email}: ${verdict.reason}`);
       return NextResponse.json({ success: true });
     }
+
+    const fields = { firstName, lastName, email, business, website, revenue, challenge, breakthrough, referral, interest, readiness };
+
     if (verdict.kind === "likely-spam") {
       console.warn(`Likely spam application from ${email}: ${verdict.reasons.join(", ")}`);
-      await sendNotificationEmail(
-        { firstName, lastName, email, business, website, revenue, challenge, breakthrough, referral, interest, readiness },
-        verdict.reasons,
-      );
+      const emailOk = await sendNotificationEmail(fields, verdict.reasons).catch(() => false);
+      await markApplication(applicationId, { email_ok: emailOk });
       return NextResponse.json({ success: true });
     }
-
-    const accessToken = await getKajabiToken();
-    const headers = {
-      Authorization: `Bearer ${accessToken}`,
-      "Content-Type": "application/vnd.api+json",
-    };
 
     // Submit through the Kajabi "VIP Day Application" form.
     // Kajabi handles contact creation, tagging, and automations.
@@ -140,55 +143,69 @@ export async function POST(request: Request) {
     //   custom_17 → What's the biggest thing you need support on right now?
     //   custom_18 → What outcome would make this a complete win?
     //   custom_20 → What are you interested in? (text field, gets the label)
-    const formRes = await fetch(
-      `https://api.kajabi.com/v1/forms/${VIP_DAY_FORM_ID}/submit`,
-      {
-        method: "POST",
-        headers,
-        body: JSON.stringify({
-          data: {
-            type: "form_submissions",
-            attributes: {
-              name: firstName,
-              email,
-              custom_1: lastName,
-              custom_2: business,
-              custom_4: revenue,
-              custom_6: website || "",
-              custom_16: referral || "",
-              custom_17: challenge,
-              custom_18: breakthrough,
-              custom_20: INTEREST_LABELS[interest] || readinessLabel(readiness),
-            },
+    // A Kajabi outage must not stop the inbox email, so it fails on its own.
+    let kajabiOk = false;
+    let kajabiError: string | null = null;
+    try {
+      const accessToken = await getKajabiToken();
+      const formRes = await fetch(
+        `https://api.kajabi.com/v1/forms/${VIP_DAY_FORM_ID}/submit`,
+        {
+          method: "POST",
+          headers: {
+            Authorization: `Bearer ${accessToken}`,
+            "Content-Type": "application/vnd.api+json",
           },
-        }),
-      },
-    );
-
-    if (!formRes.ok) {
-      const errText = await formRes.text();
-      console.error(`Kajabi form submit failed (${formRes.status}): ${errText.slice(0, 300)}`);
+          body: JSON.stringify({
+            data: {
+              type: "form_submissions",
+              attributes: {
+                name: firstName,
+                email,
+                custom_1: lastName,
+                custom_2: business,
+                custom_4: revenue,
+                custom_6: website || "",
+                custom_16: referral || "",
+                custom_17: challenge,
+                custom_18: breakthrough,
+                custom_20: INTEREST_LABELS[interest] || readinessLabel(readiness),
+              },
+            },
+          }),
+        },
+      );
+      kajabiOk = formRes.ok;
+      if (!formRes.ok) {
+        kajabiError = `Kajabi ${formRes.status}: ${(await formRes.text()).slice(0, 300)}`;
+      }
+    } catch (err) {
+      kajabiError = `Kajabi: ${err instanceof Error ? err.message : String(err)}`;
     }
+    if (kajabiError) console.error(kajabiError);
 
     // Also send notification email to team
-    await sendNotificationEmail({
-      firstName,
-      lastName,
-      email,
-      business,
-      website,
-      revenue,
-      challenge,
-      breakthrough,
-      referral,
-      interest,
-      readiness,
+    const emailOk = await sendNotificationEmail(fields).catch((err) => {
+      console.error("Notification email threw:", err);
+      return false;
     });
 
+    const problems = [kajabiError, emailOk ? null : "Notification email failed"].filter(Boolean);
+    await markApplication(applicationId, {
+      kajabi_ok: kajabiOk,
+      email_ok: emailOk,
+      error: problems.length ? problems.join(" | ") : null,
+    });
+
+    // The application is on record as long as it was saved or emailed.
+    if (!applicationId && !emailOk) {
+      return NextResponse.json({ error: "Something went wrong" }, { status: 500 });
+    }
     return NextResponse.json({ success: true });
   } catch (err) {
     console.error("VIP Day application error:", err);
     const message = err instanceof Error ? err.message : "Something went wrong";
+    await markApplication(applicationId, { error: message.slice(0, 500) });
     return NextResponse.json(
       { error: "Something went wrong", detail: message },
       { status: 500 },

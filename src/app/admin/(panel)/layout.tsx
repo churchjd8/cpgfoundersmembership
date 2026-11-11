@@ -17,6 +17,9 @@ export default function PanelLayout({ children }: { children: React.ReactNode })
               <span className="font-serif text-lg font-bold">CPG Admin</span>
               <span className="hidden text-xs text-muted sm:inline">Client Command Center</span>
             </Link>
+            <Link href="/admin/applications" className="text-sm text-muted hover:text-accent">
+              Applications
+            </Link>
             <Link href="/admin/book-covers" className="text-sm text-muted hover:text-accent">
               Book poll
             </Link>
