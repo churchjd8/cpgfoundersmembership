@@ -293,7 +293,7 @@ export function BlogList({
 
       {/* Pagination */}
       {totalPages > 1 && (
-        <div className="mt-12 flex items-center justify-center gap-2">
+        <div className="mt-12 flex flex-wrap items-center justify-center gap-2">
           <button
             onClick={() => {
               setPage((p) => Math.max(1, p - 1));

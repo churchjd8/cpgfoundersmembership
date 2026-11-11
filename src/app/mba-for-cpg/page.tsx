@@ -436,16 +436,16 @@ export default function MbaForCpgPage() {
             Want more than self-paced?
           </h2>
           <p className="mt-4 text-lg text-white/70">
-            The MBA for CPG is included in the 90-Day Breakthrough, along with direct access to
-            Jeff, group sessions, accountability, and everything you need to break through. If
-            you&rsquo;re ready for hands-on support, check it out.
+            The MBA for CPG is included when you work with Jeff 1:1, through private advisory or
+            a single Strategy Session. If you&rsquo;re ready for hands-on support, see how it
+            works.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/90-day-breakthrough"
+              href="/work-with-jeff"
               className="px-6 py-3 bg-accent hover:bg-accent-dark text-white font-semibold rounded-lg transition-colors"
             >
-              See the 90-Day Breakthrough
+              Work with Jeff
             </Link>
             <Link
               href="/contact"

@@ -4,6 +4,9 @@ import { useEffect, useRef, useState, type FormEvent } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { HONEYPOT_FIELD } from "@/lib/application-spam";
+import { ADVISORY_MIN_MONTHS, PRIVATE_ADVISORY_PRICE_USD, READINESS_OPTIONS } from "@/lib/advisory-offer";
+
+const usd = (n: number) => `$${n.toLocaleString("en-US")}`;
 
 const revenueStages = [
   "Pre-revenue",
@@ -15,9 +18,9 @@ const revenueStages = [
   "$10M+",
 ];
 
-// One application for everything. The form deliberately doesn't ask which
-// offer they want: /work-with-jeff sells one thing (a call), and the call
-// sorts out advisory versus the Strategy Session.
+// One application for everything. The price is stated up front and one
+// readiness question tells Joshua, before the call, who has accepted it.
+// Everyone still goes on to book; nobody is screened out by the answer.
 export default function WorkWithJeffApplyPage() {
   const router = useRouter();
   const [status, setStatus] = useState<"idle" | "loading" | "error">("idle");
@@ -73,15 +76,14 @@ export default function WorkWithJeffApplyPage() {
               Apply to Work with Jeff
             </h1>
             <p className="mt-6 text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
-              Bring Jeff Church&rsquo;s experience and strategy into your business in a 1:1 way.
               Tell us where you are and what you&rsquo;re facing. As soon as you submit, you can
-              book a short intro call with our team to make sure it&rsquo;s a fit.
+              book a 30-minute intro call with Joshua from Jeff&rsquo;s team to see if it&rsquo;s a fit.
             </p>
             <p className="mt-6 text-base text-white/80 max-w-2xl mx-auto leading-relaxed">
-              Jeff has room for <strong className="text-white">1-2 more founders</strong> right
-              now. He works with a small number at a time because each engagement is built around
-              your business, not a template. When those spots fill, this closes until one opens
-              back up.
+              1:1 Private Advisory starts at{" "}
+              <strong className="text-white">{usd(PRIVATE_ADVISORY_PRICE_USD)}/month</strong> with a{" "}
+              <strong className="text-white">{ADVISORY_MIN_MONTHS}-month start</strong>. Jeff works with a
+              small number of founders at a time, so each engagement is built around your business.
             </p>
           </div>
         </div>
@@ -90,6 +92,14 @@ export default function WorkWithJeffApplyPage() {
       {/* ========== FORM ========== */}
       <section className="py-16 md:py-24 bg-white">
         <div className="mx-auto max-w-xl px-4 sm:px-6 lg:px-8">
+          <figure className="mb-10 rounded-xl border border-border bg-card p-6">
+            <blockquote className="text-base leading-relaxed text-foreground">
+              &ldquo;Jeff led us all the way through a successful $1.5M Angel fundraising.&rdquo;
+            </blockquote>
+            <figcaption className="mt-3 text-sm text-muted">
+              Tiffany Tatom, Co-Founder &amp; CEO, Waav Organic
+            </figcaption>
+          </figure>
           <form onSubmit={handleSubmit} className="space-y-5">
             {/* Honeypot: hidden from people, filled by bots. */}
             <div aria-hidden="true" className="absolute -left-[9999px] h-0 w-0 overflow-hidden">
@@ -219,6 +229,29 @@ export default function WorkWithJeffApplyPage() {
             </div>
 
             <div>
+              <fieldset>
+                <legend className="block text-sm font-medium mb-2">
+                  Advisory starts at {usd(PRIVATE_ADVISORY_PRICE_USD)}/month for {ADVISORY_MIN_MONTHS} months. Which is
+                  closest to where you are? <span className="text-red-500">*</span>
+                </legend>
+                <div className="space-y-2">
+                  {READINESS_OPTIONS.map((o) => (
+                    <label key={o.value} className="flex items-center gap-3 cursor-pointer">
+                      <input
+                        type="radio"
+                        name="readiness"
+                        value={o.value}
+                        required
+                        className="h-4 w-4 text-accent border-border focus:ring-accent"
+                      />
+                      <span className="text-sm">{o.label}</span>
+                    </label>
+                  ))}
+                </div>
+              </fieldset>
+            </div>
+
+            <div>
               <label htmlFor="vip-referral" className="block text-sm font-medium mb-1">
                 How did you hear about Jeff?
               </label>
@@ -240,7 +273,7 @@ export default function WorkWithJeffApplyPage() {
                 {status === "loading" ? "Submitting..." : "Submit and book my call"}
               </button>
               <p className="mt-3 text-xs text-muted text-center">
-                Next you&rsquo;ll pick a time for a short intro call.
+                Next you&rsquo;ll pick a time for a 30-minute intro call with Joshua.
               </p>
             </div>
 

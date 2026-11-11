@@ -5,14 +5,16 @@ import { isChromeless } from "@/lib/internal-routes";
 import Link from "next/link";
 
 const footerLinks = [
-  { label: "Home", href: "/" },
+  { label: "Work with Jeff", href: "/work-with-jeff" },
   { label: "About Jeff", href: "/about-jeff" },
-  { label: "CPG Dictionary", href: "/cpg-dictionary" },
-  { label: "90-Day Breakthrough", href: "/90-day-breakthrough" },
-  { label: "VIP Day", href: "/vip-day-apply" },
   { label: "MBA for CPG", href: "/mba-for-cpg" },
-  { label: "Babu", href: "https://www.askbabu.ai", external: true },
+  { label: "Babu AI", href: "https://www.askbabu.ai", external: true },
+  { label: "Free Resources", href: "/resources" },
+  { label: "Blog", href: "/blog" },
+  { label: "CPG Dictionary", href: "/cpg-dictionary" },
+  { label: "CPG Match", href: "/cpg-match" },
   { label: "Contact", href: "/contact" },
+  { label: "Privacy", href: "/privacy" },
 ];
 
 export function Footer() {

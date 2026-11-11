@@ -4,7 +4,7 @@ Schedule: every hour, 7 AM to 9 PM Pacific (cron `0 7-21 * * *`)
 
 Paste everything below the line into a new Routine in the Claude desktop app.
 
-How it works: every /apply submission hits `src/app/api/work-with-jeff/route.ts`, which emails joshua@teamchurch.co a "🔥 Work with Jeff Application: Name (Business) - Interest" notification from notifications@cpgfoundersgroup.com. Bots are dropped before that email goes out, and gibberish submissions arrive as "🚫 Likely spam application: ..." instead (see `src/lib/application-spam.ts`). This routine turns each real notification into a personal reply draft from Joshua that points to the unlisted /advisory breakdown (both 1:1 tiers with prices, Strategy Session as the lighter option) and the intro call link. It never sends anything.
+How it works: every /apply submission hits `src/app/api/work-with-jeff/route.ts`, which emails joshua@teamchurch.co a "🔥 Work with Jeff Application: Name (Business) - Interest" notification from notifications@cpgfoundersgroup.com. Bots are dropped before that email goes out, and gibberish submissions arrive as "🚫 Likely spam application: ..." instead (see `src/lib/application-spam.ts`). This routine turns each real notification into a personal reply draft from Joshua that points to /work-with-jeff (one public offer, starting price shown; VIP is only ever raised by Joshua on the call, never in this email) and the intro call link. It never sends anything.
 
 ---
 
@@ -16,7 +16,7 @@ Steps:
 
 1. Search joshua@teamchurch.co for emails from notifications@cpgfoundersgroup.com received in the last 3 days whose subject starts with "🔥 Work with Jeff Application". Ignore anything whose subject starts with "🚫 Likely spam".
 
-2. Open each one and read: Name, Email, Business, Website, Revenue, Biggest challenge, What a breakthrough looks like in 90 days, How they heard about Jeff. (Older applications may also have an "Interested in" line; ignore it.)
+2. Open each one and read: Name, Email, Business, Website, Revenue, their answer to the price question ("On $1,997/mo"), Biggest challenge, What a breakthrough looks like in 90 days, How they heard about Jeff. (Older applications may also have an "Interested in" line; ignore it.)
 
 3. Skip an application when ANY of these is true:
    - It looks fake: random letter strings for the name, business or answers, a made-up website, or answers that say nothing. List it in the summary as "skipped, looks like spam" instead of drafting.
@@ -37,23 +37,25 @@ Steps:
 
    Thanks for submitting your application. I'm Joshua, I work with Jeff Church over at CPG Founders Group.
 
-   {Personal paragraph: 2 to 4 sentences. Reflect their specific challenge and 90-day breakthrough back in plain words, show you actually read it, and say why it's right in Jeff's wheelhouse. Use ONE relevant Jeff credential that matches their challenge: fundraising → "He's raised $275M+ across 40+ rounds"; scaling, retail or distribution → "He co-founded Suja Juice and scaled it past $100M in five years before a $300M exit"; general or exits → "He's been founder/CEO eight times with five exits". Never invent facts about their business.}
+   {Personal paragraph: 2 to 4 sentences. Reflect their specific challenge and 90-day breakthrough back in plain words, show you actually read it, and say why it's right in Jeff's wheelhouse. Use ONE relevant Jeff credential that matches their challenge: fundraising → "He's raised $275M+ across 40+ rounds"; scaling, retail or distribution → "He co-founded Suja Juice and scaled it to $100M in revenue in five years"; general or exits → "He's been founder/CEO eight times with five exits". Never invent facts about their business.}
 
-   Since you applied, here's the full breakdown of working with Jeff 1:1. There are two ways to do it, Private and VIP, and both are laid out here with what's included and what it costs. It isn't linked anywhere public, so this is the only place to see it:
+   Here's the full picture of working with Jeff 1:1, including what's included, how the first three months go, and what it costs:
 
-   https://cpgfoundersgroup.com/advisory
+   https://cpgfoundersgroup.com/work-with-jeff
 
-   Have a read, and then grab a time with me here:
+   If you haven't grabbed a time with me yet, you can do that here:
 
    https://cal.arkpartners.ai/joshua/intro
 
-   It's about twenty minutes. We'll talk through {their main challenge in a few words} and which option makes the most sense for where you are. If none of them are a fit, I'll tell you that.
+   It's thirty minutes. We'll talk through {their main challenge in a few words} and what working with Jeff would look like for where you are. If it isn't a fit, I'll tell you that.
 
    Talk soon,
 
    Joshua
 
    Make both links clickable, with the full URL as the link text.
+
+   Price answer: if they chose "I'd rather start with a single Strategy Session", swap the first link sentence for "Since you mentioned starting with a single session, here's how the Strategy Session works:" and link https://cpgfoundersgroup.com/work-with-jeff#session instead. If they chose "Not yet, but likely in the next few months", keep the template as is. Never mention VIP or a second tier.
 
    Voice rules: casual but clear, short paragraphs, no em-dashes, no "honestly", sign off just "Joshua". Never call Joshua "Josh".
 

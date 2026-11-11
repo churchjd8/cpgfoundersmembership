@@ -9,8 +9,8 @@ export const metadata: Metadata = {
 };
 
 // An application goes straight to the intro call booking, no waiting on an
-// email. Joshua's reply (routines/application-reply-drafts.md) then carries the
-// unlisted /advisory breakdown, with the 1:1 pricing, before the call.
+// email. The price is already on /apply and /work-with-jeff, so Joshua's reply
+// (routines/application-reply-drafts.md) just points back to /work-with-jeff.
 //
 // The booking is a link rather than the inline Cal.com embed: as of Nov 2026
 // cal.arkpartners.ai's frame-ancestors policy doesn't list this domain, so the
@@ -30,7 +30,7 @@ export default function ApplyThankYouPage() {
             Application received. Now pick a time.
           </h1>
           <p className="mt-4 text-lg text-muted leading-relaxed">
-            Book a short intro call with Joshua from Jeff&rsquo;s team. Twenty minutes to talk
+            Book your intro call with Joshua from Jeff&rsquo;s team. Thirty minutes to talk
             through where you are, what you&rsquo;re trying to hit, and what working with Jeff
             would look like. If it isn&rsquo;t a fit, we&rsquo;ll tell you that too.
           </p>
@@ -45,12 +45,11 @@ export default function ApplyThankYouPage() {
           >
             Book your intro call &rarr;
           </a>
-          <p className="mt-4 text-sm text-muted">Twenty minutes. The scheduler opens in a new tab.</p>
+          <p className="mt-4 text-sm text-muted">30 minutes. The scheduler opens in a new tab.</p>
         </div>
 
         <p className="mt-6 text-center text-sm text-muted">
-          Joshua will also email you the full breakdown of working with Jeff, including what it
-          costs, before the call. Or go back to{" "}
+          Want the details again before your call? Everything is on{" "}
           <Link href="/work-with-jeff" className="text-accent font-semibold hover:underline">
             Work with Jeff
           </Link>

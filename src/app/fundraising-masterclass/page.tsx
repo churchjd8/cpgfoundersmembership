@@ -196,10 +196,10 @@ export default function FundraisingMasterclassPage() {
             </p>
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
-                href="/apply"
+                href="/work-with-jeff"
                 className="inline-flex items-center justify-center px-8 py-4 bg-accent hover:bg-accent-dark text-white font-semibold rounded-lg transition-colors text-lg"
               >
-                Apply for the 90-Day Breakthrough &rarr;
+                Work with Jeff &rarr;
               </Link>
               <Link
                 href="/resources"

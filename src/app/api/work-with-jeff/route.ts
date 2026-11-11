@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { screenApplication } from "@/lib/application-spam";
-import { PRIVATE_ADVISORY_PRICE_USD, VIP_ADVISORY_PRICE_USD } from "@/lib/advisory-offer";
+import { PRIVATE_ADVISORY_PRICE_USD, READINESS_OPTIONS, VIP_ADVISORY_PRICE_USD } from "@/lib/advisory-offer";
 import { STRATEGY_SESSION_PRICE_USD } from "@/lib/strategy-session-offer";
 
 const VIP_DAY_FORM_ID = "2149550479";
@@ -14,6 +14,9 @@ const INTEREST_LABELS: Record<string, string> = {
   session: `Strategy Session ($${STRATEGY_SESSION_PRICE_USD.toLocaleString()})`,
   unsure: "Not sure, help me choose",
 };
+
+const readinessLabel = (value?: string) =>
+  READINESS_OPTIONS.find((o) => o.value === value)?.label ?? "";
 
 async function getKajabiToken() {
   const res = await fetch("https://api.kajabi.com/v1/oauth/token", {
@@ -42,6 +45,7 @@ async function sendNotificationEmail(fields: {
   breakthrough: string;
   referral?: string;
   interest?: string;
+  readiness?: string;
 }, spamReasons?: string[]) {
   const name = `${fields.firstName} ${fields.lastName} (${fields.business})`;
   const subject = spamReasons
@@ -69,6 +73,7 @@ async function sendNotificationEmail(fields: {
         ${fields.website ? `<p><strong>Website:</strong> ${fields.website}</p>` : ""}
         ${fields.interest ? `<p><strong>Interested in:</strong> ${INTEREST_LABELS[fields.interest] || fields.interest}</p>` : ""}
         <p><strong>Revenue:</strong> ${fields.revenue}</p>
+        ${fields.readiness ? `<p><strong>On $${PRIVATE_ADVISORY_PRICE_USD.toLocaleString()}/mo:</strong> ${readinessLabel(fields.readiness) || fields.readiness}</p>` : ""}
         <hr>
         <p><strong>Biggest challenge right now:</strong></p>
         <p>${fields.challenge.replace(/\n/g, "<br>")}</p>
@@ -77,7 +82,7 @@ async function sendNotificationEmail(fields: {
         <p>${fields.breakthrough.replace(/\n/g, "<br>")}</p>
         ${fields.referral ? `<hr><p><strong>How they heard about Jeff:</strong> ${fields.referral}</p>` : ""}
         <hr>
-        <p style="color:#999;font-size:12px;">Submitted from cpgfoundersgroup.com/apply. They were sent straight to the intro call booking.</p>
+        <p style="color:#999;font-size:12px;">Submitted from cpgfoundersgroup.com/apply. They saw the price on the form and were sent straight to the intro call booking.</p>
       `,
     }),
   });
@@ -91,7 +96,7 @@ async function sendNotificationEmail(fields: {
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { firstName, lastName, email, business, website, revenue, challenge, breakthrough, referral, interest } = body;
+    const { firstName, lastName, email, business, website, revenue, challenge, breakthrough, referral, interest, readiness } = body;
 
     if (!firstName || !lastName || !email || !business || !revenue || !challenge || !breakthrough) {
       return NextResponse.json(
@@ -109,7 +114,7 @@ export async function POST(request: Request) {
     if (verdict.kind === "likely-spam") {
       console.warn(`Likely spam application from ${email}: ${verdict.reasons.join(", ")}`);
       await sendNotificationEmail(
-        { firstName, lastName, email, business, website, revenue, challenge, breakthrough, referral, interest },
+        { firstName, lastName, email, business, website, revenue, challenge, breakthrough, referral, interest, readiness },
         verdict.reasons,
       );
       return NextResponse.json({ success: true });
@@ -153,7 +158,7 @@ export async function POST(request: Request) {
               custom_16: referral || "",
               custom_17: challenge,
               custom_18: breakthrough,
-              custom_20: INTEREST_LABELS[interest] || "",
+              custom_20: INTEREST_LABELS[interest] || readinessLabel(readiness),
             },
           },
         }),
@@ -177,6 +182,7 @@ export async function POST(request: Request) {
       breakthrough,
       referral,
       interest,
+      readiness,
     });
 
     return NextResponse.json({ success: true });

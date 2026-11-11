@@ -10,16 +10,20 @@ const nextConfig: NextConfig = {
       // page now (the offer ladder), so only its old subpaths still redirect.
       { source: "/work-with-jeff/:path+", destination: "/apply/:path+", permanent: true },
       // /intensive was the old unlisted advisory breakdown; /advisory replaced it.
+      // The unlisted two-tier pricing page is retired: the price is public now
+      // and VIP is offered on the intro call.
+      { source: "/advisory", destination: "/work-with-jeff", permanent: false },
+      { source: "/advisory/:path+", destination: "/work-with-jeff", permanent: false },
       { source: "/workwithjeff-2", destination: "/work-with-jeff", permanent: true },
       { source: "/work-with-jeff-preview", destination: "/work-with-jeff", permanent: false },
-      { source: "/intensive", destination: "/advisory", permanent: false },
-      { source: "/intensive/:path+", destination: "/advisory", permanent: false },
-      { source: "/vip-advisory", destination: "/advisory", permanent: false },
-      { source: "/vip-advisory/:path+", destination: "/advisory", permanent: false },
+      { source: "/intensive", destination: "/work-with-jeff", permanent: false },
+      { source: "/intensive/:path+", destination: "/work-with-jeff", permanent: false },
+      { source: "/vip-advisory", destination: "/work-with-jeff", permanent: false },
+      { source: "/vip-advisory/:path+", destination: "/work-with-jeff", permanent: false },
       { source: "/vip-day-apply", destination: "/apply", permanent: true },
       { source: "/vip-day-apply/:path*", destination: "/apply/:path*", permanent: true },
       { source: "/vipday", destination: "/apply", permanent: true },
-      { source: "/90-day-breakthrough", destination: "/apply", permanent: false },
+      { source: "/90-day-breakthrough", destination: "/work-with-jeff", permanent: false },
       { source: "/90-day-breakthrough-apply", destination: "/apply", permanent: false },
 
       // The dictionary is the canonical public name; preserve old glossary links.

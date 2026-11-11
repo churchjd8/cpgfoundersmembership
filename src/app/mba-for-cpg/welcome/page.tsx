@@ -126,11 +126,11 @@ export default async function MbaWelcomePage({
           <div className="rounded-xl border border-border bg-card p-6 sm:col-span-2">
             <h2 className="font-semibold">Already selling and want Jeff in your business?</h2>
             <p className="mt-2 text-sm text-muted">
-              The 3-Month Advisory Intensive includes everything in the MBA for CPG plus
-              direct time with Jeff.
+              1:1 Private Advisory includes everything in the MBA for CPG plus direct time
+              with Jeff.
             </p>
             <Link
-              href="/advisory"
+              href="/work-with-jeff"
               className="mt-4 inline-block text-sm font-semibold text-accent underline hover:text-accent-dark"
             >
               See how it works

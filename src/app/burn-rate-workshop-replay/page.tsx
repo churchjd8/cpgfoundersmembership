@@ -204,17 +204,17 @@ export default function BurnRateWorkshopReplayPage() {
               Ready to work through your numbers with Jeff?
             </h2>
             <p className="mt-6 text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
-              The 90-Day Breakthrough is where Jeff works directly with founders to break
-              through whatever&rsquo;s blocking the next stage. Onboarding diagnostic, 3x/month
-              group sessions, weekly accountability calls, email access to Jeff, and the full
-              toolkit. 90 days of real work — not a course you watch and forget.
+              1:1 Private Advisory is where Jeff works directly with founders on whatever&rsquo;s
+              blocking the next stage. A kickoff strategy session, regular 1:1s, email support
+              between calls, and the full toolkit. Real work on your business, not a course you
+              watch and forget.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
-                href="/apply"
+                href="/work-with-jeff"
                 className="inline-flex items-center justify-center px-8 py-4 bg-accent hover:bg-accent-dark text-white font-semibold rounded-lg transition-colors text-lg"
               >
-                Apply for the 90-Day Breakthrough &rarr;
+                Work with Jeff &rarr;
               </Link>
               <Link
                 href="/resources"
