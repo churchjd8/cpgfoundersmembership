@@ -10,5 +10,5 @@ export const metadata: Metadata = {
 };
 
 export default function NewHomepage() {
-  return <Home ladder />;
+  return <Home ladder header />;
 }
