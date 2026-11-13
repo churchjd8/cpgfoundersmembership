@@ -5,12 +5,12 @@
 // Josh Charlip (Founder and Owner, Cool Jacks premium ice cream sandwiches,
 // Detroit) said "let's move forward" by email on 11/13/2026 after an intro
 // call with Jeff on 10/30 and a back-and-forth with Joshua. He is on the
-// $2,500/mo tier: a 2-hour strategy deep dive, then a monthly 60-minute 1:1.
+// $2,000/mo tier: a 2-hour strategy deep dive, then a monthly 60-minute 1:1.
 // The first month includes both the deep dive and a monthly call (Joshua
 // confirmed that by email on 11/7). His big question is whether the three
 // product "Ice Box Brands" family (the sandwich, Just the Scoops, and the
 // build-your-own kit) can be positioned so it is fundable on limited funds.
-// $2,500/mo x 3 minimum, then $2,500/mo for the same deliverables or adjusted
+// $2,000/mo x 3 minimum, then $2,000/mo for the same deliverables or adjusted
 // up or down by mutual agreement with Jeff.
 
 export const AGREEMENT_VERSION = "2026-11-13";
@@ -23,10 +23,10 @@ export const ENGAGEMENT = {
   providerAddress: "PO Box 2036, Rancho Santa Fe, CA 92067",
   effectiveDateLabel: "November 13, 2026",
   initialMonths: 3,
-  initialFeeUsd: 2500,
-  totalInitialUsd: 7500,
+  initialFeeUsd: 2000,
+  totalInitialUsd: 6000,
   babuProValueUsd: 200,
-  ongoingFeeUsd: 2500,
+  ongoingFeeUsd: 2000,
   cancelNoticeDays: 10,
 } as const;
 
@@ -56,7 +56,7 @@ export const AGREEMENT_SECTIONS: { title: string; body: string }[] = [
   },
   {
     title: "3. Fees & Payment",
-    body: "The Initial Term fee is $7,500, payable either as $2,500 per month for each of the three (3) months of the Initial Term, or as a single payment of $7,500 up front. After the Initial Term, the engagement either (a) continues at the same rate of $2,500 per month for the same deliverables described in Section 1, or (b) is adjusted up or down in scope and fee by mutual written agreement between Client and Jeff Church. Absent such an agreement, option (a) applies. Monthly fees are billed in advance via a recurring subscription auto-draft through Stripe, charged to the card or ACH payment method on file on each Billing Date; the pay-in-full option is charged once at signup.",
+    body: "The Initial Term fee is $6,000, payable either as $2,000 per month for each of the three (3) months of the Initial Term, or as a single payment of $6,000 up front. After the Initial Term, the engagement either (a) continues at the same rate of $2,000 per month for the same deliverables described in Section 1, or (b) is adjusted up or down in scope and fee by mutual written agreement between Client and Jeff Church. Absent such an agreement, option (a) applies. Monthly fees are billed in advance via a recurring subscription auto-draft through Stripe, charged to the card or ACH payment method on file on each Billing Date; the pay-in-full option is charged once at signup.",
   },
   {
     title: "4. ROI Guarantee",
@@ -64,7 +64,7 @@ export const AGREEMENT_SECTIONS: { title: string; body: string }[] = [
   },
   {
     title: "5. Cancellation",
-    body: "The Initial Term may not be cancelled; the three months ($7,500 total) are committed in full whether paid monthly or up front, subject only to the ROI guarantee in Section 4. After the Initial Term, either Party may cancel at any time with at least ten (10) days' written notice before the next Billing Date. Cancellation takes effect at the end of the then-current paid month. Upon cancellation, access to Babu Pro, the MBA modules, and Provider's tools ends.",
+    body: "The Initial Term may not be cancelled; the three months ($6,000 total) are committed in full whether paid monthly or up front, subject only to the ROI guarantee in Section 4. After the Initial Term, either Party may cancel at any time with at least ten (10) days' written notice before the next Billing Date. Cancellation takes effect at the end of the then-current paid month. Upon cancellation, access to Babu Pro, the MBA modules, and Provider's tools ends.",
   },
   {
     title: "6. Intellectual Property & Access",

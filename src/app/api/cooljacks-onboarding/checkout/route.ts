@@ -7,14 +7,14 @@ const SITE_URL =
   "https://cpgfoundersgroup.com";
 
 // Creates a Stripe Checkout Session for Cool Jacks' 3-month advisory. Two
-// paths, same $7,500 total:
-//   - "monthly": a $2,500/mo subscription across the 3-month commitment.
-//   - "full":    a single $7,500 payment up front.
+// paths, same $6,000 total:
+//   - "monthly": a $2,000/mo subscription across the 3-month commitment.
+//   - "full":    a single $6,000 payment up front.
 // Prices are created inline so no dashboard setup is required. The 3-month
 // commitment and the chosen plan are recorded as metadata for follow-up. After
-// the Initial Term the engagement continues at $2,500/mo for the same
+// the Initial Term the engagement continues at $2,000/mo for the same
 // deliverables unless Josh and Jeff agree to adjust it, so the subscription
-// simply keeps running at $2,500/mo until changed.
+// simply keeps running at $2,000/mo until changed.
 export async function POST(request: Request) {
   try {
     const { email, fullName, plan } = await request.json().catch(() => ({}));
@@ -33,7 +33,7 @@ export async function POST(request: Request) {
       signer: fullName || ENGAGEMENT.contacts,
       commitment_months: String(ENGAGEMENT.initialMonths),
       initial_total: `$${ENGAGEMENT.totalInitialUsd}`,
-      rate_type: "3-Month Private Advisory ($2,500/mo tier)",
+      rate_type: "3-Month Private Advisory ($2,000/mo tier)",
       rate_after_commitment: `continues at $${ENGAGEMENT.ongoingFeeUsd}/mo for same deliverables, or adjusted up/down by mutual agreement`,
       roi_guarantee: "yes",
     };
