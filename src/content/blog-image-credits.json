@@ -1062,5 +1062,12 @@
     "photographerUrl": "https://www.pexels.com/@ian-panelo",
     "pexelsUrl": "https://www.pexels.com/photo/shelves-with-assorted-products-in-supermarket-7451955/",
     "query": "grocery store aisle supermarket shelves products retail"
+  },
+  "cpg-cash-conversion-cycle": {
+    "photoId": 36423823,
+    "photographer": "Keegan Checks",
+    "photographerUrl": "https://www.pexels.com/@keeganjchecks",
+    "pexelsUrl": "https://www.pexels.com/photo/industrial-worker-in-glass-bottle-factory-36423823/",
+    "query": "factory production line workers bottles packaging conveyor"
   }
 }
