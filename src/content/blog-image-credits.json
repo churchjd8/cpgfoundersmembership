@@ -1076,5 +1076,13 @@
     "photographerUrl": "https://www.pexels.com/@magda-ehlers-pexels",
     "pexelsUrl": "https://www.pexels.com/photo/vintage-grocery-store-shelves-with-canned-goods-35285854/",
     "query": "supermarket shelf products arrangement grocery aisle"
+  },
+  "cpg-test-market-limited-launch-strategy": {
+    "photoId": 12932335,
+    "photographer": "Atlantic Ambience",
+    "photographerUrl": "https://www.pexels.com/@freestockpro",
+    "pexelsUrl": "https://www.pexels.com/photo/woman-shopping-for-fruits-12932335/",
+    "query": "grocery store shelf products retail display",
+    "bankQuery": "grocery store produce section shoppers"
   }
 }
