@@ -16,8 +16,8 @@ const nextConfig: NextConfig = {
       { source: "/advisory/:path+", destination: "/work-with-jeff", permanent: false },
       { source: "/workwithjeff-2", destination: "/work-with-jeff", permanent: true },
       { source: "/work-with-jeff-preview", destination: "/work-with-jeff", permanent: false },
-      { source: "/intensive", destination: "/work-with-jeff", permanent: false },
-      { source: "/intensive/:path+", destination: "/work-with-jeff", permanent: false },
+      // /intensive is live again (restored 2026-11-20): the unlisted, noindexed
+      // side-by-side of the two 3-Month Intensive tiers, sent by hand.
       { source: "/vip-advisory", destination: "/work-with-jeff", permanent: false },
       { source: "/vip-advisory/:path+", destination: "/work-with-jeff", permanent: false },
       { source: "/vip-day-apply", destination: "/apply", permanent: true },
