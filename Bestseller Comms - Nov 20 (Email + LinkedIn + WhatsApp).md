@@ -111,6 +111,8 @@ Thank you to everyone who showed up and brought questions. That was my favorite 
 
 ## Rest of the schedule
 
+**Superseded Nov 20.** The full calendar through Jan 12 (LinkedIn, email, WhatsApp) now lives in the "Jeff Content Calendar" doc: https://claude.ai/artifact/AtnBqPRhZ6LmCWHQUML3Aw. The Thanksgiving post (Thu Nov 26) is the one exception to the quiet stretch below.
+
 | When (PT) | Channel | Piece |
 |---|---|---|
 | Fri Nov 20, 8 to 9 am | Email + LinkedIn + WhatsApp | Best Seller thank you |

@@ -71,7 +71,7 @@ Go sit at the table with the people you love this week. The business will still 
 
 ## Post 2: I USED TO THINK ENTREPRENEURS WERE BORN
 
-**CTA: replay + book.** Suggested slot: Mon Nov 23.
+**CTA: replay + book.** Suggested slot: Mon Nov 30.
 
 Here's something I believed for the first half of my career that turned out to be completely wrong...
 
@@ -91,13 +91,13 @@ And if you're waiting for everything in your life to be lined up perfectly befor
 
 I talked about this at the fireside chat for my book launch last week. The replay is here if you missed it: [replay link]
 
-The book is The Cold-Pressed Truth, out now at cpgfoundersgroup.com/book
+The book is The Cold Pressed Truth, out now at cpgfoundersgroup.com/book
 
 ---
 
 ## Post 3: WE GAVE ONE RETAILER A FULL YEAR EXCLUSIVE
 
-**CTA: none.** Suggested slot: Mon Nov 30.
+**CTA: none.** Suggested slot: Mon Dec 7.
 
 Okay folks, I want to tell you about a decision we made at Proda that some people would say is stupid...
 
@@ -165,7 +165,7 @@ How you close a business says as much about you as how you build one. Your peopl
 
 ## Post 6: YOUR BEST SELLER PROBABLY DOESN'T EXIST YET
 
-**CTA: book.** Suggested slot: Mon Dec 7.
+**CTA: book.** Suggested slot: Mon Dec 14.
 
 Here's something I've seen in just about every brand I've been around...
 
@@ -183,13 +183,13 @@ The hard part is knowing when to pivot. If you do it too often you wear everybod
 
 I tell my teams the same thing every year. If we're successful, what you're doing today is not what you'll be doing a year from now. And for the people who came in early, that's the best part.
 
-More on this in The Cold-Pressed Truth, out now at cpgfoundersgroup.com/book
+More on this in The Cold Pressed Truth, out now at cpgfoundersgroup.com/book
 
 ---
 
 ## Post 7: MY BEST TASTE TESTER IS 4 YEARS OLD
 
-**CTA: none.** Suggested slot: Mon Dec 14.
+**CTA: none.** Suggested slot: Mon Dec 21.
 
 Somebody asked me at my book launch which company was my favorite, and I think they expected me to say Suja...
 
@@ -213,7 +213,7 @@ Go find your 4-year-old!
 
 ## Post 8: I RAISED $125 MILLION. I NEEDED $50 MILLION.
 
-**CTA: resources.** Suggested slot: Mon Dec 21 or first week of January. **Hold until Jeff confirms the numbers (section 4).**
+**CTA: resources.** Suggested slot: Mon Jan 4. **Hold until Jeff confirms the numbers (section 4).**
 
 I did a postmortem on Suja, and one number still bothers me...
 
@@ -243,16 +243,18 @@ Current state, from `Jeff LinkedIn - Fatal Flaws Posting Queue (Oct 6 - Nov 17).
 - **Mondays and Fridays are open.** The Aug–Oct batch (#6 to #20, plus Friday posts A and B) is still in the can and was meant to resume, but nothing from it is dated.
 - These fireside posts are timelier than the old batch because they can carry the replay link while the launch is fresh, so the suggestion is to give them Mon/Fri through December and resume the Aug–Oct batch in January.
 
-| Date | Slot | Post | Why here |
+**Updated Nov 20.** The live schedule is the "Jeff Content Calendar" doc (https://claude.ai/artifact/AtnBqPRhZ6LmCWHQUML3Aw). Mon Nov 23 already belongs to the replay note, so Post 2 moved to Nov 30 and the rest shifted. Joshua picked Post 1 for Thanksgiving.
+
+| Date | Slot | Post | Note |
 | --- | --- | --- | --- |
-| Mon Nov 23 | Mon | Post 2: I used to think entrepreneurs were born | Carries the replay and book link while launch week is still warm |
-| Thu Nov 26 | open Thu | Post 1: Things money can solve aren't real problems | Thanksgiving. No CTA, pure perspective |
-| Mon Nov 30 | Mon framework | Post 3: One retailer, full year exclusive | Tactical. Sits before FF #9 (Dec 1), which also mentions protein soda, so read them back to back |
+| Thu Nov 26 | open Thu | Post 1: Things money can solve aren't real problems | Thanksgiving. Picked by Joshua Nov 20 |
+| Mon Nov 30 | Mon | Post 2: I used to think entrepreneurs were born | Carries the replay and book link |
 | Fri Dec 4 | Fri community | Post 4: I tell half my team I love them | Culture post, good for comments |
-| Mon Dec 7 | Mon framework | Post 6: Your best seller probably doesn't exist yet | Innovation and pivot timing |
-| Fri Dec 11 | Fri | Post 5: The last checks I wrote at Rowdy | Short. Keep it six days clear of FF #2 on Dec 17, which lands on the same "right thing" line |
-| Mon Dec 14 | Mon | Post 7: My best taste tester is 4 years old | Light story heading into the holidays |
-| Mon Dec 21 or Mon Jan 4 | Mon framework | Post 8: I raised $125M, I needed $50M | Only after the numbers are confirmed |
+| Mon Dec 7 | Mon framework | Post 3: One retailer, full year exclusive | Moved off Nov 30 so it is not back to back with FF #9 |
+| Fri Dec 11 | Fri | Post 5: The last checks I wrote at Rowdy | Short. Six days clear of FF #2 on Dec 17 |
+| Mon Dec 14 | Mon framework | Post 6: Your best seller probably doesn't exist yet | Innovation and pivot timing |
+| Mon Dec 21 | Mon | Post 7: My best taste tester is 4 years old | Light story heading into the holidays |
+| Mon Jan 4 | Mon framework | Post 8: I raised $125M, I needed $50M | Only after the numbers are confirmed |
 
 **Overlap watch.**
 
