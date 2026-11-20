@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { BookingEmbed, BOOKING_URL } from "./booking-embed";
+import { BOOKING_URL } from "./booking-embed";
 import {
   STRATEGY_SESSION_CREDIT_DAYS,
   STRATEGY_SESSION_PRICE_USD,
@@ -417,26 +417,23 @@ export default function IntensivePage() {
               which tier makes sense. If it isn&rsquo;t a fit, we&rsquo;ll tell you that too.
             </p>
             <p className="mt-4 text-sm text-muted">
-              Booking with Joshua from Jeff&rsquo;s team. Pick any time that works.
+              Booking with Joshua from Jeff&rsquo;s team. Opens the calendar in a new tab.
             </p>
           </div>
 
-          <div className="mt-10">
-            <BookingEmbed />
-          </div>
-
-          <p className="mt-4 text-center text-sm text-muted">
-            Prefer to open it in its own tab?{" "}
+          {/* cal.arkpartners.ai's frame-ancestors CSP doesn't list this domain, so
+              the inline <BookingEmbed /> renders a dead box. Link out until the
+              ARK server's header adds cpgfoundersgroup.com, then swap it back. */}
+          <div className="mt-10 text-center">
             <a
               href={BOOKING_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-accent font-semibold hover:underline"
+              className="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-accent hover:bg-accent-dark text-white font-semibold text-lg transition-colors"
             >
-              Book here instead
+              Pick a time for your intro call
             </a>
-            .
-          </p>
+          </div>
 
           <div
             id="session"
