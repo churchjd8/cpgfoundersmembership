@@ -11,6 +11,8 @@ export const dynamic = "force-dynamic";
 const REPLAYS: Record<string, string> = {
   "cpg-fatal-flaws-2026-09-16":
     "/2026 Dream Makers/Website Media/replays/cpg-fatal-flaws-workshop-replay-2026-09-16.mp4",
+  "cpt-fireside-chat-2026-11-17":
+    "/2026 Dream Makers/Website Media/replays/cpt-fireside-chat-replay-2026-11-17.mp4",
 };
 
 // Temporary links last 4 hours; let the CDN reuse the redirect for 1 hour so
