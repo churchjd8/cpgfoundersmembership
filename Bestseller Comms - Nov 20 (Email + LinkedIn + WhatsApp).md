@@ -10,18 +10,18 @@ Fill before sending:
 
 ## 1. Email (Kajabi, full list, 8:30 am PT). Replaces email #7.
 
-**Subject:** We did it
+**Subject:** We did it!!
 **Preview text:** Thank you. I mean that.
 
 Hi {{first_name}},
 
 We did it!!
 
-Amazon just awarded The Cold Pressed Truth its Best Seller badge, and I wanted you to hear it from me.
+Amazon just awarded The Cold Pressed Truth its Best Seller badge, and we hit #1 in our category on day one.
 
 [Best Seller screenshot, linked to https://www.amazon.com/dp/B0HM123G9W]
 
-This happened because of you. So many of you bought the book this week, shared it, and sent it to a founder you know, and that is the whole reason Amazon noticed. I had the honor of hitting the New York Times list for a book I co-authored at Suja, but this one feels different because it's my story.
+This happened because of you. So many of you bought the book this week, shared it, and sent it to a founder you know, and it made a difference. I had the honor of hitting the New York Times list for a book I co-authored at Suja, but this one feels different because it's my story.
 
 Thank you. I mean that.
 
@@ -29,7 +29,11 @@ Two things, if you're up for it.
 
 If you haven't grabbed it yet, the ebook is still just 99 cents through Tuesday, November 24: https://www.amazon.com/dp/B0HM123G9W
 
-If you have, the thing that matters most now is a review. It takes about thirty seconds and it's on that same page. Honest, whatever you actually thought. Reviews are how a founder who's never heard of me finds this book two years from now.
+If you have, the thing that matters most now is a review. It takes about thirty seconds and [you can leave one here](https://www.amazon.com/review/create-review/?ie=UTF8&channel=glance-detail&asin=B0HM123G9W).
+
+Reviews are how a founder who's never heard of me finds this book two years from now.
+
+Thank you!!
 
 Jeff
 
@@ -37,27 +41,25 @@ Jeff
 
 ## 2. LinkedIn (9 am PT, with the screenshot). Replaces the "We hit #1" draft.
 
-I have some news I've been waiting all week to share.
+We did it!! My new book, The Cold Pressed Truth, just became a #1 Best Seller on Amazon!
 
-Amazon just awarded The Cold Pressed Truth its Best Seller badge (forgive me for the screenshot, I couldn't help myself).
+Thank you to everyone who bought a copy, shared it with a friend, or left a review. You made this possible.
 
-I want to be clear about how this happened. A lot of people bought a 99 cent book in the same week because I asked them to, and that is the whole strategy. There's no trick to it. Friends, Founders Club members, old colleagues from the Suja days, clients, and a surprising number of people I've never met.
-
-So thank you! I'm going to be saying that a lot this week.
+This book is packed with the lessons (and plenty of the mistakes) from building Suja and the companies before it, so it feels amazing to know it's getting into the hands of the next generation of CPG founders.
 
 If you haven't grabbed it yet, the ebook is still 99 cents through Tuesday: https://www.amazon.com/dp/B0HM123G9W
 
-And if you have, the thing that helps most now is an honest review. It takes about thirty seconds and it's on that same page.
+And if you have, the thing that helps most now is an honest review. It takes about thirty seconds and you can do it here: https://www.amazon.com/review/create-review/?ie=UTF8&channel=glance-detail&asin=B0HM123G9W
 
 ---
 
 ## 3. WhatsApp (Jeff, Founders Club, with the screenshot)
 
-Hi everyone! Some fun news. Amazon just awarded The Cold Pressed Truth Best Seller status, and that's because of this group. So many of you grabbed it, shared it and left reviews this week. Thank you, truly.
+Hi everyone! We did it!! The Cold Pressed Truth just became a #1 Best Seller on Amazon, and this group is a big reason why. So many of you bought a copy, shared it with a friend and left a review. Thank you, you made this possible.
 
-If you haven't yet, the ebook is still 99 cents through Tuesday: https://www.amazon.com/dp/B0HM123G9W
+If you haven't grabbed it yet, the ebook is still 99 cents through Tuesday: https://www.amazon.com/dp/B0HM123G9W
 
-And if you've read a chapter or two, an honest review on that same page would mean a lot.
+And if you have, the thing that helps most now is an honest review. It takes about thirty seconds and you can do it here: https://www.amazon.com/review/create-review/?ie=UTF8&channel=glance-detail&asin=B0HM123G9W
 
 ---
 
