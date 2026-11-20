@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BookingEmbed, BOOKING_URL } from "./booking-embed";
+import {
+  STRATEGY_SESSION_CREDIT_DAYS,
+  STRATEGY_SESSION_PRICE_USD,
+} from "@/lib/strategy-session-offer";
 
 // Step 2 of the work-with-Jeff funnel: /apply (form) → this page (sent by hand
 // in Joshua's response email) → the intro call booking. Unlisted rather than
@@ -18,6 +22,13 @@ export const metadata: Metadata = {
 
 // The booking widget lives on the page itself; the hero button scrolls to it.
 const bookingAnchor = "#book";
+const sessionPrice = `$${STRATEGY_SESSION_PRICE_USD.toLocaleString()}`;
+const sessionPoints = [
+  "Short intake first, so Jeff arrives knowing your business and your question",
+  "90 minutes with Jeff, and you leave with a clear next move",
+  "MBA for CPG included, lifetime access",
+  `Start an intensive within ${STRATEGY_SESSION_CREDIT_DAYS} days and the full ${sessionPrice} is credited`,
+];
 
 const tiers = [
   {
@@ -30,15 +41,15 @@ const tiers = [
     points: [
       {
         title: "2-hour 1:1 strategy deep dive to start",
-        body: "Jeff goes deep on your business under NDA. He sends pre-work and does his own research first, so the session is spent solving, not catching him up. You come out with a growth strategy and a 6-month action plan.",
+        body: "Under NDA, with pre-work and Jeff’s own research done first. You leave with a growth strategy and a 6-month action plan.",
       },
       {
         title: "Monthly 60-minute 1:1 with Jeff",
-        body: "Every month for all three months, to work the plan and make the calls in real time.",
+        body: "Work the plan and make the calls in real time.",
       },
       {
         title: "Email and async support in between",
-        body: "Gut-checks on a retailer ask, eyes on your model or your deck, whatever you want a second opinion on.",
+        body: "Gut-checks on a retailer ask, eyes on your model or deck.",
       },
     ],
   },
@@ -52,15 +63,15 @@ const tiers = [
     points: [
       {
         title: "Half-day VIP strategy deep dive to start",
-        body: "A half day with Jeff under NDA, building a strategic roadmap across every function of the business at once instead of assembling it over three months. Pre-work and his own research done in advance.",
+        body: "Under NDA. You build the roadmap across every function of the business in one sitting instead of over three months.",
       },
       {
         title: "Bi-weekly 60-minute 1:1s with Jeff",
-        body: "Every other week across all three months. Double the direct time, which matters when you're actively working resets, raises, or distributor conversations.",
+        body: "Double the direct time, which matters when you're working resets, raises, or distributor conversations.",
       },
       {
         title: "Priority email and async support between calls",
-        body: "You go to the front of the line. Gut-checks and feedback whenever you need them, with Jeff getting back to you first.",
+        body: "You go to the front of the line.",
       },
     ],
   },
@@ -95,7 +106,7 @@ const included = [
 ];
 
 const comparison = [
-  { label: "Investment", a: "$2,500/mo — $7,500 total", b: "$5,000/mo — $15,000 total" },
+  { label: "Investment", a: "$2,500/mo, $7,500 total", b: "$5,000/mo, $15,000 total" },
   { label: "Strategy deep dive", a: "2-hour 1:1 deep dive", b: "Half-day VIP deep dive" },
   { label: "1:1s with Jeff", a: "Monthly 60-min", b: "Bi-weekly 60-min" },
   { label: "Email & async support", a: true, b: "Priority, between calls" },
@@ -127,29 +138,11 @@ const guaranteeTerms = [
 
 const credentials = [
   "8x founder/CEO across consumer brands, manufacturing, and building products",
-  "Co-founded Suja Juice — scaled to $100M+ revenue in 5 years, sold for $300M",
+  "Co-founded Suja Juice: $100M+ revenue in 5 years, sold for $300M",
   "5 exits totaling $700M+ in value returned to investors",
   "$275M+ raised across 40+ funding rounds",
   "Back operating now with Proda, so the advice is current, not 20 years stale",
   "35+ years in CPG with deep relationships across buyers, investors, brokers, and operators",
-];
-
-const steps = [
-  {
-    n: "01",
-    title: "You applied",
-    body: "Done. Jeff and I read every application that comes in, and we look at the brand before we reply to anyone.",
-  },
-  {
-    n: "02",
-    title: "You're reading this",
-    body: "The full offer, the real numbers, nothing held back for a sales call. Take your time with it and figure out whether it's worth a conversation.",
-  },
-  {
-    n: "03",
-    title: "We talk",
-    body: "A short intro call to make sure it's a fit in both directions, and to point you at the right tier. If we're aligned, we get your kickoff with Jeff on the calendar.",
-  },
 ];
 
 function Check() {
@@ -183,28 +176,20 @@ export default function IntensivePage() {
               What working with Jeff actually looks like.
             </h1>
             <p className="mt-6 text-lg text-white/70 leading-relaxed">
-              You&rsquo;re reading this because your application made it through. This page
-              isn&rsquo;t linked anywhere on the site and isn&rsquo;t public. It goes to the
-              founders we think Jeff can actually move the needle for.
+              This page isn&rsquo;t linked anywhere on the site. It goes to the founders we
+              think Jeff can actually move the needle for.
             </p>
-            <p className="mt-6 text-lg text-white/70 leading-relaxed">
-              What he does is a focused three-month intensive. He gets deep in your business,
-              builds the strategy and roadmap with you, and stays in your corner while you
-              execute. There are two ways in. The difference is how much direct time you get
-              with him.
+            <p className="mt-4 text-lg text-white/70 leading-relaxed">
+              It&rsquo;s a focused three months. Jeff gets deep in your business, builds the
+              strategy and roadmap with you, and stays in your corner while you execute. There
+              are two ways in, and the difference is how much direct time you get with him.
             </p>
             <p className="mt-6 rounded-xl border border-gold/30 bg-white/5 px-5 py-4 text-white/80 leading-relaxed">
               <strong className="text-gold">Jeff has room for 1-2 more founders right now.</strong>{" "}
-              He works with a small number at a time because every engagement is built around
-              your business, not a template. When those spots fill, this closes until one opens
-              back up.
-            </p>
-            <p className="mt-4 text-white/70 leading-relaxed">
-              And it&rsquo;s backed. If you show up 100%, work Jeff&rsquo;s strategy, and
-              still don&rsquo;t see a tangible return by the end of the three months, he keeps
-              working with you for free until you do or refunds you in full.{" "}
+              He keeps the number small on purpose. And it&rsquo;s backed: a tangible return in
+              three months, or he keeps working with you for free or refunds you in full.{" "}
               <a href="#guarantee" className="text-gold font-semibold hover:underline">
-                The full terms are here.
+                See the terms.
               </a>
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
@@ -341,9 +326,8 @@ export default function IntensivePage() {
           </div>
 
           <p className="mt-6 text-sm text-muted leading-relaxed">
-            After the three months you can continue month to month at a reduced rate and
-            cadence, roughly $1,500 to $4,000/mo depending on Jeff&rsquo;s involvement. That
-            gets set during your three months. Cancel anytime.
+            The month-to-month rate depends on Jeff&rsquo;s involvement and gets set during your
+            three months. Cancel anytime.
           </p>
         </div>
       </section>
@@ -358,8 +342,7 @@ export default function IntensivePage() {
               </h2>
               <p className="mt-6 text-lg text-white/70 leading-relaxed">
                 A minimum 5-10x return on what you put in, usually through capital raised or
-                cost taken out. That is the standard he holds himself to, and it is the reason
-                he works with a small number of founders at a time.
+                cost taken out.
               </p>
               <p className="mt-4 text-white/70 leading-relaxed">
                 What you&rsquo;re really buying is his brain in your business. Someone who has
@@ -396,14 +379,10 @@ export default function IntensivePage() {
             </span>
             <h2 className="mt-6 text-2xl sm:text-3xl font-bold tracking-tight leading-tight">
               If you don&rsquo;t see a tangible return in three months, Jeff keeps working with
-              you for free until you do &mdash; or refunds you 100%.
+              you for free until you do, or refunds you 100%.
             </h2>
             <p className="mt-6 text-muted leading-relaxed">
-              At the end of the three months, if you&rsquo;ve shown up fully and worked the
-              strategy and there is still no real return on what you put in, we make it right.
-              Either Jeff stays in it with you at no cost until the return shows up, or you get
-              every dollar back. No panel, no hoops, no fine print about &ldquo;qualifying
-              results.&rdquo;
+              No panel, no hoops, no fine print about &ldquo;qualifying results.&rdquo;
             </p>
 
             <div className="mt-10 pt-8 border-t border-border">
@@ -422,32 +401,6 @@ export default function IntensivePage() {
                 ))}
               </div>
             </div>
-
-            <p className="mt-8 text-muted leading-relaxed">
-              That&rsquo;s the whole deal. Jeff is willing to carry the risk on his side
-              because he&rsquo;s asking you to go all in on yours.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* ========== HOW THIS WORKS ========== */}
-      <section className="py-16 md:py-24 bg-card border-t border-border">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="max-w-2xl">
-            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight">How this works</h2>
-            <p className="mt-4 text-muted leading-relaxed">
-              Three steps, and you&rsquo;ve already done the first one.
-            </p>
-          </div>
-          <div className="mt-12 grid md:grid-cols-3 gap-6">
-            {steps.map((step) => (
-              <div key={step.n} className="rounded-xl border border-border bg-background p-6">
-                <span className="text-sm font-bold tracking-wider text-accent">{step.n}</span>
-                <h3 className="mt-3 font-bold">{step.title}</h3>
-                <p className="mt-2 text-sm text-muted leading-relaxed">{step.body}</p>
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -460,10 +413,8 @@ export default function IntensivePage() {
               The last step is a conversation.
             </h2>
             <p className="mt-6 text-muted leading-relaxed">
-              Before anyone starts, we get on a call to make sure it&rsquo;s a fit in both
-              directions. Twenty minutes. We&rsquo;ll talk through where you are, what
-              you&rsquo;re trying to hit, and which of the two tiers actually makes sense for
-              you. If it isn&rsquo;t a fit, we&rsquo;ll tell you that too.
+              Twenty minutes to make sure it&rsquo;s a fit in both directions and figure out
+              which tier makes sense. If it isn&rsquo;t a fit, we&rsquo;ll tell you that too.
             </p>
             <p className="mt-4 text-sm text-muted">
               Booking with Joshua from Jeff&rsquo;s team. Pick any time that works.
@@ -487,25 +438,51 @@ export default function IntensivePage() {
             .
           </p>
 
-          <div className="mt-16 pt-10 border-t border-border">
-            <h3 className="font-bold">If the timing isn&rsquo;t right yet</h3>
-            <p className="mt-3 text-muted leading-relaxed">
-              The{" "}
-              <Link href="/mba-for-cpg" className="text-accent font-semibold hover:underline">
-                MBA for CPG
-              </Link>{" "}
-              is <span className="line-through">$997</span> $497 one time (current founder discount) with lifetime access. Eight self-paced modules covering
-              marketing, sales, manufacturing, team and fundraising, plus the financial models
-              and templates. It covers a lot of the same fundamentals without the commitment.
+          <div
+            id="session"
+            className="mt-16 rounded-2xl border border-border bg-card p-8 md:p-10 scroll-mt-20"
+          >
+            <span className="text-xs font-bold uppercase tracking-wider text-accent">
+              Not ready for three months?
+            </span>
+            <h2 className="mt-3 text-2xl font-bold tracking-tight">Strategy Session</h2>
+            <p className="mt-4 flex items-baseline gap-2">
+              <span className="text-4xl font-bold">{sessionPrice}</span>
+              <span className="text-muted">one time</span>
             </p>
-            <p className="mt-3 text-muted leading-relaxed">
-              There&rsquo;s also a{" "}
-              <Link href="/resources" className="text-accent font-semibold hover:underline">
-                free resource library
-              </Link>{" "}
-              and the CPG Founders WhatsApp community. The door stays open either way.
+            <p className="mt-5 text-muted leading-relaxed">
+              One decision, 90 minutes, 1:1 with Jeff. For the founder with a specific question
+              in front of them who doesn&rsquo;t need an ongoing engagement yet.
             </p>
+            <ul className="mt-6 space-y-3">
+              {sessionPoints.map((line) => (
+                <li key={line} className="flex gap-3 text-sm leading-relaxed">
+                  <Check />
+                  <span>{line}</span>
+                </li>
+              ))}
+            </ul>
+            <form action="/api/strategy-session-checkout" method="POST" className="mt-8">
+              <button
+                type="submit"
+                className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-accent hover:bg-accent-dark text-white font-semibold transition-colors"
+              >
+                Book a Strategy Session
+              </button>
+            </form>
           </div>
+
+          <p className="mt-10 text-sm text-muted leading-relaxed">
+            Timing not right for either? The{" "}
+            <Link href="/mba-for-cpg" className="text-accent font-semibold hover:underline">
+              MBA for CPG
+            </Link>{" "}
+            is $497 one time, and there&rsquo;s a{" "}
+            <Link href="/resources" className="text-accent font-semibold hover:underline">
+              free resource library
+            </Link>
+            . The door stays open either way.
+          </p>
         </div>
       </section>
     </>
