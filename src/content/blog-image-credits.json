@@ -1084,5 +1084,12 @@
     "pexelsUrl": "https://www.pexels.com/photo/woman-shopping-for-fruits-12932335/",
     "query": "grocery store shelf products retail display",
     "bankQuery": "grocery store produce section shoppers"
+  },
+  "cpg-subscription-recurring-revenue-strategy": {
+    "photoId": 8939569,
+    "photographer": "Nataliya Vaitkevich",
+    "photographerUrl": "https://www.pexels.com/@n-voitkevich",
+    "pexelsUrl": "https://www.pexels.com/photo/woman-in-blue-tank-top-carrying-brown-boxes-8939569/",
+    "query": "subscription boxes packages delivery products"
   }
 }
