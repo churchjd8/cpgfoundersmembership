@@ -1098,5 +1098,12 @@
     "photographerUrl": "https://www.pexels.com/@ian-panelo",
     "pexelsUrl": "https://www.pexels.com/photo/containers-with-tasty-cookies-in-supermarket-7451963/",
     "query": "supermarket aisle store brand shelf products"
+  },
+  "cpg-product-reformulation-strategy": {
+    "photoId": 8940479,
+    "photographer": "Thirdman",
+    "photographerUrl": "https://www.pexels.com/@thirdman",
+    "pexelsUrl": "https://www.pexels.com/photo/person-wearing-latex-gloves-pouring-colored-liquid-from-a-plastic-bottle-8940479/",
+    "query": "food scientist laboratory testing beverage bottles research"
   }
 }
